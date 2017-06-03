@@ -64,13 +64,19 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
 
     <!-- Google Analytics -->
     
 
 
-    <!-- mathjax -->
     
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 
 
@@ -169,9 +175,247 @@
     
         <div class="content">
             <h2 id="MathJax简介"><a href="#MathJax简介" class="headerlink" title="MathJax简介"></a>MathJax简介</h2><p>MathJax是一款展示数学符号、数学公式的JavaScript库，可以解析Latex、MathML和ASCIIMathML等标记语言，将其渲染成人类可读的公式。今天我在这里总结一点入门的知识点，主要是给自己学习用。</p>
-<h2 id="公式标记"><a href="#公式标记" class="headerlink" title="公式标记"></a>公式标记</h2><p>用符号·$·作为公式的开头和结尾，比如<script type="math/tex">a \neq b</script>可以渲染成<script type="math/tex">a \neq b</script></p>
-<h2 id="首先是希腊字母的写法"><a href="#首先是希腊字母的写法" class="headerlink" title="首先是希腊字母的写法"></a>首先是希腊字母的写法</h2><p>When <script type="math/tex">a \ne 0</script> , there are two solutions to (ax^2 + bx + c = 0) and they are</p>
-<script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}.</script>
+<h2 id="公式标记"><a href="#公式标记" class="headerlink" title="公式标记"></a>公式标记</h2><p>用符号<code>$</code>作为公的开头和结尾，比如<code>$a \neq b$</code>可以渲染成<code>\(a \neq b\)</code></p>
+<h2 id="首先是希腊字母的写法"><a href="#首先是希腊字母的写法" class="headerlink" title="首先是希腊字母的写法"></a>首先是希腊字母的写法</h2><p>不同的数学符号都有大小写，都列在下表中。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>大写</th>
+<th>Tex</th>
+<th>小写</th>
+<th>Tex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alpha</td>
+<td><code>$A$</code></td>
+<td><code>\(A\)</code></td>
+<td><code>$\alpha$</code></td>
+<td><code>\(\alpha\)</code></td>
+</tr>
+<tr>
+<td>beta</td>
+<td><code>$B$</code></td>
+<td><code>\(B\)</code></td>
+<td><code>$\beta$</code></td>
+<td><code>\(\beta\)</code></td>
+</tr>
+<tr>
+<td>gamma</td>
+<td>$\Gamma$</td>
+<td><code>\(\Gamma\)</code></td>
+<td>$\gamma$</td>
+<td><code>\(\gamma\)</code></td>
+</tr>
+<tr>
+<td>delta</td>
+<td>$\Delta$</td>
+<td><code>\(\Delta\)</code></td>
+<td>$\delta$</td>
+<td><code>\(\delta\)</code></td>
+</tr>
+<tr>
+<td>epsilon</td>
+<td>$E$</td>
+<td><code>\(E\)</code></td>
+<td>$\epsilon$</td>
+<td><code>\(\epsilon\)</code></td>
+</tr>
+<tr>
+<td>zeta</td>
+<td>$Z$</td>
+<td><code>\(Z\)</code></td>
+<td>$\zeta$</td>
+<td><code>\(\zeta\)</code></td>
+</tr>
+<tr>
+<td>eta</td>
+<td>$H$</td>
+<td><code>\(H\)</code></td>
+<td>$\eta$</td>
+<td><code>\(\eta\)</code></td>
+</tr>
+<tr>
+<td>theta</td>
+<td>$\Theta$</td>
+<td><code>\(\Theta\)</code></td>
+<td>$\theta$</td>
+<td><code>\(\theta\)</code></td>
+</tr>
+<tr>
+<td>iota</td>
+<td>$I$</td>
+<td><code>\(I\)</code></td>
+<td>$\iota$</td>
+<td><code>\(\iota\)</code></td>
+</tr>
+<tr>
+<td>kappa</td>
+<td>$K$</td>
+<td><code>\(K\)</code></td>
+<td>$\kappa$</td>
+<td><code>\(\kappa\)</code></td>
+</tr>
+<tr>
+<td>lambda</td>
+<td>$\Lambda$</td>
+<td><code>\(\Lambda\)</code></td>
+<td>$\lambda$</td>
+<td><code>\(\lambda\)</code></td>
+</tr>
+<tr>
+<td>mu</td>
+<td>$M$</td>
+<td><code>\(M\)</code></td>
+<td>$\mu$</td>
+<td><code>\(\mu\)</code></td>
+</tr>
+<tr>
+<td>nu</td>
+<td>$N$</td>
+<td><code>\(N\)</code></td>
+<td>$\nu$</td>
+<td><code>\(\nu\)</code></td>
+</tr>
+<tr>
+<td>xi</td>
+<td>$\Xi$</td>
+<td><code>\(\Xi\)</code></td>
+<td>$\xi$</td>
+<td><code>\(\xi\)</code></td>
+</tr>
+<tr>
+<td>omicron</td>
+<td>$O$</td>
+<td><code>\(O\)</code></td>
+<td>$\omicron$</td>
+<td><code>\(\omicron\)</code></td>
+</tr>
+<tr>
+<td>pi</td>
+<td>$\Pi$</td>
+<td><code>\(\Pi\)</code></td>
+<td>$\pi$</td>
+<td><code>\(\pi\)</code></td>
+</tr>
+<tr>
+<td>rho</td>
+<td>$P$</td>
+<td><code>\(P\)</code></td>
+<td>$\rho$</td>
+<td><code>\(\rho\)</code></td>
+</tr>
+<tr>
+<td>sigma</td>
+<td>$\Sigma$</td>
+<td><code>\(\Sigma\)</code></td>
+<td>$\sigma$</td>
+<td><code>\(\sigma\)</code></td>
+</tr>
+<tr>
+<td>tau</td>
+<td>$T$</td>
+<td><code>\(T\)</code></td>
+<td>$\tau$</td>
+<td><code>\(\tau\)</code></td>
+</tr>
+<tr>
+<td>upsilon</td>
+<td>$\Upsilon$</td>
+<td><code>\(\Upsilon\)</code></td>
+<td>$\upsilon$</td>
+<td><code>\(\upsilon\)</code></td>
+</tr>
+<tr>
+<td>phi</td>
+<td>$\Phi$</td>
+<td><code>\(\Phi\)</code></td>
+<td>$\phi$</td>
+<td><code>\(\phi\)</code></td>
+</tr>
+<tr>
+<td>chi</td>
+<td>$X$</td>
+<td><code>\(X\)</code></td>
+<td>$\chi$</td>
+<td><code>\(\chi\)</code></td>
+</tr>
+<tr>
+<td>psi</td>
+<td>$\Psi$</td>
+<td><code>\(\Psi\)</code></td>
+<td>$\psi$</td>
+<td><code>\(\psi\)</code></td>
+</tr>
+<tr>
+<td>omega</td>
+<td>$\Omega $</td>
+<td><code>\(\Omega\)</code></td>
+<td>$\omega$</td>
+<td><code>\(\omega\)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="上标与下标"><a href="#上标与下标" class="headerlink" title="上标与下标"></a>上标与下标</h2><p>上标和下标分别使用^与_，例如<code>\(x_i^2\)</code>显示为<code>\(x_i^2\)</code>。默认情况下，上下标符号仅仅对下一个组起作用。一个组即单个字符或者使用<code>{..}</code>包裹起来的内容。也就是说，如果使用<code>10^10</code>，会得到<code>\(10^10\)</code>，而<code>10^{10}</code>才是<code>\(10^{10}\)</code>。同时，大括号还能消除二义性，如<code>x^5^6</code>将得到一个错误<code>\(x^5^6\)</code>，必须使用大括号来界定<code>^</code>的结合性，如<code>{x^5}^6</code>：<code>\({x^5}^6\)</code> 或者 <code>x^{5^6}</code>：<code>\(x^{5^6}\)</code>。</p>
+<h2 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h2><ul>
+<li>小括号与方括号：使用原始的( )，[ ]即可，如(2+3)[4+4]：<code>\((2+3)[4+4]\)</code></li>
+<li>大括号：时由于大括号<code>{}</code>被用来分组，因此需要使用<code>{</code>和<code>}</code>表示大括号，也可以使用<code>\lbrace</code> 和<code>\rbrace</code>来表示。<br>如<code>\{ a*b \}</code>:  <code>\(\{a*b\}\)</code>，<code>\lbrace a\*b \rbrace</code>：<code>\(\lbrace a*b \rbrace\)</code>。</li>
+<li>尖括号：使用<code>\langle</code> 和 <code>\rangle</code>表示左尖括号和右尖括号。如<code>\langle x \rangle</code>：<code>\(\langle x \rangle\)</code>。</li>
+<li>上取整：使用<code>\lceil</code> 和 <code>\rceil</code> 表示。 如，<code>\lceil x \rceil</code>：<code>\(\lceil x \rceil\)</code>。</li>
+<li>下取整：使用\lfloor 和 \rfloor 表示。如，\lfloor x \rfloor：<code>\(\lfloor x \rfloor\)</code>。</li>
+</ul>
+<h2 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h2><ul>
+<li>三角函数：\sin x –&gt; <code>\(\sin x\)</code> ; \cos a –&gt; <code>\(\cos a\)</code> ; \arctan x –&gt; <code>\(\arctan x\)</code></li>
+<li>极限符号: <code>\lim_{1\to\infty}</code> –&gt; <code>\(\lim_{1\to\infty}\)</code></li>
+</ul>
+<h2 id="常见符号"><a href="#常见符号" class="headerlink" title="常见符号"></a>常见符号</h2><ul>
+<li>比较运算符：<code>\lt \gt \le \ge \neq</code> –&gt; <code>\(\lt \gt \le \ge \neq\)</code></li>
+<li>箭头符号：<code>\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto</code> –&gt; <code>\(\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto\)</code></li>
+</ul>
+<h2 id="顶部符号"><a href="#顶部符号" class="headerlink" title="顶部符号"></a>顶部符号</h2><p>我们有时候需要在字母上方书写符号，用<code>{}</code>来表示组合，例如:</p>
+<ul>
+<li>单字母<code>\hat xy</code>–&gt; <code>\(\hat x\)</code></li>
+<li>多字母<code>\widehat {xy}</code> –&gt; <code>\(\widehat {xy} \)</code></li>
+<li>横线<code>\overline x</code> –&gt; <code>\(\overline x\)</code></li>
+<li>向量<code>\vec {xy}</code> –&gt; <code>\(\vec {xy}\)</code></li>
+<li>点 <code>\dot x</code> –&gt; <code>\(\dot x\)</code></li>
+<li>箭头<code>\overrightarrow {xy}</code> –&gt; <code>\(\overrightarrow {xy}\)</code></li>
+<li>两点 <code>\ddot x</code> –&gt; <code>\(\ddot x\)</code></li>
+</ul>
+<h2 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h2><p><code>\sum</code> 用来表示求和符号<code>\(\sum\)</code>, 有很多不同的写法：</p>
+<ul>
+<li>下标表示下限：<code>\sum_1</code> –&gt; <code>\(\sum_1\)</code></li>
+<li>上标表示上限：<code>\sum^n</code> –&gt; <code>\(\sum^n\)</code></li>
+<li>上下结合，可以写为：<code>\sum_1^n</code> –&gt; <code>\(\sum_1^n\)</code></li>
+</ul>
+<h2 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h2><p><code>\int</code> 表示积分符号 <code>\(\int\)</code>, 和求和符号类似：</p>
+<ul>
+<li>积分上下限：\int_1^n –&gt; <code>\(\int_1^n\)</code></li>
+</ul>
+<h4 id="和积分类似的符号还有以下这些"><a href="#和积分类似的符号还有以下这些" class="headerlink" title="和积分类似的符号还有以下这些"></a>和积分类似的符号还有以下这些</h4><ul>
+<li>累积 \prod –&gt; <code>\(\prod\)</code></li>
+<li>并集 \bigcup –&gt; <code>\(\bigcup\)</code></li>
+<li>交集 \bigcap –&gt; <code>\(\bigcap\)</code></li>
+<li>二重积分 \iint –&gt; <code>\(\iint\)</code></li>
+</ul>
+<h2 id="分数和根号"><a href="#分数和根号" class="headerlink" title="分数和根号"></a>分数和根号</h2><p>分数用\frac 表示，例如<code>\frac ab</code> –&gt; <code>\(\frac ab\)</code>, <code>{}</code>可以帮助你分组，例如<code>\frac a{b*c}</code> –&gt; <code>\(\frac a{b*c}\)</code>，带括号的分数<code>(\frac ab)^2</code> –&gt; <code>\((\frac ab)^2\)</code> 。 还有一种写法是使用\over，例如<code>1+2 \over 3+4</code> –&gt; <code>\(1+2 \over 3+4\)</code>。</p>
+<p>使用\sqrt表示根号，例如 \sqrt[4] x –&gt; <code>\(\sqrt[4] x\)</code>。</p>
+<h2 id="矩阵和表格"><a href="#矩阵和表格" class="headerlink" title="矩阵和表格"></a>矩阵和表格</h2><p>使用<code>\begin{array}{列样式}…\end{array}</code>这样的形式来创建表格，列样式可以是<code>clr</code>表示居中，左，右对齐，还可以使用<code>|</code>表示一条竖线。表格中 各行使用<code>\\</code>分隔，各列使用<code>&amp;</code>分隔。使用<code>\hline</code>在本行前加入一条直线。 例如，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">\begin&#123;array&#125;&#123;c|lcr&#125;</div><div class="line">n &amp; \text&#123;Left&#125; &amp; \text&#123;Center&#125; &amp; \text&#123;Right&#125; \\</div><div class="line">\hline</div><div class="line">1 &amp; 0.24 &amp; 1 &amp; 125 \\</div><div class="line">\hline</div><div class="line">2 &amp; -1 &amp; 189 &amp; -8 \\</div><div class="line">3 &amp; -20 &amp; 2000 &amp; 1+10i \\</div><div class="line">\end&#123;array&#125;</div></pre></td></tr></table></figure>
+<p><code>\[
+\begin{array}{c|lcr}
+n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
+\hline
+1 &amp; 0.24 &amp; 1 &amp; 125 \\
+\hline
+2 &amp; -1 &amp; 189 &amp; -8 \\
+3 &amp; -20 &amp; 2000 &amp; 1+10i \\
+\end{array}
+\]</code></p>
+<p><code>\[J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}\]</code></p>
+
         </div>
     
 
