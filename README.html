@@ -173,7 +173,7 @@
 <h3 id="增加对mathjax渲染的支持"><a href="#增加对mathjax渲染的支持" class="headerlink" title="增加对mathjax渲染的支持"></a>增加对mathjax渲染的支持</h3><p> 在目录<code>node_modules\kramed\lib\rules\inline.js</code>，修改如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></div><div class="line">  <span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()#$+\-.!_&gt;])/</span></div></pre></td></tr></table></figure>
 <p>和</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</div><div class="line">  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></div><div class="line">  em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span></div></pre></td></tr></table></figure>
     </div>
 
     
