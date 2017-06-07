@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="pandas教程：[1]DataFrame入门"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>pandas教程：[1]DataFrame入门 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/10/23/pandas教程：[1]DataFrame入门/">
+                pandas教程：[1]DataFrame入门
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>pandas是python环境下最有名的数据统计包，而DataFrame翻译为数据框，是一种数据组织方式，这么说你可能无法从感性上认识它，举个例子，你大概用过Excel，而它也是一种数据组织和呈现的方式，简单说就是表格，而在在pandas中用DataFrame组织数据，如果你不print DataFrame，你看不到这些数据，下面我们来看看DataFrame是如何使用的。</p>
+<ul>
+<li>首先是引入pandas和numpy，这是经常配合使用的两个包，pandas依赖于numpy，引入以后我们可以直接使用np/pd来表示这个两个模块</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/0ef2112442a7d9335e64e347ae4bd11372f001f2.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>先创建一个时间索引，所谓的索引（index)就是每一行数据的id，可以标识每一行的唯一值</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/21e5582309f7905271fa410a0ff3d7ca7acbd5da.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>为了快速入门，我们看一下如何创建一个6X4的数据：randn函数用于创建随机数，参数表示行数和列数，dates是上一步创建的索引列</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/c9d4cf43ad4bd113e90db00659afa40f4afb0586.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>我们还可以使用字典来创建数据框，例如创建一个列名为A的数据框，索引是自动创建的整数</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/aa251d4f78f0f7360b324b350955b319eac413f2.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>这又是一个字典创建DataFrame的例子</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/ea85a94543a98226630d2c138982b9014b90ebf3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>假如字典内的数据长度不同，以最长的数据为准，比如B列有4行：</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/b8405490f603738d1a8a0b16b01bb051f919ec87.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>可以使用dtypes来查看各行的数据格式</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/b110e6198618367a604978e92d738bd4b21ce587.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>接着看一下如何查看数据框中的数据，看一下所有的数据</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/e865a699a9014c08a5f72f91097b02087af4f4f3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>使用head查看前几行数据（默认是前5行），不过你可以指定前几行</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/b25d9901a18b87d6e58eac2b040828381e30fdf3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>查看前三行数据</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/6f4703950a7b0208b40538d561d9f2d3562cc8f3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>使用tail查看后5行数据</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/1cd4147b02087bf4da2050ddf1d3572c10dfcff3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>查看数据框的索引</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/6398ecd3572c11df7c1db817602762d0f603c2f3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>查看列名用columns</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/8b527d2762d0f7034b7e92e80bfa513d2797c5f3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>查看数据值，用values</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/507c389759ee3d6db40a80ff40166d224e4adef3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>查看描述性统计，用describe</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/b3ba5d166d224f4ac65574270af790529922d1f3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>使用type看一下输出的描述性统计是什么样的数据类型——DataFrame数据</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/08b68e529822720ee002e5ce78cb0a46f31fabf3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>使用T来转置数据，也就是行列转换</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/0db2c9ca7bcb0a4602ee8c0d6863f6246a60aff3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>对数据进行排序，用到了sort，参数可以指定根据哪一列数据进行排序。</li>
+</ul>
+<img src="/2015/10/23/pandas教程：[1]DataFrame入门/0d729944ebf81a4ca8feebfdd42a6059242da6f3.jpg" alt="pandas教程：[1]DataFrame入门" title="pandas教程：[1]DataFrame入门">
+<ul>
+<li>好了，这篇入门教程到这里，后面还有很多，希望有志同道合的朋友一起交流学习，有什么说的不对的地方，请批评指正。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/pandas/">#pandas</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

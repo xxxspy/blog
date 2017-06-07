@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Python教程：[43]Word基本操作"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Python教程：[43]Word基本操作 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/04/01/Python教程：[43]Word基本操作/">
+                Python教程：[43]Word基本操作
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>使用python操作Word用到了win32com模块，我们现在就要介绍一下python对Word的基本操作，文章涉及到如何与Word程序建立连接、如果与Word文档建立连接的，以及对Word文档的基本操作。</p>
+<ul>
+<li>首先，我们必须要引入win32com，已经Dispatch和constants两个常用的库</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/7ac880510fb30f24b3470f0cca95d143ac4b03a5.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>与Word建立连接，这时候如果你已经打开了一个Word，则直接与Word程序建立连接，如果没有打开，则它会打开Word。如果已经开启了一个Word，你可以使用DispatchEx代替下面的Dispatch</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/ae8267310a55b319ee70617a41a98226cefc17f0.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>设置Word的可见性visible，默认情况下，你看不到Word程序；然后设置Word的警告信息是否出现，默认也是不出现，这样你在使用python控制Word的时候不会弹出Word的警告信息。</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/f677b1c379310a55b7f83dfbb54543a9832610a5.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>新建一个Word文档用add（），假如你只想打开一个已经存在的Word，你是用下面红色的代码（去掉注释符号#）</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/a6aed01b9d16fdfa36a325e1b68f8c5495ee7bb7.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>获取已经打开的文档的数目，从下面我们看到我们只打开了一个Word文档</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/8759287adab44aed37925debb11c8701a08bfba6.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>想要获取第一个文档的句柄，我们使用Documents集合</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/2cb4fefe9925bc31f892e2975cdf8db1ca1370b7.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>假如想要激活特定的文档，我们使用activate()方法，可以其后的操作都在该文档下执行。</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/263e802f070828383cd13f1bba99a9014d08f1a6.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>我们还可以打印文档，使用printout方法。</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/064936381f30e9249d787f3e4e086e061c95f7a6.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>保存Word，可以使用另存为（saveas）方法或者使用保存（save）方法</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/5d212aa85edf8db16e1f906b0b23dd54564e7449.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<img src="/2016/04/01/Python教程：[43]Word基本操作/d002b34bd11373f0771a8390a60f4bfbfbed045d.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>最后要学的就是Word的退出，使用python控制Word一定要注意退出，否则程序运行越来越慢，尤其是在多次循环的时候。</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/b94f65ec54e736d1a842630799504fc2d5626929.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>下一篇文章我们讲如何使用python编辑Word中documents对象下的其他子对象。以后python操作Word的文章都发表在系列文章《python操作Word》下，下面的参考资料里有它的链接地址。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/python/">#python</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

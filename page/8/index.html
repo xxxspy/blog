@@ -155,13 +155,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/10/23/SPSS实例：[40]如何更改界面语言/">
-                SPSS实例：[40]如何更改界面语言
+            <a href="/2016/08/01/python 线性代数：[4]方阵的迹/">
+                python 线性代数：[4]方阵的迹
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年10月23日</span>
+                <span class="date">2016年08月01日</span>
             
             
             
@@ -170,373 +170,249 @@
 
     
         <div class="content">
-            <p>spss内置多国语言，除非你用的spss版本，老到该退休的版本，那时候只有英文版，现在的版本比如20、21、22都内置多国语言，可以自行设置。下面是具体的过程：</p>
+            <p>怎样求方阵的迹？方阵的迹是什么？方阵的迹就是主对角元素之和，方阵的迹说实话我还不知道它的实际用途，有知道的人麻烦你写在下面的评论里，好了，下面来用numpy计算一下方阵的迹。</p>
 <ul>
-<li>先随便启动一个spss，我的版本是22</li>
+<li>先引入numpy</li>
 </ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/fd428c45d688d43f30fb53c47e1ed21b0ef43b73.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/d048adde9c82d158417f9740820a19d8bd3e4207.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
 <ul>
-<li>我通用的是英文版，先看一下如何改成中文，点击edit–opetions</li>
+<li>创建一个方阵（方阵也就是行数等于列数的矩阵）</li>
 </ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/0865b518972bd407fc7911cb78899e510fb3090f.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/f29faa8f8c5494ee89a3c1e82ff5e0fe98257e7b.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
 <ul>
-<li>找到language选项，这里有设置输出结果的语言和用户界面的语言，都设置成中文即可</li>
+<li>用trace计算方阵的迹</li>
 </ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/0b14ad19ebc4b745a62a7520ccfc1e178a82150f.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/8cf0d513495409235be8ad8f9058d109b2de497b.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
 <ul>
-<li>当然，我们还可以选择是繁体中文还是简体中文</li>
+<li>再创建一个方阵F</li>
 </ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/b110e6198618367a2fdbbdeb2d738bd4b31ce57c.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/b25d9901a18b87d6ddaa65ee050828381e30fd1d.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
 <ul>
-<li>点击确定即可设置完成，</li>
+<li>验证一下方阵的迹等于方阵的转置的迹</li>
 </ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/62667cd0f703918fb668fffc523d269759eec408.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/9f6e190828381f3016f14358ab014c086f06f01d.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
 <ul>
-<li>做一个简单的描述统计，看看输出语言是不是中文，是简体中文还是繁体中文，都已经转换为简体中文了</li>
+<li>验证一下方阵的乘积的迹等于</li>
 </ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/fd428c45d688d43f31f15cc47e1ed21b0ef43b69.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/23/spss利用数据聚合求和的方法/">
-                spss利用数据聚合求和的方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p> 有时候我们拿到的数据是不规范的，比如从数据库中直接导出的数据就是。我们举个例子，每个记者每发一篇文章就会增加一条记录，在统计每个月的工作绩效的时候，需要统计每个记者到底发了多少稿件，我们就用到了数据聚合aggregate。<br>方法/步骤</p>
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/a84052086e061d950fadf9c979f40ad163d9ca1d.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
 <ul>
-<li>打开数据以后，我们在菜单栏上执行：data–aggregate，打开数据聚合对话框</li>
+<li>验证一下方阵的和的迹等于方阵的迹的和</li>
 </ul>
-<img src="/2015/10/23/spss利用数据聚合求和的方法/0824ab18972bd407592d93707b899e510eb30950.jpg" alt="spss利用数据聚合求和的方法" title="spss利用数据聚合求和的方法">
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/566d0fdfa9ec8a136cf19911f503918fa1ecc01d.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
 <ul>
-<li>将记者姓名放到分组变量，然后将稿件数量和字数都放到聚合变量里，这时候你看到了，系统默认是求均值，我们要求的其实是总和，所以，先选中其中一个变量，比如选中稿件数量，然后点击function</li>
-</ul>
-<img src="/2015/10/23/spss利用数据聚合求和的方法/7dd98d1001e9390126a9cdb37bec54e737d19697.jpg" alt="spss利用数据聚合求和的方法" title="spss利用数据聚合求和的方法">
-<ul>
-<li>在打开的function对话框中，勾选sum，然后点击continue，这样就将均值转换成了求和</li>
-</ul>
-<img src="/2015/10/23/spss利用数据聚合求和的方法/203fb80e7bec54e73d475a93b9389b504ec26a97.jpg" alt="spss利用数据聚合求和的方法" title="spss利用数据聚合求和的方法">
-<ul>
-<li>同样的方法，勾选字数，点击function按钮</li>
-</ul>
-<img src="/2015/10/23/spss利用数据聚合求和的方法/43a7d933c895d143db9ca4ae73f082025baf0750.jpg" alt="spss利用数据聚合求和的方法" title="spss利用数据聚合求和的方法">
-<ul>
-<li>勾选sum，然后点击continue，返回数据聚合对话框</li>
-</ul>
-<img src="/2015/10/23/spss利用数据聚合求和的方法/203fb80e7bec54e73d475a93b9389b504ec26a97.jpg" alt="spss利用数据聚合求和的方法" title="spss利用数据聚合求和的方法">
-<ul>
-<li>这时候我们所有的设置已经基本完成，点击ok即可开始转换数据</li>
-</ul>
-<img src="/2015/10/23/spss利用数据聚合求和的方法/c995d143ad4bd1130b27f7bf5aafa40f4afb0550.jpg" alt="spss利用数据聚合求和的方法" title="spss利用数据聚合求和的方法">
-<ul>
-<li><p>最后看到数据结果了，最后生成了两列变量，分别求出了每个记者的稿件数量和字数总数</p>
+<li><p>该文章用到的所有代码：</p>
 </li>
-<li></li>
-</ul>
-<img src="/2015/10/23/spss利用数据聚合求和的方法/72f082025aafa40f372c8e50ab64034f79f01950.jpg" alt="spss利用数据聚合求和的方法" title="spss利用数据聚合求和的方法">
+<li><blockquote>
 <blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/">
-                VBA如何判断一个日期是星期几[2]Excel2013教程
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我们经常要将日期转换成星期，这个在Excel中很容易实现，但是如何使用vba来转换，这个可能大家就不熟悉了，今天就来给大家演示一下如何使用vba来进行日期到星期的转换：</p>
-<ul>
-<li>首先打开Excel，如图所示，有一列日期，我们在第二列输入周几，作为星期列</li>
-</ul>
-<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/310f3b1f95cad1c8d1cbed4f7e3e6709c93d5122.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
-<ul>
-<li>我们切换到vb界面，如图所示，在菜单栏上执行：开发工具–vb</li>
-</ul>
-<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/814b07d8bc3eb13558cfa6d3a71ea8d3fd1f440a.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
-<ul>
-<li>双击模块，打开模块，在这个模块中定义一个函数，如图所示：在下面的参考资料里有这个Excel文件的下载链接</li>
-</ul>
-<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/c28fddfdfc0392455cc5f0678694a4c27d1e2522.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
-<ul>
-<li>接着我们选中b2单元格，输入公式：=周几（a2），这样就可以计算周几了</li>
-</ul>
-<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/d57e9994a4c27d1e5d562aac1ad5ad6eddc43822.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
-<ul>
-<li>拖动b2单元格的右下角，快速填充下面的单元格，到此我们就完成了所有的日期的转换</li>
-</ul>
-<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/3a86813df8dcd1003a94e949738b4710b9122f0a.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
-<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/cc506c8b4710b9124dc9e796c2fdfc039245220a.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
 <blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
+<p>E=np.array([[1,2,3],[4,5,6],[7,8,9]])</p>
 </blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/15/SVN教程：[4]SAE上部署django/">
-                SVN教程：[4]SAE上部署django
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>这篇文章写的不是很详细，所以我又补充了一个详细版教程，你可以相互结合着看：<a href="http://jingyan.baidu.com/article/7082dc1c569f18e40a89bd21.html" target="_blank" rel="external">http://jingyan.baidu.com/article/7082dc1c569f18e40a89bd21.html</a></p>
-<ul>
-<li>我们先来创建一个文件夹deltatest（这是我在sae上创建的应用名称），如图所示，用于存放我们的django创建的站点</li>
-</ul>
-<img src="/2015/10/15/SVN教程：[4]SAE上部署django/cc506c8b4710b9124dbfe0bbc1fdfc039245223d.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
-<ul>
-<li>在deltatest文件夹上面右键单击，然后选择SVN检出，建立与SAE的链接</li>
-</ul>
-<img src="/2015/10/15/SVN教程：[4]SAE上部署django/b13fd48065380cd7b755b4a8a344ad34588281e8.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
-<ul>
-<li>这里大家都应该知道怎么设置，不会的看我上一篇文章【SVN教程[3]SEA代码部署】，点击确定</li>
-</ul>
-<img src="/2015/10/15/SVN教程：[4]SAE上部署django/263e802f07082838c90dca51ba99a9014c08f130.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
-<ul>
-<li>我们使用django在deltatest文件夹下面创建一个站点，用了下面两个命令。如果你不会，可以参考这篇经验：Django教程：[2]创建一个站点</li>
-</ul>
-<img src="/2015/10/15/SVN教程：[4]SAE上部署django/90cebeec08fa513dc8ec7a9b3f6d55fbb3fbd9f6.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
-<ul>
-<li>这样就在deltatest文件夹下面多了一个文件夹deltatest，将这个文件夹重命名为1</li>
-</ul>
-<img src="/2015/10/15/SVN教程：[4]SAE上部署django/61183b2dd42a283424ed204e59b5c9ea14cebfe8.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
-<img src="/2015/10/15/SVN教程：[4]SAE上部署django/346bd85c10385343e48491649113b07ecb8088e8.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
-<ul>
-<li>我们右键单击文件夹，然后选择提交</li>
-</ul>
-<img src="/2015/10/15/SVN教程：[4]SAE上部署django/8474fbdde71190ef31b0849acc1b9d16fcfa60e8.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
-<ul>
-<li>打开浏览器，输入你的应用的域名，这个在你申请应用的时候设置的，你会看到django的欢迎界面，这说明django部署成功，还是不会的请在下面留言。</li>
-</ul>
-<img src="/2015/10/15/SVN教程：[4]SAE上部署django/c87c6ecf3bc79f3d86aaf275b8a1cd11738b29e8.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
 </blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/03/spss按照3个标准差筛选数据的方法/">
-                spss按照3个标准差筛选数据的方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>在数据处理的时候，一般来说数据都是正态分布的，按照正态分布的性质，三个标准差以外的数据都，可以被看作是错误的数据从而排除掉，现在跟大家分享一下如何根据标准差来筛选数据。<br>方法/步骤</p>
-<ul>
-<li>要想按照标准差筛选数据，必须先要求出每个数据的Z分数，如图所示，在菜单栏上执行analyze–descriptive statistic–descriptive，打开描述统计对话框</li>
-</ul>
-<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/a1ec08fa513d26976bba3d8c55fbb2fb4216d8f1.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
-<ul>
-<li>将我们要筛选的数据放入到变量对话框中，勾选save standardized values as variables，这样就能输出Z分数了，点击ok按钮，输出结果</li>
-</ul>
-<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/cc11728b4710b9120051c32fc3fdfc039345224a.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
-<ul>
-<li>我们看到，在数据窗口中多了一列数据，这就是我们求得的z分数，接下来要根据这组数据。来筛选数据</li>
-</ul>
-<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/a08b87d6277f9e2f10d528d91f30e924b999f37a.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
-<ul>
-<li>在菜单栏上执行data—select cases，打开数据筛选对话框</li>
-</ul>
-<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/43a7d933c895d1434761d0f273f082025baf07cf.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
-<ul>
-<li>我们对case按照标准差进行选择，需要根据条件来选择，所以选择if conditions is satisfied，点击if来设置条件</li>
-</ul>
-<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/cb8065380cd79123fe93a0a5ad345982b3b780eb.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
-<ul>
-<li>在这里我们输入公式Zx2  &lt;= 3 &amp; Zx2  &gt;=  -3 ，这个条件的意思就是选择数值在3和-3之间。点击continue按钮，返回到主对话框</li>
-</ul>
-<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/b2de9c82d158ccbfcba582eb19d8bc3eb03541c1.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
-<ul>
-<li>在主对话框中，点击ok按钮，开始处理数据</li>
-</ul>
-<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/5ab5c9ea15ce36d38268b4e13af33a87e850b1f6.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
-<ul>
-<li>最后我们看一下处理的效果，超过三个标准差的数据在前面都有一个斜杠表示删除了。以后处理数据的时候他们就不参与了</li>
-</ul>
-<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/b8389b504fc2d562010ce73ce71190ef77c66cde.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
 </blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/03/SPSS实例：[36]分层卡方检验/">
-                SPSS实例：[36]分层卡方检验
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>现在我手头有一个研究数据，数据描述的是不同的年龄组儿童、不同的阅读顺序对是否受到干扰的影响。我们来看一下数据你就懂了。有两个年龄组分别为0和1代表；图书顺序也是两个分别为1和2，是否受到了干扰我们用0和1表示。我们想知道在不同的年龄组下图书顺序是否影响干扰。这时候用到了分层卡方检验，以年龄组作为分层变量。</p>
-<ul>
-<li>首先打开交叉表分析对话框</li>
-</ul>
-<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/7d98931001e93901c59ec08979ec54e737d196ae.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
-<ul>
-<li>将年龄组放入到分层变量框</li>
-</ul>
-<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/55a628d12f2eb93870f13745d7628535e4dd6fae.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
-<ul>
-<li>打开【statistics】对话框，勾选卡方和CMH统计量，点击继续</li>
-</ul>
-<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/d4239b35e5dde711614e0e41a5efce1b9c1661ae.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
-<ul>
-<li>我们看统计结果，首先是层间一致性检验。sig值显示差异不显著，说明不同年龄组中，图书顺序与干扰的关系是相同的。</li>
-</ul>
-<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/faacb564034f78f0a967d7447b310a55b2191cdd.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
-<ul>
-<li>接着看分层卡方检验结果，即考虑到年龄因素后，图书顺序与干扰的影响。这里显示图书顺序与干扰是无关的。隐私sig值均大于.05</li>
-</ul>
-<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/78701455b319ebc4d3143b2e8026cffc1f1716dd.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
-<ul>
-<li>最后要看的是优势比，主要看Estimate对应的值.861，关于优势比的概念，我们可以看我之前的一篇文章<a href="http://jingyan.baidu.com/article/bea41d437dbcb7b4c51be6be.html" target="_blank" rel="external">http://jingyan.baidu.com/article/bea41d437dbcb7b4c51be6be.html</a></li>
-</ul>
-<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/cdfe7281800a19d8a89cc9b231fa828ba71e46ae.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/03/SPSS python教程：[5]SpssClient简介/">
-                SPSS python教程：[5]SpssClient简介
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>SpssClient是用python实现spss操作的必定要引入的一个模块，我们今天就来看一下该模块下有哪些子模块，然后简单说一下我们按照什么顺序来写这一系列教程，重点讲什么，看看你自己是否需要看这篇教程。</p>
-<ul>
-<li>先来看看SpssClient模块下有哪些类我们可以在python中使用。主要的大类有五个：DataDocList，SyntaxDocsList，OutputDocsList，SpssServerConfList，SpssScriptContext，我们下面分别介绍这五个类别</li>
-</ul>
-<img src="/2015/10/03/SPSS%20python教程：[5]SpssClient简介/4651a712c8fcc3ce50afebab9045d688d53f20ff.jpg" alt="SPSS python教程：[5]SpssClient简介" title="SPSS python教程：[5]SpssClient简介">
-<ul>
-<li>DataDocList，就是spss的数据文件列表。用它来读取、修改、操作数据，数据文件的后缀名是sav</li>
-</ul>
-<img src="/2015/10/03/SPSS%20python教程：[5]SpssClient简介/509b9fcb39dbb6fdf1a3c8be0b24ab18962b376a.jpg" alt="SPSS python教程：[5]SpssClient简介" title="SPSS python教程：[5]SpssClient简介">
-<ul>
-<li>SyntaxDocsList，就是spss的syntax文件列表，里面都是syntax代码，或者可能掺杂有python代码，它用于读取、修改、操作syntax代码，syntax文件的后缀名是sps</li>
-</ul>
-<img src="/2015/10/03/SPSS%20python教程：[5]SpssClient简介/0ef2112442a7d9337976c9ebaf4bd11372f00108.jpg" alt="SPSS python教程：[5]SpssClient简介" title="SPSS python教程：[5]SpssClient简介">
-<ul>
-<li>OutputDocsList，就是spss的统计结果输出文件列表，里面存放着spss的统计结果，我们可以在python中使用该类来修改、操作结果数据，结果输出文件的后缀名比较熟悉，就是spv</li>
-</ul>
-<img src="/2015/10/03/SPSS%20python教程：[5]SpssClient简介/d0526df082025aaf1cec5353f9edab64024f1a08.jpg" alt="SPSS python教程：[5]SpssClient简介" title="SPSS python教程：[5]SpssClient简介">
-<ul>
-<li><p>SpssServerConfList，该类用于spssserver，由于在我的工作中并没有用到过spss服务器，所以我的教程里不包括spssserver的相关内容</p>
 </li>
-<li><p>SpssScriptContext，该类用于返回脚本文件的环境，现在还不涉及，以后用可能用到，但不是现在。</p>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>E</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 2, 3],</p>
+</li>
+<li><p>[4, 5, 6],</p>
+</li>
+<li><p>[7, 8, 9]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(E)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>15</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>F=E-2</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>F</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[-1,  0,  1],</p>
+</li>
+<li><p>[ 2,  3,  4],</p>
+</li>
+<li><p>[ 5,  6,  7]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(E)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>15</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(E.T)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>15</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(np.dot(E,F))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>171</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(np.dot(F,E))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>171</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(E+F)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>24</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(E)+np.trace(F)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>24</p>
 </li>
 </ul>
 <blockquote>
@@ -554,13 +430,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/23/spss怎样将两批数据合并/">
-                spss怎样将两批数据合并
+            <a href="/2016/07/23/Excel2013：[4]双层饼图怎么做/">
+                Excel2013：[4]双层饼图怎么做
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月23日</span>
+                <span class="date">2016年07月23日</span>
             
             
             
@@ -569,46 +445,64 @@
 
     
         <div class="content">
-            <p>我们看到下图中有两个sav文件，也就是两批数据，这两批数据的变量都是一样的，只是不同时间收集的两批数据，现在我们要合并者两个文件，得到一批总的数据，怎么办？下面是具体的步骤奥。<br>工具/原料</p>
+            <p>今天做一个数据报告，需要用到双层饼图，我发现老板对图表的要求越来越高了，来回整了很多遍，觉得很值得跟大家分享这个方法，喜欢的童鞋可以收藏或者分享奥！我们来看看具体的操作过程吧。</p>
 <ul>
-<li>spss 20.0<br>方法/步骤</li>
+<li>先使用a列数据做一个饼图，如图所示。这个很简单啦，大家一看就知道</li>
 </ul>
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/79b1e936afc37931c08cbc3de9c4b74542a911fa.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
 <ul>
-<li>打开spss，先打开一个sav文件，然后在菜单栏上执行：data—merge files–add cases，打开合并文件的窗口</li>
+<li>接着我们要在饼图上右键单击，选择数据</li>
 </ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/9358d109b3de9c8289ac83626c81800a18d84315.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/72b19c025aafa40f890cf4c9a964034f79f01998.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
 <ul>
-<li>接下来你看到的这个窗口可能有两种情况，一个情况是你只打开了一个要合并的sav文件，另一个文件没有打开，那么你要选择第二个选项，如图所示，然后点击浏览按钮</li>
+<li>在这个对话框里，我们需要添加新的数据系列，所以点击【添加】按钮</li>
 </ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/42166d224f4a20a4ac51592a90529822730ed094.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/4bd1e803738da977e1cbbc3fb251f8198718e3fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
 <ul>
-<li>打开浏览窗口，找到你的第二个数据，然后选中它，点击打开，这样就完成了基本的合并文件的操作</li>
+<li>将b列数据填入到相应的位置，系列名称就是a，系列值就是3、4、5这三个值</li>
 </ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/838ba61ea8d3fd1f2250c7d7304e251f94ca5f85.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/a0ca99d6277f9e2fefd1271c1d30e924b999f3fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/29790130e924b89944d8432c6c061d950b7bf6fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
 <ul>
-<li>回到了合并文件的主对话框，点击continue按钮，进入合并数据向导。</li>
+<li>回到这个对话框，点击确定按钮</li>
 </ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/023b5bb5c9ea15ce3ebd85e4b6003af33b87b28f.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/b9d8b7014c086e06ed4c055f00087bf40bd1cbfb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
 <ul>
-<li>如果我们同时打开了两个数据文件，那么在合并文件对话框中，你会看到第一个选项中有第二个文件，如图所示，这时候你直接在这里选择该文件即可，同样是点击continue即可合并数据</li>
+<li>完成以后，你会发现没有任何变化，不要着急，还需要设置</li>
 </ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/503d269759ee3d6db110e22643166d224e4ade0d.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/263e802f07082838f5c7e600ba99a9014d08f199.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
 <ul>
-<li>在该向导里，你会遇到两种情况，第一个情况是在upaired variables列表里有有量，如图所示，这时候你要决定这个变量有没有用，如果没用就不用管他，在新的数据里他就不会出现。如果这个变量是有用的，选中这个变量，点击下面的rename</li>
+<li>双击饼图，在右侧出现了设置数据系列格式，点击那个直方图的标志</li>
 </ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/aec379310a55b31941c0e69843a98226cffc1725.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/f6428f8fa0ec08fa50e729b35bee3d6d54fbdafb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
 <ul>
-<li>打开一个rename对话框，输入新的名称，然后点击continue，回到上面的对话框</li>
+<li>设置系列绘制在次坐标轴，记住一定是次坐标轴，然后设置饼图的分离程度，略微的分离一下。你会看到分离的效果。</li>
 </ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/37d12f2eb9389b507c3684bf8535e5dde6116e15.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/27d647ee3d6d55fbb4214c326f224f4a21a4ddfb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/09bb4f3d269759ee39955adfb0fb43166c22df99.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
 <ul>
-<li>点击添加按钮，即可完成变量的添加，注意，因为该变量只存在于一个sav文件中，所以合并数据以后，有部分case在该变量上是没有值得。</li>
+<li>将分离的饼图拖动，使其聚集在中间的位置</li>
 </ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/9358d109b3de9c8287859d626c81800a18d8437e.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/425773224f4a20a44ddb06d392529822730ed099.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
 <ul>
-<li>点击ok按钮，数据合并完成。</li>
+<li>选中第二层饼图，也就是下面那个较大的饼图，在其上面右键单击，选择【更改系列图表类型】</li>
 </ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/d833c895d143ad4b4b7e212d82025aafa50f068e.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/99636c0e0cf3d7ca69330562f01fbe096a63a999.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
+<ul>
+<li>我们看到可以在这里设置图表类型，我们将b系列设置成环状图</li>
+</ul>
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/6a2112338744ebf806b45e2bdbf9d72a6159a799.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/5202e5f2b211931386a4c5a467380cd790238dfb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/906289dda144ad346758bd93d2a20cf430ad85fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
+<ul>
+<li>接着，我们调整一下环状图的内径大小，使其和中间分离</li>
+</ul>
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/adee30dda3cc7cd9c7ca0ecd3b01213fb90e91fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
+<ul>
+<li>最后，调整色调和风格，看看我的成功作品吧！</li>
+</ul>
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/7aad4ae736d12f2eeae294744dc2d562843568fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
+<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/d4239b35e5dde711ca3579e2a5efce1b9c1661fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -624,13 +518,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/23/spss中拉丁方设计如何进行方差分析/">
-                spss中拉丁方设计如何进行方差分析
+            <a href="/2016/07/23/Python教程：[65]获取文件信息/">
+                Python教程：[65]获取文件信息
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月23日</span>
+                <span class="date">2016年07月23日</span>
             
             
             
@@ -639,46 +533,39 @@
 
     
         <div class="content">
-            <p>工具/原料</p>
+            <p>怎样获取文件的创建时间、修改时间、大小、路径等信息？我们今天就要通过一个已知路径来获取这些信息，下面是具体的方法：</p>
 <ul>
-<li>spss<br>方法/步骤</li>
+<li>先来一如一个os模块，然后写一个路径，比如fpath</li>
 </ul>
+<img src="/2016/07/23/Python教程：[65]获取文件信息/42e89c26cffc1e17de1a34b14890f603728de94e.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
 <ul>
-<li>首先打开spss，以如图所示的方式录入数据，week和day是两个需要控制的变量，music是自变量，score是因变量</li>
+<li>通过join方法，得到一个txt文件的路径:join</li>
 </ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/242dd42a2834349b2b1d7744c9ea15ce37d3bed3.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<img src="/2016/07/23/Python教程：[65]获取文件信息/8bc3a7014a90f6032b1524c73b12b31bb151ed4e.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
 <ul>
-<li>数据准备好以后，在菜单栏上执行：analyse–GLM–univariate，打开方差分析对话框</li>
+<li>看一下，现在这个路径指向一个txt文件</li>
 </ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/63d9f2d3572c11df55bba6e2632762d0f603c28d.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<img src="/2016/07/23/Python教程：[65]获取文件信息/263e802f07082838734a6494ba99a9014d08f1a8.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
 <ul>
-<li>打开对话框以后，先将自变量和因变量放入各自的位置，如图所示</li>
+<li>判断一下这个路径是否指向的是文件，而不是我文件夹:isfile</li>
 </ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/6a600c338744ebf805d87dfed9f9d72a6159a741.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<img src="/2016/07/23/Python教程：[65]获取文件信息/6f4703950a7b02080e8e876160d9f2d3562cc8a8.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
 <ul>
-<li>点击model按钮，设置一下模型</li>
+<li>获取文件的修改时间:getatime</li>
 </ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/b151f8198618367a3b2e661c2e738bd4b21ce548.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<img src="/2016/07/23/Python教程：[65]获取文件信息/4bac30738bd4b31ce2992c3b85d6277f9f2ff84e.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
 <ul>
-<li>系统默认的是full factorial，我们要勾选custom</li>
+<li>获取文件的创建时间:getctime</li>
 </ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/c2cec3fdfc0392457688f9ce8794a4c27d1e2535.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<img src="/2016/07/23/Python教程：[65]获取文件信息/566d0fdfa9ec8a131e5def60f503918fa1ecc0a8.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
 <ul>
-<li>将三个自变量放入右侧的model框中</li>
+<li>获取文件的大小:getsize</li>
 </ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/cdbf6c81800a19d8c3399cc433fa828ba61e463c.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<img src="/2016/07/23/Python教程：[65]获取文件信息/90cebeec08fa513da2edd45e3f6d55fbb3fbd9a8.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
 <ul>
-<li>将type设置为main effect ，因为我们默认这三个变量是没有交互作用的</li>
+<li>获取文件的绝对路径：abspath</li>
 </ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/a044ad345982b2b792a9210531adcbef76099b38.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<ul>
-<li>返回到主菜单，点击ok开始运行数据处理，并输出结果</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/a8014c086e061d95f9622ff97bf40ad163d9cacf.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<ul>
-<li>我们看方差检验的结果，三个变量中，music和day对应的sig值小于0.05，说明这两个变量的效应是显著的。</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/63d0f703918fa0ec0a9e7ccc269759ee3c6ddb91.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<img src="/2016/07/23/Python教程：[65]获取文件信息/a1ad16fa513d2697dc94b0dd57fbb2fb4216d8a8.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -694,13 +581,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/19/spss如何检验残差的方差齐性/">
-                spss如何检验残差的方差齐性
+            <a href="/2016/07/23/SPSS实例：[10]分割数据的方法/">
+                SPSS实例：[10]分割数据的方法
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月19日</span>
+                <span class="date">2016年07月23日</span>
             
             
             
@@ -709,30 +596,390 @@
 
     
         <div class="content">
-            <p>残差的方差齐性是回归分析要满足的一个条件， 通常我们要用散点图来检验残差的方差齐性，根据散点图可以看到标准化的残差随着估计值的变化趋势，下面是具体的分析方法：<br>工具/原料</p>
+            <p>我手上有一批数据，我们要分别计算本科生和专科生的性别、年级、年龄等变量的频率，我们可以将数据按照学历来分组，然后再进行描述性统计就能得到两个平行结果，一个是本科的一个是专科的。当然，如果我们做方差分析、回归分析，先将数据分组也一样可以得到不同人群的同样的结果。我们来看看具体的方法：</p>
 <ul>
-<li>spss20.0<br>方法/步骤</li>
+<li>首先我们打开数据，在菜单中执行：data–splitfile，进行数据分割</li>
 </ul>
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/0d729944ebf81a4c9674bcdbd52a6059252da61b.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
 <ul>
-<li>打开线性回归的对话框：analyse–regression–linear</li>
+<li>然后我们选择compare groups，这样可以对比两组人群（本科和专科）</li>
 </ul>
-<img src="/2015/09/19/spss如何检验残差的方差齐性/35a85edf8db1cb137eac61d7dd54564e93584b28.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/4a77b2af2edda3cc8f6ce83203e93901203f92dd.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
 <ul>
-<li>在回归分析中， 将GDP作为因变量，其他的变量可以作为自变量，将这些变量放入各自的框中</li>
+<li>将学历这个变量发那个如分组列表里</li>
 </ul>
-<img src="/2015/09/19/spss如何检验残差的方差齐性/f11f3a292df5e0feb66ad5c55c6034a85fdf7287.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/a28d62d98d1001e9cfb4441dba0e7bec55e797dd.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
 <ul>
-<li>点击plot按钮，打开图标的设置对话框</li>
+<li>点击ok，运行分组命令</li>
 </ul>
-<img src="/2015/09/19/spss如何检验残差的方差齐性/34fae6cd7b899e5173eb66d042a7d933c9950d88.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/00a82701213fb80e825931c534d12f2eb83894dd.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
 <ul>
-<li>将如图所示的选项勾选，这是散点图，我们可以看到残差随着估计值的变化趋势</li>
+<li>接着我们做一个描述性统计来看看结果</li>
 </ul>
-<img src="/2015/09/19/spss如何检验残差的方差齐性/3b87e950352ac65ce7413ab7fbf2b21192138aaa.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/c8ab0bce36d3d539637b5fd13887e950352ab01b.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
 <ul>
-<li>我们看到这就是需要的散点图，纵坐标是标准化的参差值，横坐标是估计值，如果散点图拟合的直线平行于横坐标，那么就可以认为残差是齐性的。</li>
+<li>这是是得到的结果，我们看到数据结果分为两行，第一行是本科生，第二行是专科生。</li>
 </ul>
-<img src="/2015/09/19/spss如何检验残差的方差齐性/9922720e0cf3d7caa34f63b2f21fbe096a63a9bd.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/fab3ac119313b07e2bfb001a0ed7912397dd8c1b.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/">
+                Excel2013教程-快速创建大量指定名称的工作表
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>根据一列名称来创建一对工作表，工作表的名称就是这一列数据中的数据，这该怎么办？这里分享一个快速创建的方法，不使用任何vba代码，手工操作就可以完成。</p>
+<ul>
+<li>打开Excel，选中我们工作表名称这一列数据</li>
+</ul>
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/bd70426034a85edf6e2c502f48540923dc5475df.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<ul>
+<li>在插入选项下，找到数据透视表，我们点击它</li>
+</ul>
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/b9d8b7014c086e067877914703087bf40bd1cba4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<ul>
+<li>打开了一个对话框，我们看到选中的区域已经添加到了对话框中，直接点击确定按钮</li>
+</ul>
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/a84052086e061d956c9999347af40ad163d9caa4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<ul>
+<li>在工作表的右侧出现了一个对话框，如图所示，首选勾选报表名称，这是我们选择的数据的第一个单元格的值</li>
+</ul>
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/1cd4147b02087bf46333f9e5f3d3572c10dfcfa4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<ul>
+<li>在分析选项下找到【选项】菜单，如图所示，在选项菜单中，点击【显示报表筛选页】</li>
+</ul>
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/109eb7ec8a13632713326c3f908fa0ec09fac7a4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/bd7faf3533fa828b508333effc1f4134960a5adf.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/a1ad16fa513d2697210ca65154fbb2fb4216d8a4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<ul>
+<li>出现了一个对话框，直接点击确定按钮</li>
+</ul>
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/58af236d55fbb2fb3ff4f61e4e4a20a44723dca4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<ul>
+<li>我们看到，工作表已经创建好了，接着设置工作表的格式，如图所示</li>
+</ul>
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/6c63514a20a4462388150b6e9922720e0df3d7a4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<ul>
+<li>将列标题复制下载</li>
+</ul>
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/476217f790529822f6ec97cfd6ca7bcb0b46d4a4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<ul>
+<li>选中所有的单元格，方法是使用shift键，点击【北京】和【sheets5】，这样之间的工作表就选中了</li>
+</ul>
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/c87c6ecf3bc79f3dff424a3cbba1cd11738b29df.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<ul>
+<li>将复制好的内容粘贴到【北京】工作表，这样所有的被选中的工作表中都粘贴了这个列标题，这样具有相同格式的大量工作表就创建完成了</li>
+</ul>
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/f99dcf00baa1cd117915dc2cb812c8fcc2ce2ddf.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/c28fddfdfc039245c5164f038694a4c27c1e25df.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/">
+                SPSS实例：[5]龙骨图（聚类谱系图）怎么看
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>通常在层次聚类分析中，我们的数据处理结果会出现龙骨图或者叫做分类谱系图，其实在很多论文中，我们不需要报告龙骨图，所以大部分spss课本中并没有对龙骨图进行详细的介绍，在这，我给大家分享一篇经验，讲一下如何分析龙骨图（聚类谱系图）。</p>
+<ul>
+<li>两种样式的龙骨图，如图所示：下面第一幅图是spss20.0的样式，而在低版本中，spss出现的龙骨图是下面第二幅图的样式，不管哪种样式，分析的方法都是一样的。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/08b68e529822720e31c034317acb0a46f31fabb4.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/3bb22487e950352a98abf2c35243fbf2b0118bf0.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>龙骨图的本质是让我们看到聚类的过程：为了清晰可见，我们使用spss20.0产生的龙骨图，最左侧一列数字代表不同的省份，对省份进行分类，第一次分类结果是从各个数字延伸出来的直线相交点，如图所示，红色方框就是第一次聚类产生的类别。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/c8ab0bce36d3d539eed6d9083b87e950372ab0d7.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>同样的方式，我们看第二次聚类的结果为，假如我问你，第一个类别包含哪些省份？你应该能够说出来，应当是山西、江西、内蒙、吉林、安徽。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/245e8bcad1c8a78671bb9cc56609c93d71cf502d.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>横断法观察分类个数：通常我们使用一条线截断分类线来获得分类结果，如图所示。画一条竖直的直线，与分类线相交，我们看到出现了5个交点，所以应该是分成五类，而我们看最上面一条刻度线，红线与刻度线相交的点就是类间距离。分成五类的类间距离就是8。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/6a22e8246b600c33c2530e031b4c510fd8f9a190.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>类间距离的计算方法有很多种，通常使用的是组间平均距离法师最稳健的方法，所以通常我们说类间距离的时候说的都是组间平均距离，它指的是各组数据点两两之间的距离的平均。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/6f4703950a7b02086510ef2a63d9f2d3552cc8e5.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/19/SPSS实例：[39]如何统计频率/">
+                SPSS实例：[39]如何统计频率
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如何做人口统计学变量的频数统计？这个是spss的最基本功能，很简单，但是很多刚接触spss又想很快写完论文的人都不知道，我今天就写一篇教程，讲一下如何去做，下面是具体的过程：</p>
+<ul>
+<li>先来看一下我的数据，都录入到了spss</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/a992e31f4134970a1c2c4ca997cad1c8a6865d9d.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>依次打开菜单：analyse–descriptive statistics–frequencies，打开描述性统计</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/0b07ec1fbe096b634be102d60e338744eaf8ac79.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>打开了一个对话框，我们将要统计频率的变量放入到右侧的变量框，如图所示</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/4a77b2af2edda3cc9377e4a603e93901203f9262.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>默认情况下，结果会输出频率和百分比，当然，我们还可以点击statistics，选择更多统计量</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/9dc3cf58ccbf6c81a183706ebe3eb13532fa4044.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>在这里你还可以选择最大值、最小值、四分位数等</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/32bb9c8ba61ea8d3d4962882950a304e241f5844.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>我们看一下输出的结果：这是学生专业的频率统计</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/5f9e93b1cb1349541eaab4e2544e9258d0094a44.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>这是学生年级的频率统计</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/f15e24292df5e0fe96acd5875e6034a85fdf7244.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/17/Excel如何取消分类汇总/">
+                Excel如何取消分类汇总
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们经常用分类汇总来统计数据，但是现在我们不想统计数据了，如何取消分类汇总呢？通常很多人都不知道这个答案，所以我就来给大家示范一下如何取消分类汇总选项，下面是具体的过程：</p>
+<ul>
+<li>我们通常都知道使用如图所示的按钮来设置分类汇总，我们先来自己做一个分类汇总，然后在取消这个分类汇总</li>
+</ul>
+<img src="/2016/07/17/Excel如何取消分类汇总/d002b34bd11373f0cc11db55a50f4bfbfaed048a.jpg" alt="Excel如何取消分类汇总" title="Excel如何取消分类汇总">
+<ul>
+<li>假如我要对年龄进行汇总，我们选择汇总项为年龄，点击确定</li>
+</ul>
+<img src="/2016/07/17/Excel如何取消分类汇总/ea85a94543a9822690ef9fed8b82b9014b90eb8b.jpg" alt="Excel如何取消分类汇总" title="Excel如何取消分类汇总">
+<ul>
+<li>我们看到这就是汇总成功的样子了，接下来要取消汇总</li>
+</ul>
+<img src="/2016/07/17/Excel如何取消分类汇总/8759287adab44aed41600a2eb21c8701a08bfb8b.jpg" alt="Excel如何取消分类汇总" title="Excel如何取消分类汇总">
+<ul>
+<li>鼠标点击一下汇总区域的一个单元格，这个步骤虽然没用，但是有必要，否则就会出现错误</li>
+</ul>
+<img src="/2016/07/17/Excel如何取消分类汇总/95afee1f3a292df517b818dfbd315c6035a87346.jpg" alt="Excel如何取消分类汇总" title="Excel如何取消分类汇总">
+<ul>
+<li>选择分类汇总选项，如图所示</li>
+</ul>
+<img src="/2016/07/17/Excel如何取消分类汇总/54baacfb43166d22d759a15e472309f79152d28b.jpg" alt="Excel如何取消分类汇总" title="Excel如何取消分类汇总">
+<ul>
+<li>看到警告提示，可以忽略他，点击确定</li>
+</ul>
+<img src="/2016/07/17/Excel如何取消分类汇总/6dc09e0a19d8bc3ebc72b200838ba61ea9d34546.jpg" alt="Excel如何取消分类汇总" title="Excel如何取消分类汇总">
+<ul>
+<li>在这里，我们点击“全部删除”按钮就可以了。</li>
+</ul>
+<img src="/2016/07/17/Excel如何取消分类汇总/29752a9b033b5bb57ff9943437d3d539b700bc8b.jpg" alt="Excel如何取消分类汇总" title="Excel如何取消分类汇总">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/15/SPSS实例：[35]优势比OR计算方法/">
+                SPSS实例：[35]优势比OR计算方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>优势比OR：是一个比值的比，是反应阳性人群中试验因素有无的 比例与反应阴性人群中试验因素有无的比例之比。假如有一个实验分为对照组和实验组，OR值得计算方法就是实验组中患病人数与非患病人数之比除以对照组中患病人数与非患病人数之比。所以就是一个比值的比。</p>
+<ul>
+<li>在spss中，计算优势比OR值得方法是在交叉分析中，先打开交叉分析对话框</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/43e6c733c895d143f5d8a29471f082025baf079f.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>先将两个变量放入到对应的框中</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/42e89c26cffc1e17e411ca864890f603728de998.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>打开统计量对话框</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/b8405490f603738ddae44a95b11bb051f919ec98.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>勾选【risk】，也就是风险评估分析</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/b110e6198618367aa027396a2c738bd4b21ce598.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>结果页面中，我们看结果OR值就已经有了。不过OR值只有卡方检验显著时才是有价值的。卡方不显著时，就不用提OR值了。</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/9f6e190828381f306eb7cb1eab014c086f06f098.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/11/python 线性代数：[17]线性组合的协方差/">
+                python 线性代数：[17]线性组合的协方差
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们先来看这个练习题：</p>
+<ul>
+<li>先来创建这个X矩阵</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/425773224f4a20a490994a8593529822730ed0aa.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>创建两个系数向量</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/6c63514a20a44623de4dd3209b22720e0df3d7aa.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>先计算X的协方差矩阵<br>结果为：</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/54baacfb43166d229b9163d6452309f79152d24b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/fab3ac119313b07ec83b264a0fd7912396dd8caa.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>计算X的均值向量，注意设置axis为0<br>求得结果为：</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/f35ea0096b63f62488da4f418444ebf81b4ca3aa.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/3792cb39b6003af3c25caa22362ac65c1138b64b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>求得两个线性组合的均值：<br>结果为：</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/6a2112338744ebf8fdf6127ddaf9d72a6159a7aa.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/3bb22487e950352a3d87534a5043fbf2b3118b4b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>求两个线性组合的方差<br>结果为：</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/734f12f3d7ca7bcbd49db16dbd096b63f724a84b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/fab3ac119313b07ec85c264a0fd7912396dd8c4b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>求两个线性组合的协方差：<br>结果为：</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/504ec7f9d72a6059c9f697582b34349b023bba4b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/0d968f2397dda144a5e81af0b1b7d0a20df4864b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>

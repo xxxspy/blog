@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Excel2013：[17]数据透视表有两个汇总项"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Excel2013：[17]数据透视表有两个汇总项 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/">
+                Excel2013：[17]数据透视表有两个汇总项
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>现在我想要在分类汇总的时候出现两个汇总项，看下面的数据，假如我要在一个数据透视表里看到两个汇总项，也就是重量和中转费。我们的目的是统计上一站和目的网点之间中转费和重量的总计，下面看看如何具体来做。</p>
+<ul>
+<li>先插入一个数据透视表，如图所示</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/027a45b5c9ea15ce702a270eb4003af33b87b2b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>打开一个对话框，我们默认在新的工作表放置数据透视表，点击确定按钮</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/e8112b2ac65c10381cba09c5b0119313b17e89b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>看到界面的右侧出现了一个数据透视表字段，将行和列字段拖动到对应的位置</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/b13fd48065380cd7c6da65eaa344ad34588281b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>接着讲想要统计的字段拖动到下面的值字段</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/b3ba5d166d224f4a06feb5140bf790529822d117.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>设置值字段，我们点击【计数项：重量】，在打开的菜单中选择：值字段设置</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/caae68094b36acaf4a2451fb7ed98d1000e99cb6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>在打开的对话框中，我们选择【求和】，点击确定按钮</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/d68b65cb0a46f21f8f539854f4246b600c33ae17.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>同样，设置第二个字段</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/b94f65ec54e736d140d74b0f99504fc2d46269b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>至此，我们就完成了任务。</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/389aa8fd5266d016ccc8532f952bd40734fa35a1.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/excel/">#excel</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

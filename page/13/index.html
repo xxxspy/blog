@@ -155,13 +155,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/04/17/wxpython教程：[1]入门/">
-                wxpython教程：[1]入门
+            <a href="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/">
+                amos21.0教程：[3]结构方程中的结构模型
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年04月17日</span>
+                <span class="date">2016年05月15日</span>
             
             
             
@@ -170,38 +170,27 @@
 
     
         <div class="content">
-            <p>我们今天来学习Python的一个界面开发包wxpython，我最近要做一些Python统计分析的软件界面，所以用到了wxpython，很久以前用过这个包，现在跟大家一起回顾一下。这篇文章是入门，讲的比较简单，以后逐渐增加新的知识。<br>工具/原料</p>
-<p>方法/步骤</p>
-<ul>
-<li>先来看一下如下代码，这是一个简单的界面，我们接下来逐句解释</li>
+            <pre><code>前一篇文章中我们介绍了结构方程模型中的测量模型，那么构成结构方程模型的另一部分就是结构模型，结构模型反应的是潜变量之间的关系，相当于通常所说的路径分析，但是结构模型比路径分析要复杂的多。下面我们详细介绍一下结构模型：
+</code></pre><ul>
+<li>首先要看到结构模型都是由潜变量构成的，潜变量可以分为外因潜变量（ζ）和内因潜变量（η）。外因潜变量指的是原因，内因潜变量指的是结果，外因潜变量影响内因潜变量，所以我们在amos中绘图的时候，箭头都是由外因潜变量指向内因潜变量。内因潜变量和外因潜变量之间的相关系数用η来表示。</li>
 </ul>
-<img src="/2015/04/17/wxpython教程：[1]入门/8326cffc1e178a82e60ceacff503738da977e8a9.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<img src="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/507c389759ee3d6d10fb624c42166d224f4ade3d.jpg" alt="amos21.0教程：[3]结构方程中的结构模型" title="amos21.0教程：[3]结构方程中的结构模型">
 <ul>
-<li>首先是两行注释，用#号打头表示注释，不执行。而coding表示编码方式，开始透明coding表示该文件使用utf8编码，因为Python文件中有中文，必须声明一个支持中文的编码</li>
+<li>在amos中绘图，绘制内因潜变量和外因潜变量，根据下图我们还可以得到一个方程，其中ζ表示残差项，也就是图中的干扰变量。注意内因潜变量写在等式的左边。</li>
 </ul>
-<img src="/2015/04/17/wxpython教程：[1]入门/203fb80e7bec54e7ebf08f71ba389b504fc26a45.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<img src="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/0d729944ebf81a4c0c0f094ed62a6059252da63d.jpg" alt="amos21.0教程：[3]结构方程中的结构模型" title="amos21.0教程：[3]结构方程中的结构模型">
 <ul>
-<li>接下来实例化一个app，任何一个应用程序都是一个app</li>
+<li>假如有两个外因潜变量对内因潜变量有影响，我们的绘图方法如下，根据图可以得出方程。图中大写的φ指的是两个外因潜变量之间的相关，我们看到他们的相关用了一个双向箭头来表示，并且不是直线箭头，而是弯曲的。你绘图的时候也要注意两个外因潜变量使用双向箭头表示相关。</li>
 </ul>
-<img src="/2015/04/17/wxpython教程：[1]入门/3801213fb80e7bec88c6968e2c2eb9389b506b45.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
-<img src="/2015/04/17/wxpython教程：[1]入门/7aec54e736d12f2e66193b0f4cc2d56285356845.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<img src="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/3bc6f750352ac65c62cd9cf4faf2b21192138a2a.jpg" alt="amos21.0教程：[3]结构方程中的结构模型" title="amos21.0教程：[3]结构方程中的结构模型">
 <ul>
-<li><p>这两句表示创建了一个Frame，Frame就是框架，是一个容器，内部可以包含多个容器或者其他组件，如果我们的Frame的第一个参数使用None表示它是顶层的容器，它包含了应用程序的所有组件。‘入门’表示Frame的标题，一会你就看到标题在哪里。最后，任何Frame窗口想要显示，必须用show(),但是你现在还看不到窗口，因为程序没有运行呢</p>
-</li>
-<li><p>frame=wx.Frame(None,-1,u’入门’)</p>
-</li>
-<li><p>frame.Show()</p>
-</li>
+<li>两个内因潜变量之间的关系我们用β表示，因果关系用单向箭头表示。</li>
 </ul>
-<img src="/2015/04/17/wxpython教程：[1]入门/5882b2b7d0a20cf4ffed6bb075094b36acaf9964.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<img src="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/148f28d3d539b60056f3ea30e850352ac65cb73d.jpg" alt="amos21.0教程：[3]结构方程中的结构模型" title="amos21.0教程：[3]结构方程中的结构模型">
 <ul>
-<li>实际上，我们是用app.mainLoop来启动程序的</li>
+<li>更复杂的模型就是既有两个以上的内因潜变量，通常有几个内因潜变量我们就要写出几个方程，写方程关键是看有多少路径，每条路径都是一个方程。路径是沿着箭头的方向从起点到终点的。比如下面我用红色箭头标出了路径之一。此路径的方程就是下面红色方框中的。</li>
 </ul>
-<img src="/2015/04/17/wxpython教程：[1]入门/37d12f2eb9389b50aee3753d8635e5dde7116e45.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
-<ul>
-<li>这样我们就看到了一个最简单的界面了。</li>
-</ul>
-<img src="/2015/04/17/wxpython教程：[1]入门/d4628535e5dde71176ced699a4efce1b9d166145.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<img src="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/a005b3345982b2b750a2dc4330adcbef76099b3d.jpg" alt="amos21.0教程：[3]结构方程中的结构模型" title="amos21.0教程：[3]结构方程中的结构模型">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -217,13 +206,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/04/11/spss协方差分析的操作过程和结果分析方法/">
-                spss协方差分析的操作过程和结果分析方法
+            <a href="/2016/05/11/spss如何筛选部分case/">
+                spss如何筛选部分case
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年04月11日</span>
+                <span class="date">2016年05月11日</span>
             
             
             
@@ -232,158 +221,47 @@
 
     
         <div class="content">
-            <p> 协方差分析就是当研究中出现一个变量不是我们想要研究的变量，但是却会影响到我们的研究结果，我们不得不对其进行控制，这时候就可以用协方差分析的方法来控制，协方差分析一个最重要的假设是斜率同质假设，下面就要先检验斜率同质假设，然后才能进行协方差分析。<br>方法/步骤</p>
+            <p>有时候我们需要对部分数据进行处理，这时候需要对满足条件的数据进行筛选，选择出符合要求的数据，select cases命令就是用来处理这种问题的。<br>方法/步骤</p>
 <ul>
-<li>协方差分析之前，要先检验一下数据是否满足斜率同质假设，也就是检验自变量和斜变量之间有木有交互作用，如图所示，在菜单栏上执行：analyze–general linear model–univariate</li>
+<li>打开spss ，执行file –open–data，打开数据文件</li>
 </ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/9e3df8dcd100baa1d766d84c4710b912c9fc2efa.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
+<img src="/2016/05/11/spss如何筛选部分case/95eef01f3a292df55ef04098bc315c6034a87308.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
 <ul>
-<li>在打开的对话框中，将因变量、自变量、斜变量都放到各自的位置，如图所示，评定得分为因变量，培训方式为自变量，家庭指数为斜变量，点击options按钮，进入子对话框</li>
+<li>在菜单栏上执行：data-select cases，打开case选择对话框</li>
 </ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/b219ebc4b74543a9d684653b1e178a82b80114ad.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/d31b0ef41bd5ad6ef1fafb1d81cb39dbb7fd3cc1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
+<img src="/2016/05/11/spss如何筛选部分case/f11f3a292df5e0fe262b658c5c6034a85edf7208.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
 <ul>
-<li>在这里将培训方式，也就是自变量移动到display means for中，并且勾选描述统计和方差齐性检验，点击continue按钮继续</li>
+<li>我们看到这里有很多删选的方法，我们一一进行尝试，首先根据条件筛选，选择if condition is satisfied，点击if按钮，打开设置</li>
 </ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/dcc451da81cb39db86c3f8a1d0160924aa1830c1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
+<img src="/2016/05/11/spss如何筛选部分case/e1fe9925bc315c60f6a687628db1cb1349547708.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<img src="/2016/05/11/spss如何筛选部分case/d009b3de9c82d1580397b53c800a19d8bc3e4222.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
 <ul>
-<li>点击model按钮，选择模型</li>
+<li>假如我们要筛选id小于45的case，那么我们先选择id，点击添加按钮，然后输入公式条件id&lt;45</li>
 </ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/4b90f603738da97764b019dcb051f8198718e3ae.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
+<img src="/2016/05/11/spss如何筛选部分case/5fdf8db1cb134954ce2d04e9564e9258d1094a08.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
 <ul>
-<li>刚打开这个对话框的时候，默认是full factorial模式，但是我们要检验交互作用，所以要选中custom</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/f703738da9773912edb91a96f8198618377ae2ae.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>将培训方式和家庭指数都放到model里</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/34fae6cd7b899e51348da5e342a7d933c9950dc1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>同时选中培训方式和家庭指数，将type设置为interaction，点击添加按钮，添加到model中，点击continue按钮</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/0b46f21fbe096b636ab9c1a70c338744eaf8aca1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/34fae6cd7b899e5134c4a5e342a7d933c9950dfa.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>点击ok按钮，开始处理数据</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/faedab64034f78f0bb08050479310a55b2191cc1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>在出来的结果中，我们主要是看自变量和斜变量的交互作用，如图所示，sig值大于0.05，所以交互作用不显著，这就满足了斜率同质性假设</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/8601a18b87d6277ff28dadcf28381f30e824fcae.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>接着我们来进行协方差分析，在菜单栏上执行：analyse–general linear model–univariate</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/6159252dd42a28349d06a9fc5bb5c9ea14cebfa1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>将各个变量都放到各自的位置，和上面的步骤一样，点击options按钮</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/1f178a82b9014a90ac3dd94aa9773912b21beec2.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>将培训方式移动到display means for列表里，勾选描述统计、方差齐性、效应值，点击continue继续</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/5ab5c9ea15ce36d37aa41cc73af33a87e850b1a1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>点击model，选择模型</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/a8773912b31bb05198272cdf367adab44bede0c2.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>选择full factorial，点击continue</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/eac4b74543a982269a8bb4d08a82b9014b90ebfb.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>点击ok按钮，开始处理数据</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/03087bf40ad162d98971fdeb11dfa9ec8b13cdae.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li><p>最后看分析的结果培训方式的效应显著，这说明不同的培训方式会影响到学生最后的分数</p>
-</li>
-<li></li>
-<li></li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/10dfa9ec8a1363271dc75bc4918fa0ec08fac71b.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/04/11/spss20.0如何进行反向计分/">
-                spss20.0如何进行反向计分
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年04月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p> 在心理学中经常使用反向计分的问卷，这种问卷获得数据在处理以前，要先进行重新编码。重新编码的目的就是要将反向计分的数据转换成正向计分，下面图是我分享的一个案例，他可以帮助你更好的理解什么是反向计分。<br>方法/步骤</p>
-<ul>
-<li>我们导入要转换的数据，在菜单栏上执行transform–recode into same variables，这个操作的意思你懂啦，就是将原有的数据转换，但是并不生成新的变量，而是替换掉原有的变量</li>
-</ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/f11f3a292df5e0feb7b4d6845c6034a85fdf7282.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
-<ul>
-<li>打开了如图所示的对话框，我们将要转换的变量选中，然后点击添加按钮</li>
-</ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/5243fbf2b21193134b03a03565380cd790238df7.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
-<ul>
-<li>接着要设置转换的方法 ，点击old and new values</li>
-</ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/b3119313b07eca8098456662912397dda04483f7.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
-<ul>
-<li>打开如图所示的对话框，我们在value这里填写1，在new value这里写5，意思是将1分转换为5分，然后点击add按钮</li>
-</ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/b17eca8065380cd76e5efd68a144ad34588281f7.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
-<ul>
-<li>同样的方法，我们将其他的数据转换方法都添加到这个列表里，然后点击继续按钮</li>
-</ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/d1a20cf431adcbef7f772183acaf2edda2cc9ff7.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
-<ul>
-<li>返回到了选择变量的对话框，点击ok按钮开始进行数据的转换。到此，反向计分就完成了。下面是介绍如何在反向计分的时候保留原始数据，生成新的变量。</li>
-</ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/b2de9c82d158ccbf5310eabf19d8bc3eb0354182.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
-<ul>
-<li><p>如何在反向计分的时候保留原始数据，生成新的变量，在导入数据以后，我们在菜单栏上执行：transform–recode into different variables</p>
+<li><p>条件输入以后，点击continue按钮。这样就完成了按照条件筛选</p>
 </li>
 <li><p>、</p>
 </li>
 </ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/0df431adcbef76094148c61a2edda3cc7dd99ef7.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
+<img src="/2016/05/11/spss如何筛选部分case/d009b3de9c82d15803b1b53c800a19d8bc3e4208.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
 <ul>
-<li>打开如图所示的对话框，我们选择要转换的数据，然后点击添加按钮</li>
+<li>假如我们要使用随机选择case的方法，我们就选择random sample of cases，然后点击sample</li>
 </ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/cdbf6c81800a19d8feafdb8033fa828ba71e4682.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
+<img src="/2016/05/11/spss如何筛选部分case/4034970a304e251f4be20875a786c9177f3e5322.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
 <ul>
-<li>从中间的列表里选择一个变量，然后在右侧的name栏中输入新的变量的名字，然后点击change按钮</li>
+<li>我们看到这个对话框有两个选项，第一个选择是选择百分比，也就是从所有的case中选择百分之多少的case；第二个选项是从前多少个case中选择多少个case</li>
 </ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/2fdda3cc7cd98d10119753b4213fb80e7aec90f7.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
+<img src="/2016/05/11/spss如何筛选部分case/810a19d8bc3eb135e6f45b36a61ea8d3fd1f4408.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
 <ul>
-<li>同样的方法给所有的变量重新命名以后，点击old and new values，添加转换数据的规则</li>
+<li>回到select cases 对话框，勾选基于时间或者case范围，看到下面这个对话框，输入case的范围是从第五十个到第100个，点击continue</li>
 </ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/32fa828ba61ea8d3b58e2b81970a304e241f5882.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
+<img src="/2016/05/11/spss如何筛选部分case/241f95cad1c8a786283fa6836709c93d70cf5022.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
 <ul>
-<li>和上面使用的方法一样的，我们左侧填写原始数据的值，有的填写转换成的值，然后点击add按钮</li>
+<li>最后一个filter variables，也就是过滤变量，这个选项的功能是如果变量中有缺省值，那么这个case就被删除或者排除在外了。</li>
 </ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/b90e7bec54e736d13850d38d9b504fc2d46269f7.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
-<ul>
-<li>将所有的转换规则都添加进去以后，我们点击continue按钮，好了数据转换完成。</li>
-</ul>
-<img src="/2015/04/11/spss20.0如何进行反向计分/960a304e251f95ca9f59cd33c9177f3e66095282.jpg" alt="spss20.0如何进行反向计分" title="spss20.0如何进行反向计分">
+<img src="/2016/05/11/spss如何筛选部分case/a686c9177f3e67092d15a9723bc79f3df8dc5522.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -399,13 +277,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/04/03/spss中如何处理极端值、错误值/">
-                spss中如何处理极端值、错误值
+            <a href="/2016/05/11/python 线性代数：[1]矩阵操作/">
+                python 线性代数：[1]矩阵操作
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年04月03日</span>
+                <span class="date">2016年05月11日</span>
             
             
             
@@ -414,40 +292,43 @@
 
     
         <div class="content">
-            <p>spss中录入数据以后，第一步不是去分析数据，而是要检验数据是不是有录入错误的，是不是有不合常理的数据，今天我们要做一个描述性统计，进而查看哪些数据是不合理的。下面是具体的步骤：<br>工具/原料</p>
+            <p>今天是这一个系列入门教程的第一篇，简单介绍一下python中是如何操作maxtrix（矩阵）的，然后我们后面就开始用python中的numpy来解决线性代数的问题，比如解方程等，下面我们开始吧：</p>
 <ul>
-<li>spss20.0<br>方法/步骤</li>
+<li>我先引入numpy，以后的教程中，我们都引用为np作为简写</li>
 </ul>
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/3c2c4bfbb2fb431647d6a28a22a4462308f7d332.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
 <ul>
-<li>先准备好数据，然后打开描述性统计对话框，如图所示，执行菜单：analyse–descriptive statistic–descriptive</li>
+<li>使用mat函数创建一个2X3矩阵</li>
 </ul>
-<img src="/2015/04/03/spss中如何处理极端值、错误值/0d338744ebf81a4c30cf3219d72a6059242da665.jpg" alt="spss中如何处理极端值、错误值" title="spss中如何处理极端值、错误值">
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/aa59892bd40735fa34b98b499c510fb30e2408b2.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
 <ul>
-<li>将你要检验的变量放入variables对话框，点击箭头可以添加或者删除变量</li>
+<li>使用shape可以获取矩阵的大小</li>
 </ul>
-<img src="/2015/04/03/spss中如何处理极端值、错误值/d0c8a786c9177f3eb73025dd70cf3bc79e3d56de.jpg" alt="spss中如何处理极端值、错误值" title="spss中如何处理极端值、错误值">
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/0e655ca7d933c8950b375d8bd31373f0830200b2.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
 <ul>
-<li>勾选如图所示的选项，他的意思是输出Z分数，并作为一个变量列出来。因为检查数据有效性的时候会用到Z分数</li>
+<li>使用下标读取矩阵中的元素</li>
 </ul>
-<img src="/2015/04/03/spss中如何处理极端值、错误值/8644ebf81a4c510fb8ab3bca6059252dd52aa5f7.jpg" alt="spss中如何处理极端值、错误值" title="spss中如何处理极端值、错误值">
-<img src="/2015/04/03/spss中如何处理极端值、错误值/42166d224f4a20a408aee51790529822730ed0aa.jpg" alt="spss中如何处理极端值、错误值" title="spss中如何处理极端值、错误值">
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/e49cf91190ef76c6dc473edb9f16fdfaae51676e.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
 <ul>
-<li>点击options按钮，设置需要输出的描述性统计量，我们需要的统计量主要是最大值和最小值，所以，你看到下面第二幅图，勾选最大值和最小值</li>
+<li>进行行列转换：</li>
 </ul>
-<img src="/2015/04/03/spss中如何处理极端值、错误值/fcfaaf51f3deb48f2a8c780ef01f3a292cf5787d.jpg" alt="spss中如何处理极端值、错误值" title="spss中如何处理极端值、错误值">
-<img src="/2015/04/03/spss中如何处理极端值、错误值/902397dda144ad34d9c15f57d0a20cf430ad85e0.jpg" alt="spss中如何处理极端值、错误值" title="spss中如何处理极端值、错误值">
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/263e802f07082838164519e4ba99a9014d08f1b3.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
 <ul>
-<li>点击continue按钮，点击ok，开始处理数据，并输出处理结果</li>
+<li>实际上官方文档建议我们使用二维数组代替矩阵来进行矩阵运算；因为二维数组用得较多，而且基本可取代矩阵。比如：可见矩阵和数组基本上都可以</li>
 </ul>
-<img src="/2015/04/03/spss中如何处理极端值、错误值/09fa513d269759ee7b2ab81bb2fb43166c22dfec.jpg" alt="spss中如何处理极端值、错误值" title="spss中如何处理极端值、错误值">
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/0865b518972bd407e5c3170d79899e510eb309ff.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/c9d4cf43ad4bd113afc973c258afa40f4afb05ff.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
 <ul>
-<li>我们看到有一个表格，输出了最大值和最小值，根据这个值我们可以判断，这个变量中的数据是不是超出了合理的范围，比如，这个变量的意思是身高，你的数据的最大值为5米，这时侯你就可以想到，有数据录入错误了。</li>
+<li>加减法也是一样的：</li>
 </ul>
-<img src="/2015/04/03/spss中如何处理极端值、错误值/b151f8198618367afaf8a70d2e738bd4b21ce5e9.jpg" alt="spss中如何处理极端值、错误值" title="spss中如何处理极端值、错误值">
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/7ab514d162d9f2d3426fe01fabec8a136227cc81.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
 <ul>
-<li>接下来切换到数据视图中，我们看到生成了一个新的变量，他是x8这个变量的Z分数，我们知道，如果数据是正太分布的，那么数据应当分布在正负三个标准差之内，因此，从图中我们看到，Z分数大于3或小于-3的数据就是错误的数据</li>
+<li>当然列表是不能这么尽兴加减的：</li>
 </ul>
-<img src="/2015/04/03/spss中如何处理极端值、错误值/7dd98d1001e93901ae0155ee7bec54e737d196db.jpg" alt="spss中如何处理极端值、错误值" title="spss中如何处理极端值、错误值">
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/99636c0e0cf3d7ca4b83fb86f01fbe096a63a98e.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<ul>
+<li>好啦，我们今天就介绍到这里啦，下一篇继续哈。</li>
+</ul>
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -463,13 +344,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/04/03/spss如何合并两个数据文件/">
-                spss如何合并两个数据文件
+            <a href="/2016/05/11/python 线性代数：[22]习题1.10求逆矩阵/">
+                python 线性代数：[22]习题1.10求逆矩阵
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年04月03日</span>
+                <span class="date">2016年05月11日</span>
             
             
             
@@ -478,222 +359,37 @@
 
     
         <div class="content">
-            <p>spss录入数据是个非常繁琐的事情，所以我们经常会几个人同时录入，然后将录入的数据进行合并，这里介绍的经验就是如何合并两个数据文件，有时候两个文件是完全相同的，有一样的变量，有时候是有差别的，这时候就看你需要文件如何合并了。<br>方法/步骤</p>
+            <p>接着以前的文章，我们继续学习用Python解线性代数的问题。今天我们要练习一下《线性代数.同济大学出版.第一章习题10》,演示一下如何求矩阵的逆矩阵和验证结果是否正确。</p>
 <ul>
-<li>我们先要在数据库中打开第一个数据文件，在菜单栏上执行：file–open–data</li>
+<li>这是今天我们要做的习题：只做前三题</li>
 </ul>
-<img src="/2015/04/03/spss如何合并两个数据文件/cf1b9d16fdfaaf51fd3836328c5494eef11f7a67.jpg" alt="spss如何合并两个数据文件" title="spss如何合并两个数据文件">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/0b14ad19ebc4b745eef1ac06cbfc1e178a82157d.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
 <ul>
-<li>通过浏览窗口，打开第一个数据网文件以后，我们来合并第二个数据文件，在菜单栏上执行：data–merge file–add cases</li>
+<li>将这三个矩阵录入到excel当中</li>
 </ul>
-<img src="/2015/04/03/spss如何合并两个数据文件/7e3e6709c93d70cf060b1d80f8dcd100bba12b4d.jpg" alt="spss如何合并两个数据文件" title="spss如何合并两个数据文件">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/8bc3a7014a90f603c6d587573d12b31bb051ed7e.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
 <ul>
-<li>打开合并文件对话框，点击浏览按钮，找到你要合并的第二个数据文件</li>
+<li>开始写代码，先引入这两个库</li>
 </ul>
-<img src="/2015/04/03/spss如何合并两个数据文件/fcfaaf51f3deb48f9cb21653f01f3a292cf57867.jpg" alt="spss如何合并两个数据文件" title="spss如何合并两个数据文件">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/8474fbdde71190ef4ce989cfca1b9d16fdfa6054.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
 <ul>
-<li>点击open按钮，返回数据合并对话框</li>
+<li>先来计算第一个矩阵的逆矩阵，用np.linalg.inv来计算arr矩阵的逆矩阵，如果你看不太懂代码，应该去翻看我前两篇文章，里面讲得很详细<br>这是输出的结果：</li>
 </ul>
-<img src="/2015/04/03/spss如何合并两个数据文件/b58f8c5494eef01f29cfaf48e0fe9925bd317d67.jpg" alt="spss如何合并两个数据文件" title="spss如何合并两个数据文件">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/3b6833f5e0fe9925f51e724030a85edf8db17154.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/30ecd5ef76094b3688b401fda7cc7cd98d109db8.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
 <ul>
-<li>在这里检查一下要合并的文件，如何确认无误，点击continue，继续</li>
-</ul>
-<img src="/2015/04/03/spss如何合并两个数据文件/9e3df8dcd100baa18fddf0364710b912c9fc2e4d.jpg" alt="spss如何合并两个数据文件" title="spss如何合并两个数据文件">
-<ul>
-<li>看到这个对话框了，我们看到右侧的列表是相同的变量，也就是两个数据文件有相同的变量，左侧的列表是只有一个数据文件中有的变量，右边标有 * 号 的为第一个数据文件中有二第二个数据文件没有的变量，标有+号的是第二个数据文件有而第一个数据文件没有的变量，根据你的需要，为了保留数据的所有信息，我们可以将左侧列表里所有的变量都添加到右侧，记住出现在右侧列表里的变量才会被保存下来，左边变量都会被删除</li>
-</ul>
-<img src="/2015/04/03/spss如何合并两个数据文件/bba1cd11728b4710fcde4a41c3cec3fdfd03234d.jpg" alt="spss如何合并两个数据文件" title="spss如何合并两个数据文件">
-<ul>
-<li>使用shift键选中所有的变量，天机添加按钮</li>
-</ul>
-<img src="/2015/04/03/spss如何合并两个数据文件/cc11728b4710b9128e304173c3fdfc039345224d.jpg" alt="spss如何合并两个数据文件" title="spss如何合并两个数据文件">
-<ul>
-<li><p>我们看到这就是合并文件以后的数据了，由于年龄段这个变量只有一个数据文件有，所以另一个数据文件中的数据在这个变量上就是空白的了。</p>
+<li><p>现在计算第第二个矩阵，我们发现这个矩阵是带有符号的，所以我们用sympy这个库中的Matrix对象来进行计算。我们可以使用Matrix.inv来计算逆矩阵，默认情况下，它使用高斯消去法，如果传入参数LU，它</p>
 </li>
-<li></li>
-</ul>
-<img src="/2015/04/03/spss如何合并两个数据文件/c9fcc3cec3fdfc03d8895435d43f8794a5c2264d.jpg" alt="spss如何合并两个数据文件" title="spss如何合并两个数据文件">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/04/01/spss多元方差分析的操作方法和结果分析/">
-                spss多元方差分析的操作方法和结果分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年04月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p> 多元方差分析就是有多个因变量的分析，但是这几个因变量并不是没有关系的，他们应该属于同一种质的不同的形式，比如一个问卷的几个不同的维度。下面我们来具体的操作一下多元方差分析。<br>方法/步骤</p>
-<ul>
-<li>在spss中打开数据，在菜单栏上执行：analyse–general linear model–multivariate，打开多元方差分析对话框</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/ac4bd11373f082021f6c0ec64bfbfbedaa641b48.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>将所有的因变量都放到第一个列表里，将自变量放到固定因素列表里</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/9213b07eca806538b27d3bea97dda144ac3482b0.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>点击options按钮，打开子对话框</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/279759ee3d6d55fb3903e9df6d224f4a21a4dd06.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>将自变量矫正方式放到右侧的display means，勾选如图所示的三个选项，用来展示描述统计、方差齐性、效应大小，点击继续，返回到主对话框</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/aec379310a55b319ba071d8c43a98226cefc1748.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>点击post hoc，设置事后检验</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/b219ebc4b74543a9d6e565351e178a82b8011448.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>将自变量矫正方式放到事后检验的列表里，然后在方差齐性的方法中选择lsd，在方差不齐性的方法中选dunnet c，点击continue按钮</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/adaf2edda3cc7cd942baab203901213fb90e91b0.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>点击ok按钮，开始数据处理</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/0b46f21fbe096b636adcc1a90c338744eaf8ac06.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>我们先来分析多变量检验，如图所示的红色方框中显示的是检验的不同方法，有时候不同的方法会显示出不同的结果，你要分别解释，下面的结果是一致的</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/377adab44aed2e73ed1719d58701a18b86d6fa49.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>我们以wilks lambda方法为例，看sig值为000说明差异显著，篇eta方位0.375说明可以解释变异的37.5%</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/d52a2834349b033bf04d632315ce36d3d439bd06.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li><p>接着看主体间效应的检验，在矫正方式这一栏，也就是自变量的这一栏，乍一看三个水平的自变量都达到了显著水平，但是，其实不然，因为对自变量的多次比较会造成一类错误的概率增加，所以我们要用显著性水平除以自变量的水平数，也就是0.05/3=0.17，这样来看重复减少这个水平是达不到显著水平的。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/1e30e924b899a9013fcbc4cf1d950a7b0308f549.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/">
-                SPSS实例：[9]因子载荷图怎么做
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年03月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天有网友提问关于因子载荷图（loading plots）怎么做，说实话我也有点忘记了，现在来跟大家一起学习一下，如何做因子载荷图。它是在主成分分析和因子分析中用到的。</p>
-<ul>
-<li>打开菜单，如图所示</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/1e71f724b899a9015f13841f1f950a7b0208f5b2.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>将用到的变量放入右侧列表</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/4651a712c8fcc3ce021e151a9045d688d53f20fa.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>点击rotation按钮</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/fd428c45d688d43f41774ddb7f1ed21b0ff43bfa.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>勾选因子载荷图，如图所示，点击继续</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/3c2c4bfbb2fb43164039a55322a4462309f7d3b2.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>提取得到5个主成分</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/91138622720e0cf3e1d191d20846f21fbe09aab2.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>这个就是因子载荷图，双击它可以修改外观样式。图中最多只能展示三个因子</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/79b1e936afc37931fab65a00e9c4b74542a911fa.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>点击旋转按钮，可以设置我们观察3D图的角度，让你更详细的了解这个图的分布</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/263e802f070828380fd4003dba99a9014d08f1fb.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/03/19/SPSS python教程：[3]怎样python代码/">
-                SPSS python教程：[3]怎样python代码
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年03月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>还是接着来介绍python在spss中的运用，今天我们具体的看看python在spss中是怎样运行的，每一种方法都有截图为证，大家先从感官上了解一下。</p>
-<ul>
-<li>首先，我们可以从【实用程序】下的【运行脚本】来运行python代码<br>打开这个【运行脚本】对话框以后，我们会看到下面这界面，假如我们已经编辑好了一个python脚本文件（*.py），可以在这里直接打开并运行</li>
-</ul>
-<img src="/2015/03/19/SPSS%20python教程：[3]怎样python代码/507c389759ee3d6d62fc6f5d41166d224f4ade2b.jpg" alt="SPSS python教程：[3]怎样python代码" title="SPSS python教程：[3]怎样python代码">
-<img src="/2015/03/19/SPSS%20python教程：[3]怎样python代码/647912d7912397ddcead71925b82b2b7d1a28715.jpg" alt="SPSS python教程：[3]怎样python代码" title="SPSS python教程：[3]怎样python代码">
-<ul>
-<li><p>或者，我们可以先打开这个脚本文件，然后再在python编辑器里运行，我们可以在开始菜单中【打开】-【脚本】中打开python文件</p>
-</li>
-<li><p>打开脚本文件以后，你会看到这个界面</p>
+<li><p>这是输出的两个矩阵：</p>
 </li>
 </ul>
-<img src="/2015/03/19/SPSS%20python教程：[3]怎样python代码/ac754782b2b7d0a2781ded0bc9ef76094a369a15.jpg" alt="SPSS python教程：[3]怎样python代码" title="SPSS python教程：[3]怎样python代码">
-<img src="/2015/03/19/SPSS%20python教程：[3]怎样python代码/58c3acb7d0a20cf44444174974094b36adaf9915.jpg" alt="SPSS python教程：[3]怎样python代码" title="SPSS python教程：[3]怎样python代码">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/d048adde9c82d158949042a1840a19d8bc3e4254.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/ae8267310a55b31941a3986547a98226cffc170c.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
 <ul>
-<li>或者，我们可以在spss的syntax编辑界面中插入python代码，我们新建一个syntax文件<br>将python代码插入到begin program–end program之间，然后选中所有的代码以后，点击工具栏上面的绿色三角形，就可以运行了！注意，python对格式要求很严格，大小写是不同的；而spss的syntax是大小写不敏感的，大小写都一样。</li>
+<li>最后一题，和第一题一样，都是数字，但是现在我想验证一下计算结果，让两个矩阵点乘，如果结果是一个单位矩阵，那么久可以证明两个矩阵互为逆矩阵<br>输出结果为：</li>
 </ul>
-<img src="/2015/03/19/SPSS%20python教程：[3]怎样python代码/08b68e529822720e4ef40a6c79cb0a46f21fab2b.jpg" alt="SPSS python教程：[3]怎样python代码" title="SPSS python教程：[3]怎样python代码">
-<img src="/2015/03/19/SPSS%20python教程：[3]怎样python代码/2cb4fefe9925bc31c289e80e5cdf8db1ca137015.jpg" alt="SPSS python教程：[3]怎样python代码" title="SPSS python教程：[3]怎样python代码">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/8b527d2762d0f7034cd78ecc0cfa513d2697c57e.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/29752a9b033b5bb5ca4e24ee32d3d539b700bcc1.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -709,13 +405,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/03/17/sublime教程[3]选择查找替换/">
-                sublime教程[3]选择查找替换
+            <a href="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/">
+                Python机器学习：[1]贝叶斯文本分类器
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年03月17日</span>
+                <span class="date">2016年05月05日</span>
             
             
             
@@ -724,38 +420,31 @@
 
     
         <div class="content">
-            <p>使用sublime进行查找替换是非常方便的，下面我们分别介绍一些快速查找和替换的方法，可以大大提高我们的代码编辑效率。</p>
+            <p>  最近在我的网站骂我的人比较多，想写一个语义分类器，让电脑自动屏蔽那些骂人的评论，怎么办呢？这就用到了一个机器学习的算法——贝叶斯文本分类器。这个算法很有用处，可以让电脑识别人类语言，如果加上一点心理学的知识，可以让电脑理解人类的文章并让电脑判断作者的个性特征，这就复杂了，现在我们先做一个简单的示范。</p>
 <ul>
-<li>“Ctrl + D”可以选中光标所在的词，然后按下“F3”可以逐个选中下一个同样的词：</li>
+<li>首先是需要一个样本集，用于训练文本分类器：这里面用到了一个分词算法【cs.perse】，其实是一个机械分词算法，cs.py 文件的代码粘贴在最下面。</li>
 </ul>
-<img src="/2015/03/17/sublime教程[3]选择查找替换/1e71f724b899a901f17c560a17950a7b0208f506.jpg" alt="sublime教程[3]选择查找替换" title="sublime教程[3]选择查找替换">
+<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/35da1d3b5bb5c9ea8a85a169d639b6003bf3b383.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
 <ul>
-<li>“F3”是选择下一个词，那么选择上一个词自然就是“Shift + F3”，两个搭配使用就可以自由选择了。</li>
+<li>下面的函数利用样本创建一个词表，也就是所有词的集合</li>
 </ul>
-<img src="/2015/03/17/sublime教程[3]选择查找替换/f35ea0096b63f6248ccb343f8d44ebf81a4ca33d.jpg" alt="sublime教程[3]选择查找替换" title="sublime教程[3]选择查找替换">
+<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/b3508d13b07eca80ca739b6d922397dda0448383.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
 <ul>
-<li>在选中一个词的情况下，可以按“Ctrl + D”增加选择下一个同样的词，这样你就可以同时编辑多个词了。</li>
+<li>下面的函数将一个词表转换成词向量</li>
 </ul>
-<img src="/2015/03/17/sublime教程[3]选择查找替换/99636c0e0cf3d7ca9a60324af81fbe096b63a93d.jpg" alt="sublime教程[3]选择查找替换" title="sublime教程[3]选择查找替换">
+<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/647912d7912397dd12243a8e5a82b2b7d1a28798.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
 <ul>
-<li>“Ctrl + F”可以查找你输入的词语，然后按回车可以选择下一个，多次按回车可以继续选择下一个。</li>
+<li>训练样本得到脏话/非脏话的词分布概率</li>
 </ul>
-<img src="/2015/03/17/sublime教程[3]选择查找替换/ac2fc3c451da81cb4eee8cf15866d01609243146.jpg" alt="sublime教程[3]选择查找替换" title="sublime教程[3]选择查找替换">
+<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/9c57e3faaf51f3de6dc41bee97eef01f3b297983.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
 <ul>
-<li>“Ctrl + F”搜索到需要的词以后，可以按回车选择下一个，还可以按“Shift + Enter”选择上一个，或者“Alt + Enter”选择全部。</li>
+<li>利用贝叶斯条件概率，计算输入的一句话到底是不是骂人的话，如果是骂人的话，就返回1，否则返回0</li>
 </ul>
-<img src="/2015/03/17/sublime教程[3]选择查找替换/8605f5f81a4c510f3328ec266a59252dd52aa5db.jpg" alt="sublime教程[3]选择查找替换" title="sublime教程[3]选择查找替换">
+<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/5f9e93b1cb134954e1684aee554e9258d0094a83.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
 <ul>
-<li>“Ctrl + H”可以调出替换工具栏，输入要替换的词，按“replace all”即可替换所有的词。使用“Ctrl + Shift + H”替换当前关键字，“Ctrl + Alt + Enter”替换所有匹配关键字。</li>
+<li>最后测试一下【’fuck you! mother fucker!’】这句话，输出结果为：1</li>
 </ul>
-<img src="/2015/03/17/sublime教程[3]选择查找替换/4651a712c8fcc3cea5dac00f9845d688d43f20b0.jpg" alt="sublime教程[3]选择查找替换" title="sublime教程[3]选择查找替换">
-<ul>
-<li>默认情况下，sublime查找字符串是大小写敏感的，“Alt + C”可以切换大小写是否敏感。“Alt + W”切换整字匹配（Whole matching）模式。</li>
-</ul>
-<img src="/2015/03/17/sublime教程[3]选择查找替换/cc506c8b4710b912a996fcc2c9fdfc0392452273.jpg" alt="sublime教程[3]选择查找替换" title="sublime教程[3]选择查找替换">
-<ul>
-<li>正则表达式是非常强大的文本查找&amp;替换工具，Sublime Text中使用Alt + R切换正则匹配模式的开启/关闭。Sublime Text的使用Boost里的Perl正则表达式风格。</li>
-</ul>
+<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/718e25c79f3df8dcdb612d1bce11728b46102898.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -771,13 +460,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/03/11/Statsmodels：[2]快速入门/">
-                Statsmodels：[2]快速入门
+            <a href="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/">
+                Excel2013：[14]突破数据有效性单行单列限制
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年03月11日</span>
+                <span class="date">2016年05月05日</span>
             
             
             
@@ -786,51 +475,318 @@
 
     
         <div class="content">
-            <p>这是Python.statsmodels系列文章的第二篇，为了让大家快速入门，理解statsmodels工作的整个过程，我找到了一个很好的例子，在这里介绍给大家。下面我们来一步步介绍这个例子。</p>
+            <p>给Excel做下拉列表是经常用到的，但是有时候我们的下拉列表需要的数据不仅仅在一行或一列中，可能存在于两列，那时候你会发现，数据有效性无法将两列数据设置成下拉列表的数据源，我们这时候就用到了下面的技巧：</p>
 <ul>
-<li>引入相关模块，pandas主要用到了他的DataFrame，sm用到了回归分析，patsy.dmatrices用于生成design matrix</li>
+<li>我们现在要将这两列数据设置成数据有效性的数据源</li>
 </ul>
-<img src="/2015/03/11/Statsmodels：[2]快速入门/7a8a1446f21fbe09d996846668600c338644adbd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/814b07d8bc3eb13559d8a6a0a41ea8d3fd1f444a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
 <ul>
-<li>先获取数据，本例子用到的数据保存在网上的csv文件，我们可以使用pandas.read_csv方便的读取数据（url=’<a href="http://vincentarelbundock.github.com/Rdatasets/csv/HistData/Guerry.csv&#39;）" target="_blank" rel="external">http://vincentarelbundock.github.com/Rdatasets/csv/HistData/Guerry.csv&#39;）</a></li>
+<li>选中第一列的数据</li>
 </ul>
-<img src="/2015/03/11/Statsmodels：[2]快速入门/6a22e8246b600c3331b199ba194c510fd8f9a1bd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/bd7faf3533fa828bca3c8cf8ff1f4134970a5a4a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
 <ul>
-<li>查看一下数据的前五行，有很多列，显示有点混乱</li>
+<li>给这一列数据定义一个名称：公式–定义名称</li>
 </ul>
-<img src="/2015/03/11/Statsmodels：[2]快速入门/eab9044c510fd9f96cdf121b262dd42a2934a4bd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
-<img src="/2015/03/11/Statsmodels：[2]快速入门/b25d9901a18b87d6a669ed6d040828381f30fd5e.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/f9589818367adab480e20a5889d4b31c8701e4b8.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
 <ul>
-<li>下面筛选出我们需要的列：<br>这是最后得到的数据：</li>
+<li>打开这个对话框，将名称设置成：姓名，点击确定按钮</li>
 </ul>
-<img src="/2015/03/11/Statsmodels：[2]快速入门/246cca2a2834349bc2ce29f7caea15ce37d3bebd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
-<img src="/2015/03/11/Statsmodels：[2]快速入门/91ae68c6a7efce1b67e38fb8ac51f3deb58f65bd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/32bb9c8ba61ea8d3933d651f950a304e251f584a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
 <ul>
-<li>由于最后一行有NaN值，所以需要使用dropna删除该行数据</li>
+<li>选中要设置下拉列表的这一列，或者要设置数据有效性的这一列</li>
 </ul>
-<img src="/2015/03/11/Statsmodels：[2]快速入门/718e25c79f3df8dcff16c9e3ce11728b4710285d.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/e8112b2ac65c10384e6edfd9b0119313b07e895d.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
 <ul>
-<li>生成design matrix，我们建立的模型是y=BX，因此需要分别求得y和X矩阵，而dmatrices就是干这个的<br>这是y<br>这是X矩阵：我们会发现分类变量自动的转换成了哑变量</li>
+<li>选择【数据验证】，Excel2013将数据有效性改成了数据验证。</li>
 </ul>
-<img src="/2015/03/11/Statsmodels：[2]快速入门/3792cb39b6003af3f3729b12362ac65c1138b6bd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
-<img src="/2015/03/11/Statsmodels：[2]快速入门/b5ce925494eef01f38df5fb7e3fe9925bd317dbd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
-<img src="/2015/03/11/Statsmodels：[2]快速入门/109eb7ec8a136327f5c68441928fa0ec08fac75e.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/4075890a304e251fe6e8f5e3a586c9177f3e534a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
 <ul>
-<li>OLS指的是一般最小二乘，fit方法对回归方程进行估计，summary保存着计算的结果<br>这是输出的模型的估计结果：</li>
+<li>我们设置成序列，勾选图中所示两项，将来源设置成刚才定义的区域【姓名】，点击确定按钮</li>
 </ul>
-<img src="/2015/03/11/Statsmodels：[2]快速入门/a583631ed21b0ef45bc3de2cdec451da81cb3e5d.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
-<img src="/2015/03/11/Statsmodels：[2]快速入门/27d647ee3d6d55fb13ed30546e224f4a20a4dd5e.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
-<img src="/2015/03/11/Statsmodels：[2]快速入门/4e0b3ea4462309f73844eb60710e0cf3d7cad65e.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/d089b986c9177f3e1f2bed1672cf3bc79f3d564a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
 <ul>
-<li>现在我们要进一步检验数据是不是适合使用OLS，我们暂且先检验一下数据是否为线性，虚无假设是线性的，采用Rainbow test<br>输出结果为：第一个为F值，第二个为P值，显然未能拒绝虚无假设</li>
+<li>现在出现在下拉列表里的数据只有这三个人的名字，接着要添加别的名字了</li>
 </ul>
-<img src="/2015/03/11/Statsmodels：[2]快速入门/0e655ca7d933c8958755de09d21373f08202005d.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
-<img src="/2015/03/11/Statsmodels：[2]快速入门/6648d73d70cf3bc7b2cb8a9ed200baa1cc112abd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/dc854fda81cb39db20df764dd2160924ab18304a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
 <ul>
-<li>接着，我们绘制偏回归线观察数据点是否分布在估计得到的直线的附近（图为控制了Rgion和Literacy后wealth对lottery的回归关系）</li>
+<li>打开名称管理器</li>
 </ul>
-<img src="/2015/03/11/Statsmodels：[2]快速入门/b258f5c4b74543a9e830bcbe1d178a82b901145d.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
-<img src="/2015/03/11/Statsmodels：[2]快速入门/b110e6198618367aa3a239af2d738bd4b31ce55e.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/29790130e924b899710a68236c061d950a7bf6bc.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
+<ul>
+<li>编辑【姓名】区域</li>
+</ul>
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/0865b518972bd407a8d8c2e679899e510fb3094a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
+<ul>
+<li>选中这两列数据作为引用位置，点击确定按钮</li>
+</ul>
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/6f4703950a7b0208a5ff2efa60d9f2d3572cc8bc.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
+<ul>
+<li>现在来看看，是不是出现了两列的数据</li>
+</ul>
+<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/d0526df082025aaf082d6fd0f9edab64034f1a4a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/03/wxpython教程：[7]boxsizer布局/">
+                wxpython教程：[7]boxsizer布局
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天我们说一下使用boxsizer进行布局的方法，这种布局方式更适合制作有很多不同种类控件的界面。boxsizer分为横向和纵向两种，如果你想要把控件水平排列，就使用横向boxsizer，如果你想让控件都垂直排列，就使用纵向boxsizer，当然很多界面既有横向排列又有纵向排列的控件，我们就可以使用boxsizer的嵌套。</p>
+<ul>
+<li>这是我们今天用到的第一部分代码，你运行它的话就可以看到一个界面，有一个标签和文本框，他们是水平排列的。下面我们逐句解释。</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/f76575600c3387447d6a8929520fd9f9d62aa0fd.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>这三句话很简单，首先创建了一个panel面板，然后创建一个纵向box，最后创建一个横向box，我们的目的是创建一个既有横向排列的控件又有纵向排列的控件，所以先创建两个不同box，然后再让他们嵌套起来。</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/5202e5f2b211931301af59e566380cd790238dbc.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>创建一个标签，然后将标签添加到hbox1当中。flag和border结合使用，border是边框的宽度，flag表明哪一个边框。proportion是比例的意思，假如在一个横向box中有两个控件，两个控件的proportion相等，那么Frame大小改变的时候，两个控件大小保持相同。如果proportion=0，那么大小不变。<br>flag可以用的值有：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/310f3b1f95cad1c8a2455a727c3e6709c83d51ad.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/6648d73d70cf3bc794a66cb9d200baa1cc112a85.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>再向hbox1中添加一个文本框控件，注意proportion</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/a1ad16fa513d26972434a90856fbb2fb4216d845.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>最后是将横向文本框嵌套于纵向文本框。可以设置边框。目前我们还看不到为什么要做这样一个嵌套，因为控件还很少，仅有的两个控件是水平排列的。如果我们想再增加几个控件，并且控件位于这两个控件下方，我们就需要再创建一个横向box，并将横向box添加到纵向box中。</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/3790312eb9389b50818940078635e5dde7116e36.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>代码的最后是配置box：如果没有该命令，我们之前设置的sizer都是不起作用的</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/a75fb6d3fd1f41346997a52b261f95cad0c85e80.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>这是最后完成的效果：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/48151723dd54564e7e76476cb0de9c82d1584f11.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>下面我们再添加2个横向的box，并且其中增加—个控件</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/58c3acb7d0a20cf488945c8a75094b36acaf9924.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>最终的全部代码：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/a1ad16fa513d26972387aa0856fbb2fb4216d8d4.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>生成的界面：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/d56b3634349b033bc6d85e8f16ce36d3d439bdd0.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/03/Python统计分析：[9]2因素卡方检验/">
+                Python统计分析：[9]2因素卡方检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>2因素卡方检验主要是检验两个因素之间是否存在关联，或者叫相互影响，我们举一个例子，学习成绩和性别有没有关系，我们首先想到的可能是方差分析来检验平均数的差异，但是如果我们拿到的数据是计数数据，比如成绩分为高分组和低分组，这样只能用卡方检验了。</p>
+<ul>
+<li>引入相关模块，这里介绍一下Counter这个对象，它用于生成一个迭代器，关于迭代器你们百度一下；list可以生成一列表<br>我们可以看到迭代器是一个itertools.chain<br>那么这个迭代器生成的这个列表就是：</li>
+</ul>
+<img src="/2016/05/03/Python统计分析：[9]2因素卡方检验/b3508d13b07eca802d23f285922397dda144836b.jpg" alt="Python统计分析：[9]2因素卡方检验" title="Python统计分析：[9]2因素卡方检验">
+<img src="/2016/05/03/Python统计分析：[9]2因素卡方检验/d1e312f431adcbef2212b564afaf2edda3cc9f6b.jpg" alt="Python统计分析：[9]2因素卡方检验" title="Python统计分析：[9]2因素卡方检验">
+<img src="/2016/05/03/Python统计分析：[9]2因素卡方检验/207ea60e7bec54e757cad17cba389b504fc26a6b.jpg" alt="Python统计分析：[9]2因素卡方检验" title="Python统计分析：[9]2因素卡方检验">
+<ul>
+<li>了解了迭代器，我们下面就用Couter来生成我们需要的分类数据</li>
+</ul>
+<img src="/2016/05/03/Python统计分析：[9]2因素卡方检验/72ccb7773912b31b5a6d064b8518367adab4e115.jpg" alt="Python统计分析：[9]2因素卡方检验" title="Python统计分析：[9]2因素卡方检验">
+<ul>
+<li>打印一下结果，看看具体的数据是啥样子的<br>这是数据</li>
+</ul>
+<img src="/2016/05/03/Python统计分析：[9]2因素卡方检验/647912d7912397dded5f53665a82b2b7d0a2876b.jpg" alt="Python统计分析：[9]2因素卡方检验" title="Python统计分析：[9]2因素卡方检验">
+<img src="/2016/05/03/Python统计分析：[9]2因素卡方检验/29790130e924b899543db25a6d061d950a7bf615.jpg" alt="Python统计分析：[9]2因素卡方检验" title="Python统计分析：[9]2因素卡方检验">
+<ul>
+<li>最后运行卡方检验</li>
+</ul>
+<img src="/2016/05/03/Python统计分析：[9]2因素卡方检验/dbf554ed2e738bd441207953a28b87d6277ff915.jpg" alt="Python统计分析：[9]2因素卡方检验" title="Python统计分析：[9]2因素卡方检验">
+<ul>
+<li>首先输出的结果还是描述统计，括号内的数字表示期望值（根据虚无假设计算的值）</li>
+</ul>
+<img src="/2016/05/03/Python统计分析：[9]2因素卡方检验/e865a699a9014c08913ae3c7097b02087bf4f415.jpg" alt="Python统计分析：[9]2因素卡方检验" title="Python统计分析：[9]2因素卡方检验">
+<ul>
+<li>接着是卡方检验</li>
+</ul>
+<img src="/2016/05/03/Python统计分析：[9]2因素卡方检验/b9d8b7014c086e061da8f42901087bf40ad1cb15.jpg" alt="Python统计分析：[9]2因素卡方检验" title="Python统计分析：[9]2因素卡方检验">
+<ul>
+<li>这是最后得到的统计量</li>
+</ul>
+<img src="/2016/05/03/Python统计分析：[9]2因素卡方检验/e49cf91190ef76c6cbf430499e16fdfaaf51676b.jpg" alt="Python统计分析：[9]2因素卡方检验" title="Python统计分析：[9]2因素卡方检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/">
+                Excel2013：[40]美化单元格立体来点立体感
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>闲来无事美化一下以前做的单元格，把二维单元格弄成有立体感的，怎么样？这么做它看起来就像是一个小小的数字键盘，我们如果给它加上超链接，这些单元格就变成一个个按钮。好吧，看看具体的教程：</p>
+<ul>
+<li>先填写数据，如图所示，我把单元格的大小也调整了一下，有数字的单元格宽和高都更大，这样可以突出显示</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/8474fbdde71190ef5afa99b8cc1b9d16fdfa6010.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<ul>
+<li>上一点背景色，淡淡的灰色</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/ac0acf1373f08202c842995849fbfbedaa641b41.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<ul>
+<li>选中有数字的单元格，设置对齐方式为居中对齐</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/4abae5edab64034fe01dca61adc379310b551d41.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<ul>
+<li>还是选中这些有数字的单元格</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/42e89c26cffc1e172e6f84564890f603728de942.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<ul>
+<li>打开格式对话框</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/8bc3a7014a90f603db6094203b12b31bb151ed42.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<ul>
+<li>切换到边框选项下</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/dc15484e9258d109f4e2a2d5d358ccbf6c814d10.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<ul>
+<li>我们来先设置线型和颜色，线性为粗线，颜色为白色或者浅灰色</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/dbf554ed2e738bd407f1ba56a38b87d6267ff942.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<ul>
+<li>绘制上边框和左边框</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/1899a23eb13533fad3b79849aad3fd1f41345b10.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<ul>
+<li>接着设置颜色为黑色，线型不变</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/fc5e5f34970a304e7d23ab9dd3c8a786c9175c10.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<ul>
+<li>绘制下边框和右边框，点击确定按钮</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/245e8bcad1c8a786952b41696509c93d70cf5010.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<ul>
+<li>看一下，立体感是不是出来了。</li>
+</ul>
+<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/d019d2bf6c81800a54e48269b33533fa828b4710.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/01/Python统计分析：[4]多因素方差分析/">
+                Python统计分析：[4]多因素方差分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇文章介绍了Python做统计中如何实现单因素方差分析，这篇文章介绍一下如何做多因素方差分析以及当主效应显著时如何做多重比较。</p>
+<ul>
+<li>引入相关模块</li>
+</ul>
+<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/509b9fcb39dbb6fdbb2901510a24ab18972b371c.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
+<ul>
+<li>读取数据（如果你需要我案例中的数据，可以联系我索要）</li>
+</ul>
+<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/d1571724ab18972b3a48e4bde5cd7b899e510a1c.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
+<ul>
+<li>删除空值并打印数据<br>我们可以看到数据是酱紫的：</li>
+</ul>
+<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/c9d4cf43ad4bd1138f0e524559afa40f4afb0543.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
+<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/43e6c733c895d1435404005470f082025aaf071c.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
+<ul>
+<li>用statsmodels中的anova_lm，注意公式formula的写法<br>这是随即设计的两因素方差分析的结果：结果显示fetus的主效应显著</li>
+</ul>
+<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/734f12f3d7ca7bcb5a362358bd096b63f624a83d.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
+<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/d0526df082025aaf5a409abcf8edab64034f1a1c.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
+<ul>
+<li>阴虚fetus的主效应显著，所以有必要进行事后简单，使用tukey方法进行多重比较的方法及结果：<br>输出的结果显示，三个水平均均值均呈现显著差异（reject==Ture）</li>
+</ul>
+<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/f35ea0096b63f6243e10dd748444ebf81a4ca33d.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
+<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/834344afa40f4bfbfbbd7a23004f78f0f736181c.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>

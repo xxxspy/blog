@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="pandas教程：[28]散点图添加趋势线"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>pandas教程：[28]散点图添加趋势线 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/07/05/pandas教程：[28]散点图添加趋势线/">
+                pandas教程：[28]散点图添加趋势线
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>上一篇文章我们介绍了绘制散点图的过程，现在我们要给散点图添加一个趋势线，从而直观的看到数据的变化趋势，下面来看看具体的过程：</p>
+<ul>
+<li>引入相关的模块</li>
+</ul>
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/d7c9ca3f8794a4c20871e95a0df41bd5ad6e3935.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<ul>
+<li>读取数据，并打印出来前五行数据<br>这是我们看到的数据</li>
+</ul>
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/aa251d4f78f0f73634cb42700955b319ebc4134e.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/389aa8fd5266d016884b9059942bd40735fa3535.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<ul>
+<li>使用ols进行回归拟合，实际上是建立了parent为自变量的线性回归方程</li>
+</ul>
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/8367d1fc1e178a821f0971d1f503738da977e84f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<ul>
+<li>先绘制一个简单的散点图</li>
+</ul>
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/734f12f3d7ca7bcbec4ec95ebd096b63f624a84f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<ul>
+<li>接着绘制拟合直线</li>
+</ul>
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/d872d695d143ad4b417c48b181025aafa40f0635.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<ul>
+<li>查看绘制出来的图</li>
+</ul>
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/1b0d4f0fd9f9d72a93511e6cd72a2834349bbb4f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<ul>
+<li>上面第六步用到了lm.fittedvalues，他其实是一个Series（根据回归方程得到的预测值），我们来查看一下它的数据和类型。</li>
+</ul>
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/d66b7e59252dd42ade3c0fda003b5bb5c9eab84f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/c8ab0bce36d3d539480801b23987e950352ab04f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<ul>
+<li>最后绘制得到的散点图（带趋势线）是酱紫的。</li>
+</ul>
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/11794d43fbf2b2119b1a8b3fc98065380cd78e4f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/pandas/">#pandas</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

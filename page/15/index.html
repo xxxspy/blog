@@ -155,13 +155,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/01/15/spss简单因素分析的操作和结果分析方法/">
-                spss简单因素分析的操作和结果分析方法
+            <a href="/2016/04/03/Excel2013：[30]subtotal函数按照字体颜色求和/">
+                Excel2013：[30]subtotal函数按照字体颜色求和
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年01月15日</span>
+                <span class="date">2016年04月03日</span>
             
             
             
@@ -170,50 +170,35 @@
 
     
         <div class="content">
-            <p>因素分析是spss中一个重要的功能，他的作用是从多个变量中提取少数几个因子，达到减少指标的目的；有时候因素分析方法用在问卷编制中，可以从各个题项中提取中几个维度。下图看到就是我们要分析的数据，这里有x1–x8这8个变量需要进行因素分析。<br>工具/原料</p>
+            <p>给别人做数据，别人的数据经常是五颜六色的，为了突出某些数据，我们经常使用各种字体颜色，那么我们突然想要知道某种颜色的数字之和，怎么办？或者想知道他们的平均数怎么办？下面介绍一下SUBTOTAL函数的用法，看完你就知道如何根据字体颜色来求各种数。</p>
 <ul>
-<li>sps20.0<br>方法/步骤</li>
+<li>这里有一列数据，你可以看到红色字体，我现在想要知道红色字体的和，选中数据如图所示</li>
 </ul>
+<img src="/2016/04/03/Excel2013：[30]subtotal函数按照字体颜色求和/d019d2bf6c81800a44429275b33533fa838b47e2.jpg" alt="Excel2013：[30]subtotal函数按照字体颜色求和" title="Excel2013：[30]subtotal函数按照字体颜色求和">
 <ul>
-<li>在菜单栏上执行：analyse–dimension reduction–factor ，打开了因素分析对话框</li>
+<li>在【数据】菜单下，我们点击【筛选】</li>
 </ul>
-<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/b17eca8065380cd783bec03ca144ad34588281ba.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<img src="/2016/04/03/Excel2013：[30]subtotal函数按照字体颜色求和/6dc09e0a19d8bc3eeeaf1db1808ba61ea9d345e2.jpg" alt="Excel2013：[30]subtotal函数按照字体颜色求和" title="Excel2013：[30]subtotal函数按照字体颜色求和">
 <ul>
-<li>打开了因素分析对话框，将要分析的这8个变量放到variables框中，点击箭头按钮可以添加变量</li>
+<li>你可以看到这个下拉箭头，我们打开它的下拉菜单</li>
 </ul>
-<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/21a4462309f790527e8625ef0cf3d7ca7acbd542.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<img src="/2016/04/03/Excel2013：[30]subtotal函数按照字体颜色求和/373bc4b44aed2e7349259d578501a18b86d6faba.jpg" alt="Excel2013：[30]subtotal函数按照字体颜色求和" title="Excel2013：[30]subtotal函数按照字体颜色求和">
 <ul>
-<li>还是自因素分析的主对话框，点击descriptive按钮，打开描述统计的子对话框</li>
+<li>菜单中有一个选项是【按颜色筛选】，好的，选择它，然后在次级菜单中选择红色</li>
 </ul>
-<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/fc1f4134970a304e7aadc22bd1c8a786c8175c57.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<img src="/2016/04/03/Excel2013：[30]subtotal函数按照字体颜色求和/4075890a304e251ffc50ff83a586c9177e3e53e2.jpg" alt="Excel2013：[30]subtotal函数按照字体颜色求和" title="Excel2013：[30]subtotal函数按照字体颜色求和">
 <ul>
-<li>在子对话框中，我们需要对因素分析是否合适进行检验，所以勾选如图所示的选项，点击continue返回到主对话框</li>
+<li>接着，我们随便找一个存放总数的单元格，我们输入公式=SUBTOTAL(，这时候你会看到一个下拉菜单提示你可选参数，因为我们要求和，所以我们使用第九个参数9，然后输入一个逗号，再选择求和的区域</li>
 </ul>
-<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/9a504fc2d5628535cacbbff090ef76c6a7ef6333.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<img src="/2016/04/03/Excel2013：[30]subtotal函数按照字体颜色求和/263e802f07082838d4c1c76fba99a9014d08f1ba.jpg" alt="Excel2013：[30]subtotal函数按照字体颜色求和" title="Excel2013：[30]subtotal函数按照字体颜色求和">
 <ul>
-<li>还是在主对话框中，点击extration按钮，打开子对话框</li>
+<li>最后输入的公式是这样的：</li>
 </ul>
-<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/8601a18b87d6277f20135fe928381f30e824fcda.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<img src="/2016/04/03/Excel2013：[30]subtotal函数按照字体颜色求和/38403f3fb80e7bec650e189a2d2eb9389a506bb1.jpg" alt="Excel2013：[30]subtotal函数按照字体颜色求和" title="Excel2013：[30]subtotal函数按照字体颜色求和">
 <ul>
-<li>在这个子对话框中，我们可以输出碎石图，这样可以更加直观的看到各个因素的特征根，对于碎石图的解释后面会有。点击continue，返回主对话框</li>
+<li>最后看到了吧，总数是不是正确呀。</li>
 </ul>
-<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/ca1349540923dd541c63cab9d109b3de9d8248ca.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
-<ul>
-<li>在主对话框中，点击ok按钮，开始处理数据并输出结果</li>
-</ul>
-<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/d009b3de9c82d1589c483460800a19d8bd3e421c.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
-<ul>
-<li>我们看到的第一个图就是KMO检验，如图所示，kmo值为0.6，这个值不是很理想，一般来说kmo大于0.7可以认为数据具有较好的相关性，因素分析的效果会好一些；当kmo值在0.5以下的时候，不适合做因素分析。接着我们看Bartlett检验，我们看sig值显著，说明应该拒绝变量相互独立的假设，这说明因素分析是合适的。</li>
-</ul>
-<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/9358d109b3de9c829e98945e6c81800a18d84365.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
-<ul>
-<li>接着我们看碎石图，这个图的横轴是因素的序号，纵轴代表特征根，曲线的意思是，随着因素序号的增大，特征根迅速降低。后五个因素的特征根变化非常小，所以我们基本上认为得到三个因子是比较合适的。</li>
-</ul>
-<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/e1fe9925bc315c60762d073e8db1cb13485477a2.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
-<ul>
-<li>最后看到的是因子载荷矩阵，从因子载荷矩阵中，我们可以知道各个因子在不同变量中的载荷，同时可以根据表格中的数据求出因子的计算公式我们举一个例子里计算第一个变量：ZX1=0884F1+0.385F2+0.12F3</li>
-</ul>
-<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/9e3df8dcd100baa1a68c2b6a4710b912c9fc2eba.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<img src="/2016/04/03/Excel2013：[30]subtotal函数按照字体颜色求和/1e71f724b899a90183f9404d1f950a7b0308f5ba.jpg" alt="Excel2013：[30]subtotal函数按照字体颜色求和" title="Excel2013：[30]subtotal函数按照字体颜色求和">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -229,13 +214,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/01/05/spss交叉设计如何进行方差分析/">
-                spss交叉设计如何进行方差分析
+            <a href="/2016/04/03/用excel在局域网聊天图文教程/">
+                用excel在局域网聊天图文教程
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年01月05日</span>
+                <span class="date">2016年04月03日</span>
             
             
             
@@ -244,37 +229,71 @@
 
     
         <div class="content">
-            <p>交叉设计是自身配对基础上发展的设计方法，是一种特殊的自身对照设计，通常的设计方案为被试分为两组，一组接受实验的顺序是AB，一组接受的实验顺序是BA，这样就形成了对照，这样的设计如何进行方差分析呢？下面是具体的方法：<br>工具/原料</p>
+            <p>excel可以在局域网聊天，你也许不信，那么就跟我来做一下。其实很简单的几步设置就可以了，其主要的原理是使用excel的多人同时编辑的功能，可以共享该excel文件，几个人同时编辑该文件，就可以实现聊天的功能，不过好多人都不知道如何设置多人同时编辑和共享文件，下面我就来重点介绍一下这两个步骤吧。<br>方法/步骤</p>
 <ul>
-<li>spss20.0<br>方法/步骤</li>
+<li>新建一个excel，然后打开，我们先在第一行建立一个标题栏，格式设置一下以便突出出来，标题栏标注的就是聊天的所有的人。</li>
 </ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/37d12f2eb9389b502b6bf5cc8535e5dde6116e93.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
 <ul>
-<li>首先要明白数据的录入方式，如图所示，stage就是接受条件AB的阶段</li>
+<li>选中所有的单元格，右键单击任意单元格，然后再选择【设置单元格格式】，打开设置对话框</li>
 </ul>
-<img src="/2015/01/05/spss交叉设计如何进行方差分析/f603918fa0ec08faab3c106659ee3d6d55fbda37.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2016/04/03/用excel在局域网聊天图文教程/11385343fbf2b211d78b90d0ca8065380dd78e82.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
 <ul>
-<li>在菜单栏上执行：analyse–GLM–univariate，打开方差分析对话框</li>
+<li>切换到对齐选项，勾选自动换行，然后点击确定。这么做是为了让文字都显示完整</li>
 </ul>
-<img src="/2015/01/05/spss交叉设计如何进行方差分析/b8014a90f603738d79ee0fe3b31bb051f919ec4f.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2016/04/03/用excel在局域网聊天图文教程/8435e5dde71190ef1c6f8741ce1b9d16fcfa6093.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
 <ul>
-<li>将自变量和因变量放入格子的框中，点击model按钮，开始设置模型</li>
+<li>接着来到审阅选项，点击【共享工作簿】</li>
 </ul>
-<img src="/2015/01/05/spss交叉设计如何进行方差分析/e1fe9925bc315c605105682e8db1cb134854775a.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
-<img src="/2015/01/05/spss交叉设计如何进行方差分析/024f78f0f736afc3b8283da4b319ebc4b64512ce.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2016/04/03/用excel在局域网聊天图文教程/b58f8c5494eef01f4f800d5be0fe9925bd317d93.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
 <ul>
-<li>勾选“custom”，然后将三个变量放入右侧的模型框中</li>
+<li>假如弹出这个对话框，你需要进一步进行设置，点击确定</li>
 </ul>
-<img src="/2015/01/05/spss交叉设计如何进行方差分析/03087bf40ad162d91cef60dd11dfa9ec8b13cdea.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
-<img src="/2015/01/05/spss交叉设计如何进行方差分析/63d0f703918fa0ecf0c666cc269759ee3c6ddbea.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2016/04/03/用excel在局域网聊天图文教程/5882b2b7d0a20cf46035eb4176094b36adaf9982.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
 <ul>
-<li>将type设置为maineffect，意思是没有交互作用，回到主菜单，点击ok</li>
+<li>点击excel的开始按钮，在开始菜单中，打开excel选项。</li>
 </ul>
-<img src="/2015/01/05/spss交叉设计如何进行方差分析/80cb39dbb6fd526675313ed5ab18972bd50736dc.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
-<img src="/2015/01/05/spss交叉设计如何进行方差分析/34fae6cd7b899e51a19438d542a7d933c9950ddc.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2016/04/03/用excel在局域网聊天图文教程/77094b36acaf2eddf4545c778d1001e938019382.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
 <ul>
-<li>我们看到输出的结果，治疗方案treat边缘显著，但是质量的顺序stage是不显著的，判断标准就是sig值</li>
+<li>在信任中心中，打开信任中心设置</li>
 </ul>
-<img src="/2015/01/05/spss交叉设计如何进行方差分析/7dd98d1001e9390164138fff7bec54e737d196d9.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2016/04/03/用excel在局域网聊天图文教程/810a19d8bc3eb135bd53a225a61ea8d3fc1f4493.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>切换到个人信息选项下，然后取消勾选【保存时从文件属性中删除个人信息】，一路点击确定，退出excel选项。</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/838ba61ea8d3fd1fd29db7a4304e251f94ca5f93.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>接着点击【共享工作簿】，弹出共享设置对话框，勾选【允许多用户同时编辑，同时运行工作簿合并】，然后切换到高级选项下</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/e4dde71190ef76c6cc77eeb59d16fdfaae516782.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>滑将自动更新间隔设置为5分钟（最短时间），然后勾选【保存本人的更改并查看其他用户的更改】，点击确定按钮。</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/77c6a7efce1b9d1693628ffff3deb48f8d546482.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>弹出警告消息，点击确定，保存文档</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/314e251f95cad1c83e2fe9b97f3e6709c83d5193.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<img src="/2016/04/03/用excel在局域网聊天图文教程/9e3df8dcd100baa169b852254710b912c9fc2e93.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>新建一个文件夹，将文件夹放到任意一个隐蔽的位置，将我们做好的excel放到该文件夹中</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/5d6034a85edf8db1b58b69fa0923dd54574e7482.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>右键单击该文件夹，然后执行：共享–家庭组读取、写入。好了，到这里，别人就可以访问你的电脑并打开excel进行聊天了。那么别人怎么找到你的excel文件呢?</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/b812c8fcc3cec3fd57aab2ebd688d43f86942793.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>在桌面上双击网络，进入局域网</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/18d8bc3eb13533fa0d1386b0a8d3fd1f40345b82.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li><p>在这里找到存有excel文档的电脑，双击进入就可以找到了。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/960a304e251f95ca49508728c9177f3e66095282.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<img src="/2016/04/03/用excel在局域网聊天图文教程/0e2442a7d933c8951bea8de5d11373f083020093.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -290,13 +309,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/">
-                spss两因素（有一个连续变量）如何进行方差分析
+            <a href="/2016/04/01/Python教程：[43]Word基本操作/">
+                Python教程：[43]Word基本操作
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年01月01日</span>
+                <span class="date">2016年04月01日</span>
             
             
             
@@ -305,31 +324,509 @@
 
     
         <div class="content">
-            <p>假如两因素的设计，其中一个变量是连续型变量，那么通常的方差分析就没有办法了，必须使用协方差分析，下面是具体的方法。<br>工具/原料</p>
+            <p>使用python操作Word用到了win32com模块，我们现在就要介绍一下python对Word的基本操作，文章涉及到如何与Word程序建立连接、如果与Word文档建立连接的，以及对Word文档的基本操作。</p>
+<ul>
+<li>首先，我们必须要引入win32com，已经Dispatch和constants两个常用的库</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/7ac880510fb30f24b3470f0cca95d143ac4b03a5.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>与Word建立连接，这时候如果你已经打开了一个Word，则直接与Word程序建立连接，如果没有打开，则它会打开Word。如果已经开启了一个Word，你可以使用DispatchEx代替下面的Dispatch</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/ae8267310a55b319ee70617a41a98226cefc17f0.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>设置Word的可见性visible，默认情况下，你看不到Word程序；然后设置Word的警告信息是否出现，默认也是不出现，这样你在使用python控制Word的时候不会弹出Word的警告信息。</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/f677b1c379310a55b7f83dfbb54543a9832610a5.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>新建一个Word文档用add（），假如你只想打开一个已经存在的Word，你是用下面红色的代码（去掉注释符号#）</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/a6aed01b9d16fdfa36a325e1b68f8c5495ee7bb7.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>获取已经打开的文档的数目，从下面我们看到我们只打开了一个Word文档</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/8759287adab44aed37925debb11c8701a08bfba6.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>想要获取第一个文档的句柄，我们使用Documents集合</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/2cb4fefe9925bc31f892e2975cdf8db1ca1370b7.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>假如想要激活特定的文档，我们使用activate()方法，可以其后的操作都在该文档下执行。</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/263e802f070828383cd13f1bba99a9014d08f1a6.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>我们还可以打印文档，使用printout方法。</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/064936381f30e9249d787f3e4e086e061c95f7a6.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>保存Word，可以使用另存为（saveas）方法或者使用保存（save）方法</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/5d212aa85edf8db16e1f906b0b23dd54564e7449.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<img src="/2016/04/01/Python教程：[43]Word基本操作/d002b34bd11373f0771a8390a60f4bfbfbed045d.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>最后要学的就是Word的退出，使用python控制Word一定要注意退出，否则程序运行越来越慢，尤其是在多次循环的时候。</li>
+</ul>
+<img src="/2016/04/01/Python教程：[43]Word基本操作/b94f65ec54e736d1a842630799504fc2d5626929.jpg" alt="Python教程：[43]Word基本操作" title="Python教程：[43]Word基本操作">
+<ul>
+<li>下一篇文章我们讲如何使用python编辑Word中documents对象下的其他子对象。以后python操作Word的文章都发表在系列文章《python操作Word》下，下面的参考资料里有它的链接地址。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/">
+                Excel2013：[5]阿拉伯数字与大写中文数字互转
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用Excel可以快速的将阿拉伯数字转换成大小写中文数字，方法很简单，就是设置一下数字格式，我们看下面的步步教程吧：</p>
+<ul>
+<li>先填充一个数字序列</li>
+</ul>
+<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/b110e6198618367a13d76ec92c738bd4b31ce50d.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
+<ul>
+<li>选中这个序列</li>
+</ul>
+<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/dbf554ed2e738bd47e7fa325a38b87d6277ff90d.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
+<ul>
+<li>右键单击，选择【设置单元格格式】</li>
+</ul>
+<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/b5ce925494eef01f6b2309d1e2fe9925bc317dab.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
+<ul>
+<li>打开对话框，点击【数字】标签，打开它</li>
+</ul>
+<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/2cb4fefe9925bc310a6a108c5cdf8db1cb1370ab.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
+<ul>
+<li>我们要设置格式为特殊格式中的【中文大写数字】</li>
+</ul>
+<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/1e71f724b899a901956b4a221f950a7b0208f50d.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
+<ul>
+<li>ok，现在是不是已经转化过来了。</li>
+</ul>
+<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/0862c354564e9258b10397fa9e82d158ccbf4eab.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/03/23/Python教程：[15]TCP客户端程序/">
+                Python教程：[15]TCP客户端程序
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇文章我们讲了如何编写服务器程序，现在我们要编写客户端程序，我们同样是在例子中讲解，方便你实现快速开发。实际上我有其他语言的编程基础，我学习python一个星期就可以开发小型软件了，就是在例子中学习，而不是翻一本书。下面是具体的例子：</p>
+<ul>
+<li>有了上一篇文章的基础，我们再来看下面的代码的时候就非常简单了。首先设置服务器的地址，因为服务器就是在本机上，所以设置成localhost；接着设置端口，一定要和服务器的端口一样，否则就会出现错误；然后设置缓存大小，ADDR其实就是地址+端口。</li>
+</ul>
+<img src="/2016/03/23/Python教程：[15]TCP客户端程序/9f6e190828381f300287b785ab014c086f06f0c5.jpg" alt="Python教程：[15]TCP客户端程序" title="Python教程：[15]TCP客户端程序">
+<ul>
+<li>接下来的两句就是建立套接字，然后绑定到ADDR的地址上，我们看及时编译的出现了错误提示，因为我没有开启服务器，或者端口号设置错误了。你改过来就好了。</li>
+</ul>
+<img src="/2016/03/23/Python教程：[15]TCP客户端程序/29790130e924b899448943146c061d950a7bf622.jpg" alt="Python教程：[15]TCP客户端程序" title="Python教程：[15]TCP客户端程序">
+<ul>
+<li>接着就是数据传输部分，和上一篇文章的一样，你自己看一下就懂了。</li>
+</ul>
+<img src="/2016/03/23/Python教程：[15]TCP客户端程序/7ab514d162d9f2d3a0a41ec3abec8a136327cc22.jpg" alt="Python教程：[15]TCP客户端程序" title="Python教程：[15]TCP客户端程序">
+<ul>
+<li>程序运行时，我们可以看到服务器端已经提示连接成功，这时候如果你在客户端输入数据，就会看到数据的传输，服务器添加一个时间戳，然后再返回数据到客户端。</li>
+</ul>
+<img src="/2016/03/23/Python教程：[15]TCP客户端程序/647912d7912397dd9a27bd285b82b2b7d0a28704.jpg" alt="Python教程：[15]TCP客户端程序" title="Python教程：[15]TCP客户端程序">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/03/19/DataNitro：[10]Image对象/">
+                DataNitro：[10]Image对象
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>excel里有很多图片和图表，我们使用datanitro也可以对这些图片进行操作，这就用到了Image对象。</p>
+<ul>
+<li>插入图片：</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/1e71f724b899a90136a7ec6a1e950a7b0308f599.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>在Python shell里插入一个图片：</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/4d4970061d950a7b7ca7f99809d162d9f3d3c999.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>它可以立刻显示在excel里</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/8697397f9e2f07085dbb9d5cea24b899a801f2f5.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>设置图片的坐标：</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/1e71f724b899a901368bec6a1e950a7b0308f5f5.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>设置图片的高度和宽度</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/27d647ee3d6d55fb2054c17a6e224f4a21a4dd99.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>设置图片的旋转角度</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/034965f40ad162d97050d54012dfa9ec8b13cdf5.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>这是旋转后的效果</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/6c63514a20a446239158123e9b22720e0df3d799.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>删除图片</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/476217f790529822e9a18e9fd4ca7bcb0b46d499.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>替换图片：保持图片原先的属性不变</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/d68b65cb0a46f21f1fa6e90ff5246b600d33ae99.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>使用Python的pyplot模块绘图</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/f76575600c3387444c579820520fd9f9d62aa099.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>返回所有图片</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/29752a9b033b5bb57a6997a235d3d539b700bcf5.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<ul>
+<li>锁定图片，用于图片的排版，可以让图片与单元格绑定</li>
+</ul>
+<img src="/2016/03/19/DataNitro：[10]Image对象/3792cb39b6003af383046b3c362ac65c1138b6f5.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/03/17/spss三维散点图如何验证线型关系/">
+                spss三维散点图如何验证线型关系
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>最近要做一个三个变量的多重线型回归，有两个自变量，为了做出回归模型，先要验证这三个变量的关系是不是线型的，所以需要先从直观上观察三者的关系，这就用到了散点图，关于二维的散点图很简单，就不介绍了，我们就来看看三维的散点图是怎么观察线型关系的。<br>工具/原料</p>
 <ul>
 <li>spss20.0<br>方法/步骤</li>
 </ul>
 <ul>
-<li>确保数据满足平行性假设的前提下，我们用协方差分析进行检验， 在菜单栏上执行：analyse–GLM–univariate</li>
+<li>打开spss，数据都准备好了以后，在菜单栏上执行：图形–图标建构程序</li>
 </ul>
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/562c11dfa9ec8a13f2aafb23f703918fa1ecc045.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/ca1349540923dd5480125e97d109b3de9d8248e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
 <ul>
-<li>将变量放入各自的框中，从上到下依次是：因变量、固定因素、斜变量（连续变量）</li>
+<li>你会看到一个提示框，因为要建构图表必须要先确定各个变量的测量水平，也就是说变量是分类变量、等级变量、还是等距变量，如果你的变量都定义好了，你可以点击确定。如果你不确定自己的变量，你要点击“定义变量属性”进行进一步的设置，我们看看如何设置变量的属性</li>
 </ul>
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/0df431adcbef76099086355c2edda3cc7dd99e60.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/d009b3de9c82d15810e3a04e800a19d8bd3e42e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/ae51f3deb48f8c5453cb3cd03a292df5e0fe7f31.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
 <ul>
-<li>点击model按钮，进入model对话框，在custom模式下，设置type为main effect，将两个变量放入模型</li>
+<li>点击【定义变量属性】以后，我们会看到下面这个对话框，将你要用来制作图表的三个变量放到右侧窗口，然后点击继续</li>
 </ul>
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/c2fdfc039245d688e1d61e67a4c27d1ed31b2418.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/a71ea8d3fd1f41347f56fc81251f95cad0c85ee8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
 <ul>
-<li>点击options按钮，设置输出的参数，下面第二幅图是设置的参数，如图所示</li>
+<li>打开一个新的窗口，在左侧窗口中选中一个变量，在右侧窗口中修改这个变量的属性，我们看到测量级别这个属性，这就是我们要设定的属性，因为我们要验证线型关系，所以三个变量都应该是度量数据，所以你将这三个变量都设置成度量数据即可，点击确定，退出设定</li>
 </ul>
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/bd315c6034a85edf8ee151e049540923dc547587.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/37d3d539b6003af3f8d573a3352ac65c1138b682.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/48540923dd54564e457d1dc6b3de9c82d1584f31.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
 <ul>
-<li>点击ok开始处理数据，并输出结果</li>
+<li>打开同样的方式来到这个对话框，我们点击确定，开始设置图表</li>
 </ul>
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/50da81cb39dbb6fd109849e50924ab18962b3735.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/d009b3de9c82d15810e3a04e800a19d8bd3e42e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>切换到库选项下，找到散点图分类</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/9e3df8dcd100baa1354dbe444710b912c9fc2ee8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>因为我们有三个变量，所以应该选择三维散点图，将三维散点图拖放到图表绘制区域</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/738b4710b912c8fc3e920f32fc039245d78821e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>将三个变量分别放到这个散点图的不同的坐标轴上，一般我们将因变量放到纵轴上，其他两个自变量随便放即可</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/a71ea8d3fd1f41347f2ffc81251f95cad1c85e31.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>点击确定按钮，完成图表的绘制</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/b2de9c82d158ccbfb1c24cc519d8bc3eb03541d7.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>我们看结果输出面板出现了一个散点图，这就是我们绘制的图了，但是从这个图中怎么看出三个变量的线性关系呢/</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/8ad4b31c8701a18bcfd8ebb09e2f07082838fe1a.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>在属性对话框，切换到3D选项下，我们取消勾选“显示线框”，点击下面的应用按钮</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/dcc451da81cb39dbb8a09ea9d0160924aa1830e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>这时候散点图看起来更明显了，继续来看如何看线型关系</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/b03533fa828ba61e4d9031d04134970a314e59d7.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>在菜单栏上执行：编辑–3Drotation</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/9f2f070828381f30a72a7456a9014c086e06f01a.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>你可以看到出现了一个对话框，在这里可以设定具体的旋转角度，不过一般我们不会用到这个功能</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/241f95cad1c8a7862754b3f16709c93d71cf50d7.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>鼠标点击散点图的任意位置不松手，拖动即可旋转散点图，通过不同角度的观察，你会找到一个视角使得各个点都呈现在一个平面上，从你的角度来看就像一条直线</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/b999a9014c086e064e9bc6b402087bf40ad1cb1a.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li><p>这是旋转一定的角度以后看到的效果了：</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/9f510fb30f2442a7c56e045ad143ad4bd01302e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/03/17/spss中如何利用直方图看出残差的正态性/">
+                spss中如何利用直方图看出残差的正态性
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>直方图是粗略检验正态性的一个好方法，通过对数据的大概形态的了解我们可以粗略的看出数据是正太还是偏态，好吧，下面是具体的方法：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>先打开线性回归的对话框，如图所示，打开linear菜单</li>
+</ul>
+<img src="/2016/03/17/spss中如何利用直方图看出残差的正态性/f11f3a292df5e0feaabed9c55c6034a85fdf724b.jpg" alt="spss中如何利用直方图看出残差的正态性" title="spss中如何利用直方图看出残差的正态性">
+<ul>
+<li>将GDP作为因变量，将其他变量作为自变量，放入各自的框中，点击plot按钮，设置输出的图标</li>
+</ul>
+<img src="/2016/03/17/spss中如何利用直方图看出残差的正态性/eac4b74543a9822655637be38a82b9014b90eb50.jpg" alt="spss中如何利用直方图看出残差的正态性" title="spss中如何利用直方图看出残差的正态性">
+<img src="/2016/03/17/spss中如何利用直方图看出残差的正态性/faf2b2119313b07eca8803cc0cd7912397dd8c38.jpg" alt="spss中如何利用直方图看出残差的正态性" title="spss中如何利用直方图看出残差的正态性">
+<ul>
+<li>在该对话框中，注意XY轴分别是什么变量，这里X轴是标准化的残差，而Y轴是概率，设置输出的图为直方图，如图所示，然后点击continue按钮</li>
+</ul>
+<img src="/2016/03/17/spss中如何利用直方图看出残差的正态性/8ad4b31c8701a18b282b428b9e2f07082938fe36.jpg" alt="spss中如何利用直方图看出残差的正态性" title="spss中如何利用直方图看出残差的正态性">
+<ul>
+<li>点击ok按钮，开始处理数据并输出结果</li>
+</ul>
+<img src="/2016/03/17/spss中如何利用直方图看出残差的正态性/91529822720e0cf30d8b1d3f0a46f21fbf09aaf2.jpg" alt="spss中如何利用直方图看出残差的正态性" title="spss中如何利用直方图看出残差的正态性">
+<ul>
+<li>在结果界面，找到直方图，如果直方图的形态符合正太分布，我们就可以大体上认为数据的残差是符合正太分布的。</li>
+</ul>
+<img src="/2016/03/17/spss中如何利用直方图看出残差的正态性/91ef76c6a7efce1bbad19b0eaf51f3deb58f657f.jpg" alt="spss中如何利用直方图看出残差的正态性" title="spss中如何利用直方图看出残差的正态性">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/03/17/spss协方差分析中如何进行交互作用的检验/">
+                spss协方差分析中如何进行交互作用的检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>协方差分析前必须进行交互作用的检验，为的是满足协方差分析的平行性假设，存在交互作用就无法进行协方差分析了。下面是具体的过程：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>打开数据，在菜单栏上点击analyse–GML–univariate，打开协方差的对话框</li>
+</ul>
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/d31b0ef41bd5ad6e9d14c72981cb39dbb7fd3c07.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<ul>
+<li>在打开的这个对话框中，我们要将因变量、固定因素、斜变量放入各自的框中，点击model按钮，设置模型</li>
+</ul>
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/e824b899a9014c08e9518a660a7b02087af4f48f.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/d439b6003af33a872fcea2d9c65c10385243b556.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<ul>
+<li>在这，需要将两个自变量和他们的交互项放入到模型框中，点击continue按钮</li>
+</ul>
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/f636afc379310a55d0bc7c37b74543a98326105c.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<ul>
+<li>回到主对话框，点击ok按钮开始处理数据，等待几分钟才能出现图，因为绘图需要一些时间</li>
+</ul>
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/91529822720e0cf37e00ec380a46f21fbf09aa7a.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<ul>
+<li>我们看到这两个变量的交互作用并不显著，这说明协方差分析是可行的</li>
+</ul>
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/4ec2d5628535e5dd16df071c76c6a7efcf1b6206.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/03/15/spss聚类分析如何对分类结果进行检验/">
+                spss聚类分析如何对分类结果进行检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>聚类分析的结果都知道，就是获得几个类别，那么我们怎么知道这些类别是合理的呢？这里提供一个方法，就是利用means方法，检验各个类别在所有变量上的差异，如果差异显著，我们就可以认为分类结果是可靠的。<br>方法/步骤</p>
+<ul>
+<li>假设我们现在已经得到了聚类的结果，所有的case都已经分类了，我们看到在数据窗口已经形成了若干个新的变量，显示了case的分类结果，如图所示，这里显示了三个聚类的结果，分别是把数据分为3、4、5类的结果</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/f7246b600c338744ad481ea9510fd9f9d62aa051.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/b7003af33a87e9506ff8c2b910385343faf2b473.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>在菜单栏上执行：analyse–compare means–means，打开平均数对话框</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/6d81800a19d8bc3e18e6371f828ba61ea9d3457c.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>将指标变量都放入因变量框中，然后将分组变量（聚类分析得到的变量）放入因变量中</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/b17eca8065380cd7f4db9338a144ad3458828119.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>点击ok按钮，开始运行数据，并显示结果</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/5ab5c9ea15ce36d380dbb2e53af33a87e850b103.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>我们会看到三种分类结果各自的平均数，下面的三个表格分别是将case分为5、4、3类的结果，当然这种方法只能计算出各组平均数，如何检验平均数的差异就要用到下面的方法</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/902397dda144ad3431eab752d0a20cf430ad8589.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/622762d0f703918f89c40d1f513d269758eec4c9.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/d53f8794a4c27d1e1f510b111bd5ad6edcc438eb.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>在菜单栏上执行：analyse–compare means–one way anova</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/d01373f082025aaf4f5a4e1efbedab64024f1afe.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>将指标变量放到因变量列表，将分组变量放入factor中，然后点击ok，开始处理数据</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/b17eca8065380cd7f5a69238a144ad34588281ae.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>我们看到下面的这个表格就是对平均数的差异的检验了，看sig这一列，除了一个指标，其他指标都达到了显著的水平，这说明这种分类还是比较有效的。</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/503d269759ee3d6d7a57b71e43166d224e4ade55.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -352,7 +849,7 @@
                 <a class="" href="/page/14/">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </a>
-                <a class="disabled" href="/">
+                <a class="" href="/page/16/">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </a>
             </div>

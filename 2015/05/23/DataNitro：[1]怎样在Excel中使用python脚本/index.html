@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataNitro：[1]怎样在Excel中使用python脚本"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>DataNitro：[1]怎样在Excel中使用python脚本 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/">
+                DataNitro：[1]怎样在Excel中使用python脚本
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>怎么在Excel中运行python脚本？这个问题由来已久，很多pythoner都希望直接用python控制Excel，但是只能从外部调用，有没有一个VBA的东西可以直接在Excel中运行呢？答案是有，DataNitro就是这么一个东西，看看下面Excel中的界面，他就是了，可以直接点击‘run’来运行一个Python脚本。下面我们来看看它是如何安装与配置的。</p>
+<ul>
+<li>先安装python2.7，其他版本不知道行不行，但是这个肯定行，然后配置环境变量，保证python在该环境中，打开开始菜单，找到计算机，然后右键单击它，选择【属性】</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/00a82701213fb80e416877e135d12f2eb938940f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>找到高级系统设置</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/4e83cb628535e5dda375b3e975c6a7efce1b626f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>找到环境变量，点击该按钮，打开环境变量设置窗口</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/ae10eddeb48f8c54db6ad31939292df5e0fe7f0f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>找到Path系统变量，然后点击【编辑】</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/3b6833f5e0fe9925e9557f6637a85edf8db1716f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>在这里，确保python的安装目录在，没有的话，添加进去</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/5d212aa85edf8db191976a520a23dd54564e740f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>下面就可以安装该插件了，去官网下载一个；或者百度一下，各大下载网站都有</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/8cf0d51349540923803775489158d109b3de496e.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>双击即可安装，安装过程就是一路点击’下一步，不过有一步需要注意</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/b13fd48065380cd7b447b4dba244ad345982816f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/c87c6ecf3bc79f3d85bff206b9a1cd11728b296e.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/78701455b319ebc40f2660af8126cffc1e17166e.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/29790130e924b89971826f0e6d061d950a7bf60f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>在这里，不要勾选python，如果通过这种方式安装python，你原先安装的python就无法使用了</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/eab9044c510fd9f9ddae435f262dd42a2834a40f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>最后安装完成，打开Excel就可以看到datanitro了</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/969cbf44ad34598298d3f3a40ff431adcbef846f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/excel/">#excel</a> <a href="/tags/python/">#python</a> <a href="/tags/datanitro/">#datanitro</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

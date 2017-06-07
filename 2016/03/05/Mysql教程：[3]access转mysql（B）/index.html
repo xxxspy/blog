@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Mysql教程：[3]access转mysql（B）"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Mysql教程：[3]access转mysql（B） - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/03/05/Mysql教程：[3]access转mysql（B）/">
+                Mysql教程：[3]access转mysql（B）
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>软件access2mysql下载： <a href="http://jingyan.baidu.com/article/4d58d541c993ab9dd5e9c010.html" target="_blank" rel="external">http://jingyan.baidu.com/article/4d58d541c993ab9dd5e9c010.html</a></p>
+<ul>
+<li>首先，我们需要在mysql中创建一个数据库来保存我们即将要导入的access中的数据和表。从开始菜单进入mysql</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/6c63514a20a446230a4a88289a22720e0df3d7bc.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>输入命令如图所示，创建一个表：liangbiao</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/32bb9c8ba61ea8d38756594e950a304e241f58c0.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>接着我们打开access2mysql软件，然后点击source按钮</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/38403f3fb80e7bec12f12fab2d2eb9389b506b15.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>设置数据源为access，如图所示</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/7787b9efce1b9d16a8ecb62bf1deb48f8c546415.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>输入该数据库的密码，如果没有，可以空着</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/1e71f724b899a901a808777c1f950a7b0208f578.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>通过浏览按钮，找到你要转的access文件</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/8cf0d51349540923b5424f349058d109b3de4915.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>点击next按钮</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/948bcfc8a786c917fd287e73cb3d70cf3bc75715.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>设置数据库为mysql，填写密码</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/b25d9901a18b87d6fa848655050828381e30fd73.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>点击test connection测试链接是否成功</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/95afee1f3a292df5bf88815fbe315c6035a873f5.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/7e7f7909c93d70cfbc8e8747fadcd100bba12bc0.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>输入我们刚才在mysql中建立的那个数据库名称liangbiao。点击next</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/d7c9ca3f8794a4c2e457ca610cf41bd5ac6e39c0.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>这个界面显示了access中所有的表，你可以选择自己需要的表，不需要的可以不转，这样可以提高速度</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/966aca0735fae6cdd0c0862b0db30f2443a70fc0.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>点击提交按钮，开始转换</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/c87c6ecf3bc79f3d71aac97ab8a1cd11738b29f5.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>来到mysql，在这里，我们先切换到liangbiao这个数据库，使用use命令</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/9304c888d43f87943cb46564d01b0ef41ad53af5.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<ul>
+<li>使用show命令，看一下表是不是都已经存在了。说明都转成功了。</li>
+</ul>
+<img src="/2016/03/05/Mysql教程：[3]access转mysql（B）/a583631ed21b0ef487a3b514dfc451da80cb3ef5.jpg" alt="Mysql教程：[3]access转mysql（B）" title="Mysql教程：[3]access转mysql（B）">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/mysql/">#mysql</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

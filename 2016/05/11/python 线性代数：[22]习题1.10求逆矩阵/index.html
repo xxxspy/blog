@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="python 线性代数：[22]习题1.10求逆矩阵"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>python 线性代数：[22]习题1.10求逆矩阵 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/05/11/python 线性代数：[22]习题1.10求逆矩阵/">
+                python 线性代数：[22]习题1.10求逆矩阵
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>接着以前的文章，我们继续学习用Python解线性代数的问题。今天我们要练习一下《线性代数.同济大学出版.第一章习题10》,演示一下如何求矩阵的逆矩阵和验证结果是否正确。</p>
+<ul>
+<li>这是今天我们要做的习题：只做前三题</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/0b14ad19ebc4b745eef1ac06cbfc1e178a82157d.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<ul>
+<li>将这三个矩阵录入到excel当中</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/8bc3a7014a90f603c6d587573d12b31bb051ed7e.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<ul>
+<li>开始写代码，先引入这两个库</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/8474fbdde71190ef4ce989cfca1b9d16fdfa6054.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<ul>
+<li>先来计算第一个矩阵的逆矩阵，用np.linalg.inv来计算arr矩阵的逆矩阵，如果你看不太懂代码，应该去翻看我前两篇文章，里面讲得很详细<br>这是输出的结果：</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/3b6833f5e0fe9925f51e724030a85edf8db17154.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/30ecd5ef76094b3688b401fda7cc7cd98d109db8.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<ul>
+<li><p>现在计算第第二个矩阵，我们发现这个矩阵是带有符号的，所以我们用sympy这个库中的Matrix对象来进行计算。我们可以使用Matrix.inv来计算逆矩阵，默认情况下，它使用高斯消去法，如果传入参数LU，它</p>
+</li>
+<li><p>这是输出的两个矩阵：</p>
+</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/d048adde9c82d158949042a1840a19d8bc3e4254.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/ae8267310a55b31941a3986547a98226cffc170c.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<ul>
+<li>最后一题，和第一题一样，都是数字，但是现在我想验证一下计算结果，让两个矩阵点乘，如果结果是一个单位矩阵，那么久可以证明两个矩阵互为逆矩阵<br>输出结果为：</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/8b527d2762d0f7034cd78ecc0cfa513d2697c57e.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/29752a9b033b5bb5ca4e24ee32d3d539b700bcc1.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/python/">#python</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

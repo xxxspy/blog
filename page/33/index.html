@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/23/pandas教程：[17]字符串提取数据/">
+                pandas教程：[17]字符串提取数据
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>很多时候数据都是以字符串的形式保存的，比如多选题的答案，很多人都是用‘ABCD’这种形式保存数据，那么我们怎样将这样的数据提取出来，转换成可以统计的数据呢？pandas的extract可以做到这些。</p>
+<ul>
+<li>先来创建一个数据序列<br>查看一下数据内容</li>
+</ul>
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/9a1151c2d56285351b988f2593ef76c6a7ef637f.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/4e83cb628535e5dd1865f8db75c6a7efce1b622e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<ul>
+<li>使用extract方法提取数字：它的第一个参数是正则表达式，括号表示要提取的部分<br>输出内容为：（注意无法匹配的内容用NaN表示）</li>
+</ul>
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/e49cf91190ef76c6a59aa62f9e16fdfaaf51672e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/91ae68c6a7efce1b996395ceac51f3deb48f652e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<ul>
+<li>假如我们要提取多个数据，可以使用多个括号<br>输出内容为：</li>
+</ul>
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/9864a2315c6034a84d99e585c81349540923767f.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/f29faa8f8c5494eefb6a521d2ef5e0fe99257e2e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<ul>
+<li>你要灵活使用问号，它表示可有可无，下面的方式可以匹配字符“c”<br>输出内容为：</li>
+</ul>
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/95afee1f3a292df5ee8bf111bf315c6034a8732e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/9864a2315c6034a84daae585c81349540923762e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<ul>
+<li>如果我们想要让输出的结果包含变量名（列名），我们可以使用下面的写法：<br>输出结果为：</li>
+</ul>
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/9319cf09b3de9c82cf1ea48b6f81800a19d8437f.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/814b07d8bc3eb13516bceabfa51ea8d3fd1f447f.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/19/pandas教程：[27]散点图和抖动图/">
+                pandas教程：[27]散点图和抖动图
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>拿到一个数据我们首先想到的是绘制散点图查看数据的基本分布情况，那么在Python.pandas中，如何绘制散点图呢？散点图的缺陷是什么，为什么要绘制抖动图呢？</p>
+<ul>
+<li>先引入相应的模块</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/b25d9901a18b87d6333d7e6f040828381f30fd00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>读取数据到数据框df<br>打印出前5行数据，可以看到有两列数据，分别是 孩子的身高和父母的身高</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/1e71f724b899a901504a8e461e950a7b0208f500.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/3790312eb9389b50ccbb35228635e5dde7116e3f.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>先绘制一个散点图，x轴为孩子的身高，y轴为父母的身高，将绘制得到的图片保存在D盘下的plot.png文件</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/969cbf44ad345982dfce30e20ff431adcbef843f.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>我们可以看到得到的图片是酱紫的，由于数据点重合在了一起，所以我们看到的散点图很规整，但却隐藏了规律，于是我们想到用到抖动的方法，绘制抖动图</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/08b68e529822720e32b1378a78cb0a46f21fab00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>我们看可以实现抖动的函数：所谓的抖动就是让数据点发生微小的位移，也就是略微改变数据的值，使得数据点不能完全重合，抖动距离的大小用下面函数中的factor参数来决定。</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/d1e312f431adcbef0470ab76afaf2edda3cc9f3f.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>利用上面的函数对df进行处理</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/f392492c11dfa9eca251836761d0f703918fc100.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>我们看得到的数据df2是酱紫的：</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/27d647ee3d6d55fb86b9a3566e224f4a20a4dd00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>现在接着绘制一个散点图，生成的就是抖动图了。alpha参数指的是数据点的透明度</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/6391e903918fa0ec26b8b17d259759ee3d6ddb00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>从这个图中我们可以清楚的看到，颜色比较深、数据比较多的点和颜色比较浅、数据比较少的点的位置。</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/61183b2dd42a283466d9e37b58b5c9ea15cebf00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/">
+                SPSS实例：[6]vba控制spss处理数据
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <pre><code>使用vba来控制spss处理数据，使得我们可以批量进行spss操作，大大加快我们的工作速度。比如，前两天有网友问我如何进行一万次回归分析，我直接写了一段vba代码，很快就能处理完，并整理成分析报告。这就是vba与spss合作所带来的效果，因为篇幅有限，下面只给大家概述一下如何在vba中调用spss对象，并进行数据处理，想要了解更详细的教程，希望您持续关注我写的教程。转载请注明出处（作者百度ID为：qq675495787）
+</code></pre><ul>
+<li>概述spss对象：spss对象是控制spss程序的对象集合。spss对象的指令变换点是ISpssApp对象，它是所有对象的容器，内含所有对象。下面的树形图介绍了spss对象所包含的属性和方法，这些属性和方法会在以后的教程中跟大家介绍。</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/9f1011b30f2442a74f8bfa94d343ad4bd113023e.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<ul>
+<li><p>引用spss类库：如果你想要写spss脚本，你必然要用到spss对象。在spss脚本中，你可以使用objSPSSApp为全局变量来调用spss对象，在此之前要确保这个对象已经被创建好了（实际上，创建了spss对象就使spss程序开始运行了，只不过你看不到程序界面，说实话，你什么都看不到）。</p>
+</li>
+<li><p>换一种说法，如果你想要在其他编程语言中使用spss，你需要首先创建ISpssApp对象。例如，在微软的VB编辑器中（使用vba），首先你必须在VBA工程中引用spss对象类库（也就是：spsstype library，spss pivot table<br>type library和spss RTF type library）。操作方法是，在vbe中，点击工具–引用；找到这几个类库，然后勾选他们，点击确定按钮。</p>
+</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/0db52fadcbef76096a269fae2cdda3cc7cd99e96.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/4a77b2af2edda3cc59c9be1103e93901213f9296.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<ul>
+<li><p>声明spss对象变量：引用了spss类库以后，我们可以在vba中声明spss对象变量了。代码如下：</p>
+</li>
+<li><p>Dimspss as object</p>
+</li>
+<li><p>Set<br>spss=createobject(“spss.application16”)</p>
+</li>
+<li><p>实际上我们更建议使用对象类来声明变量，所以上面的语句应当写成：</p>
+</li>
+<li><p>Dimspss as ispssapp</p>
+</li>
+<li><p>Set spss=new<br>spsswinlib.application16</p>
+</li>
+<li><p>这样的写法可以加快你的代码编写速度。</p>
+</li>
+<li><p>设置spss程序可见性：以上两个小代码可以启动spss程序，当你不需要看到这个程序的时候，你应该让其保持隐身，在后台运行，你看不到spss程序。如果你想要看到spss程序，你应该设置spss对象的可见性属性为true。如下图所示，我们打开一个数据文件“卡方检验”，然后设置数据文件的可见性为1，这样就可以看到spss程序了，否则是看不到的，但是即便看不到他们也是运行中的。</p>
+</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/35da1d3b5bb5c9ea117f05d2d739b6003af3b337.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<ul>
+<li><p>小试牛刀：我们试试如何读取spss的版本号，输入代码</p>
+</li>
+<li><p>a = spss.GetSPSSVersion</p>
+</li>
+<li><p>MsgBox a</p>
+</li>
+<li><p>这段代码就是用变量a存放spss的版本号，然后用消息框显示a的数值。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/19/Statsmodels：[1]模块简介/">
+                Statsmodels：[1]模块简介
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>Statsmodels是Python的统计建模和计量经济学工具包，包括一些描述统计、统计模型估计和推断。这篇文章是Statsmodels系列文章的第一篇，主要介绍一下Statsmodels能干什么，以方便一些初学者选择是否需要学习该模块。之后我会发布一些列入门教程，一是作为笔记自己查看，而是作为教程可供学者快速入门，下面我们来看看Statsmodels有啥特性吧。</p>
+<ul>
+<li>Liner regression models：线性回归模型</li>
+</ul>
+<img src="/2015/04/19/Statsmodels：[1]模块简介/b74124f33a87e950c0238e6813385343fbf2b4bb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
+<ul>
+<li>Gneralized linear models：一般线型模型，主要用于各种设计的方差分析</li>
+</ul>
+<img src="/2015/04/19/Statsmodels：[1]模块简介/d0526df082025aaf232303cff8edab64034f1a65.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
+<ul>
+<li>robust linear models:</li>
+</ul>
+<img src="/2015/04/19/Statsmodels：[1]模块简介/346bd85c1038534302fbfa259013b07eca8088bb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
+<ul>
+<li>Discrete choice models：离散选择模型，logit模型属于离散选择模型，主要用于微观计量经济学范畴</li>
+</ul>
+<img src="/2015/04/19/Statsmodels：[1]模块简介/ae8267310a55b31979e8ff7140a98226cffc1765.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
+<ul>
+<li>ANOVA：方差分析模型</li>
+</ul>
+<img src="/2015/04/19/Statsmodels：[1]模块简介/b258f5c4b74543a9170a87c81d178a82b9011465.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
+<ul>
+<li>Time series analysis：时间序列分析</li>
+</ul>
+<img src="/2015/04/19/Statsmodels：[1]模块简介/fab3ac119313b07e37892d0c0fd7912397dd8cbb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
+<ul>
+<li>Nonparametric estimators：非参检验</li>
+</ul>
+<img src="/2015/04/19/Statsmodels：[1]模块简介/b8405490f603738d345b7126b01bb051f819ec66.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
+<ul>
+<li>a wide range of statistical tests:各种统计检验</li>
+</ul>
+<img src="/2015/04/19/Statsmodels：[1]模块简介/969cbf44ad345982b7bd98960ff431adcbef84bb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
+<ul>
+<li>以各种方式输出表格：text，latex，html；读取各种格式的数据</li>
+</ul>
+<img src="/2015/04/19/Statsmodels：[1]模块简介/ac754782b2b7d0a20bfe7999c8ef76094b369abb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
+<ul>
+<li>绘图功能</li>
+</ul>
+<img src="/2015/04/19/Statsmodels：[1]模块简介/d1e312f431adcbef7c030302afaf2edda3cc9fbb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
+<ul>
+<li><p>extensive unit tests to ensure correctness of results:大量的整体检验以保证结果的正确性</p>
+</li>
+<li><p>活跃的开发团体正在开发大量可用的工具</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/19/Excel2013：[59]匹配不同工作表记录/">
+                Excel2013：[59]匹配不同工作表记录
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如何匹配不同工作表中的记录？假如有多个工作表，第一个工作表作为基本表，用于和其他几个表匹配记录，假如一条记录同时出现在了基本表和其他表中，我们就在基本表中标识出来。怎么实现这个过程？</p>
+<ul>
+<li>首先将Excel文件存为可以执行vba的格式，xlsm格式</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/caae68094b36acaf906a34eb7fd98d1000e99ce4.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>我们利用SN号作为一条记录是否重复的指标，假如两条记录SN号相同，则认为两条记录匹配</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/d002b34bd11373f0b4cccd88a70f4bfbfaed04f2.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>打开开发工具下的visual basic，或者可以按下快捷键alt+F11</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/7d98931001e93901e5882f2978ec54e737d196e4.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>打开vb界面，我们双击 thisworkbook，大概一个代码界面</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/a54e55fbfbedab643f81efd7f436afc378311ef2.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>复制以下代码到代码界面</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/d019d2bf6c81800aeb562419b23533fa828b4733.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>将鼠标光标移动到代码的任意位置，按下快捷键F5即可执行代码，执行结果可见：在第一个工作表的最后一列标志出了某条记录出现在哪一个工作表中，如果所有工作表都没有匹配，则输出无匹配。</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/f15e24292df5e0fe79922b165f6034a85fdf72e4.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>注意基本工作表总是位于最前面。也是Excel认为的第一个工作表，代码总是用第一个表中的数据与其他表中的数据去匹配，匹配成功则输出工作表的名称。</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/148f28d3d539b600985ba2a0ea50352ac75cb7d5.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li><p>本教程用到的代码：复制可用。</p>
+</li>
+<li><p>Sub pipei()</p>
+</li>
+<li><p>Set d = CreateObject(“scripting.dictionary”)</p>
+</li>
+<li><p>For i = 2 To Worksheets.Count</p>
+</li>
+<li><p>For j = 1 To Sheets(i).Cells(1, 300).End(xlToLeft).Column</p>
+</li>
+<li><p>If Sheets(i).Cells(1, j).Text = “SN号” Then</p>
+</li>
+<li><p>For r = 2 To Sheets(i).Cells(65536, j).End(xlUp).Row</p>
+</li>
+<li><p>If Not (Sheets(i).Cells(r, j).Value = 0 Or Sheets(i).Cells(r, j).Text = “”) Then</p>
+</li>
+<li><p>d.Add Sheets(i).Cells(r, j).Text, Sheets(i).Name</p>
+</li>
+<li><p>End If</p>
+</li>
+<li><p>Next r</p>
+</li>
+<li><p>End If</p>
+</li>
+<li><p>Next j</p>
+</li>
+<li><p>Next i</p>
+</li>
+<li><p>Sheets(1).Activate</p>
+</li>
+<li><p>max_col = Cells(1, 300).End(xlToLeft).Column</p>
+</li>
+<li><p>For c = 1 To max_col</p>
+</li>
+<li><p>If Cells(1, c).Text = “SN号” Then</p>
+</li>
+<li><p>For r = 2 To Cells(65536, c).End(xlUp).Row</p>
+</li>
+<li><p>If d.exists(Cells(r, c).Text) Then</p>
+</li>
+<li><p>Cells(r, max_col + 1) = d.Item(Cells(r, c).Text)</p>
+</li>
+<li><p>Else</p>
+</li>
+<li><p>Cells(r, max_col + 1) = “无匹配”</p>
+</li>
+<li><p>End If</p>
+</li>
+<li><p>Next r</p>
+</li>
+<li><p>End If</p>
+</li>
+<li><p>Next c</p>
+</li>
+<li><p>MsgBox “ok”</p>
+</li>
+<li><p>End Sub</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/">
+                SPSS实例：[28]卡方检验百分比与理论值差异
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们有一个研究检验某种疗法的有效性，统计了实施前后的人数，我们想要比较实施前和实施后人数是否有差异，怎么比较？有两种数据结构，得使用不同的方法，下面将要介绍的是这种数据没有原始数据，只有计数数据，如下图。变量9表示人数，实施前后表示该方法实施前用0表示，实施后用1表示。另外一种数据结构是你有原始数据，而不是计数数据，你可以参考我以前的文章：<a href="http://jingyan.baidu.com/article/d8072ac4587f6dec95cefd9a.html" target="_blank" rel="external">http://jingyan.baidu.com/article/d8072ac4587f6dec95cefd9a.html</a></p>
+<ul>
+<li>首先要给数据加权，我们在data菜单下，选择case加权</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/c71d0e385343fbf213af316fb27eca8064388fb8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>将变量9放入频数变量框，点击【ok】，完成加权（如果有原始数据，则不需要加权）</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/29790130e924b899f378ee746c061d950b7bf6f3.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>接着我们来做卡方检验，在菜单栏上执行：分析–非参检验–遗留选项–卡方检验</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/906289dda144ad34f23c10cbd2a20cf430ad85b8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>将实施前后变量放入检验变量框。</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/0db52fadcbef7609f9880ed32cdda3cc7dd99eb8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>这里有一个问题，如果你的数据有一个单元格频数小于5，你得使用精确卡方检验，需要点击【exact】进行设置</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/f99dcf00baa1cd117002e46cbb12c8fcc2ce2d82.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>勾选这个选项，点击继续</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/c9bdddcec3fdfc039bcc75f4d63f8794a5c22682.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>接着设置这里，我们可以检验不同组人数是否相同，使用【所有分类相同】；</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/27d647ee3d6d55fbc02fe06a6f224f4a21a4dd56.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>也可以自己设定频数，比如我设定为2和6，当然今天我们只讲上面的【所有分类相同】的情况。</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/1cd4147b02087bf46a59c1a5f0d3572c10dfcf82.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>这里就是检验结果了，sig值大于0.05，结果不显著，说明两组之间没有差异。</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/30ecd5ef76094b361f118ca1a1cc7cd98c109db8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>如果你用的是精确检验就会看大有一个精确sig值</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/91138622720e0cf3abe7dfb70846f21fbe09aa2f.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/19/python 线性代数：[12]求协方差矩阵/">
+                python 线性代数：[12]求协方差矩阵
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>先搞懂协方差矩阵是什么东西：这篇文章有助于你的理解：<br>搞懂协方差以后，我们以一个通俗易懂的例子来说明怎样在python中求协方差矩阵，已经求它是为了干嘛。</p>
+<ul>
+<li>假如我们现在想要知道身高和体重的关系，我们测量了三个人的身高和体重，身高用s表示，体重用t表示：</li>
+</ul>
+<img src="/2015/04/19/python%20线性代数：[12]求协方差矩阵/d66b7e59252dd42a8b52bb5c013b5bb5c8eab8ab.jpg" alt="python 线性代数：[12]求协方差矩阵" title="python 线性代数：[12]求协方差矩阵">
+<ul>
+<li>两个向量构成一个向量组：y</li>
+</ul>
+<img src="/2015/04/19/python%20线性代数：[12]求协方差矩阵/2f3295d4b31c8701c5e40811257f9e2f0608ffbc.jpg" alt="python 线性代数：[12]求协方差矩阵" title="python 线性代数：[12]求协方差矩阵">
+<ul>
+<li>使用numpy.cov方法来求协方差矩阵：</li>
+</ul>
+<img src="/2015/04/19/python%20线性代数：[12]求协方差矩阵/6c63514a20a4462385461f959a22720e0df3d77e.jpg" alt="python 线性代数：[12]求协方差矩阵" title="python 线性代数：[12]求协方差矩阵">
+<ul>
+<li>怎样读懂协方差矩阵呢？400是s和s的协方差（也就是方差）；右上角200是s与t的协方差；100是t与t的协方差（也就是方差）；可见协方差矩阵是一个对称阵</li>
+</ul>
+<img src="/2015/04/19/python%20线性代数：[12]求协方差矩阵/7e7f7909c93d70cf34900ffafadcd100bba12b9b.jpg" alt="python 线性代数：[12]求协方差矩阵" title="python 线性代数：[12]求协方差矩阵">
+<ul>
+<li>假如我们再增加一个变量，我们还知道这些人的性别，于是性别就是：</li>
+</ul>
+<img src="/2015/04/19/python%20线性代数：[12]求协方差矩阵/21e5582309f790521595e2c90ef3d7ca7acbd504.jpg" alt="python 线性代数：[12]求协方差矩阵" title="python 线性代数：[12]求协方差矩阵">
+<ul>
+<li>结果也是这样的：</li>
+</ul>
+<img src="/2015/04/19/python%20线性代数：[12]求协方差矩阵/38403f3fb80e7bec9b1aa6162d2eb93899506bc2.jpg" alt="python 线性代数：[12]求协方差矩阵" title="python 线性代数：[12]求协方差矩阵">
+<ul>
+<li><p>这是今天用到的所有代码：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>import numpy</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>s=[100,120,140]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>t=[50,60,70]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>y=s+t</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>y</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>[100, 120, 140, 50, 60, 70]</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>y=[s,t]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>y</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>[[100, 120, 140], [50, 60, 70]]</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a=numpy.cov(y)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 400.,  200.],</p>
+</li>
+<li><p>[ 200.,  100.]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x=[1,0,1]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>y=[s,t,x]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a=numpy.cov(y)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[  4.00000000e+02,   2.00000000e+02,   0.00000000e+00],</p>
+</li>
+<li><p>[  2.00000000e+02,   1.00000000e+02,   0.00000000e+00],</p>
+</li>
+<li><p>[  0.00000000e+00,   0.00000000e+00,   3.33333333e-01]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/17/wxpython教程：[1]入门/">
+                wxpython教程：[1]入门
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们今天来学习Python的一个界面开发包wxpython，我最近要做一些Python统计分析的软件界面，所以用到了wxpython，很久以前用过这个包，现在跟大家一起回顾一下。这篇文章是入门，讲的比较简单，以后逐渐增加新的知识。<br>工具/原料</p>
+<p>方法/步骤</p>
+<ul>
+<li>先来看一下如下代码，这是一个简单的界面，我们接下来逐句解释</li>
+</ul>
+<img src="/2015/04/17/wxpython教程：[1]入门/8326cffc1e178a82e60ceacff503738da977e8a9.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<ul>
+<li>首先是两行注释，用#号打头表示注释，不执行。而coding表示编码方式，开始透明coding表示该文件使用utf8编码，因为Python文件中有中文，必须声明一个支持中文的编码</li>
+</ul>
+<img src="/2015/04/17/wxpython教程：[1]入门/203fb80e7bec54e7ebf08f71ba389b504fc26a45.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<ul>
+<li>接下来实例化一个app，任何一个应用程序都是一个app</li>
+</ul>
+<img src="/2015/04/17/wxpython教程：[1]入门/3801213fb80e7bec88c6968e2c2eb9389b506b45.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<img src="/2015/04/17/wxpython教程：[1]入门/7aec54e736d12f2e66193b0f4cc2d56285356845.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<ul>
+<li><p>这两句表示创建了一个Frame，Frame就是框架，是一个容器，内部可以包含多个容器或者其他组件，如果我们的Frame的第一个参数使用None表示它是顶层的容器，它包含了应用程序的所有组件。‘入门’表示Frame的标题，一会你就看到标题在哪里。最后，任何Frame窗口想要显示，必须用show(),但是你现在还看不到窗口，因为程序没有运行呢</p>
+</li>
+<li><p>frame=wx.Frame(None,-1,u’入门’)</p>
+</li>
+<li><p>frame.Show()</p>
+</li>
+</ul>
+<img src="/2015/04/17/wxpython教程：[1]入门/5882b2b7d0a20cf4ffed6bb075094b36acaf9964.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<ul>
+<li>实际上，我们是用app.mainLoop来启动程序的</li>
+</ul>
+<img src="/2015/04/17/wxpython教程：[1]入门/37d12f2eb9389b50aee3753d8635e5dde7116e45.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<ul>
+<li>这样我们就看到了一个最简单的界面了。</li>
+</ul>
+<img src="/2015/04/17/wxpython教程：[1]入门/d4628535e5dde71176ced699a4efce1b9d166145.jpg" alt="wxpython教程：[1]入门" title="wxpython教程：[1]入门">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/17/Django教程：[7]网站根目录的设置/">
+                Django教程：[7]网站根目录的设置
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>现在我们开启开发服务器，然后访问一下网站根目录，也就是127.0.0.1:8000，你会发现出现了404错误提示，这是因为Django依赖于指定给该路径的模式来返回内容，现在我们并没有给改路径指定返回的内容，我们怎么设置呢？</p>
+<ul>
+<li>打开你的站点所在文件夹，找到view.py，使用IDLE进行编辑；根据我前面的文章可以知道，view.py是我自己创建的，不是startproject的时候自动创建的，所以你可能创建了不同名称的文件。</li>
+</ul>
+<img src="/2015/04/17/Django教程：[7]网站根目录的设置/4a77b2af2edda3cca0d8f15a03e93901213f9249.jpg" alt="Django教程：[7]网站根目录的设置" title="Django教程：[7]网站根目录的设置">
+<ul>
+<li>在该文件中添加一个函数homepage，它只返回一句话“这是首页”</li>
+</ul>
+<img src="/2015/04/17/Django教程：[7]网站根目录的设置/d7c9ca3f8794a4c2482fae510cf41bd5ad6e3978.jpg" alt="Django教程：[7]网站根目录的设置" title="Django教程：[7]网站根目录的设置">
+<ul>
+<li>接着哦我们打开urls.py</li>
+</ul>
+<img src="/2015/04/17/Django教程：[7]网站根目录的设置/30ecd5ef76094b3675ae5297a1cc7cd98d109d49.jpg" alt="Django教程：[7]网站根目录的设置" title="Django教程：[7]网站根目录的设置">
+<ul>
+<li>添加两句话，第一句引用homepage（刚才添加的函数）；第二句将hongpage与url模式相连接</li>
+</ul>
+<img src="/2015/04/17/Django教程：[7]网站根目录的设置/d1571724ab18972b903649b0e4cd7b899e510a78.jpg" alt="Django教程：[7]网站根目录的设置" title="Django教程：[7]网站根目录的设置">
+<ul>
+<li>这样，我们再访问网站根目录的时候就会得到网站首页</li>
+</ul>
+<img src="/2015/04/17/Django教程：[7]网站根目录的设置/966aca0735fae6cd3cb8e21b0db30f2442a70f78.jpg" alt="Django教程：[7]网站根目录的设置" title="Django教程：[7]网站根目录的设置">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/15/Python统计分析：[8]单因素卡方检验/">
+                Python统计分析：[8]单因素卡方检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>卡方检验主要用于检验计数数据是否符合某种分布，比如男女比率本应该是1:1，但实际采集的样本可能是1:2，那么1:1和1:2之间有没有差异，我们需要用卡方检验来比较。</p>
+<ul>
+<li>先引入相关模块</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/3c2c4bfbb2fb43164eaebc1823a4462308f7d3e4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>实例化ChiSqure1way对象</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/4e0b3ea4462309f7b8de6b70710e0cf3d6cad6e4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>运行卡方检验，如果我们只输入一个参数，表示我们要检验这一列数据分布是否均匀，也就是各组频数是否相等</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/834344afa40f4bfb253a5836004f78f0f63618af.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>基本检验结果首先是数据的描述</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/bf487563f6246b6038bf7416e8f81a4c500fa2e4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>接着是卡方检验结果，根据p值可知两组差异不显著</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/ae8267310a55b3190c13441740a98226cefc17af.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>统计量检验</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/504ec7f9d72a605919a127782b34349b023bbae4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>假如我们输入两个参数，可以指定各组频数的期望值</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/aa251d4f78f0f7364c148a630955b319eac413af.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>结果是这样的：</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/61183b2dd42a28340b17f06958b5c9ea14cebfe4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>对于结果，我们可以使用字典的方式读取个别值，比如卡方：</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/020e66f0f736afc39de6f907b019ebc4b64512af.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/35da1d3b5bb5c9ea5642c581d639b6003bf3b3e4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>对于其他值，我们可以参考下面的列表：</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/d0526df082025aaf7febbfa9f8edab64024f1abc.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/32/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/34/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -155,8 +155,283 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/10/03/SPSS实例：[24]卡方检验百分比是否相同/">
-                SPSS实例：[24]卡方检验百分比是否相同
+            <a href="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/">
+                SPSS实例：[17]进行sobel检验(小白教程)
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>通常我们在做中介效应的时候，遇到有一个系数没有达到显著性水平，我们需要进行sobel检验，但是sobel检验的公式非常麻烦，如果你按计算器就很麻烦了，更何况你还有很多中介效应去验证，所以今天我给大家分享一个Excel可以很快的计算。</p>
+<ul>
+<li>从下面的参考资料里下载一个Excel文件</li>
+</ul>
+<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/d478a8003af33a879120f002c45c10385343b51e.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<ul>
+<li>下载下来以后，打开Excel，你会看到一个这样的表格</li>
+</ul>
+<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/cdfe7281800a19d87b53741d31fa828ba61e4613.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<ul>
+<li>将你的三个模型的三线表粘贴过来</li>
+</ul>
+<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/c856613e6709c93da9a2feef9d3df8dcd1005413.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<ul>
+<li>我们在对应的位置写入对应的值，soble值会自动的计算出来，是否显著这一栏会告诉是否显著，如果显著说明中介效应显著</li>
+</ul>
+<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/bd7faf3533fa828b6d736dfbff1f4134970a5a13.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<ul>
+<li>跟大家分享一下各个单元格的公式，看下面的公示栏就知道了。</li>
+</ul>
+<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/bbe0d311728b47105b7f0dd4c1cec3fdfc032313.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/11/SPSS python教程：[7]读取透视表中的平均数/">
+                SPSS python教程：[7]读取透视表中的平均数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>由于经常有人问怎么将数据中心化，笨方法就是手工去算，但是我打算用点高级的东西，从描述性统计的输出的透视表中，读取平均数，然后再用变量的每一个值减去平均数。这篇文章介绍一下最关键的一个步骤，那就是从输出的描述性统计中读取平均数。</p>
+<ul>
+<li>先看一下所有的代码。然后我们再逐步解释</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/f677b1c379310a5540f30c74b54543a983261018.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>首先是BEGIN PROGRAM和END PROGRAM,这两者之间插入python代码，也就是说python代码必须在这两者之间才能正确执行，之前有讲过</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/245e8bcad1c8a7867b2d978e6509c93d71cf50e8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>装载spss和apssaux模块，spss模块很熟悉，但是spssaux模块是一个附加模块，在帮助文件中，没有关于它的，只能去自己搜索了。或者在python中使用help(spssaux)</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/f392492c11dfa9eca8f8849760d0f703908fc119.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>fpath中保存数据文件路径</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/6391e903918fa0ec2011b68d249759ee3c6ddb19.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>spss打开该数据文件，注意这里用到了一些syntax命令，这些都是基本的。如果你不会写syntax也无妨，你可以在spss中手动操作一下，得到描述性统计，在结果输出文档中，就能看到用到的syntax，你再将其粘贴过来就可以了。</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/b7bc4c66d01609247d227f9bd60735fae7cd34e8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>然后cmd中存有进行描述性统计的syntax命令</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/d5462bfae6cd7b89426be7030d2442a7d8330ee8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>spssaux.createxmloutput将执行cmd命令，然后将结果保存在xml工作空间中，可以设置visible为True来看到输出结果</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/476217f79052982245e5eb43d5ca7bcb0b46d419.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>读取透视表中的的某个以数值，注意观察参数，对照着透视表你就能理解了。</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/6a2112338744ebf85ea7b6bfdbf9d72a6159a719.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>最后将读取得到的平均数值打印出来，成功！</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/a54e55fbfbedab64ef759040f536afc378311ee8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>最近在进行spss的自动化处理数据，有兴趣的可以联系我。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/05/SPSS绘图教程：[1]教程简介/">
+                SPSS绘图教程：[1]教程简介
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这篇文章是spss绘图教程的第一篇，简单介绍一下该系列教程的主要内容。该系列教程没有啥难懂的东西，都是在数据分析工作中经常用到的一些绘图技巧和基本知识。写这个系列教程的初衷是因为我们的spss教科书中很少有绘图的教程，所以很多学生都在问我怎么绘图，我现在把我会的所有绘图知识都写下来，方便大家查阅，大家可以将这系列教程收藏起来，以便以后查阅。</p>
+<ul>
+<li>首先是数据的准备，绘图对数据的格式要求非常严格，所以在绘图前需要对数据进行整理。</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/e865a699a9014c083efcb31d087b02087af4f400.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>条形图的绘制以及修改。</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/32bb9c8ba61ea8d319c9efbc950a304e241f5864.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>折线图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/0862c354564e925807fb1d569e82d158cdbf4e78.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>区域图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/9dc3cf58ccbf6c815cf8b750be3eb13532fa4078.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>饼图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/b0742dfa828ba61e4b2153974334970a314e5978.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>散点图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/4075890a304e251f7c387f40a586c9177e3e5378.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>直方图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/86d5bac27d1ed21b0b23b55daf6eddc450da3f64.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>高低图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/ac2fc3c451da81cb320c18755066d01608243164.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>箱图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/389aa8fd5266d01606f30590952bd40734fa3564.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>双轴图的绘制以及修改（有两种图形）</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/cc506c8b4710b912320e6d46c1fdfc0393452278.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>图形元素的设置</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/48151723dd54564e46037e81b1de9c82d0584fe1.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>脚注题注等的设置</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/f7426d8da97739128a9b1fd9fa198618377ae28e.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/05/python 线性代数：[19]行列式求解/">
+                python 线性代数：[19]行列式求解
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>行列式是线性代数里最重要的概念之一，今天我们使用Python的numpy和sympy包计算几个三阶行列式。下面的计算过程用excel存放矩阵的数据，而用excel里面的datanitro插件来运行Python代码，所以你可能要熟悉一下datanitro这个插件，关于这个插件的全部教程，我都写在了这个系列里：<a href="http://jingyan.baidu.com/season/43508" target="_blank" rel="external">http://jingyan.baidu.com/season/43508</a></p>
+<ul>
+<li>熟悉了这个插件以后，我们看看我们要解决的这四个矩阵：这些练习题来自《线性代数，同济大学第五版第一张课后题》。</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/73ca5910b912c8fc4c2adbe7f8039245d78821fb.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>这接着我们将这些矩阵录入到excel当中。</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/f15e24292df5e0fec472a52b586034a85edf7276.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>接着我们把代码写到1.1.py文件中。</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/4abae5edab64034fc2b2ee2cabc379310a551d59.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>接着，我们在excel的datanitro插件中，引入1.1.py文件，然后run一下就可以看到计算结果：</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/c28fddfdfc03924559e0c8258394a4c27d1e2507.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li><p>以上是大概的流程，接下来具体讲解一下代码的意义。</p>
+</li>
+<li><p>引入需要的两个模块</p>
+</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/11794d43fbf2b211ba8ca964ce8065380cd78e3e.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li><p>先看看第一题，这是计算第一个矩阵的行列式：</p>
+</li>
+<li><p>a,CellRange是datanitro的内置对象，表示excel里面的一个单元格区域，通过它我们可以将这个区域内的值读取出来，存放到lst这个列表里，也就是Python中的list对象；接着用numpy模块的reshap方法，将list转换为3x3的矩阵，然后用刀了det方法计算行列式，最后结果为-4</p>
+</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/647912d7912397dd8e08b72e5d82b2b7d0a28763.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>第二题：红色字体都是注释，没有实际功能。跟第一题相比，第二题用字母代替了数字，所以，我们要用到Python的符号计算包sympy，我们可以看到E就是一个3x3的矩阵，但是需要将E转换为符号矩阵，用到了sp.Matrix，得到M，然后使用m的det方法计算得到行列式，结果是：</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/d56b3634349b033b4ce6d5f011ce36d3d539bd6a.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/d089b986c9177f3e181dd22774cf3bc79f3d56ab.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>第三题，与第二题类似，用到了sp.Matrix，但是我们还用到了sp.factor，这个方法可以将结果提取公因式，最后的计算结果为：</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/a6c7d7177f3e6709b76b6dd53fc79f3df8dc5575.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/b110e6198618367a153456f72a738bd4b31ce518.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>如果前三题你都搞懂了，第四题就简单了，没有新知识：</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/6a2112338744ebf816254c15ddf9d72a6059a700.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/03/SPSS python教程：[6]读取PivotTable行标签/">
+                SPSS python教程：[6]读取PivotTable行标签
             </a>
         </h1>
         <div class="post-info">
@@ -170,35 +445,48 @@
 
     
         <div class="content">
-            <p>今天我处理的数据是一个百分比数据（一看就知道是卡方检验啊！），一个题有三个选项，现在我想要知道被试选择这三个选项的概率是否相同？被试是不是偏爱选择某一个选项呢？这是一个很常见的检验百分比是否均等的问题，我们看看下面具体的教程吧。</p>
+            <p>spss输出的结果文档用到最多的就是数据透视表（pivot table），在spss中，数据透视表被分为三个部分：行标签列表、列标签列表、数据列表。你可能还不理解这些内容。我们从这篇开始介绍数据透视表的行标签，并用python读取行标签，然后输出。看看代码吧：</p>
 <ul>
-<li>首先，我们看看数据结构，先来看第二次选择的时候，有三个选项，被试是不是喜欢选择某一个或者某两个选项呢？用卡方来检验以下</li>
+<li>这是在spss结果文档中输出的一个数据透视表，我们要读取它的行标签</li>
 </ul>
-<img src="/2016/10/03/SPSS实例：[24]卡方检验百分比是否相同/3b6833f5e0fe99258b361e3736a85edf8db1715b.jpg" alt="SPSS实例：[24]卡方检验百分比是否相同" title="SPSS实例：[24]卡方检验百分比是否相同">
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/8b527d2762d0f7036208ba450afa513d2797c5b6.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
 <ul>
-<li>在菜单中依次打开：analyse-nonparametric texts-legacy dialogs-chisquare</li>
+<li>这就是行标签，但是它并不像我们看到的那么简单，我们试着读取行标签就知道了</li>
 </ul>
-<img src="/2016/10/03/SPSS实例：[24]卡方检验百分比是否相同/b8405490f603738d0d707b45b11bb051f819ec64.jpg" alt="SPSS实例：[24]卡方检验百分比是否相同" title="SPSS实例：[24]卡方检验百分比是否相同">
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6c63514a20a4462308668afb9a22720e0df3d7bf.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
 <ul>
-<li>将要检验的变量放入testvariablelist，点击添加按钮</li>
+<li>创建一个python脚本文件：outputTrim.py，下图中你可以看到该文件存放的目录</li>
 </ul>
-<img src="/2016/10/03/SPSS实例：[24]卡方检验百分比是否相同/c9d4cf43ad4bd113f8e8c05558afa40f4bfb0574.jpg" alt="SPSS实例：[24]卡方检验百分比是否相同" title="SPSS实例：[24]卡方检验百分比是否相同">
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/48151723dd54564efa5acaa0b1de9c82d1584f28.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
 <ul>
-<li>我们要检验的是这三个选项被选择的概率是否相同，虚无假设肯定就是三个选项概率相同，所以我们需要选择【all categories equal】</li>
+<li>接着先写入代码StartClient和stopclient，所有操作spss的代码都应该放在这两句之间。</li>
 </ul>
-<img src="/2016/10/03/SPSS实例：[24]卡方检验百分比是否相同/6c63514a20a44623d0f0d2059a22720e0cf3d764.jpg" alt="SPSS实例：[24]卡方检验百分比是否相同" title="SPSS实例：[24]卡方检验百分比是否相同">
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/dc15484e9258d109d807862bd358ccbf6d814d07.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
 <ul>
-<li>如果你不需要其他的检验，你可以点击ok按钮，这时候你就会看到卡方检验的结果了</li>
+<li>我们详细讲解一下代码的意义，先看这两句，假如我们只打开了一个结果文档，我们使用第一句代码可以获取该文档的句柄；第二句获取该文档下所有的输出项目，里面包含但不仅限于数据透视表，outputItems是一个列表</li>
 </ul>
-<img src="/2016/10/03/SPSS实例：[24]卡方检验百分比是否相同/30ecd5ef76094b36bfa76c8aa1cc7cd98d109d64.jpg" alt="SPSS实例：[24]卡方检验百分比是否相同" title="SPSS实例：[24]卡方检验百分比是否相同">
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/9864a2315c6034a83fae9618c91349540823769f.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
 <ul>
-<li>先看第一个表格，第一列是观察到的数字，第二列是期望数字，也就是虚无假设</li>
+<li>通过循环，我们可以找到名称为’Descriptive Statistics’的数据透视表。我们看下面的if语句，首先判断输出项是不是PIVOT，然后判断该输出项的标题为’Descriptive Statistics’的PIVOT，获取标题用的是GetDescription</li>
 </ul>
-<img src="/2016/10/03/SPSS实例：[24]卡方检验百分比是否相同/d56b3634349b033ba8ad8bbd17ce36d3d539bd75.jpg" alt="SPSS实例：[24]卡方检验百分比是否相同" title="SPSS实例：[24]卡方检验百分比是否相同">
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/263e802f07082838c19ff28dba99a9014d08f15e.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
 <ul>
-<li>第二个表格就是卡方检验的结果，卡方值为32，概率是0，所以拒绝虚无假设。</li>
+<li>这句代码是将找到的这个输出项转换为数据透视表，这样才能使用数据透视表所具有的类和方法</li>
 </ul>
-<img src="/2016/10/03/SPSS实例：[24]卡方检验百分比是否相同/9c57e3faaf51f3de9b87ce0396eef01f3a297964.jpg" alt="SPSS实例：[24]卡方检验百分比是否相同" title="SPSS实例：[24]卡方检验百分比是否相同">
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/814b07d8bc3eb13540169922a41ea8d3fc1f4412.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>这一句就是获取数据透视表的行标签</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/9304c888d43f879430a461b7d01b0ef41ad53a94.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>我们用这个循环来输出所有的行标签，看看输出结果是啥样的</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/35e940df8db1cb132a38158adf54564e93584b92.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>这就是输出结果，跟数据透视表对比一下，你就知道行标签到底代表着什么。</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6f4703950a7b02089dae167860d9f2d3562cc881.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6c63514a20a4462308668afb9a22720e0df3d7bf.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -214,13 +502,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/09/23/spss如何使用K-S进行正态性检验/">
-                spss如何使用K-S进行正态性检验
+            <a href="/2016/10/03/SPSS实例：[31]统计选项频数/">
+                SPSS实例：[31]统计选项频数
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2016年09月23日</span>
+                <span class="date">2016年10月03日</span>
             
             
             
@@ -229,51 +517,23 @@
 
     
         <div class="content">
-            <p>在对数据进行t检验或者f检验之前需要让数据满足正态性的要求，所以应该对数据进行正态性检验，检验正态性的方法中，K-S检验是最普遍的方法之一，下面我们就来具体的操作一下图和进行K-S检验。<br>方法/步骤</p>
+            <p>假如有一个单选题，有五个选项，我现在想知道每一个选项有都少人选，怎么办？其实这是一个最简单的频率统计问题，我们把在spss中的统计过程列在以下，请参考：</p>
 <ul>
-<li>我拿到数据以后，先要在spss中组织数据，如图所示，第一列变量是我们要检验是否为正态的变量，第二列是数据的分组，即他们的组号。有的时候你的数据没有分组，也就是只有一个组，那就没有必要写group列了</li>
+<li>首先，我们在菜单栏上执行：分析–描述统计–频数</li>
 </ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/c2cec3fdfc0392458db6a68a8794a4c27d1e2537.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/9864a2315c6034a885a32ccfc9134954082376f8.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
 <ul>
-<li>为了分别检验每个分组的数据是否符合正态分布，我们要先将各个组分离（如果你的数据只有一个组那就没必要进行这一步了），如图所示在菜单栏上执行：data—split file</li>
+<li>在这里，我们将想要统计的题目放到变量框</li>
 </ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/71cf3bc79f3df8dc8133c814cd11728b4710282c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/1b0d4f0fd9f9d72aed368753d62a2834359bbbeb.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
 <ul>
-<li>勾选【organize output by groups】，它的意思是分组呈现变量结果，将分组情况这个变量添加到group based on中，点击ok按钮</li>
+<li>点击ok开始统计</li>
 </ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/d000baa1cd11728b1323cba7c8fcc3cec3fd2c2c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/fc5e5f34970a304ed18337b4d3c8a786c8175c98.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
 <ul>
-<li>接着要对正太性进行检验了，我们在菜单栏上执行：analyze–nonparametric—one sample</li>
+<li>在输出的表格中，我们的频率一栏就是我们要统计的内容了。</li>
 </ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/80cb39dbb6fd5266ba287b91ab18972bd4073637.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>切换到fileds这个选项，然后将你要检验的变量放到右侧的text fields中</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/9345d688d43f8794faf10fabd21b0ef41bd53a2c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>切换到settings选项，然后点击【choose test】，勾选右侧的K-S检验，如图所示。然后点击下方的options</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/0ff41bd5ad6eddc434e9f37e39dbb6fd5266332c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>打开如图所示的对话框，我们将normal这个选项勾选，因为没有已知的正太分布的参数，所以选择use sample data，点击ok</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/dcc451da81cb39dbdece20d3d0160924ab18302c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>切换到text options 设置显著性水平，如图所示，一般为0.05或者0.01</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/72f082025aafa40f34c58958ab64034f78f01937.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>点击run，你就会看到数据处理的结果了</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/ac4bd11373f08202279cd6ba4bfbfbedab641b2c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li><p>下面是各个组的检验结果，结果显示的很详细，每个组都没有达到显著水平，接受原假设，即所有的组都是正态分布的。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/cefc1e178a82b901dbae84b6738da9773912ef30.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/f703738da97739122525c2e4f8198618367ae230.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/b21bb051f8198618ac44a8014aed2e738bd4e630.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/fab3ac119313b07e6eefc7460ed7912396dd8ceb.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -289,13 +549,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/09/15/spss如何分组求平均值/">
-                spss如何分组求平均值
+            <a href="/2016/10/03/Python统计分析：[2]相关样本T检验/">
+                Python统计分析：[2]相关样本T检验
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2016年09月15日</span>
+                <span class="date">2016年10月03日</span>
             
             
             
@@ -304,37 +564,36 @@
 
     
         <div class="content">
-            <p>分组求均值，举个俩字来说就是，一个数据分为男生和女生，那么分别求男生和女生的平均值就是分组均值，要求分组均值就要确定总共有多少分组，比如我们要求不同性别的人不同的学历的人他们每周花费在报纸上的钱有多少，这样有性别和学历两个变量进行分组了。<br>方法/步骤</p>
+            <p>上一篇文章介绍了独立样本T检验，现在接着使用Python进行相关样本的T检验，主要用到了scipy.stats.ttest_rel，我们先来看看其基本的用法：</p>
 <ul>
-<li>打开数据文件以后，打开平均数对话框，在菜单栏上执行：analyze–compare means –means</li>
+<li>引入相关模块，这次我们使用stats的</li>
 </ul>
-<img src="/2016/09/15/spss如何分组求平均值/622762d0f703918fc8e5ce44513d269759eec40c.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/8640bf8b87d6277f111a614c2b381f30e924fc7f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
 <ul>
-<li>将每周买报纸花费的钱作为因变量，将性别作为自变量，如图所示，然后点击next，我们来设置第二层自变量</li>
+<li>产生两列随机变量，用到了stats。norm.rvs，参数loc表示平均数，scale表示标准差，size是样本量<br>这是产生的两个变量的数据的一部分</li>
 </ul>
-<img src="/2016/09/15/spss如何分组求平均值/6159252dd42a2834b9bfc5855bb5c9ea15cebf27.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/1b0d4f0fd9f9d72aa8094369d72a2834349bbb12.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/99636c0e0cf3d7cac1fe6c02f11fbe096b63a97f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
 <ul>
-<li>将最好学历作为第二层自变量，放到independent list，如果你还有要求分组均值的自变量，你可以继续点击next，不过我这里已经不用了</li>
+<li>ttest_rel的用法：输出t和p值<br>从p值可以看出，这两列数据是没有差异的。</li>
 </ul>
-<img src="/2016/09/15/spss如何分组求平均值/359b033b5bb5c9ea84eaf06dd539b6003af3b327.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/29790130e924b8993c342a4c6d061d950a7bf67f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/734f12f3d7ca7bcbb173945bbd096b63f624a87f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
 <ul>
-<li>点击options来设置要输出的参数</li>
+<li>当然，ttest_rel还可以接受pandas.DataFrame数据，先从excel中读取数据<br>我们可以看一下数据的基本内容：</li>
 </ul>
-<img src="/2016/09/15/spss如何分组求平均值/37d3d539b6003af3aca32fee352ac65c1038b627.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/d56b3634349b033b95e5afae16ce36d3d539bd12.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/969cbf44ad34598255e7b6e60ff431adcbef8412.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
 <ul>
-<li>系统给出的默认值有：平均数、数据记录数、标准差。如果你需要其他的参数，还可以从左侧的列表里选择，然后点击continue</li>
+<li>我们可以选择scoreA和ScoreB这两列数据进行T检验<br>输出的结果可见两列变量均值无差异</li>
 </ul>
-<img src="/2016/09/15/spss如何分组求平均值/3bf33a87e950352a5f78d6865343fbf2b2118b27.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/54baacfb43166d22fe7f46e0452309f79052d27f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/b3f6cea20cf431ad20bf104d4836acaf2edd9812.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
 <ul>
-<li>回到了平均数对话框，点击ok即可输出不同分组的平均数。</li>
+<li>我们还可以同时对多个变量进行检验，比如：<br>这是产生的结果可见：第一个array表示t值，两个表示p值，因此我们可以知道p(scoreA)=0.126&gt;0.05</li>
 </ul>
-<img src="/2016/09/15/spss如何分组求平均值/472309f7905298220a07ca4dd7ca7bcb0a46d40c.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
-<ul>
-<li><p>这就是输出的结果：</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/09/15/spss如何分组求平均值/9213b07eca806538aef3579d97dda144ad348227.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/d478a8003af33a873f00536ec55c10385343b512.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/0db52fadcbef7609a666caeb2ddda3cc7cd99e12.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -350,13 +609,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/09/11/wxpython教程：[3]菜单栏/">
-                wxpython教程：[3]菜单栏
+            <a href="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/">
+                numpy函数：[11]fromfunction以函数式创建数组
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2016年09月11日</span>
+                <span class="date">2016年10月03日</span>
             
             
             
@@ -365,88 +624,33 @@
 
     
         <div class="content">
-            <p>窗口中通常有菜单栏，菜单栏中包括很多菜单，每一个菜单中包括很多选项，比如一个简单的记事本：里面菜单有：文件、编辑、格式等等。下面我们就来亲手制作一个菜单栏——以便让我们退出程序。</p>
+            <p>给函数绘图的时候经常需要创建一个数组，这时候就用到了fromfunction函数，用以从函数中创建数组，我们下面还是用具体的例子说明一下fromfunction的方法：</p>
 <ul>
-<li>先看一下我们所有的代码</li>
+<li>先从numpy中引入所有</li>
 </ul>
-<img src="/2016/09/11/wxpython教程：[3]菜单栏/9319cf09b3de9c82072a7ce06f81800a18d843d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/d019d2bf6c81800aec6d2a91b33533fa838b4762.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
 <ul>
-<li>重点要说的首先是这句：创建菜单栏<br>这就是菜单栏：</li>
+<li>我们创建一个函数，它是y=i*2的表示形式</li>
 </ul>
-<img src="/2016/09/11/wxpython教程：[3]菜单栏/9dc3cf58ccbf6c815978a987bf3eb13532fa40d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
-<img src="/2016/09/11/wxpython教程：[3]菜单栏/a75fb6d3fd1f413474788011261f95cad0c85ed7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/814b07d8bc3eb135cb4f1424a41ea8d3fc1f4462.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
 <ul>
-<li>创建一个菜单<br>这是一个菜单：</li>
+<li>我们使用fromfunction函数，创建一个数组a，看a返回的的结果，所以a中存储的就是y的值，而i其实就是数组的索引，数组a反应的是i取值从0到1时，y的值。fromfunction的第二个参数定义了数组的形状，也就是说参数(5,)表示i取值范围是[0,1,2,3,4]</li>
 </ul>
-<img src="/2016/09/11/wxpython教程：[3]菜单栏/dbf554ed2e738bd4f348375ea28b87d6277ff931.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
-<img src="/2016/09/11/wxpython教程：[3]菜单栏/948bcfc8a786c917954cd756ca3d70cf3ac757d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/a75fb6d3fd1f413469bfa6e1271f95cad0c85e62.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
 <ul>
-<li>向菜单中添加一个选项：<br>也就是这个选项：</li>
+<li>假如要创建的是二维数组，也就是说函数式有两个自变量，比如y=i*j这个函数，我们在python的表示形式是</li>
 </ul>
-<img src="/2016/09/11/wxpython教程：[3]菜单栏/1e71f724b899a901005cde591e950a7b0208f531.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
-<img src="/2016/09/11/wxpython教程：[3]菜单栏/72ccb7773912b31b880548468518367adab4e131.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/a992e31f4134970acffbb3b097cad1c8a6865d62.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
 <ul>
-<li>现在我们将创建好的菜单添加到菜单栏</li>
+<li>以这个函数创建一个数组，我们看结果,参数(10,10)表示i的取值范围和j的取值范围是[0,1,2,3,4,5,6,7,8,9]，数组b中存放的就是函数返回的值</li>
 </ul>
-<img src="/2016/09/11/wxpython教程：[3]菜单栏/d57e9994a4c27d1ed368beab18d5ad6edcc438d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/245e8bcad1c8a786cda1e9916509c93d71cf5062.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
 <ul>
-<li>最后，我们将设置好的菜单栏添加到窗口：<br>将菜单中的选项与命令绑定，这样才能在点击选项的时候执行某个动作：<br>到此我们的菜单栏就做好了，运行程序可以看到效果</li>
+<li>换一种取值范围，看看结果</li>
 </ul>
-<img src="/2016/09/11/wxpython教程：[3]菜单栏/0fb505d5ad6eddc457a931943adbb6fd536633d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
-<img src="/2016/09/11/wxpython教程：[3]菜单栏/dc854fda81cb39dbbf8ee239d3160924aa1830d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/09/05/spss单因素重复测量的方差分析操作和解释/">
-                spss单因素重复测量的方差分析操作和解释
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年09月05日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>方法/步骤</p>
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/3853ad1bb051f819d3ffa0d5d8b44aed2f73e71c.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
 <ul>
-<li>首先需要整理数据，数据文件结构对重复测量方差分析很重要，一定要把每次测量作为一个变量（把每个实验处理作为一个变量）!!!</li>
-</ul>
-<img src="/2016/09/05/spss单因素重复测量的方差分析操作和解释/4e4a20a4462309f71ed536d0720e0cf3d6cad6be.jpg" alt="spss单因素重复测量的方差分析操作和解释" title="spss单因素重复测量的方差分析操作和解释">
-<ul>
-<li>在spss中执行：菜单栏–analyse–GLM–repeated measured，打开重复测量对话框</li>
-</ul>
-<img src="/2016/09/05/spss单因素重复测量的方差分析操作和解释/caef76094b36acafe6fa0d3e7cd98d1000e99cde.jpg" alt="spss单因素重复测量的方差分析操作和解释" title="spss单因素重复测量的方差分析操作和解释">
-<ul>
-<li>我们给变量写入一个名称，这个名称随便填，然后输入变量的水平数，这个要看你的研究了，在我的研究中，变量只有四个水平，所以就填4，如图所示</li>
-</ul>
-<img src="/2016/09/05/spss单因素重复测量的方差分析操作和解释/5d6034a85edf8db13b6fe7a60923dd54574e74ab.jpg" alt="spss单因素重复测量的方差分析操作和解释" title="spss单因素重复测量的方差分析操作和解释">
-<ul>
-<li>点击add按钮，将变量添加到下面的框，然后点击define按钮，打开一个新的对话框</li>
-</ul>
-<img src="/2016/09/05/spss单因素重复测量的方差分析操作和解释/c8177f3e6709c93d607d95359f3df8dcd0005460.jpg" alt="spss单因素重复测量的方差分析操作和解释" title="spss单因素重复测量的方差分析操作和解释">
-<ul>
-<li>将四个水平的变量放入右侧的框中，然后点击ok，开始处理数据</li>
-</ul>
-<img src="/2016/09/05/spss单因素重复测量的方差分析操作和解释/7acb0a46f21fbe09fcd458d66b600c338644ad6e.jpg" alt="spss单因素重复测量的方差分析操作和解释" title="spss单因素重复测量的方差分析操作和解释">
-<ul>
-<li>我们要看的第一个表格是球星检验的结果，如果sig值大于0.05，就认为符合球星检验</li>
+<li>这个很好理解</li>
 </ul>
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
@@ -463,13 +667,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/">
-                spss用单样本k-s检验验证正态分布的方法
+            <a href="/2016/10/03/Python教程：[61]创建文件夹 目录/">
+                Python教程：[61]创建文件夹 目录
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2016年09月05日</span>
+                <span class="date">2016年10月03日</span>
             
             
             
@@ -478,39 +682,26 @@
 
     
         <div class="content">
-            <p> k-s检验是用来检验数据是否符合正态分布的，因为在检验之前我们并不知道该数据是否符合正态分布，所以这种检验属于非参数检验。对要检验的数据也没有限制，只要数据量够大就可以，数据量偏少会造成检验不准确。下面来具体介绍k-s检验的过程和结果分析。<br>方法/步骤</p>
+            <p>python如何创建文件夹，用到了mkdir和makedirs两个方法，前者创建一层目录，后者创建多层目录，下面我们来看看具体是怎么用的。</p>
 <ul>
-<li><p>在spss中打开数据，怎么打开就不介绍了，打开数据以后，在菜单栏上执行：analyze–非参检验–legacy disalogs–1 sample k-s</p>
-</li>
-<li></li>
+<li>先要引入os模块</li>
 </ul>
-<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/d439b6003af33a87c56f04ebc65c10385243b5c4.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
+<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/ac754782b2b7d0a2c2fbb31dc9ef76094a369ac5.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
 <ul>
-<li>将你要检验正态的变量放到test variables list，勾选下面的normal，这是正态的意思。</li>
+<li>使用mkdir方法创建一个tt文件夹，参数是文件夹的路径：</li>
 </ul>
-<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/adaf2edda3cc7cd9c51530283901213fb80e9102.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
+<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/caae68094b36acaffad2217c7ed98d1000e99cc5.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
 <ul>
-<li>点击exact，进入选择检验方法的对话框</li>
+<li>假如我们使用mkdir方法创建多层文件夹，也就是说，文件夹f:/tt1和文件夹f:/tt1/tt1都是不存在的，这时候就会出现错误</li>
 </ul>
-<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/a2cc7cd98d1001e9730410feb80e7bec54e79702.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
+<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/7d98931001e93901fb303abe79ec54e737d196c5.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
 <ul>
-<li><p>这里有三个选项可以选择，第一个asymptotic的意思是基于渐进分布的显著性水平的检验指标，适于大样本，如果样本过小或者分布不好，就会影响检验的效力；monte carlo适用于精确显著性水平的无偏估计，如果样本过大，数据处理过程太长，就应该使用这个选项；exact精确计算概率值，可以设定数据处理的时间，如果数据处理时间超过了你设定时间30分钟，就应该使用monte carlo</p>
-</li>
-<li></li>
+<li>我们可以使用makedirs方法来创建多层目录：</li>
 </ul>
-<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/e850352ac65c1038637cca33b2119313b17e89c4.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
+<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/8697397f9e2f07085e689d80eb24b899a801f286.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
 <ul>
-<li>回到k-s检验对话框，点击options按钮，设置输出的参数</li>
+<li>写完这篇文章，你可能想知道，如何删除目录呢，幸好我前几天已经写完了一篇如何删除文件夹的文章，具体见：<a href="http://jingyan.baidu.com/article/39810a23e80384b636fda639.html" target="_blank" rel="external">http://jingyan.baidu.com/article/39810a23e80384b636fda639.html</a></li>
 </ul>
-<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/3801213fb80e7bec1ae207102f2eb9389b506b02.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
-<ul>
-<li>勾选descriptive和quartiles，这两个的意思分别是输出描述性统计和四分位数，点击continue按钮</li>
-</ul>
-<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/5243fbf2b21193138441fb4165380cd790238dc4.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
-<ul>
-<li>我们可以看到对数据的检验结果，最后的显著性检验值为0.000，非常显著。我们首先要知道在做显著性检验的时候虚无假设是数据符合正态分布，因为检验显著，所以否定虚无假设，所以数据是不符合显著性的要求的。</li>
-</ul>
-<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/7aec54e736d12f2ee83daa914fc2d56285356802.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -526,13 +717,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/09/03/SPSS实例：[1]计算信度（α系数）/">
-                SPSS实例：[1]计算信度（α系数）
+            <a href="/2016/10/03/Python教程：[3]input和raw_input函数/">
+                Python教程：[3]input和raw_input函数
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2016年09月03日</span>
+                <span class="date">2016年10月03日</span>
             
             
             
@@ -541,188 +732,31 @@
 
     
         <div class="content">
-            <p>克隆巴赫α系数是我们经常用到的一个信度指标，它指的是某一个维度内，不同题项间的一致程度，在编制问卷或者做探索性因素分析时，我们通常会报告α系数来表明我们的问卷可靠程度或者结构效度。那么在spss中如何计算科隆巴赫系数呢？下面是具体的方法：</p>
+            <p>今天使用python3.2来编辑程序的时候，突然发现一个错误name ‘raw_input’ is not defined，原因是从版本3.0 开始去掉了raw_input 函数，改用input。所以两个函数合并在了一起，所以今天只讲input函数就可以了。input函数用于弹出一个对话框，提示用户输入内容，输入的内容可以直接显示出来，也可以赋值给某个变量。</p>
 <ul>
-<li>录入数据，如图所示，假如这八个变量都是因子1的几个题项，那么如何计算这个因子的信度呢？</li>
+<li>基本用法是：input(‘输入要显示的文字’)</li>
 </ul>
-<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/8474fbdde71190ef9dc8271fcf1b9d16fcfa6084.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/f7426d8da97739129adc0f4bfa198618377ae2e7.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
 <ul>
-<li>在菜单中执行：reliability analysis，如图所示，也就是信度分析</li>
+<li>弹出一个对话框，让你输入，假如我们输入“你好”</li>
 </ul>
-<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/e1bf8725bc315c60c8a6de2f8cb1cb1348547784.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/a8362712b31bb051d3de3902347adab44bede0e7.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
 <ul>
-<li>将这个几个变量放入右侧的items框，记住这几个题项是属于一个维度或者因子的，点击ok即可得到科隆巴赫系数</li>
+<li>立刻会出现这个输入的内容。</li>
 </ul>
-<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/b9d8b7014c086e069dcc8a8b03087bf40bd1cb4f.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
-<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/ca5257540923dd54554112a8d009b3de9d824884.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/4bac30738bd4b31cb4c61e9185d6277f9f2ff8e7.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
 <ul>
-<li>有时候我们有大量的信度系数要计算，比如一个问卷有12个维度，每个维度都有一个信度系数，我们就需要重复的操作，不过我们可以使用命令，快速实现，在信度分析对话框中，我们点击paste</li>
+<li>我们输入</li>
 </ul>
-<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/346bd85c1038534338ae32e19213b07ecb80884a.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/ca5257540923dd54952c2d42d309b3de9c82487a.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
 <ul>
-<li>在命令窗口中，我们找到variables这个命令后面的item，如图所示，这里就是变量名，如果我们想要计算其他的信度，我们可以将变量名进行修改，然后选中所有的命令，点击执行按钮</li>
+<li>弹出对话框，假如我们输入“www”</li>
 </ul>
-<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/62667cd0f703918f2fb5880a503d269758eec44f.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
-<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/6c63514a20a4462395ae10a29922720e0df3d74f.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/23/SPSS实例：[15]如何解读独立样本T检验的结果/">
-                SPSS实例：[15]如何解读独立样本T检验的结果
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>下面这幅图是从网页上搜索得到的一个结果，我们就拿这个结果来解读一下如何分析独立样本T检验的结果。</p>
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/ac2fc3c451da81cbc3f609e75066d0160924314d.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
 <ul>
-<li>第一个看第一个sig值，它是对方差齐性的假设的检验，假如sig&lt;0.05，说明不满足方差齐性，我们认为方差是不齐的</li>
+<li>a的值就是“www”</li>
 </ul>
-<img src="/2016/08/23/SPSS实例：[15]如何解读独立样本T检验的结果/3bb22487e950352af27a1b1f5143fbf2b2118b4a.jpg" alt="SPSS实例：[15]如何解读独立样本T检验的结果" title="SPSS实例：[15]如何解读独立样本T检验的结果">
-<ul>
-<li>这种情况下，我们只能看第二行数据，也就是看下图所示的sig值来判断是否有组间差异。第二个sig值说明，差异不显著，因为它大于了.05。我们得出的结论是没有差异。</li>
-</ul>
-<img src="/2016/08/23/SPSS实例：[15]如何解读独立样本T检验的结果/734f12f3d7ca7bcb1d6af938bc096b63f624a850.jpg" alt="SPSS实例：[15]如何解读独立样本T检验的结果" title="SPSS实例：[15]如何解读独立样本T检验的结果">
-<ul>
-<li>我们看第二行数据，sig值&gt;0.05，说明方差是齐性的。</li>
-</ul>
-<img src="/2016/08/23/SPSS实例：[15]如何解读独立样本T检验的结果/4651a712c8fcc3ce5c58f7249045d688d53f20c9.jpg" alt="SPSS实例：[15]如何解读独立样本T检验的结果" title="SPSS实例：[15]如何解读独立样本T检验的结果">
-<ul>
-<li>这时候，我们需要看另一个sig值，这个值仍然是没有达到显著水平（0.05)，我们认为两组是没有差异的。</li>
-</ul>
-<img src="/2016/08/23/SPSS实例：[15]如何解读独立样本T检验的结果/5af4d7ea15ce36d3fb95bd2738f33a87e850b1d0.jpg" alt="SPSS实例：[15]如何解读独立样本T检验的结果" title="SPSS实例：[15]如何解读独立样本T检验的结果">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/19/SPSS绘图教程：[2]数据属性检验/">
-                SPSS绘图教程：[2]数据属性检验
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我们在绘图之前需要对数据的属性进行检验，否则绘制的图形就会出现错误我们还是来一个实例吧：</p>
-<ul>
-<li>我们先打开图形菜单下的【图形构建程序】</li>
-</ul>
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/90cebeec08fa513d446cf6663f6d55fbb3fbd901.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<ul>
-<li>首先会弹出一个警告，提示你应当进行的设置，我们点击【定义变量属性】，然后就真正开始了今天的教程。</li>
-</ul>
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/29752a9b033b5bb54ff5a54634d3d539b600bc2d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<ul>
-<li>在打开的对话框中，我们选择要绘图的变量，比如我要绘制年龄组与干扰与否这两个变量的条形图，就将这两个变量放到右框，点击【继续】</li>
-</ul>
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/91138622720e0cf3a631d4430846f21fbf09aa01.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<ul>
-<li>现在打开了变量属性的定义窗口，我们先在【已扫描的变量列表】里选择一个变量进行设置。假如我选择【年龄组】</li>
-</ul>
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/cbc17b380cd791230dc211ccaf345982b2b7802d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<ul>
-<li>首先检查变量的测量水平。有三种测量水平：名义、顺序、度量。名义就是分类变量，比如性别分男女，这就是类别变量（名义变量）；顺序变量也叫等级变量，比如年龄组，我们将0-1岁分为低龄组、2-3岁分为高龄组，这样年龄组就成为了顺序变量；度量变量也可以叫等距变量，这种数据是某种测量工具测量得到的数据，比如长度、重量等，当然某些心理量表得分也是等距变量，年龄如果没有分组，也是等距变量。下面，我们将年龄组设置成顺序变量。</li>
-</ul>
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/027a45b5c9ea15cebf287ab1b4003af33b87b201.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/d478a8003af33a8767ab9aa2c45c10385243b501.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<ul>
-<li>然后增加一个标签，标签是对变量的说明，通常在绘制出现的图中，显示的是标签而不是变量名。</li>
-</ul>
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/8474fbdde71190efccd91767cc1b9d16fdfa602d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<ul>
-<li>接着设置值得标签，比如年龄组的值有0和1，0代表低龄组，1代表高龄组，我们就这样填写值标签</li>
-</ul>
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/a005b3345982b2b77059a37c33adcbef77099b01.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/3b6833f5e0fe9925752eece836a85edf8db1712d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<ul>
-<li>接着用同样的方法设置第二个变量</li>
-</ul>
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/814b07d8bc3eb135ede53203a41ea8d3fd1f442d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<ul>
-<li>检查一下是不是变量都设置好了，然后点击确定。这样就完成了变量属性的设置。下一节我们就可以绘图了。</li>
-</ul>
-<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/0862c354564e9258051603569e82d158ccbf4e2d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/19/SPSS实例：[3]两个变量相关的结果分析/">
-                SPSS实例：[3]两个变量相关的结果分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>两个变量之间的相关是最简单的相关关系，我们以皮尔逊积差相关来作为例子，讲解一下spss的操作方法，和结果的解释方法。</p>
-<ul>
-<li>操作方法：在spss中，我们在菜单中找到：分析–相关–二相关，打开相关对话框，然后将相关的变量放入框中，点击ok即可</li>
-</ul>
-<img src="/2016/08/19/SPSS实例：[3]两个变量相关的结果分析/6dc09e0a19d8bc3e1087de09838ba61ea9d34523.jpg" alt="SPSS实例：[3]两个变量相关的结果分析" title="SPSS实例：[3]两个变量相关的结果分析">
-<ul>
-<li>一般出现的第一个结果是描述性统计，mean两个变量的平均数，std deviation是标准差，N是case数目</li>
-</ul>
-<img src="/2016/08/19/SPSS实例：[3]两个变量相关的结果分析/5f9e93b1cb1349549d9130a7574e9258d0094a23.jpg" alt="SPSS实例：[3]两个变量相关的结果分析" title="SPSS实例：[3]两个变量相关的结果分析">
-<ul>
-<li>correlations表格中呈现的是相关系数和显著性水平，假如我们要看变量1和变量2之间的相关，我们看下面的交叉表，横行看var00001，列就好看var00002，行和列交叉的地方就是他们相关系数所在格，找到pearson correlation这一行对应的数字，就是相关系数，相关系数为.923，达到了高相关，而且因为显著性水平sig值达到了.000，所以是显著相关，好了，如何解释相关结果，你学会了吗？</li>
-</ul>
-<img src="/2016/08/19/SPSS实例：[3]两个变量相关的结果分析/9319cf09b3de9c824aea214c6d81800a18d84323.jpg" alt="SPSS实例：[3]两个变量相关的结果分析" title="SPSS实例：[3]两个变量相关的结果分析">
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/a28d62d98d1001e9a225e125ba0e7bec54e79744.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>

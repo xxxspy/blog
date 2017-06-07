@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/19/Python教程：[36]如何替换字符串/">
+                Python教程：[36]如何替换字符串
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天要从网页采集url，但是出现了一个问题，需要用到替换字符串来纠正，我们先在就来看看如何替换字符串，用到了正则表达式，下面是具体的过程。</p>
+<ul>
+<li>给txt赋值，注意看http：后面的“\/”，我们要把它替换成“/”</li>
+</ul>
+<img src="/2015/02/19/Python教程：[36]如何替换字符串/734f12f3d7ca7bcb22a40838bc096b63f724a88f.jpg" alt="Python教程：[36]如何替换字符串" title="Python教程：[36]如何替换字符串">
+<ul>
+<li>引入正则表达式的模块</li>
+</ul>
+<img src="/2015/02/19/Python教程：[36]如何替换字符串/bf487563f6246b6022d17d63e9f81a4c500fa28f.jpg" alt="Python教程：[36]如何替换字符串" title="Python教程：[36]如何替换字符串">
+<ul>
+<li>我们使用subn方法来替换字符串，其返回两个值，一个是替换以后的结果，一个是替换的次数</li>
+</ul>
+<img src="/2015/02/19/Python教程：[36]如何替换字符串/d68b65cb0a46f21f94dd9144f4246b600d33aef9.jpg" alt="Python教程：[36]如何替换字符串" title="Python教程：[36]如何替换字符串">
+<ul>
+<li>我们看一下替换以后的结果，URL显示就正常了。</li>
+</ul>
+<img src="/2015/02/19/Python教程：[36]如何替换字符串/0d729944ebf81a4c63ed23ded52a6059242da68f.jpg" alt="Python教程：[36]如何替换字符串" title="Python教程：[36]如何替换字符串">
+<ul>
+<li>当然，我们可以不使用正则表达式对象</li>
+</ul>
+<img src="/2015/02/19/Python教程：[36]如何替换字符串/72b19c025aafa40f9dee00caa964034f78f019ba.jpg" alt="Python教程：[36]如何替换字符串" title="Python教程：[36]如何替换字符串">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/">
+                统计分析amos21安装破解方法附带密钥注册码
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>amos是出色的统计分析软件, 通常我们使用amos进行结构方程的分析,因为它有强大而又简单的绘图功能,所以受到很多社会学者的青睐。下面我们分享一个破解该软件的方法,希望对各个研究者有所帮助。</p>
+<ul>
+<li>首先我们去下载amos软件,下面的链接上有这个软件的下载链接,里面还有一个破解文件,这个文件是最重要的。先安装amos,一直点击下一步,到下面这个界面的时候,选择下面第二个选项,也就是临时版本</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/6648d73d70cf3bc778b342c2d000baa1cd112a2a.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<ul>
+<li>接着我们要设置临时文件夹,我们使用软件默认的安装文件夹就可以了,点击右面的浏览按钮</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/0ef2112442a7d933d8546b5dac4bd11372f001e4.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<ul>
+<li>在打开的对话框中,有一个temp的文件,双击这个文件即可</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/d872d695d143ad4bc2d2c9ee83025aafa50f06e4.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<ul>
+<li>接着打开开始菜单，找到ibm spss amos，里面有一个注册快捷方式，点击它，如图所示</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/d56b3634349b033b27c073f414ce36d3d539bd11.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<ul>
+<li>打开这个授予许可对话框，点击下一步，选择立即授予产品许可</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/72b19c025aafa40f535c41f3aa64034f79f019c2.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/78701455b319ebc49484f9b78326cffc1f1716e4.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<ul>
+<li>从下面的参考文献中下载下来的压缩包里有一个注册码，将注册码填写进去，然后点击下一步即可完成注册</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/3bc6f750352ac65c974de95dfaf2b21193138a11.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/c71d0e385343fbf23864290db17eca8065388f11.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/17/SPSS实例：[11]如何检验调节作用/">
+                SPSS实例：[11]如何检验调节作用
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们今天用到了spss中的分层回归，这种方法其实和回归没有太大差异，只是在回归的时候，分两个步骤进行，然后对两步中的R方值的改变大小进行显著性检验，如果达到了预先设置的显著性水平，就可以证明调节作用。我们来看看具体的步骤：</p>
+<ul>
+<li><p>明确变量类型：我们今天使用的自变量、调节变量、因变量都是连续性变量，或者说是等距变量。</p>
+</li>
+<li><p>我们在菜单栏上执行：分析——回归——线性回归，如图所示</p>
+</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/b6045da98226cffc7dc6f7a0bb014a90f703eaf1.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>接着，我们要输入变量，放入因变量，然后放入自变量和调节变量，自变量和调节变量都在independent框中，图中没有列出调节变量，你别跟着犯错。点击next按钮，进入第二层</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/5f9e93b1cb1349540abca076544e9258d0094ac6.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>在第二层中，independent框中不仅仅有自变量和调节变量，还有自变量和调节变量的交互项，假如你不知道这个交互项是从哪里来的，你可以在百度经验中搜索【回归模型中如何增加交互项】。这里就不再详述了。</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/43e6c733c895d143e009af3171f082025aaf0761.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>我们点击statistics按钮，进行设置</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/0e655ca7d933c8959c80d069d31373f0830200e2.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>在这里需要重点勾选R方改变值或者其他你感兴趣的指标，如图所示，然后点击继续</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/b110e6198618367aaa6537cf2c738bd4b21ce5f1.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>我们先看R方的改变值是否达到了显著水平，如果达到了显著水平，然后找到模型的系数检验结果，因为保密原因，我把变量的名称都隐去了，你可以看到红色方框中就是交互项的系数检验，B值达到显著水平，说明调节作用得到了证明。</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/fab3ac119313b07ef982761b0ed7912397dd8ca2.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>为了进一步看到调节变量是如何起到调节作用的，也就是具体的调节方向，我们需要进一步来进行探究，因为篇幅太长，我们在下一篇文章中讲【检验调节变量的调节方向】</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/17/pandas教程：[19]读写sql数据库/">
+                pandas教程：[19]读写sql数据库
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如何从数据库中读取数据到DataFrame中？pandas提供这这样的接口完成此工作——read_sql()。下面我们用离子来说明这个方法。</p>
+<ul>
+<li>我们要从sqlite数据库中读取数据，引入相关模块</li>
+</ul>
+<img src="/2015/02/17/pandas教程：[19]读写sql数据库/5beeba0f4bfbfbed3468307a7bf0f736afc31f46.jpg" alt="pandas教程：[19]读写sql数据库" title="pandas教程：[19]读写sql数据库">
+<ul>
+<li>read_sql接受两个参数，一个是sql语句，这个你可能需要单独学习；一个是con（数据库连接）、read_sql直接返回一个DataFrame对象<br>打印一下，可以看到已经成功的读取了数据</li>
+</ul>
+<img src="/2015/02/17/pandas教程：[19]读写sql数据库/d019d2bf6c81800a41348e0bb23533fa838b47a6.jpg" alt="pandas教程：[19]读写sql数据库" title="pandas教程：[19]读写sql数据库">
+<img src="/2015/02/17/pandas教程：[19]读写sql数据库/f7426d8da977391207178364fb198618367ae247.jpg" alt="pandas教程：[19]读写sql数据库" title="pandas教程：[19]读写sql数据库">
+<ul>
+<li>我们还可以使用index_col参数来规定将那一列数据设置为index<br>结果输出为：</li>
+</ul>
+<img src="/2015/02/17/pandas教程：[19]读写sql数据库/79b1e936afc37931af59802ce8c4b74543a91146.jpg" alt="pandas教程：[19]读写sql数据库" title="pandas教程：[19]读写sql数据库">
+<img src="/2015/02/17/pandas教程：[19]读写sql数据库/b110e6198618367a63b879d82d738bd4b31ce547.jpg" alt="pandas教程：[19]读写sql数据库" title="pandas教程：[19]读写sql数据库">
+<ul>
+<li>当然，我们可以设置多个index，只要将index_col的值设置为列表<br>输出结果为：</li>
+</ul>
+<img src="/2015/02/17/pandas教程：[19]读写sql数据库/b258f5c4b74543a9282afcc91d178a82b9011446.jpg" alt="pandas教程：[19]读写sql数据库" title="pandas教程：[19]读写sql数据库">
+<img src="/2015/02/17/pandas教程：[19]读写sql数据库/718e25c79f3df8dcbeec8894ce11728b461028a6.jpg" alt="pandas教程：[19]读写sql数据库" title="pandas教程：[19]读写sql数据库">
+<ul>
+<li>写入数据库也很简单，下面第二句用于删除数据库中已有的表”weather_2012”，然后将df保存到数据库中的”weather_2012”表</li>
+</ul>
+<img src="/2015/02/17/pandas教程：[19]读写sql数据库/83cab81ea8d3fd1f21d8a53f334e251f94ca5fa6.jpg" alt="pandas教程：[19]读写sql数据库" title="pandas教程：[19]读写sql数据库">
+<ul>
+<li>假如我们使用的是mysql数据库也没问题，我们只需要建立与mysql的连接即可，用下面的con代替上面的con可以达到的效果相同。</li>
+</ul>
+<img src="/2015/02/17/pandas教程：[19]读写sql数据库/cebd00178a82b901e59cc536708da9773912ef47.jpg" alt="pandas教程：[19]读写sql数据库" title="pandas教程：[19]读写sql数据库">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/15/Excel单元格数据快速复制技巧/">
+                Excel单元格数据快速复制技巧
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>excel单元格数据可以快速的复制和剪切，一般excel高手很少用到比较低级的复制粘贴，而是使用其他的各种快速复制技巧，不过为了让新手了解一下，我也介绍了一下简单的方法。这些技巧其实也无所谓难不难，只要你记住了，稍加练习也能熟练掌握。<br>工具/原料</p>
+<ul>
+<li>excel<br>方法一：ctrl+c、ctrl+v</li>
+</ul>
+<ul>
+<li>先来介绍简单的，然后再介绍难的，ctrl+c就是复制的快捷键，ctrl+v就是粘贴的快捷键，使用的方法是鼠标选中要复制的单元格，按下ctrl+c，复制数据</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/902397dda144ad3403e8a128d0a20cf430ad85cd.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<ul>
+<li>鼠标选中A3单元格，有的人粘贴的时候选中很多单元格，这是没必要的，只要选中一个第一个单元格，不管你复制的是多少单元格，都可以顺利的粘贴，按下ctrl+v，粘贴，如图所示。</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/ac345982b2b7d0a2519e2232cbef76094a369acd.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<p>方法二：ctrl+D，复制上一个单元格</p>
+<ul>
+<li>有时候我们需要复制的数据就在单元格的上方，选中你要复制到的单元格，假如我们要复制李星到A4单元格，那么就要选中A4单元格</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/30adcbef76094b36cec53d42a3cc7cd98c109dcd.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<ul>
+<li>按下ctrl+D，你就会看到上面的单元格被复制到下面了。</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/86d6277f9e2f07082d490cafe924b899a801f2d4.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<ul>
+<li>假如你要复制多个单元格，你可以选中多个单元格如图所示。按下ctrl+d，就可以将上面所有的单元格数据复制。</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/9f2f070828381f30ee55ab06a9014c086f06f0d4.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<ul>
+<li>这是复制之后的效果：</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/8c1001e93901213fd264687354e736d12e2e95cd.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<p>方法三：ctrl+r，快速复制左侧单元格</p>
+<ul>
+<li>和上面讲到的ctrl+d是一个道理，选中要复制到的单元格，也就是说，想要将【入党时间】复制到D1单元格，我们就选中D1单元格。</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/1c950a7b02087bf41aa07146f2d3572c10dfcfd4.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<ul>
+<li>按下ctrl+r，快速复制左侧的单元格，你会看到这个效果。</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/37d12f2eb9389b503ea8c6fd8535e5dde6116ecd.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<ul>
+<li>假如你要复制多个数据，可以选中多个单元格，然后按下ctrl+r</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/d4628535e5dde711e6856559a7efce1b9c1661cd.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/91ef76c6a7efce1be77cee65af51f3deb58f65cd.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<p>方法四：鼠标拖动</p>
+<ul>
+<li>选中你要复制的单元格，如图所示，按下ctrl键不松手，鼠标拖动这些单元格到你要复制到的单元格，假如我们拖动到C9单元格，你会看到下面第二幅图的效果：</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/9213b07eca8065385f4484bc97dda144ac3482f6.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/f2deb48f8c5494ee717529b62df5e0fe98257ecd.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<ul>
+<li>如果你想剪切单元格，就不要按下ctrl键，直接拖动鼠标就可以了。</li>
+</ul>
+<img src="/2015/02/15/Excel单元格数据快速复制技巧/54fbb2fb43166d226a3b333b462309f79152d2d4.jpg" alt="Excel单元格数据快速复制技巧" title="Excel单元格数据快速复制技巧">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/15/Python教程：[34]根据网址采集网页/">
+                Python教程：[34]根据网址采集网页
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>做数据分析的工作，大部分时间不是在处理数据而是在收集数据，使用python可以手机网页数据，今天我们就教给大家如何使用python的urllib2来获取网页源码，这是最简单的获取网页源码的方法，以后我们会逐步加大难度。</p>
+<ul>
+<li>引入模块urllib2</li>
+</ul>
+<img src="/2015/02/15/Python教程：[34]根据网址采集网页/d7c9ca3f8794a4c2634a413c0cf41bd5ad6e3978.jpg" alt="Python教程：[34]根据网址采集网页" title="Python教程：[34]根据网址采集网页">
+<ul>
+<li>设置要采集的地址</li>
+</ul>
+<img src="/2015/02/15/Python教程：[34]根据网址采集网页/0fb505d5ad6eddc4758e12ec3bdbb6fd52663378.jpg" alt="Python教程：[34]根据网址采集网页" title="Python教程：[34]根据网址采集网页">
+<ul>
+<li>使用urlopen方法来返回网页文件</li>
+</ul>
+<img src="/2015/02/15/Python教程：[34]根据网址采集网页/509b9fcb39dbb6fd7a3243310b24ab18972b3778.jpg" alt="Python教程：[34]根据网址采集网页" title="Python教程：[34]根据网址采集网页">
+<ul>
+<li>只能使用read方法来获得网页文件的内容</li>
+</ul>
+<img src="/2015/02/15/Python教程：[34]根据网址采集网页/ac0acf1373f0820266b9372849fbfbedab641bba.jpg" alt="Python教程：[34]根据网址采集网页" title="Python教程：[34]根据网址采集网页">
+<ul>
+<li>看一下f的长度就知道是否真的返回了网页</li>
+</ul>
+<img src="/2015/02/15/Python教程：[34]根据网址采集网页/a54e55fbfbedab644259ebd7f536afc379311eba.jpg" alt="Python教程：[34]根据网址采集网页" title="Python教程：[34]根据网址采集网页">
+<ul>
+<li>避免这样去看f的内容，你会疯掉的。</li>
+</ul>
+<img src="/2015/02/15/Python教程：[34]根据网址采集网页/d5462bfae6cd7b89af059c940d2442a7d9330e78.jpg" alt="Python教程：[34]根据网址采集网页" title="Python教程：[34]根据网址采集网页">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/15/spss逻辑回归的操作和分析方法/">
+                spss逻辑回归的操作和分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>在菜单栏上执行：analyse–regression–binary</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/d8f9d72a6059252d6801bdc1349b033b5ab5b9e5.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>将患病率作为因变量，将其他三个作为自变量，设置好这几个</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/14ce36d3d539b600fcdfaf72e950352ac75cb7e6.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>点击ok，开始处理数据</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/241f95cad1c8a786ebf9e7cb6709c93d71cf5027.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>我们看到第一个表格是描述性的，也就是一个交叉表格，我们从这个表格可以看到我们的数据的基本情况</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/35a85edf8db1cb134ee391d6dd54564e93584b68.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>接着就是回归模型的检验，看sig值这一列就可以看到各个自变量的系数是否显著，如果显著说明这个回归模型是可靠的</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/7dd98d1001e93901c5d020fb7bec54e737d19621.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/15/spss利用count计算指定变量值的出现次数/">
+                spss利用count计算指定变量值的出现次数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> count可以统计频数，并将频数生成一个新的变量，比如说，有10道题是问你是否赞同某个说法，5级评分，分别为：非常赞同、赞同、不知道、反对、非常反对。我们要知道某个人的综合的态度，就要统计出来这个人赞同的数量，用count就可以实现了。<br>方法/步骤</p>
+<ul>
+<li>打开数据以后，在菜单栏上执行：transform–count ，打开count对话框</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/c2fdfc039245d688d4db4928a4c27d1ed31b2464.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>在打开的对话框中，在目标变量中输入态度，并将填写变量的标签，将要统计的态度a1–a10都添加到numeric variables</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/9345d688d43f8794a5e2b2a2d21b0ef41bd53a18.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>点击define value，对变量进行条件限制</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/9345d688d43f8794a626b3a2d21b0ef41ad53a64.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>勾选range这个选项，然后在两个文本框中分别输入1和2，也就是限定了分数的范围是1到2，然后点击continue</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/d53f8794a4c27d1ed13bc1481bd5ad6eddc43818.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>返回到了count对话框，点击ok按钮，运行</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/a5c27d1ed21b0ef41ef562d2ddc451da81cb3e18.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>我们看到这里已经多了一个态度变量</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/d31b0ef41bd5ad6ed5209f6681cb39dbb7fd3c64.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li><p>最后在菜单栏上执行：analyze–descriptive statistic–frequencies，对不同态度进行统计</p>
+</li>
+<li></li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/dcc451da81cb39dbbddd9ddad0160924ab183018.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/">
+                numpy函数：[14]数组的列表下标存取方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>除了使用切片存取数组的元素之外，还可以使用整数列表作为下标存取方法。我们来看看具体的用法：</p>
+<ul>
+<li>先从numpy包引入所有</li>
+</ul>
+<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/b87985504fc2d56241674772e51190ef77c66c87.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
+<ul>
+<li>创建一个一位数组a</li>
+</ul>
+<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/a8ad9413632762d09da13320a2ec08fa503dc657.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
+<ul>
+<li>假如要读取下标为2,4,6,8的数组元素，我们可以写用列表[2,4,6,8]作为下标</li>
+</ul>
+<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/e6508eef76c6a7ef04493fb9fffaaf51f2de6687.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
+<ul>
+<li>换一个试试</li>
+</ul>
+<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/9c57e3faaf51f3de7bdd2efb96eef01f3b297987.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
+<ul>
+<li>由于这种方式获取的数组并不与原数组共享内存，所以改变一个数组的元素并不改变另一个数组中对应元素的值。</li>
+</ul>
+<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/8d158aeef01f3a29f9a742519b25bc315d607c87.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
+<ul>
+<li>我们还可以通过列表下表进行赋值</li>
+</ul>
+<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/99636c0e0cf3d7ca0469a8e9f01fbe096a63a957.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/15/Excel2013：[44]日程表的用法/">
+                Excel2013：[44]日程表的用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这是Excel2013版的新功能，是在数据透视表中使用的，类似切片器，功能非常强大，如果你在报表中哟on个到了日程表，你的老板一定会很欣赏的看到你。好了，废话不多说，我们来看具体教程。</p>
+<ul>
+<li>我们先来做一个数据透视表，先来看看我的数据，各种日期下的各种水果的销量</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/a992e31f4134970ada4b8e4297cad1c8a7865d60.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>我们插入一个数据透视表</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/6648d73d70cf3bc76a385381d300baa1cd112a60.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>数据源就是刚才你的看到的那堆数据，点击确定按钮</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/3a86813df8dcd10042a4664c708b4710b9122f60.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>选择三个变量添加到数据透视表中</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/0b07ec1fbe096b638d61c03d0e338744ebf8ac20.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>一开始就是酱紫，看起来很凌乱，使用分组的功能，可以按月来进行汇总，具体教程见【Excel2013[45]如何按月/年汇总日期数据】</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/6a2112338744ebf89a09fa52dbf9d72a6059a720.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>分组分好了以后，我们在【分析】标签下，插入一个【日程表】</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/8605f5f81a4c510f5bbc7c776259252dd42aa520.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>弹出一个对话框，这里提示你选择对哪一个变量进行操作，勾选【日期】，点击确定</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/7c5fcc1b0ef41bd5a768769953da81cb39db3d60.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>这就是日程表了，我们点击下拉列表，切换到按月来显示</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/ac2fc3c451da81cb37dd1da05066d01609243160.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>看看，点击日程表中的1月份，在数据透视表中就会出现一月份的数据</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/5202e5f2b21193132a3b61dd67380cd791238d20.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>点击二月份就会出现二月份的数据</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/0d968f2397dda1440c71f2dfb0b7d0a20cf48620.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>当然，拖动鼠标可以选中多个月份</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/ac754782b2b7d0a2a9b19af0c9ef76094b369a20.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>当然，你还可以试试按照季度来显示</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/0865b518972bd40723fc4d9079899e510fb30960.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<ul>
+<li>你自己感受一下</li>
+</ul>
+<img src="/2015/02/15/Excel2013：[44]日程表的用法/34bbf8cd7b899e5115b5a47940a7d933c8950d60.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/36/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/38/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="pandas教程：[27]散点图和抖动图"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>pandas教程：[27]散点图和抖动图 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/04/19/pandas教程：[27]散点图和抖动图/">
+                pandas教程：[27]散点图和抖动图
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>拿到一个数据我们首先想到的是绘制散点图查看数据的基本分布情况，那么在Python.pandas中，如何绘制散点图呢？散点图的缺陷是什么，为什么要绘制抖动图呢？</p>
+<ul>
+<li>先引入相应的模块</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/b25d9901a18b87d6333d7e6f040828381f30fd00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>读取数据到数据框df<br>打印出前5行数据，可以看到有两列数据，分别是 孩子的身高和父母的身高</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/1e71f724b899a901504a8e461e950a7b0208f500.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/3790312eb9389b50ccbb35228635e5dde7116e3f.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>先绘制一个散点图，x轴为孩子的身高，y轴为父母的身高，将绘制得到的图片保存在D盘下的plot.png文件</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/969cbf44ad345982dfce30e20ff431adcbef843f.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>我们可以看到得到的图片是酱紫的，由于数据点重合在了一起，所以我们看到的散点图很规整，但却隐藏了规律，于是我们想到用到抖动的方法，绘制抖动图</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/08b68e529822720e32b1378a78cb0a46f21fab00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>我们看可以实现抖动的函数：所谓的抖动就是让数据点发生微小的位移，也就是略微改变数据的值，使得数据点不能完全重合，抖动距离的大小用下面函数中的factor参数来决定。</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/d1e312f431adcbef0470ab76afaf2edda3cc9f3f.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>利用上面的函数对df进行处理</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/f392492c11dfa9eca251836761d0f703918fc100.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>我们看得到的数据df2是酱紫的：</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/27d647ee3d6d55fb86b9a3566e224f4a20a4dd00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>现在接着绘制一个散点图，生成的就是抖动图了。alpha参数指的是数据点的透明度</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/6391e903918fa0ec26b8b17d259759ee3d6ddb00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>从这个图中我们可以清楚的看到，颜色比较深、数据比较多的点和颜色比较浅、数据比较少的点的位置。</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/61183b2dd42a283466d9e37b58b5c9ea15cebf00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/pandas/">#pandas</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

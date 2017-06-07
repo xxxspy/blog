@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/19/SPSS实例：[13]检验调节变量的调节方向/">
+                SPSS实例：[13]检验调节变量的调节方向
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇文章中我们讲了【SPSS实例：[11]如何检验调节作用】，这篇文章呢，我们要深入分析调节变量到底是如何调节自变量对因变量的作用的。我们先来看一下上一篇文章中得到的结果：在模型3中，我们可以看到红色方框中，交互项的系数是显著的，而其他系数是不显著的。</p>
+<ul>
+<li><p>我们根据上图中的模型3，可以得到一个回归方程：Y=1.12-0.008<em>A</em>B；其中Y是因变量，A是自变量，B是调节变量。</p>
+</li>
+<li><p>因为我们在做调节效应的验证之前，首先做了数据的中心化，如果你没有做中心化，你可以看这篇文章【数据中心化的手工操作】先将数据中心化然后，再进行层次回归，最后才能对调节变量的调节方向进行探索。</p>
+</li>
+<li><p>我们使用描述性统计计算出调节变量B的标准差</p>
+</li>
+</ul>
+<img src="/2015/01/19/SPSS实例：[13]检验调节变量的调节方向/8c511fe93901213ffda563cf56e736d12e2e95cb.jpg" alt="SPSS实例：[13]检验调节变量的调节方向" title="SPSS实例：[13]检验调节变量的调节方向">
+<ul>
+<li>然后设B的值分别为一个正标准差或一个负标准差，得到两个方程：</li>
+</ul>
+<img src="/2015/01/19/SPSS实例：[13]检验调节变量的调节方向/91ae68c6a7efce1bc988e4d9ad51f3deb58f65c6.jpg" alt="SPSS实例：[13]检验调节变量的调节方向" title="SPSS实例：[13]检验调节变量的调节方向">
+<ul>
+<li>然后取B两个真实的值，从你的数据库里面挑两个，然后带入方程，求得Y值，你就可以在Excel里绘制出散点图。</li>
+</ul>
+<img src="/2015/01/19/SPSS实例：[13]检验调节变量的调节方向/cf5a8316fdfaaf51a45aadac8e5494eef01f7a2c.jpg" alt="SPSS实例：[13]检验调节变量的调节方向" title="SPSS实例：[13]检验调节变量的调节方向">
+<ul>
+<li>从上面的散点图中我们就可以看到，调节变量取不同的值得时候，自变量和因变量之间的斜率是不同的。这样你就可以看到，再什么情况下斜率比较大，也就是红色的那条线。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/19/pandas教程：[15]移动复制删除列/">
+                pandas教程：[15]移动复制删除列
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>pandas的DataFrame非常灵活，我们可以快速的移动、复制、删除列，今天就用案例来说明一下具体的工作是如何完成的。</p>
+<ul>
+<li>首先我们创建一个dataframe<br>打印一下：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/b74124f33a87e95019c1d76f13385343faf2b49b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/62667cd0f703918f5bcc1ac9523d269759eec451.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<ul>
+<li>增加列，我们可以把df当作一个object，给它增加一个属性c，如下：<br>这是增加c列以后的数据：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/0d729944ebf81a4c482ecbcad42a6059252da651.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/4a77b2af2edda3cc3a329c2302e93901203f929b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<ul>
+<li>我们还可以插入一列数据到任意位置：比如插入到第二列<br>插入后的数据：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/61183b2dd42a283414ba110858b5c9ea15cebf51.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/148f28d3d539b60012d228b4ea50352ac65cb751.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<ul>
+<li>永久删除一列数据用del，虽然我们不建议你这么武断的删除c列：<br>删除后的数据：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/3790312eb9389b501d29c4518635e5dde6116e9b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/cbc17b380cd79123a0fcb377ae345982b2b78051.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<ul>
+<li>更明智的方法是使用drop，它不改变原有的df中的数据，而是返回另一个dataframe来存放删除后的数据<br>这是df2中的数据：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/d4239b35e5dde711c70467f5a4efce1b9c16619b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/91ae68c6a7efce1bc6fdecc9ac51f3deb58f659b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<ul>
+<li>移动列也很简单，假如我们想要将c列移动到第一列，我们可以使用pop来输出并删除b列，然后再将b列插入到第一列，这样就完成了移动<br>移动后的结果为：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/d4239b35e5dde711c6ce64f5a4efce1b9d166151.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/ae10eddeb48f8c54f505e12c39292df5e1fe7f9b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/17/Python教程：[64]判断文件 文件夹/">
+                Python教程：[64]判断文件 文件夹
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如何判断某个路径是不是存在、是不是文件夹、是不是文件？我们今天就来介绍一下判断文件、文件夹，同样也是用到了os.path模块，下面看看具体的例子：</p>
+<ul>
+<li>装载一下os模块，然后我们写一个路径，这个路径是真是存在的</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/5f9e93b1cb134954fcd956e4544e9258d0094a28.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<ul>
+<li>判断一下这个目录是不是文件夹，用isdir</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/c87c6ecf3bc79f3dede45db0b8a1cd11738b29ed.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<ul>
+<li>判断该路径是不是指向一个文件，用isfile</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/9e7ce6dcd100baa1d529fe3b4510b912c9fc2eed.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<ul>
+<li>判断一下该路径是不是绝对路径：用isabs</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/b29f8282d158ccbf927b0bba1bd8bc3eb0354128.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<ul>
+<li>判断一下，该路径是否存在：用exists</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/cdfe7281800a19d8bdc53a8531fa828ba71e4628.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<ul>
+<li>总结一下，os.path模块下的五个判断函数：</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/d7c9ca3f8794a4c258265eab0cf41bd5ac6e39ed.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/15/spss简单因素分析的操作和结果分析方法/">
+                spss简单因素分析的操作和结果分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>因素分析是spss中一个重要的功能，他的作用是从多个变量中提取少数几个因子，达到减少指标的目的；有时候因素分析方法用在问卷编制中，可以从各个题项中提取中几个维度。下图看到就是我们要分析的数据，这里有x1–x8这8个变量需要进行因素分析。<br>工具/原料</p>
+<ul>
+<li>sps20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>在菜单栏上执行：analyse–dimension reduction–factor ，打开了因素分析对话框</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/b17eca8065380cd783bec03ca144ad34588281ba.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>打开了因素分析对话框，将要分析的这8个变量放到variables框中，点击箭头按钮可以添加变量</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/21a4462309f790527e8625ef0cf3d7ca7acbd542.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>还是自因素分析的主对话框，点击descriptive按钮，打开描述统计的子对话框</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/fc1f4134970a304e7aadc22bd1c8a786c8175c57.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>在子对话框中，我们需要对因素分析是否合适进行检验，所以勾选如图所示的选项，点击continue返回到主对话框</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/9a504fc2d5628535cacbbff090ef76c6a7ef6333.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>还是在主对话框中，点击extration按钮，打开子对话框</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/8601a18b87d6277f20135fe928381f30e824fcda.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>在这个子对话框中，我们可以输出碎石图，这样可以更加直观的看到各个因素的特征根，对于碎石图的解释后面会有。点击continue，返回主对话框</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/ca1349540923dd541c63cab9d109b3de9d8248ca.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>在主对话框中，点击ok按钮，开始处理数据并输出结果</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/d009b3de9c82d1589c483460800a19d8bd3e421c.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>我们看到的第一个图就是KMO检验，如图所示，kmo值为0.6，这个值不是很理想，一般来说kmo大于0.7可以认为数据具有较好的相关性，因素分析的效果会好一些；当kmo值在0.5以下的时候，不适合做因素分析。接着我们看Bartlett检验，我们看sig值显著，说明应该拒绝变量相互独立的假设，这说明因素分析是合适的。</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/9358d109b3de9c829e98945e6c81800a18d84365.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>接着我们看碎石图，这个图的横轴是因素的序号，纵轴代表特征根，曲线的意思是，随着因素序号的增大，特征根迅速降低。后五个因素的特征根变化非常小，所以我们基本上认为得到三个因子是比较合适的。</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/e1fe9925bc315c60762d073e8db1cb13485477a2.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>最后看到的是因子载荷矩阵，从因子载荷矩阵中，我们可以知道各个因子在不同变量中的载荷，同时可以根据表格中的数据求出因子的计算公式我们举一个例子里计算第一个变量：ZX1=0884F1+0.385F2+0.12F3</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/9e3df8dcd100baa1a68c2b6a4710b912c9fc2eba.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/">
+                Excel2013：[37]mmult函数求解二元一次方程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>已知一个二元一次方程，怎样求出方程的解？我们可以规划求解，也可以使用矩阵函数，这里就用mmult函数求解二元一次方程，还用到的辅助函数MINVERSE，下面看看具体的求解过程吧。</p>
+<ul>
+<li>已知条件是两个方程，我们需要进行调整，使方程的形式如图所示，常数项在等号的右边，未知数在等号的左边，且未知数XY的顺序是一致的。</li>
+</ul>
+<img src="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/a28d62d98d1001e95c5dd76aba0e7bec54e79737.jpg" alt="Excel2013：[37]mmult函数求解二元一次方程" title="Excel2013：[37]mmult函数求解二元一次方程">
+<ul>
+<li>建立一个表格，我们整理一下各个系数和常数，如图所示，注意它是如何同方程一一对应的</li>
+</ul>
+<img src="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/8759287adab44aedd7427d81b11c8701a18bfb0d.jpg" alt="Excel2013：[37]mmult函数求解二元一次方程" title="Excel2013：[37]mmult函数求解二元一次方程">
+<ul>
+<li>在解这一栏，我们选中这两个单元格，注意是两个啊哦！</li>
+</ul>
+<img src="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/2e6fa7389b504fc2ba3e7360e7dde71190ef6d37.jpg" alt="Excel2013：[37]mmult函数求解二元一次方程" title="Excel2013：[37]mmult函数求解二元一次方程">
+<ul>
+<li>在公式栏输入公式=MMULT(MINVERSE(A8:B9),C8:C9)，注意两个参数A8：B9 和C8：C9代表那两个区域</li>
+</ul>
+<img src="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/62667cd0f703918fb8defeaf533d269759eec40d.jpg" alt="Excel2013：[37]mmult函数求解二元一次方程" title="Excel2013：[37]mmult函数求解二元一次方程">
+<ul>
+<li>按下Ctrl+shift+回车键，这样就得到了公式的解</li>
+</ul>
+<img src="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/d56b3634349b033b64873fbf17ce36d3d539bd0d.jpg" alt="Excel2013：[37]mmult函数求解二元一次方程" title="Excel2013：[37]mmult函数求解二元一次方程">
+<ul>
+<li>你可以验证一下，这个解是不是正确，将求得的解带入方程，看等式是否成立</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/11/Python教程：[71]类的继承/">
+                Python教程：[71]类的继承
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>类（class），可以继承基类以便形成具有自己独特属性的类，我们在面向对象的编程中，经常用到类及其继承，可以说没有什么不是类的，今天我们就来详细探讨一下在python中，类的继承是如何做的。</p>
+<ul>
+<li>我们假设有一个类叫做point，顾名思义，point就是一个点，它有横坐标和纵坐标。我们在python中创建一个point类（书上说类名称都要开头字母大写，这是国际惯例）</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/0e655ca7d933c895234d75f3d31373f0830200cc.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li>最简单的继承类的方式是这样：只需要在生命类的时候加一个括号和基类</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/4e0b3ea4462309f7d403409a700e0cf3d6cad68f.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li><p>这种方法并没有声明该类的构造器，这样它会隐性调用基类的构造器，所以，在实例化的时候，也要注意基类的构造器需要哪些参数，不要出现这样的错误：这种错误容易发生是因为我们在子类的声明中并没有看到什么参数，在使用的时候就容易忘记基类中需要的参数</p>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#11>“, line 1, in <module></module></pyshell#11></p>
+</li>
+<li><p>a=point1()</p>
+</li>
+<li><p>TypeError: <strong>init</strong>() takes exactly 3 arguments (1 given)</p>
+</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/d35a10f41bd5ad6e0302896283cb39dbb7fd3c04.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li>这样来用就没问题了。</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/a84052086e061d952d27dbb079f40ad163d9ca92.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li>类的继承一般情况下，我们都是要重写类的构造器，然后再调用基类的构造器，不然基类的构造器在这种情况下不会自动调用。应该这样写：类point2比基类增加了一个属性z</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/a992e31f4134970a8cc0fca797cad1c8a6865d4c.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li>实例化：</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/30ecd5ef76094b36d019f765a1cc7cd98c109d74.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li><p>我们看这样一个写法特别容易出错：你能看出哪里错了吗？<br>错误代码：</p>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#50>“, line 1, in <module></module></pyshell#50></p>
+</li>
+<li><p>b=point2(1,2,3)</p>
+</li>
+<li><p>File “<pyshell#45>“, line 3, in <strong>init</strong></pyshell#45></p>
+</li>
+<li><p>point.<strong>init</strong>(x,y)</p>
+</li>
+<li><p>TypeError: unbound method <strong>init</strong>() must be called with point instance as first argument (got int instance instead)</p>
+</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/bd7faf3533fa828b103c726bff1f4134960a5ad8.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/11/DataNitro：[11]自动换行/">
+                DataNitro：[11]自动换行
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>本篇文章原创于《百度经验》，如果转载此文章，需要注明出处、链接地址和作者名称，否则侵权。</p>
+<ul>
+<li>我们知道只要点击这里就可以实现自动换行</li>
+</ul>
+<img src="/2015/01/11/DataNitro：[11]自动换行/d4239b35e5dde71132ecb0b4a4efce1b9d166173.jpg" alt="DataNitro：[11]自动换行" title="DataNitro：[11]自动换行">
+<ul>
+<li>换行后就会实现这个效果：</li>
+</ul>
+<img src="/2015/01/11/DataNitro：[11]自动换行/a992e31f4134970afe44e36d96cad1c8a7865d7a.jpg" alt="DataNitro：[11]自动换行" title="DataNitro：[11]自动换行">
+<ul>
+<li>但是现在我们需要使用datanitro来实现这个效果，而在datanitro里面没有直接的模块可以用，这时候我们想到用vba，在vbe里面的vba1模块里，写入一个过程：wraptext</li>
+</ul>
+<img src="/2015/01/11/DataNitro：[11]自动换行/8367d1fc1e178a82a3268de2f503738da977e81f.jpg" alt="DataNitro：[11]自动换行" title="DataNitro：[11]自动换行">
+<ul>
+<li>接着，我们打开Python shell</li>
+</ul>
+<img src="/2015/01/11/DataNitro：[11]自动换行/ae10eddeb48f8c543f78376d39292df5e1fe7f8e.jpg" alt="DataNitro：[11]自动换行" title="DataNitro：[11]自动换行">
+<ul>
+<li>写入如下代码，然后按下回车，注意参数是vba过程的名称</li>
+</ul>
+<img src="/2015/01/11/DataNitro：[11]自动换行/245e8bcad1c8a7861beeb84c6409c93d71cf5069.jpg" alt="DataNitro：[11]自动换行" title="DataNitro：[11]自动换行">
+<ul>
+<li>这样就实现了自动换行</li>
+</ul>
+<img src="/2015/01/11/DataNitro：[11]自动换行/245e8bcad1c8a786182cb74c6409c93d70cf502b.jpg" alt="DataNitro：[11]自动换行" title="DataNitro：[11]自动换行">
+<ul>
+<li>再运行一遍，就可以回到没有自动换行的状态。</li>
+</ul>
+<img src="/2015/01/11/DataNitro：[11]自动换行/373bc4b44aed2e73acd67b6e8401a18b87d6fa72.jpg" alt="DataNitro：[11]自动换行" title="DataNitro：[11]自动换行">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/11/Python教程：[18]urlparse模块/">
+                Python教程：[18]urlparse模块
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用urlparse模块可以对url进行分析，最主要的操作就是拆分和合并url的各个部件，那么url有哪些部件呢？下图列出了所有的部件。你可能不太理解，不要着急，我们在例子中看看每个部分都代表着什么。</p>
+<ul>
+<li>引入urlparse模块，这里只引入了urlparse方法，如果你想要用所有的方法，你需要import urlparse</li>
+</ul>
+<img src="/2015/01/11/Python教程：[18]urlparse模块/d7c9ca3f8794a4c23abdb8070cf41bd5ac6e39c4.jpg" alt="Python教程：[18]urlparse模块" title="Python教程：[18]urlparse模块">
+<ul>
+<li>我们将下面的url地址进行拆解，将拆解的结果存放到parsed中</li>
+</ul>
+<img src="/2015/01/11/Python教程：[18]urlparse模块/f7426d8da9773912cd4fda4dfa198618367ae276.jpg" alt="Python教程：[18]urlparse模块" title="Python教程：[18]urlparse模块">
+<ul>
+<li>之后，我们通过parsed的各个属性来访问不同的部分</li>
+</ul>
+<img src="/2015/01/11/Python教程：[18]urlparse模块/d5462bfae6cd7b89c4f265af0d2442a7d8330ec4.jpg" alt="Python教程：[18]urlparse模块" title="Python教程：[18]urlparse模块">
+<ul>
+<li>我们看最后输出的结果：通过这样的方法我们可以快速的对url进行操作</li>
+</ul>
+<img src="/2015/01/11/Python教程：[18]urlparse模块/834344afa40f4bfb934ec178014f78f0f63618c4.jpg" alt="Python教程：[18]urlparse模块" title="Python教程：[18]urlparse模块">
+<ul>
+<li><p>所有的源码都写在下面：</p>
+</li>
+<li><p>from urlparse import urlparse</p>
+</li>
+<li><p>parsed = urlparse(‘url地址’)</p>
+</li>
+<li><p>print ‘scheme  :’+ parsed.scheme   #网络协议</p>
+</li>
+<li><p>print ‘netloc  :’+ parsed.netloc   #服务器位置（也可呢能有用户信息）</p>
+</li>
+<li><p>print ‘path    :’+ parsed.path     #网页文件在服务器中存放的位置</p>
+</li>
+<li><p>print ‘params  :’+ parsed.params   #可选参数</p>
+</li>
+<li><p>print ‘query   :’+ parsed.query    #连接符（&amp;）连接键值对</p>
+</li>
+<li><p>print ‘fragment:’+ parsed.fragment #拆分文档中的特殊猫</p>
+</li>
+<li><p>print ‘username:’+ parsed.username #用户名</p>
+</li>
+<li><p>print ‘password:’+ parsed.password #密码</p>
+</li>
+<li><p>print ‘hostname:’+ parsed.hostname #服务器名称或者地址</p>
+</li>
+<li><p>print ‘port    :’, parsed.port     #端口（默认是80</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/05/spss交叉设计如何进行方差分析/">
+                spss交叉设计如何进行方差分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>交叉设计是自身配对基础上发展的设计方法，是一种特殊的自身对照设计，通常的设计方案为被试分为两组，一组接受实验的顺序是AB，一组接受的实验顺序是BA，这样就形成了对照，这样的设计如何进行方差分析呢？下面是具体的方法：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>首先要明白数据的录入方式，如图所示，stage就是接受条件AB的阶段</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/f603918fa0ec08faab3c106659ee3d6d55fbda37.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<ul>
+<li>在菜单栏上执行：analyse–GLM–univariate，打开方差分析对话框</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/b8014a90f603738d79ee0fe3b31bb051f919ec4f.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<ul>
+<li>将自变量和因变量放入格子的框中，点击model按钮，开始设置模型</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/e1fe9925bc315c605105682e8db1cb134854775a.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/024f78f0f736afc3b8283da4b319ebc4b64512ce.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<ul>
+<li>勾选“custom”，然后将三个变量放入右侧的模型框中</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/03087bf40ad162d91cef60dd11dfa9ec8b13cdea.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/63d0f703918fa0ecf0c666cc269759ee3c6ddbea.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<ul>
+<li>将type设置为maineffect，意思是没有交互作用，回到主菜单，点击ok</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/80cb39dbb6fd526675313ed5ab18972bd50736dc.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/34fae6cd7b899e51a19438d542a7d933c9950ddc.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<ul>
+<li>我们看到输出的结果，治疗方案treat边缘显著，但是质量的顺序stage是不显著的，判断标准就是sig值</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/7dd98d1001e9390164138fff7bec54e737d196d9.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/05/python 线性代数：[9]求矩阵的秩/">
+                python 线性代数：[9]求矩阵的秩
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>矩阵的秩，课本上是这么定义的：</p>
+<ul>
+<li>先引入numpy模块</li>
+</ul>
+<img src="/2015/01/05/python%20线性代数：[9]求矩阵的秩/834344afa40f4bfba7e0dda3014f78f0f63618d1.jpg" alt="python 线性代数：[9]求矩阵的秩" title="python 线性代数：[9]求矩阵的秩">
+<ul>
+<li>创建一个单位矩阵i</li>
+</ul>
+<img src="/2015/01/05/python%20线性代数：[9]求矩阵的秩/020e66f0f736afc31b3c7c92b119ebc4b64512d1.jpg" alt="python 线性代数：[9]求矩阵的秩" title="python 线性代数：[9]求矩阵的秩">
+<ul>
+<li>计算单位矩阵i的秩</li>
+</ul>
+<img src="/2015/01/05/python%20线性代数：[9]求矩阵的秩/a84052086e061d95802574cf79f40ad163d9caa3.jpg" alt="python 线性代数：[9]求矩阵的秩" title="python 线性代数：[9]求矩阵的秩">
+<ul>
+<li>改变一下i右下角元素的值，设置为0</li>
+</ul>
+<img src="/2015/01/05/python%20线性代数：[9]求矩阵的秩/1cd4147b02087bf4878f141ef0d3572c10dfcfa3.jpg" alt="python 线性代数：[9]求矩阵的秩" title="python 线性代数：[9]求矩阵的秩">
+<ul>
+<li>重新计算矩阵的秩，得到3</li>
+</ul>
+<img src="/2015/01/05/python%20线性代数：[9]求矩阵的秩/f392492c11dfa9ec194d15e060d0f703908fc1a3.jpg" alt="python 线性代数：[9]求矩阵的秩" title="python 线性代数：[9]求矩阵的秩">
+<ul>
+<li><p>以下是我们用到的所有代码：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>import numpy</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>i=numpy.eye(4)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>i</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1.,  0.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  1.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  1.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  0.,  1.]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.matrix_rank(i)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#6>“, line 1, in <module></module></pyshell#6></p>
+</li>
+<li><p>numpy.matrix_rank(i)</p>
+</li>
+<li><p>AttributeError: ‘module’ object has no attribute ‘matrix_rank’</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.linalg.matrix_rank(i)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>4</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>i[-1,-1]=0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>i</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1.,  0.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  1.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  1.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  0.,  0.]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>i[1,1]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>1.0</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.linalg.matrix_rank(i)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>3</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/38/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/40/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

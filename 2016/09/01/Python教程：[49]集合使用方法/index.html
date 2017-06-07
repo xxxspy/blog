@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Python教程：[49]集合使用方法"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Python教程：[49]集合使用方法 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/09/01/Python教程：[49]集合使用方法/">
+                Python教程：[49]集合使用方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年09月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>今天讲集合set对象的操作，这是上一篇经验的续集，所以你要先看上一篇才可以，上一篇的链接：【<a href="http://jingyan.baidu.com/article/597a064369b570312a524350.html】，接着上一篇经验来讲，废话不多说，仍然是使用例子让你自己来体会，看看集合对象在python中是如何使用的。" target="_blank" rel="external">http://jingyan.baidu.com/article/597a064369b570312a524350.html】，接着上一篇经验来讲，废话不多说，仍然是使用例子让你自己来体会，看看集合对象在python中是如何使用的。</a></p>
+<ul>
+<li>先创建两个集合，以备后用。</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/42e89c26cffc1e170face59f4890f603728de9ca.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<img src="/2016/09/01/Python教程：[49]集合使用方法/a8362712b31bb0517637da86347adab44bede0ca.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>求两个集合对称差分</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/d048adde9c82d158e09c301f820a19d8bd3e42c6.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>集合添加某一个元素</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/0862c354564e9258f8bce8409e82d158cdbf4e50.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>集合删除某一个元素</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/814b07d8bc3eb135004fd915a41ea8d3fc1f4450.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>求集合的长度</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/509b9fcb39dbb6fd0d6b8c880b24ab18972b3728.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>用in判断某个元素是否在集合中</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/966aca0735fae6cd1c84c2cf0db30f2442a70f28.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>用issubset判断某个集合是否是另一个集合的子集</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/948bcfc8a786c9173f8b3c97cb3d70cf3ac75750.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>判断某个集合是否是另一个集合的父集</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/ac0acf1373f0820229a2f89149fbfbedab641b28.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>求并集</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/faacb564034f78f08d3bf35d7b310a55b3191c28.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>求交集</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/dc854fda81cb39dbe94809f8d2160924aa183050.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>求差</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/ea85a94543a982264cf142898882b9014a90eb29.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<img src="/2016/09/01/Python教程：[49]集合使用方法/4bd1e803738da977b21fef85b251f8198618e329.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>下面的等式相当于x=x|y</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/0e655ca7d933c895bef6f6d5d31373f083020050.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>删除一个元素，同时输出这个元素</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/f9589818367adab4d8e072ed89d4b31c8701e429.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<ul>
+<li>删除全部元素</li>
+</ul>
+<img src="/2016/09/01/Python教程：[49]集合使用方法/8a95ad1c8701a18b1fdb7be19c2f07082838fe29.jpg" alt="Python教程：[49]集合使用方法" title="Python教程：[49]集合使用方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/python/">#python</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

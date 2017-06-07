@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/01/SPSS实例：[37]最优尺度回归/">
+                SPSS实例：[37]最优尺度回归
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>怎样进行最优尺度回归？分类变量或者等级变量如何做回归？数据不连续如何做回归？变量不是正太分布怎样做回归？这些问题我们都可以使用最优尺度回归的方法来解决。我们拿一个分类变量来说，最优尺度就是将不同的类别给一个评分，将评分带入到回归方程中进行估计，进而可以估计出回归系数，我们拿一个例子来说明一下：</p>
+<ul>
+<li><p>学校进行课程改革，6个班级采用6种不同的教学模式，我们想看看不同的教学模式是否对学生的期末数学成绩产生影响，自变量有教学模式和高考数学成绩，因变量是期末数学成绩。6个班级就构成了一个分类变量，分类变量需要进行最优尺度估计</p>
+</li>
+<li><p>我们先打开最优尺度回归的对话框，如图所示</p>
+</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/814b07d8bc3eb1350c32cd1fa41ea8d3fc1f4459.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<ul>
+<li>将自变量和因变量都分别放入不同的框中，如图嗾使</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/b0742dfa828ba61eea1bb28b4334970a314e5959.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<ul>
+<li>课程类别是分类变量，我们选中它，然后点【define scale】</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/3b6833f5e0fe9925969e13f436a85edf8cb17140.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<ul>
+<li>在打开的对话框中，我们选择【nominal】，点击【continue】</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/9864a2315c6034a87370c225c913495408237640.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/d089b986c9177f3e2ac186a972cf3bc79e3d5659.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<ul>
+<li>回到主对话框，点击【ok】就开始进行估计</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/0862c354564e9258e4a6fc4a9e82d158cdbf4e40.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<ul>
+<li>结果输出基本上都是和其他回归方法没有太大差别，我们主要看对不同课程的评分，这个评分实际上是进入回归的分数，我们是用这个分数代表了不同的类别。</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/9e7ce6dcd100baa198d93d1f4510b912c9fc2e59.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/">
+                SPSS二因素完全随机设计的简单效应检验方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss在做简单效应的时候没有现成的菜单选项，需要你自己编写syntax，所以比较麻烦，在这个教程了，我交给大家一个办法，不用学太多的syntax就能自己做简单效应，下面是具体的方法：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>在菜单栏上执行：analyse–GLM–univariate，打开方差分析对话框</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/6a600c338744ebf8b74dcffdd9f9d72a6059a730.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>将自变量、因变量放入各自的框中，如图所示，B和Z是两个自变量，他们是完全随机设计，点击ok按钮，开始运行数据</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/a08b87d6277f9e2f7e17b6ca1f30e924b999f3d6.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>我们看到数据的处理效果，交互作用显著，所以我们需要进一步做简单效益的检验</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/4d086e061d950a7b8140e5060ad162d9f3d3c9ff.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>如图所示，点击菜单栏上的按钮，打开刚才用过的univariate对话框</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/4ec2d5628535e5dd0d5d0e1d76c6a7efcf1b62fb.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/203fb80e7bec54e7d481b1dcb9389b504ec26a87.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>点击下面的paste按钮，来到syntax的编辑窗口</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/f3d3572c11dfa9ec016afdd562d0f703908fc1a8.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li><p>在如图所示的位置，添加一个命令：/EMMEANS=TABLES(B*Z)COMPARE(B)ADJ(SIDAK)</p>
+</li>
+<li><p>其中：EMMEANSE是estimated marginal means subcommand的缩写，意思是估计边际平均数  </p>
+</li>
+<li><p>ADJ是比较的方法，还可以用lsd ，bonferroni和sidak这三种方法。</p>
+</li>
+<li><p>单击运行按钮，开始处理数据并输出结果</p>
+</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/8694a4c27d1ed21b3fe6b927ad6eddc450da3fc0.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>我们看到，简单主效应的分析已经出来，通过这个表格我们就能对自变量B各个水平进行精细比较</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/1ad5ad6eddc451dab7dd9b29b6fd5266d11632cc.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/01/wxpython教程：[2]窗口风格/">
+                wxpython教程：[2]窗口风格
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这篇文章接着介绍wxpython.Frame，我们需要设置一下窗口的大小、位置等。下面看一下今天要写的所有代码。</p>
+<ul>
+<li>代码的前两行就不说了，引入了相关模块并创建了一个app</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/0d968f2397dda1440ba4fcddb1b7d0a20df486f5.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>接着是Frame的设置，我们先来看看style，他有很多可以设置的属性，不同的属性用竖线“|”连接，比如我们想要窗口上有最大化按钮，就设置wx.MAXIMIZE_BOX，如果想要增加最小化按钮，就写成style=wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX ，写一连串属性很麻烦，我们可以用wx.DEFAULT_FRAME_STYLE默认设置，它等于wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX | wx.RESIZE_BORDER | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN<br>其他属性的意义我们直接从官网上看就可以，如下图：</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/4abae5edab64034f575f5269acc379310b551d8b.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/109eb7ec8a136327064f515c928fa0ec09fac784.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li><p>接着我们想要设置窗口的大小，用size参数，Frame（…size=(200,250))，这样就将窗口大小设置为200长，250高。</p>
+</li>
+<li><p>使用Move方法可以设置窗口的位置，比如（它表示窗口的左上角在屏幕上的位置）</p>
+</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/ac754782b2b7d0a2a66494f2c8ef76094a369af5.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>如果我们需要将窗口置于屏幕中央，可以使用Center方法</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/b6045da98226cffc24b82fddba014a90f703ea94.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>还有其他很多方法设置窗口位置，这里就不演示了：</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/4e83cb628535e5dd279737b075c6a7efcf1b62e3.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>最后就不用解释了，可以看看你创建的一个窗口</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/8bc3a7014a90f6034c220c283a12b31bb151ed94.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/23/Excel2013：[43]如何打印批注/">
+                Excel2013：[43]如何打印批注
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>怎样打印批注？我在Excel的某个单元格里插入了一个批注，但是打印的时候不显示，那么我改怎么办？怎样才能把批注打印出来？好吧，废话少说，看看下面的教程：如何打印Excel的批注：</p>
+<ul>
+<li>默认插入的批注是隐藏的，你的鼠标离开批注所在的单元格就是隐藏批注，所以要想打印批注，先要显示批注，右键单击该单元格，选择【显示/隐藏批注】</li>
+</ul>
+<img src="/2015/06/23/Excel2013：[43]如何打印批注/bd70426034a85edf860eb9444b540923dc547593.jpg" alt="Excel2013：[43]如何打印批注" title="Excel2013：[43]如何打印批注">
+<ul>
+<li>现在你的鼠标随便放，批注都会是显示的</li>
+</ul>
+<img src="/2015/06/23/Excel2013：[43]如何打印批注/6f4703950a7b0208eb56788660d9f2d3562cc8ff.jpg" alt="Excel2013：[43]如何打印批注" title="Excel2013：[43]如何打印批注">
+<ul>
+<li>切换到【页面布局】下，找到【打印标题】，点击它</li>
+</ul>
+<img src="/2015/06/23/Excel2013：[43]如何打印批注/570f8c58d109b3de883da30fcebf6c81810a4c93.jpg" alt="Excel2013：[43]如何打印批注" title="Excel2013：[43]如何打印批注">
+<ul>
+<li>在打开的对话框中，我们切换到【工作表】标签，找到【批注】选项，我们设置为【如同工作表中的显示】，当然你也可以设置成【工作表末尾】，as you like，点击确定按钮</li>
+</ul>
+<img src="/2015/06/23/Excel2013：[43]如何打印批注/cdfe7281800a19d8a681c36231fa828ba71e4693.jpg" alt="Excel2013：[43]如何打印批注" title="Excel2013：[43]如何打印批注">
+<ul>
+<li>在开始菜单中，点击【打印】可以预览一下打印效果</li>
+</ul>
+<img src="/2015/06/23/Excel2013：[43]如何打印批注/6dc09e0a19d8bc3eaa8a41ad808ba61ea9d34593.jpg" alt="Excel2013：[43]如何打印批注" title="Excel2013：[43]如何打印批注">
+<ul>
+<li>至此我们看到了，这是打印的效果图，显然批注已经被打印出来了。</li>
+</ul>
+<img src="/2015/06/23/Excel2013：[43]如何打印批注/99636c0e0cf3d7cad4697811f01fbe096a63a9ff.jpg" alt="Excel2013：[43]如何打印批注" title="Excel2013：[43]如何打印批注">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/19/numpy函数：[3]数组对象/">
+                numpy函数：[3]数组对象
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>数组是numpy中最重要的对象，我们通常使用array()方法来创建对象，他的参数是一个list对象，我们来看看具体的方法：</p>
+<ul>
+<li>首先强调一点，我们将numpy引入，名称为np</li>
+</ul>
+<img src="/2015/06/19/numpy函数：[3]数组对象/ac0acf1373f0820220f9f19849fbfbedaa641bea.jpg" alt="numpy函数：[3]数组对象" title="numpy函数：[3]数组对象">
+<ul>
+<li>我们使用一个列表作为array的参数，然后看一下这个array输出的结果，就是一个数组对象，而且是一维的</li>
+</ul>
+<img src="/2015/06/19/numpy函数：[3]数组对象/0db2c9ca7bcb0a463c27eb9e6963f6246a60afd5.jpg" alt="numpy函数：[3]数组对象" title="numpy函数：[3]数组对象">
+<ul>
+<li>假如我们要创建一个二维数组，我们就要用到一个列表的嵌套，看下面的ab列表就是一个嵌套。</li>
+</ul>
+<img src="/2015/06/19/numpy函数：[3]数组对象/0b14ad19ebc4b745cbffd7b1cdfc1e178b8215ea.jpg" alt="numpy函数：[3]数组对象" title="numpy函数：[3]数组对象">
+<ul>
+<li>通过array()将ab列表转换成一个二维数组。</li>
+</ul>
+<img src="/2015/06/19/numpy函数：[3]数组对象/d66b7e59252dd42af50c610c013b5bb5c8eab8d5.jpg" alt="numpy函数：[3]数组对象" title="numpy函数：[3]数组对象">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/19/python教程：[78]type()创建类/">
+                python教程：[78]type()创建类
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天我算是长知识了，我是一个python菜鸟，以前一直认为type（A）可以返回A的类型，但是不知道type还可以用于创建class，这篇经验就是介绍一下如何用type（）创建一个类，以及如何设置该类的属性。</p>
+<ul>
+<li>我们使用type创建一个空类：只有一个名字，其他什么都没有，它的参数格式是：type(class_name,bases,dic)</li>
+</ul>
+<img src="/2015/06/19/python教程：[78]type()创建类/c8ab0bce36d3d53974894de33987e950352ab01f.jpg" alt="python教程：[78]type()创建类" title="python教程：[78]type()创建类">
+<ul>
+<li>我们用type来查看一下我们创建的cls的类型：</li>
+</ul>
+<img src="/2015/06/19/python教程：[78]type()创建类/906289dda144ad348c25c5a7d3a20cf431ad853d.jpg" alt="python教程：[78]type()创建类" title="python教程：[78]type()创建类">
+<ul>
+<li>查看cls的名称</li>
+</ul>
+<img src="/2015/06/19/python教程：[78]type()创建类/0db52fadcbef76099791dbbf2ddda3cc7cd99e3d.jpg" alt="python教程：[78]type()创建类" title="python教程：[78]type()创建类">
+<ul>
+<li>假如我们用比较熟悉的继承的方式来创建一个类，它跟cls是一样的：</li>
+</ul>
+<img src="/2015/06/19/python教程：[78]type()创建类/7d98931001e93901c598cf1e78ec54e736d1963d.jpg" alt="python教程：[78]type()创建类" title="python教程：[78]type()创建类">
+<ul>
+<li>当然，我们可以通过参数dic来设置其他任何类的属性，比如：</li>
+</ul>
+<img src="/2015/06/19/python教程：[78]type()创建类/207ea60e7bec54e7de76583eba389b504fc26a3d.jpg" alt="python教程：[78]type()创建类" title="python教程：[78]type()创建类">
+<ul>
+<li>现在cls2比cls多了属性<strong>doc</strong>,<strong>module</strong></li>
+</ul>
+<img src="/2015/06/19/python教程：[78]type()创建类/2e6fa7389b504fc238c5f225e6dde71190ef6d3d.jpg" alt="python教程：[78]type()创建类" title="python教程：[78]type()创建类">
+<img src="/2015/06/19/python教程：[78]type()创建类/d4239b35e5dde711614801d6a4efce1b9d16613d.jpg" alt="python教程：[78]type()创建类" title="python教程：[78]type()创建类">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/19/python教程：[77]lambda和filter的神奇/">
+                python教程：[77]lambda和filter的神奇
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们先分别讲一下这两个内置函数的用法，然后看看这两个结合起来产生的效果，以及通常我们用他们来干嘛。</p>
+<ul>
+<li>lambda通常是匿名函数的代名词，我们用到lambda的时候就是创建一个匿名函数：举个简单的例子：x代表了输入，x**2代表计算方法，也代表返回内容，也就是说这个函数输入一个数，返回这个数的平方。但是因为这个函数没有函数名，所以无法在其他地方调用</li>
+</ul>
+<img src="/2015/06/19/python教程：[77]lambda和filter的神奇/4d4970061d950a7bf9f37ef809d162d9f3d3c98d.jpg" alt="python教程：[77]lambda和filter的神奇" title="python教程：[77]lambda和filter的神奇">
+<ul>
+<li>除非我们将这个函数起一个名字：但通常我们不会这么做，匿名函数只是作为匿名使用。</li>
+</ul>
+<img src="/2015/06/19/python教程：[77]lambda和filter的神奇/21e5582309f790528e7674020ff3d7ca7bcbd565.jpg" alt="python教程：[77]lambda和filter的神奇" title="python教程：[77]lambda和filter的神奇">
+<ul>
+<li>filter函数用法是：filter(fuction,list)：将list中每一个元素带入到function中，计算返回值，将返回值为True的list中的元素形成一个新的list，当然也可以是tuple。</li>
+</ul>
+<img src="/2015/06/19/python教程：[77]lambda和filter的神奇/8a95ad1c8701a18b6cee2f739d2f07082838fe42.jpg" alt="python教程：[77]lambda和filter的神奇" title="python教程：[77]lambda和filter的神奇">
+<img src="/2015/06/19/python教程：[77]lambda和filter的神奇/064936381f30e9244aa1a10d4f086e061d95f742.jpg" alt="python教程：[77]lambda和filter的神奇" title="python教程：[77]lambda和filter的神奇">
+<ul>
+<li>对于上面这个函数，我们可以用lambda来简化：它的意思是，如果alist中的值的平方小于5，就返回这个值，形成一个新的list</li>
+</ul>
+<img src="/2015/06/19/python教程：[77]lambda和filter的神奇/6398ecd3572c11df565a821f602762d0f603c2c0.jpg" alt="python教程：[77]lambda和filter的神奇" title="python教程：[77]lambda和filter的神奇">
+<ul>
+<li>通常，我们使用这两个内置函数的结合来过滤list里的空值：</li>
+</ul>
+<img src="/2015/06/19/python教程：[77]lambda和filter的神奇/32bb9c8ba61ea8d375184838940a304e251f5890.jpg" alt="python教程：[77]lambda和filter的神奇" title="python教程：[77]lambda和filter的神奇">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/">
+                图表设置坐标轴刻度和单位[3]Excel2013教程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用office2013以后，设置图表的方法发生了很大的变化，其中一个重要的问题就是坐标轴的刻度的设置方法不一样了，应该说，设置的方法更加快捷和方便了，所以推荐大家尽快使用最新的office，无论是外观还是功能都让我们眼前一亮。我们现在就来看看如何在Excel2013中设置坐标轴刻度：</p>
+<ul>
+<li>首先我们来建立一个图标，比如做一个折线图，先选中我们的数据，如图所示</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/9252ae7eca806538029aaa7b96dda144ad348222.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>在菜单栏上执行：插入–推荐的图表</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/5d212aa85edf8db18f21720c0823dd54564e740f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>打开一个对话框，选择折线图，如图所示，点击确定按钮</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/d048adde9c82d158828d57d9810a19d8bc3e420f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>插入的折线图是没有刻度的</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/7e7f7909c93d70cf5ef5a465f9dcd100baa12b0f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>选中横坐标，双击横坐标的位置就可以选中它</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/d041a4a1cd11728b2b22824ac9fcc3cec3fd2c0f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>在右侧出现了一个设置对话框，在坐标轴选项下，找到如图所示的位置，主要类型设置为“内部”</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/fd428c45d688d43ff2a69f9a7c1ed21b0ef43b0f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>我们可以看到横轴已经出现了刻度</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/7c5fcc1b0ef41bd5d65ce69c50da81cb39db3d0f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>同样的方法可以让纵坐标出现刻度</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/8cf0d513495409239a196d169358d109b3de4922.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>其实我们还可以使用线条属性来更改坐标轴的样式，可以选择无箭头的坐标轴，也可以更改坐标轴的箭头样式</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/b29f8282d158ccbf23ccbb5218d8bc3eb1354122.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>最后我们可以设置坐标轴的其他选项，来满足我们的需求</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/d019d2bf6c81800a48958766b03533fa828b4722.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/17/Excel2013：[42]修改批注中的默认前面/">
+                Excel2013：[42]修改批注中的默认前面
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这篇文章的标题写错了，应该是《修改批注默认签名》，希望管理员看懂啊了给改一下《修改批注默认签名》</p>
+<ul>
+<li>我们看到默认的批注签名都是：administrator，现在就要修改它</li>
+</ul>
+<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/9864a2315c6034a853c2e2e6c913495409237671.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
+<ul>
+<li>点击【文件】按钮</li>
+</ul>
+<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/5d212aa85edf8db1c40e26030b23dd54564e7471.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
+<ul>
+<li>看到打开了开始菜单，我们选择【选项】按钮</li>
+</ul>
+<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/9f6e190828381f30621bd7ceab014c086e06f01c.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
+<ul>
+<li>切换到【常规】标签下面，对这就是这里</li>
+</ul>
+<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/9319cf09b3de9c82c945a3e86e81800a19d84371.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
+<ul>
+<li>找到用户名，修改用户名为你需要的名字</li>
+</ul>
+<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/6dc09e0a19d8bc3eaf285cad808ba61ea8d34571.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
+<ul>
+<li>点击确定按钮，设置完成</li>
+</ul>
+<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/245e8bcad1c8a786e20a10696509c93d70cf5071.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
+<ul>
+<li>插入一个批注试试效果</li>
+</ul>
+<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/90cebeec08fa513d84a836b93f6d55fbb2fbd91c.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
+<ul>
+<li>现在批注的签名已经成为你想要的了。哈哈，更多教程，请关注我的百度经验。我们是专业的数据分析员，喜欢分享在工作中遇到的各种经验</li>
+</ul>
+<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/7e7f7909c93d70cf0bdaf06afadcd100baa12b71.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/15/spss如何做交叉表分析/">
+                spss如何做交叉表分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> 交叉表分析主要用来检验两个变量之间是否存在关系，或者说是否独立，其零假设为两个变量之间没有关系。我们在实际的工作中，经常用交叉表来分析比例是否相等。比如我们来分析一下，不同的性别对不同的报纸的选择有什么不同，就是要用交叉表分析了，下面是具体的方法。<br>方法/步骤</p>
+<ul>
+<li>在spss中打开数据，然后依次打开：analyze–descriptive–crosstabs，打开交叉表对话框</li>
+</ul>
+<img src="/2015/06/15/spss如何做交叉表分析/7dd98d1001e939013903dcb17bec54e736d1963f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
+<ul>
+<li>将性别放到行列表，将对读物的选择变量放到列，这样就构成了一个交叉表</li>
+</ul>
+<img src="/2015/06/15/spss如何做交叉表分析/4ec2d5628535e5ddc32df45076c6a7efce1b623f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
+<ul>
+<li>接下来我们要设置输出的结果，点击statistics，打开一个新的对话框</li>
+</ul>
+<img src="/2015/06/15/spss如何做交叉表分析/8435e5dde71190ef50fac350ce1b9d16fdfa603f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
+<ul>
+<li>勾选chi-square（卡方检验），勾选phi and cramer’s V（衡量交互分析中两个变量关系强度的指标），点击continue，回到交叉表对话框</li>
+</ul>
+<img src="/2015/06/15/spss如何做交叉表分析/b812c8fcc3cec3fd9b5bf6fad688d43f869427d3.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
+<ul>
+<li>点击cells，设置cell中要展示的数据</li>
+</ul>
+<img src="/2015/06/15/spss如何做交叉表分析/f2deb48f8c5494eec0235e962df5e0fe99257e3f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
+<ul>
+<li>在这里勾选observed（各单元格的观测次数），勾选row（行单元格的百分比），点击continue，回到交叉表对话框</li>
+</ul>
+<img src="/2015/06/15/spss如何做交叉表分析/8694a4c27d1ed21b61ac7f6aad6eddc450da3fd3.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
+<ul>
+<li>点击ok按钮，输出检验结果</li>
+</ul>
+<img src="/2015/06/15/spss如何做交叉表分析/e1fe9925bc315c6003943a608db1cb134954773f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
+<ul>
+<li>先看到的第一个表格就是交叉表，性别为行、选择的读物为列</li>
+</ul>
+<img src="/2015/06/15/spss如何做交叉表分析/9825bc315c6034a866e3e90ecb1349540923763f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
+<ul>
+<li>卡方检验结果：我们主要是看pearson卡方检验，sig值小于0.05，因此我们认为不同的性别的人对周末读物的选择有显著的差别</li>
+</ul>
+<img src="/2015/06/15/spss如何做交叉表分析/bd315c6034a85edfb48dafac49540923dd54753f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
+<ul>
+<li><p>最后一个表格，输出的是phi值和V值，两个都是代表两个变量之间的关系的紧密度的，数值小于0.1说明关系不紧密，即性别与周末读物的选择没有明显的关系，这个结论和上面的卡方检验有出入，所以我们需要进一步进行两两比较。</p>
+</li>
+<li></li>
+<li></li>
+</ul>
+<img src="/2015/06/15/spss如何做交叉表分析/4d086e061d950a7bbe531e4b0ad162d9f3d3c9df.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/27/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/29/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

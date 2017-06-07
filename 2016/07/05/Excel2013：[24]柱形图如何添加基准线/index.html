@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Excel2013：[24]柱形图如何添加基准线"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Excel2013：[24]柱形图如何添加基准线 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/">
+                Excel2013：[24]柱形图如何添加基准线
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>看下面的图，为了一眼看到与几个线的差距，我给柱形图添加了一个基准线，这个基准线怎么做的呢？其实是又添加了一列数据作为及格线，然后又给他添加了一个趋势线，就成了现在的及格线，下面是具体的过程：</p>
+<ul>
+<li>我们本来要绘制的柱形图只有一列数据，也就是得分这一列数据，为了画基准线，我们增加一个及格线</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/a005b3345982b2b74402b7bc33adcbef77099bee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>假如及格线都是4，我们快速填充好</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/4a77b2af2edda3cce179365803e93901203f92ee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>选中两列数据，添加柱形图</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/814b07d8bc3eb135e08039c3a41ea8d3fc1f44c0.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>插入的柱形图是酱紫的</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/d089b986c9177f3e8673727572cf3bc79e3d56c0.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>我们点击蓝色的柱子，然后右键单击，从菜单中选择【设置数据系列格式】</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/5d212aa85edf8db108b3f21c0b23dd54574e74ee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>在右侧打开一个对话框，我们设置系列重叠为百分之百</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/b29f8282d158ccbfa2213b421bd8bc3eb03541ee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>现在图变成了这个样子</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/9f1011b30f2442a7d44873ddd343ad4bd01302c0.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>接着选中红色的柱子</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/3a86813df8dcd10052017659708b4710b8122fee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>在右侧的属性窗口设置：填充为无，边框为实线，设置一下边框颜色</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/4651a712c8fcc3ce2c5d474b9045d688d53f20ee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>现在变成了酱紫</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/ac2fc3c451da81cbc77b0db55066d016082431ee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>接着我们还是选中红色柱子</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/8a95ad1c8701a18bbead9c379c2f07082938fec1.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>右键单击，然后选择【添加趋势线】</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/29790130e924b899e87af7406c061d950b7bf6c1.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>出来的效果图就是酱紫了。</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/1cd4147b02087bf442aad991f0d3572c10dfcfc1.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/excel/">#excel</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

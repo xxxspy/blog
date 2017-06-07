@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="pandas教程：[18]匹配字符串"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>pandas教程：[18]匹配字符串 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/07/05/pandas教程：[18]匹配字符串/">
+                pandas教程：[18]匹配字符串
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>pandas可以检测字符串是否包含某字符模式或者匹配它，这在处理一些字符串数据的时候非常有用，下面我们来用几个例子说明一下。</p>
+<ul>
+<li>首先，我们创建一个数据序列<br>查看数据序列：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/5202e5f2b21193133c3f72b466380cd791238d73.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/1e71f724b899a90109ecd9321e950a7b0308f59e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>检测数据序列中哪些元素包含一个字母和一个数字的字符模式<br>匹配结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/b13fd48065380cd701622fe9a244ad3459828173.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/7d98931001e93901827e003a78ec54e736d19673.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>我们可以使用na参数来规定出现NaN数据的时候匹配成True还是False<br>结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/0d968f2397dda1443e75e1b6b1b7d0a20cf48673.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/0b3a1c087bf40ad12e3d45e7542c11dfa8ecce9e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>match方法可以严格匹配字符串：<br>输出结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/8640bf8b87d6277fa0cbb03c2b381f30e824fc9e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/55a628d12f2eb9383111f7f6d6628535e5dd6f73.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li><p>还有，我们可以检查字符串开始字符，假设我们想要查找以字母a开头的数据，可以用startswith或者contains，注意contains中第一个参数，不懂得童鞋可以去看Python的正则表达式</p>
+</li>
+<li><p>输出结果：</p>
+</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/caae68094b36acafb39c1bf87fd98d1001e99c73.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/4e83cb628535e5dd485028db75c6a7efce1b6273.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>同样道理，可以检查结束字符串<br>输出结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/9f6e190828381f30abc00fadaa014c086f06f09e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/a8ad9413632762d0a3e726bba3ec08fa503dc69e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>还有很多字符串方法，这里不一一距离，你看一下简介用到的时候再去学</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/54baacfb43166d222fae9790452309f79152d29e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/pandas/">#pandas</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

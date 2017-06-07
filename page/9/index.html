@@ -155,13 +155,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/17/spss如何分组进行运算并生成新的变量/">
-                spss如何分组进行运算并生成新的变量
+            <a href="/2016/07/11/Excel2013：[45]如何按月 年汇总日期数据/">
+                Excel2013：[45]如何按月 年汇总日期数据
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月17日</span>
+                <span class="date">2016年07月11日</span>
             
             
             
@@ -170,51 +170,43 @@
 
     
         <div class="content">
-            <p> spss中如果要给原始的分数加上相应的分数需要使用compute，我们看一个例子，下面是不同的班级的不同的分数，因为某些原因，我们要给1班的学生的分数加上三分，给二班的学生分数加上两分，这该怎么做呢？下面是具体的方法。<br>方法/步骤</p>
+            <p>很多数据都是需要按照日期来分类汇总的，比如下面我要做的一个数据透视表就是需要用日期来分类汇总，但是呢，我需要按照月、季度、年来汇总，而原始数据是精确到日的（也就是年月日都有的数据），那么这种情况下，怎么进行按照月、年来分类汇总呢？看看具体的教程吧。</p>
 <ul>
-<li>拿到数据以后，我们在菜单栏上执行：transform–compute variables</li>
+<li>首先来看一哈我的原始数据，日期一列都是精确到日的，日了</li>
 </ul>
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/09fa513d269759ee4a1de947b2fb43166c22dfe9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/a8ad9413632762d0a8d53cd2a2ec08fa503dc6b1.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
 <ul>
-<li>打开一个对话框，我们在目标变量中输入新的变量的名称，我们这里输入新成绩</li>
+<li>插入数据透视表</li>
 </ul>
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/c75c10385343fbf215422fafb07eca8064388fd4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/0fb505d5ad6eddc45b2b2c963bdbb6fd5366334b.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
 <ul>
-<li>接着，因为不同的班级要加上不同的分数，所以我们需要添加条件，点击左下角的if按钮</li>
+<li>在弹出的对话框中，选对数据源，点击确定按钮</li>
 </ul>
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/a044ad345982b2b763f1b04831adcbef77099bd4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/90cebeec08fa513d4241f4b33f6d55fbb3fbd9b1.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
 <ul>
-<li>在这里，选择班级这个变量，添加到右侧的条件框中，记得要先勾选【include if case satisfies condition】。然后输入=1，也就是班级=1.最后点击continue按钮</li>
+<li>我们将日期、种类、销量放入数据透视表中</li>
 </ul>
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/7acb0a46f21fbe09e2134a986b600c338644ade9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/5327ce160924ab1885da795a37fae6cd7a890b4b.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
 <ul>
-<li>回到数据转换对话框，将成绩这个变量添加到右侧的公式中，输入+3，这样我们基本完成了一个任务，就是当班级为1的时候，成绩加上1就形成了新成绩。但是，当班级为2的时候怎么办呢？</li>
+<li>这就是做好的数据透视表，接下来就到了关键的地方，怎么按照月来汇总呢？</li>
 </ul>
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/adaf2edda3cc7cd93043bd553901213fb90e91d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/d8f9d72a6059252d415a9488349b033b5ab5b9e9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/507c389759ee3d6d322d1fa641166d224e4adeb1.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
 <ul>
-<li>我们点击paste按钮，打开syntax窗口</li>
+<li>选中数据透视表中的一个日期的单元格，记得一定是日期</li>
 </ul>
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/e4dde71190ef76c668bc72a79d16fdfaae5167d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/1f569482b9014a90c07dddd0ab773912b21beed9.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
 <ul>
-<li>这是我们看到的代码，模仿第二行的代码，我们写当班级为2的时候，新成绩等于成绩加上2.</li>
+<li>然后在【分析】标签下，找到【组选择】</li>
 </ul>
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/2cf5e0fe9925bc31823388145edf8db1ca1370d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/bd70426034a85edf42d5654e4b540923dc5475c7.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
 <ul>
-<li>这是我们写好的代码。</li>
+<li>在打开的对话框中，我们选择【月】，点击确定按钮。（当然你可以选择【季度】啊，【年】啊，按照你的意愿来，你又不傻！额。。）</li>
 </ul>
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/b90e7bec54e736d1ea5e05849b504fc2d46269e9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/29790130e924b899e77fe2556c061d950b7bf6d9.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
 <ul>
-<li>在菜单栏上执行：run–all，运行命令</li>
+<li>我们来看一下，现在就是按照月份来汇总了！小伙伴们，喜欢的话赶快去分享，感谢支持！</li>
 </ul>
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/ca1349540923dd54b01d2ee4d109b3de9d8248d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
-<ul>
-<li><p>这是最后的结果，你看到了，这里生成了新的变量。</p>
-</li>
-<li></li>
-<li></li>
-</ul>
-<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/8c1001e93901213f797ec75054e736d12e2e95e9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/dc15484e9258d10964ba32dfd358ccbf6d814dc7.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -230,13 +222,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/15/spss如何做主成分分析/">
-                spss如何做主成分分析
+            <a href="/2016/07/05/SPSS python教程：[2]怎样使用python代码/">
+                SPSS python教程：[2]怎样使用python代码
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月15日</span>
+                <span class="date">2016年07月05日</span>
             
             
             
@@ -245,35 +237,23 @@
 
     
         <div class="content">
-            <p>主成分分析的主要原理是寻找一个适当的线性变换：<br>工具/原料</p>
-<p>方法/步骤</p>
+            <p>怎样在spss中使用python代码呢？有很多种方法。最简单的方法是复制别人的代码，粘贴到代码运行窗口，然后运行一下；当然大部分时间是我们自己写代码，或者我们使用自己已经编辑好的函数进行处理，总之我们这篇文章就来介绍一下我经常用到的方法。这里只是介绍一下，给你一个启示，以后的教程里我们会详细介绍各种方法，所以如果你看到这里，有些东西不懂，可以暂且不管。</p>
 <ul>
-<li><p>先在spss中准备好要处理的数据，然后在菜单栏上执行：analyse–dimension reduction–factor analyse。打开因素分析对话框</p>
+<li>最简单的就是复制别人写好的python代码，然后稍加修改（主要是修改变量名和文件路径），然后运行一下即可。大家一定要注意，python是开源的，与之相应的是大批志愿者贡献自己的代码，所以很多时候我们都是直接从网上复制代码，拿来编辑一下就用。</li>
+</ul>
+<img src="/2016/07/05/SPSS%20python教程：[2]怎样使用python代码/faacb564034f78f0da8806657b310a55b2191c61.jpg" alt="SPSS python教程：[2]怎样使用python代码" title="SPSS python教程：[2]怎样使用python代码">
+<ul>
+<li><p>更多时候，我们要根据别人写的代码，自己再写一遍代码，当然，如果你已经有python编程经验，这很好办，否则你要先入门，尤其是python独特的书写格式，很多时候都容易让人犯错。</p>
 </li>
-<li><p>我们看到下图就是因素分析的对话框，将要分析的变量都放入variables窗口中</p>
-</li>
-<li><p>点击descriptives按钮，进入次级对话框，这个对话框可以输出我们想要看到的描述统计量</p>
+<li><p>写函数：如果有一些python代码模块你经常用到，可以写成一个函数，放到py文件中，然后再调用该文件中的函数，这样就可以重复利用这个函数了。方便以后数据分析的时候使用。</p>
 </li>
 </ul>
-<img src="/2015/09/15/spss如何做主成分分析/a8ec8a13632762d0be7c726fa0ec08fa503dc6a4.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<img src="/2016/07/05/SPSS%20python教程：[2]怎样使用python代码/3c2c4bfbb2fb431602c0e7ec22a4462308f7d30e.jpg" alt="SPSS python教程：[2]怎样使用python代码" title="SPSS python教程：[2]怎样使用python代码">
 <ul>
-<li>因为做主成分分析需要我们看一下各个变量之间的相关，对变量间的关系有一个了解，所以需要输出相关，勾选coefficience，点击continue，返回主对话框</li>
-</ul>
-<img src="/2015/09/15/spss如何做主成分分析/95eef01f3a292df554247ac5bc315c6035a8737f.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
-<ul>
-<li>回到主对话框，点击ok，开始输出数据处理结果</li>
-</ul>
-<img src="/2015/09/15/spss如何做主成分分析/060828381f30e9248e904ce14c086e061d95f72e.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
-<ul>
-<li>你看到的这第一个表格就是相关矩阵，现实的是各个变量之间的相关系数，通过相关系数，你可以看到各个变量之间的相关，进而了解各个变量之间的关系</li>
-</ul>
-<img src="/2015/09/15/spss如何做主成分分析/a9d3fd1f4134970ae03ac0ff95cad1c8a6865d91.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
-<ul>
-<li>第二个表格显示的主成分分析的过程，我们看到eigenvalues下面的total栏，他的意思就是特征根，他的意义是主成分影响力度的指标，一般以1为标准，如果特征根小于1，说明这个主因素的影响力度还不如一个基本的变量。所以我们只提取特征根大于1的主成分。如图所示，前三个主成分就是大于1的，所以我们只能说有三个主成分。另外，我们看到第一个主成分方差占所有主成分方差的46.9%，第二个占27.5%，第三个占15.0%。这三个累计达到了89.5%。</li>
-</ul>
-<img src="/2015/09/15/spss如何做主成分分析/caef76094b36acafbf1d462c7cd98d1000e99c65.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
-<ul>
-<li>。</li>
+<li><p>写自己的模块：模块就是一个py文件，里面可以写函数或者类。通过引入模块，你就可以使用该模块下的所有方法和属性。增加了代码的可读性和易维护性。</p>
+</li>
+<li><p>建立一个工具栏按钮：想一下，只要你点击按钮就能执行一段python代码，替你搞定繁琐的工作。我们可以开发一个按钮，将其置于工具栏，用的时候直接点击工具栏上的按钮即可，这个我们以后会详细介绍。</p>
+</li>
 </ul>
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
@@ -290,13 +270,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/">
-                spss逻辑回归中哑变量的设置和分析方法
+            <a href="/2016/07/05/excel怎样隐藏公式/">
+                excel怎样隐藏公式
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月15日</span>
+                <span class="date">2016年07月05日</span>
             
             
             
@@ -305,45 +285,33 @@
 
     
         <div class="content">
-            <p>逻辑回归中，有些自变量是分类变量，同时有两个以上的分类，这就导致了我们在做回归的时候就默认的把该变量当成了等距数据，最后造成了更大的误差。哑变量就是要解决这个问题，下面是具体的方法。<br>方法/步骤</p>
+            <p>我们看看下面的这个工作表，点击一个有公式单元格，在公式栏就会出现单元格的公式，有时候我们不想让别人知道我们的计算方法，所以有必要隐藏公式，隐藏公式的具体方法如下：<br>步骤/方法</p>
 <ul>
-<li>在spss中打开数据，确定要设置哪个变量为哑变量以后，我们打开逻辑回归对话框，操作方法：analyse–regression–binary logistic</li>
+<li>打开一个工作表，在D2单元格输入一个公式，公式任意，我们的目的就是要隐藏这个公式</li>
 </ul>
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/8644ebf81a4c510f1d0e5ef76059252dd52aa511.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2016/07/05/excel怎样隐藏公式/377adab44aed2e7391c6458a8701a18b87d6fa6d.jpg" alt="excel怎样隐藏公式" title="excel怎样隐藏公式">
 <ul>
-<li>将是否吸烟这个变量放到因变量中，将种族放到自变量中，如图所示</li>
+<li>点击工作表的左上角的位置，如图所示，选中整个工作表，右键单击工作表，选择【设置单元格格式】</li>
 </ul>
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/63d0f703918fa0ecac9ddae0269759ee3c6ddb81.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2016/07/05/excel怎样隐藏公式/6159252dd42a283469bff5ad5bb5c9ea15cebf7f.jpg" alt="excel怎样隐藏公式" title="excel怎样隐藏公式">
 <ul>
-<li>选择变量进入方程的方法是enter，因为所有的哑变量必须是同时进入，否则就没有统计学意义了。</li>
+<li>在设置单元格格式对话框中，我们切换到【保护】面板，然后点击【隐藏】，点击确定按钮。返回到工作表</li>
 </ul>
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/5882b2b7d0a20cf4d723403276094b36adaf99a8.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2016/07/05/excel怎样隐藏公式/37d3d539b6003af35ca31fc6352ac65c1038b67f.jpg" alt="excel怎样隐藏公式" title="excel怎样隐藏公式">
 <ul>
-<li>接下来要设置哑变量了，点击categrio按钮，打开变量分类对话框</li>
+<li>接着我们在菜单栏上执行：审阅–保护工作表</li>
 </ul>
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/ac345982b2b7d0a2e986ba70cbef76094a369a94.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2016/07/05/excel怎样隐藏公式/c75c10385343fbf2df356585b07eca8065388f7f.jpg" alt="excel怎样隐藏公式" title="excel怎样隐藏公式">
 <ul>
-<li>将要设置哑变量的变量放入右侧窗口中</li>
+<li>弹出了保护工作表对话框，我们勾选如图所示的选项，然后输入保护密码。点击确定</li>
 </ul>
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/80cb39dbb6fd5266819582f9ab18972bd50736a4.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2016/07/05/excel怎样隐藏公式/5243fbf2b2119313df5a3c1665380cd791238d7f.jpg" alt="excel怎样隐藏公式" title="excel怎样隐藏公式">
 <ul>
-<li>到了最关键的部分，我们要选择哪个分类作为参考分类，设置参考分类必须使参考分类有意义，比如这个例子中，种族类别包括黑人、白人和其他种族，那么其他种族一般被设置为参考分类，那么你怎么知道参考分类是第一个还是最后一个呢，后面要设置last和first。下面一个步骤告诉你</li>
+<li><p>弹出确认密码对话框，再次输入刚才的密码，点击确定。</p>
+</li>
+<li><p>回到工作表，点击D2单元格，在公示栏中已经没有公式了，这样就可以保护公式了。</p>
+</li>
 </ul>
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/622762d0f703918f02e48427513d269759eec422.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
-<ul>
-<li>回到变量视图中，找到种族这个变量，在value中可以查看变量值，我们看到其他种族这个分类为3，上面那一步应该设置为last</li>
-</ul>
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/9f2f070828381f3067e83444a9014c086f06f06e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/6f061d950a7b0208ed38860c62d9f2d3562cc86e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/b8389b504fc2d5627cf46800e71190ef77c66c5b.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
-<ul>
-<li>点击ok，开始输出统计结果</li>
-</ul>
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/dcc451da81cb39dbfb58dfbbd0160924aa183046.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
-<ul>
-<li>输出了一大堆数据，我们不用管，因为这里要教大家如何分析哑变量，所以直奔主题，找到variables in the equation表，这个表中，你可以看到有race（1）和race（2）这两个变量，他们就是race的哑变量，B是系数，因为他们都是跟其他种族相比，图中的数据可以看到，白种人比其他种族的人更容以吸烟，黑种人比其他种族更容易吸烟，白种人和黑种人相比，黑种人可能比白种人更容易吸烟，但是需要进一步的检验。</li>
-</ul>
-<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/77c6a7efce1b9d16fc37228cf3deb48f8d54646e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -359,13 +327,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/">
-                没有数据分析功能怎么办：[1]Excel数据分析
+            <a href="/2016/07/05/pandas教程：[28]散点图添加趋势线/">
+                pandas教程：[28]散点图添加趋势线
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月11日</span>
+                <span class="date">2016年07月05日</span>
             
             
             
@@ -374,35 +342,41 @@
 
     
         <div class="content">
-            <p>Excel怎么做回归？Excel怎么做方差分析？Excel怎么做相关检验？Excel怎么聚类分析？Excel怎么做贝叶斯估计？好吧，这一切都可以在数据分析选项中实现，不过，Excel默认安装时可能没有数据分析选项，我们可以自己设置一下让数据分析选项出现，下面是具体的操作：</p>
+            <p>上一篇文章我们介绍了绘制散点图的过程，现在我们要给散点图添加一个趋势线，从而直观的看到数据的变化趋势，下面来看看具体的过程：</p>
 <ul>
-<li>首先打开Excel，点击左上角的【文件】，我用的是Excel2013，如果你是用的是其他版本，应该是点击左上角的office按钮</li>
+<li>引入相关的模块</li>
 </ul>
-<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/b25d9901a18b87d616455b4f060828381f30fd18.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/d7c9ca3f8794a4c20871e95a0df41bd5ad6e3935.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
 <ul>
-<li>打开了Excel的office菜单，我们点击选项按钮，如图所示</li>
+<li>读取数据，并打印出来前五行数据<br>这是我们看到的数据</li>
 </ul>
-<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/0b3a1c087bf40ad122e337b3562c11dfa9ecce18.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/aa251d4f78f0f73634cb42700955b319ebc4134e.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/389aa8fd5266d016884b9059942bd40735fa3535.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
 <ul>
-<li>在选项对话框中，切换到加载项这个页面</li>
+<li>使用ols进行回归拟合，实际上是建立了parent为自变量的线性回归方程</li>
 </ul>
-<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/38403f3fb80e7beccfddf3b12e2eb9389b506b18.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/8367d1fc1e178a821f0971d1f503738da977e84f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
 <ul>
-<li>在管理栏中，选择“Excel加载项”，然后点击转到按钮，打开了加载宏的对话框</li>
+<li>先绘制一个简单的散点图</li>
 </ul>
-<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/d8b8c92a6059252db924ed54359b033b5bb5b974.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/734f12f3d7ca7bcbec4ec95ebd096b63f624a84f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
 <ul>
-<li>在这里我们需要勾选“分析工具库”，这样就可以使用分析工具了。如果我们想要在vba中使用分析工具，还需要勾选下面的选项【分析工具库-vba】，点击确定按钮</li>
+<li>接着绘制拟合直线</li>
 </ul>
-<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/8bc3a7014a90f60352b66c173812b31bb051ed19.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/d872d695d143ad4b417c48b181025aafa40f0635.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
 <ul>
-<li>好了，怎么找到分析工具库呢？在数据选项下，找到数据分析栏，点击数据分析就可以看到所有的数据分析工具了</li>
+<li>查看绘制出来的图</li>
 </ul>
-<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/425773224f4a20a41018cc9791529822720ed019.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/1b0d4f0fd9f9d72a93511e6cd72a2834349bbb4f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
 <ul>
-<li>这个对话框就是所有的分析工具，可以满足基本的描述和预测统计</li>
+<li>上面第六步用到了lm.fittedvalues，他其实是一个Series（根据回归方程得到的预测值），我们来查看一下它的数据和类型。</li>
 </ul>
-<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/0db2c9ca7bcb0a46ad247b696a63f6246b60af19.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/d66b7e59252dd42ade3c0fda003b5bb5c9eab84f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/c8ab0bce36d3d539480801b23987e950352ab04f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
+<ul>
+<li>最后绘制得到的散点图（带趋势线）是酱紫的。</li>
+</ul>
+<img src="/2016/07/05/pandas教程：[28]散点图添加趋势线/11794d43fbf2b2119b1a8b3fc98065380cd78e4f.jpg" alt="pandas教程：[28]散点图添加趋势线" title="pandas教程：[28]散点图添加趋势线">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -418,13 +392,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/">
-                SPSS实例：[34]二分类变量关联程度的度量
+            <a href="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/">
+                Excel2013：[24]柱形图如何添加基准线
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月11日</span>
+                <span class="date">2016年07月05日</span>
             
             
             
@@ -433,39 +407,59 @@
 
     
         <div class="content">
-            <p>现在有一个食物中毒的问题，我们想要知道吃了某种食物的人是否更容易中毒呢？看一下现在的数据。看food变量，我用数字0代表没吃食物，用数字1代表吃了某种食物；看posion变量，我使用0表示没中毒，用1表示中毒了。频率就不解释了，你懂。</p>
+            <p>看下面的图，为了一眼看到与几个线的差距，我给柱形图添加了一个基准线，这个基准线怎么做的呢？其实是又添加了一列数据作为及格线，然后又给他添加了一个趋势线，就成了现在的及格线，下面是具体的过程：</p>
 <ul>
-<li>使用频率对case进行加权。这个说过很多遍了，不懂的人去看这里的加权部分：<a href="http://jingyan.baidu.com/article/9113f81b2e988c2b3214c70f.html" target="_blank" rel="external">http://jingyan.baidu.com/article/9113f81b2e988c2b3214c70f.html</a></li>
+<li>我们本来要绘制的柱形图只有一列数据，也就是得分这一列数据，为了画基准线，我们增加一个及格线</li>
 </ul>
-<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/a84052086e061d959af7728f79f40ad163d9ca91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/a005b3345982b2b74402b7bc33adcbef77099bee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
 <ul>
-<li>加权ok以后，我们找到交叉表分析</li>
+<li>假如及格线都是4，我们快速填充好</li>
 </ul>
-<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/1e71f724b899a901c1501e811f950a7b0308f5e5.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/4a77b2af2edda3cce179365803e93901203f92ee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
 <ul>
-<li>把两个变量分别放入不同的框中</li>
+<li>选中两列数据，添加柱形图</li>
 </ul>
-<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/6391e903918fa0ec977621ba249759ee3c6ddb91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/814b07d8bc3eb135e08039c3a41ea8d3fc1f44c0.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
 <ul>
-<li>点击统计量按钮，我们来设置一下输出的统计量</li>
+<li>插入的柱形图是酱紫的</li>
 </ul>
-<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/507c389759ee3d6df1a3c27c41166d224e4adee5.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/d089b986c9177f3e8673727572cf3bc79e3d56c0.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
 <ul>
-<li>我们选择Risk指数，也就是风险评估，当然你也得选择卡方</li>
+<li>我们点击蓝色的柱子，然后右键单击，从菜单中选择【设置数据系列格式】</li>
 </ul>
-<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/08b68e529822720ea37fa74d79cb0a46f31fab91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/5d212aa85edf8db108b3f21c0b23dd54574e74ee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
 <ul>
-<li>回到主界面，点击ok按钮，开始处理数据</li>
+<li>在右侧打开一个对话框，我们设置系列重叠为百分之百</li>
 </ul>
-<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/bf487563f6246b60b4bff7c3e9f81a4c500fa291.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/b29f8282d158ccbfa2213b421bd8bc3eb03541ee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
 <ul>
-<li>先看卡方检验结果，卡方显示显著，表示是否吃某种食物与中毒与否是相关的。</li>
+<li>现在图变成了这个样子</li>
 </ul>
-<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/1b0d4f0fd9f9d72adfd555aad62a2834359bbb91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/9f1011b30f2442a7d44873ddd343ad4bd01302c0.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
 <ul>
-<li>接着看风险评估，OR值如图所示，它表示吃了某种食物的人比没有吃该事物的人中毒的概率高出24倍</li>
+<li>接着选中红色的柱子</li>
 </ul>
-<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/f76575600c33874451a06acb530fd9f9d62aa0e5.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/3a86813df8dcd10052017659708b4710b8122fee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>在右侧的属性窗口设置：填充为无，边框为实线，设置一下边框颜色</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/4651a712c8fcc3ce2c5d474b9045d688d53f20ee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>现在变成了酱紫</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/ac2fc3c451da81cbc77b0db55066d016082431ee.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>接着我们还是选中红色柱子</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/8a95ad1c8701a18bbead9c379c2f07082938fec1.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>右键单击，然后选择【添加趋势线】</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/29790130e924b899e87af7406c061d950b7bf6c1.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
+<ul>
+<li>出来的效果图就是酱紫了。</li>
+</ul>
+<img src="/2016/07/05/Excel2013：[24]柱形图如何添加基准线/1cd4147b02087bf442aad991f0d3572c10dfcfc1.jpg" alt="Excel2013：[24]柱形图如何添加基准线" title="Excel2013：[24]柱形图如何添加基准线">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -481,13 +475,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/03/sublime教程：[2]多重选择 编辑/">
-                sublime教程：[2]多重选择 编辑
+            <a href="/2016/07/01/numpy函数：[10]ones和empty创建数组/">
+                numpy函数：[10]ones和empty创建数组
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月03日</span>
+                <span class="date">2016年07月01日</span>
             
             
             
@@ -496,35 +490,35 @@
 
     
         <div class="content">
-            <p>sublime非常著名的功能就是多重选择多重编辑，我们可以同时对多个词、变量进行编辑，非常方便高效，今天我们来玩一玩这个技能。</p>
+            <p>使用ones可以创建任意维度和元素个数的数组，其元素均为1。empty函数的使用方法一样，只是它创建的是数组所有元素均为空，所以它是速度最快的创建数组的方法。</p>
 <ul>
-<li>多重选择，使用“Ctrl+D”可以选择光标所在词，再按“Ctrl+D”可以继续选择相同的词，我们来看一下效果：</li>
+<li>先从numpy中引入所有</li>
 </ul>
-<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/bf487563f6246b60a1a3f44ee1f81a4c510fa218.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<img src="/2016/07/01/numpy函数：[10]ones和empty创建数组/d56b3634349b033bff9b584517ce36d3d439bddb.jpg" alt="numpy函数：[10]ones和empty创建数组" title="numpy函数：[10]ones和empty创建数组">
 <ul>
-<li>如果发现自己选多了，可以使用“Ctrl+U”退回上一步，效果如下：</li>
+<li>接着，我们使用ones创建一个包含5个元素的一维数组，其元素均为1</li>
 </ul>
-<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/79b1e936afc37931570ec713e1c4b74543a91162.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<img src="/2016/07/01/numpy函数：[10]ones和empty创建数组/f35ea0096b63f624fd6e9d9c8544ebf81a4ca33b.jpg" alt="numpy函数：[10]ones和empty创建数组" title="numpy函数：[10]ones和empty创建数组">
 <ul>
-<li>如果已经选择了多个词，我们就可以进行多重编辑了：</li>
+<li>ones创建的数组数据类型默认为浮点型，我们可以通过第二个参数来设置其数据类型</li>
 </ul>
-<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/566d0fdfa9ec8a13edf316dafd03918fa1ecc0e4.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<img src="/2016/07/01/numpy函数：[10]ones和empty创建数组/0d729944ebf81a4cca014856d52a6059252da63b.jpg" alt="numpy函数：[10]ones和empty创建数组" title="numpy函数：[10]ones和empty创建数组">
 <ul>
-<li>我们可以使用“Ctrl + L”一次选中光标所在的整行：</li>
+<li>假如我们创建一个2维数组，就要用到列表作为参数。三维数组以此类推</li>
 </ul>
-<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/7ac880510fb30f240715a339c295d143ad4b0339.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<img src="/2016/07/01/numpy函数：[10]ones和empty创建数组/1b0d4f0fd9f9d72afe57b482d62a2834349bbb3b.jpg" alt="numpy函数：[10]ones和empty创建数组" title="numpy函数：[10]ones和empty创建数组">
 <ul>
-<li>有时候，我们要编辑的内容处于连续的区域内，这时候我们可以选中所有的行，然后按下“Ctrl + Shift + L”，将光标分散到多个行，然后同时编辑。</li>
+<li>多维数组也可以改变数据类型</li>
 </ul>
-<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/f9589818367adab42509597981d4b31c8601e4f4.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<img src="/2016/07/01/numpy函数：[10]ones和empty创建数组/c8ab0bce36d3d5391f0eab5c3887e950352ab03b.jpg" alt="numpy函数：[10]ones和empty创建数组" title="numpy函数：[10]ones和empty创建数组">
 <ul>
-<li>我们还可以把选中的多行合并成一行，行之间以空格隔开，按快捷键“Ctrl + J”</li>
+<li>接着我们用empty试试创建数组</li>
 </ul>
-<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/0e655ca7d933c8959897d441db1373f0830200db.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<img src="/2016/07/01/numpy函数：[10]ones和empty创建数组/3bc6f750352ac65cbf36c2ecf9f2b21193138a3b.jpg" alt="numpy函数：[10]ones和empty创建数组" title="numpy函数：[10]ones和empty创建数组">
 <ul>
-<li>缩进可以使用“Ctrl + ]”, 取消缩进可以使用“Ctrl + [”，我们来看一下效果：</li>
+<li>和ones的使用方法是一样的。empty创建的数组中，包含元素均为无意义的数值</li>
 </ul>
-<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/73ca5910b912c8fce7f2bef7f6039245d6882143.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<img src="/2016/07/01/numpy函数：[10]ones和empty创建数组/969cbf44ad3459820f99410d0ef431adcaef84db.jpg" alt="numpy函数：[10]ones和empty创建数组" title="numpy函数：[10]ones和empty创建数组">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -540,13 +534,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/">
-                spss20.0配对样本如何进行平均数差异检验
+            <a href="/2016/07/01/spss多重共线性的诊断方法/">
+                spss多重共线性的诊断方法
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月03日</span>
+                <span class="date">2016年07月01日</span>
             
             
             
@@ -555,42 +549,33 @@
 
     
         <div class="content">
-            <p>用这个方法之前先要确定你的数据是否适用于配对样本t检验，一般这样的数据来自同一个人，但是是分两次测量得到的，或者虽然是来自两个人，但是他们是经过匹配的，可以认为两个人在研究的变量上没有差异。<br>方法/步骤</p>
+            <p>spss诊断多重共线性是在多重线性回归的时候容易出现的一个问题，他指的是多个变量可能高相关，造成了模型方程的不稳定，一般是在方程求出来以后，发现方程的问题，然后进行的方程的诊断，下面是诊断多重共线性的步骤:<br>方法/步骤</p>
 <ul>
-<li>打开spss导入数据，然后在菜单栏上执行：analyse–compare means–paired samples t test</li>
+<li>多重共线性的诊断是在回归中进行的，所以先打开回归的对话框：analyse–regression–linear，打开线性回归对话框</li>
 </ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/29381f30e924b8996cf21bbd6e061d950b7bf66d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<img src="/2016/07/01/spss多重共线性的诊断方法/d1160924ab18972b3fb4c029e6cd7b899f510a43.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
 <ul>
-<li>你会看到如下所示的对话框，这里我们要看好了怎么对变量进行配对，先从左侧的列表里选择一个变量，比如选择triglyceride这个变量，点击如图所示的箭头，添加到右侧的列表</li>
+<li>将自变量因变量都放到各自的位置，然后点击statistic</li>
 </ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/6f061d950a7b0208b0075d6462d9f2d3562cc86d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<img src="/2016/07/01/spss多重共线性的诊断方法/d000baa1cd11728b96f14cc1c8fcc3cec2fd2c71.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
 <ul>
-<li>接下来找到与上面的那个变量相配对的另一个变量final triglyceride，添加到variable2</li>
+<li>在该对话框中，有一个多重共线性诊断的选项，勾选他，如图所示，点击continue按钮，返回主对话框</li>
 </ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/060828381f30e9247c62feb44c086e061c95f775.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<img src="/2016/07/01/spss多重共线性的诊断方法/63d0f703918fa0ec326ca4ee269759ee3c6ddbae.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
 <ul>
-<li>同样的方法，把体重这个配对变量放到配对变量列表</li>
+<li>点击ok按钮，开始输出诊断结果</li>
 </ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/63d0f703918fa0ecd0090688269759ee3c6ddb6d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<img src="/2016/07/01/spss多重共线性的诊断方法/b812c8fcc3cec3fd2ae26796d688d43f86942771.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
 <ul>
-<li>点击ok按钮，开始进行数据处理</li>
+<li>我们先来看这两个参数，特征根（Eigenvalue）：多个维度特征根约为0证明存在多重共线性；条件指数（Condition Index）：大于10时提示我们可能存在多重共线性</li>
 </ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/03087bf40ad162d93c28009911dfa9ec8b13cd75.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<img src="/2016/07/01/spss多重共线性的诊断方法/279759ee3d6d55fbf26db6c56d224f4a21a4ddae.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
 <ul>
-<li>你会看到下面的这个统计结果，先来分析第一个表格，关键的数据是均值，你会看到triglyceride这个变量前后的值的变化，从138到124大概下降了14，这是大概的一个数字，并不能说明这个差值是有效的</li>
-</ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/279759ee3d6d55fb6c0814a36d224f4a21a4dd6d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<ul>
-<li>第二个表格展示的是配对样本之间的相关系数，我们可以看到体重的相关系数为0.996，而且sig值达到了0.000，这是一个非常完美的数据，这说明实验处理对体重的影响是一致的。但是上面的这对变量却没有显示出相关关系。</li>
-</ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/a8ec8a13632762d022f8c63aa0ec08fa503dc675.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<ul>
-<li><p>最后我们要看第三个表格，先看均值的差异表明实验前后数据发生了变化，而后面的sig值则说明这个变化是否有效，因为第一个sig值超过了0.05，所以结果是不显著的，不能认为实验是有效的。而第二个sig为0.000，这说明实验的处理效果显著，可以认为该处理方法能够有效的减轻体重</p>
+<li><p>接着来看相关系数矩阵，找到数值接近1的相关，这也提示出可能存在多重共线性。</p>
 </li>
 <li></li>
 </ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/908fa0ec08fa513dfc6c0e5b3d6d55fbb3fbd975.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/21a4462309f790527ed125bb0cf3d7ca7acbd56d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<img src="/2016/07/01/spss多重共线性的诊断方法/7c1ed21b0ef41bd54d8f281751da81cb38db3d71.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -606,13 +591,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/">
-                spss做因素分析的时候如何输出因素值并形成变量
+            <a href="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/">
+                Excel2013：[49]日期坐标轴删除周六日
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年09月01日</span>
+                <span class="date">2016年07月01日</span>
             
             
             
@@ -621,38 +606,35 @@
 
     
         <div class="content">
-            <p>假如因素分析的时候我们会用到因素的值，比如根据因素的值进行排序，那么我们就需要用到save as variables过程。下面我们就要介绍一下如何使用这个过程。<br>工具/原料</p>
+            <p>如果坐标轴是日期类型的数据，那么Excel会自动的填充缺少的日期，这样的图表看起来就不是连续的，在某些日期中就会出现空白，我们看一下下面的例子就知道了。</p>
 <ul>
-<li>spss 20.0<br>方法/步骤</li>
+<li>我们来看一下，由于商店在周六日休息，所以在周六日就没有营业额，我们使用这样的数据来插入一个直方图</li>
 </ul>
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/faacb564034f78f0cdaa33ae7b310a55b2191c8e.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
 <ul>
-<li>准备好spss中的数据，然后在菜单栏上执行：analyse–dimension reduction–factor</li>
+<li>在菜单栏选择【插入】【直方图】</li>
 </ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/b03533fa828ba61e01a6f5f84134970a314e5998.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/aa251d4f78f0f736945fe55c0855b319eac4138e.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
 <ul>
-<li>将用于因素分析的变量放入variables框中</li>
+<li>我们看一下插入的数据，系统自动填充了没有的日期，造成这种难看的直方图</li>
 </ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/e824b899a9014c08787915720a7b02087af4f4a2.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/020e66f0f736afc345ad9638b119ebc4b645128e.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
 <ul>
-<li>点击scores按钮，设置要输出的变量</li>
+<li>我们下面来改善这种情况，先选中横坐标</li>
 </ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/a686c9177f3e67097c9f78283bc79f3df9dc554d.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/3b6833f5e0fe992561e0c00d36a85edf8cb17144.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
 <ul>
-<li>打开score对话框，勾选save as variables，就是这个选项用于输出因素分数，点击continue按钮</li>
+<li>在坐标轴上右键单击选择【设置坐标轴格式】</li>
 </ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/cf1b9d16fdfaaf517b28bc688c5494eef11f7a19.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/2cb4fefe9925bc3182b1a8c55cdf8db1ca137044.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
 <ul>
-<li>点击ok开始输出数据，并在变量视图输出三个新的变量</li>
+<li>在设置窗口，我们看到了，默认的选项是【根据数据自动选择】，我们将其更改为【文本坐标轴】，这样它就不会自动填充没有的日期了</li>
 </ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/0ff41bd5ad6eddc49fda882c39dbb6fd52663323.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/9864a2315c6034a8be0e11dcc913495408237644.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
 <ul>
-<li>如图所示，你会看到三个多出来的变量</li>
+<li>这是更改后的直方图，空白数据已经被删掉了。</li>
 </ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/6159252dd42a28347e930adc5bb5c9ea15cebf2b.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
-<ul>
-<li>通常我们要根据因素的值来对case进行排序，方法是选中一个因素的所有值，然后右键单击，选择sort descending，你会看到数据从大到小的排序</li>
-</ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/5ab5c9ea15ce36d38535bfe73af33a87e950b137.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/b258f5c4b74543a9c0ba53911c178a82b801148e.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -668,13 +650,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/">
-                spss因素分析如何对对因子载荷矩阵进行排序
+            <a href="/2016/07/01/DataNitro：[4]CellRange对象/">
+                DataNitro：[4]CellRange对象
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年08月23日</span>
+                <span class="date">2016年07月01日</span>
             
             
             
@@ -683,28 +665,60 @@
 
     
         <div class="content">
-            <p>在确定因子意义的时候需要看变量和因子的关系，如果比如某个因子在某个变量上的载荷为0.9，我们可以认为这个变量和因子的关系很紧密，可以用这个变量来解释这个因子，对载荷进行排序就可以帮助我们一眼看到因子之间的不同。<br>方法/步骤</p>
+            <p>CellRange在之前介绍过，我们大概也知道CellRange就是几个单元格组成的区域，今天来系统地看一下CellRange有哪些方法和属性。</p>
 <ul>
-<li>在spss中准备好数据，然后在菜单栏上执行analyse–dimension reduction–factor，打开factor analyse对话框</li>
+<li>创建或者获取一个CellRange，我们可以用这些写法：注意print只是我为了输出这些CellRange的名字，与今天的学习内容无关。下面三种写法意义相同。</li>
 </ul>
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/024f78f0f736afc3d61343b1b319ebc4b64512c2.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/b94f65ec54e736d1fb7b355a98504fc2d562693d.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
 <ul>
-<li>将所有需要分析的变量放到variables框中，点击箭头按钮可以添加变量</li>
+<li>上一种写法代表了一个连续区域，下面的写法代表不连续区域：</li>
 </ul>
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/838ba61ea8d3fd1f2b45deee304e251f94ca5f91.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/7d98931001e93901eee5346c78ec54e737d196ba.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
 <ul>
-<li>点击option按钮，打开选项对话框</li>
+<li>通过名称获取一个区域：</li>
 </ul>
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/0df3d7ca7bcb0a460845f7ed6b63f6246a60affb.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/9f6e190828381f30856335fbaa014c086e06f02f.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
 <ul>
-<li>在选项对话框中，找到coefficient display format，勾选下面的sorted by size，这样设置就是为了让输出的因素载荷矩阵按照因素载荷的大小进行排序，方便我们查看结果</li>
+<li>我们还可以指明区域所在的sheet</li>
 </ul>
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/bd315c6034a85edfd9ca82f749540923dc54759b.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/5327ce160924ab18a639596536fae6cd7b890b71.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
 <ul>
-<li>我们看到下面的两个表格，都是旋转因子以后的载荷矩阵，他们的区别是，第二个表格中的载荷已经经过了排序，我们可以直观的看到不同的变量在各个因子上的载荷，并将变量分类。</li>
+<li>迭代的方式输出所有单元格：</li>
 </ul>
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/b999a9014c086e06cb72439f02087bf40bd1cb08.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/1c950a7b02087bf4d0362b3df2d3572c10dfcf08.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/a75fb6d3fd1f41349197bd2c261f95cad0c85e84.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>一个区域内包含多少单元格：可以用len()</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/27d647ee3d6d55fb3563ce746e224f4a21a4ddf8.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>像列表一样，我们可以使用索引来得到区域内任意一个单元格：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/b29f8282d158ccbf97200d681ad8bc3eb0354181.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li><p>这篇文章略去的属性有：</p>
+</li>
+<li><p>value,formula,color,hyperlink,comment,font，row,col,position,name,sheet，table，这些与Cell属性相同，参考上一篇文章</p>
+</li>
+<li><p>合并两个区域，用加号就好了</p>
+</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/6a22e8246b600c331d16659a194c510fd9f9a132.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>将Cell添加进CellRange</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/cf5a8316fdfaaf51128b3aed8f5494eef01f7a3d.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>将Cell从CellRange中删除：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/72ccb7773912b31beaca767b8518367adbb4e1fb.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li><p>其他方法：</p>
+</li>
+<li><p>如：claer,copy_from,copy_format_from,is_empty,set_name等</p>
+</li>
+<li><p>#可以参考Cell的方法</p>
+</li>
+</ul>
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -720,13 +734,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2015/08/17/spss如何画出交互作用图/">
-                spss如何画出交互作用图
+            <a href="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/">
+                Python教程：[20]urlsplit和urlparse的区别
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2015年08月17日</span>
+                <span class="date">2016年06月23日</span>
             
             
             
@@ -735,35 +749,34 @@
 
     
         <div class="content">
-            <p>如图所示，在研究中我们经常会用到这样一个线形图，如果两条线相互平行，我们就认为他们是没有交互作用的，如图相互交叉就认为是有交互作用的。下面我就交给大家如何画这个图：<br>工具/原料</p>
+            <p>urlsplit和urlparse非常相像，用法基本一致，但是他们有略微的不同，split函数在分割的时候，path和params属性是在一起的，我们看下面的例子。</p>
 <ul>
-<li>spss20.0<br>方法/步骤</li>
+<li>先用urlparse函数来分割url</li>
 </ul>
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/55a628d12f2eb938980b2fdfd7628535e5dd6f7d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/d4239b35e5dde71199b416dba5efce1b9d16617d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
 <ul>
-<li>首先要打开主对话框，如图所示，在菜单栏上执行：analyse–GLM–univariate</li>
+<li>将结果打印出来</li>
 </ul>
-<img src="/2015/08/17/spss如何画出交互作用图/8326cffc1e178a827ed87161f603738da877e80f.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/cf5a8316fdfaaf51e385d4928e5494eef01f7a7d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
 <ul>
-<li>将自变量和因变量放入格子的狂，如图所示，上面的框是因变量，点击plots按钮，我们来设置输出的图</li>
+<li>我们看到输出的结果，有params这一项</li>
 </ul>
-<img src="/2015/08/17/spss如何画出交互作用图/d0c8a786c9177f3ee754f5cc70cf3bc79e3d568a.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
-<img src="/2015/08/17/spss如何画出交互作用图/eaf81a4c510fd9f9c5485ca8252dd42a2934a497.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/ae10eddeb48f8c5487b5900238292df5e0fe7f7d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
 <ul>
-<li>将两个自变量分别放入两个框中，如图所示，上面代表横坐标，下面的代表不同的曲线，</li>
+<li>接着使用urlsplit函数，可选参数不能输出，所以只能再前面加了以井号</li>
 </ul>
-<img src="/2015/08/17/spss如何画出交互作用图/9d82d158ccbf6c81ee412529bc3eb13532fa40f8.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/a75fb6d3fd1f4134a32e5053271f95cad1c85e46.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
 <ul>
-<li>点击add按钮，然后点击continue按钮，返回主对话框</li>
+<li><p>我们比较一下两个结果</p>
+</li>
+<li><p>urlparse函数</p>
+</li>
+<li><p>urlsplit函数</p>
+</li>
 </ul>
-<img src="/2015/08/17/spss如何画出交互作用图/f9dcd100baa1cd11fbd17be1b912c8fcc2ce2d8f.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
-<ul>
-<li>返回主菜单， 点击ok按钮，开始处理数据并输出结果</li>
-</ul>
-<img src="/2015/08/17/spss如何画出交互作用图/2cf5e0fe9925bc3102df08595edf8db1ca137074.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
-<ul>
-<li>如图所示，这就是输出的线形图了，很明显这个图证明两个自变量之间存在交互作用。当然要想得到确切的结果还得看输出的交互作用sig值</li>
-</ul>
-<img src="/2015/08/17/spss如何画出交互作用图/a1ec08fa513d2697af33019c55fbb2fb4216d80b.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/310f3b1f95cad1c89ea2a90a7d3e6709c93d5146.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/7e7f7909c93d70cf04e3ff20fadcd100baa12b46.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>

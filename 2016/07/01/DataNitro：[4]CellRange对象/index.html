@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataNitro：[4]CellRange对象"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>DataNitro：[4]CellRange对象 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/07/01/DataNitro：[4]CellRange对象/">
+                DataNitro：[4]CellRange对象
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>CellRange在之前介绍过，我们大概也知道CellRange就是几个单元格组成的区域，今天来系统地看一下CellRange有哪些方法和属性。</p>
+<ul>
+<li>创建或者获取一个CellRange，我们可以用这些写法：注意print只是我为了输出这些CellRange的名字，与今天的学习内容无关。下面三种写法意义相同。</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/b94f65ec54e736d1fb7b355a98504fc2d562693d.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>上一种写法代表了一个连续区域，下面的写法代表不连续区域：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/7d98931001e93901eee5346c78ec54e737d196ba.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>通过名称获取一个区域：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/9f6e190828381f30856335fbaa014c086e06f02f.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>我们还可以指明区域所在的sheet</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/5327ce160924ab18a639596536fae6cd7b890b71.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>迭代的方式输出所有单元格：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/a75fb6d3fd1f41349197bd2c261f95cad0c85e84.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>一个区域内包含多少单元格：可以用len()</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/27d647ee3d6d55fb3563ce746e224f4a21a4ddf8.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>像列表一样，我们可以使用索引来得到区域内任意一个单元格：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/b29f8282d158ccbf97200d681ad8bc3eb0354181.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li><p>这篇文章略去的属性有：</p>
+</li>
+<li><p>value,formula,color,hyperlink,comment,font，row,col,position,name,sheet，table，这些与Cell属性相同，参考上一篇文章</p>
+</li>
+<li><p>合并两个区域，用加号就好了</p>
+</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/6a22e8246b600c331d16659a194c510fd9f9a132.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>将Cell添加进CellRange</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/cf5a8316fdfaaf51128b3aed8f5494eef01f7a3d.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>将Cell从CellRange中删除：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/72ccb7773912b31beaca767b8518367adbb4e1fb.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li><p>其他方法：</p>
+</li>
+<li><p>如：claer,copy_from,copy_format_from,is_empty,set_name等</p>
+</li>
+<li><p>#可以参考Cell的方法</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/datanitro/">#datanitro</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

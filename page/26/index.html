@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/11/python教程：[76]mro()解析/">
+                python教程：[76]mro()解析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天在看django-xadmin源码的时候看到的一个mro方法，我这种小白还不太懂python里比较深入的内容，所以百度了很多文章来看，现在总结一下。</p>
+<ul>
+<li>这个方法用于返回某个类的基类以及基类的基类，我们举一个简单的例子：创建一个类A，然后调用mro，它返回了一个列表，列表元素是类A本身和它的基类</li>
+</ul>
+<img src="/2015/08/11/python教程：[76]mro()解析/d002b34bd11373f04c42a5a4a70f4bfbfbed0449.jpg" alt="python教程：[76]mro()解析" title="python教程：[76]mro()解析">
+<ul>
+<li>假如我们再创建一个类B，继承于A，然后调用mro，现在列表里多了内容，看到了吧，mro总是返回类本身和其基类的列表</li>
+</ul>
+<img src="/2015/08/11/python教程：[76]mro()解析/ac2fc3c451da81cb80aa49f65166d0160924317a.jpg" alt="python教程：[76]mro()解析" title="python教程：[76]mro()解析">
+<ul>
+<li>假如把类的继承关系弄的复杂一些，类C和类B都继承自A，D继承B和C，这时候调用D.mro，我们看到这时候列表的顺序为：D-B-C-A</li>
+</ul>
+<img src="/2015/08/11/python教程：[76]mro()解析/d048adde9c82d158444d938a830a19d8bd3e42fb.jpg" alt="python教程：[76]mro()解析" title="python教程：[76]mro()解析">
+<ul>
+<li>在负责一些，增加类E继承类A，F继承自E和D，然后调用F.mro，这时候你就可以看到类A总是列表的最后一个元素，列表的顺序是：F-E-D-B-C-A</li>
+</ul>
+<img src="/2015/08/11/python教程：[76]mro()解析/814b07d8bc3eb135be7d8287a51ea8d3fd1f4410.jpg" alt="python教程：[76]mro()解析" title="python教程：[76]mro()解析">
+<ul>
+<li>记住这个列表的顺序很有用，因为以后再复制的类调用的时候，可能会考虑到初始化类的顺序，它们遵循的就是mro的顺序</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/11/SPSS python教程：[1]安装Python Essentials/">
+                SPSS python教程：[1]安装Python Essentials
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这个系列教程是用来教大家如何使用python脚本来操作spss，使用脚本的好处是可以批量处理，如果你有很多数据要处理，他们的处理方法类似，那就需要用到脚本，可以自动化、智能化处理数据，大大减少数据分析的工作量，关于更多好处，你们可以参考spss的官方文档，这里不多少，开始介绍如何设置spss中的python插件：SPSS Python Essentials。</p>
+<ul>
+<li><p>我用的spss版本是22.0，也是最近为了使用SPSS Python Essentials才安装的这个版本，大家可以参考这篇文章，以便正确安装spss 22.0。【<a href="http://jingyan.baidu.com/article/3d69c55187d5faf0cf02d73f.html】" target="_blank" rel="external">http://jingyan.baidu.com/article/3d69c55187d5faf0cf02d73f.html】</a></p>
+</li>
+<li><p>安装好了spss22.0以后，如果你按照上面的安装教程进行的安装，SPSS Python Essentials就自动的安装在了你的spss22.0的安装目录下。接下来我们要进行必要的设置。</p>
+</li>
+<li><p>打开spss22的界面，打开编辑菜单下的【选项】</p>
+</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/ea85a94543a982266fc821b18882b9014b90ebd8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>切换到脚本选项下，我们设置一下缺省脚本语言为python，点击【应用】</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/f9589818367adab4e5d911d589d4b31c8601e4d8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>切换到【文件位置】选项下，设置python的位置，我们有两个选项，一个是随IBM SPSS安装的位置，这就是说，spss22在安装的时候自动安装了python2.7，如果我们想要使用这个python，就选择第一个选项；但是我现在有一个更好的建议，使用我们自己安装的python，也就是说在安装spss之前就有一个python安装好了，我现在想使用这个python，我们可以设置python的其他安装，然后找到这个python安装的目录，最后点击确定就可以了。为什么我建议使用第二种选择呢？因为我的python下有很多安装好的扩展包，需要在处理数据的时候调用，以后安装新的扩展包也很方便。如果使用是、随spss安装的python，还需要另行安装这些扩展包</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/8a95ad1c8701a18b32e218d99c2f07082938fed8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>设置完成以后，我们想要启动python的编辑窗口，需要在开始菜单中启动，如图所示。不能直接从python的安装目录里启动。</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/d35a10f41bd5ad6eaacc6e7c83cb39dbb6fd3c2b.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>另外，spss22还有一个bug，我们虽然设置了Python的主目录，但是在新建脚本的时候，还是用的随spss安装的python的shell。所以想要使用python脚本，你就从上面那个方面里启动python shell</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/90cebeec08fa513df4a366483f6d55fbb3fbd9d8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/05/numpy函数：[13]切片数组共享内存/">
+                numpy函数：[13]切片数组共享内存
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用切片的方法获取数组的一部分，并没有创建新的数组，而切片只是原始数组的一种视图，所以改变切片中的数值，也会改变原始数组的元素值，具体通过例子来看一下：</p>
+<ul>
+<li>先从Numpy中引用所有</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/8cf0d513495409233eb9c8e19058d109b2de491a.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>创建一个一位数组a</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/6dc09e0a19d8bc3e5f2aac55808ba61ea9d345d4.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>通过切片获取数组b</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/bd7faf3533fa828b54f3367cff1f4134960a5a1a.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>假如改变数组b中的元素的值</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/948bcfc8a786c9178321f8a6cb3d70cf3ac757d4.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>数组a相应的值也会发生变化</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/948bcfc8a786c91782d3f9a6cb3d70cf3ac7571a.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>假如把a全部赋值给c，也是一样的效果，还是改变了原数组的值</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/a28d62d98d1001e984ecbf90ba0e7bec55e7971a.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>想要保证原始数组的值不发生变化，我们最好使用copy方法获取数组c</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/fcbbb151f3deb48f58b90a41f21f3a292cf5781a.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>现在改变数组c的元素的值，数组a将不放生变化。</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/48151723dd54564e76474ea6b1de9c82d0584fd4.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/05/Python教程：[48]集合对象用法/">
+                Python教程：[48]集合对象用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>集合也就是set对象，关于什么是集合，你自己百度去，如果你知道什么是集合，我们下面就来看看如何在python中使用集合。这是介绍python集合的第一篇文章，下一篇还有更多内容，下一篇的链接：<a href="http://jingyan.baidu.com/article/63acb44afa8f2a61fdc17e50.html" target="_blank" rel="external">http://jingyan.baidu.com/article/63acb44afa8f2a61fdc17e50.html</a></p>
+<ul>
+<li>创建一个集合我们使用set，下面创建了一个空集合</li>
+</ul>
+<img src="/2015/08/05/Python教程：[48]集合对象用法/5202e5f2b21193135cdc931e67380cd790238d46.jpg" alt="Python教程：[48]集合对象用法" title="Python教程：[48]集合对象用法">
+<ul>
+<li>当然，你也可以创建一个已经包含了元素1,2,3的非空集合<br>再创建一个集合以备后用</li>
+</ul>
+<img src="/2015/08/05/Python教程：[48]集合对象用法/a1ad16fa513d2697e0b164f357fbb2fb4216d8fb.jpg" alt="Python教程：[48]集合对象用法" title="Python教程：[48]集合对象用法">
+<img src="/2015/08/05/Python教程：[48]集合对象用法/d1e312f431adcbef8cab12a8aeaf2edda2cc9f46.jpg" alt="Python教程：[48]集合对象用法" title="Python教程：[48]集合对象用法">
+<ul>
+<li>我们求一下两个集合的交集吧</li>
+</ul>
+<img src="/2015/08/05/Python教程：[48]集合对象用法/3c2c4bfbb2fb4316d37d16d422a4462308f7d3fb.jpg" alt="Python教程：[48]集合对象用法" title="Python教程：[48]集合对象用法">
+<ul>
+<li>求一下两个集合的合集吧</li>
+</ul>
+<img src="/2015/08/05/Python教程：[48]集合对象用法/b94f65ec54e736d1278de0a699504fc2d4626946.jpg" alt="Python教程：[48]集合对象用法" title="Python教程：[48]集合对象用法">
+<ul>
+<li>我们还可以用两个集合相减</li>
+</ul>
+<img src="/2015/08/05/Python教程：[48]集合对象用法/734f12f3d7ca7bcbc319ab81bc096b63f724a8fb.jpg" alt="Python教程：[48]集合对象用法" title="Python教程：[48]集合对象用法">
+<ul>
+<li>两个集合相减其实相当于这个</li>
+</ul>
+<img src="/2015/08/05/Python教程：[48]集合对象用法/e49cf91190ef76c6b54c97859f16fdfaae516746.jpg" alt="Python教程：[48]集合对象用法" title="Python教程：[48]集合对象用法">
+<ul>
+<li>当然，我们可以这样创建一个集合，单词中的每一个字母被当作了一个元素，进入集合。注意集合中只有一个l</li>
+</ul>
+<img src="/2015/08/05/Python教程：[48]集合对象用法/0d729944ebf81a4c82508067d52a6059242da6fb.jpg" alt="Python教程：[48]集合对象用法" title="Python教程：[48]集合对象用法">
+<ul>
+<li>下一篇接着介绍，今天先到这里</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/03/spss协方差分析如何进行事后两两比较/">
+                spss协方差分析如何进行事后两两比较
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> 在进行两两比较之前，我们最后先做一个协方差分析，在前面的文章讲了如何进行协方差分析，如果写反差分析显示出来了显著的结果，然后再进行两两的事后检验，下面是具体的过程：<br>方法/步骤</p>
+<ul>
+<li>先进行协方差分析，结果如果达到了显著水平，在进行两两比较，在菜单栏上执行analyze–general linear model–univariate</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/377adab44aed2e73568980d58701a18b86d6fae3.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>将自变量、因变量、斜变量都放到相应的位置，这里评定得分是因变量，培训方式是自变量、家庭指数是斜变量</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/37d12f2eb9389b501ecbe6ab8535e5dde7116e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击options按钮，进入子对话框</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/f2deb48f8c5494ee911609e02df5e0fe99257e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>将培训方式，也就是自变量放到右侧的列表里，勾选下面的描述统计和方差齐性检验，点击继续按钮</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/dc54564e9258d109c1d7af4bd158ccbf6c814d16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击model按钮，选择模型</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/a71ea8d3fd1f413416030387251f95cad1c85e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>选择full factorial，然后点击continue按钮，返回主对话框</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/c83d70cf3bc79f3d76d5e2c9baa1cd11728b2916.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击paste按钮，进入命令编辑窗口</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/b3119313b07eca8051663f1e912397dda04483e3.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>在这里你会看到很多代码，我们留下前三行，如图所示，然后删除其他的行</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/b7fd5266d01609240011a4e2d40735fae6cd3416.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>编辑下面的六行代码，使用的是lmatrix命令，我们知道培训方式有三个水平，所以要进行三次两两比较才能将所有的水平进行比较。</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/d50735fae6cd7b892f583c7a0f2442a7d9330e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击运行按钮，开始处理数据</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/9a504fc2d5628535b183d4d890ef76c6a6ef63e3.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li><p>在出来的结果中，我们主要看的是定制假设检验，因为上面的命令中用了三次LMATRIX，所以会有三个定制假设检验，我们主要看下面的sig值，如图所示，这个值小于0.05就可以认为是有差异的</p>
+</li>
+<li></li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/5bafa40f4bfbfbed6b6d308678f0f736afc31f16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/03/Excel2013：[58]文本日期如何改变样式/">
+                Excel2013：[58]文本日期如何改变样式
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>关于Excel的文本和日期格式的问题都很头疼，在开始今天这个实例之前建议你看看我之前写的一篇文章，主要讲了如何识别文本和日期格式、以及文本和日期的互转：<a href="http://jingyan.baidu.com/article/8cdccae965815c315413cdfc.html。今天我们用一个实例来说明上一篇文章讲到的知识点。" target="_blank" rel="external">http://jingyan.baidu.com/article/8cdccae965815c315413cdfc.html。今天我们用一个实例来说明上一篇文章讲到的知识点。</a></p>
+<ul>
+<li>根据上一篇文章我们知道，D列虽然显示的是日期格式，但是实际上它是文本，Excel并没有把它当日期，因为Excel无法识别这样的日期格式，只能当文本了。</li>
+</ul>
+<img src="/2015/08/03/Excel2013：[58]文本日期如何改变样式/245e8bcad1c8a78699a836196409c93d71cf50e3.jpg" alt="Excel2013：[58]文本日期如何改变样式" title="Excel2013：[58]文本日期如何改变样式">
+<ul>
+<li>为了转换为日期，那就需要让Excel识别它，使用替换的方法将其转换为2013-1-1的格式。也就是用“-”替换“-”。</li>
+</ul>
+<img src="/2015/08/03/Excel2013：[58]文本日期如何改变样式/e8112b2ac65c1038a52ab1d5b1119313b07e8916.jpg" alt="Excel2013：[58]文本日期如何改变样式" title="Excel2013：[58]文本日期如何改变样式">
+<ul>
+<li>你会发现它变成了这个样子</li>
+</ul>
+<img src="/2015/08/03/Excel2013：[58]文本日期如何改变样式/6398ecd3572c11df14a9c034602762d0f703c26a.jpg" alt="Excel2013：[58]文本日期如何改变样式" title="Excel2013：[58]文本日期如何改变样式">
+<ul>
+<li>现在，我们想要这个样式变一下，变成我们想要的2013-1-1的样式，同时单元格格式转换为文本。那我们用到了一个公式TEXT，在E2单元格输入公式=TEXT(D2,”yyyy-m-d”)，回车看一下结果。</li>
+</ul>
+<img src="/2015/08/03/Excel2013：[58]文本日期如何改变样式/fc5e5f34970a304e6eb7dfedd2c8a786c8175cd4.jpg" alt="Excel2013：[58]文本日期如何改变样式" title="Excel2013：[58]文本日期如何改变样式">
+<ul>
+<li>快速填充下面的单元格，这样就完成了所有的样式转换</li>
+</ul>
+<img src="/2015/08/03/Excel2013：[58]文本日期如何改变样式/11794d43fbf2b2116b31fb59c98065380cd78e4f.jpg" alt="Excel2013：[58]文本日期如何改变样式" title="Excel2013：[58]文本日期如何改变样式">
+<ul>
+<li>整个过程其实就是从文本到日期再到文本的过程。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/23/Excel2013：[28]countif函数用法大全/">
+                Excel2013：[28]countif函数用法大全
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>countif函数时我们经常用到的函数之一，经过组合它可以求得任何我们想要的计数结果，下面是具体的用法：</p>
+<ul>
+<li>假如我们要统计男女生的人数，我们可以在E5单元格输入公式=COUNTIF(A2:A21,”男”)；公式中A2:A21是我们计数的范围，第二个参数“男”表示对单元格中为男的计数</li>
+</ul>
+<img src="/2015/07/23/Excel2013：[28]countif函数用法大全/61183b2dd42a28344b75b77259b5c9ea14cebfbd.jpg" alt="Excel2013：[28]countif函数用法大全" title="Excel2013：[28]countif函数用法大全">
+<ul>
+<li>同样的，在F5单元格输入公式也可以求得女生人数：=COUNTIF(A2:A21,”女”)</li>
+</ul>
+<img src="/2015/07/23/Excel2013：[28]countif函数用法大全/d56b3634349b033bda5b7da317ce36d3d439bdbd.jpg" alt="Excel2013：[28]countif函数用法大全" title="Excel2013：[28]countif函数用法大全">
+<ul>
+<li>假如我们要统计成绩大于60的人数</li>
+</ul>
+<img src="/2015/07/23/Excel2013：[28]countif函数用法大全/35da1d3b5bb5c9ea9620829ad739b6003bf3b3bd.jpg" alt="Excel2013：[28]countif函数用法大全" title="Excel2013：[28]countif函数用法大全">
+<ul>
+<li>我们可以在单元格中输入公式=COUNTIF(B2:B21,”&gt;=60”)</li>
+</ul>
+<img src="/2015/07/23/Excel2013：[28]countif函数用法大全/dc15484e9258d10963cf29cbd358ccbf6c814d58.jpg" alt="Excel2013：[28]countif函数用法大全" title="Excel2013：[28]countif函数用法大全">
+<ul>
+<li>假如我们要计算一个区间内的人数，我们可以使用两个countif函数，运用减法就可以算出来，下面是计算成绩在60到65之间的个数</li>
+</ul>
+<img src="/2015/07/23/Excel2013：[28]countif函数用法大全/9dc3cf58ccbf6c81551bac91be3eb13533fa4058.jpg" alt="Excel2013：[28]countif函数用法大全" title="Excel2013：[28]countif函数用法大全">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/23/wxpython教程：[4]菜单中的图标/">
+                wxpython教程：[4]菜单中的图标
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们看到的菜单中多半是有一个图标的，那么今天我们就来做一个菜单，菜单选项左侧有一个图标。要达到这个目的我们必须手动创建一个选项。下面是今天代码的全部：由于这些大部分代码在之前的文章中有讲解，所以这篇文章就着重讲不同的部分。</p>
+<ul>
+<li>先创建一个选项：注意第二个参数设定了该选项的id，以后绑定方法的时候可以用id来表示该选项</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/0e655ca7d933c895c3031a14d21373f082020024.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>设置选项的图标用到了方法：SetBitmap，该方法需要传入一个Bitmap对象：exit.jpg是我自己做的一个图片</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/c9d4cf43ad4bd11366b0355d59afa40f4bfb0524.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>将创建好的选项添加到菜单</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/72b19c025aafa40f52bb4cb2a864034f78f01924.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>将选项与方法绑定，这样点击该菜单选项就能执行OnQuit动作。注意现在用id来表示跟哪个选项进行的绑定，因为我们在</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/55a628d12f2eb9383071f89dd6628535e5dd6f06.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>这是最后做出来的效果图</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/b25d9901a18b87d61b3c2670040828381f30fd20.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/19/amos21.0教程：[6]结构方程模型分析流程/">
+                amos21.0教程：[6]结构方程模型分析流程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>结构方程模型的分析遵循严格的步骤，在今天这一节我们着重探讨一下使用amos进行结构方程分析时需要的流程，下面这个是整个的流程图。</p>
+<ul>
+<li><p>第一个步骤是相关理论研究，这里主要要明白自己所做的是什么研究，主要的变量有哪些；查看前人的文献来考察这几个变量之间是否相关，正相关还是负相关，是否存在因果关系。当这几个变量的相互关系都基本了解以后，你可以进入下一个阶段了。</p>
+</li>
+<li><p>界定测量模型：前面的文章已经介绍过什么是测量模型了，如果你还不知道什么是测量模型，可以看下面参考资料的内容。界定测量模型首先你要知道那几个变量是通过测量得到的，比如主观幸福感需要使用主观幸福感量表来测定，如果有些变量没有成熟的量表来测定，你需要使用几个指标来作为操作定义，比如“学业成就”可以用四六级英语成绩和其他学习成绩的总分来计算。这个步骤主要的目的就是知道所有的变量都是如何测定的。为了让得到的模型具有可识别性，每个测量模型需要只有少两个指标变量。</p>
+</li>
+<li><p>界定结构模型：确定潜在变量之间的关系，绘制关系图。这时候你需要利用第一步中获得的只是来绘制关系图，也就是变量之间的关系。</p>
+</li>
+<li><p>测量抽样调查：这时候就是你做实验或者做调查的阶段了，从总体中随机抽样，然后根据测量模型对变量进行测定。得到数据。</p>
+</li>
+<li><p>模型参数判别：这时候你已经在amos中绘制好了结构方程模型的图形，图中出现的各个参数需要进行估计，这个过程就是得出各个路径的系数。</p>
+</li>
+<li><p>模型适配：根据得到的模型参数来判断模型是否合适。以后我们会专门介绍如何判断得到的模型是否合适，如果不合适该怎么做，现在你的知识有限，所以我们先不作介绍。这一步如果模型合适就可以进入下一步，如果模型不合适需要返回到第二步重新界定测量模型。</p>
+</li>
+<li><p>假如模型合适，这时候我们需要根据自己的专业知识来对结构方程模型进行解释，得出因果关系。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/17/amos21.0教程：[9]绘制测量模型/">
+                amos21.0教程：[9]绘制测量模型
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>经过前几篇文章的努力，我们终于到了真正的教程，今天就来教大家如何绘制测量模型，关于测量模型是什么，你可以参考前面的文章，有专门的介绍，现在我们就打开amos，开始绘制。</p>
+<ul>
+<li>打开amos，先新建一个文件，在菜单上执行：file–new</li>
+</ul>
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/b87985504fc2d56220352717e61190ef77c66cc8.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<ul>
+<li>接着我们看到这个按钮就是添加潜变量的按钮，点击一次，选中这个工具，然后在画布上拖动可以绘制一个椭圆，这就是潜变量了</li>
+</ul>
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/d478a8003af33a8794d6f4e0c75c10385243b556.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/969cbf44ad3459823c3111680df431adcaef8456.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<ul>
+<li>接着在椭圆上连续点击四次，可以绘制四个指标变量，得到下面这个图，我们看到这个图的第一个指标变量默认的路径系数是1，这是系统自动添加的，只是给测量一个标准，不必在意太多</li>
+</ul>
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/5202e5f2b211931335df0b4a64380cd790238d69.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<ul>
+<li>接着我们要调整格式，假如要调整指标变量，也就是矩形的大小，我们要先选中，选择如图所示的选择工具，依次点击矩形就可以将其选中，选中的矩形呈现蓝色边框</li>
+</ul>
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/8c511fe93901213f25afba2655e736d12e2e9569.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/fcbbb151f3deb48f3ef55524f11f3a292cf57869.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<ul>
+<li>接着我们看到有一个改变大小的工具，选中它，然后拖动矩形的一个角就可以任意改变大小</li>
+</ul>
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/fd428c45d688d43f681265087c1ed21b0ff43b56.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/b7bc4c66d0160924559e56e1d50735fae7cd3456.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<ul>
+<li>取消选择的工具，如图所示</li>
+</ul>
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/d872d695d143ad4bdd94b23a83025aafa50f0656.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<ul>
+<li>接下来要给变量命名，我们使用菜单中的plugins–name unobserved variables，变量就会自动命名了。如图所示。</li>
+</ul>
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/0fb505d5ad6eddc4a67b400138dbb6fd53663369.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<img src="/2015/07/17/amos21.0教程：[9]绘制测量模型/62667cd0f703918fee6bc930503d269758eec457.jpg" alt="amos21.0教程：[9]绘制测量模型" title="amos21.0教程：[9]绘制测量模型">
+<ul>
+<li>好了，今天我们就绘制了一个测量模型，下一篇文章我们要学习如何复制测量模型，如何调整指标变量的位置。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/25/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/27/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

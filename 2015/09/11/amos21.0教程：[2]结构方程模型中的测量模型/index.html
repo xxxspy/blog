@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="amos21.0教程：[2]结构方程模型中的测量模型"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>amos21.0教程：[2]结构方程模型中的测量模型 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/">
+                amos21.0教程：[2]结构方程模型中的测量模型
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>为了让大家尽快掌握amos的操作和分析方法，我们尽量少讲理论知识，而是专注于软件的理解和应用。今天我们介绍两个基本模型，他们构成了我们的结构方程模型，是学习amos必须知道的，否则你连绘图都不知道如何绘。结构方程模型分为测量模型和结构模型。我们先来学习什么是测量模型。</p>
+<ul>
+<li>首先来看测量模型（如下图所示），测量模型由观察变量和潜在变量构成。观察变量也叫指标变量，就是我们可以直接测量的变量，比如下面的测量模型中，课业压力可以直接测量，我们可以直接问“请给你的课业压力打分”，这样就得到了课业压力的得分；但是生活压力时无法直接测量的，我们需要将“课业压力”“情感压力”“升学压力”这三个指标的综合分来评价生活压力，所以生活压力就是潜在变量。正如图中所示，潜在变量是用圆形表示，指标变量用矩形表示。</li>
+</ul>
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/5202e5f2b211931311486f3364380cd790238def.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<ul>
+<li>测量模型的构成图：接下来我们看看一般的测量模型是如何画的。通常测量模型有三个基本元素，误差、观察变量、潜在变量，三个元素用单向箭头链接起来，箭头指向的方向是被影响的变量，通常来说潜变量影响观察变量的大小，所以箭头都是由潜在变量指向观察变量。误差也是影响观察变量大小的指标，所以箭头也是由误差指向观察变量。</li>
+</ul>
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/a005b3345982b2b77a43aa4730adcbef77099b12.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<ul>
+<li>测量模型回归方程怎么写：下图所示就是一个测量模型，我们可以使用三个回归方程来表示，下面第二幅图就是三个回归方程。注意看观察变量在方程等号的左边。</li>
+</ul>
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/d68b65cb0a46f21fda4caad0f7246b600d33aefe.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/b87985504fc2d5622319246ee61190ef77c66ce5.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<ul>
+<li>反映性指标与构成性指标：下图中，左图中的观察变量叫做反映性指标，即当一个以上指标变量为果、潜在变量为因时，指标变量（观察变量）就叫做反映性指标；反之，如果指标变量为因，它们共同觉醒一个潜在变量时，指标变量就叫做构成性指标，如下面右边的图。需要你注意的是，在amos中和lisrel中，很难对构成性指标进行分析，所以我们以后的结构方程模型中都是使用反映性指标。</li>
+</ul>
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/3790312eb9389b50df7b00d18435e5dde6116e6a.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<ul>
+<li>测量模型与验证性因素分析：其实我们做验证性因素分析就是使用测量模型进行的，验证性因素分析的目的就是要查看几个观察变量在潜变量上的载荷的大小和显著性。在做效度分析的时候，我们通常期望得到的结果就是用验证性因素分析发现观察变量在理论上相关的潜变量上载荷显著，而在不相关的潜在变量上的载荷不显著。</li>
+</ul>
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/b853d6fcc3cec3fd2a2844f6d788d43f869427e4.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/amos/">#amos</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

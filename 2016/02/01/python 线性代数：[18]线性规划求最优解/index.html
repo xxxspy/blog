@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="python 线性代数：[18]线性规划求最优解"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>python 线性代数：[18]线性规划求最优解 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/02/01/python 线性代数：[18]线性规划求最优解/">
+                python 线性代数：[18]线性规划求最优解
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p> 现在有个需要解决的问题：我找到了一份实习工作，于是想租一个房子，最好离工作近点，但是还没毕业，学校时不时有事，还不能离学校远了；而且有时候还要去女朋友那里，她希望我就住在她附近，于是，我怎么选择房子的地址？假定：公司、学校、女盆友的在地图上的坐标分别是：（1,1），（4,6），（9,2），求我的房子的坐标？</p>
+<ul>
+<li>我们解决的方法是用scipy提供的一个scipy.optimize.minimize 方法，首先要写出一个计算距离的方程：</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/61183b2dd42a28343bbf204358b5c9ea15cebf19.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/cc506c8b4710b9124cece0b6c0fdfc039245220d.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>分别把三个地点的横坐标和纵坐标都保存在两个列向量里</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/c9bdddcec3fdfc031a55f5f0d73f8794a4c2260d.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>找一个起始点：</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/9c57e3faaf51f3def9aeaf2c97eef01f3a29791e.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>看一下，随便选择的这个住址到三个地点的距离的平方和<br>求得这个值很大：6224</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/d35a10f41bd5ad6e4fd472a282cb39dbb6fd3c0d.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>求最优解</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/5f9e93b1cb1349545502fe2c554e9258d1094a1e.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li><p>求得最优解<br>输出为：</p>
+</li>
+<li><p>[ 4.66666667  3.        ]</p>
+</li>
+<li><p>46.6666666667</p>
+</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/ca5257540923dd54086fb120d209b3de9c82481e.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>将地图绘制出来<br>求得我的地址就标在地图上（house的地方）</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/7ac880510fb30f24e1b7fa4bcb95d143ad4b030d.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/948bcfc8a786c917081f4471ca3d70cf3bc7571e.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>有的人还说了，假如我的预算有限，只能租得起五环边上的房子，那么问题也很简单，就是设定我的房子的坐标是(x,y)，假如五环到市中心（0,0）的距离为r=10，那么我的房子在五环边上，就可以用等式x<strong>2+y</strong>2-100=0来表示。可以写到我的代码里：</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/91138622720e0cf32f5c5cb10946f21fbf09aa96.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>在求最优解得时候，我们加上一个参数constraints</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/0db2c9ca7bcb0a46098999736863f6246a60af96.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>最后我们将五环也绘制在图上，看看我的房子是不是在五环上：</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/cdfe7281800a19d8df3f994f30fa828ba61e4678.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>最后求得的结果绘图如下：蓝色线就表示五环</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/54baacfb43166d22bfdc07de452309f79152d296.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/python/">#python</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

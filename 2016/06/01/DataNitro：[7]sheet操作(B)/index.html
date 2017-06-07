@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataNitro：[7]sheet操作(B)"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>DataNitro：[7]sheet操作(B) - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/06/01/DataNitro：[7]sheet操作(B)/">
+                DataNitro：[7]sheet操作(B)
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年06月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>接着上一篇的sheet操作（A篇），下面讲不那么性感的B篇。</p>
+<ul>
+<li>clear_sheet：清空工作表，可以清空当前工作簿，也可以指定其他工作表</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/9304c888d43f8794a4eed27dd11b0ef41bd53a14.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<ul>
+<li>all_sheets：可以返回所有非隐藏sheet，也可以返回包含隐藏的sheet</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/a992e31f4134970ad5088a7c96cad1c8a7865d2f.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<ul>
+<li>new_sheet：新建一个sheet，可以指定新建sheet的名称，也可以不指定，你是自由的</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/d35a10f41bd5ad6edbe8feb982cb39dbb6fd3c14.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<ul>
+<li>remove_sheet：删除sheet，可以删除当前活动sheet也可以选择其他sheet</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/948bcfc8a786c9179478c86aca3d70cf3bc7572f.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<ul>
+<li>hide_sheet/is_hidden:用法基本也是一样的，你畜类旁通一下</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/7e7f7909c93d70cfd481305efbdcd100baa12b2f.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<ul>
+<li>recalc_sheet：重新计算sheet，适用于工作表中有公式，需要更新的。</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/509b9fcb39dbb6fd594a7f750a24ab18972b3714.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<ul>
+<li>rename_sheet:重命名，第一个参数表示被重命名的sheet，第二个参数表示新名称</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/389aa8fd5266d0160408047b942bd40735fa3514.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<ul>
+<li>all_cells：返回所有非空单元格（CellRange）对象，你可以通过遍历的方式对这些单元格进行操作</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/aa59892bd40735faf4e1d4ea9d510fb30f240814.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<ul>
+<li>merge_cells/unmerge_cells：合并和拆分单元格。</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/4651a712c8fcc3ce39bb53609145d688d43f202f.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<ul>
+<li>get_merged_range:返回合并单元格的范围</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/43e6c733c895d143b6677e7070f082025aaf0714.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<ul>
+<li>last_cell_in_col/last_cell_in_row：返回某个列或者行中最后一个非空单元格，这个方法非常有用，经常用来判断一个sheet中的数据有多少行和多少列</li>
+</ul>
+<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/9304c888d43f8794a485d27dd11b0ef41bd53a2f.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/datanitro/">#datanitro</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

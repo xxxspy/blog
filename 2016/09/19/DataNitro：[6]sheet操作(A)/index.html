@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataNitro：[6]sheet操作(A)"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>DataNitro：[6]sheet操作(A) - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/09/19/DataNitro：[6]sheet操作(A)/">
+                DataNitro：[6]sheet操作(A)
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年09月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>今天继续我们的datanitro，讲一讲对sheet的操作，sheet就是工作表（擦！你以为我们不知道啊！），因为内容比较多，我们分为A篇和B篇，看完A篇（A篇听起来很性感），觉得好看再看B篇。</p>
+<ul>
+<li>active_sheet：返回当前活动工作表（当前活动的也就是你正在操作的，鼠标点一下某个sheet就会激活这个sheet）。如果你不传入任何参数，他会返回活动sheet的名称，如果你传入一个sheet名称，就会激活该sheet：</li>
+</ul>
+<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/d5462bfae6cd7b8986cda4d00c2442a7d8330e84.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
+<ul>
+<li>display_sheet：展示某个工作表：它的用法和上面一样，传不传参数，它的功能不同，其实datanitro的很多方法都是这样的，你畜类旁通一下，因为很多时候我是不会重复的说这个事情的。</li>
+</ul>
+<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/d5462bfae6cd7b898914a3d00c2442a7d9330e2d.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
+<ul>
+<li>clear_row和clear_col：清空某行或者某列：他们可以使用整数、列表、Cell对象CellRange对象作为参数。当使用Cell或者CellRange的时候，他们清空的是这些单元格所在的行或者列</li>
+</ul>
+<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/cdfe7281800a19d863fd1d5630fa828ba71e46ac.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
+<ul>
+<li><p>del_row/del_col用法也是同上，顾名思义，删除行或者列。</p>
+</li>
+<li><p>hide_row/hide_col用法稍微不同，顾名思义，隐藏行或者列。可以传入整数、列表，还可以指定隐藏某个特定的工作表中的行。</p>
+</li>
+</ul>
+<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/d66b7e59252dd42aadde98f8003b5bb5c8eab84b.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
+<ul>
+<li>row_is_hidded/col_is_hidden：判断某行/列是否被隐藏，如果被隐藏，返回True，否则返回False。只能接受整数作为参数，而是否指定某个工作表是可选的，如果不指定，那么就指的是当前活动的工作表</li>
+</ul>
+<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/86d5bac27d1ed21b0824b7b6ae6eddc450da3fb0.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
+<ul>
+<li>insert_row/insert_col：这两个方法你应该亲手测试一下，传入不同的参数看看效果，它可以接受的参数有整数，Cell对象，列表；还可以指定某个工作表。</li>
+</ul>
+<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/c8ab0bce36d3d5393bea96903987e950342ab04b.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
+<ul>
+<li>aotofit：设置自动列宽，它有两个可选参数：工作表和CellRange地址</li>
+</ul>
+<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/c71d0e385343fbf224fb3f70b37eca8064388f4b.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/datanitro/">#datanitro</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/10/01/python 线性代数：[11]判断正定矩阵/">
+                python 线性代数：[11]判断正定矩阵
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>正定矩阵的定义是：设M是n阶方阵，如果对任何非零向量z，都有 z’Mz &gt; 0，其中z’ 表示z的转置，就称M正定矩阵。这个定义你先搞懂，不懂的看课本去，我这里就直接用python来检验某个方阵是不是正定矩阵（用二维数组表示矩阵）。</p>
+<ul>
+<li><p>我们用到的一个重要性质是：判定定理1：对称阵A为正定的充分必要条件是：A的特征值全为正。所以我们只要求得对称阵A的所有特征值即可。</p>
+</li>
+<li><p>引入numpy模块</p>
+</li>
+</ul>
+<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/d7c9ca3f8794a4c2561254dc0cf41bd5ac6e39d0.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
+<ul>
+<li>创建一个方阵A</li>
+</ul>
+<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/b5ce925494eef01fcac0a832e2fe9925bd317d36.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
+<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/1a94b36eddc451dab3c7bf1cb4fd5266d11632d0.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
+<ul>
+<li>将方阵转换成对称阵的方法是：</li>
+</ul>
+<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/fab3ac119313b07e75a3e2ff0ed7912396dd8ce8.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
+<ul>
+<li>求对称阵A的特征值</li>
+</ul>
+<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/00a82701213fb80eac8fd32034d12f2eb83894a8.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
+<ul>
+<li>判断是不是所有的特征值都大于0，用到了all函数，显然对称阵A不是正定的</li>
+</ul>
+<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/389aa8fd5266d0163e282ddf952bd40734fa35d0.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
+<ul>
+<li>我们来创建一个单位矩阵，它肯定是对称的，同样的方法检验是不是正定矩阵</li>
+</ul>
+<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/9dc3cf58ccbf6c8185e09c1fbe3eb13532fa4036.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
+<ul>
+<li>网上查到更简便的方法是对对称阵进行cholesky分解，如果像这样没有提示出错，就说明它是正定的</li>
+</ul>
+<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/aa59892bd40735fadac1fd4e9c510fb30e2408d0.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
+<ul>
+<li>如果提示出错，就说明它不是正定矩阵，你可以使用try函数捕获错误值</li>
+</ul>
+<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/a992e31f4134970a20a4a0d897cad1c8a6865d36.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
+<ul>
+<li><p>以下是今天用到的部分代码：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>import numpy</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A=range(16)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A=numpy.array(A).reshape(4,4)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 0,  1,  2,  3],</p>
+</li>
+<li><p>[ 4,  5,  6,  7],</p>
+</li>
+<li><p>[ 8,  9, 10, 11],</p>
+</li>
+<li><p>[12, 13, 14, 15]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A=A+A.T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 0,  5, 10, 15],</p>
+</li>
+<li><p>[ 5, 10, 15, 20],</p>
+</li>
+<li><p>[10, 15, 20, 25],</p>
+</li>
+<li><p>[15, 20, 25, 30]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>B=numpy.linalg.eigvals(A)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>B</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([  6.74165739e+01 +0.00000000e+00j,</p>
+</li>
+<li><p>-7.41657387e+00 +0.00000000e+00j,</p>
+</li>
+<li><p>-8.88285420e-17 +1.82759332e-15j,  -8.88285420e-17 -1.82759332e-15j])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>if numpy.all(B&gt;0):print ‘是正定矩阵’</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>C=numpy.linalg.cholesky(A)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#41>“, line 1, in <module></module></pyshell#41></p>
+</li>
+<li><p>C=numpy.linalg.cholesky(A)</p>
+</li>
+<li><p>File “D:Python27libsite-packages<br>umpy-1.8.0-py2.7-win-amd64.egg<br>umpylinalglinalg.py”, line 603, in cholesky</p>
+</li>
+<li><p>return wrap(gufunc(a, signature=signature, extobj=extobj).astype(result_t))</p>
+</li>
+<li><p>File “D:Python27libsite-packages<br>umpy-1.8.0-py2.7-win-amd64.egg<br>umpylinalglinalg.py”, line 93, in _raise_linalgerror_nonposdef</p>
+</li>
+<li><p>raise LinAlgError(“Matrix is not positive definite”)</p>
+</li>
+<li><p>LinAlgError: Matrix is not positive definite</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A=numpy.eye(4)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1.,  0.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  1.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  1.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  0.,  1.]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>B=numpy.linalg.eigvals(A)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>B</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([ 1.,  1.,  1.,  1.])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>if numpy.all(B&gt;0):print ‘是正定矩阵’</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>是正定矩阵</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>C=numpy.linalg.cholesky(A)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>C</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1.,  0.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  1.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  1.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  0.,  1.]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/10/01/DataNitro：[2]调用Python的方法/">
+                DataNitro：[2]调用Python的方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>作为入门的第二篇文章，我们还是要讲一些基础的东西，这篇文章我们介绍一下如何在datanitro下使用Python来操作excel。</p>
+<ul>
+<li>第一种方式，我们可以在Python shell里面运行Python代码，点击它打开</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/5327ce160924ab1887e97a6636fae6cd7a890ba0.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>一开始我们会看到这个界面，出现了欢迎信息，说明你的datanitro Python shell是可以工作的。</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/b3f6cea20cf431ad6860d8684836acaf2fdd98f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>输入一个简单的命令：Cell(1,1).value=’hello world’（注意大小写）；按回车就可以执行</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/adee30dda3cc7cd9279faf883a01213fb90e91f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>这段代码的效果就是单元格A1赋值为hello world</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/d002b34bd11373f09dc0f4cea70f4bfbfaed04a0.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>我们可以使用Python中已经安装的包：</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/7aad4ae736d12f2e0ab735314cc2d562843568f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>我们可以先建立一个Python的脚本文件**.py，然后引入该文件：点击import</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/e49cf91190ef76c61b60607a9e16fdfaae5167f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>找到该Python文件并打开</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/42e89c26cffc1e17b84017604990f603728de9a1.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>你会看到这个文件已经被引入，点击editor就可以编辑该文件</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/8bc3a7014a90f603454f07163a12b31bb151eda1.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>编辑器也是够难看的！但是我们可以先输入以下代码试试：注意#号表示注释，没有任何作用，实质上只有一句话有用：Cell(1,3).value=u’中文’</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/8cf0d513495409230fdbf82f9158d109b2de49f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>然后回到excel，点击run，就可以执行命令</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/570f8c58d109b3de4b0d7f39cfbf6c81810a4cf6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>用过excel函数的都知道它有多么强大，现在我们有机会写自己的函数了，我们需要先建立一个名字为functions.py的文件</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/d048adde9c82d1581530c2e0830a19d8bd3e42f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>在里面写入一个function并保存</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/a84052086e061d955bb9ac6978f40ad163d9caa1.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>记得检查在设置里面是否有允许使用Python自定义函数，如果你没有选，你需要选上他，然后重启excel</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/4075890a304e251f7d457fa9a486c9177e3e53f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<ul>
+<li>现在在单元格里使用一下该函数，你可以看到效果：</li>
+</ul>
+<img src="/2015/10/01/DataNitro：[2]调用Python的方法/964b2e4e251f95ca384709e7ca177f3e660952f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/10/01/excel2007如何设置访问权限/">
+                excel2007如何设置访问权限
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>设置访问权限就是允许有限的几个用户进行查看和修改excel，我们通过填写用户的ID即可 允许他们查看工作表，而他们的ID也就是在微软免费注册的账号，相信很多人都有这个账号的，如果没有，安装office的时候会提示你申请账号的。<br>方法/步骤</p>
+<ul>
+<li>新建一个excel工作簿：右键单击空白位置，然后选择新建–excel</li>
+</ul>
+<img src="/2015/10/01/excel2007如何设置访问权限/0df431adcbef7609123bb7012edda3cc7cd99e7f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
+<ul>
+<li>打开excel，在工具栏上执行：审阅—保护工作簿</li>
+</ul>
+<img src="/2015/10/01/excel2007如何设置访问权限/adaf2edda3cc7cd9d31d1a473901213fb80e917f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
+<ul>
+<li>打开一个下拉列表，在这个列表里选择【限制访问】</li>
+</ul>
+<img src="/2015/10/01/excel2007如何设置访问权限/203fb80e7bec54e753dc3480b9389b504fc26a7f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
+<ul>
+<li>弹出权限对话框，在这个对话框里，我们勾选【限制对此工作簿的权限】，然后你就能对下面的内容进行更改。</li>
+</ul>
+<img src="/2015/10/01/excel2007如何设置访问权限/7aec54e736d12f2ede3580fe4fc2d5628535687f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
+<ul>
+<li>在这里输入允许查看和更改该工作簿的用户的ID，有人问这个ID是什么，这是在微软里注册的账号，如果你没有微软的账号是不允许设置权限的，你根本看不到该页面。它会提示你注册账号。</li>
+</ul>
+<img src="/2015/10/01/excel2007如何设置访问权限/8435e5dde71190ef19cbbc41ce1b9d16fdfa607f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
+<ul>
+<li>点击【其他选项】进行更高级的设置</li>
+</ul>
+<img src="/2015/10/01/excel2007如何设置访问权限/cb8065380cd79123d8c2baeaad345982b2b78009.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
+<ul>
+<li>打开高级设置对话框，这里可以设置文件的有效期，过了有效期加密文件就会失效。点击下拉列表可以选择到期时间。</li>
+</ul>
+<img src="/2015/10/01/excel2007如何设置访问权限/a044ad345982b2b784bd175a31adcbef76099b09.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
+<ul>
+<li>下面三个选项是用户可选的三个具体权限，你想要允许他人进行哪些操作：打印，复制，还是编程</li>
+</ul>
+<img src="/2015/10/01/excel2007如何设置访问权限/f11f3a292df5e0fee428a79f5c6034a85edf727f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
+<ul>
+<li>最后填写一下索取权限的邮件地址，也就是你的邮件的地址，当用户想要更改自己的权限的时候，就可以给你发送邮件。</li>
+</ul>
+<img src="/2015/10/01/excel2007如何设置访问权限/5d6034a85edf8db1481e52fa0923dd54564e747f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
+<ul>
+<li><p>设置完成后，保存文档即可。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2015/10/01/excel2007如何设置访问权限/7dd98d1001e939014020a3a07bec54e736d19609.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/23/spss怎样将两批数据合并/">
+                spss怎样将两批数据合并
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们看到下图中有两个sav文件，也就是两批数据，这两批数据的变量都是一样的，只是不同时间收集的两批数据，现在我们要合并者两个文件，得到一批总的数据，怎么办？下面是具体的步骤奥。<br>工具/原料</p>
+<ul>
+<li>spss 20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>打开spss，先打开一个sav文件，然后在菜单栏上执行：data—merge files–add cases，打开合并文件的窗口</li>
+</ul>
+<img src="/2015/09/23/spss怎样将两批数据合并/9358d109b3de9c8289ac83626c81800a18d84315.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<ul>
+<li>接下来你看到的这个窗口可能有两种情况，一个情况是你只打开了一个要合并的sav文件，另一个文件没有打开，那么你要选择第二个选项，如图所示，然后点击浏览按钮</li>
+</ul>
+<img src="/2015/09/23/spss怎样将两批数据合并/42166d224f4a20a4ac51592a90529822730ed094.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<ul>
+<li>打开浏览窗口，找到你的第二个数据，然后选中它，点击打开，这样就完成了基本的合并文件的操作</li>
+</ul>
+<img src="/2015/09/23/spss怎样将两批数据合并/838ba61ea8d3fd1f2250c7d7304e251f94ca5f85.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<ul>
+<li>回到了合并文件的主对话框，点击continue按钮，进入合并数据向导。</li>
+</ul>
+<img src="/2015/09/23/spss怎样将两批数据合并/023b5bb5c9ea15ce3ebd85e4b6003af33b87b28f.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<ul>
+<li>如果我们同时打开了两个数据文件，那么在合并文件对话框中，你会看到第一个选项中有第二个文件，如图所示，这时候你直接在这里选择该文件即可，同样是点击continue即可合并数据</li>
+</ul>
+<img src="/2015/09/23/spss怎样将两批数据合并/503d269759ee3d6db110e22643166d224e4ade0d.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<ul>
+<li>在该向导里，你会遇到两种情况，第一个情况是在upaired variables列表里有有量，如图所示，这时候你要决定这个变量有没有用，如果没用就不用管他，在新的数据里他就不会出现。如果这个变量是有用的，选中这个变量，点击下面的rename</li>
+</ul>
+<img src="/2015/09/23/spss怎样将两批数据合并/aec379310a55b31941c0e69843a98226cffc1725.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<ul>
+<li>打开一个rename对话框，输入新的名称，然后点击continue，回到上面的对话框</li>
+</ul>
+<img src="/2015/09/23/spss怎样将两批数据合并/37d12f2eb9389b507c3684bf8535e5dde6116e15.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<ul>
+<li>点击添加按钮，即可完成变量的添加，注意，因为该变量只存在于一个sav文件中，所以合并数据以后，有部分case在该变量上是没有值得。</li>
+</ul>
+<img src="/2015/09/23/spss怎样将两批数据合并/9358d109b3de9c8287859d626c81800a18d8437e.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<ul>
+<li>点击ok按钮，数据合并完成。</li>
+</ul>
+<img src="/2015/09/23/spss怎样将两批数据合并/d833c895d143ad4b4b7e212d82025aafa50f068e.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/23/spss中拉丁方设计如何进行方差分析/">
+                spss中拉丁方设计如何进行方差分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>工具/原料</p>
+<ul>
+<li>spss<br>方法/步骤</li>
+</ul>
+<ul>
+<li>首先打开spss，以如图所示的方式录入数据，week和day是两个需要控制的变量，music是自变量，score是因变量</li>
+</ul>
+<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/242dd42a2834349b2b1d7744c9ea15ce37d3bed3.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<ul>
+<li>数据准备好以后，在菜单栏上执行：analyse–GLM–univariate，打开方差分析对话框</li>
+</ul>
+<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/63d9f2d3572c11df55bba6e2632762d0f603c28d.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<ul>
+<li>打开对话框以后，先将自变量和因变量放入各自的位置，如图所示</li>
+</ul>
+<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/6a600c338744ebf805d87dfed9f9d72a6159a741.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<ul>
+<li>点击model按钮，设置一下模型</li>
+</ul>
+<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/b151f8198618367a3b2e661c2e738bd4b21ce548.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<ul>
+<li>系统默认的是full factorial，我们要勾选custom</li>
+</ul>
+<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/c2cec3fdfc0392457688f9ce8794a4c27d1e2535.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<ul>
+<li>将三个自变量放入右侧的model框中</li>
+</ul>
+<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/cdbf6c81800a19d8c3399cc433fa828ba61e463c.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<ul>
+<li>将type设置为main effect ，因为我们默认这三个变量是没有交互作用的</li>
+</ul>
+<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/a044ad345982b2b792a9210531adcbef76099b38.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<ul>
+<li>返回到主菜单，点击ok开始运行数据处理，并输出结果</li>
+</ul>
+<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/a8014c086e061d95f9622ff97bf40ad163d9cacf.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<ul>
+<li>我们看方差检验的结果，三个变量中，music和day对应的sig值小于0.05，说明这两个变量的效应是显著的。</li>
+</ul>
+<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/63d0f703918fa0ec0a9e7ccc269759ee3c6ddb91.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/23/Python教程：[40]列表与字符串相互转换/">
+                Python教程：[40]列表与字符串相互转换
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>以前玩vb没有体会到python这么强大的功能，列表与字符串可以直接的相互转换，非常方便，我们就好好的来享受一把吧！</p>
+<ul>
+<li>首先我们来初始化一个list（列表）</li>
+</ul>
+<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/11794d43fbf2b211f7135056c88065380cd78eae.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
+<ul>
+<li>使用join方法来转换列表，将列表转换成字符串，注意join是字符串的方法，前面必须是字符串，我用的是“;”,也就是分号，然后连接成的字符串就是用分号来进行元素的分割的。</li>
+</ul>
+<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/9252ae7eca80653864d7710b95dda144ad3482ae.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
+<ul>
+<li>我们再试试其他的字符串，你感受一下</li>
+</ul>
+<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/4bd1e803738da97731d76c33b251f8198718e3eb.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
+<ul>
+<li>当然，我们还有能力将字符串转换回去，看下面，设置叹号为分隔符，然后对字符串进行切割，得到列表</li>
+</ul>
+<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/a8362712b31bb051f3dc5930347adab44bede0eb.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
+<ul>
+<li>split函数还有第二个参数，你猜猜这是干什么用的，对了，它指的是分割的次数</li>
+</ul>
+<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/b110e6198618367ad47195c52c738bd4b21ce5eb.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
+<ul>
+<li>假如我们分割两次呢，你看看效果。</li>
+</ul>
+<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/30ecd5ef76094b36d9afcef5a1cc7cd98d109dae.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/23/python高级教程：[3]yield生成器/">
+                python高级教程：[3]yield生成器
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>基于yield这个指令，Python可以挂起一个程序并返回中间结果，被挂起的程序会保持自己的执行环境，在必要的时候再重启它。</p>
+<ul>
+<li>先看看yield的简单用法：yield_example表示一个2的n次方的无穷数列，我们想要它输出前10项，就用[ye.next() for a in range(10)]</li>
+</ul>
+<img src="/2015/09/23/python高级教程：[3]yield生成器/9864a2315c6034a8fd2d583fcd13495408237606.jpg" alt="python高级教程：[3]yield生成器" title="python高级教程：[3]yield生成器">
+<ul>
+<li><p>一个生成器的next()方法可以让程序运行，并输出yield的值，然后再次被挂起，直到下一个next被调用。这句I是一个生成器。我们经常使用生成器来表示一个无穷数列，下面看一个复杂的例子。</p>
+</li>
+<li><p>用yield写一个分组数列，分组数列的定义是：</p>
+</li>
+</ul>
+<img src="/2015/09/23/python高级教程：[3]yield生成器/034965f40ad162d9db928fa217dfa9ec8b13cdd5.jpg" alt="python高级教程：[3]yield生成器" title="python高级教程：[3]yield生成器">
+<img src="/2015/09/23/python高级教程：[3]yield生成器/43e6c733c895d1435df9069d75f082025baf0746.jpg" alt="python高级教程：[3]yield生成器" title="python高级教程：[3]yield生成器">
+<ul>
+<li>实现分组数列的代码：</li>
+</ul>
+<img src="/2015/09/23/python高级教程：[3]yield生成器/570f8c58d109b3de377306d6cabf6c81810a4c05.jpg" alt="python高级教程：[3]yield生成器" title="python高级教程：[3]yield生成器">
+<ul>
+<li>为什么使用字典作为sublist函数的参数，这是因为在传参的时候，如果参数是字典，那么传递的是一个指针，而不是字典的数据，因此当sublist改变了字典的数据的时候，位于fenqunlist函数中的kwargs字典的数据也会发生改变，这是我所希望的。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/23/amos21.0教程：[7]如何启动amos/">
+                amos21.0教程：[7]如何启动amos
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>amos使用最多的就是graphic界面了，也就是绘图界面，我们知道amos主要是用鼠标绘制模型，所以我们的amos接下来的很多篇教程都是教你如何绘制模型的，今天我们先来看看如何启动amos的graphic界面。有三种方法：</p>
+<ul>
+<li>最简单的方法是在桌面上的快捷方式启动，但是这个快捷方式不是自动安装的，需要你自己动手建立快捷方式</li>
+</ul>
+<img src="/2015/09/23/amos21.0教程：[7]如何启动amos/b3f6cea20cf431ad2db01bc14a36acaf2fdd98ad.jpg" alt="amos21.0教程：[7]如何启动amos" title="amos21.0教程：[7]如何启动amos">
+<ul>
+<li>如果你没有建立快捷方式，你可以在开始菜单中启动amos，如图所示，在开始菜单中找到【所有程序】–IBM spss statistics–amos 21–amos graphics</li>
+</ul>
+<img src="/2015/09/23/amos21.0教程：[7]如何启动amos/4a77b2af2edda3cc9086e0d800e93901203f92ad.jpg" alt="amos21.0教程：[7]如何启动amos" title="amos21.0教程：[7]如何启动amos">
+<ul>
+<li>或者你可以从spss中启动amos，打开spss后，在analyse–IBM spss amos，这样也可以启动amos，但是前提条件是spss中存有数据，如图没有数据是无法启动的。</li>
+</ul>
+<img src="/2015/09/23/amos21.0教程：[7]如何启动amos/4d4970061d950a7b9703163c0bd162d9f3d3c9d1.jpg" alt="amos21.0教程：[7]如何启动amos" title="amos21.0教程：[7]如何启动amos">
+<ul>
+<li>在spss中还有一个菜单有IBM amos的选项，但是这个选项是一个网页链接，不是启动amos的，大家不要混淆。</li>
+</ul>
+<img src="/2015/09/23/amos21.0教程：[7]如何启动amos/2f9cbdcc7cd98d10efb654c9203fb80e7aec90ad.jpg" alt="amos21.0教程：[7]如何启动amos" title="amos21.0教程：[7]如何启动amos">
+<ul>
+<li>我们看到这就是我启动的amos绘图界面了，我们就是要在这里绘制模型</li>
+</ul>
+<img src="/2015/09/23/amos21.0教程：[7]如何启动amos/0b907cd9f2d3572c8ad4c4248b13632763d0c3d1.jpg" alt="amos21.0教程：[7]如何启动amos" title="amos21.0教程：[7]如何启动amos">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/19/excel如何打印特定的行/">
+                excel如何打印特定的行
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在excel打印的时候，有些行我们不想要打印，我们有两个办法，一是隐藏行，二是给行建立组合，下面提供了这两种方法的具体操作，你会发现第二种方法更加的简单。<br>方法/步骤</p>
+<ul>
+<li>我们看到，黄色的行是不需要打印的，怎么办</li>
+</ul>
+<img src="/2015/09/19/excel如何打印特定的行/7e3e6709c93d70cf965a8df2f8dcd100bba12ba8.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
+<ul>
+<li>我们先选中一行，比如选中第二行，然后在菜单栏上执行：经典菜单–格式–行–隐藏行</li>
+</ul>
+<img src="/2015/09/19/excel如何打印特定的行/6f061d950a7b02086b97181e62d9f2d3562cc8f6.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
+<ul>
+<li>行隐藏了以后，我们接着选中第二个要隐藏的行，然后按下F4即可重复上面的操作，这样我们可以快速的隐藏所有的行</li>
+</ul>
+<img src="/2015/09/19/excel如何打印特定的行/a044ad345982b2b78d0e1e3b31adcbef77099bbf.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
+<ul>
+<li>通过打印预览你可以看到，隐藏的行都不能被打印了。</li>
+</ul>
+<img src="/2015/09/19/excel如何打印特定的行/42a98226cffc1e176503abce4a90f603728de995.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
+<ul>
+<li>想要恢复隐藏的行可以选中所有的行以后，在菜单栏上执行：格式–行–取消隐藏</li>
+</ul>
+<img src="/2015/09/19/excel如何打印特定的行/b151f8198618367a212958222e738bd4b21ce5a9.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
+<ul>
+<li>上面这种方法有一个弊端，就是你每次都得隐藏和取消隐藏行，非常麻烦，下面我们讲个更加简单的方法，比如下面的数据，我们仍然要隐藏黄色的行，可以选中这一行，然后同时按下alt+shift+→   ，这样就可以看到左侧多了一个空白区域</li>
+</ul>
+<img src="/2015/09/19/excel如何打印特定的行/4bed2e738bd4b31c879fb34487d6277f9f2ff8a9.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
+<ul>
+<li>同样的方法，给所有的行都添加一个组合</li>
+</ul>
+<img src="/2015/09/19/excel如何打印特定的行/c75c10385343fbf2e37281dcb07eca8064388ff6.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
+<ul>
+<li>想要隐藏黄色的行，你只要点击按钮1，如图所示</li>
+</ul>
+<img src="/2015/09/19/excel如何打印特定的行/3c6d55fbb2fb431648bc5d8520a4462308f7d3a9.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
+<ul>
+<li><p>想要展开所有的行你只要点击按钮2，这样你就可以快速的转换两种模式了</p>
+</li>
+<li></li>
+</ul>
+<img src="/2015/09/19/excel如何打印特定的行/f603918fa0ec08fa4fa3345859ee3d6d54fbdaa9.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/19/spss如何检验残差的方差齐性/">
+                spss如何检验残差的方差齐性
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>残差的方差齐性是回归分析要满足的一个条件， 通常我们要用散点图来检验残差的方差齐性，根据散点图可以看到标准化的残差随着估计值的变化趋势，下面是具体的分析方法：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>打开线性回归的对话框：analyse–regression–linear</li>
+</ul>
+<img src="/2015/09/19/spss如何检验残差的方差齐性/35a85edf8db1cb137eac61d7dd54564e93584b28.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
+<ul>
+<li>在回归分析中， 将GDP作为因变量，其他的变量可以作为自变量，将这些变量放入各自的框中</li>
+</ul>
+<img src="/2015/09/19/spss如何检验残差的方差齐性/f11f3a292df5e0feb66ad5c55c6034a85fdf7287.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
+<ul>
+<li>点击plot按钮，打开图标的设置对话框</li>
+</ul>
+<img src="/2015/09/19/spss如何检验残差的方差齐性/34fae6cd7b899e5173eb66d042a7d933c9950d88.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
+<ul>
+<li>将如图所示的选项勾选，这是散点图，我们可以看到残差随着估计值的变化趋势</li>
+</ul>
+<img src="/2015/09/19/spss如何检验残差的方差齐性/3b87e950352ac65ce7413ab7fbf2b21192138aaa.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
+<ul>
+<li>我们看到这就是需要的散点图，纵坐标是标准化的参差值，横坐标是估计值，如果散点图拟合的直线平行于横坐标，那么就可以认为残差是齐性的。</li>
+</ul>
+<img src="/2015/09/19/spss如何检验残差的方差齐性/9922720e0cf3d7caa34f63b2f21fbe096a63a9bd.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/21/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/23/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

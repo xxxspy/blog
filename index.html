@@ -608,6 +608,296 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/10/23/Django教程：[4]制作第一个网页/">
+                Django教程：[4]制作第一个网页
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>通过前面的三篇文章，我们现在已经有能力创建一个网页了。Django就是那么的有效率。我们创建第一个页面的目的是让你理解Django是如何工作的。不信往下看。进行下面的教程之前，如果你没有看我以前写的文章，可能会有疑惑。我前面的文章创建了一个站点djangoweb文件夹，下面要用到</p>
+<ul>
+<li>第一步要在我们创建的站点文件夹下面新建一个view.py文件，如图所示。当然你创建文件的名称是任意的，你可以叫别的名字。但是要跟后面要写的代码一致，后面还会用到view.py，如果你的文件名不是view，后面你需要做出相应的调整</li>
+</ul>
+<img src="/2016/10/23/Django教程：[4]制作第一个网页/b3508d13b07eca80277f099d932397dda1448316.jpg" alt="Django教程：[4]制作第一个网页" title="Django教程：[4]制作第一个网页">
+<ul>
+<li>我们将该文件写入代码：如图所示。代码的意义是，首先引入HttpResponse类，后面我们会详细介绍这个类，现在我们只知道它用于返回网页中显示的代码。接着我们定义了一个名为hello的函数，它有一个参数为req，这个参数是django.http.HttpRequest的一个实例，我们暂时用不到这个参数，但是它却是一个必须的参数，参数的名称可以任意。hello函数它仅仅返回一个HttpResponse对象，这个对象包含了文本“Hello world”</li>
+</ul>
+<img src="/2016/10/23/Django教程：[4]制作第一个网页/d8b8c92a6059252df86d2d7e369b033b5bb5b916.jpg" alt="Django教程：[4]制作第一个网页" title="Django教程：[4]制作第一个网页">
+<ul>
+<li>现在保存好这个view文件</li>
+</ul>
+<img src="/2016/10/23/Django教程：[4]制作第一个网页/148f28d3d539b6000cb43fcdeb50352ac65cb716.jpg" alt="Django教程：[4]制作第一个网页" title="Django教程：[4]制作第一个网页">
+<ul>
+<li>接下来我们需要修改urls.py文件，这个文件可以将url和调用的函数对应起来。比如，我想当我在浏览器地址栏输入<a href="http://127.0.0.1:8001/hello/的时候就能调用view.hello方法，那么我们必须在urls.py中进行添加" target="_blank" rel="external">http://127.0.0.1:8001/hello/的时候就能调用view.hello方法，那么我们必须在urls.py中进行添加</a></li>
+</ul>
+<img src="/2016/10/23/Django教程：[4]制作第一个网页/8b527d2762d0f7039674a6a60afa513d2797c542.jpg" alt="Django教程：[4]制作第一个网页" title="Django教程：[4]制作第一个网页">
+<ul>
+<li>首先要引用我们企图调用的方法，然后在urlpatterns中添加url(r’^hello/$’,hello),；注意最后面的逗号不能省略。这个代码就是将url同调用的函数联系起来。</li>
+</ul>
+<img src="/2016/10/23/Django教程：[4]制作第一个网页/0db2c9ca7bcb0a46efc6b8436963f6246a60afa0.jpg" alt="Django教程：[4]制作第一个网页" title="Django教程：[4]制作第一个网页">
+<ul>
+<li>最后，我们在dos下开启开发服务器，如果你还不知道如何开启开发服务器，你需要看下面的参考资料里的传送门。</li>
+</ul>
+<img src="/2016/10/23/Django教程：[4]制作第一个网页/08b68e529822720e1677d28079cb0a46f31fabcb.jpg" alt="Django教程：[4]制作第一个网页" title="Django教程：[4]制作第一个网页">
+<ul>
+<li>打开浏览器，地址栏输入地址：127.0.0.1:8001/hello/，你就会看到我们制作的第一个页面了。你学会了吗？</li>
+</ul>
+<img src="/2016/10/23/Django教程：[4]制作第一个网页/21e5582309f7905280a677440ef3d7ca7acbd5cb.jpg" alt="Django教程：[4]制作第一个网页" title="Django教程：[4]制作第一个网页">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/23/Python教程：[14]快速创建TCP服务器/">
+                Python教程：[14]快速创建TCP服务器
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这里我不跟大家讲什么是TCP，什么是服务器，相信大家都懂，不懂的话我也没有能力让你懂，所以我就直接上代码了，在代码中解释，然后把所有的代码呈现出现，以后你只要在这个简单的代码上进行修改就可以了。</p>
+<ul>
+<li>首先我们引入socket的所有属性，引入时间戳函数ctime，后面要用到时间戳</li>
+</ul>
+<img src="/2016/10/23/Python教程：[14]快速创建TCP服务器/bf487563f6246b6025f2785fe9f81a4c500fa2da.jpg" alt="Python教程：[14]快速创建TCP服务器" title="Python教程：[14]快速创建TCP服务器">
+<ul>
+<li>设置主机地址，主机地址为空说明我们可以使用任意可以使用的地址；端口号是我随意写的，只要不超过一定的范围就可以了，你可以搜索一下端口号的范围；ADDR连接地址包括主机地址和端口号。</li>
+</ul>
+<img src="/2016/10/23/Python教程：[14]快速创建TCP服务器/4651a712c8fcc3ce685903189045d688d53f20c5.jpg" alt="Python教程：[14]快速创建TCP服务器" title="Python教程：[14]快速创建TCP服务器">
+<ul>
+<li>我们使用socket方法来创建一个套接字；使用bind方法绑定到地址上；使用listen设定最多可以连接5个客户端。</li>
+</ul>
+<img src="/2016/10/23/Python教程：[14]快速创建TCP服务器/504ec7f9d72a605914ec2b312a34349b023bbada.jpg" alt="Python教程：[14]快速创建TCP服务器" title="Python教程：[14]快速创建TCP服务器">
+<ul>
+<li>下面是最重要的部分，我们使用无限循环来保证随时接受链接请求，accept方法可以接受请求，并返回客户端tcpclisock和客户端地址。使用recv方法来接受数据，send方法发送数据。如果一开始接受到了数据，后来数据为空，则跳出循环。</li>
+</ul>
+<img src="/2016/10/23/Python教程：[14]快速创建TCP服务器/d66b7e59252dd42a1bf5cb80013b5bb5c8eab8da.jpg" alt="Python教程：[14]快速创建TCP服务器" title="Python教程：[14]快速创建TCP服务器">
+<ul>
+<li><p>下面是所有的代码：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>from socket import *   #引入socket的所有</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>from time import ctime  #时间戳函数，用于实现服务器的功能</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>HOST=’’   #主机地址</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>PORT=23345   #端口号</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>BUFSIZ=2048   #缓存区大小，单位是字节，这里设定了2K的缓冲区</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>ADDR=(HOST,PORT)   #链接地址</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>tcpSerSock=socket(AF_INET,SOCK_STREAM)   #创建一个TCP套接字</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>tcpSerSock.bind(ADDR)    #绑定地址</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>tcpSerSock.listen(5)    #最大连接数为5</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>while True:   #无限循环</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>print(‘客户端连接。。。’)   #显示文字信息</p>
+</li>
+<li><p>tcpCliSock,addr=tcpSerSock.accept()          #等待接受连接</p>
+</li>
+<li><p>print( ‘链接成功，客户端地址为：’,addr)</p>
+</li>
+<li><p>while True:</p>
+</li>
+<li><p>data=tcpCliSock.recv(BUFSIZ)    #接收数据,BUFSIZ是缓存区大小</p>
+</li>
+<li><p>if not data:   #如果data为空</p>
+</li>
+<li><p>break  #则跳出循环</p>
+</li>
+<li><p>tcpCliSock.send(‘[%s] %s’% (ctime(),data))</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<pre><code>tcpCliSock.close()   #关闭连接
+</code></pre></blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>tcpSerSock.close()   #关闭服务器</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/19/numpy函数：[2]tile函数用法/">
+                numpy函数：[2]tile函数用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>tile函数位于python模块 numpy.lib.shape_base中，他的功能是重复某个数组。比如tile(A,n)，功能是将数组A重复n次，构成一个新的数组，我们还是使用具体的例子来说明问题：</p>
+<ul>
+<li>先来引入numpy下的所有方法</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[2]tile函数用法/f677b1c379310a5583d241f8b54543a98326108c.jpg" alt="numpy函数：[2]tile函数用法" title="numpy函数：[2]tile函数用法">
+<ul>
+<li>我们创建一个a，如图下图，使用tile来创建b，注意看b的数据结构</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[2]tile函数用法/43e6c733c895d1438c637b2f71f082025aaf0761.jpg" alt="numpy函数：[2]tile函数用法" title="numpy函数：[2]tile函数用法">
+<ul>
+<li>假如我们输入一个元组(1,2)，我们会得到一样的结果，与上面相同的b</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[2]tile函数用法/d57e9994a4c27d1eda87a4c819d5ad6edcc438dd.jpg" alt="numpy函数：[2]tile函数用法" title="numpy函数：[2]tile函数用法">
+<ul>
+<li>当然，我们想要a变为一个二维数组，就要换一种重复的方式了。</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[2]tile函数用法/0fb505d5ad6eddc45c462bf73bdbb6fd536633dd.jpg" alt="numpy函数：[2]tile函数用法" title="numpy函数：[2]tile函数用法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/10/19/SPSS实例：[23]如何对数据进行排序/">
                 SPSS实例：[23]如何对数据进行排序
             </a>
@@ -671,13 +961,13 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/">
-                SPSS实例：[17]进行sobel检验(小白教程)
+            <a href="/2016/10/19/numpy函数：[12]数组切片/">
+                numpy函数：[12]数组切片
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2016年10月15日</span>
+                <span class="date">2016年10月19日</span>
             
             
             
@@ -686,27 +976,48 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
 
     
         <div class="content">
-            <p>通常我们在做中介效应的时候，遇到有一个系数没有达到显著性水平，我们需要进行sobel检验，但是sobel检验的公式非常麻烦，如果你按计算器就很麻烦了，更何况你还有很多中介效应去验证，所以今天我给大家分享一个Excel可以很快的计算。</p>
+            <p>我们可以向使用列表切片一样使用数组切片，如果会使用liest切片，那么这篇文章就是温习一下而已，下面我们来看看具体的数组切片是如何使用的。</p>
 <ul>
-<li>从下面的参考资料里下载一个Excel文件</li>
+<li>从numpy中引入所有</li>
 </ul>
-<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/d478a8003af33a879120f002c45c10385343b51e.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<img src="/2016/10/19/numpy函数：[12]数组切片/c71d0e385343fbf21a8108bcb27eca8064388f45.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
 <ul>
-<li>下载下来以后，打开Excel，你会看到一个这样的表格</li>
+<li>创建一个包含10个元素的一位数组</li>
 </ul>
-<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/cdfe7281800a19d87b53741d31fa828ba61e4613.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<img src="/2016/10/19/numpy函数：[12]数组切片/d1571724ab18972bf1a4ae55e4cd7b899f510a57.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
 <ul>
-<li>将你的三个模型的三线表粘贴过来</li>
+<li>我们可以使用一个下标获取数组中相应的值，也可以更改它的值</li>
 </ul>
-<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/c856613e6709c93da9a2feef9d3df8dcd1005413.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<img src="/2016/10/19/numpy函数：[12]数组切片/b3508d13b07eca80c9a89778932397dda0448345.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
 <ul>
-<li>我们在对应的位置写入对应的值，soble值会自动的计算出来，是否显著这一栏会告诉是否显著，如果显著说明中介效应显著</li>
+<li>使用冒号获取连续的几个元素，如获取第四个到第五个元素</li>
 </ul>
-<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/bd7faf3533fa828b6d736dfbff1f4134970a5a13.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<img src="/2016/10/19/numpy函数：[12]数组切片/34bbf8cd7b899e512510948b40a7d933c9950d57.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
 <ul>
-<li>跟大家分享一下各个单元格的公式，看下面的公示栏就知道了。</li>
+<li>省略冒号前的数字，表示从头开始</li>
 </ul>
-<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/bbe0d311728b47105b7f0dd4c1cec3fdfc032313.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<img src="/2016/10/19/numpy函数：[12]数组切片/43e6c733c895d1439de84abc71f082025baf0757.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>使用负数表示从后往前数，-1表示从后往前数第一个数</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/30ecd5ef76094b36163fb572a1cc7cd98c109d45.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>-2表示从后往前第二个，以此类推</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/a28d62d98d1001e9f991ba90ba0e7bec55e79745.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<img src="/2016/10/19/numpy函数：[12]数组切片/b258f5c4b74543a9c18554531c178a82b8011457.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>还可以设置步长来读取数组元素</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/b6045da98226cffc5bb4112dbb014a90f703ea50.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>步长为-1，其他参数不设置，就是将数组进行了倒序排列</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/1f569482b9014a90bfa0e822ab773912b21bee50.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>使用负数步长需要让第一个下表大于第二个下标</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/a005b3345982b2b7635e905b33adcbef77099b29.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -722,13 +1033,13 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/10/11/SPSS python教程：[7]读取透视表中的平均数/">
-                SPSS python教程：[7]读取透视表中的平均数
+            <a href="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/">
+                numpy函数：[8]logspace()创建等比数列数组
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2016年10月11日</span>
+                <span class="date">2016年10月17日</span>
             
             
             
@@ -737,244 +1048,23 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
 
     
         <div class="content">
-            <p>由于经常有人问怎么将数据中心化，笨方法就是手工去算，但是我打算用点高级的东西，从描述性统计的输出的透视表中，读取平均数，然后再用变量的每一个值减去平均数。这篇文章介绍一下最关键的一个步骤，那就是从输出的描述性统计中读取平均数。</p>
+            <p>上一篇介绍了numpy.linspace用于创建等差数列，现在介绍logspace用于创建等比数列。其实用法差不多，但是有一个特殊的地方需要注意。</p>
 <ul>
-<li>先看一下所有的代码。然后我们再逐步解释</li>
+<li>先来看一个例子，我们让开始点位0，结束点为0，元素个数为10，看看输出结果。为什么是酱紫呢？难道不都是0么？</li>
 </ul>
-<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/f677b1c379310a5540f30c74b54543a983261018.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/a992e31f4134970ad07f90b297cad1c8a6865de4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
 <ul>
-<li>首先是BEGIN PROGRAM和END PROGRAM,这两者之间插入python代码，也就是说python代码必须在这两者之间才能正确执行，之前有讲过</li>
+<li>因为logspace中，开始点和结束点是10的幂，0代表10的0次方，9代表10的9次方。我们看看下面的例子。<br>】</li>
 </ul>
-<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/245e8bcad1c8a7867b2d978e6509c93d71cf50e8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/964b2e4e251f95ca32f9122bcb177f3e660952e4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
 <ul>
-<li>装载spss和apssaux模块，spss模块很熟悉，但是spssaux模块是一个附加模块，在帮助文件中，没有关于它的，只能去自己搜索了。或者在python中使用help(spssaux)</li>
+<li>假如，我们想要改变基数，不让它以10为底数，我们可以改变base参数，将其设置为2试试</li>
 </ul>
-<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/f392492c11dfa9eca8f8849760d0f703908fc119.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/d089b986c9177f3e80387c9072cf3bc79e3d56e4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
 <ul>
-<li>fpath中保存数据文件路径</li>
+<li>假如我们想要不包含结束点，可以设置endpoint为0</li>
 </ul>
-<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/6391e903918fa0ec2011b68d249759ee3c6ddb19.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
-<ul>
-<li>spss打开该数据文件，注意这里用到了一些syntax命令，这些都是基本的。如果你不会写syntax也无妨，你可以在spss中手动操作一下，得到描述性统计，在结果输出文档中，就能看到用到的syntax，你再将其粘贴过来就可以了。</li>
-</ul>
-<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/b7bc4c66d01609247d227f9bd60735fae7cd34e8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
-<ul>
-<li>然后cmd中存有进行描述性统计的syntax命令</li>
-</ul>
-<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/d5462bfae6cd7b89426be7030d2442a7d8330ee8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
-<ul>
-<li>spssaux.createxmloutput将执行cmd命令，然后将结果保存在xml工作空间中，可以设置visible为True来看到输出结果</li>
-</ul>
-<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/476217f79052982245e5eb43d5ca7bcb0b46d419.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
-<ul>
-<li>读取透视表中的的某个以数值，注意观察参数，对照着透视表你就能理解了。</li>
-</ul>
-<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/6a2112338744ebf85ea7b6bfdbf9d72a6159a719.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
-<ul>
-<li>最后将读取得到的平均数值打印出来，成功！</li>
-</ul>
-<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/a54e55fbfbedab64ef759040f536afc378311ee8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
-<ul>
-<li>最近在进行spss的自动化处理数据，有兴趣的可以联系我。</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/10/05/SPSS绘图教程：[1]教程简介/">
-                SPSS绘图教程：[1]教程简介
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年10月05日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>这篇文章是spss绘图教程的第一篇，简单介绍一下该系列教程的主要内容。该系列教程没有啥难懂的东西，都是在数据分析工作中经常用到的一些绘图技巧和基本知识。写这个系列教程的初衷是因为我们的spss教科书中很少有绘图的教程，所以很多学生都在问我怎么绘图，我现在把我会的所有绘图知识都写下来，方便大家查阅，大家可以将这系列教程收藏起来，以便以后查阅。</p>
-<ul>
-<li>首先是数据的准备，绘图对数据的格式要求非常严格，所以在绘图前需要对数据进行整理。</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/e865a699a9014c083efcb31d087b02087af4f400.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>条形图的绘制以及修改。</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/32bb9c8ba61ea8d319c9efbc950a304e241f5864.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>折线图的绘制以及修改</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/0862c354564e925807fb1d569e82d158cdbf4e78.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>区域图的绘制以及修改</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/9dc3cf58ccbf6c815cf8b750be3eb13532fa4078.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>饼图的绘制以及修改</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/b0742dfa828ba61e4b2153974334970a314e5978.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>散点图的绘制以及修改</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/4075890a304e251f7c387f40a586c9177e3e5378.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>直方图的绘制以及修改</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/86d5bac27d1ed21b0b23b55daf6eddc450da3f64.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>高低图的绘制以及修改</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/ac2fc3c451da81cb320c18755066d01608243164.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>箱图的绘制以及修改</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/389aa8fd5266d01606f30590952bd40734fa3564.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>双轴图的绘制以及修改（有两种图形）</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/cc506c8b4710b912320e6d46c1fdfc0393452278.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>图形元素的设置</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/48151723dd54564e46037e81b1de9c82d0584fe1.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<ul>
-<li>脚注题注等的设置</li>
-</ul>
-<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/f7426d8da97739128a9b1fd9fa198618377ae28e.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/10/03/SPSS python教程：[6]读取PivotTable行标签/">
-                SPSS python教程：[6]读取PivotTable行标签
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>spss输出的结果文档用到最多的就是数据透视表（pivot table），在spss中，数据透视表被分为三个部分：行标签列表、列标签列表、数据列表。你可能还不理解这些内容。我们从这篇开始介绍数据透视表的行标签，并用python读取行标签，然后输出。看看代码吧：</p>
-<ul>
-<li>这是在spss结果文档中输出的一个数据透视表，我们要读取它的行标签</li>
-</ul>
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/8b527d2762d0f7036208ba450afa513d2797c5b6.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<ul>
-<li>这就是行标签，但是它并不像我们看到的那么简单，我们试着读取行标签就知道了</li>
-</ul>
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6c63514a20a4462308668afb9a22720e0df3d7bf.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<ul>
-<li>创建一个python脚本文件：outputTrim.py，下图中你可以看到该文件存放的目录</li>
-</ul>
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/48151723dd54564efa5acaa0b1de9c82d1584f28.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<ul>
-<li>接着先写入代码StartClient和stopclient，所有操作spss的代码都应该放在这两句之间。</li>
-</ul>
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/dc15484e9258d109d807862bd358ccbf6d814d07.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<ul>
-<li>我们详细讲解一下代码的意义，先看这两句，假如我们只打开了一个结果文档，我们使用第一句代码可以获取该文档的句柄；第二句获取该文档下所有的输出项目，里面包含但不仅限于数据透视表，outputItems是一个列表</li>
-</ul>
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/9864a2315c6034a83fae9618c91349540823769f.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<ul>
-<li>通过循环，我们可以找到名称为’Descriptive Statistics’的数据透视表。我们看下面的if语句，首先判断输出项是不是PIVOT，然后判断该输出项的标题为’Descriptive Statistics’的PIVOT，获取标题用的是GetDescription</li>
-</ul>
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/263e802f07082838c19ff28dba99a9014d08f15e.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<ul>
-<li>这句代码是将找到的这个输出项转换为数据透视表，这样才能使用数据透视表所具有的类和方法</li>
-</ul>
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/814b07d8bc3eb13540169922a41ea8d3fc1f4412.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<ul>
-<li>这一句就是获取数据透视表的行标签</li>
-</ul>
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/9304c888d43f879430a461b7d01b0ef41ad53a94.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<ul>
-<li>我们用这个循环来输出所有的行标签，看看输出结果是啥样的</li>
-</ul>
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/35e940df8db1cb132a38158adf54564e93584b92.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<ul>
-<li>这就是输出结果，跟数据透视表对比一下，你就知道行标签到底代表着什么。</li>
-</ul>
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6f4703950a7b02089dae167860d9f2d3562cc881.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6c63514a20a4462308668afb9a22720e0df3d7bf.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/10/03/SPSS实例：[31]统计选项频数/">
-                SPSS实例：[31]统计选项频数
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>假如有一个单选题，有五个选项，我现在想知道每一个选项有都少人选，怎么办？其实这是一个最简单的频率统计问题，我们把在spss中的统计过程列在以下，请参考：</p>
-<ul>
-<li>首先，我们在菜单栏上执行：分析–描述统计–频数</li>
-</ul>
-<img src="/2016/10/03/SPSS实例：[31]统计选项频数/9864a2315c6034a885a32ccfc9134954082376f8.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
-<ul>
-<li>在这里，我们将想要统计的题目放到变量框</li>
-</ul>
-<img src="/2016/10/03/SPSS实例：[31]统计选项频数/1b0d4f0fd9f9d72aed368753d62a2834359bbbeb.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
-<ul>
-<li>点击ok开始统计</li>
-</ul>
-<img src="/2016/10/03/SPSS实例：[31]统计选项频数/fc5e5f34970a304ed18337b4d3c8a786c8175c98.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
-<ul>
-<li>在输出的表格中，我们的频率一栏就是我们要统计的内容了。</li>
-</ul>
-<img src="/2016/10/03/SPSS实例：[31]统计选项频数/fab3ac119313b07e6eefc7460ed7912396dd8ceb.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
+<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/c87c6ecf3bc79f3d14ed64adb8a1cd11738b29e4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>

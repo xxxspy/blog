@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/17/numpy函数：[1]shape用法/">
+                numpy函数：[1]shape用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>shape函数是numpy.core.fromnumeric中的函数，它的功能是读取矩阵的长度，比如shape[0]就是读取矩阵第一维度的长度。它的输入参数可以使一个整数表示维度，也可以是一个矩阵。这么说你可能不太理解，我们还是用各种例子来说明他的用法：</p>
+<ul>
+<li>一维矩阵[1]返回值为(1L,)                   </li>
+</ul>
+<img src="/2015/07/17/numpy函数：[1]shape用法/a6c7d7177f3e67093192d5f339c79f3df9dc55e9.jpg" alt="numpy函数：[1]shape用法" title="numpy函数：[1]shape用法">
+<ul>
+<li>二维矩阵，返回两个值                                  </li>
+</ul>
+<img src="/2015/07/17/numpy函数：[1]shape用法/9304c888d43f8794af72d822d01b0ef41ad53ae9.jpg" alt="numpy函数：[1]shape用法" title="numpy函数：[1]shape用法">
+<ul>
+<li>一个单独的数字，返回值为空       </li>
+</ul>
+<img src="/2015/07/17/numpy函数：[1]shape用法/5327ce160924ab188d9b713b37fae6cd7a890be9.jpg" alt="numpy函数：[1]shape用法" title="numpy函数：[1]shape用法">
+<ul>
+<li>我们还可以将shape作为矩阵的方法来调用，下面先创建了一个单位矩阵e     </li>
+</ul>
+<img src="/2015/07/17/numpy函数：[1]shape用法/b25aae51f819861871ca7f8848ed2e738ad4e6ea.jpg" alt="numpy函数：[1]shape用法" title="numpy函数：[1]shape用法">
+<ul>
+<li>我们可以快速读取e的形状            </li>
+</ul>
+<img src="/2015/07/17/numpy函数：[1]shape用法/58af236d55fbb2fb32a6c81e4d4a20a44723dcea.jpg" alt="numpy函数：[1]shape用法" title="numpy函数：[1]shape用法">
+<ul>
+<li>假如我们只想读取e的第一维度长度，使用shape[0]        </li>
+</ul>
+<img src="/2015/07/17/numpy函数：[1]shape用法/5202e5f2b211931310ce6fbc67380cd790238dea.jpg" alt="numpy函数：[1]shape用法" title="numpy函数：[1]shape用法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/17/gitignore配置详解/">
+                gitignore配置详解
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如果你使用git来管理代码版本，你必须懂得如何使用.gitignore文件，该文件可以指定git忽略哪些文件，在git中的作用非常重要。在理解gitignore的配置之前，我们要先看看这些规则都可以来自哪里。通常git可以从多个地方获取忽略规则，优先级从上到下依次为：</p>
+<ul>
+<li><p>.gitignore文件适合写于项目有关的规则，并且这些规则需要与合作者分享。</p>
+</li>
+<li><p><code>$GIT_DIR/info/exclude</code>适用于与项目有关，但是你不想分享给其他作者，这些规则可能只适用于你自己。</p>
+</li>
+<li><p><code>core.excludesFile</code>适用于你在任何情况下都需要忽略的规则。这种情况不常用。</p>
+</li>
+<li><p>空行不匹配任何文件，所以空行通常是规则分组的分隔符，只是在视觉上将不同的规则分组。</p>
+</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/21e5582309f790527c5640f005f3d7ca7acbd570.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li>以<code>#</code>开始的行代表注释，所以也不匹配任何文件。</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/73ca5910b912c8fcb345f103f5039245d788210e.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li><p>末尾的空格没有任何意义，如果你想匹配空格，你需要在空格前加转义字符``。</p>
+</li>
+<li><p>例如：<code>a</code>这种写法可以匹配<code>a</code></p>
+</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/d7c9ca3f8794a4c20583e0e507f41bd5ac6e3918.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li><p>感叹号<code>!</code>的作用是从已有的忽略规则里排除一部分文件。注意想要让感叹号起作用，必须在前规则中使用通配符<code>*</code>。例如：</p>
+</li>
+<li><p>前规则写成：<code>.env/*</code></p>
+</li>
+<li><p>想要追踪<code>.env</code>文件夹下的<code>data.txt</code>，需要追加一个规则：<code>!.env/data.txt</code></p>
+</li>
+<li><p>如果前规则写成<code>.env</code>，则<code>!.env/data.txt</code>不起作用。</p>
+</li>
+<li><p>如果规则以<code>/</code>结尾，则表示匹配文件夹, 类似的文件和链接都不会匹配。</p>
+</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/4bd1e803738da977974181e5b951f8198718e357.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li>如果规则中不包含<code>/</code>，则规则即可匹配文件夹也可以匹配文件和链接，类似于linux shell中的通配符，可以匹配任何可以与通配符匹配的路径。</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/ae8267310a55b31949fc85bb4aa98226cefc17b3.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li>通配符无法匹配符号<code>/</code>，所以类似这样的规则<code>foo/*.html</code>不能匹配<code>foo/bar/test.html</code>。</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/61183b2dd42a2834ceef31c552b5c9ea14cebf70.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li>规则以<code>/</code>开头表示匹配<code>.gitignore</code>文件所在的目录。也就是说规则<code>/*.txt</code>只能匹配.gitignore所在目录下的所有txt文件，不能匹配其他目录下的txt文件。</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/dc854fda81cb39db37766098d9160924aa18300e.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li><p>以<code>**/</code>开头的规则表示匹配所有文件夹，规则<code>**/a/b</code>能匹配<code>foo/a/b</code>也能匹配<code>foo/bar/a/b</code></p>
+</li>
+<li><p>以<code>/**</code>结尾的规则表示匹配目录下所有文件和文件夹，规则<code>a/b/**</code>能匹配<code>/a/b/c</code>也能匹配<code>a/b/c/d/e</code></p>
+</li>
+<li><p>规则中间包含<code>/**/</code>表示匹配任意路径，比如规则<code>a/**/b</code>可以匹配<code>a/foo/bar/b</code>和<code>a/e/m/c/b</code>。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/15/python 线性代数：[3]矩阵转置/">
+                python 线性代数：[3]矩阵转置
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>矩阵的转置很简单，就是将矩阵的行变为列，将列变为行，我们先通过例子看一下矩阵转置是怎么做的。然后验证几个规律。</p>
+<ul>
+<li>先创建一个矩阵A</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/faacb564034f78f014b75c027b310a55b2191c40.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>我们使用属性T来得到矩阵A的转置矩阵</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/5327ce160924ab185b0727c637fae6cd7a890beb.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>我们验证第一个性质：(A’)’=A</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/d019d2bf6c81800a81044fffb33533fa838b471b.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>再创建两个尺寸相同的矩阵</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/1899a23eb13533fa1e5755dfaad3fd1f40345b1b.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>验证矩阵转置的第二个性质：(A±B)’=A’±B’</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/dbf554ed2e738bd44d9c74c0a38b87d6267ff940.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>验证矩阵转置的第三个性质：(KA)’=KA’</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/2f3295d4b31c8701a10a7417257f9e2f0608ff40.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>验证矩阵转置的第四个性质：(A×B)’= B’×A’</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/c87c6ecf3bc79f3d560022c1b8a1cd11738b291b.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/6648d73d70cf3bc733560c1dd300baa1cc112aaa.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li><p>本文用到的所有代码如下：</p>
+</li>
+<li></li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 2, 3],</p>
+</li>
+<li><p>[4, 5, 6]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A.T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 4],</p>
+</li>
+<li><p>[2, 5],</p>
+</li>
+<li><p>[3, 6]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A.T.T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 2, 3],</p>
+</li>
+<li><p>[4, 5, 6]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>B</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 4],</p>
+</li>
+<li><p>[2, 5],</p>
+</li>
+<li><p>[3, 6]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>D</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[0, 3],</p>
+</li>
+<li><p>[1, 4],</p>
+</li>
+<li><p>[2, 5]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>(B+D).T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1,  3,  5],</p>
+</li>
+<li><p>[ 7,  9, 11]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>B.T+D.T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1,  3,  5],</p>
+</li>
+<li><p>[ 7,  9, 11]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>10*A.T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[10, 40],</p>
+</li>
+<li><p>[20, 50],</p>
+</li>
+<li><p>[30, 60]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>(10*A).T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[10, 40],</p>
+</li>
+<li><p>[20, 50],</p>
+</li>
+<li><p>[30, 60]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.dot(A,B).T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[14, 32],</p>
+</li>
+<li><p>[32, 77]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.dot(A.T,B.T)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[17, 22, 27],</p>
+</li>
+<li><p>[22, 29, 36],</p>
+</li>
+<li><p>[27, 36, 45]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.dot(B.T,A.T)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[14, 32],</p>
+</li>
+<li><p>[32, 77]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/15/Python教程：[11]正则表达式match()函数/">
+                Python教程：[11]正则表达式match()函数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如果不创建pattern对象，我们使用match函数可以直接进行正则表达式的匹配，在我看来这种方式更简洁，不过不适合大型程序的编写，后期维护可能会产生困难，不过编写一些小脚本完全可以胜任。</p>
+<ul>
+<li>先引入re模块</li>
+</ul>
+<img src="/2015/07/15/Python教程：[11]正则表达式match()函数/b3ba5d166d224f4a5decda380bf790529822d161.jpg" alt="Python教程：[11]正则表达式match()函数" title="Python教程：[11]正则表达式match()函数">
+<ul>
+<li>使用match函数返回一个match对象</li>
+</ul>
+<img src="/2015/07/15/Python教程：[11]正则表达式match()函数/7d98931001e93901e15e241579ec54e736d1967a.jpg" alt="Python教程：[11]正则表达式match()函数" title="Python教程：[11]正则表达式match()函数">
+<ul>
+<li>使用group方法输出所有匹配的字符串</li>
+</ul>
+<img src="/2015/07/15/Python教程：[11]正则表达式match()函数/99636c0e0cf3d7cafe83965df01fbe096b63a961.jpg" alt="Python教程：[11]正则表达式match()函数" title="Python教程：[11]正则表达式match()函数">
+<ul>
+<li>我们看一下m的数据类型。</li>
+</ul>
+<img src="/2015/07/15/Python教程：[11]正则表达式match()函数/9a1151c2d56285352ebc7b0a92ef76c6a7ef637a.jpg" alt="Python教程：[11]正则表达式match()函数" title="Python教程：[11]正则表达式match()函数">
+<ul>
+<li>我们还可以用简单的写法来获得所有匹配的字符串。</li>
+</ul>
+<img src="/2015/07/15/Python教程：[11]正则表达式match()函数/e49cf91190ef76c6686a52009f16fdfaaf516726.jpg" alt="Python教程：[11]正则表达式match()函数" title="Python教程：[11]正则表达式match()函数">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/">
+                pandas教程：[2]DataFrame选择数据-1
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇文章介绍了如何创建和查看DataFrame数据，这篇文章讲一下如何选择DataFrame中的数据，还是用例子来说明问题。</p>
+<ul>
+<li>先来看一下今天用到的数据框的内容</li>
+</ul>
+<img src="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/509b9fcb39dbb6fdd256ea120a24ab18972b37b1.jpg" alt="pandas教程：[2]DataFrame选择数据-1" title="pandas教程：[2]DataFrame选择数据-1">
+<ul>
+<li>假如我们要选择A列的数据进行操作：df[‘a’]</li>
+</ul>
+<img src="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/966aca0735fae6cdf3b9a4550cb30f2442a70fb1.jpg" alt="pandas教程：[2]DataFrame选择数据-1" title="pandas教程：[2]DataFrame选择数据-1">
+<ul>
+<li>还可以使用数组的切片操作，但是注意了，切片得到的是行数据</li>
+</ul>
+<img src="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/d872d695d143ad4b402349f481025aafa40f06b1.jpg" alt="pandas教程：[2]DataFrame选择数据-1" title="pandas教程：[2]DataFrame选择数据-1">
+<ul>
+<li>如果你想使用这个方法得到列，那就会出现错误</li>
+</ul>
+<img src="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/38403f3fb80e7bec70840cd52c2eb9389b506b6c.jpg" alt="pandas教程：[2]DataFrame选择数据-1" title="pandas教程：[2]DataFrame选择数据-1">
+<ul>
+<li>我们还可以使用行标签来指定输出的行</li>
+</ul>
+<img src="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/4e83cb628535e5ddca72aaeb75c6a7efce1b626c.jpg" alt="pandas教程：[2]DataFrame选择数据-1" title="pandas教程：[2]DataFrame选择数据-1">
+<ul>
+<li>DataFrame的loc方法是帮助选择数据的，比如选择索引位置为0的一行数据（注意我们是用dates作为索引的）</li>
+</ul>
+<img src="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/ae10eddeb48f8c54ac8dca1b39292df5e0fe7f6c.jpg" alt="pandas教程：[2]DataFrame选择数据-1" title="pandas教程：[2]DataFrame选择数据-1">
+<ul>
+<li>选择多列数据的写法</li>
+</ul>
+<img src="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/8640bf8b87d6277f251f3d0c2b381f30e924fcb2.jpg" alt="pandas教程：[2]DataFrame选择数据-1" title="pandas教程：[2]DataFrame选择数据-1">
+<ul>
+<li>假如我们要选择的是一个局部数据，是行和列的交叉区域</li>
+</ul>
+<img src="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/507c389759ee3d6d8ccb88ff40166d224f4adeb2.jpg" alt="pandas教程：[2]DataFrame选择数据-1" title="pandas教程：[2]DataFrame选择数据-1">
+<ul>
+<li>假如我们只选择某一个数据，可以指定行和列：</li>
+</ul>
+<img src="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/08b68e529822720ee8c3edce78cb0a46f21fabb2.jpg" alt="pandas教程：[2]DataFrame选择数据-1" title="pandas教程：[2]DataFrame选择数据-1">
+<ul>
+<li>当然，at方法是专门用于获取某个值的：</li>
+</ul>
+<img src="/2015/07/11/pandas教程：[2]DataFrame选择数据-1/3a86813df8dcd100d2c2f715718b4710b9122f6c.jpg" alt="pandas教程：[2]DataFrame选择数据-1" title="pandas教程：[2]DataFrame选择数据-1">
+<ul>
+<li>选择数据就是用到了切片和loc、at方法，下一篇文章介绍一下iloc方法选择数据，它使你像操作array一样操作DataFrame</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/05/numpy函数：[9]zeros创建0矩阵/">
+                numpy函数：[9]zeros创建0矩阵
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>经常用到一些0数组，就是元素均为0的数组。那么怎么在python中创建0数组呢？我们用到了zeros函数，下面看看这个函数的用法：</p>
+<ul>
+<li>首先要引入一下numpy这个包</li>
+</ul>
+<img src="/2015/07/05/numpy函数：[9]zeros创建0矩阵/9e7ce6dcd100baa19c4a21244510b912c9fc2e8f.jpg" alt="numpy函数：[9]zeros创建0矩阵" title="numpy函数：[9]zeros创建0矩阵">
+<ul>
+<li>试着创建一个一维数组，只使用一个参数就可以了</li>
+</ul>
+<img src="/2015/07/05/numpy函数：[9]zeros创建0矩阵/73ca5910b912c8fc95959052fe039245d788218f.jpg" alt="numpy函数：[9]zeros创建0矩阵" title="numpy函数：[9]zeros创建0矩阵">
+<ul>
+<li>默认情况下，zeros创建的数组是浮点型的，假如使用其他类型，可以设置dtype参数</li>
+</ul>
+<img src="/2015/07/05/numpy函数：[9]zeros创建0矩阵/d57e9994a4c27d1e8d6d5d5b19d5ad6edcc438a2.jpg" alt="numpy函数：[9]zeros创建0矩阵" title="numpy函数：[9]zeros创建0矩阵">
+<ul>
+<li>假如我们想要创建一个二维数组，我一开始以为是用下面这个方法，但是会返回错误</li>
+</ul>
+<img src="/2015/07/05/numpy函数：[9]zeros创建0矩阵/a583631ed21b0ef47aa3fec1dfc451da80cb3ea2.jpg" alt="numpy函数：[9]zeros创建0矩阵" title="numpy函数：[9]zeros创建0矩阵">
+<ul>
+<li>其实是使用一个列表作为参数，这样就返回一个二维数组</li>
+</ul>
+<img src="/2015/07/05/numpy函数：[9]zeros创建0矩阵/ac2fc3c451da81cb5f80e5525066d0160824318f.jpg" alt="numpy函数：[9]zeros创建0矩阵" title="numpy函数：[9]zeros创建0矩阵">
+<ul>
+<li>同样我们使用第二个参数设置数组的类型</li>
+</ul>
+<img src="/2015/07/05/numpy函数：[9]zeros创建0矩阵/0865b518972bd4075b8cb56279899e510eb309a2.jpg" alt="numpy函数：[9]zeros创建0矩阵" title="numpy函数：[9]zeros创建0矩阵">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/05/python高级教程：[3]生成器方法send throw clos/">
+                python高级教程：[3]生成器方法send throw clos
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这一篇接着讲Python的生成器，生成器总共有四个方法你可以看一下：next方法已经说过了，接下来说一下其余的三个方法。</p>
+<ul>
+<li>send：用于传递参数，实现与生成器的交互，我们举一个例子，下面的函数dog代表一只狗。当程序运行到food=(yield)的时候就会被挂起，等待生成器调用send方法，这时候我调用d.send(u’骨头’)，骨头就会被传递到food这个变量中，然后程序就说”我吃饱了”。仔细看一下下面的输出内容你就会明白。所以，send实际上是把yield变成了一个输入入口。</li>
+</ul>
+<img src="/2015/07/05/python高级教程：[3]生成器方法send%20throw%20clos/2e6fa7389b504fc2fc62bdbae3dde71190ef6d14.jpg" alt="python高级教程：[3]生成器方法send throw clos" title="python高级教程：[3]生成器方法send throw clos">
+<ul>
+<li>stop用于停止生成器，如果再stop之后调用next，就会引发StopIteration错误。</li>
+</ul>
+<img src="/2015/07/05/python高级教程：[3]生成器方法send%20throw%20clos/b29f8282d158ccbf2069b9851fd8bc3eb035417c.jpg" alt="python高级教程：[3]生成器方法send throw clos" title="python高级教程：[3]生成器方法send throw clos">
+<ul>
+<li>throw用于给生成器传递一个error，结合stop，我们可以做一些有意思的事情：</li>
+</ul>
+<img src="/2015/07/05/python高级教程：[3]生成器方法send%20throw%20clos/346bd85c10385343ffbf889e9513b07ecb8088d9.jpg" alt="python高级教程：[3]生成器方法send throw clos" title="python高级教程：[3]生成器方法send throw clos">
+<ul>
+<li><p>根据上面的例子我们可以知道，实际上stop可以在生成器内部引发一个GeneratorExit错误，我们可以使用try…except GeneratorExit句型捕获该错误，然后做一些善后的事情。</p>
+</li>
+<li><p>注意，在捕获GeneratorExit错误以后，你需要raise StopIteration错误，否则程序就没有终止的时候了。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/">
+                Excel2013：[17]数据透视表有两个汇总项
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>现在我想要在分类汇总的时候出现两个汇总项，看下面的数据，假如我要在一个数据透视表里看到两个汇总项，也就是重量和中转费。我们的目的是统计上一站和目的网点之间中转费和重量的总计，下面看看如何具体来做。</p>
+<ul>
+<li>先插入一个数据透视表，如图所示</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/027a45b5c9ea15ce702a270eb4003af33b87b2b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>打开一个对话框，我们默认在新的工作表放置数据透视表，点击确定按钮</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/e8112b2ac65c10381cba09c5b0119313b17e89b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>看到界面的右侧出现了一个数据透视表字段，将行和列字段拖动到对应的位置</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/b13fd48065380cd7c6da65eaa344ad34588281b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>接着讲想要统计的字段拖动到下面的值字段</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/b3ba5d166d224f4a06feb5140bf790529822d117.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>设置值字段，我们点击【计数项：重量】，在打开的菜单中选择：值字段设置</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/caae68094b36acaf4a2451fb7ed98d1000e99cb6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>在打开的对话框中，我们选择【求和】，点击确定按钮</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/d68b65cb0a46f21f8f539854f4246b600c33ae17.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>同样，设置第二个字段</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/b94f65ec54e736d140d74b0f99504fc2d46269b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<ul>
+<li>至此，我们就完成了任务。</li>
+</ul>
+<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/389aa8fd5266d016ccc8532f952bd40734fa35a1.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/05/pandas教程：[18]匹配字符串/">
+                pandas教程：[18]匹配字符串
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>pandas可以检测字符串是否包含某字符模式或者匹配它，这在处理一些字符串数据的时候非常有用，下面我们来用几个例子说明一下。</p>
+<ul>
+<li>首先，我们创建一个数据序列<br>查看数据序列：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/5202e5f2b21193133c3f72b466380cd791238d73.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/1e71f724b899a90109ecd9321e950a7b0308f59e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>检测数据序列中哪些元素包含一个字母和一个数字的字符模式<br>匹配结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/b13fd48065380cd701622fe9a244ad3459828173.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/7d98931001e93901827e003a78ec54e736d19673.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>我们可以使用na参数来规定出现NaN数据的时候匹配成True还是False<br>结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/0d968f2397dda1443e75e1b6b1b7d0a20cf48673.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/0b3a1c087bf40ad12e3d45e7542c11dfa8ecce9e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>match方法可以严格匹配字符串：<br>输出结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/8640bf8b87d6277fa0cbb03c2b381f30e824fc9e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/55a628d12f2eb9383111f7f6d6628535e5dd6f73.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li><p>还有，我们可以检查字符串开始字符，假设我们想要查找以字母a开头的数据，可以用startswith或者contains，注意contains中第一个参数，不懂得童鞋可以去看Python的正则表达式</p>
+</li>
+<li><p>输出结果：</p>
+</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/caae68094b36acafb39c1bf87fd98d1001e99c73.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/4e83cb628535e5dd485028db75c6a7efce1b6273.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>同样道理，可以检查结束字符串<br>输出结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/9f6e190828381f30abc00fadaa014c086f06f09e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/a8ad9413632762d0a3e726bba3ec08fa503dc69e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>还有很多字符串方法，这里不一一距离，你看一下简介用到的时候再去学</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/54baacfb43166d222fae9790452309f79152d29e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/03/SPSS python教程：[4]startclient/">
+                SPSS python教程：[4]startclient
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用python控制spss的时候，我们必须在使用spss的任何功能前，先启动spss，这就是用到了StartClient方法。假如我们完成了所有spss的工作，这时候我们就可以使用StopClient方法来结束spss进程。下面看一个例子。</p>
+<ul>
+<li>首先我们在syntax编辑窗口中运行python，首先应该想到使用BEGIN PROGRAM.和END PROGRAM.来将python代码包括起来。</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/42e89c26cffc1e178d6963a64890f603728de910.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>然后引入SpssClient模块，这样才能使用它的StartClient方法</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/ac754782b2b7d0a2786eed0ac9ef76094a369a47.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>我们启动spss客户端的方法就是这样了，记住，通常使用完spss以后，要通过StopClient方法来关闭它。</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/e78c65899e510fb3e5bb9e00db33c895d0430c4c.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>真正实现功能的是这两句代码，先不用管它什么意思</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/73ca5910b912c8fc0e641f5afe039245d7882157.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>运行结果是输出了当前的工作文件夹：</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/c28fddfdfc039245073608988594a4c27c1e2563.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/26/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/28/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

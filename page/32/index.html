@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/05/Excel2013：[57]文本日期互转/">
+                Excel2013：[57]文本日期互转
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>Excel中日期格式是一个非常头疼的问题，很多时候我们都搞不清楚自己的数据是日期格式还是文本格式，更别提两者的相互转化了。今天我们详细讲解一下这个问题，以及这两种格式如何互转。</p>
+<ul>
+<li>如何判断自己的数据是日期格式还是文本格式？大部分人都回答错误！因为大部分人都知道查看单元格格式可以知道！这是及其错误的，比如，有一个单元格，里面填写了一个字符“a”，通过设置单元格格式，你将这个单元格设置为数字格式，试试看。一个字母竟然可以成为一个数字格式。这就是说虽然我们可以任意设置单元格的格式，但是当Excel无法转换格式的时候，就保留了原先的格式。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/246cca2a2834349bf3261892caea15ce36d3be42.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>所以，当我们想知道一个单元格是文本还是日期时，看单元格格式是不保险的。比如这一列日期，你可以在自己的电脑上录入这一列数据。我们将A列设置为日期格式，但是这一列数据仍然是文本，Excel并没有转换格式。因为Excel并不认识这种日期格式，所以就无法将其转换为日期，仍然保留了文本格式，虽然Excel显示的是日期格式。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/58af236d55fbb2fb91162e054c4a20a44623dcad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>除了Excel不识别的日期格式外，还有一种情况可以造成Excel无法将文本转换为日期：在下面这种情况下，我们先设置c列为文本，然后设置d列默认格式为常规。在两列都输入同样的“2013-1-1”，你会发现他们的不同：C列数据保持了你输入的内容不变；D列内容自动转换格式为Excel默认的日期格式。这说明你预先设置了c列的格式为文本，导致后面再输入数据都按照文本来保存数据了。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/f6428f8fa0ec08fa9d3d65b05aee3d6d55fbdaad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>如何鉴别到底是日期格式还是文本格式？很简单。当单元格为日期时，你在格式设置下啦菜单中，可以看到短日期和长日期格式不同，短日期下面显示2013/1/1，长日期下显示2013年1月1日。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/b3ba5d166d224f4af29200040af790529822d15b.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>如果单元格为文本格式，你会发现，短日期和长日期显示相同的格式，说明Excel并没有正确的识别日期。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/9252ae7eca8065380e22d40494dda144ac348299.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>现在我们有一列文本格式的日期，想要转换为日期格式</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/0db2c9ca7bcb0a462d1ffd2e6863f6246b60afad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>先将这一列设置为日期格式</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/bf487563f6246b60e833c463e8f81a4c510fa2ad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>按下ctrl+F，利用替换，将“.”替换为“-”,这样可以将Excel不认识的格式转换为它认识的格式</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/3c2c4bfbb2fb4316be3f0c6d23a4462309f7d342.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>结果就是这样了：显然Excel自动识别了日期。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/29752a9b033b5bb53bea56e935d3d539b600bcad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>但是有时候单元格内不是2013.1.1这种形式，而是2013-1-1，也很简单</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/1899a23eb13533fac4e4ee39abd3fd1f41345b13.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>还是用这个方法，先将该列设置为日期格式，然后将“-”替换为“/”即可</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/9c57e3faaf51f3de9cfec47397eef01f3a29791d.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>反过来，有些时候我们必须将日期格式转换为文本格式，还是这一列数据，它现在是日期格式</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/29752a9b033b5bb53bea56e935d3d539b600bcad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>在B2单元格输入公式：=TEXT(A2,”yyyy-m-d”)，按下回车看一下结果</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/c9bdddcec3fdfc03f4c493afd73f8794a4c2262d.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>向下拖动单元格右下角，可以快速填充以下的单元格，完成日期向文本的转换。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/c2bce2039245d688bcbec2b3a7c27d1ed21b242d.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/03/SPSS实例：[12]回归模型中如何增加交互项/">
+                SPSS实例：[12]回归模型中如何增加交互项
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>通常我们在回归分析中需要用到两个自变量之间的交互项来检验两个变量之间的交互效应，那么这个交互项是从哪里来的呢？其实就是两个变量的乘积，具体方式是：</p>
+<ul>
+<li>打开数据，在菜单栏上执行：转换–计算变量</li>
+</ul>
+<img src="/2015/05/03/SPSS实例：[12]回归模型中如何增加交互项/9304c888d43f879438af693dd01b0ef41bd53a15.jpg" alt="SPSS实例：[12]回归模型中如何增加交互项" title="SPSS实例：[12]回归模型中如何增加交互项">
+<ul>
+<li>打开计算变量的对话框，我们设置目标变量名称，你随便起一个英文的名字，然后设置这个变量的标签，为了以后处理数据方便，你一定要添加一个自己看得懂的标签，点击继续。</li>
+</ul>
+<img src="/2015/05/03/SPSS实例：[12]回归模型中如何增加交互项/1a94b36eddc451da25a62df8b4fd5266d0163215.jpg" alt="SPSS实例：[12]回归模型中如何增加交互项" title="SPSS实例：[12]回归模型中如何增加交互项">
+<ul>
+<li>然后在这里输入两个变量相乘的公式，如图所示就是变量P1Q01和P1Q02的乘积</li>
+</ul>
+<img src="/2015/05/03/SPSS实例：[12]回归模型中如何增加交互项/b7bc4c66d016092401758308d60735fae6cd3415.jpg" alt="SPSS实例：[12]回归模型中如何增加交互项" title="SPSS实例：[12]回归模型中如何增加交互项">
+<ul>
+<li>点击ok就可以运行程序，得到一个新的变量，也就是交互项</li>
+</ul>
+<img src="/2015/05/03/SPSS实例：[12]回归模型中如何增加交互项/7ac880510fb30f24f1cacd10ca95d143ad4b0315.jpg" alt="SPSS实例：[12]回归模型中如何增加交互项" title="SPSS实例：[12]回归模型中如何增加交互项">
+<ul>
+<li>用syntax的话更简单，下面的代码可以实现同样的效果。</li>
+</ul>
+<img src="/2015/05/03/SPSS实例：[12]回归模型中如何增加交互项/cf5a8316fdfaaf51af44a0ac8e5494eef01f7a3a.jpg" alt="SPSS实例：[12]回归模型中如何增加交互项" title="SPSS实例：[12]回归模型中如何增加交互项">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/03/Excel2013：[1]两类数据绘制在同一张图上/">
+                Excel2013：[1]两类数据绘制在同一张图上
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如我有两个曲线要画在同一张图上，而且不能同时绘制出两条曲线，只能一条一条的绘制，如果你想要将两条曲线放到一张图上，你可以先绘制一条，然后再添加数据源。我们看看下面的案例吧。</p>
+<ul>
+<li>我们看下面的表格，有三列数据，自变量X和两个因变量y1和y2，我们要用散点图表示x和y1的关系，同时要用散点图表示x和y2的关系，如何将两个散点图绘制在一个图上呢？</li>
+</ul>
+<img src="/2015/05/03/Excel2013：[1]两类数据绘制在同一张图上/d66b7e59252dd42a0a3624b8013b5bb5c9eab8a2.jpg" alt="Excel2013：[1]两类数据绘制在同一张图上" title="Excel2013：[1]两类数据绘制在同一张图上">
+<ul>
+<li>先绘制第一条曲线，选中x和y1两列数据，然后选择一个散点图，如图所示</li>
+</ul>
+<img src="/2015/05/03/Excel2013：[1]两类数据绘制在同一张图上/d478a8003af33a87c44c2509c45c10385343b544.jpg" alt="Excel2013：[1]两类数据绘制在同一张图上" title="Excel2013：[1]两类数据绘制在同一张图上">
+<ul>
+<li>在图表上右键单击，点击【选择数据】</li>
+</ul>
+<img src="/2015/05/03/Excel2013：[1]两类数据绘制在同一张图上/e8112b2ac65c1038625febd1b0119313b07e8944.jpg" alt="Excel2013：[1]两类数据绘制在同一张图上" title="Excel2013：[1]两类数据绘制在同一张图上">
+<ul>
+<li>我们看到打开了【数据源】对话框。点击【添加】按钮</li>
+</ul>
+<img src="/2015/05/03/Excel2013：[1]两类数据绘制在同一张图上/5202e5f2b21193138562daa367380cd791238d44.jpg" alt="Excel2013：[1]两类数据绘制在同一张图上" title="Excel2013：[1]两类数据绘制在同一张图上">
+<ul>
+<li>编辑数据系列，你可以看到我用不同颜色表示出了不同的数据源，你按照箭头来操作就可以了</li>
+</ul>
+<img src="/2015/05/03/Excel2013：[1]两类数据绘制在同一张图上/647912d7912397dd9a58bd175b82b2b7d0a28744.jpg" alt="Excel2013：[1]两类数据绘制在同一张图上" title="Excel2013：[1]两类数据绘制在同一张图上">
+<ul>
+<li>这是我设计好的数据系列，点击确定</li>
+</ul>
+<img src="/2015/05/03/Excel2013：[1]两类数据绘制在同一张图上/cbc17b380cd79123addfb167af345982b2b780a2.jpg" alt="Excel2013：[1]两类数据绘制在同一张图上" title="Excel2013：[1]两类数据绘制在同一张图上">
+<ul>
+<li>回到了数据源对话框，我们点击确定按钮</li>
+</ul>
+<img src="/2015/05/03/Excel2013：[1]两类数据绘制在同一张图上/58c3acb7d0a20cf470b1dbcc74094b36acaf9944.jpg" alt="Excel2013：[1]两类数据绘制在同一张图上" title="Excel2013：[1]两类数据绘制在同一张图上">
+<ul>
+<li>这时候已经出现了两条曲线，我们点击【添加】按钮，如图所示</li>
+</ul>
+<img src="/2015/05/03/Excel2013：[1]两类数据绘制在同一张图上/ac754782b2b7d0a24cf6218ec9ef76094b369aa2.jpg" alt="Excel2013：[1]两类数据绘制在同一张图上" title="Excel2013：[1]两类数据绘制在同一张图上">
+<ul>
+<li>选择添加【图例】，这样你就可以知道这两条曲线分别代表的是谁了。</li>
+</ul>
+<img src="/2015/05/03/Excel2013：[1]两类数据绘制在同一张图上/0db52fadcbef76090f34bc8c2cdda3cc7cd99ea2.jpg" alt="Excel2013：[1]两类数据绘制在同一张图上" title="Excel2013：[1]两类数据绘制在同一张图上">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/03/python 线性代数：[10]求方阵的特征值特征向量/">
+                python 线性代数：[10]求方阵的特征值特征向量
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>求方阵（矩阵）的特征值和特征向量用的是python中的numpy.linagl.eig方法，它需要一个二维数组作为参数，输出一个一位数组（元素为特征值）和一个二维数组（特征向量组），我们还是在例子中学习一哈：</p>
+<ul>
+<li>先引入numpy模块</li>
+</ul>
+<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/a1ad16fa513d2697caee42aa57fbb2fb4216d8cd.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
+<ul>
+<li>创建一个对角矩阵，关于diag的用法可以看我前几篇文章</li>
+</ul>
+<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/29752a9b033b5bb57ea46a0934d3d539b700bc93.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
+<ul>
+<li>求矩阵x的特征值和特征向量，特征值保存在a中，特征向量保存在b中</li>
+</ul>
+<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/b3ba5d166d224f4abaa439e40bf790529922d1cd.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
+<ul>
+<li><p>使用循环的方法，我们来验证一下特征值和特征向量，验证的方法是特征值和特征向量的定义法：</p>
+</li>
+<li><p>设A为n阶矩阵，若存在常数λ及非零的n维向量x，使得</p>
+</li>
+<li><p>Ax=λx，</p>
+</li>
+<li><p>则称λ是矩阵A的特征值，x是A属于特征值λ的特征向量。</p>
+</li>
+</ul>
+<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/5202e5f2b21193137630b54767380cd790238d93.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
+<ul>
+<li>这是我今天犯的错误：</li>
+</ul>
+<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/6a22e8246b600c332d44943f184c510fd8f9a1cd.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
+<ul>
+<li><p>这是今天用到的所有代码：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>import numpy</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x=numpy.diag((1,2,3))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 0, 0],</p>
+</li>
+<li><p>[0, 2, 0],</p>
+</li>
+<li><p>[0, 0, 3]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a,b=numpy.linalg.eig(x)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([ 1.,  2.,  3.])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  1.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  1.]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>for i in range(3):</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>if numpy.dot(x,b[:][i])==a[i]*b[:][i]:</p>
+</li>
+<li><p>print ‘正确’</p>
+</li>
+<li><p>else:print ‘错误‘</p>
+</li>
+<li><p>SyntaxError: EOL while scanning string literal</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>for i in range(3):</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>if numpy.dot(x,b[:][i])==a[i]*b[:][i]:</p>
+</li>
+<li><p>print ‘正确’</p>
+</li>
+<li><p>else:print ‘错误’</p>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#38>“, line 2, in <module></module></pyshell#38></p>
+</li>
+<li><p>if numpy.dot(x,b[:][i])==a[i]*b[:][i]:</p>
+</li>
+<li><p>ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>for i in range(3):</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>if (numpy.dot(x,b[:][i])==a[i]*b[:][i]).all():</p>
+</li>
+<li><p>print ‘正确’</p>
+</li>
+<li><p>else:print ‘错误’</p>
+</li>
+<li><p>正确</p>
+</li>
+<li><p>正确</p>
+</li>
+<li><p>正确</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/03/pandas教程：[11]aggregate分组计算/">
+                pandas教程：[11]aggregate分组计算
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>一旦对数据分组，接下来一定是对各组数据进行计算，这是通过groupby.aggregate()实现的，我们来看一下今天的例子：</p>
+<ul>
+<li>先引入必要的模块，然后创建一个DataFrame对象，如果你看了前几篇文章，应该已经知道这个DataFrame了。<br>这是内部数据：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/bf487563f6246b602a038662e8f81a4c510fa253.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/9e7ce6dcd100baa16f0973ad4410b912c8fc2ebb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>根据两个索引color、food进行分组</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/f76575600c338744c3c81b6a520fd9f9d72aa053.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>计算各组总和：<br>计算结果为：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/310f3b1f95cad1c8309ec8317c3e6709c93d51bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/b853d6fcc3cec3fd551b9363d588d43f879427bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>计算结果默认使用了两个分组索引color和food作为新的DataFrame的索引（注意计算结果为一个DataFrame对象），可以使用reset_index()来将两个索引转化为列变量<br>结果为：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/d66b7e59252dd42a180435bd003b5bb5c9eab853.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/3bb22487e950352afb6c111e5043fbf2b2118b53.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>在分组是也可以使用as_index参数达到reset_index()的效果：<br>计算结果为：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/fd428c45d688d43f2a8ca5e47e1ed21b0ef43bbb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/1a94b36eddc451da37d338fdb5fd5266d01632bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>另外我们经常用到的一个方法为size()返回各组数据量<br>结果为：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/dc854fda81cb39db0ee55340d3160924ab1830bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/aa59892bd40735fa26d57aaf9d510fb30f2408bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>最后，还有一个经常用到的方法为describe()，对各组数据进行描述性统计：<br>计算结果为：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/34bbf8cd7b899e51ccab0e0241a7d933c8950dbb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/d872d695d143ad4b1b0b72d681025aafa40f06bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/01/SPSS实例：[38]spss22.0安装教程/">
+                SPSS实例：[38]spss22.0安装教程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我以前用的是spss20.0，现在为什么要升级到spss22，因为新版本对中文支持更好，界面更加友好，帮助系统也是中文的，更重要的是spss22默认安装的时候可以安装python插件，让你可以在python中调用spss程序，大大减小数据分析工作中的重复劳动，废话不多说，我把自己安装的过程截图到下面。并进行简要说明。</p>
+<ul>
+<li>从网上下载一个安装文件，我用的是64位系统；打开安装文件</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/6398ecd3572c11df6526b6b5612762d0f603c276.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>解压，这个不用说</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/d68b65cb0a46f21f56e057c5f4246b600d33ae15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>在这个界面选择单个用户许可证，除非你明确知道自己是网络许可的。</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/27d647ee3d6d55fb6b317fb06f224f4a21a4dd76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>当然，用人家的产品得同意人家的协议，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/eab9044c510fd9f925c35cff272dd42a2934a415.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>随便输入一个名字啦，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/d66b7e59252dd42adedd083d013b5bb5c8eab815.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>我们当然是用简体中文啦，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/08b68e529822720eef39eb6c79cb0a46f31fab76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>这个就不建议大家装了，我反正没用过这个功能，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/11794d43fbf2b2119bf98cd8c88065380dd78e15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>这个是关键，我们需要安装，因为很多时候我们会用到python代码来处理数据，到时候你没安装的话，就是个麻烦事了。装上它，哪怕不用呢。</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/647912d7912397ddaeae91925b82b2b7d1a28715.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/eab9044c510fd9f925e05cff272dd42a2934a476.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>接受吧，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/29752a9b033b5bb53320296834d3d539b700bc76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>选择安装的位置，我一般安装到非系统盘，毕竟spss很大，装在c盘太占空间，到时候c盘没空间就不好闹了。</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/c8ab0bce36d3d53948ca06553887e950342ab076.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>这个就点击确定。</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/3bc6f750352ac65c14f36fe5f9f2b21192138a76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>弹出一个授权许可的界面，点击立即授权，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/b87985504fc2d562afdfd97be51190ef77c66c15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>我们输入序列码，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/e6508eef76c6a7effef1a1b0fffaaf51f2de6615.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>提示你授权许可完成</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/f29faa8f8c5494eec8f5068f2ff5e0fe98257e15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>重启系统，看看是否安装成功</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/caae68094b36acaf34169f6a7ed98d1000e99c76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/01/SPSS实例：[33]混合设计的方差分析/">
+                SPSS实例：[33]混合设计的方差分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如我的实验设计师混合设计的两因素设计，即一个变量是组间变量，一个变量是组内变量，我们怎么样统计这种实验的结果呢？今天就来看看我怎么做混合设计的方差分析，下面是具体的方法：</p>
+<ul>
+<li>首先我们打开重复测量方差分析的对话框</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[33]混合设计的方差分析/cf5a8316fdfaaf511304240f8e5494eef11f7a58.jpg" alt="SPSS实例：[33]混合设计的方差分析" title="SPSS实例：[33]混合设计的方差分析">
+<ul>
+<li>我们添加一个组内因素，假如组内因素有三个水平，点击add按钮</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[33]混合设计的方差分析/fcbbb151f3deb48f6e8e046ef21f3a292cf57858.jpg" alt="SPSS实例：[33]混合设计的方差分析" title="SPSS实例：[33]混合设计的方差分析">
+<ul>
+<li>我们选中factor1(3)，然后点击【define】</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[33]混合设计的方差分析/b5ce925494eef01fdff3bd75e2fe9925bd317d58.jpg" alt="SPSS实例：[33]混合设计的方差分析" title="SPSS实例：[33]混合设计的方差分析">
+<ul>
+<li>将ghj这三个组内变量放入到组内变量框汇总</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[33]混合设计的方差分析/95afee1f3a292df5072409a5be315c6035a87358.jpg" alt="SPSS实例：[33]混合设计的方差分析" title="SPSS实例：[33]混合设计的方差分析">
+<ul>
+<li>将组间变量放入到组间变量框中</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[33]混合设计的方差分析/48151723dd54564e61824189b1de9c82d0584f58.jpg" alt="SPSS实例：[33]混合设计的方差分析" title="SPSS实例：[33]混合设计的方差分析">
+<ul>
+<li>点击【option】按钮，设置输出的统计量</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[33]混合设计的方差分析/3b6833f5e0fe992555ebcce036a85edf8cb17158.jpg" alt="SPSS实例：[33]混合设计的方差分析" title="SPSS实例：[33]混合设计的方差分析">
+<ul>
+<li>选择这三个选项，他们是描述性统计、效应量、方差齐性检验</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[33]混合设计的方差分析/35e940df8db1cb13a68e99a3df54564e93584b58.jpg" alt="SPSS实例：[33]混合设计的方差分析" title="SPSS实例：[33]混合设计的方差分析">
+<ul>
+<li>点击ok按钮，开始统计分析。下一篇我们将会讲混合设计方差分析的结果解读。</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[33]混合设计的方差分析/570f8c58d109b3de6a5841d8cebf6c81810a4c58.jpg" alt="SPSS实例：[33]混合设计的方差分析" title="SPSS实例：[33]混合设计的方差分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/01/Python操作Word：[1]常用对象介绍/">
+                Python操作Word：[1]常用对象介绍
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>前面已经介绍过了试用win32com类库来进行Word开发，系列文章《Python操作Word》是继承了前面的文章，所以，你应该先查看前面的文章，其实只有两篇，文章地址列在最下面的参考资料了。</p>
+<ul>
+<li>段落：这是我蕞常用的类，可以给不同的段落设置格式，也可以插入内容，比如读取段落的数目，使用Paragraph.Count。选择特定的锻炼可使用Paragraph[]</li>
+</ul>
+<img src="/2015/05/01/Python操作Word：[1]常用对象介绍/0db52fadcbef7609263e4b902cdda3cc7cd99e4d.jpg" alt="Python操作Word：[1]常用对象介绍" title="Python操作Word：[1]常用对象介绍">
+<ul>
+<li>图片、图表：Shapes对象，获取图片的数目使用Count，获取第N个图片使用Shapes[N]</li>
+</ul>
+<img src="/2015/05/01/Python操作Word：[1]常用对象介绍/bd70426034a85edf1a4b2d2c4b540923dc5475bf.jpg" alt="Python操作Word：[1]常用对象介绍" title="Python操作Word：[1]常用对象介绍">
+<ul>
+<li>表格：Tables对象，获取Tables的数目使用Count,获取第N个表格使用Tables[N]</li>
+</ul>
+<img src="/2015/05/01/Python操作Word：[1]常用对象介绍/8474fbdde71190eff5ce40d0cc1b9d16fdfa604d.jpg" alt="Python操作Word：[1]常用对象介绍" title="Python操作Word：[1]常用对象介绍">
+<ul>
+<li>范围：Range对象是最重要的对象，我们经常使用range()来取得文档的所有范围；使用rang(i,j)可以获得第i行第j个字的位置；</li>
+</ul>
+<img src="/2015/05/01/Python操作Word：[1]常用对象介绍/95afee1f3a292df570f67e1abe315c6034a8734d.jpg" alt="Python操作Word：[1]常用对象介绍" title="Python操作Word：[1]常用对象介绍">
+<ul>
+<li>还可以使用Start 和End来标注开始和结尾。</li>
+</ul>
+<img src="/2015/05/01/Python操作Word：[1]常用对象介绍/bbe0d311728b471078e82ec3c1cec3fdfd0323bf.jpg" alt="Python操作Word：[1]常用对象介绍" title="Python操作Word：[1]常用对象介绍">
+<ul>
+<li>文字：Words对象，想要知道有多少个字？看下面。</li>
+</ul>
+<img src="/2015/05/01/Python操作Word：[1]常用对象介绍/d57e9994a4c27d1e1ee1e8cb19d5ad6edcc438bf.jpg" alt="Python操作Word：[1]常用对象介绍" title="Python操作Word：[1]常用对象介绍">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/23/Python教程：[47]字典对象的方法大全/">
+                Python教程：[47]字典对象的方法大全
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>python字典对象有一些方法，今天就详细介绍一下，也作为自己编程时的备忘录，废话不多少，还是用例子来说明问题：</p>
+<ul>
+<li>创建一个字典先</li>
+</ul>
+<img src="/2015/04/23/Python教程：[47]字典对象的方法大全/3bc6f750352ac65cbc4bc7def9f2b21192138a96.jpg" alt="Python教程：[47]字典对象的方法大全" title="Python教程：[47]字典对象的方法大全">
+<ul>
+<li>以列表的方式获取所有的键</li>
+</ul>
+<img src="/2015/04/23/Python教程：[47]字典对象的方法大全/834344afa40f4bfbc5913ff9014f78f0f636189e.jpg" alt="Python教程：[47]字典对象的方法大全" title="Python教程：[47]字典对象的方法大全">
+<ul>
+<li>以列表的方式获取所有的值</li>
+</ul>
+<img src="/2015/04/23/Python教程：[47]字典对象的方法大全/caae68094b36acafecae37517ed98d1000e99c96.jpg" alt="Python教程：[47]字典对象的方法大全" title="Python教程：[47]字典对象的方法大全">
+<ul>
+<li>以列表的方式获取所有的单元</li>
+</ul>
+<img src="/2015/04/23/Python教程：[47]字典对象的方法大全/adee30dda3cc7cd9486395743b01213fb90e9196.jpg" alt="Python教程：[47]字典对象的方法大全" title="Python教程：[47]字典对象的方法大全">
+<ul>
+<li>返回一个iterator对象（关于iterator对象，我们下一篇文章再讲）</li>
+</ul>
+<img src="/2015/04/23/Python教程：[47]字典对象的方法大全/38403f3fb80e7bec9f94a24c2d2eb9389a506b96.jpg" alt="Python教程：[47]字典对象的方法大全" title="Python教程：[47]字典对象的方法大全">
+<ul>
+<li>键值转换成iterator对象</li>
+</ul>
+<img src="/2015/04/23/Python教程：[47]字典对象的方法大全/f29faa8f8c5494ee106caeb42ff5e0fe98257e96.jpg" alt="Python教程：[47]字典对象的方法大全" title="Python教程：[47]字典对象的方法大全">
+<ul>
+<li>更新字典：b字典中的键值更新到a字典，a字典的键值等于b字典中相应的键值</li>
+</ul>
+<img src="/2015/04/23/Python教程：[47]字典对象的方法大全/8640bf8b87d6277ffc5393952a381f30e824fc9f.jpg" alt="Python教程：[47]字典对象的方法大全" title="Python教程：[47]字典对象的方法大全">
+<ul>
+<li>输出一个item同时从字典中删除这个item</li>
+</ul>
+<img src="/2015/04/23/Python教程：[47]字典对象的方法大全/9f6e190828381f308f582c04ab014c086f06f09f.jpg" alt="Python教程：[47]字典对象的方法大全" title="Python教程：[47]字典对象的方法大全">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/">
+                SPSS实例：[7]多选题如何做交叉分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>多项选择题做统计分析的时候经常用到两种数据录入方式，一种是二分法；另一种是分类法。其实两种方法都能完成所有的分析，所以我们没有必要跟大家介绍两种方法，今天我们就是用分类法来进行分析，下面是具体的步骤：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>我们先来看数据录入的方式，下面第一幅图是问卷，该题有8个选项，是多选题，被试最多可以选择8个选项。下面第二幅图是数据录入的格式，我们看到有8列变量每列变量中的值可以是1-8的任意一个</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/cefc1e178a82b901e1bda005718da9773912eff0.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/91529822720e0cf33feb2dcd0846f21fbe09aaec.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<ul>
+<li>将保存在Excel中的数据直接拖动到spss界面，这样就在spss中打开了Excel文件。</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/024f78f0f736afc3d9aa5c53b119ebc4b7451265.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<ul>
+<li>第一步是要设置变量集，因为8个变量都是一个题，所以8个变量要组合成一个变量集，在菜单中找到：analyse–multiple response–define variable sets</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/f31fbe096b63f62484415a358544ebf81a4ca3ec.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<ul>
+<li>将这8个变量选中，然后放入到右侧的变量集框中</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/3b292df5e0fe9925fd0d0a6636a85edf8db17186.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<ul>
+<li>选择数据录入的方法，我们使用的分类法，选择第二种方法，然后输入最大值和最小值分别是8和1</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/500fd9f9d72a6059dd0c822c2a34349b033bbaec.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<ul>
+<li>输入变量集的名称和标签，这个你自己定名字，然后添加到右侧的列表中</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/9358d109b3de9c829e649ab96e81800a19d84386.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<ul>
+<li>当你看到这个列表中成功添加了一个变量集以后，你就可以关闭这个窗口了。</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/2934349b033b5bb537cb43c834d3d539b600bcec.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<ul>
+<li>接着我们来做频率统计，在菜单栏中找到：analyse–multiple response–frequency，将刚才生成的变量集放入右侧的列表中，点击ok，输出结果</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/14ce36d3d539b60039d16c81eb50352ac65cb7ec.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/3bf33a87e950352ac17e463e5143fbf2b2118bec.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<ul>
+<li>多选题百分比要看最后一列</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/c75c10385343fbf2b933c515b27eca8065388fec.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<ul>
+<li><p>交叉分析可以使用analyse–multiple  response–crosstabs</p>
+</li>
+<li><p>假如我们要看不同性别和不同年级的人的频率，我们将性别这个变量放入行变量，将年级放入列变量，然后需要设置每个变量的取值范围</p>
+</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/960a304e251f95cab1f4f180cb177f3e67095286.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/902397dda144ad344ca0e4b1d2a20cf431ad85ec.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<ul>
+<li>点击ok我们就可以看到分析的结果了。</li>
+</ul>
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/9e3df8dcd100baa1a12d248d4510b912c8fc2e86.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<img src="/2015/04/23/SPSS实例：[7]多选题如何做交叉分析/77094b36acaf2eddbcee2adf8f1001e9390193ec.jpg" alt="SPSS实例：[7]多选题如何做交叉分析" title="SPSS实例：[7]多选题如何做交叉分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/31/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/33/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

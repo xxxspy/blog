@@ -155,13 +155,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/07/01/spss多重共线性的诊断方法/">
-                spss多重共线性的诊断方法
+            <a href="/2016/09/15/Python教程：[55]matplotlib安装下载方法/">
+                Python教程：[55]matplotlib安装下载方法
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2016年07月01日</span>
+                <span class="date">2016年09月15日</span>
             
             
             
@@ -170,33 +170,258 @@
 
     
         <div class="content">
-            <p>spss诊断多重共线性是在多重线性回归的时候容易出现的一个问题，他指的是多个变量可能高相关，造成了模型方程的不稳定，一般是在方程求出来以后，发现方程的问题，然后进行的方程的诊断，下面是诊断多重共线性的步骤:<br>方法/步骤</p>
+            <p>我建议大家用exe文件安装matplotlib，我使用setuptools安装，没安装成功，提示一堆错误。所以我推荐还是exe安装，我把matplotlib的exe安装文件列表写在下面的参考资料里。你找到对应版本的下载就可以，这里是安装过程：</p>
 <ul>
-<li>多重共线性的诊断是在回归中进行的，所以先打开回归的对话框：analyse–regression–linear，打开线性回归对话框</li>
+<li>首先，我们下载了适合自己的版本</li>
 </ul>
-<img src="/2016/07/01/spss多重共线性的诊断方法/d1160924ab18972b3fb4c029e6cd7b899f510a43.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<img src="/2016/09/15/Python教程：[55]matplotlib安装下载方法/1a94b36eddc451da8c3d9271b4fd5266d1163225.jpg" alt="Python教程：[55]matplotlib安装下载方法" title="Python教程：[55]matplotlib安装下载方法">
 <ul>
-<li>将自变量因变量都放到各自的位置，然后点击statistic</li>
+<li>打开它，就会看到安装界面，点击下一步</li>
 </ul>
-<img src="/2016/07/01/spss多重共线性的诊断方法/d000baa1cd11728b96f14cc1c8fcc3cec2fd2c71.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<img src="/2016/09/15/Python教程：[55]matplotlib安装下载方法/91ae68c6a7efce1b5fe55650ad51f3deb58f651b.jpg" alt="Python教程：[55]matplotlib安装下载方法" title="Python教程：[55]matplotlib安装下载方法">
 <ul>
-<li>在该对话框中，有一个多重共线性诊断的选项，勾选他，如图所示，点击continue按钮，返回主对话框</li>
+<li>这里，输入python的安装目录，点击下一步<br>‘</li>
 </ul>
-<img src="/2016/07/01/spss多重共线性的诊断方法/63d0f703918fa0ec326ca4ee269759ee3c6ddbae.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<img src="/2016/09/15/Python教程：[55]matplotlib安装下载方法/8d158aeef01f3a29e6064b549b25bc315d607c1b.jpg" alt="Python教程：[55]matplotlib安装下载方法" title="Python教程：[55]matplotlib安装下载方法">
 <ul>
-<li>点击ok按钮，开始输出诊断结果</li>
+<li>安装过程的截图</li>
 </ul>
-<img src="/2016/07/01/spss多重共线性的诊断方法/b812c8fcc3cec3fd2ae26796d688d43f86942771.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<img src="/2016/09/15/Python教程：[55]matplotlib安装下载方法/fd428c45d688d43f837d0f687f1ed21b0ff43b10.jpg" alt="Python教程：[55]matplotlib安装下载方法" title="Python教程：[55]matplotlib安装下载方法">
 <ul>
-<li>我们先来看这两个参数，特征根（Eigenvalue）：多个维度特征根约为0证明存在多重共线性；条件指数（Condition Index）：大于10时提示我们可能存在多重共线性</li>
+<li>现在就安装好了，引入一下，看看是否出现了错误，没有错误就说明安装成功。</li>
 </ul>
-<img src="/2016/07/01/spss多重共线性的诊断方法/279759ee3d6d55fbf26db6c56d224f4a21a4ddae.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<img src="/2016/09/15/Python教程：[55]matplotlib安装下载方法/a54e55fbfbedab642b79d45af536afc378311ee5.jpg" alt="Python教程：[55]matplotlib安装下载方法" title="Python教程：[55]matplotlib安装下载方法">
 <ul>
-<li><p>接着来看相关系数矩阵，找到数值接近1的相关，这也提示出可能存在多重共线性。</p>
+<li><p>如果提示错误：ImportError: matplotlib requires dateutil，你可以看这篇文章：<a href="http://jingyan.baidu.com/article/aa6a2c14d5aa7f0d4c19c4e2.html" target="_blank" rel="external">http://jingyan.baidu.com/article/aa6a2c14d5aa7f0d4c19c4e2.html</a></p>
+</li>
+<li><p>如果提示错误：ImportError: matplotlib requires pyparsing，你可以看这篇文章：<a href="http://jingyan.baidu.com/article/e4d08ffdd3b9690fd2f60de2.html" target="_blank" rel="external">http://jingyan.baidu.com/article/e4d08ffdd3b9690fd2f60de2.html</a></p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/09/15/python高级教程：[4]itertools介绍/">
+                python高级教程：[4]itertools介绍
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年09月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>itertools是Python提供的用于实现各种生成器的工具包，我们先来看看几个常用的函数的用法。</p>
+<ul>
+<li>切片itertools.islice</li>
+</ul>
+<img src="/2016/09/15/python高级教程：[4]itertools介绍/0b07ec1fbe096b6350ac17ef0a338744eaf8ac9d.jpg" alt="python高级教程：[4]itertools介绍" title="python高级教程：[4]itertools介绍">
+<ul>
+<li>切片itertools.islice：有时候我们并不想迭代所有的元素，比如我只想处理d-g这些字母，看下面代码，我们可以使用islice(astr,3,len(astr)-1)</li>
+</ul>
+<img src="/2016/09/15/python高级教程：[4]itertools介绍/4e83cb628535e5dd0fbdec6070c6a7efcf1b62b9.jpg" alt="python高级教程：[4]itertools介绍" title="python高级教程：[4]itertools介绍">
+<ul>
+<li>生成多个相同的生成器help(itertools.tee)</li>
+</ul>
+<img src="/2016/09/15/python高级教程：[4]itertools介绍/b3508d13b07eca80a0657258972397dda04483ea.jpg" alt="python高级教程：[4]itertools介绍" title="python高级教程：[4]itertools介绍">
+<ul>
+<li>生成多个相同的生成器itertools.tee。</li>
+</ul>
+<img src="/2016/09/15/python高级教程：[4]itertools介绍/566d0fdfa9ec8a13ebd91c5ff103918fa1ecc00b.jpg" alt="python高级教程：[4]itertools介绍" title="python高级教程：[4]itertools介绍">
+<ul>
+<li>tee是很有必要的，假如我们不使用tee，而直接在一个迭代器上进行切片，会产生这种混乱的结果：</li>
+</ul>
+<img src="/2016/09/15/python高级教程：[4]itertools介绍/509b9fcb39dbb6fd6b8bae990f24ab18962b3779.jpg" alt="python高级教程：[4]itertools介绍" title="python高级教程：[4]itertools介绍">
+<ul>
+<li>help(itertools.groupby)</li>
+</ul>
+<img src="/2016/09/15/python高级教程：[4]itertools介绍/3c2c4bfbb2fb4316f9b130c526a4462308f7d3a0.jpg" alt="python高级教程：[4]itertools介绍" title="python高级教程：[4]itertools介绍">
+<ul>
+<li>groupby可以自动将一个序列分组，相同相邻的元素会归为一组，形成一个新的生成器。</li>
+</ul>
+<img src="/2016/09/15/python高级教程：[4]itertools介绍/b13fd48065380cd757efe852a744ad3458828159.jpg" alt="python高级教程：[4]itertools介绍" title="python高级教程：[4]itertools介绍">
+<ul>
+<li>使用groupby可以压缩数据，如下代码，我们使用元组构成的列表来表示一个字符串，而元组的第一个元素表示组中包含的字母，而第二个元素表示这个字符重复的次数。</li>
+</ul>
+<img src="/2016/09/15/python高级教程：[4]itertools介绍/0b907cd9f2d3572c9583d6638c13632763d0c3e9.jpg" alt="python高级教程：[4]itertools介绍" title="python高级教程：[4]itertools介绍">
+<ul>
+<li>接下来我们将继续介绍itertools中其他有用的函数。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/09/15/Excel怎样移动列[4]Excel2013教程/">
+                Excel怎样移动列[4]Excel2013教程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年09月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们通常要在Excel中进行的一个操作就是移动列，比如将E列移动到B列的位置，其他的列保持不变，其实在Excel中可以使用鼠标加键盘的方法实现移动列的效果，非常的方便，现在我就跟大家来分享这个方法：</p>
+<ul>
+<li>首先我们看这个图，我想把F列的数据整体移动到D列，如果不让你是用复制粘贴，你怎么办？</li>
+</ul>
+<img src="/2016/09/15/Excel怎样移动列[4]Excel2013教程/0e655ca7d933c8954f358012d01373f0830200d4.jpg" alt="Excel怎样移动列[4]Excel2013教程" title="Excel怎样移动列[4]Excel2013教程">
+<ul>
+<li>先点击F列标题，选中整个列</li>
+</ul>
+<img src="/2016/09/15/Excel怎样移动列[4]Excel2013教程/a54e55fbfbedab64ab3955a9f636afc378311ed4.jpg" alt="Excel怎样移动列[4]Excel2013教程" title="Excel怎样移动列[4]Excel2013教程">
+<ul>
+<li>先按下shift键不要松手，然后用鼠标拖动F列的左边框，看到图中的圆圈位置，向左拖动可以移动这个列</li>
+</ul>
+<img src="/2016/09/15/Excel怎样移动列[4]Excel2013教程/f677b1c379310a551d6fc69db64543a9832610d4.jpg" alt="Excel怎样移动列[4]Excel2013教程" title="Excel怎样移动列[4]Excel2013教程">
+<ul>
+<li>拖动过程中，你会看到绿色的边框示意你这列数据将会移动到哪里</li>
+</ul>
+<img src="/2016/09/15/Excel怎样移动列[4]Excel2013教程/b258f5c4b74543a93050e2a51f178a82b80114d4.jpg" alt="Excel怎样移动列[4]Excel2013教程" title="Excel怎样移动列[4]Excel2013教程">
+<ul>
+<li>我们看看这就是移动之后的效果了：</li>
+</ul>
+<img src="/2016/09/15/Excel怎样移动列[4]Excel2013教程/aa59892bd40735fa709656d09f510fb30f240831.jpg" alt="Excel怎样移动列[4]Excel2013教程" title="Excel怎样移动列[4]Excel2013教程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/09/15/Excel2013：[13]如何设置数据有效性/">
+                Excel2013：[13]如何设置数据有效性
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年09月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>Excel2013与其他版本有很大改变，其中数据有效性改名为了数据验证，所以很多人在网上问“数据有效性”在哪里。我现在用例子跟大家演示一下如何设置数据有效性。</p>
+<ul>
+<li>选中一列数据作为数据源，不要选中第一个行的标题</li>
+</ul>
+<img src="/2016/09/15/Excel2013：[13]如何设置数据有效性/fc5e5f34970a304e5623b6e1d3c8a786c9175c6c.jpg" alt="Excel2013：[13]如何设置数据有效性" title="Excel2013：[13]如何设置数据有效性">
+<ul>
+<li>在数据标签下找到【数据验证】</li>
+</ul>
+<img src="/2016/09/15/Excel2013：[13]如何设置数据有效性/964b2e4e251f95caa4f484adcb177f3e6709526c.jpg" alt="Excel2013：[13]如何设置数据有效性" title="Excel2013：[13]如何设置数据有效性">
+<ul>
+<li>选择设置选项下的【序列】</li>
+</ul>
+<img src="/2016/09/15/Excel2013：[13]如何设置数据有效性/245e8bcad1c8a786be2b5c156509c93d70cf506c.jpg" alt="Excel2013：[13]如何设置数据有效性" title="Excel2013：[13]如何设置数据有效性">
+<ul>
+<li>来源设置成刚才设置好的区域，点击确定</li>
+</ul>
+<img src="/2016/09/15/Excel2013：[13]如何设置数据有效性/8697397f9e2f0708fd6b3c1beb24b899a901f204.jpg" alt="Excel2013：[13]如何设置数据有效性" title="Excel2013：[13]如何设置数据有效性">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/09/15/spss如何分组求平均值/">
+                spss如何分组求平均值
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年09月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>分组求均值，举个俩字来说就是，一个数据分为男生和女生，那么分别求男生和女生的平均值就是分组均值，要求分组均值就要确定总共有多少分组，比如我们要求不同性别的人不同的学历的人他们每周花费在报纸上的钱有多少，这样有性别和学历两个变量进行分组了。<br>方法/步骤</p>
+<ul>
+<li>打开数据文件以后，打开平均数对话框，在菜单栏上执行：analyze–compare means –means</li>
+</ul>
+<img src="/2016/09/15/spss如何分组求平均值/622762d0f703918fc8e5ce44513d269759eec40c.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<ul>
+<li>将每周买报纸花费的钱作为因变量，将性别作为自变量，如图所示，然后点击next，我们来设置第二层自变量</li>
+</ul>
+<img src="/2016/09/15/spss如何分组求平均值/6159252dd42a2834b9bfc5855bb5c9ea15cebf27.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<ul>
+<li>将最好学历作为第二层自变量，放到independent list，如果你还有要求分组均值的自变量，你可以继续点击next，不过我这里已经不用了</li>
+</ul>
+<img src="/2016/09/15/spss如何分组求平均值/359b033b5bb5c9ea84eaf06dd539b6003af3b327.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<ul>
+<li>点击options来设置要输出的参数</li>
+</ul>
+<img src="/2016/09/15/spss如何分组求平均值/37d3d539b6003af3aca32fee352ac65c1038b627.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<ul>
+<li>系统给出的默认值有：平均数、数据记录数、标准差。如果你需要其他的参数，还可以从左侧的列表里选择，然后点击continue</li>
+</ul>
+<img src="/2016/09/15/spss如何分组求平均值/3bf33a87e950352a5f78d6865343fbf2b2118b27.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<ul>
+<li>回到了平均数对话框，点击ok即可输出不同分组的平均数。</li>
+</ul>
+<img src="/2016/09/15/spss如何分组求平均值/472309f7905298220a07ca4dd7ca7bcb0a46d40c.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
+<ul>
+<li><p>这就是输出的结果：</p>
 </li>
 <li></li>
 </ul>
-<img src="/2016/07/01/spss多重共线性的诊断方法/7c1ed21b0ef41bd54d8f281751da81cb38db3d71.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<img src="/2016/09/15/spss如何分组求平均值/9213b07eca806538aef3579d97dda144ad348227.jpg" alt="spss如何分组求平均值" title="spss如何分组求平均值">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -212,13 +437,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/">
-                网页数据采集：[3]python如何利用抓包数据
+            <a href="/2016/09/11/python 线性代数：[5]方阵的行列式计算方法/">
+                python 线性代数：[5]方阵的行列式计算方法
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2016年06月19日</span>
+                <span class="date">2016年09月11日</span>
             
             
             
@@ -227,243 +452,151 @@
 
     
         <div class="content">
-            <p>上次我们教大家如何使用httpwatch来进行抓包，其实这不重要，重要的是如何使用获得的数据包，你能读懂数据包吗？好吧，我们今天就是用python来示范一下如何使用数据包。</p>
+            <p>如何计算方阵的行列式，用到的是numpy模块的linalg.det方法，关于行列式的定义你应该懂，但是其实也不用记住，以后直接用numpy计算就可以了。下面我们看看如何使用numpy计算矩阵的行列式吧：</p>
 <ul>
-<li>先来设置两个url地址，第一个用于第一次访问，这样可以获得网站服务器发来的cookie，第二个网址是用于登陆的地址</li>
+<li>行列式的算法：这是二阶方阵行列式</li>
 </ul>
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/fcbbb151f3deb48fd18981f0f21f3a292cf578f8.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<img src="/2016/09/11/python%20线性代数：[5]方阵的行列式计算方法/a992e31f4134970ab41e34dd97cad1c8a6865d97.jpg" alt="python 线性代数：[5]方阵的行列式计算方法" title="python 线性代数：[5]方阵的行列式计算方法">
 <ul>
-<li>引入两个模块，cookielib和urllib2</li>
+<li>行列式的算法：这是三阶行列式</li>
 </ul>
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/8d158aeef01f3a294c28f5e09b25bc315d607cf8.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<img src="/2016/09/11/python%20线性代数：[5]方阵的行列式计算方法/0db52fadcbef76090899bd6d2cdda3cc7dd99e76.jpg" alt="python 线性代数：[5]方阵的行列式计算方法" title="python 线性代数：[5]方阵的行列式计算方法">
 <ul>
-<li>接着，我们安装一个cookie处理器，代码如下，这个代码很多人不太能读懂，其实你会用就可以了，他们就是这个固定的形式，顶多改改变量的名字。你复制下来以后自己用就可以了，用多了，你再去看代码的意义，你就都懂了。</li>
+<li>先引入numpy模块</li>
 </ul>
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/58c3acb7d0a20cf40d6edef174094b36adaf99e6.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<img src="/2016/09/11/python%20线性代数：[5]方阵的行列式计算方法/b3f6cea20cf431ad986a89c84936acaf2fdd984c.jpg" alt="python 线性代数：[5]方阵的行列式计算方法" title="python 线性代数：[5]方阵的行列式计算方法">
 <ul>
-<li>然后我们先访问一下网站，获得一个cookie，你不用管这个cookie该怎么弄，前面设置的cookie处理器会自动处理。</li>
+<li>创建两个方阵</li>
 </ul>
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/9864a2315c6034a8390298afc9134954082376f8.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<img src="/2016/09/11/python%20线性代数：[5]方阵的行列式计算方法/1f569482b9014a9013248c4cab773912b21beeef.jpg" alt="python 线性代数：[5]方阵的行列式计算方法" title="python 线性代数：[5]方阵的行列式计算方法">
 <ul>
-<li>接着，我们写一下postdata，也就是你要post的数据，因为我们打算登陆网站，所以postdata里肯定有用户名和密码，那么怎么知道该怎么写postdata呢？看你抓包得到的post数据。下面第一幅图是httpwatch抓包截图，点击postdata，看到post的数据，然后我们看第二幅图，就是python的写法。你自己感受一下。</li>
+<li>使用det方法求得方阵E和方阵F的行列式</li>
 </ul>
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/d041a4a1cd11728bd7faaf0ccafcc3cec2fd2c8d.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/35e940df8db1cb1323891c3ddf54564e93584bf8.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<img src="/2016/09/11/python%20线性代数：[5]方阵的行列式计算方法/3853ad1bb051f8196a3fc9bbd8b44aed2f73e7ef.jpg" alt="python 线性代数：[5]方阵的行列式计算方法" title="python 线性代数：[5]方阵的行列式计算方法">
+<img src="/2016/09/11/python%20线性代数：[5]方阵的行列式计算方法/373bc4b44aed2e737af34cdd8501a18b86d6faef.jpg" alt="python 线性代数：[5]方阵的行列式计算方法" title="python 线性代数：[5]方阵的行列式计算方法">
 <ul>
-<li>写完postdata以后，我们 要将postdata转码一下，让服务器可以解读postdata数据</li>
-</ul>
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/2f9cbdcc7cd98d10442a2c1f233fb80e7aec90e6.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
-<ul>
-<li>接着设置headers信息，headers也是抓包得到的。同样的方式，你去写header内的信息</li>
-</ul>
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/0b907cd9f2d3572ce14cbef28813632762d0c337.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/7d98931001e9390166fcad1079ec54e737d196e6.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
-<ul>
-<li>然后我们通过request方法来登陆网站，并返回数据，返回的数据存储在request中</li>
-</ul>
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/00a82701213fb80e322f41f934d12f2eb83894e6.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
-<ul>
-<li>通过rulopen方法和read方法来读取数据，并打印出来。</li>
-</ul>
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/32bb9c8ba61ea8d380c2542a950a304e241f58f8.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
-<ul>
-<li>我们看到输出的结果，这说明我们虽然正确的模拟了登陆网站需要的post信息，但是没有考虑到登陆网站是需要验证码的，后期我们会看到如何处理验证码，如果你拿这个教程去处理没有验证码的登陆问题，那么你现在已经成功了。</li>
-</ul>
-<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/4e83cb628535e5ddb4d285f174c6a7efcf1b62e6.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/06/15/SPSS实例：[14]数据中心化的手工操作/">
-                SPSS实例：[14]数据中心化的手工操作
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年06月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>这个方面没有之前的方法迅速，属于笨方法，但是确实不可替代，我们在使用spss进行调节效应的检验之前，需要先中心化一下，然后才能得到正确的结果，下面我们来看看如何使用这个笨方法来进行数据中心化，其实也不是很麻烦。</p>
-<ul>
-<li>首先我们要知道变量的平均值是多少，打开描述性统计对话框，打开方法见下图</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[14]数据中心化的手工操作/1cd4147b02087bf4b71424faf0d3572c10dfcfee.jpg" alt="SPSS实例：[14]数据中心化的手工操作" title="SPSS实例：[14]数据中心化的手工操作">
-<ul>
-<li>将需要中心化的变量添加到这里，点击options进行设置。</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[14]数据中心化的手工操作/ac2fc3c451da81cb4a66f0de5066d016082431e5.jpg" alt="SPSS实例：[14]数据中心化的手工操作" title="SPSS实例：[14]数据中心化的手工操作">
-<ul>
-<li>接的勾选平均数，点击继续级可以了</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[14]数据中心化的手工操作/58af236d55fbb2fb93d32b014d4a20a44723dcee.jpg" alt="SPSS实例：[14]数据中心化的手工操作" title="SPSS实例：[14]数据中心化的手工操作">
-<ul>
-<li>将平均数复制下载，复制的方法是双击这个表格，然后双击单元格就能选中平均数，然后复制，这个数有六位小数，我们现在看不到这六位，这是四舍五入的结果，当然，为了准确，我们必须要使用尽量精确的数据</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[14]数据中心化的手工操作/3c2c4bfbb2fb4316bce7096922a4462308f7d3ee.jpg" alt="SPSS实例：[14]数据中心化的手工操作" title="SPSS实例：[14]数据中心化的手工操作">
-<ul>
-<li>接着我们打开计算变量的对话框，打开方法见下图</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[14]数据中心化的手工操作/4e0b3ea4462309f74697de01700e0cf3d6cad6ee.jpg" alt="SPSS实例：[14]数据中心化的手工操作" title="SPSS实例：[14]数据中心化的手工操作">
-<ul>
-<li>在这里，我们输入变量的名称，设置变量的标签，然后输入公式，就是用变量名减去平均值。记得，如果平均值是负数，也是减去平均值。点击ok，开始生成中心化以后的变量。</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[14]数据中心化的手工操作/34bbf8cd7b899e51700e490740a7d933c9950de5.jpg" alt="SPSS实例：[14]数据中心化的手工操作" title="SPSS实例：[14]数据中心化的手工操作">
-<img src="/2016/06/15/SPSS实例：[14]数据中心化的手工操作/8605f5f81a4c510f3e3c91096259252dd52aa5ee.jpg" alt="SPSS实例：[14]数据中心化的手工操作" title="SPSS实例：[14]数据中心化的手工操作">
-<ul>
-<li>接着我们在描述性统计中看看平均值是不是变成了0</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[14]数据中心化的手工操作/faacb564034f78f0678be9e07b310a55b2191ce5.jpg" alt="SPSS实例：[14]数据中心化的手工操作" title="SPSS实例：[14]数据中心化的手工操作">
-<img src="/2016/06/15/SPSS实例：[14]数据中心化的手工操作/b74124f33a87e950cdef807f12385343faf2b4ee.jpg" alt="SPSS实例：[14]数据中心化的手工操作" title="SPSS实例：[14]数据中心化的手工操作">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/06/15/SPSS实例：[8]如何将数据中心化/">
-                SPSS实例：[8]如何将数据中心化
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年06月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>将数据进行中心化和标准化不同，中心化就是将原始数据减去平均数，而标准化是将原始数据减去平均数然后再除以标准差，得到的数据是以0为平均数以1为标准差的数据，数据中心化的目的是将不同的变量的数据的尺度统一化，有的人在使用amos的时候先进行中心化，单其实没有必要，因为amos自己会做这个工作的，你只是重复劳动，好了，废话不多说，我们开始操作。</p>
-<ul>
-<li>打开数据，在菜单中执行：analyse–descriptive statistics–descriptives</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[8]如何将数据中心化/d57e9994a4c27d1eaf793bec19d5ad6eddc4387f.jpg" alt="SPSS实例：[8]如何将数据中心化" title="SPSS实例：[8]如何将数据中心化">
-<ul>
-<li>打开一个对话框，在这里找到你要正太化的变量，比如我们用age这个变量，点击添加按钮</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[8]如何将数据中心化/fd428c45d688d43ffdef91da7f1ed21b0ef43b10.jpg" alt="SPSS实例：[8]如何将数据中心化" title="SPSS实例：[8]如何将数据中心化">
-<ul>
-<li>记得勾选保存项，如图所示</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[8]如何将数据中心化/9304c888d43f8794dfb94806d01b0ef41bd53a10.jpg" alt="SPSS实例：[8]如何将数据中心化" title="SPSS实例：[8]如何将数据中心化">
-<ul>
-<li>点击ok按钮，开始运行</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[8]如何将数据中心化/7c5fcc1b0ef41bd52d0ce8dc53da81cb39db3d7f.jpg" alt="SPSS实例：[8]如何将数据中心化" title="SPSS实例：[8]如何将数据中心化">
-<ul>
-<li>运行结果需要你看变量视图，你会看到多了一个变量zage，实际上是在原变量名的前面增加了一个Z</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[8]如何将数据中心化/d35a10f41bd5ad6e5ca664c283cb39dbb6fd3c7f.jpg" alt="SPSS实例：[8]如何将数据中心化" title="SPSS实例：[8]如何将数据中心化">
-<img src="/2016/06/15/SPSS实例：[8]如何将数据中心化/7c5fcc1b0ef41bd52d15e8dc53da81cb39db3d10.jpg" alt="SPSS实例：[8]如何将数据中心化" title="SPSS实例：[8]如何将数据中心化">
-<ul>
-<li>我们看到，新增加的这列变量是以0为中心，1为标准差的</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[8]如何将数据中心化/dc854fda81cb39db339f677ed2160924ab18307f.jpg" alt="SPSS实例：[8]如何将数据中心化" title="SPSS实例：[8]如何将数据中心化">
-<ul>
-<li>如果使用sytax，我们需要输入如下的命令，然后运行即可。</li>
-</ul>
-<img src="/2016/06/15/SPSS实例：[8]如何将数据中心化/1a94b36eddc451da02b00cc3b4fd5266d0163210.jpg" alt="SPSS实例：[8]如何将数据中心化" title="SPSS实例：[8]如何将数据中心化">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/06/15/word转pdf教程/">
-                word转pdf教程
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年06月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>word转换pdf格式有各种好处，首先有的电脑上不支持word文档，或者只支持一部分word格式，比如只支持doc而不支持docx，转换成pdf以后，就可以使用pdf 软件打开，而不必使用word了，在打印的时候，pdf格式不会发生变化，但是word经常因为电脑的不同而变化，所以pdf格式更加的稳定，下面介绍了两种word转换pdf的方法，你可以尝试一下奥。<br>方法一：使用word转换</p>
-<ul>
-<li>打开你要转换格式的word文档，编辑好了以后，我们就要开始转换了，点击左上角的这个开始按钮</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/f2deb48f8c5494ee02b798b52df5e0fe98257e81.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>在打开的列表中选择：另存为–PDF 。有的人在另存为的次级列表中没有pdf选项，怎么办，下面的第五步告诉你怎么办。</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/cb8065380cd791235f4003d8ad345982b3b780fe.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>弹出了另存诶对话框，选择好文件存放的位置，然后设置文件名，记得文件名的后缀是pdf，然后点击发布即可。</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/a686c9177f3e6709d294d2533bc79f3df9dc5581.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>等待一分钟以后，你会看到自动打开一个pdf文件，这就是你转化而成的。</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/4610b912c8fcc3ceeb545e9f9245d688d53f2081.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>假如你的word没有另存为pdf插件，你需要手动安装（许多word07是没有的，不仅仅你自己没有奥）。去百度经验里搜索：word没有“另存为PDF或XPS”选项怎么办 。根据这个教程你会找到解决方法。记得投票支持作者呀</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/d50735fae6cd7b89dcf8ad2f0f2442a7d8330e81.jpg" alt="word转pdf教程" title="word转pdf教程">
-<p>方法二：使用第三方工具work转pdf</p>
-<ul>
-<li><p>第三方工具的好处是不用安装插件，而且很多还可以实现批量的Word转pdf，还能pdf与Word互转。</p>
+<li><p>这是今天用到的所有代码</p>
 </li>
-<li><p>我们随便找一个工具来师范一下如何用第三方工具Word转pdf，点击【选择文件】</p>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>E</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 2, 3],</p>
+</li>
+<li><p>[4, 5, 6],</p>
+</li>
+<li><p>[7, 8, 9]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>F</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[-1,  0,  1],</p>
+</li>
+<li><p>[ 2,  3,  4],</p>
+</li>
+<li><p>[ 5,  6,  7]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.linalg.det(E)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>6.6613381477509402e-16</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.linalg.det(F)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>2.664535259100367e-15</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>C</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 2],</p>
+</li>
+<li><p>[1, 3]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.linalg.det(C)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>1.0</p>
 </li>
 </ul>
-<img src="/2016/06/15/word转pdf教程/bd3eb13533fa828b9067da52f51f4134970a5a3e.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>在弹出的对话框中选择一个文件，你一次只能选择一个文件，如果想要多个文件，需要返回步骤2，再添加一个。或者你可以使用客户端，如果你要转的文件很多，客户端版看起来很好用（右）。</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/b03533fa828ba61e9faa8f9e4934970a304e593e.jpg" alt="word转pdf教程" title="word转pdf教程">
-<img src="/2016/06/15/word转pdf教程/8b13632762d0f7032288d26d00fa513d2697c54d.jpg" alt="word转pdf教程" title="word转pdf教程">
-<img src="/2016/06/15/word转pdf教程/d0c8a786c9177f3e587fbcbc78cf3bc79f3d5633.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>最后点击开始转换，等待一秒钟，你就可以下载了。</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/a686c9177f3e67098a44024e33c79f3df8dc553e.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>下载</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/94cad1c8a786c9173e471588c13d70cf3bc7573e.jpg" alt="word转pdf教程" title="word转pdf教程">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -479,13 +612,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/">
-                spss20.0单因素方差分析的操作和结果分析方法
+            <a href="/2016/09/11/wxpython教程：[3]菜单栏/">
+                wxpython教程：[3]菜单栏
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2016年06月05日</span>
+                <span class="date">2016年09月11日</span>
             
             
             
@@ -494,406 +627,228 @@
 
     
         <div class="content">
-            <p>单因素方差分析指的是自变量只有一个的方差分析，实验的设计一般是将被试随机分配到不同的自变量水平，这样不同的分组就代表着不同的自变量水平，值得注意的是，自变量虽然只有一个，但是因变量可以有两个甚至更多。下面是具体的方法。<br>工具/原料</p>
+            <p>窗口中通常有菜单栏，菜单栏中包括很多菜单，每一个菜单中包括很多选项，比如一个简单的记事本：里面菜单有：文件、编辑、格式等等。下面我们就来亲手制作一个菜单栏——以便让我们退出程序。</p>
 <ul>
-<li>spss20.0<br>方法/步骤</li>
+<li>先看一下我们所有的代码</li>
 </ul>
+<img src="/2016/09/11/wxpython教程：[3]菜单栏/9319cf09b3de9c82072a7ce06f81800a18d843d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
 <ul>
-<li>在spss中打开你要处理的数据，在菜单栏上执行：analyse-compare means–one-way anova，打开单因素方差分析对话框 </li>
+<li>重点要说的首先是这句：创建菜单栏<br>这就是菜单栏：</li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/a9d3fd1f4134970a6ab77ed895cad1c8a6865d04.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/11/wxpython教程：[3]菜单栏/9dc3cf58ccbf6c815978a987bf3eb13532fa40d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
+<img src="/2016/09/11/wxpython教程：[3]菜单栏/a75fb6d3fd1f413474788011261f95cad0c85ed7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
 <ul>
-<li>在这个对话框中，将因变量放到dependent list中，将自变量放到factor中，这个研究中有两个因变量，所以把两个因变量都放到上面的列表里</li>
+<li>创建一个菜单<br>这是一个菜单：</li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/2934349b033b5bb532384e0936d3d539b700bc5e.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/11/wxpython教程：[3]菜单栏/dbf554ed2e738bd4f348375ea28b87d6277ff931.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
+<img src="/2016/09/11/wxpython教程：[3]菜单栏/948bcfc8a786c917954cd756ca3d70cf3ac757d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
 <ul>
-<li>点击post hoc，打开一个对话框，设置事后检验的方法</li>
+<li>向菜单中添加一个选项：<br>也就是这个选项：</li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/c8177f3e6709c93d133660009f3df8dcd0005404.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/11/wxpython教程：[3]菜单栏/1e71f724b899a901005cde591e950a7b0208f531.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
+<img src="/2016/09/11/wxpython教程：[3]菜单栏/72ccb7773912b31b880548468518367adab4e131.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
 <ul>
-<li>在这个对话框中，我们在上面的方差齐性的方法中选择tukey和REGWQ，在方差不齐性的方法中选择dunnetts，点击continue继续</li>
+<li>现在我们将创建好的菜单添加到菜单栏</li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/14ce36d3d539b6003a206140e950352ac75cb75e.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/11/wxpython教程：[3]菜单栏/d57e9994a4c27d1ed368beab18d5ad6edcc438d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
 <ul>
-<li>回到了anova的对话框，点击options按钮，设置要输出的基本结果</li>
+<li>最后，我们将设置好的菜单栏添加到窗口：<br>将菜单中的选项与命令绑定，这样才能在点击选项的时候执行某个动作：<br>到此我们的菜单栏就做好了，运行程序可以看到效果</li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/279759ee3d6d55fb686218d16d224f4a21a4dda5.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/11/wxpython教程：[3]菜单栏/0fb505d5ad6eddc457a931943adbb6fd536633d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
+<img src="/2016/09/11/wxpython教程：[3]菜单栏/dc854fda81cb39dbbf8ee239d3160924aa1830d7.jpg" alt="wxpython教程：[3]菜单栏" title="wxpython教程：[3]菜单栏">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/09/05/spss单因素重复测量的方差分析操作和解释/">
+                spss单因素重复测量的方差分析操作和解释
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年09月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>方法/步骤</p>
 <ul>
-<li>这里选择描述统计结果和方差齐性检验，点击continue按钮</li>
+<li>首先需要整理数据，数据文件结构对重复测量方差分析很重要，一定要把每次测量作为一个变量（把每个实验处理作为一个变量）!!!</li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/3c6d55fbb2fb4316b1bb148d20a4462308f7d3a5.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/05/spss单因素重复测量的方差分析操作和解释/4e4a20a4462309f71ed536d0720e0cf3d6cad6be.jpg" alt="spss单因素重复测量的方差分析操作和解释" title="spss单因素重复测量的方差分析操作和解释">
 <ul>
-<li>点击ok按钮，开始处理数据</li>
+<li>在spss中执行：菜单栏–analyse–GLM–repeated measured，打开重复测量对话框</li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/359b033b5bb5c9eae90f6d14d539b6003bf3b34d.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/05/spss单因素重复测量的方差分析操作和解释/caef76094b36acafe6fa0d3e7cd98d1000e99cde.jpg" alt="spss单因素重复测量的方差分析操作和解释" title="spss单因素重复测量的方差分析操作和解释">
 <ul>
-<li>我们看到的结果中，第一个输出的表格就是描述统计，从这个表格里我们可以看到均值和标准差，在研究报告中，通常要报告这两个参数</li>
+<li>我们给变量写入一个名称，这个名称随便填，然后输入变量的水平数，这个要看你的研究了，在我的研究中，变量只有四个水平，所以就填4，如图所示</li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/d53f8794a4c27d1ea5e255331bd5ad6edcc43804.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/05/spss单因素重复测量的方差分析操作和解释/5d6034a85edf8db13b6fe7a60923dd54574e74ab.jpg" alt="spss单因素重复测量的方差分析操作和解释" title="spss单因素重复测量的方差分析操作和解释">
 <ul>
-<li>接着看方差齐性检验，方差不齐性的话是不能够用方差齐性的方法来检验的，还好，这里显示，显著性都没有达到最小值0.05，所以是不显著的，这证明方差是齐性的</li>
+<li>点击add按钮，将变量添加到下面的框，然后点击define按钮，打开一个新的对话框</li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/d6ca7bcb0a46f21f579030a4f6246b600d33aea5.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/05/spss单因素重复测量的方差分析操作和解释/c8177f3e6709c93d607d95359f3df8dcd0005460.jpg" alt="spss单因素重复测量的方差分析操作和解释" title="spss单因素重复测量的方差分析操作和解释">
 <ul>
-<li>接着看单因素方差分析表，反应时sig值不显著，而错误率达到了显著的水平，这说明实验处理对错误率产生了影响，但是对反应时没有影响</li>
+<li>将四个水平的变量放入右侧的框中，然后点击ok，开始处理数据</li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/11385343fbf2b2119ad1ebb9ca8065380dd78e4d.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/05/spss单因素重复测量的方差分析操作和解释/7acb0a46f21fbe09fcd458d66b600c338644ad6e.jpg" alt="spss单因素重复测量的方差分析操作和解释" title="spss单因素重复测量的方差分析操作和解释">
 <ul>
-<li><p>接着看事后检验，因为反应时是没有显著差异的，所以就不必再看反应时的事后检验，直接看错误率的事后检验，从图中标注的红色方框可以看到，第一组和二三组都有显著的差异，而第二组和第三组没有显著差异。关于dunnet方法，它适合在方差不齐性的时候使用，因为方差齐性，不必去看这个方法的检验结果了</p>
+<li>我们要看的第一个表格是球星检验的结果，如果sig值大于0.05，就认为符合球星检验</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/09/05/Excel2013：[34]禁止复制隐藏单元格/">
+                Excel2013：[34]禁止复制隐藏单元格
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年09月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如图所示，假如我隐藏了B列，而A咧和C列是可以选中的，那么我们复制A:C就可以将ABC三列复制下来，那么隐藏的单元格也就暴露了。所以今天我教给大家两个方法保护工作表，都可以防止复制。</p>
+<ul>
+<li>将需要隐藏的单元格先隐藏，这里就省略了隐藏的过程，然后我们点击菜单上的：审阅–保护工作表</li>
+</ul>
+<img src="/2016/09/05/Excel2013：[34]禁止复制隐藏单元格/8c511fe93901213f7a53e0a056e736d12f2e952f.jpg" alt="Excel2013：[34]禁止复制隐藏单元格" title="Excel2013：[34]禁止复制隐藏单元格">
+<ul>
+<li>输入密码，勾选前两个选项，然后点击确定按钮。</li>
+</ul>
+<img src="/2016/09/05/Excel2013：[34]禁止复制隐藏单元格/8697397f9e2f0708757e847ceb24b899a901f210.jpg" alt="Excel2013：[34]禁止复制隐藏单元格" title="Excel2013：[34]禁止复制隐藏单元格">
+<ul>
+<li>提示你重新输入密码，重新输入密码，点击确定按钮</li>
+</ul>
+<img src="/2016/09/05/Excel2013：[34]禁止复制隐藏单元格/91ae68c6a7efce1b4f4b66b6ad51f3deb48f652f.jpg" alt="Excel2013：[34]禁止复制隐藏单元格" title="Excel2013：[34]禁止复制隐藏单元格">
+<ul>
+<li><p>当别人尝试复制你的Excel的时候就会看到无法选中你的单元格，也就无法取消隐藏的单元格。</p>
+</li>
+<li><p>先选中所有单元格</p>
+</li>
+</ul>
+<img src="/2016/09/05/Excel2013：[34]禁止复制隐藏单元格/4bd1e803738da97775542857b251f8198618e310.jpg" alt="Excel2013：[34]禁止复制隐藏单元格" title="Excel2013：[34]禁止复制隐藏单元格">
+<ul>
+<li>按下快捷键Ctrl+1，打开【设置单元格格式】对话框，切换到【保护】标签，取消这两个选项，点击确定</li>
+</ul>
+<img src="/2016/09/05/Excel2013：[34]禁止复制隐藏单元格/8759287adab44aed7a351098b11c8701a18bfb10.jpg" alt="Excel2013：[34]禁止复制隐藏单元格" title="Excel2013：[34]禁止复制隐藏单元格">
+<ul>
+<li>接着，我们将B列移动到A列，方法是：剪切B列，然后在A列上右键单击，选择【插入复制的列】，这样B列就移动到了A第一列，这很重要，我们这一步的关键点就是：【将要隐藏的列移动到第一列（A列）】。。。</li>
+</ul>
+<img src="/2016/09/05/Excel2013：[34]禁止复制隐藏单元格/1cd4147b02087bf46297f995f0d3572c11dfcf10.jpg" alt="Excel2013：[34]禁止复制隐藏单元格" title="Excel2013：[34]禁止复制隐藏单元格">
+<ul>
+<li><p>选中A列，按下快捷键Ctrl+1，打开【设置单元格格式】对话框，切换到【保护】标签，勾选【锁定】和【隐藏】，点击确定</p>
+</li>
+<li><p>隐藏A列：右键单击A列，然后选择【隐藏】</p>
+</li>
+</ul>
+<img src="/2016/09/05/Excel2013：[34]禁止复制隐藏单元格/a005b3345982b2b7622e91b833adcbef77099bde.jpg" alt="Excel2013：[34]禁止复制隐藏单元格" title="Excel2013：[34]禁止复制隐藏单元格">
+<ul>
+<li>接着我们保护一下工作表，点击【保护工作表】</li>
+</ul>
+<img src="/2016/09/05/Excel2013：[34]禁止复制隐藏单元格/4e83cb628535e5dd2d240ea374c6a7efce1b6207.jpg" alt="Excel2013：[34]禁止复制隐藏单元格" title="Excel2013：[34]禁止复制隐藏单元格">
+<ul>
+<li>输入密码，记得勾选下面的前两项，点击确定按钮。</li>
+</ul>
+<img src="/2016/09/05/Excel2013：[34]禁止复制隐藏单元格/ae10eddeb48f8c5441db6e5338292df5e0fe7f07.jpg" alt="Excel2013：[34]禁止复制隐藏单元格" title="Excel2013：[34]禁止复制隐藏单元格">
+<ul>
+<li>现在已经完成了设置，别人无法复制隐藏的第一列数据，可以修改编辑复制其他列数据。如果你打算隐藏的数据不仅仅是一列还有很多列，你可以将所有隐藏列放到表格的最前面，然后隐藏、在保护单元格。这样最前面隐藏的单元格都是无法被选中的，也即是无法被复制查看修改的。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/">
+                spss用单样本k-s检验验证正态分布的方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年09月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> k-s检验是用来检验数据是否符合正态分布的，因为在检验之前我们并不知道该数据是否符合正态分布，所以这种检验属于非参数检验。对要检验的数据也没有限制，只要数据量够大就可以，数据量偏少会造成检验不准确。下面来具体介绍k-s检验的过程和结果分析。<br>方法/步骤</p>
+<ul>
+<li><p>在spss中打开数据，怎么打开就不介绍了，打开数据以后，在菜单栏上执行：analyze–非参检验–legacy disalogs–1 sample k-s</p>
 </li>
 <li></li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/adaf2edda3cc7cd993c35a2e3901213fb90e915e.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
+<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/d439b6003af33a87c56f04ebc65c10385243b5c4.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
 <ul>
-<li><p>最后我们看这个表格，这里有两个检验方法都是在方差齐性的时候使用的，我们从红色方框可以看出第一组分为一组，第二三组分为一组，它的意思是上面的结果是一致的。</p>
+<li>将你要检验正态的变量放到test variables list，勾选下面的normal，这是正态的意思。</li>
+</ul>
+<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/adaf2edda3cc7cd9c51530283901213fb80e9102.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
+<ul>
+<li>点击exact，进入选择检验方法的对话框</li>
+</ul>
+<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/a2cc7cd98d1001e9730410feb80e7bec54e79702.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
+<ul>
+<li><p>这里有三个选项可以选择，第一个asymptotic的意思是基于渐进分布的显著性水平的检验指标，适于大样本，如果样本过小或者分布不好，就会影响检验的效力；monte carlo适用于精确显著性水平的无偏估计，如果样本过大，数据处理过程太长，就应该使用这个选项；exact精确计算概率值，可以设定数据处理的时间，如果数据处理时间超过了你设定时间30分钟，就应该使用monte carlo</p>
 </li>
 <li></li>
 </ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/6159252dd42a2834cc0258fc5bb5c9ea14cebfa5.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/06/01/SPSS自动化：[2]ispssdatadoc对象方法用法/">
-                SPSS自动化：[2]ispssdatadoc对象方法用法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年06月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>   ispssdatadoc对象从属于document对象，其方法有很多，今天我们来一一介绍，包括他的功能和用法，可能有不太详尽的地方，大家多提意见，欢迎有志于spss自动化的网友交流。</p>
+<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/e850352ac65c1038637cca33b2119313b17e89c4.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
 <ul>
-<li><p>1&gt;clear方法：清除数据。</p>
-</li>
-<li><p>使用方法：objdatadoc.selectcells（”a”,”b”,19,29)</p>
-</li>
-<li><p>Objdatadoc.clear</p>
-</li>
-<li><p>2&gt;copy方法：复制数据。</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>objdatadoc.copy</p>
-</li>
-<li><p>3&gt;cut方法：</p>
-</li>
-<li><p>剪贴对象到剪贴板。使用方法：</p>
-</li>
-<li><p>objoutputdoc.selectalltables</p>
-</li>
-<li><p>Objoutputdoc.cut</p>
-</li>
-<li><p>4&gt;delete方法：删除选定的数据。</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>objoutputdoc.selectlastutput</p>
-</li>
-<li><p>Objoutputdoc.remove</p>
-</li>
-<li><p>5&gt;deletemenuitem方法：删除菜单项</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Objdatadoc.deletemenuitem(“edit”)</p>
-</li>
-<li><p>6&gt;deletemenuitemfromall方法：从所有数据窗中中删除菜单项，用法同上。</p>
-</li>
-<li><p>7&gt;getbannertext方法：获取标题文本</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Banner=objoutputdoc.getbannertext</p>
-</li>
-<li><p>8&gt;getdocumentpath方法：获取文档路径</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Path=objoutputdoc.getdocumentpath</p>
-</li>
-<li><p>9&gt;getfiltervariable方法：获取变量名或者带有标签的变量名</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Objdatadoc.getfiltervariable(false)   ‘false表示只获得变量名不要标签</p>
-</li>
-<li><p>10&gt;getnumberofcases方法：获取case数量</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Num=objdatadoc.getnumberofcases</p>
-</li>
-<li><p>11&gt;gettextdata方法：获取范围内文本格式的数据</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>array=objdatadoc.gettextdata(“a列”,”b列”,12,14)</p>
-</li>
-<li><p>12&gt;getvariables方法：返回一个一维变量数组，可以选择接收变量还变量标签。功能是获得变量名或者带标签的变量名。</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Variablelist=objdatadoc.getvariables(boolean)           ‘boolean取1为获取变量名和标签，取0为仅获取变量名</p>
-</li>
-<li><p>13&gt;getweightingvariable方法：获取加权变量。</p>
-</li>
-<li><p>使用方法：string=objdatadoc.getweightingvariable(boolean)          ‘boolean是1则返回变量名和标签</p>
-</li>
-<li><p>14&gt;invokedialogandexcutesyntax方法：激活一个对话框并运行命令。</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Objdatadoc.invokedialogandexecutesyntax(strpath,spsswindoparent,true)     ‘strpath是菜单路径，例如”analyze&gt;survival&gt;lifetables”；spsswindoparent是父对话框，可取1或者0；true指的是同步，也就是运行命令以后立刻获得控制权。</p>
-</li>
-<li><p>15&gt;invokedialogandreturnsyntax方法：返回一个syntax命令。</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>String=objdatadoc.invokedialogandreturnssyntax(strpath,spsswindoparent)</p>
-</li>
-<li><p>16&gt;paste方法：粘贴</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Objdatadoc.selectcells(‘a列’,’b列’,20,23)    ‘选择区域粘贴</p>
-</li>
-<li><p>Objdatadoc.paste</p>
-</li>
-<li><p>17&gt;printdoc方法：打印</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Objdatadoc.printdoc     ‘使用ispssprintoptions和printrange确定打印内容和方法。</p>
-</li>
-<li><p>18&gt;saveas方法：另存为</p>
-</li>
-<li><p>使用方法：objdatadoc.saveas(“d:\fuck.sav”)</p>
-</li>
-<li><p>19&gt;selectcases方法：选择case</p>
-</li>
-<li><p>使用方法：objdatadoc.selectcases(1,100)     ‘选择1到100的case</p>
-</li>
-<li><p>20&gt;selectcells方法：选择单元格</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Objdatadoc.selectcells(‘a列’,’b列’,1,100)</p>
-</li>
-<li><p>21&gt;selectvariables方法：选择一定范围内的变量</p>
-</li>
-<li><p>使用方法：</p>
-</li>
-<li><p>Objdatadoc.selectvariables(‘a列’,’b列’)</p>
-</li>
+<li>回到k-s检验对话框，点击options按钮，设置输出的参数</li>
 </ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/23/spss19.0如何破解/">
-                spss19.0如何破解
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>spss19.0是现在主流的统计软件，受到各种社会学科的研究生、研究员的欢迎，今天我也要用到spss于是跟大家分享一下，如图安装和破解该软件。<br>方法/步骤</p>
+<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/3801213fb80e7bec1ae207102f2eb9389b506b02.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
 <ul>
-<li>先去网上下载原版spss19.0，然后进行安装，网站资源很多，这里不提供下载链接</li>
+<li>勾选descriptive和quartiles，这两个的意思分别是输出描述性统计和四分位数，点击continue按钮</li>
 </ul>
-<img src="/2016/05/23/spss19.0如何破解/6f061d950a7b0208eb26986262d9f2d3562cc842.jpg" alt="spss19.0如何破解" title="spss19.0如何破解">
+<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/5243fbf2b21193138441fb4165380cd790238dc4.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
 <ul>
-<li>安装好了以后，来到开始菜单，找到spss，它一般在所有程序–ibm spss statistics中</li>
+<li>我们可以看到对数据的检验结果，最后的显著性检验值为0.000，非常显著。我们首先要知道在做显著性检验的时候虚无假设是数据符合正态分布，因为检验显著，所以否定虚无假设，所以数据是不符合显著性的要求的。</li>
 </ul>
-<img src="/2016/05/23/spss19.0如何破解/e61190ef76c6a7ef34c10fa5fdfaaf51f2de664a.jpg" alt="spss19.0如何破解" title="spss19.0如何破解">
-<ul>
-<li>右键单击该快捷方式，在打开的右键菜单中，选择【属性】</li>
-</ul>
-<img src="/2016/05/23/spss19.0如何破解/0bd162d9f2d3572c840d3b5f8a13632763d0c342.jpg" alt="spss19.0如何破解" title="spss19.0如何破解">
-<ul>
-<li>找到安装的起始位置，把图中所示的路径复制下来</li>
-</ul>
-<img src="/2016/05/23/spss19.0如何破解/63d9f2d3572c11df3f3e18a0632762d0f603c242.jpg" alt="spss19.0如何破解" title="spss19.0如何破解">
-<ul>
-<li>在网上搜索【spss19.0破解补丁】，下载下来以后，打开该补丁就会看到这个界面，我们将刚才复制得到的路径粘贴在这，然后点击确定按钮。</li>
-</ul>
-<img src="/2016/05/23/spss19.0如何破解/562c11dfa9ec8a13fbf5f063f703918fa1ecc042.jpg" alt="spss19.0如何破解" title="spss19.0如何破解">
-<ul>
-<li>弹出是否替换文件，这里要选择【全部选是】</li>
-</ul>
-<img src="/2016/05/23/spss19.0如何破解/63d0f703918fa0ec9528c38e269759ee3c6ddb42.jpg" alt="spss19.0如何破解" title="spss19.0如何破解">
-<ul>
-<li><p>当你看到这个界面的时候说明破解已经完成。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/05/23/spss19.0如何破解/09fa513d269759ee9cbfc748b2fb43166c22df42.jpg" alt="spss19.0如何破解" title="spss19.0如何破解">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/23/spss中如何进行样本和总体平均数的比较/">
-                spss中如何进行样本和总体平均数的比较
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p> 假设我们现在有几台机器生产的产品是否合格，需要进行检验。我们知道合格的产品直径是322，于是将各个机器生产的产品的直径与这个数字进行比较就知道这个机器是否合格了，我们通过这个例子来说明如何进行样本和总体平均数的比较。<br>方法/步骤</p>
-<ul>
-<li><p>拿到数据以后先来分析一下数据适用于那种处理方法，这个步骤很关键，我们现在要使用的处理方法是one-sample T test，它适合一个样本的平均数和总体平均数之间的比较，看他俩之间是否有差异，而总体的平均数是已知的。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/05/23/spss中如何进行样本和总体平均数的比较/2e2eb9389b504fc2e7c7d680e5dde71191ef6d9e.jpg" alt="spss中如何进行样本和总体平均数的比较" title="spss中如何进行样本和总体平均数的比较">
-<ul>
-<li>先分离一下数据，让spss知道哪些数据是一个组的，比如我今天处理的数据有8个分组，每个分都要跟总体的平均数（322）进行比较，看有没有差异，在菜单栏上执行：data–split file</li>
-</ul>
-<img src="/2016/05/23/spss中如何进行样本和总体平均数的比较/b151f8198618367a60e419582e738bd4b21ce5c2.jpg" alt="spss中如何进行样本和总体平均数的比较" title="spss中如何进行样本和总体平均数的比较">
-<ul>
-<li>打开split file 对话框，我们勾选【compare groups】，然后将machine number这个变量添加到分组变量中，也就是说一个机器的型号作为一个分组。点击ok按钮</li>
-</ul>
-<img src="/2016/05/23/spss中如何进行样本和总体平均数的比较/8ad4b31c8701a18b468674ca9e2f07082938fec2.jpg" alt="spss中如何进行样本和总体平均数的比较" title="spss中如何进行样本和总体平均数的比较">
-<ul>
-<li>数据分离以后，我们在菜单栏上执行：analyze—compare means—one–sample T test</li>
-</ul>
-<img src="/2016/05/23/spss中如何进行样本和总体平均数的比较/eac4b74543a9822663b44da28a82b9014a90eb3a.jpg" alt="spss中如何进行样本和总体平均数的比较" title="spss中如何进行样本和总体平均数的比较">
-<ul>
-<li>打开如图所示的对话框，我们将disc brake diameter 这个变量放到被检验的变量中，也就是对这个变量的平均数进行比较，下面的test value中填写322，我们前面说过322就是总体平均数，然后点击options</li>
-</ul>
-<img src="/2016/05/23/spss中如何进行样本和总体平均数的比较/58ee3d6d55fbb2fba0463e974f4a20a44723dcc2.jpg" alt="spss中如何进行样本和总体平均数的比较" title="spss中如何进行样本和总体平均数的比较">
-<ul>
-<li>打开options对话框，然后设置置信区间为95%，如果你对研究的结果要求严格，你可以设置为99%，点击继续按钮。</li>
-</ul>
-<img src="/2016/05/23/spss中如何进行样本和总体平均数的比较/03087bf40ad162d92083049911dfa9ec8b13cdc2.jpg" alt="spss中如何进行样本和总体平均数的比较" title="spss中如何进行样本和总体平均数的比较">
-<ul>
-<li>我们会看到两个表格，第一个表格可以叫做描述统计，对各个组的基本参数进行描述</li>
-</ul>
-<img src="/2016/05/23/spss中如何进行样本和总体平均数的比较/f603918fa0ec08fa8c6d752259ee3d6d54fbdac2.jpg" alt="spss中如何进行样本和总体平均数的比较" title="spss中如何进行样本和总体平均数的比较">
-<ul>
-<li><p>第二个表格最关键，我们看sig这一列，凡是数值小于0.05的数据都算是有显著差异，有的人规定要小于0.01，这要看你对研究的要求了。图示中圈出来的数据都是有显著差异的，都可以认为这几台机器是不合格的。</p>
-</li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-<img src="/2016/05/23/spss中如何进行样本和总体平均数的比较/10dfa9ec8a136327b50ba3b6918fa0ec09fac755.jpg" alt="spss中如何进行样本和总体平均数的比较" title="spss中如何进行样本和总体平均数的比较">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/19/spss析因设计的操作和分析方法/">
-                spss析因设计的操作和分析方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>工具/原料</p>
-<ul>
-<li>spss20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>首先要先正确的录入数据，如图所示，主题熟悉度和生词频率是两个自变量，阅读成绩是因变量</li>
-</ul>
-<img src="/2016/05/19/spss析因设计的操作和分析方法/8d5494eef01f3a29706bd90f9925bc315d607c4b.jpg" alt="spss析因设计的操作和分析方法" title="spss析因设计的操作和分析方法">
-<ul>
-<li>打开方差分析对话框，如图所示执行：analyse–GLM–univariate</li>
-</ul>
-<img src="/2016/05/19/spss析因设计的操作和分析方法/562c11dfa9ec8a1392835b21f703918fa1ecc052.jpg" alt="spss析因设计的操作和分析方法" title="spss析因设计的操作和分析方法">
-<ul>
-<li>将自变量和因变量放入各自的对话框，如图所示，点击model，打开model设置对话框</li>
-</ul>
-<img src="/2016/05/19/spss析因设计的操作和分析方法/d0c8a786c9177f3ee4bdf0cc70cf3bc79e3d5661.jpg" alt="spss析因设计的操作和分析方法" title="spss析因设计的操作和分析方法">
-<img src="/2016/05/19/spss析因设计的操作和分析方法/8718367adab44aedfb6fb125b31c8701a08bfbca.jpg" alt="spss析因设计的操作和分析方法" title="spss析因设计的操作和分析方法">
-<ul>
-<li>在model对话框，我们勾选全因素设计，如图所示，然后点击continue按钮</li>
-</ul>
-<img src="/2016/05/19/spss析因设计的操作和分析方法/1c950a7b02087bf4e3885828f2d3572c10dfcf8f.jpg" alt="spss析因设计的操作和分析方法" title="spss析因设计的操作和分析方法">
-<ul>
-<li>返回到主菜单，点击ok按钮，开始输出结果</li>
-</ul>
-<img src="/2016/05/19/spss析因设计的操作和分析方法/34fae6cd7b899e51a4ed35d542a7d933c9950d8b.jpg" alt="spss析因设计的操作和分析方法" title="spss析因设计的操作和分析方法">
-<ul>
-<li>我们看到下面这个表格，主要参考的指标是sig值，显然，sig值小于0.05就认为结果显著，从表中的数据你可以很容易看出结果了。</li>
-</ul>
-<img src="/2016/05/19/spss析因设计的操作和分析方法/6609c93d70cf3bc7195fc22dd100baa1cc112a97.jpg" alt="spss析因设计的操作和分析方法" title="spss析因设计的操作和分析方法">
+<img src="/2016/09/05/spss用单样本k-s检验验证正态分布的方法/7aec54e736d12f2ee83daa914fc2d56285356802.jpg" alt="spss用单样本k-s检验验证正态分布的方法" title="spss用单样本k-s检验验证正态分布的方法">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>

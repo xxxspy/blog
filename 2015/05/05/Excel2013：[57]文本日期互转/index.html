@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Excel2013：[57]文本日期互转"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Excel2013：[57]文本日期互转 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/05/05/Excel2013：[57]文本日期互转/">
+                Excel2013：[57]文本日期互转
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>Excel中日期格式是一个非常头疼的问题，很多时候我们都搞不清楚自己的数据是日期格式还是文本格式，更别提两者的相互转化了。今天我们详细讲解一下这个问题，以及这两种格式如何互转。</p>
+<ul>
+<li>如何判断自己的数据是日期格式还是文本格式？大部分人都回答错误！因为大部分人都知道查看单元格格式可以知道！这是及其错误的，比如，有一个单元格，里面填写了一个字符“a”，通过设置单元格格式，你将这个单元格设置为数字格式，试试看。一个字母竟然可以成为一个数字格式。这就是说虽然我们可以任意设置单元格的格式，但是当Excel无法转换格式的时候，就保留了原先的格式。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/246cca2a2834349bf3261892caea15ce36d3be42.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>所以，当我们想知道一个单元格是文本还是日期时，看单元格格式是不保险的。比如这一列日期，你可以在自己的电脑上录入这一列数据。我们将A列设置为日期格式，但是这一列数据仍然是文本，Excel并没有转换格式。因为Excel并不认识这种日期格式，所以就无法将其转换为日期，仍然保留了文本格式，虽然Excel显示的是日期格式。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/58af236d55fbb2fb91162e054c4a20a44623dcad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>除了Excel不识别的日期格式外，还有一种情况可以造成Excel无法将文本转换为日期：在下面这种情况下，我们先设置c列为文本，然后设置d列默认格式为常规。在两列都输入同样的“2013-1-1”，你会发现他们的不同：C列数据保持了你输入的内容不变；D列内容自动转换格式为Excel默认的日期格式。这说明你预先设置了c列的格式为文本，导致后面再输入数据都按照文本来保存数据了。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/f6428f8fa0ec08fa9d3d65b05aee3d6d55fbdaad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>如何鉴别到底是日期格式还是文本格式？很简单。当单元格为日期时，你在格式设置下啦菜单中，可以看到短日期和长日期格式不同，短日期下面显示2013/1/1，长日期下显示2013年1月1日。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/b3ba5d166d224f4af29200040af790529822d15b.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>如果单元格为文本格式，你会发现，短日期和长日期显示相同的格式，说明Excel并没有正确的识别日期。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/9252ae7eca8065380e22d40494dda144ac348299.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>现在我们有一列文本格式的日期，想要转换为日期格式</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/0db2c9ca7bcb0a462d1ffd2e6863f6246b60afad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>先将这一列设置为日期格式</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/bf487563f6246b60e833c463e8f81a4c510fa2ad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>按下ctrl+F，利用替换，将“.”替换为“-”,这样可以将Excel不认识的格式转换为它认识的格式</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/3c2c4bfbb2fb4316be3f0c6d23a4462309f7d342.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>结果就是这样了：显然Excel自动识别了日期。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/29752a9b033b5bb53bea56e935d3d539b600bcad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>但是有时候单元格内不是2013.1.1这种形式，而是2013-1-1，也很简单</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/1899a23eb13533fac4e4ee39abd3fd1f41345b13.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>还是用这个方法，先将该列设置为日期格式，然后将“-”替换为“/”即可</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/9c57e3faaf51f3de9cfec47397eef01f3a29791d.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>反过来，有些时候我们必须将日期格式转换为文本格式，还是这一列数据，它现在是日期格式</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/29752a9b033b5bb53bea56e935d3d539b600bcad.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>在B2单元格输入公式：=TEXT(A2,”yyyy-m-d”)，按下回车看一下结果</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/c9bdddcec3fdfc03f4c493afd73f8794a4c2262d.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<ul>
+<li>向下拖动单元格右下角，可以快速填充以下的单元格，完成日期向文本的转换。</li>
+</ul>
+<img src="/2015/05/05/Excel2013：[57]文本日期互转/c2bce2039245d688bcbec2b3a7c27d1ed21b242d.jpg" alt="Excel2013：[57]文本日期互转" title="Excel2013：[57]文本日期互转">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/excel/">#excel</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

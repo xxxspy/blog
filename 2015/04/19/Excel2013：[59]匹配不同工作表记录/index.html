@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Excel2013：[59]匹配不同工作表记录"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Excel2013：[59]匹配不同工作表记录 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/04/19/Excel2013：[59]匹配不同工作表记录/">
+                Excel2013：[59]匹配不同工作表记录
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>如何匹配不同工作表中的记录？假如有多个工作表，第一个工作表作为基本表，用于和其他几个表匹配记录，假如一条记录同时出现在了基本表和其他表中，我们就在基本表中标识出来。怎么实现这个过程？</p>
+<ul>
+<li>首先将Excel文件存为可以执行vba的格式，xlsm格式</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/caae68094b36acaf906a34eb7fd98d1000e99ce4.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>我们利用SN号作为一条记录是否重复的指标，假如两条记录SN号相同，则认为两条记录匹配</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/d002b34bd11373f0b4cccd88a70f4bfbfaed04f2.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>打开开发工具下的visual basic，或者可以按下快捷键alt+F11</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/7d98931001e93901e5882f2978ec54e737d196e4.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>打开vb界面，我们双击 thisworkbook，大概一个代码界面</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/a54e55fbfbedab643f81efd7f436afc378311ef2.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>复制以下代码到代码界面</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/d019d2bf6c81800aeb562419b23533fa828b4733.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>将鼠标光标移动到代码的任意位置，按下快捷键F5即可执行代码，执行结果可见：在第一个工作表的最后一列标志出了某条记录出现在哪一个工作表中，如果所有工作表都没有匹配，则输出无匹配。</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/f15e24292df5e0fe79922b165f6034a85fdf72e4.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li>注意基本工作表总是位于最前面。也是Excel认为的第一个工作表，代码总是用第一个表中的数据与其他表中的数据去匹配，匹配成功则输出工作表的名称。</li>
+</ul>
+<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/148f28d3d539b600985ba2a0ea50352ac75cb7d5.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
+<ul>
+<li><p>本教程用到的代码：复制可用。</p>
+</li>
+<li><p>Sub pipei()</p>
+</li>
+<li><p>Set d = CreateObject(“scripting.dictionary”)</p>
+</li>
+<li><p>For i = 2 To Worksheets.Count</p>
+</li>
+<li><p>For j = 1 To Sheets(i).Cells(1, 300).End(xlToLeft).Column</p>
+</li>
+<li><p>If Sheets(i).Cells(1, j).Text = “SN号” Then</p>
+</li>
+<li><p>For r = 2 To Sheets(i).Cells(65536, j).End(xlUp).Row</p>
+</li>
+<li><p>If Not (Sheets(i).Cells(r, j).Value = 0 Or Sheets(i).Cells(r, j).Text = “”) Then</p>
+</li>
+<li><p>d.Add Sheets(i).Cells(r, j).Text, Sheets(i).Name</p>
+</li>
+<li><p>End If</p>
+</li>
+<li><p>Next r</p>
+</li>
+<li><p>End If</p>
+</li>
+<li><p>Next j</p>
+</li>
+<li><p>Next i</p>
+</li>
+<li><p>Sheets(1).Activate</p>
+</li>
+<li><p>max_col = Cells(1, 300).End(xlToLeft).Column</p>
+</li>
+<li><p>For c = 1 To max_col</p>
+</li>
+<li><p>If Cells(1, c).Text = “SN号” Then</p>
+</li>
+<li><p>For r = 2 To Cells(65536, c).End(xlUp).Row</p>
+</li>
+<li><p>If d.exists(Cells(r, c).Text) Then</p>
+</li>
+<li><p>Cells(r, max_col + 1) = d.Item(Cells(r, c).Text)</p>
+</li>
+<li><p>Else</p>
+</li>
+<li><p>Cells(r, max_col + 1) = “无匹配”</p>
+</li>
+<li><p>End If</p>
+</li>
+<li><p>Next r</p>
+</li>
+<li><p>End If</p>
+</li>
+<li><p>Next c</p>
+</li>
+<li><p>MsgBox “ok”</p>
+</li>
+<li><p>End Sub</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/excel/">#excel</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
