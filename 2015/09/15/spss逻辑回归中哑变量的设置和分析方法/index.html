@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="spss逻辑回归中哑变量的设置和分析方法"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>spss逻辑回归中哑变量的设置和分析方法 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/">
+                spss逻辑回归中哑变量的设置和分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>逻辑回归中，有些自变量是分类变量，同时有两个以上的分类，这就导致了我们在做回归的时候就默认的把该变量当成了等距数据，最后造成了更大的误差。哑变量就是要解决这个问题，下面是具体的方法。<br>方法/步骤</p>
+<ul>
+<li>在spss中打开数据，确定要设置哪个变量为哑变量以后，我们打开逻辑回归对话框，操作方法：analyse–regression–binary logistic</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/8644ebf81a4c510f1d0e5ef76059252dd52aa511.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>将是否吸烟这个变量放到因变量中，将种族放到自变量中，如图所示</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/63d0f703918fa0ecac9ddae0269759ee3c6ddb81.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>选择变量进入方程的方法是enter，因为所有的哑变量必须是同时进入，否则就没有统计学意义了。</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/5882b2b7d0a20cf4d723403276094b36adaf99a8.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>接下来要设置哑变量了，点击categrio按钮，打开变量分类对话框</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/ac345982b2b7d0a2e986ba70cbef76094a369a94.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>将要设置哑变量的变量放入右侧窗口中</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/80cb39dbb6fd5266819582f9ab18972bd50736a4.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>到了最关键的部分，我们要选择哪个分类作为参考分类，设置参考分类必须使参考分类有意义，比如这个例子中，种族类别包括黑人、白人和其他种族，那么其他种族一般被设置为参考分类，那么你怎么知道参考分类是第一个还是最后一个呢，后面要设置last和first。下面一个步骤告诉你</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/622762d0f703918f02e48427513d269759eec422.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>回到变量视图中，找到种族这个变量，在value中可以查看变量值，我们看到其他种族这个分类为3，上面那一步应该设置为last</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/9f2f070828381f3067e83444a9014c086f06f06e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/6f061d950a7b0208ed38860c62d9f2d3562cc86e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/b8389b504fc2d5627cf46800e71190ef77c66c5b.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>点击ok，开始输出统计结果</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/dcc451da81cb39dbfb58dfbbd0160924aa183046.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>输出了一大堆数据，我们不用管，因为这里要教大家如何分析哑变量，所以直奔主题，找到variables in the equation表，这个表中，你可以看到有race（1）和race（2）这两个变量，他们就是race的哑变量，B是系数，因为他们都是跟其他种族相比，图中的数据可以看到，白种人比其他种族的人更容以吸烟，黑种人比其他种族更容易吸烟，白种人和黑种人相比，黑种人可能比白种人更容易吸烟，但是需要进一步的检验。</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/77c6a7efce1b9d16fc37228cf3deb48f8d54646e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/02/01/SPSS实例：[18]中介效应占总效应百分比/">
+                SPSS实例：[18]中介效应占总效应百分比
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天跟大家分享的是一个用Excel计算中介效应占总效应的百分比的方法。这个百分比我们都知道，就是中介效应比总效应，看过我前面文章的人应该都知道如何进行中介效应的检验了，假如我们得出的结论是部分中介效应，那么我们需要计算总效应中的百分之多少是中介效应，所以我就做了一个Excel文件，可以帮助大家快速计算，下面是方法：</p>
+<ul>
+<li>从下面的参考资料里现在我在百度网盘里的文件</li>
+</ul>
+<img src="/2016/02/01/SPSS实例：[18]中介效应占总效应百分比/d68b65cb0a46f21fe423a14bf4246b600c33ae50.jpg" alt="SPSS实例：[18]中介效应占总效应百分比" title="SPSS实例：[18]中介效应占总效应百分比">
+<ul>
+<li>打开里面的Excel文件，我们看到这样一个表格</li>
+</ul>
+<img src="/2016/02/01/SPSS实例：[18]中介效应占总效应百分比/00a82701213fb80eee0a9dcf34d12f2eb8389494.jpg" alt="SPSS实例：[18]中介效应占总效应百分比" title="SPSS实例：[18]中介效应占总效应百分比">
+<ul>
+<li>我们举一个例子来说明如何使用，下面的三线表格就是我们中介效应检验的三个方程，看不懂的可以去翻我前面的文章</li>
+</ul>
+<img src="/2016/02/01/SPSS实例：[18]中介效应占总效应百分比/f677b1c379310a55a34921ecb54543a98226107d.jpg" alt="SPSS实例：[18]中介效应占总效应百分比" title="SPSS实例：[18]中介效应占总效应百分比">
+<ul>
+<li>将对应的值放入表格中的对应位置，在D2单元格就会出现百分比，那就是你需要的中介效应占总效应的百分比。</li>
+</ul>
+<img src="/2016/02/01/SPSS实例：[18]中介效应占总效应百分比/72ccb7773912b31baf0132318418367adab4e17e.jpg" alt="SPSS实例：[18]中介效应占总效应百分比" title="SPSS实例：[18]中介效应占总效应百分比">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/">
+                spss20.0多重线型回归模型的操作方法和结果分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>为了能够简要的说明操作方法，我们这里只用两个自变量和一个因变量，使用进入的方法进行多重线性回归分析，下面有操作的方法和对结果的分析方法。<br>方法/步骤</p>
+<ul>
+<li>在确定你的数据已经进行了线性关系的验证以后，再进行回归分析，因为前面的文章有讲如何验证线型关系，所以这里就不说了，直接进行回归分析，在菜单栏上执行：分析–回归</li>
+</ul>
+<img src="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/d1a20cf431adcbefd5879bf9acaf2edda2cc9f9a.jpg" alt="spss20.0多重线型回归模型的操作方法和结果分析" title="spss20.0多重线型回归模型的操作方法和结果分析">
+<ul>
+<li>打开线性回归对话框，将因变量和自变量都放到各自的位置，如图所示</li>
+</ul>
+<img src="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/3b87e950352ac65c8069838cfbf2b21192138ae5.jpg" alt="spss20.0多重线型回归模型的操作方法和结果分析" title="spss20.0多重线型回归模型的操作方法和结果分析">
+<ul>
+<li>记得选择方法为进入，因为你的自变量只有两个，在自变量较少的时候使用进入这个方法是最常用的，点击确定，去看结果输出窗口</li>
+</ul>
+<img src="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/8435e5dde71190efcc487720ce1b9d16fcfa609a.jpg" alt="spss20.0多重线型回归模型的操作方法和结果分析" title="spss20.0多重线型回归模型的操作方法和结果分析">
+<ul>
+<li>要分析的结果主要有两个，一个是方差分析，如图所示，我们要看sig值是否显著，如果值小于0.01我们就认为它是显著的，这就证明我们建立的模型是可行的，至少一个自变量的回归系数不为零</li>
+</ul>
+<img src="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/fcfaaf51f3deb48f4eda4421f01f3a292cf5789a.jpg" alt="spss20.0多重线型回归模型的操作方法和结果分析" title="spss20.0多重线型回归模型的操作方法和结果分析">
+<ul>
+<li><p>接着看系数的检验，这个主要是看回归系数是否达到了显著水平，结果显示系数是显著的</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/0dd7912397dda1443165894db2b7d0a20df486e5.jpg" alt="spss20.0多重线型回归模型的操作方法和结果分析" title="spss20.0多重线型回归模型的操作方法和结果分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/">
+                SPSS实例：[30]kappa系数怎么计算
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如有两个评分者针对一批作文进行分级，分为好中差三级，分级结果见下表。你怎么判定这两个评分者的评分结果是否一致呢？这时候就要计算卡帕系数了。</p>
+<ul>
+<li>好中差分别用123来表示，将数据录入到spss中</li>
+</ul>
+<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/fab3ac119313b07ea149be440ed7912396dd8c43.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
+<ul>
+<li>接着，我们再给数据加权，用频数作为加权变量，不会的可以参考我上一篇文章，这里不再重复。<a href="http://jingyan.baidu.com/article/9f7e7ec050c3c36f28155434.html" target="_blank" rel="external">http://jingyan.baidu.com/article/9f7e7ec050c3c36f28155434.html</a></li>
+</ul>
+<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/b25aae51f8198618261306c848ed2e738ad4e6e3.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
+<ul>
+<li>接着，打开菜单：分析–描述统计-交叉表，将两个变量分别放入行和列变量</li>
+</ul>
+<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/2f3295d4b31c8701b6e25baa257f9e2f0608ffe3.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
+<ul>
+<li>设置输出的描述性统计，这里就是输出kappa系数的地方</li>
+</ul>
+<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/fd428c45d688d43f541278be7f1ed21b0ff43b80.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
+<ul>
+<li>勾选kappa系数，然后点击继续按钮</li>
+</ul>
+<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/29790130e924b899896890746c061d950b7bf6e3.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
+<ul>
+<li>回到了主菜单，我们点击ok按钮</li>
+</ul>
+<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/4d4970061d950a7b2761a78808d162d9f3d3c9e3.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
+<ul>
+<li>评分者一致性系数就到此计算出来了。</li>
+</ul>
+<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/1cd4147b02087bf42db8bea5f0d3572c10dfcfe3.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/">
+                spss多重反应下的频次分析方法（多项选择题分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在问卷调查中经常用到多项选择题，分析多项选择题的方法就是multiple response，我们举一个例子，在网络调查问卷中有一题是：你获得信息的主要来源有哪些？选项有：网络、报纸、电视、读书、听说、手机。这是一个有六个选项的多项选择题，你改如何对各个选项的频率进行分析呢？下面是具体的方法：<br>方法/步骤</p>
+<ul>
+<li>spss中打开数据，为了对多项选择题进行频次分析，先要设定一个变量集，因为在spss中，多项选择题额答案不能直接输入，只能将每一个变量当作一个单项选择题，每一题有一个答案或者没有答案。我们先要做的就是将所有的选项构成的单项选择题组成变量集，如图所示，在菜单栏上执行：analyze–multiple response–define sets</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/7c1ed21b0ef41bd5b80b1d7b51da81cb38db3de0.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li>将所有的选项变量放到变量集中</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/8b13632762d0f703fcc6605308fa513d2797c5cd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li>选择变量是如何编码的，我们刚才看到了，每个变量都有6个选项，这就是分类变量了，所以要选择category。如果每个选项变量是是否形式的，应该选择dichotomies。</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/d50735fae6cd7b89ba34cf0c0f2442a7d8330ee0.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li>给变量添加一个名称，并填写标签，如图所示，然后点击add按钮，最后点击关闭按钮。</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/0e2442a7d933c895fb266df4d11373f0830200e0.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/91529822720e0cf35783bb740a46f21fbf09aacd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li>接着就要对多项选择题进行分析了，在菜单栏上执行：analyze–multiple response–frequencies</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/6a600c338744ebf8910591b0d9f9d72a6159a7cd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li>将你刚才新家的变量集添加到右侧列表里，点击ok按钮，开始输出结果</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/1f178a82b9014a90b266b332a9773912b21beee1.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li><p>我们来分析一下输出结果，N是选择对应选项的人数，百分比指的是在所有的选择中，该项占的百分比，个案百分比指的是选择该选项的人占所有人数的百分比</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/359b033b5bb5c9ea8287f66cd539b6003bf3b3cd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/15/SPSS实例：[21]调节效应检验方法/">
+                SPSS实例：[21]调节效应检验方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>经常给人做数据分析，似乎大家遇到的一个瓶颈就是调节效应怎么做，我也不怕砸自己的饭碗，就将方法分享给大家，希望大家受用。</p>
+<ul>
+<li>在spss中，打开线性回归的菜单，如图所示</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/3853ad1bb051f819fde94644d8b44aed2f73e7b5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>我们先将因变量【职业探索】、自变量【自我概念】、调节变量【社会支持】放入各自的框框。</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/a992e31f4134970a15dc552197cad1c8a6865dd5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>点击下一层，设置第二个方程</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/b110e6198618367aa7453ad32c738bd4b21ce5b5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>这第二层比第一层增加了一个交互项</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/8759287adab44aed5182fbeab11c8701a08bfbb5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>点击statistic，设置输出什么参数</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/a6c7d7177f3e6709e4af00f139c79f3df9dc55d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>一定要选择R方改变量，点击continue，然后点击ok</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/c856613e6709c93d5e5d4bf99d3df8dcd00054d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/310f3b1f95cad1c88e14b9297d3e6709c83d51d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>我们可以看r方的该变量，第二个方程，sig F change值小于0.05，证明调节效应存在</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/6648d73d70cf3bc7afaf88e2d300baa1cc112ad5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>我们看输出的结果，第一个红框是系数，也就是前面介绍的abcc’，sig值是他们的显著性水平，交互项系数的sig值小于0.05，说明存在调节效应。</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/373bc4b44aed2e730b25c3228501a18b86d6fab5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/b853d6fcc3cec3fdc791e27bd488d43f869427d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/15/SPSS python教程：[8]CreateXMLOutput/">
+                SPSS python教程：[8]CreateXMLOutput
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇文章我们介绍了如何使用OMS（结果输出系统）来获取某个变量的平均数，今天我们接着这个话题，讲一讲上一篇文章中用到的spssaux.CreateXMLOutput。</p>
+<ul>
+<li>通常，如果你想学习一个模块，你只要用help（）方法即可</li>
+</ul>
+<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/1cd4147b02087bf403379869f0d3572c10dfcf1c.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
+<ul>
+<li>我们看到CreateXMLOutput有四个参数，除了cmd，其他都是可选的，我们来介绍一下这几个参数</li>
+</ul>
+<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/0b907cd9f2d3572c1c39535c8813632763d0c31c.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
+<ul>
+<li>cmd是syntax命令，比如下面计算平均数的一个syntax</li>
+</ul>
+<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/fab3ac119313b07e81649e880ed7912396dd8c12.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
+<ul>
+<li>omsid翻译为命令标识符：命令标识符可用于所有统计和绘图过程，以及在查看器的概要窗格中生成包含自己的可识别标题的输出区的任何其他命令。这些标识符通常（但不总是）与菜单上的过程名称和对话框标题相同或类似，这些名称和标题通常（但不总是）与基础命令名称相同。怎样查看一个输出表格的omsid呢，我们看一下截图：</li>
+</ul>
+<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/a84052086e061d950e4efeb879f40ad163d9cae3.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
+<ul>
+<li>subtype：表子类型是可以生成的枢轴表的不同类型。某些子类型仅由一个命令生成；其他子类型可由多个命令生成（尽管表看上去并不相同）。虽然表子类型名称通常是描述性的，但也可以选择其他名称（尤其是选择了大量命令时）；并且，两个子类型的名称可以非常类似。我们也可以查看一个表的子类型：</li>
+</ul>
+<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/2f9cbdcc7cd98d105f4bc5b1233fb80e7aec9050.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
+<ul>
+<li>最后是visible属性，也就是可见属性，默认情况下，我们是不能看到输出结果的，但是visible设置为1就可以在结果视图中看到输出结果。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/15/SPSS自动化：[3]结果输出文档对象的属性/">
+                SPSS自动化：[3]结果输出文档对象的属性
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <ul>
+<li><p>1&gt;designated属性</p>
+</li>
+<li><p>2&gt;height 和width属性</p>
+</li>
+<li><p>3&gt;items属性</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Dim objoutputdoc as ispssoutputdoc</p>
+</li>
+<li><p>Set objoutputdoc=objspssapp.getgesignatedoutputdoc           ‘声明变量并获取指定的输出文档。</p>
+</li>
+<li><p>Dim objoutputitems as ispssitems</p>
+</li>
+<li><p>Dim objoutputitem as ispssitem</p>
+</li>
+<li><p>Set objoutputitems=objoutputdoc.items         ‘声明并获取项目对象</p>
+</li>
+<li><p>Dim intcount as integer</p>
+</li>
+<li><p>Dim strtype() as string</p>
+</li>
+<li><p>Intcount=objoutputitems.count</p>
+</li>
+<li><p>Redim strtype(intcount)</p>
+</li>
+<li><p>For i=0 to count-1</p>
+</li>
+<li><p>Objoutputitem=objoutputitems.getitem(i)</p>
+</li>
+<li><p>Strtype(i)=objoutputitem.spsstype</p>
+</li>
+<li><p>Next I</p>
+</li>
+<li><p>4&gt;label属性：返回或者设置某个输出项的标签</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Dim objoutputdoc as ispssoutputdoc</p>
+</li>
+<li><p>Set objoutputdoc=objspssapp.openoutputdoc(“c:\out.spo”)</p>
+</li>
+<li><p>Dim objoutputitems as ispssitems</p>
+</li>
+<li><p>Dim objoutputitem as ispssitem</p>
+</li>
+<li><p>Set objoutputitems=objoutputdoc.items</p>
+</li>
+<li><p>Dim intcount as integer</p>
+</li>
+<li><p>Intcount=objoutputitems.count</p>
+</li>
+<li><p>For i=0 to intcount-1</p>
+</li>
+<li><p>Set objoutputitem=objoutputitems.getitem(i)</p>
+</li>
+<li><p>If objoutputitem.label=’notes’ then</p>
+</li>
+<li><p>Objoutputitem.selected=true</p>
+</li>
+<li><p>Exit for</p>
+</li>
+<li><p>End if</p>
+</li>
+<li><p>Next i</p>
+</li>
+<li><p>5&gt;left和top属性：设置输出文档对象的位置</p>
+</li>
+<li><p>7&gt;outliningtoolbarvisible属性：在输出浏览器窗口中显示或者隐藏外观工具条。</p>
+</li>
+<li><p>用法：objoutputdoc.outliningtoolbarvisible=true</p>
+</li>
+<li><p>8&gt;printoptions属性：返回打印选项对象。</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Setobjprintoptions=objoutputdoc.printoptions</p>
+</li>
+<li><p>Objprintoptions.headertext=”str”</p>
+</li>
+<li><p>Objprintoptions.papersize=4</p>
+</li>
+<li><p>Objprintoptions.papersource=1</p>
+</li>
+<li><p>Objprintoptions.startingpagenumber=10  ‘从第十页开始打印</p>
+</li>
+<li><p>Objoutputdoc.printdoc</p>
+</li>
+<li><p>8&gt;splitterpositon属性：返回或者设置分割线的位置。</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>objoutputdoc.splitterposition=objoutputdoc.width/2</p>
+</li>
+<li><p>9&gt;standardtoolbarvisible属性：返回或者设置标准工具条的可见性。</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Objoutputdoc.standardtoolbarvisible=true</p>
+</li>
+<li><p>10&gt;visible属性：可见性。</p>
+</li>
+<li><p>11&gt;windowstate属性：窗口状态属性。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/11/SPSS实例：[20]检验中介效应的操作方法/">
+                SPSS实例：[20]检验中介效应的操作方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇文章我介绍了检验中介效应的理论过程，见文章【中介效应的检验过程】，现在哦我们要在上一篇文章的基础上进行操作，操作方法如下：</p>
+<ul>
+<li>首先检验第一个方程，方程形式如下<br>检验过程是使用线性回归：：：：：：打开线性回归的对话框<br>然后再放入X和Y，如图，，，，，，，，，，，，，，</li>
+</ul>
+<img src="/2016/01/11/SPSS实例：[20]检验中介效应的操作方法/32bb9c8ba61ea8d3563fa61e950a304e251f5848.jpg" alt="SPSS实例：[20]检验中介效应的操作方法" title="SPSS实例：[20]检验中介效应的操作方法">
+<img src="/2016/01/11/SPSS实例：[20]检验中介效应的操作方法/a6aed01b9d16fdfa271c14f4b68f8c5494ee7b7d.jpg" alt="SPSS实例：[20]检验中介效应的操作方法" title="SPSS实例：[20]检验中介效应的操作方法">
+<img src="/2016/01/11/SPSS实例：[20]检验中介效应的操作方法/d66b7e59252dd42a630ed3b1013b5bb5c9eab862.jpg" alt="SPSS实例：[20]检验中介效应的操作方法" title="SPSS实例：[20]检验中介效应的操作方法">
+<ul>
+<li>检验第二个方程，方程形式如下，，，，，<br>接着还是使用线性回归，我们放入M和X，如下图，，，，，</li>
+</ul>
+<img src="/2016/01/11/SPSS实例：[20]检验中介效应的操作方法/7d98931001e9390154675f2479ec54e736d19600.jpg" alt="SPSS实例：[20]检验中介效应的操作方法" title="SPSS实例：[20]检验中介效应的操作方法">
+<img src="/2016/01/11/SPSS实例：[20]检验中介效应的操作方法/9319cf09b3de9c8271152b956e81800a19d8437d.jpg" alt="SPSS实例：[20]检验中介效应的操作方法" title="SPSS实例：[20]检验中介效应的操作方法">
+<ul>
+<li>接着检验第三个方程，方程形式如下：<br>操作方法如下：：：：：：：：：：点击ok按钮可以进行参数的估计，然后根据上一篇文章讲到的，进行分析。</li>
+</ul>
+<img src="/2016/01/11/SPSS实例：[20]检验中介效应的操作方法/a8362712b31bb051fbc86132347adab44bede0f9.jpg" alt="SPSS实例：[20]检验中介效应的操作方法" title="SPSS实例：[20]检验中介效应的操作方法">
+<img src="/2016/01/11/SPSS实例：[20]检验中介效应的操作方法/7ac880510fb30f24a2873e19ca95d143ad4b0348.jpg" alt="SPSS实例：[20]检验中介效应的操作方法" title="SPSS实例：[20]检验中介效应的操作方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/03/spss20.0安装和破解方法【附许可证】/">
+                spss20.0安装和破解方法【附许可证】
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>#####该方法已经失效#####大家不要骂街####<br>方法/步骤</p>
+<ul>
+<li>下一步</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/7c1ed21b0ef41bd597c8467751da81cb38db3d9d.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>准备安装</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/f636afc379310a55ecdf7077b74543a9832610bd.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>下一步</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/0bd162d9f2d3572c9d19325f8a13632763d0c3be.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>下一步</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/3c6d55fbb2fb4316f1e4d4f920a4462308f7d3be.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>因为我们一般使用的就是中文，</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/5ab5c9ea15ce36d36b9f2db33af33a87e850b19e.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>。点击图中所示按钮</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/c75c10385343fbf27ad708a0b07eca8064388fbe.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>继续</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/4ec2d5628535e5dd0ab70b5c76c6a7efcf1b629e.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/03/怎样将excel中的联系人导入到邮箱/">
+                怎样将excel中的联系人导入到邮箱
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在日常的办公中，我们整理客户资料的时候经常是使用excel，如果要想给这些客服发邮件，我们就得将他们的邮件地址一个一个的输入到邮箱里，不过，还有更简单的做法，那就是利用批量导入联系人的方法实现一键导入，下面是具体的方法，本人用的是126邮箱，经测试，其他邮箱导入的方法也是一样的。<br>方法/步骤</p>
+<ul>
+<li></li>
+<li><p>先打开要导入的excel文件，格式不正确的文件是无法导入的，我们要对其进行修改。首先你要检查这个文件是不是有标题栏，没有标题栏的话，很多邮箱都不能导入，所以我们最好先插入标题栏，如图所示，右键单击第一行，然后再打开的菜单中选择【插入】</p>
+</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/71cf3bc79f3df8dc7f79ae0fcd11728b461028e3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>导入到标题栏以后，我们按照‘联系组   姓名   邮件地址   联系地址   邮政编码   联系电话   移动电话   公司   ’这样的顺序整理你的联系人的信息，当然，如果你的联系人的信息没有这么多，你可以空着不填，比如没有电话，你就空着这一栏就可以了，如下图所示就是整理好的联系人的信息</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/aa64034f78f0f7364ca66d9f0a55b319eac413d7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>点击excel的开始按钮，打开开始菜单，然后执行：另存为–其他格式</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/f9dcd100baa1cd11c3f253beb912c8fcc2ce2de3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>在打开的另存为对话框中，我们将保存的格式设置为csv，这是个大邮箱都承认的导入格式，然后选择一个保存的位置，点击‘保存’</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/962bd40735fae6cdb4ec8aff0fb30f2443a70fd7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>弹出一个警告消息，不用管它，点击‘是’</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/4610b912c8fcc3ce7584e8ad9245d688d53f20e3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>来到你的邮箱，在菜单栏上选择【通讯录】，打开联系人的列表</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/a5c27d1ed21b0ef4dbb0b9c0ddc451da80cb3ed7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>在标题栏，找到【更多】选项，点击它可以打开一个下拉列表，在该下拉列表里，找到【导入通讯录】这个选项</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/d31b0ef41bd5ad6e1fa1457481cb39dbb7fd3cd7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>打开导入通讯录页面，点击浏览按钮，查找你刚才保存的文件</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/e7cd7b899e510fb3dd415609d933c895d0430cd7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>选择你要上传的文件，然后点击【打开】</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/fd039245d688d43f3cedb06c7d1ed21b0ff43be3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li><p>设置遇到重复的邮件地址的时候是该覆盖还是不导入，也就是跳过该记录，按照你需要的自己进行设定，一般就是选择【不导入】。点击确定按钮，完成导入。</p>
+</li>
+<li></li>
+<li></li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/d833c895d143ad4b0976675e82025aafa50f06d7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/6/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/8/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

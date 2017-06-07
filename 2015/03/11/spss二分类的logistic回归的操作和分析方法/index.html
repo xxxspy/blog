@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="spss二分类的logistic回归的操作和分析方法"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>spss二分类的logistic回归的操作和分析方法 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/03/11/spss二分类的logistic回归的操作和分析方法/">
+                spss二分类的logistic回归的操作和分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年03月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>二分类指的是因变量的数据只有两个值，代表事物的两种类别，典型的二分类变量如性别、是否患病等。因变量为二分变量原则上是无法做回归的，在回归方程中的因变量实质上是概率，而不是变量本身。在理解二分类变量以后，我们看看如何做二分类变量的logistic回归。<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>打开数据以后，菜单栏上依次点击：analyse–regression–binary logistic，打开二分回归对话框</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/e850352ac65c1038bd6b882fb2119313b17e89c2.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>将因变量和自变量放入格子的列表里，如图所示，上面的是因变量，下面的是自变量，我们看到这里有三个自变量</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/d788d43f8794a4c22380a1c60ef41bd5ac6e39bf.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>设置回归方法，这里选择最简单的方法：enter，它指的是将所有的变量一次纳入到方程。其他方法都是逐步进入的方法，在前面的文章中有介绍，这里就不再熬述。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/2f738bd4b31c8701013bf40b277f9e2f0608ff4a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/060828381f30e9241f17dddc4c086e061c95f7a8.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>点击ok，开始处理数据并检验回归方程，等待一会就会弹出数据结果窗口</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/962bd40735fae6cd1494ea8c0fb30f2442a70f3e.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>看到的第一个结果是对case的描述，第一个列表告诉你有多少数据参与的计算，有多少数据是缺省值；第二个列表告诉你因变量的编码方式，得分为1代表患病，得分为0代表没有患病</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/c75c10385343fbf25d16e7ceb07eca8065388f21.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>这个列表告诉你在没有任何自变量进入以前，预测所有的case都是患病的正确率，正确率为%52.6</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/9345d688d43f8794f85f09c3d21b0ef41ad53abe.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>下面这个列表告诉你在没有任何自变量进入以前，常数项的预测情况。B是没有引入自变量时常数项的估计值，SE它的标准误，Wald是对总体回归系数是否为0进行统计学检验的卡方。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/00e93901213fb80e72b2213a36d12f2eb83894ff.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>下面这个表格结果，通过sig值可以知道如果将模型外的各个变量纳入模型，则整个模型的拟合优度改变是否有统计学意义。 sig值小于0.05说明有统计学意义</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/9d82d158ccbf6c81b40b6f05bc3eb13533fa401a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>这个表格是对模型的全局检验，为似然比检验，供给出三个结果：同样sig值&lt;0.05表明有统计学意义。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/55e736d12f2eb938968c391fd5628535e4dd6f7d.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/09fa513d269759ee816d2226b2fb43166d22df1a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>下面的结果展示了-2log似然值和两个伪决定系数。两个伪决定系数反应的是自变量解释了因变量的变异占因变量的总变异的比例。他们俩的值不同因为使用的方法不同。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/e7cd7b899e510fb361763a7ad933c895d0430ceb.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>分类表，这里展示了使用该回归方程对case进行分类，其准确度为%71.8。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/08f790529822720ecb13af177bcb0a46f31fab7a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>最后是输出回归方程中的各变量的系数和对系数的检验额值，sig值表明该系数是否具有统计学意义。到此，回归方程就求出来了。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/d058ccbf6c81800a2bcbc5e3b13533fa828b4734.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

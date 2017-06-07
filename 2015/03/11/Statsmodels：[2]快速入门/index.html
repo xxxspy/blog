@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Statsmodels：[2]快速入门"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Statsmodels：[2]快速入门 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/03/11/Statsmodels：[2]快速入门/">
+                Statsmodels：[2]快速入门
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年03月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>这是Python.statsmodels系列文章的第二篇，为了让大家快速入门，理解statsmodels工作的整个过程，我找到了一个很好的例子，在这里介绍给大家。下面我们来一步步介绍这个例子。</p>
+<ul>
+<li>引入相关模块，pandas主要用到了他的DataFrame，sm用到了回归分析，patsy.dmatrices用于生成design matrix</li>
+</ul>
+<img src="/2015/03/11/Statsmodels：[2]快速入门/7a8a1446f21fbe09d996846668600c338644adbd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<ul>
+<li>先获取数据，本例子用到的数据保存在网上的csv文件，我们可以使用pandas.read_csv方便的读取数据（url=’<a href="http://vincentarelbundock.github.com/Rdatasets/csv/HistData/Guerry.csv&#39;）" target="_blank" rel="external">http://vincentarelbundock.github.com/Rdatasets/csv/HistData/Guerry.csv&#39;）</a></li>
+</ul>
+<img src="/2015/03/11/Statsmodels：[2]快速入门/6a22e8246b600c3331b199ba194c510fd8f9a1bd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<ul>
+<li>查看一下数据的前五行，有很多列，显示有点混乱</li>
+</ul>
+<img src="/2015/03/11/Statsmodels：[2]快速入门/eab9044c510fd9f96cdf121b262dd42a2934a4bd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2015/03/11/Statsmodels：[2]快速入门/b25d9901a18b87d6a669ed6d040828381f30fd5e.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<ul>
+<li>下面筛选出我们需要的列：<br>这是最后得到的数据：</li>
+</ul>
+<img src="/2015/03/11/Statsmodels：[2]快速入门/246cca2a2834349bc2ce29f7caea15ce37d3bebd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2015/03/11/Statsmodels：[2]快速入门/91ae68c6a7efce1b67e38fb8ac51f3deb58f65bd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<ul>
+<li>由于最后一行有NaN值，所以需要使用dropna删除该行数据</li>
+</ul>
+<img src="/2015/03/11/Statsmodels：[2]快速入门/718e25c79f3df8dcff16c9e3ce11728b4710285d.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<ul>
+<li>生成design matrix，我们建立的模型是y=BX，因此需要分别求得y和X矩阵，而dmatrices就是干这个的<br>这是y<br>这是X矩阵：我们会发现分类变量自动的转换成了哑变量</li>
+</ul>
+<img src="/2015/03/11/Statsmodels：[2]快速入门/3792cb39b6003af3f3729b12362ac65c1138b6bd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2015/03/11/Statsmodels：[2]快速入门/b5ce925494eef01f38df5fb7e3fe9925bd317dbd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2015/03/11/Statsmodels：[2]快速入门/109eb7ec8a136327f5c68441928fa0ec08fac75e.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<ul>
+<li>OLS指的是一般最小二乘，fit方法对回归方程进行估计，summary保存着计算的结果<br>这是输出的模型的估计结果：</li>
+</ul>
+<img src="/2015/03/11/Statsmodels：[2]快速入门/a583631ed21b0ef45bc3de2cdec451da81cb3e5d.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2015/03/11/Statsmodels：[2]快速入门/27d647ee3d6d55fb13ed30546e224f4a20a4dd5e.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2015/03/11/Statsmodels：[2]快速入门/4e0b3ea4462309f73844eb60710e0cf3d7cad65e.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<ul>
+<li>现在我们要进一步检验数据是不是适合使用OLS，我们暂且先检验一下数据是否为线性，虚无假设是线性的，采用Rainbow test<br>输出结果为：第一个为F值，第二个为P值，显然未能拒绝虚无假设</li>
+</ul>
+<img src="/2015/03/11/Statsmodels：[2]快速入门/0e655ca7d933c8958755de09d21373f08202005d.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2015/03/11/Statsmodels：[2]快速入门/6648d73d70cf3bc7b2cb8a9ed200baa1cc112abd.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<ul>
+<li>接着，我们绘制偏回归线观察数据点是否分布在估计得到的直线的附近（图为控制了Rgion和Literacy后wealth对lottery的回归关系）</li>
+</ul>
+<img src="/2015/03/11/Statsmodels：[2]快速入门/b258f5c4b74543a9e830bcbe1d178a82b901145d.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<img src="/2015/03/11/Statsmodels：[2]快速入门/b110e6198618367aa3a239af2d738bd4b31ce55e.jpg" alt="Statsmodels：[2]快速入门" title="Statsmodels：[2]快速入门">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/statsmodels/">#statsmodels</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

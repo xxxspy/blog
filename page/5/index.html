@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/17/SPSS实例：[27]四个表卡方检验/">
+                SPSS实例：[27]四个表卡方检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们先来讲一个案例，我们想要知道两个年龄组的儿童在同一个问题上回答的正确性是否不同，统计出来的四格表是这样的：</p>
+<ul>
+<li>原始数据的数据结构，见下图。在这里没有频数，只有年龄组和是否正确这两个变量</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/b25d9901a18b87d6ed86b557050828381e30fd77.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>在菜单栏上执行：分析–描述统计–交叉表</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/90cebeec08fa513dc28074963f6d55fbb2fbd915.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>将年龄组设置为行变量，是否正确设置为列变量；然后设置统计量，点击statistic</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/425773224f4a20a4ab34248f92529822720ed015.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>勾选卡方值，这样才能输出卡方值</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/61183b2dd42a283433672f4359b5c9ea14cebf71.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>首先看到的表格是基本的频数统计，没什么好说的，大家都懂</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/eab9044c510fd9f9d6324d21272dd42a2834a415.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>看第二个表格是最关键的信息，我们看sig值，如果小于0.05就可以认为达到了显著水平，拒绝虚无假设，认为年龄对答案的正确性产生了影响。</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/373bc4b44aed2e7348429e648501a18b86d6fa94.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>先整理数据，数据结构见下图</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/d048adde9c82d15882c456f9820a19d8bd3e42f0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>接着进行加权</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/a75fb6d3fd1f4134cd710a36271f95cad0c85ef0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>用频数进行加权，点击ok</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/bd70426034a85edfce0af16b4b540923dc5475b0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>接下来的步骤都是一样的，见上面。</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/8cf0d513495409239aef6c369058d109b2de49b0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/15/spss如何使用变量的取值模式进行聚类/">
+                spss如何使用变量的取值模式进行聚类
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss聚类分析中，默认的聚类方法是按照变量的取值水平进行聚类，但是有时候，为了符合我们研究的要求，需要按照变量的取值模式进行聚类，这时候就用到了这里提到的一个方法：By case<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>先在spss中打开你要处理的数据，然后点击菜单：analyse–classify–hierarchical cluster，打开聚类分析的对话框</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/bf096b63f6246b604ca28fa1ebf81a4c500fa2b2.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>将指标变量放入independent列表，然后把地区放入标签栏，因为地区可以作为case的标签</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/80cb39dbb6fd526603e700c1ab18972bd5073612.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>点击method按钮，这就是我们的重头戏，在在方法对话框中，我们需要设置Z分数的计算方法</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/77094b36acaf2eddcd37753c8d1001e938019324.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>如图所示，将standardised设置为Z score，然后勾选by case</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/c75c10385343fbf2eb1299f6b07eca8065388f2c.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>点击ok，开始处理数据，等会就输出结果</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/a71ea8d3fd1f41343caf39ab251f95cad0c85e4e.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>第一个表格是聚类过程表，从聚类系数可以帮助我们判断将数据分为几类最合适，判断的方法是，相邻的两个数据变化的幅度显著大于前面的系数的变化范围，这时候分类在这里就是最好的</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/b03533fa828ba61e0fd9f7fa4134970a304e592b.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>这里叫做层次聚类谱系图，该图也是帮助我们查看聚类过程的，我们看到如图所示，沿着垂直方向画一条线，这条线与图中的水平线交叉点就是分的类别，有几个交叉点就有几个类别。当然，你所画的线可以决定你的数据分成了几类，越往右边，分类数目越少</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/7af40ad162d9f2d34b591b3aa9ec8a136227cc9e.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/11/spss如何筛选部分case/">
+                spss如何筛选部分case
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>有时候我们需要对部分数据进行处理，这时候需要对满足条件的数据进行筛选，选择出符合要求的数据，select cases命令就是用来处理这种问题的。<br>方法/步骤</p>
+<ul>
+<li>打开spss ，执行file –open–data，打开数据文件</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/95eef01f3a292df55ef04098bc315c6034a87308.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>在菜单栏上执行：data-select cases，打开case选择对话框</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/f11f3a292df5e0fe262b658c5c6034a85edf7208.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>我们看到这里有很多删选的方法，我们一一进行尝试，首先根据条件筛选，选择if condition is satisfied，点击if按钮，打开设置</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/e1fe9925bc315c60f6a687628db1cb1349547708.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<img src="/2016/05/11/spss如何筛选部分case/d009b3de9c82d1580397b53c800a19d8bc3e4222.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>假如我们要筛选id小于45的case，那么我们先选择id，点击添加按钮，然后输入公式条件id&lt;45</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/5fdf8db1cb134954ce2d04e9564e9258d1094a08.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li><p>条件输入以后，点击continue按钮。这样就完成了按照条件筛选</p>
+</li>
+<li><p>、</p>
+</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/d009b3de9c82d15803b1b53c800a19d8bc3e4208.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>假如我们要使用随机选择case的方法，我们就选择random sample of cases，然后点击sample</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/4034970a304e251f4be20875a786c9177f3e5322.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>我们看到这个对话框有两个选项，第一个选择是选择百分比，也就是从所有的case中选择百分之多少的case；第二个选项是从前多少个case中选择多少个case</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/810a19d8bc3eb135e6f45b36a61ea8d3fd1f4408.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>回到select cases 对话框，勾选基于时间或者case范围，看到下面这个对话框，输入case的范围是从第五十个到第100个，点击continue</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/241f95cad1c8a786283fa6836709c93d70cf5022.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>最后一个filter variables，也就是过滤变量，这个选项的功能是如果变量中有缺省值，那么这个case就被删除或者排除在外了。</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/a686c9177f3e67092d15a9723bc79f3df8dc5522.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/03/wxpython教程：[7]boxsizer布局/">
+                wxpython教程：[7]boxsizer布局
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天我们说一下使用boxsizer进行布局的方法，这种布局方式更适合制作有很多不同种类控件的界面。boxsizer分为横向和纵向两种，如果你想要把控件水平排列，就使用横向boxsizer，如果你想让控件都垂直排列，就使用纵向boxsizer，当然很多界面既有横向排列又有纵向排列的控件，我们就可以使用boxsizer的嵌套。</p>
+<ul>
+<li>这是我们今天用到的第一部分代码，你运行它的话就可以看到一个界面，有一个标签和文本框，他们是水平排列的。下面我们逐句解释。</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/f76575600c3387447d6a8929520fd9f9d62aa0fd.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>这三句话很简单，首先创建了一个panel面板，然后创建一个纵向box，最后创建一个横向box，我们的目的是创建一个既有横向排列的控件又有纵向排列的控件，所以先创建两个不同box，然后再让他们嵌套起来。</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/5202e5f2b211931301af59e566380cd790238dbc.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>创建一个标签，然后将标签添加到hbox1当中。flag和border结合使用，border是边框的宽度，flag表明哪一个边框。proportion是比例的意思，假如在一个横向box中有两个控件，两个控件的proportion相等，那么Frame大小改变的时候，两个控件大小保持相同。如果proportion=0，那么大小不变。<br>flag可以用的值有：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/310f3b1f95cad1c8a2455a727c3e6709c83d51ad.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/6648d73d70cf3bc794a66cb9d200baa1cc112a85.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>再向hbox1中添加一个文本框控件，注意proportion</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/a1ad16fa513d26972434a90856fbb2fb4216d845.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>最后是将横向文本框嵌套于纵向文本框。可以设置边框。目前我们还看不到为什么要做这样一个嵌套，因为控件还很少，仅有的两个控件是水平排列的。如果我们想再增加几个控件，并且控件位于这两个控件下方，我们就需要再创建一个横向box，并将横向box添加到纵向box中。</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/3790312eb9389b50818940078635e5dde7116e36.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>代码的最后是配置box：如果没有该命令，我们之前设置的sizer都是不起作用的</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/a75fb6d3fd1f41346997a52b261f95cad0c85e80.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>这是最后完成的效果：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/48151723dd54564e7e76476cb0de9c82d1584f11.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>下面我们再添加2个横向的box，并且其中增加—个控件</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/58c3acb7d0a20cf488945c8a75094b36acaf9924.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>最终的全部代码：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/a1ad16fa513d26972387aa0856fbb2fb4216d8d4.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>生成的界面：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/d56b3634349b033bc6d85e8f16ce36d3d439bdd0.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/04/19/spss如何输出三线表格/">
+                spss如何输出三线表格
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> 三线表格是发表学术文章最基本的格式，我和你一样搞不明白，为什么spss不能直接输出三线表格，毕竟这是我们最常用的格式呀！不管怎么样，我们还是有办法把表格转换成三线格式的，而不必像网上流传的那样在word中进行编辑，那样是非常麻烦的。<br>方法/步骤</p>
+<ul>
+<li>打开spss，先打开你的数据文件，然后在edit菜单栏，打开options选项</li>
+</ul>
+<img src="/2016/04/19/spss如何输出三线表格/500fd9f9d72a60592d5f9c9e2834349b023bbae2.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
+<ul>
+<li>在options选项面板中，切换到pivot tables标签，就是在这里设置表格的基本样式。</li>
+</ul>
+<img src="/2016/04/19/spss如何输出三线表格/d62a6059252dd42a22467c2f033b5bb5c8eab8e2.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
+<ul>
+<li>在pivot tables选项下，你可以看到这里有一个列表，这是表格的预设样式，右侧窗口是预览样式的，从左边的窗口中，选择一个预设样式，这个列表里没有三线表样式，但是这里有类似三线表的样式，我们就是要选择一个类似三线表的，然后再对其进行修改</li>
+</ul>
+<img src="/2016/04/19/spss如何输出三线表格/f31fbe096b63f624943244878744ebf81b4ca3c3.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
+<ul>
+<li>设置好了表格的基本样式以后，工作还没有做完，还要对表格进行编辑，先输出一个表格再说，在菜单栏上执行：analyse–descriptive statistics—descriptives</li>
+</ul>
+<img src="/2016/04/19/spss如何输出三线表格/bf096b63f6246b600c60cff0ebf81a4c500fa2c3.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
+<ul>
+<li>在结果输出窗口，你会看到一个表格，我们双击表格可以对表格数据进行编辑，编辑好了以后</li>
+</ul>
+<img src="/2016/04/19/spss如何输出三线表格/5ab5c9ea15ce36d3c44bfeb43af33a87e850b1e2.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
+<ul>
+<li>在菜单栏上执行：format —–tables properties，打开表格属性面板</li>
+</ul>
+<img src="/2016/04/19/spss如何输出三线表格/c8ea15ce36d3d539a47272473a87e950342ab0e2.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
+<ul>
+<li>切换到border标签，这里对表格的边框进行设定</li>
+</ul>
+<img src="/2016/04/19/spss如何输出三线表格/6a63f6246b600c338617a34c1a4c510fd8f9a1c3.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
+<ul>
+<li>你看到了，这个列表里是各个部分的边框，你需要选中每一个边框，然后在下面的style属性中进行设定，将所有的两线表格都设置为单线的，颜色设置为黑色，保存设置</li>
+</ul>
+<img src="/2016/04/19/spss如何输出三线表格/3bf33a87e950352ad12e588c5343fbf2b3118be2.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
+<ul>
+<li><p>这就是编辑好的表格，是不是已经变成了三线表格：</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/04/19/spss如何输出三线表格/8644ebf81a4c510fdcaa9f9e6059252dd52aa5c3.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/04/19/SPSS实例：[29]相关样本卡方检验/">
+                SPSS实例：[29]相关样本卡方检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们先看这一个案例吧。然后具体来说一下。该案例来自于网络。</p>
+<ul>
+<li>数据的组织形式：在spss中，我们这样录入数据，1表示阳性、2表示阴性，最后一列为频数。这只是数据形式之一，假如我们的数据是原始数据类型的，而没有统计成频率形式，我们看这一篇文章就可以了：</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/faacb564034f78f0f6b07abf7b310a55b2191c87.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>先加权数据，假如我们数据是原始数据，而不是频数数据就可以不加权，这样你参考上面一篇文章。</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/d68b65cb0a46f21ff0e3bd1ff4246b600d33ae6c.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>在菜单栏上执行：分析–描述统计–交叉表</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/7d98931001e93901a73d6e7279ec54e736d19604.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>将两种方法先分别放入行和列中</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/30ecd5ef76094b36d36af8a1a1cc7cd98c109d47.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>点击统计量</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/d56b3634349b033b045f1f9617ce36d3d439bd6c.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>选择卡方值和McNemar，后者是真正的相关卡方检验要看的概率值</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/027a45b5c9ea15ce54390345b4003af33b87b26c.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>数据结果中，你可以看大盘McNemar检验中sig值为0.002，显著！结论为拒绝虚无假设，认为这两种方法检验结果是有差异的。</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/8c511fe93901213f3fcbad9056e736d12e2e9547.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/">
+                SPSS实例：[32]卡方检验分类变量是否相关
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如我们的变量都是分类变量，我们怎么检验分类变量是否相关呢？我们这时候用到了卡方检验，下面是卡方检验的详细步骤：</p>
+<ul>
+<li>看图，我们想要检验第九题对第一题有没有相关，或者可以说，第九题对第一题有没有影响呢？我们选择卡方检验</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/a1ad16fa513d2697fe2b56ed57fbb2fb4216d843.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>数据的组织形式就是这样每一列代表一个问卷的答案</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/6dc09e0a19d8bc3e93b5587a808ba61ea9d34585.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>然后我们在菜单栏上选择【分析】【描述统计】【交叉表】</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/0d729944ebf81a4c90cab279d52a6059242da643.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>把第一题和第九题分别放入相应的变量框，点击【statistics】</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/246cca2a2834349bcafe3035cbea15ce37d3be43.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>在打开的对话框中，我们选择卡方值，点击【continue】</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/b74124f33a87e950e6efaddc12385343faf2b443.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>回到这个主对话框，点击【ok】</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/9e7ce6dcd100baa1f491190b4510b912c9fc2e85.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>这时候我们看到统计结果，我们要在论文中报告卡方值和sig值。sig值如果小于0.05，说明相关显著，也就是第九题会显著影响第一题。现在看到的结论是两者没有相关，第九题不影响第一题的选择。</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/73ca5910b912c8fcfd4ea87dfe039245d7882185.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/04/05/SPSS python教程：[9]getValuesFromXml/">
+                SPSS python教程：[9]getValuesFromXml
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>前两篇文章介绍了如何获取透视表中的平均数，现在更深入的探讨一下其中用到的spssaux.GetValuesFromXMLWorkspace方法。在这篇文章中【<a href="http://jingyan.baidu.com/article/c275f6bac03a22e33c75674c.html】，可以看到我使用该方法。现在我们具体探讨一下：" target="_blank" rel="external">http://jingyan.baidu.com/article/c275f6bac03a22e33c75674c.html】，可以看到我使用该方法。现在我们具体探讨一下：</a></p>
+<ul>
+<li>先看一个数据透视表，想办法获取IAI的平均数</li>
+</ul>
+<img src="/2016/04/05/SPSS%20python教程：[9]getValuesFromXml/9304c888d43f8794096a7eafd01b0ef41ad53a5e.jpg" alt="SPSS python教程：[9]getValuesFromXml" title="SPSS python教程：[9]getValuesFromXml">
+<ul>
+<li>我们使用spssaux.GetValuesFromXMLWorkspace，如下图那样写一段代码就能得到IAI的平均数。其中用到了很多参数，下面我们分析一下这些参数都是什么：</li>
+</ul>
+<img src="/2016/04/05/SPSS%20python教程：[9]getValuesFromXml/99636c0e0cf3d7ca66ea0ef7f01fbe096a63a9d7.jpg" alt="SPSS python教程：[9]getValuesFromXml" title="SPSS python教程：[9]getValuesFromXml">
+<ul>
+<li><p>首先是handle参数，它是结果项目的句柄，也就是上面的透视表的句柄。你要从中获取数据。而你怎么知道它的句柄的？是在创建该透视表的时候得到的，具体请看上篇文章【<a href="http://jingyan.baidu.com/article/cb5d6105088fe2005d2fe04d.html】" target="_blank" rel="external">http://jingyan.baidu.com/article/cb5d6105088fe2005d2fe04d.html】</a></p>
+</li>
+<li><p>其次是tablesubtype参数，我们可以在这里看到透视表的subtype</p>
+</li>
+</ul>
+<img src="/2016/04/05/SPSS%20python教程：[9]getValuesFromXml/cc506c8b4710b9126b11c67fc1fdfc039345221b.jpg" alt="SPSS python教程：[9]getValuesFromXml" title="SPSS python教程：[9]getValuesFromXml">
+<ul>
+<li>rowcategory参数：行类别，它标识出行坐标，rowcategory=”IAI”就表示成下图</li>
+</ul>
+<img src="/2016/04/05/SPSS%20python教程：[9]getValuesFromXml/9e7ce6dcd100baa15390743a4510b912c9fc2eb7.jpg" alt="SPSS python教程：[9]getValuesFromXml" title="SPSS python教程：[9]getValuesFromXml">
+<ul>
+<li>columncategory参数：列类别，标志出列坐标，colCategory=’Mean’可以表示为下图</li>
+</ul>
+<img src="/2016/04/05/SPSS%20python教程：[9]getValuesFromXml/bf487563f6246b602ece81f5e9f81a4c500fa22b.jpg" alt="SPSS python教程：[9]getValuesFromXml" title="SPSS python教程：[9]getValuesFromXml">
+<ul>
+<li>cellAttrib单元格属性：任何一个单元格都有text和number两个属性，我们想要获得text的值就用cellAttrib=’text’</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/04/05/SPSS自动化：[1]应用对象的属性及其用法/">
+                SPSS自动化：[1]应用对象的属性及其用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在上一篇经验《vba控制spss处理数据》中，我们介绍了vba使用spss对象来控制spss，下面我们接着来讲如何使用spss对象的属性，因为spss对象的属性有十几个（见下图），下面的列表呈现了spss对象所具有的属性，可能不全，希望指正。我们来一一介绍这些属性的用法和功能。</p>
+<ul>
+<li>alerts属性：语法格式为spss.alerts=boolean。boolean值可以是1或者0，如果值为1，则spss程序允许弹出警告窗口，如果值为0，则spss程序不会弹出警告窗口。该属性可读可写，下面是我在vba中调用alerts属性的方法。</li>
+</ul>
+<img src="/2016/04/05/SPSS自动化：[1]应用对象的属性及其用法/b9d8b7014c086e06f3031b7e00087bf40ad1cb19.jpg" alt="SPSS自动化：[1]应用对象的属性及其用法" title="SPSS自动化：[1]应用对象的属性及其用法">
+<ul>
+<li>currentdirectory属性：设置文件存放目录。该属性可读可写，下面是在vba中读取当前目录的代码。当然你可以使用该属性来设置当前目录。</li>
+</ul>
+<img src="/2016/04/05/SPSS自动化：[1]应用对象的属性及其用法/7e7f7909c93d70cfb61c8d38fadcd100bba12be5.jpg" alt="SPSS自动化：[1]应用对象的属性及其用法" title="SPSS自动化：[1]应用对象的属性及其用法">
+<ul>
+<li>options属性：利用该属性可以获取options对象，它提供了与spss选项设置的链接，选项设置我们并不陌生，以后我们会详细的介绍使用options对spss进行设置，现在你只要知道读取options属性的方法，下面是代码实例：首先要把变量opt声明为选项对象，然后在读取选项对象。</li>
+</ul>
+<img src="/2016/04/05/SPSS自动化：[1]应用对象的属性及其用法/9252ae7eca8065383c2f892695dda144ac3482fa.jpg" alt="SPSS自动化：[1]应用对象的属性及其用法" title="SPSS自动化：[1]应用对象的属性及其用法">
+<ul>
+<li>spssifo属性：这个属性可以获得当前spss打开的数据文件中的变量信息。示例代码如下：</li>
+</ul>
+<img src="/2016/04/05/SPSS自动化：[1]应用对象的属性及其用法/8a95ad1c8701a18b5dc43d7a9c2f07082838fe9d.jpg" alt="SPSS自动化：[1]应用对象的属性及其用法" title="SPSS自动化：[1]应用对象的属性及其用法">
+<ul>
+<li>还有很多属性，未完待续。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/04/03/用excel在局域网聊天图文教程/">
+                用excel在局域网聊天图文教程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>excel可以在局域网聊天，你也许不信，那么就跟我来做一下。其实很简单的几步设置就可以了，其主要的原理是使用excel的多人同时编辑的功能，可以共享该excel文件，几个人同时编辑该文件，就可以实现聊天的功能，不过好多人都不知道如何设置多人同时编辑和共享文件，下面我就来重点介绍一下这两个步骤吧。<br>方法/步骤</p>
+<ul>
+<li>新建一个excel，然后打开，我们先在第一行建立一个标题栏，格式设置一下以便突出出来，标题栏标注的就是聊天的所有的人。</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/37d12f2eb9389b502b6bf5cc8535e5dde6116e93.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>选中所有的单元格，右键单击任意单元格，然后再选择【设置单元格格式】，打开设置对话框</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/11385343fbf2b211d78b90d0ca8065380dd78e82.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>切换到对齐选项，勾选自动换行，然后点击确定。这么做是为了让文字都显示完整</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/8435e5dde71190ef1c6f8741ce1b9d16fcfa6093.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>接着来到审阅选项，点击【共享工作簿】</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/b58f8c5494eef01f4f800d5be0fe9925bd317d93.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>假如弹出这个对话框，你需要进一步进行设置，点击确定</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/5882b2b7d0a20cf46035eb4176094b36adaf9982.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>点击excel的开始按钮，在开始菜单中，打开excel选项。</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/77094b36acaf2eddf4545c778d1001e938019382.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>在信任中心中，打开信任中心设置</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/810a19d8bc3eb135bd53a225a61ea8d3fc1f4493.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>切换到个人信息选项下，然后取消勾选【保存时从文件属性中删除个人信息】，一路点击确定，退出excel选项。</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/838ba61ea8d3fd1fd29db7a4304e251f94ca5f93.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>接着点击【共享工作簿】，弹出共享设置对话框，勾选【允许多用户同时编辑，同时运行工作簿合并】，然后切换到高级选项下</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/e4dde71190ef76c6cc77eeb59d16fdfaae516782.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>滑将自动更新间隔设置为5分钟（最短时间），然后勾选【保存本人的更改并查看其他用户的更改】，点击确定按钮。</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/77c6a7efce1b9d1693628ffff3deb48f8d546482.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>弹出警告消息，点击确定，保存文档</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/314e251f95cad1c83e2fe9b97f3e6709c83d5193.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<img src="/2016/04/03/用excel在局域网聊天图文教程/9e3df8dcd100baa169b852254710b912c9fc2e93.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>新建一个文件夹，将文件夹放到任意一个隐蔽的位置，将我们做好的excel放到该文件夹中</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/5d6034a85edf8db1b58b69fa0923dd54574e7482.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>右键单击该文件夹，然后执行：共享–家庭组读取、写入。好了，到这里，别人就可以访问你的电脑并打开excel进行聊天了。那么别人怎么找到你的excel文件呢?</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/b812c8fcc3cec3fd57aab2ebd688d43f86942793.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li>在桌面上双击网络，进入局域网</li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/18d8bc3eb13533fa0d1386b0a8d3fd1f40345b82.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<ul>
+<li><p>在这里找到存有excel文档的电脑，双击进入就可以找到了。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/04/03/用excel在局域网聊天图文教程/960a304e251f95ca49508728c9177f3e66095282.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<img src="/2016/04/03/用excel在局域网聊天图文教程/0e2442a7d933c8951bea8de5d11373f083020093.jpg" alt="用excel在局域网聊天图文教程" title="用excel在局域网聊天图文教程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/4/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/6/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

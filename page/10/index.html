@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/11/SPSS自动化：[4]/">
+                SPSS自动化：[4]
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>syntax是spss中的命令，在spss有syntax文档对象，这个对象有哪些属性呢？</p>
+<ul>
+<li><p>1&gt;designated属性：为当前输出文档、语法文档或草稿文档返回或设置指定的窗口状态。指定的窗口（designatedwindow）是spss传送输出、粘贴或运行语法命令的窗口。当一个新的输出窗口打开以后它就成为了指定窗口。</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Intcount=objdocuments.outputdoccount</p>
+</li>
+<li><p>Set objoutputdoc=objdocuments.getoutputdoc(intcount-1)</p>
+</li>
+<li><p>Objoutputdoc.designated=true</p>
+</li>
+<li><p>‘本实例将最后一个输出文档设置成指定文档接收新的输出。</p>
+</li>
+<li><p>2&gt;height和width属性、left和top属性、modified属性在前面其他对象中有介绍，这里省略。</p>
+</li>
+<li><p>3&gt;papersource属性：设置打印时候纸张的来源，它有四个值：</p>
+</li>
+<li><p>1    Upper</p>
+</li>
+<li><p>2    Lower</p>
+</li>
+<li><p>3    Middle</p>
+</li>
+<li><p>4    envelop</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Setobjprintoptions=objoutputdoc.printoptions</p>
+</li>
+<li><p>‘设置打印选项</p>
+</li>
+<li><p>Printoptions.papersource-2</p>
+</li>
+<li><p>4&gt;rtftext属性：返回或设置语法窗口中的格式化文本，或rich文本框中的rtf文本编辑器。</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>String=objsyntaxdoc.text</p>
+</li>
+<li><p>Objsyntaxdoc.rtftext=string</p>
+</li>
+<li><p>Objsyntaxdoc.run</p>
+</li>
+<li><p>5&gt;text属性：在语法窗口或者激活的rtf文本编辑器中返回或设置文本，可以使用该属性写成或接收未格式化的文本。</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Dim syntaxcommands as string</p>
+</li>
+<li><p>Syntaxcommands=objdatadoc.invokedialogandreturnsyntax(“analyze&gt;compare means&gt;paired-samples t test”,1)</p>
+</li>
+<li><p>‘获取了syntax命令</p>
+</li>
+<li><p>Dim objsyntaxdoc as ispsssyntaxdoc</p>
+</li>
+<li><p>Set objsyntaxdoc=objspssapp.newsyntaxdoc</p>
+</li>
+<li><p>Objsyntaxdoc.text=syntaxcommands</p>
+</li>
+<li><p>6&gt;toolbarvisible属性、visible属性、windowstate属性略去。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/">
+                spss如何用散点图检验两个变量之间的交互作用
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>散点图如图所示， 就是由一些点所构成的图，他是怎么看出交互作用的呢？好吧，我们一步一步来做你就懂了，下面是具体的过程。<br>工具/原料</p>
+<ul>
+<li>spss<br>方法/步骤</li>
+</ul>
+<ul>
+<li>首先在spss中准备好数据，然后在菜单栏上执行：graphs–散点图，如图所示，我这里是spss20.0，如果你要是其他的版本，菜单是不一样的，你得找找散点图在哪里</li>
+</ul>
+<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/4e4a20a4462309f7380b0cd1720e0cf3d6cad689.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
+<ul>
+<li>弹出一个窗口，让你选择使用哪个散点图，我们选择第一个最简单的散点图</li>
+</ul>
+<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/64380cd7912397dd762039c75982b2b7d1a2879c.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
+<ul>
+<li>因为我们要检验摸底考试成绩与教学方法之间的交互作用，所以你看好了，期末考试是因变量，也就是在y轴，而摸底考试成绩在x轴，分类变量是教学方法</li>
+</ul>
+<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/91529822720e0cf37ba3ef380a46f21fbf09aa99.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
+<ul>
+<li>点击ok按钮，开始输出散点图，如图所示，那是一个初步的散点图</li>
+</ul>
+<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/8b82b9014a90f60303803c843912b31bb151edc5.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
+<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/d788d43f8794a4c2411047e80ef41bd5ac6e39c5.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
+<ul>
+<li>在散点图上右键单击，然后选择在新的窗口中编辑</li>
+</ul>
+<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/9e3df8dcd100baa1e203e7784710b912c9fc2ec1.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
+<ul>
+<li>我们要用到上面两个按钮，第一个是所有的点拟合直线，其实就是忽略教学方法这个变量，得到一条回归曲线，但是我们为了比较教学方法，所以需要给不同的教学方法分别绘制回归线，所以点击右侧的按钮</li>
+</ul>
+<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/7af40ad162d9f2d3c619842ca9ec8a136227cced.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
+<ul>
+<li>出现了两条回归线，这两条回归线代表不同的教学方法，这两条线如果是平行的就可以认为他们是没有交互作用的，显然这个线有交叉的取向，我们只能先假定有交互作用的取向，但是还无法说达到了显著的水平。</li>
+</ul>
+<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/9922720e0cf3d7cad7ea9fb5f21fbe096a63a9d1.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/11/SPSS python教程：[1]安装Python Essentials/">
+                SPSS python教程：[1]安装Python Essentials
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这个系列教程是用来教大家如何使用python脚本来操作spss，使用脚本的好处是可以批量处理，如果你有很多数据要处理，他们的处理方法类似，那就需要用到脚本，可以自动化、智能化处理数据，大大减少数据分析的工作量，关于更多好处，你们可以参考spss的官方文档，这里不多少，开始介绍如何设置spss中的python插件：SPSS Python Essentials。</p>
+<ul>
+<li><p>我用的spss版本是22.0，也是最近为了使用SPSS Python Essentials才安装的这个版本，大家可以参考这篇文章，以便正确安装spss 22.0。【<a href="http://jingyan.baidu.com/article/3d69c55187d5faf0cf02d73f.html】" target="_blank" rel="external">http://jingyan.baidu.com/article/3d69c55187d5faf0cf02d73f.html】</a></p>
+</li>
+<li><p>安装好了spss22.0以后，如果你按照上面的安装教程进行的安装，SPSS Python Essentials就自动的安装在了你的spss22.0的安装目录下。接下来我们要进行必要的设置。</p>
+</li>
+<li><p>打开spss22的界面，打开编辑菜单下的【选项】</p>
+</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/ea85a94543a982266fc821b18882b9014b90ebd8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>切换到脚本选项下，我们设置一下缺省脚本语言为python，点击【应用】</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/f9589818367adab4e5d911d589d4b31c8601e4d8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>切换到【文件位置】选项下，设置python的位置，我们有两个选项，一个是随IBM SPSS安装的位置，这就是说，spss22在安装的时候自动安装了python2.7，如果我们想要使用这个python，就选择第一个选项；但是我现在有一个更好的建议，使用我们自己安装的python，也就是说在安装spss之前就有一个python安装好了，我现在想使用这个python，我们可以设置python的其他安装，然后找到这个python安装的目录，最后点击确定就可以了。为什么我建议使用第二种选择呢？因为我的python下有很多安装好的扩展包，需要在处理数据的时候调用，以后安装新的扩展包也很方便。如果使用是、随spss安装的python，还需要另行安装这些扩展包</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/8a95ad1c8701a18b32e218d99c2f07082938fed8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>设置完成以后，我们想要启动python的编辑窗口，需要在开始菜单中启动，如图所示。不能直接从python的安装目录里启动。</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/d35a10f41bd5ad6eaacc6e7c83cb39dbb6fd3c2b.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>另外，spss22还有一个bug，我们虽然设置了Python的主目录，但是在新建脚本的时候，还是用的随spss安装的python的shell。所以想要使用python脚本，你就从上面那个方面里启动python shell</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/90cebeec08fa513df4a366483f6d55fbb3fbd9d8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/03/spss协方差分析如何进行事后两两比较/">
+                spss协方差分析如何进行事后两两比较
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> 在进行两两比较之前，我们最后先做一个协方差分析，在前面的文章讲了如何进行协方差分析，如果写反差分析显示出来了显著的结果，然后再进行两两的事后检验，下面是具体的过程：<br>方法/步骤</p>
+<ul>
+<li>先进行协方差分析，结果如果达到了显著水平，在进行两两比较，在菜单栏上执行analyze–general linear model–univariate</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/377adab44aed2e73568980d58701a18b86d6fae3.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>将自变量、因变量、斜变量都放到相应的位置，这里评定得分是因变量，培训方式是自变量、家庭指数是斜变量</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/37d12f2eb9389b501ecbe6ab8535e5dde7116e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击options按钮，进入子对话框</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/f2deb48f8c5494ee911609e02df5e0fe99257e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>将培训方式，也就是自变量放到右侧的列表里，勾选下面的描述统计和方差齐性检验，点击继续按钮</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/dc54564e9258d109c1d7af4bd158ccbf6c814d16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击model按钮，选择模型</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/a71ea8d3fd1f413416030387251f95cad1c85e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>选择full factorial，然后点击continue按钮，返回主对话框</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/c83d70cf3bc79f3d76d5e2c9baa1cd11728b2916.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击paste按钮，进入命令编辑窗口</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/b3119313b07eca8051663f1e912397dda04483e3.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>在这里你会看到很多代码，我们留下前三行，如图所示，然后删除其他的行</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/b7fd5266d01609240011a4e2d40735fae6cd3416.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>编辑下面的六行代码，使用的是lmatrix命令，我们知道培训方式有三个水平，所以要进行三次两两比较才能将所有的水平进行比较。</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/d50735fae6cd7b892f583c7a0f2442a7d9330e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击运行按钮，开始处理数据</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/9a504fc2d5628535b183d4d890ef76c6a6ef63e3.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li><p>在出来的结果中，我们主要看的是定制假设检验，因为上面的命令中用了三次LMATRIX，所以会有三个定制假设检验，我们主要看下面的sig值，如图所示，这个值小于0.05就可以认为是有差异的</p>
+</li>
+<li></li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/5bafa40f4bfbfbed6b6d308678f0f736afc31f16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/23/wxpython教程：[4]菜单中的图标/">
+                wxpython教程：[4]菜单中的图标
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们看到的菜单中多半是有一个图标的，那么今天我们就来做一个菜单，菜单选项左侧有一个图标。要达到这个目的我们必须手动创建一个选项。下面是今天代码的全部：由于这些大部分代码在之前的文章中有讲解，所以这篇文章就着重讲不同的部分。</p>
+<ul>
+<li>先创建一个选项：注意第二个参数设定了该选项的id，以后绑定方法的时候可以用id来表示该选项</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/0e655ca7d933c895c3031a14d21373f082020024.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>设置选项的图标用到了方法：SetBitmap，该方法需要传入一个Bitmap对象：exit.jpg是我自己做的一个图片</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/c9d4cf43ad4bd11366b0355d59afa40f4bfb0524.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>将创建好的选项添加到菜单</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/72b19c025aafa40f52bb4cb2a864034f78f01924.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>将选项与方法绑定，这样点击该菜单选项就能执行OnQuit动作。注意现在用id来表示跟哪个选项进行的绑定，因为我们在</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/55a628d12f2eb9383071f89dd6628535e5dd6f06.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>这是最后做出来的效果图</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/b25d9901a18b87d61b3c2670040828381f30fd20.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/03/SPSS python教程：[4]startclient/">
+                SPSS python教程：[4]startclient
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用python控制spss的时候，我们必须在使用spss的任何功能前，先启动spss，这就是用到了StartClient方法。假如我们完成了所有spss的工作，这时候我们就可以使用StopClient方法来结束spss进程。下面看一个例子。</p>
+<ul>
+<li>首先我们在syntax编辑窗口中运行python，首先应该想到使用BEGIN PROGRAM.和END PROGRAM.来将python代码包括起来。</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/42e89c26cffc1e178d6963a64890f603728de910.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>然后引入SpssClient模块，这样才能使用它的StartClient方法</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/ac754782b2b7d0a2786eed0ac9ef76094a369a47.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>我们启动spss客户端的方法就是这样了，记住，通常使用完spss以后，要通过StopClient方法来关闭它。</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/e78c65899e510fb3e5bb9e00db33c895d0430c4c.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>真正实现功能的是这两句代码，先不用管它什么意思</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/73ca5910b912c8fc0e641f5afe039245d7882157.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>运行结果是输出了当前的工作文件夹：</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/c28fddfdfc039245073608988594a4c27c1e2563.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/01/SPSS实例：[37]最优尺度回归/">
+                SPSS实例：[37]最优尺度回归
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>怎样进行最优尺度回归？分类变量或者等级变量如何做回归？数据不连续如何做回归？变量不是正太分布怎样做回归？这些问题我们都可以使用最优尺度回归的方法来解决。我们拿一个分类变量来说，最优尺度就是将不同的类别给一个评分，将评分带入到回归方程中进行估计，进而可以估计出回归系数，我们拿一个例子来说明一下：</p>
+<ul>
+<li><p>学校进行课程改革，6个班级采用6种不同的教学模式，我们想看看不同的教学模式是否对学生的期末数学成绩产生影响，自变量有教学模式和高考数学成绩，因变量是期末数学成绩。6个班级就构成了一个分类变量，分类变量需要进行最优尺度估计</p>
+</li>
+<li><p>我们先打开最优尺度回归的对话框，如图所示</p>
+</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/814b07d8bc3eb1350c32cd1fa41ea8d3fc1f4459.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<ul>
+<li>将自变量和因变量都分别放入不同的框中，如图嗾使</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/b0742dfa828ba61eea1bb28b4334970a314e5959.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<ul>
+<li>课程类别是分类变量，我们选中它，然后点【define scale】</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/3b6833f5e0fe9925969e13f436a85edf8cb17140.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<ul>
+<li>在打开的对话框中，我们选择【nominal】，点击【continue】</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/9864a2315c6034a87370c225c913495408237640.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/d089b986c9177f3e2ac186a972cf3bc79e3d5659.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<ul>
+<li>回到主对话框，点击【ok】就开始进行估计</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/0862c354564e9258e4a6fc4a9e82d158cdbf4e40.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<ul>
+<li>结果输出基本上都是和其他回归方法没有太大差别，我们主要看对不同课程的评分，这个评分实际上是进入回归的分数，我们是用这个分数代表了不同的类别。</li>
+</ul>
+<img src="/2015/07/01/SPSS实例：[37]最优尺度回归/9e7ce6dcd100baa198d93d1f4510b912c9fc2e59.jpg" alt="SPSS实例：[37]最优尺度回归" title="SPSS实例：[37]最优尺度回归">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/">
+                SPSS二因素完全随机设计的简单效应检验方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss在做简单效应的时候没有现成的菜单选项，需要你自己编写syntax，所以比较麻烦，在这个教程了，我交给大家一个办法，不用学太多的syntax就能自己做简单效应，下面是具体的方法：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>在菜单栏上执行：analyse–GLM–univariate，打开方差分析对话框</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/6a600c338744ebf8b74dcffdd9f9d72a6059a730.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>将自变量、因变量放入各自的框中，如图所示，B和Z是两个自变量，他们是完全随机设计，点击ok按钮，开始运行数据</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/a08b87d6277f9e2f7e17b6ca1f30e924b999f3d6.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>我们看到数据的处理效果，交互作用显著，所以我们需要进一步做简单效益的检验</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/4d086e061d950a7b8140e5060ad162d9f3d3c9ff.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>如图所示，点击菜单栏上的按钮，打开刚才用过的univariate对话框</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/4ec2d5628535e5dd0d5d0e1d76c6a7efcf1b62fb.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/203fb80e7bec54e7d481b1dcb9389b504ec26a87.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>点击下面的paste按钮，来到syntax的编辑窗口</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/f3d3572c11dfa9ec016afdd562d0f703908fc1a8.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li><p>在如图所示的位置，添加一个命令：/EMMEANS=TABLES(B*Z)COMPARE(B)ADJ(SIDAK)</p>
+</li>
+<li><p>其中：EMMEANSE是estimated marginal means subcommand的缩写，意思是估计边际平均数  </p>
+</li>
+<li><p>ADJ是比较的方法，还可以用lsd ，bonferroni和sidak这三种方法。</p>
+</li>
+<li><p>单击运行按钮，开始处理数据并输出结果</p>
+</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/8694a4c27d1ed21b3fe6b927ad6eddc450da3fc0.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>我们看到，简单主效应的分析已经出来，通过这个表格我们就能对自变量B各个水平进行精细比较</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/1ad5ad6eddc451dab7dd9b29b6fd5266d11632cc.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/01/wxpython教程：[2]窗口风格/">
+                wxpython教程：[2]窗口风格
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这篇文章接着介绍wxpython.Frame，我们需要设置一下窗口的大小、位置等。下面看一下今天要写的所有代码。</p>
+<ul>
+<li>代码的前两行就不说了，引入了相关模块并创建了一个app</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/0d968f2397dda1440ba4fcddb1b7d0a20df486f5.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>接着是Frame的设置，我们先来看看style，他有很多可以设置的属性，不同的属性用竖线“|”连接，比如我们想要窗口上有最大化按钮，就设置wx.MAXIMIZE_BOX，如果想要增加最小化按钮，就写成style=wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX ，写一连串属性很麻烦，我们可以用wx.DEFAULT_FRAME_STYLE默认设置，它等于wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX | wx.RESIZE_BORDER | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN<br>其他属性的意义我们直接从官网上看就可以，如下图：</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/4abae5edab64034f575f5269acc379310b551d8b.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/109eb7ec8a136327064f515c928fa0ec09fac784.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li><p>接着我们想要设置窗口的大小，用size参数，Frame（…size=(200,250))，这样就将窗口大小设置为200长，250高。</p>
+</li>
+<li><p>使用Move方法可以设置窗口的位置，比如（它表示窗口的左上角在屏幕上的位置）</p>
+</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/ac754782b2b7d0a2a66494f2c8ef76094a369af5.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>如果我们需要将窗口置于屏幕中央，可以使用Center方法</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/b6045da98226cffc24b82fddba014a90f703ea94.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>还有其他很多方法设置窗口位置，这里就不演示了：</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/4e83cb628535e5dd279737b075c6a7efcf1b62e3.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>最后就不用解释了，可以看看你创建的一个窗口</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/8bc3a7014a90f6034c220c283a12b31bb151ed94.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/">
+                图表设置坐标轴刻度和单位[3]Excel2013教程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用office2013以后，设置图表的方法发生了很大的变化，其中一个重要的问题就是坐标轴的刻度的设置方法不一样了，应该说，设置的方法更加快捷和方便了，所以推荐大家尽快使用最新的office，无论是外观还是功能都让我们眼前一亮。我们现在就来看看如何在Excel2013中设置坐标轴刻度：</p>
+<ul>
+<li>首先我们来建立一个图标，比如做一个折线图，先选中我们的数据，如图所示</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/9252ae7eca806538029aaa7b96dda144ad348222.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>在菜单栏上执行：插入–推荐的图表</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/5d212aa85edf8db18f21720c0823dd54564e740f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>打开一个对话框，选择折线图，如图所示，点击确定按钮</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/d048adde9c82d158828d57d9810a19d8bc3e420f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>插入的折线图是没有刻度的</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/7e7f7909c93d70cf5ef5a465f9dcd100baa12b0f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>选中横坐标，双击横坐标的位置就可以选中它</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/d041a4a1cd11728b2b22824ac9fcc3cec3fd2c0f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>在右侧出现了一个设置对话框，在坐标轴选项下，找到如图所示的位置，主要类型设置为“内部”</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/fd428c45d688d43ff2a69f9a7c1ed21b0ef43b0f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>我们可以看到横轴已经出现了刻度</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/7c5fcc1b0ef41bd5d65ce69c50da81cb39db3d0f.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>同样的方法可以让纵坐标出现刻度</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/8cf0d513495409239a196d169358d109b3de4922.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>其实我们还可以使用线条属性来更改坐标轴的样式，可以选择无箭头的坐标轴，也可以更改坐标轴的箭头样式</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/b29f8282d158ccbf23ccbb5218d8bc3eb1354122.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<ul>
+<li>最后我们可以设置坐标轴的其他选项，来满足我们的需求</li>
+</ul>
+<img src="/2015/06/19/图表设置坐标轴刻度和单位[3]Excel2013教程/d019d2bf6c81800a48958766b03533fa828b4722.jpg" alt="图表设置坐标轴刻度和单位[3]Excel2013教程" title="图表设置坐标轴刻度和单位[3]Excel2013教程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/9/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/11/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

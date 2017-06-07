@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="SPSS绘图教程：[2]数据属性检验"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>SPSS绘图教程：[2]数据属性检验 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/08/19/SPSS绘图教程：[2]数据属性检验/">
+                SPSS绘图教程：[2]数据属性检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>我们在绘图之前需要对数据的属性进行检验，否则绘制的图形就会出现错误我们还是来一个实例吧：</p>
+<ul>
+<li>我们先打开图形菜单下的【图形构建程序】</li>
+</ul>
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/90cebeec08fa513d446cf6663f6d55fbb3fbd901.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<ul>
+<li>首先会弹出一个警告，提示你应当进行的设置，我们点击【定义变量属性】，然后就真正开始了今天的教程。</li>
+</ul>
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/29752a9b033b5bb54ff5a54634d3d539b600bc2d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<ul>
+<li>在打开的对话框中，我们选择要绘图的变量，比如我要绘制年龄组与干扰与否这两个变量的条形图，就将这两个变量放到右框，点击【继续】</li>
+</ul>
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/91138622720e0cf3a631d4430846f21fbf09aa01.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<ul>
+<li>现在打开了变量属性的定义窗口，我们先在【已扫描的变量列表】里选择一个变量进行设置。假如我选择【年龄组】</li>
+</ul>
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/cbc17b380cd791230dc211ccaf345982b2b7802d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<ul>
+<li>首先检查变量的测量水平。有三种测量水平：名义、顺序、度量。名义就是分类变量，比如性别分男女，这就是类别变量（名义变量）；顺序变量也叫等级变量，比如年龄组，我们将0-1岁分为低龄组、2-3岁分为高龄组，这样年龄组就成为了顺序变量；度量变量也可以叫等距变量，这种数据是某种测量工具测量得到的数据，比如长度、重量等，当然某些心理量表得分也是等距变量，年龄如果没有分组，也是等距变量。下面，我们将年龄组设置成顺序变量。</li>
+</ul>
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/027a45b5c9ea15cebf287ab1b4003af33b87b201.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/d478a8003af33a8767ab9aa2c45c10385243b501.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<ul>
+<li>然后增加一个标签，标签是对变量的说明，通常在绘制出现的图中，显示的是标签而不是变量名。</li>
+</ul>
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/8474fbdde71190efccd91767cc1b9d16fdfa602d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<ul>
+<li>接着设置值得标签，比如年龄组的值有0和1，0代表低龄组，1代表高龄组，我们就这样填写值标签</li>
+</ul>
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/a005b3345982b2b77059a37c33adcbef77099b01.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/3b6833f5e0fe9925752eece836a85edf8db1712d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<ul>
+<li>接着用同样的方法设置第二个变量</li>
+</ul>
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/814b07d8bc3eb135ede53203a41ea8d3fd1f442d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<ul>
+<li>检查一下是不是变量都设置好了，然后点击确定。这样就完成了变量属性的设置。下一节我们就可以绘图了。</li>
+</ul>
+<img src="/2016/08/19/SPSS绘图教程：[2]数据属性检验/0862c354564e9258051603569e82d158ccbf4e2d.jpg" alt="SPSS绘图教程：[2]数据属性检验" title="SPSS绘图教程：[2]数据属性检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

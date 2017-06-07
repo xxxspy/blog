@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="spss多重反应下的频次分析方法（多项选择题分析"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>spss多重反应下的频次分析方法（多项选择题分析 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/">
+                spss多重反应下的频次分析方法（多项选择题分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>在问卷调查中经常用到多项选择题，分析多项选择题的方法就是multiple response，我们举一个例子，在网络调查问卷中有一题是：你获得信息的主要来源有哪些？选项有：网络、报纸、电视、读书、听说、手机。这是一个有六个选项的多项选择题，你改如何对各个选项的频率进行分析呢？下面是具体的方法：<br>方法/步骤</p>
+<ul>
+<li>spss中打开数据，为了对多项选择题进行频次分析，先要设定一个变量集，因为在spss中，多项选择题额答案不能直接输入，只能将每一个变量当作一个单项选择题，每一题有一个答案或者没有答案。我们先要做的就是将所有的选项构成的单项选择题组成变量集，如图所示，在菜单栏上执行：analyze–multiple response–define sets</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/7c1ed21b0ef41bd5b80b1d7b51da81cb38db3de0.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li>将所有的选项变量放到变量集中</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/8b13632762d0f703fcc6605308fa513d2797c5cd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li>选择变量是如何编码的，我们刚才看到了，每个变量都有6个选项，这就是分类变量了，所以要选择category。如果每个选项变量是是否形式的，应该选择dichotomies。</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/d50735fae6cd7b89ba34cf0c0f2442a7d8330ee0.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li>给变量添加一个名称，并填写标签，如图所示，然后点击add按钮，最后点击关闭按钮。</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/0e2442a7d933c895fb266df4d11373f0830200e0.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/91529822720e0cf35783bb740a46f21fbf09aacd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li>接着就要对多项选择题进行分析了，在菜单栏上执行：analyze–multiple response–frequencies</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/6a600c338744ebf8910591b0d9f9d72a6159a7cd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li>将你刚才新家的变量集添加到右侧列表里，点击ok按钮，开始输出结果</li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/1f178a82b9014a90b266b332a9773912b21beee1.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<ul>
+<li><p>我们来分析一下输出结果，N是选择对应选项的人数，百分比指的是在所有的选择中，该项占的百分比，个案百分比指的是选择该选项的人占所有人数的百分比</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/359b033b5bb5c9ea8287f66cd539b6003bf3b3cd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/17/spss如何分组进行运算并生成新的变量/">
+                spss如何分组进行运算并生成新的变量
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> spss中如果要给原始的分数加上相应的分数需要使用compute，我们看一个例子，下面是不同的班级的不同的分数，因为某些原因，我们要给1班的学生的分数加上三分，给二班的学生分数加上两分，这该怎么做呢？下面是具体的方法。<br>方法/步骤</p>
+<ul>
+<li>拿到数据以后，我们在菜单栏上执行：transform–compute variables</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/09fa513d269759ee4a1de947b2fb43166c22dfe9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>打开一个对话框，我们在目标变量中输入新的变量的名称，我们这里输入新成绩</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/c75c10385343fbf215422fafb07eca8064388fd4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>接着，因为不同的班级要加上不同的分数，所以我们需要添加条件，点击左下角的if按钮</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/a044ad345982b2b763f1b04831adcbef77099bd4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>在这里，选择班级这个变量，添加到右侧的条件框中，记得要先勾选【include if case satisfies condition】。然后输入=1，也就是班级=1.最后点击continue按钮</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/7acb0a46f21fbe09e2134a986b600c338644ade9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>回到数据转换对话框，将成绩这个变量添加到右侧的公式中，输入+3，这样我们基本完成了一个任务，就是当班级为1的时候，成绩加上1就形成了新成绩。但是，当班级为2的时候怎么办呢？</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/adaf2edda3cc7cd93043bd553901213fb90e91d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/d8f9d72a6059252d415a9488349b033b5ab5b9e9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>我们点击paste按钮，打开syntax窗口</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/e4dde71190ef76c668bc72a79d16fdfaae5167d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>这是我们看到的代码，模仿第二行的代码，我们写当班级为2的时候，新成绩等于成绩加上2.</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/2cf5e0fe9925bc31823388145edf8db1ca1370d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>这是我们写好的代码。</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/b90e7bec54e736d1ea5e05849b504fc2d46269e9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>在菜单栏上执行：run–all，运行命令</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/ca1349540923dd54b01d2ee4d109b3de9d8248d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li><p>这是最后的结果，你看到了，这里生成了新的变量。</p>
+</li>
+<li></li>
+<li></li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/8c1001e93901213f797ec75054e736d12e2e95e9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/15/spss如何做主成分分析/">
+                spss如何做主成分分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>主成分分析的主要原理是寻找一个适当的线性变换：<br>工具/原料</p>
+<p>方法/步骤</p>
+<ul>
+<li><p>先在spss中准备好要处理的数据，然后在菜单栏上执行：analyse–dimension reduction–factor analyse。打开因素分析对话框</p>
+</li>
+<li><p>我们看到下图就是因素分析的对话框，将要分析的变量都放入variables窗口中</p>
+</li>
+<li><p>点击descriptives按钮，进入次级对话框，这个对话框可以输出我们想要看到的描述统计量</p>
+</li>
+</ul>
+<img src="/2015/09/15/spss如何做主成分分析/a8ec8a13632762d0be7c726fa0ec08fa503dc6a4.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<ul>
+<li>因为做主成分分析需要我们看一下各个变量之间的相关，对变量间的关系有一个了解，所以需要输出相关，勾选coefficience，点击continue，返回主对话框</li>
+</ul>
+<img src="/2015/09/15/spss如何做主成分分析/95eef01f3a292df554247ac5bc315c6035a8737f.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<ul>
+<li>回到主对话框，点击ok，开始输出数据处理结果</li>
+</ul>
+<img src="/2015/09/15/spss如何做主成分分析/060828381f30e9248e904ce14c086e061d95f72e.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<ul>
+<li>你看到的这第一个表格就是相关矩阵，现实的是各个变量之间的相关系数，通过相关系数，你可以看到各个变量之间的相关，进而了解各个变量之间的关系</li>
+</ul>
+<img src="/2015/09/15/spss如何做主成分分析/a9d3fd1f4134970ae03ac0ff95cad1c8a6865d91.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<ul>
+<li>第二个表格显示的主成分分析的过程，我们看到eigenvalues下面的total栏，他的意思就是特征根，他的意义是主成分影响力度的指标，一般以1为标准，如果特征根小于1，说明这个主因素的影响力度还不如一个基本的变量。所以我们只提取特征根大于1的主成分。如图所示，前三个主成分就是大于1的，所以我们只能说有三个主成分。另外，我们看到第一个主成分方差占所有主成分方差的46.9%，第二个占27.5%，第三个占15.0%。这三个累计达到了89.5%。</li>
+</ul>
+<img src="/2015/09/15/spss如何做主成分分析/caef76094b36acafbf1d462c7cd98d1000e99c65.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<ul>
+<li>。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/">
+                spss逻辑回归中哑变量的设置和分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>逻辑回归中，有些自变量是分类变量，同时有两个以上的分类，这就导致了我们在做回归的时候就默认的把该变量当成了等距数据，最后造成了更大的误差。哑变量就是要解决这个问题，下面是具体的方法。<br>方法/步骤</p>
+<ul>
+<li>在spss中打开数据，确定要设置哪个变量为哑变量以后，我们打开逻辑回归对话框，操作方法：analyse–regression–binary logistic</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/8644ebf81a4c510f1d0e5ef76059252dd52aa511.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>将是否吸烟这个变量放到因变量中，将种族放到自变量中，如图所示</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/63d0f703918fa0ecac9ddae0269759ee3c6ddb81.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>选择变量进入方程的方法是enter，因为所有的哑变量必须是同时进入，否则就没有统计学意义了。</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/5882b2b7d0a20cf4d723403276094b36adaf99a8.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>接下来要设置哑变量了，点击categrio按钮，打开变量分类对话框</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/ac345982b2b7d0a2e986ba70cbef76094a369a94.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>将要设置哑变量的变量放入右侧窗口中</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/80cb39dbb6fd5266819582f9ab18972bd50736a4.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>到了最关键的部分，我们要选择哪个分类作为参考分类，设置参考分类必须使参考分类有意义，比如这个例子中，种族类别包括黑人、白人和其他种族，那么其他种族一般被设置为参考分类，那么你怎么知道参考分类是第一个还是最后一个呢，后面要设置last和first。下面一个步骤告诉你</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/622762d0f703918f02e48427513d269759eec422.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>回到变量视图中，找到种族这个变量，在value中可以查看变量值，我们看到其他种族这个分类为3，上面那一步应该设置为last</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/9f2f070828381f3067e83444a9014c086f06f06e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/6f061d950a7b0208ed38860c62d9f2d3562cc86e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/b8389b504fc2d5627cf46800e71190ef77c66c5b.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>点击ok，开始输出统计结果</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/dcc451da81cb39dbfb58dfbbd0160924aa183046.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>输出了一大堆数据，我们不用管，因为这里要教大家如何分析哑变量，所以直奔主题，找到variables in the equation表，这个表中，你可以看到有race（1）和race（2）这两个变量，他们就是race的哑变量，B是系数，因为他们都是跟其他种族相比，图中的数据可以看到，白种人比其他种族的人更容以吸烟，黑种人比其他种族更容易吸烟，白种人和黑种人相比，黑种人可能比白种人更容易吸烟，但是需要进一步的检验。</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/77c6a7efce1b9d16fc37228cf3deb48f8d54646e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/">
+                没有数据分析功能怎么办：[1]Excel数据分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>Excel怎么做回归？Excel怎么做方差分析？Excel怎么做相关检验？Excel怎么聚类分析？Excel怎么做贝叶斯估计？好吧，这一切都可以在数据分析选项中实现，不过，Excel默认安装时可能没有数据分析选项，我们可以自己设置一下让数据分析选项出现，下面是具体的操作：</p>
+<ul>
+<li>首先打开Excel，点击左上角的【文件】，我用的是Excel2013，如果你是用的是其他版本，应该是点击左上角的office按钮</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/b25d9901a18b87d616455b4f060828381f30fd18.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>打开了Excel的office菜单，我们点击选项按钮，如图所示</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/0b3a1c087bf40ad122e337b3562c11dfa9ecce18.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>在选项对话框中，切换到加载项这个页面</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/38403f3fb80e7beccfddf3b12e2eb9389b506b18.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>在管理栏中，选择“Excel加载项”，然后点击转到按钮，打开了加载宏的对话框</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/d8b8c92a6059252db924ed54359b033b5bb5b974.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>在这里我们需要勾选“分析工具库”，这样就可以使用分析工具了。如果我们想要在vba中使用分析工具，还需要勾选下面的选项【分析工具库-vba】，点击确定按钮</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/8bc3a7014a90f60352b66c173812b31bb051ed19.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>好了，怎么找到分析工具库呢？在数据选项下，找到数据分析栏，点击数据分析就可以看到所有的数据分析工具了</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/425773224f4a20a41018cc9791529822720ed019.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>这个对话框就是所有的分析工具，可以满足基本的描述和预测统计</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/0db2c9ca7bcb0a46ad247b696a63f6246b60af19.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/">
+                SPSS实例：[34]二分类变量关联程度的度量
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>现在有一个食物中毒的问题，我们想要知道吃了某种食物的人是否更容易中毒呢？看一下现在的数据。看food变量，我用数字0代表没吃食物，用数字1代表吃了某种食物；看posion变量，我使用0表示没中毒，用1表示中毒了。频率就不解释了，你懂。</p>
+<ul>
+<li>使用频率对case进行加权。这个说过很多遍了，不懂的人去看这里的加权部分：<a href="http://jingyan.baidu.com/article/9113f81b2e988c2b3214c70f.html" target="_blank" rel="external">http://jingyan.baidu.com/article/9113f81b2e988c2b3214c70f.html</a></li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/a84052086e061d959af7728f79f40ad163d9ca91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>加权ok以后，我们找到交叉表分析</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/1e71f724b899a901c1501e811f950a7b0308f5e5.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>把两个变量分别放入不同的框中</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/6391e903918fa0ec977621ba249759ee3c6ddb91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>点击统计量按钮，我们来设置一下输出的统计量</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/507c389759ee3d6df1a3c27c41166d224e4adee5.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>我们选择Risk指数，也就是风险评估，当然你也得选择卡方</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/08b68e529822720ea37fa74d79cb0a46f31fab91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>回到主界面，点击ok按钮，开始处理数据</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/bf487563f6246b60b4bff7c3e9f81a4c500fa291.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>先看卡方检验结果，卡方显示显著，表示是否吃某种食物与中毒与否是相关的。</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/1b0d4f0fd9f9d72adfd555aad62a2834359bbb91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>接着看风险评估，OR值如图所示，它表示吃了某种食物的人比没有吃该事物的人中毒的概率高出24倍</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/f76575600c33874451a06acb530fd9f9d62aa0e5.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/03/sublime教程：[2]多重选择 编辑/">
+                sublime教程：[2]多重选择 编辑
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>sublime非常著名的功能就是多重选择多重编辑，我们可以同时对多个词、变量进行编辑，非常方便高效，今天我们来玩一玩这个技能。</p>
+<ul>
+<li>多重选择，使用“Ctrl+D”可以选择光标所在词，再按“Ctrl+D”可以继续选择相同的词，我们来看一下效果：</li>
+</ul>
+<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/bf487563f6246b60a1a3f44ee1f81a4c510fa218.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<ul>
+<li>如果发现自己选多了，可以使用“Ctrl+U”退回上一步，效果如下：</li>
+</ul>
+<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/79b1e936afc37931570ec713e1c4b74543a91162.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<ul>
+<li>如果已经选择了多个词，我们就可以进行多重编辑了：</li>
+</ul>
+<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/566d0fdfa9ec8a13edf316dafd03918fa1ecc0e4.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<ul>
+<li>我们可以使用“Ctrl + L”一次选中光标所在的整行：</li>
+</ul>
+<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/7ac880510fb30f240715a339c295d143ad4b0339.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<ul>
+<li>有时候，我们要编辑的内容处于连续的区域内，这时候我们可以选中所有的行，然后按下“Ctrl + Shift + L”，将光标分散到多个行，然后同时编辑。</li>
+</ul>
+<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/f9589818367adab42509597981d4b31c8601e4f4.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<ul>
+<li>我们还可以把选中的多行合并成一行，行之间以空格隔开，按快捷键“Ctrl + J”</li>
+</ul>
+<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/0e655ca7d933c8959897d441db1373f0830200db.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<ul>
+<li>缩进可以使用“Ctrl + ]”, 取消缩进可以使用“Ctrl + [”，我们来看一下效果：</li>
+</ul>
+<img src="/2015/09/03/sublime教程：[2]多重选择%20编辑/73ca5910b912c8fce7f2bef7f6039245d6882143.jpg" alt="sublime教程：[2]多重选择 编辑" title="sublime教程：[2]多重选择 编辑">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/">
+                spss20.0配对样本如何进行平均数差异检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>用这个方法之前先要确定你的数据是否适用于配对样本t检验，一般这样的数据来自同一个人，但是是分两次测量得到的，或者虽然是来自两个人，但是他们是经过匹配的，可以认为两个人在研究的变量上没有差异。<br>方法/步骤</p>
+<ul>
+<li>打开spss导入数据，然后在菜单栏上执行：analyse–compare means–paired samples t test</li>
+</ul>
+<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/29381f30e924b8996cf21bbd6e061d950b7bf66d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<ul>
+<li>你会看到如下所示的对话框，这里我们要看好了怎么对变量进行配对，先从左侧的列表里选择一个变量，比如选择triglyceride这个变量，点击如图所示的箭头，添加到右侧的列表</li>
+</ul>
+<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/6f061d950a7b0208b0075d6462d9f2d3562cc86d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<ul>
+<li>接下来找到与上面的那个变量相配对的另一个变量final triglyceride，添加到variable2</li>
+</ul>
+<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/060828381f30e9247c62feb44c086e061c95f775.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<ul>
+<li>同样的方法，把体重这个配对变量放到配对变量列表</li>
+</ul>
+<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/63d0f703918fa0ecd0090688269759ee3c6ddb6d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<ul>
+<li>点击ok按钮，开始进行数据处理</li>
+</ul>
+<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/03087bf40ad162d93c28009911dfa9ec8b13cd75.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<ul>
+<li>你会看到下面的这个统计结果，先来分析第一个表格，关键的数据是均值，你会看到triglyceride这个变量前后的值的变化，从138到124大概下降了14，这是大概的一个数字，并不能说明这个差值是有效的</li>
+</ul>
+<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/279759ee3d6d55fb6c0814a36d224f4a21a4dd6d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<ul>
+<li>第二个表格展示的是配对样本之间的相关系数，我们可以看到体重的相关系数为0.996，而且sig值达到了0.000，这是一个非常完美的数据，这说明实验处理对体重的影响是一致的。但是上面的这对变量却没有显示出相关关系。</li>
+</ul>
+<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/a8ec8a13632762d022f8c63aa0ec08fa503dc675.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<ul>
+<li><p>最后我们要看第三个表格，先看均值的差异表明实验前后数据发生了变化，而后面的sig值则说明这个变化是否有效，因为第一个sig值超过了0.05，所以结果是不显著的，不能认为实验是有效的。而第二个sig为0.000，这说明实验的处理效果显著，可以认为该处理方法能够有效的减轻体重</p>
+</li>
+<li></li>
+</ul>
+<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/908fa0ec08fa513dfc6c0e5b3d6d55fbb3fbd975.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/21a4462309f790527ed125bb0cf3d7ca7acbd56d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/">
+                spss做因素分析的时候如何输出因素值并形成变量
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如因素分析的时候我们会用到因素的值，比如根据因素的值进行排序，那么我们就需要用到save as variables过程。下面我们就要介绍一下如何使用这个过程。<br>工具/原料</p>
+<ul>
+<li>spss 20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>准备好spss中的数据，然后在菜单栏上执行：analyse–dimension reduction–factor</li>
+</ul>
+<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/b03533fa828ba61e01a6f5f84134970a314e5998.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<ul>
+<li>将用于因素分析的变量放入variables框中</li>
+</ul>
+<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/e824b899a9014c08787915720a7b02087af4f4a2.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<ul>
+<li>点击scores按钮，设置要输出的变量</li>
+</ul>
+<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/a686c9177f3e67097c9f78283bc79f3df9dc554d.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<ul>
+<li>打开score对话框，勾选save as variables，就是这个选项用于输出因素分数，点击continue按钮</li>
+</ul>
+<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/cf1b9d16fdfaaf517b28bc688c5494eef11f7a19.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<ul>
+<li>点击ok开始输出数据，并在变量视图输出三个新的变量</li>
+</ul>
+<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/0ff41bd5ad6eddc49fda882c39dbb6fd52663323.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<ul>
+<li>如图所示，你会看到三个多出来的变量</li>
+</ul>
+<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/6159252dd42a28347e930adc5bb5c9ea15cebf2b.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<ul>
+<li>通常我们要根据因素的值来对case进行排序，方法是选中一个因素的所有值，然后右键单击，选择sort descending，你会看到数据从大到小的排序</li>
+</ul>
+<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/5ab5c9ea15ce36d38535bfe73af33a87e950b137.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/">
+                spss因素分析如何对对因子载荷矩阵进行排序
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在确定因子意义的时候需要看变量和因子的关系，如果比如某个因子在某个变量上的载荷为0.9，我们可以认为这个变量和因子的关系很紧密，可以用这个变量来解释这个因子，对载荷进行排序就可以帮助我们一眼看到因子之间的不同。<br>方法/步骤</p>
+<ul>
+<li>在spss中准备好数据，然后在菜单栏上执行analyse–dimension reduction–factor，打开factor analyse对话框</li>
+</ul>
+<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/024f78f0f736afc3d61343b1b319ebc4b64512c2.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<ul>
+<li>将所有需要分析的变量放到variables框中，点击箭头按钮可以添加变量</li>
+</ul>
+<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/838ba61ea8d3fd1f2b45deee304e251f94ca5f91.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<ul>
+<li>点击option按钮，打开选项对话框</li>
+</ul>
+<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/0df3d7ca7bcb0a460845f7ed6b63f6246a60affb.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<ul>
+<li>在选项对话框中，找到coefficient display format，勾选下面的sorted by size，这样设置就是为了让输出的因素载荷矩阵按照因素载荷的大小进行排序，方便我们查看结果</li>
+</ul>
+<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/bd315c6034a85edfd9ca82f749540923dc54759b.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<ul>
+<li>我们看到下面的两个表格，都是旋转因子以后的载荷矩阵，他们的区别是，第二个表格中的载荷已经经过了排序，我们可以直观的看到不同的变量在各个因子上的载荷，并将变量分类。</li>
+</ul>
+<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/b999a9014c086e06cb72439f02087bf40bd1cb08.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/1c950a7b02087bf4d0362b3df2d3572c10dfcf08.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/17/spss如何画出交互作用图/">
+                spss如何画出交互作用图
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如图所示，在研究中我们经常会用到这样一个线形图，如果两条线相互平行，我们就认为他们是没有交互作用的，如图相互交叉就认为是有交互作用的。下面我就交给大家如何画这个图：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>首先要打开主对话框，如图所示，在菜单栏上执行：analyse–GLM–univariate</li>
+</ul>
+<img src="/2015/08/17/spss如何画出交互作用图/8326cffc1e178a827ed87161f603738da877e80f.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<ul>
+<li>将自变量和因变量放入格子的狂，如图所示，上面的框是因变量，点击plots按钮，我们来设置输出的图</li>
+</ul>
+<img src="/2015/08/17/spss如何画出交互作用图/d0c8a786c9177f3ee754f5cc70cf3bc79e3d568a.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<img src="/2015/08/17/spss如何画出交互作用图/eaf81a4c510fd9f9c5485ca8252dd42a2934a497.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<ul>
+<li>将两个自变量分别放入两个框中，如图所示，上面代表横坐标，下面的代表不同的曲线，</li>
+</ul>
+<img src="/2015/08/17/spss如何画出交互作用图/9d82d158ccbf6c81ee412529bc3eb13532fa40f8.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<ul>
+<li>点击add按钮，然后点击continue按钮，返回主对话框</li>
+</ul>
+<img src="/2015/08/17/spss如何画出交互作用图/f9dcd100baa1cd11fbd17be1b912c8fcc2ce2d8f.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<ul>
+<li>返回主菜单， 点击ok按钮，开始处理数据并输出结果</li>
+</ul>
+<img src="/2015/08/17/spss如何画出交互作用图/2cf5e0fe9925bc3102df08595edf8db1ca137074.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<ul>
+<li>如图所示，这就是输出的线形图了，很明显这个图证明两个自变量之间存在交互作用。当然要想得到确切的结果还得看输出的交互作用sig值</li>
+</ul>
+<img src="/2015/08/17/spss如何画出交互作用图/a1ec08fa513d2697af33019c55fbb2fb4216d80b.jpg" alt="spss如何画出交互作用图" title="spss如何画出交互作用图">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/8/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/10/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

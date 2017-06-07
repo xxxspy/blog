@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="SPSS实例：[19]调节效应如何画图"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>SPSS实例：[19]调节效应如何画图 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/02/23/SPSS实例：[19]调节效应如何画图/">
+                SPSS实例：[19]调节效应如何画图
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>我们用前面提到的方法检验得到调节效应以后，如何知道调节变量到底是如何影响自变量和因变量的吗？这个从方程系数的大小不容易看出来，通常需要绘制散点图（趋势线）来说明问题，绘制过程挺麻烦的，我特地制作了一个Excel，你只需要在特定的位置写入数据就可以可完成绘图。</p>
+<ul>
+<li>先从下面的参考资料里下载一个Excel文件，保存在我的百度网盘中</li>
+</ul>
+<img src="/2016/02/23/SPSS实例：[19]调节效应如何画图/263e802f07082838b5a9a60eba99a9014d08f1c1.jpg" alt="SPSS实例：[19]调节效应如何画图" title="SPSS实例：[19]调节效应如何画图">
+<ul>
+<li>这个表格你一定很熟悉，对了就是做调节效应的时候，我们检验交互项的系数是否显著，看到sig值了吧，显著！这就意味着我们要开始画图了</li>
+</ul>
+<img src="/2016/02/23/SPSS实例：[19]调节效应如何画图/a8362712b31bb051fefc6232347adab44bede095.jpg" alt="SPSS实例：[19]调节效应如何画图" title="SPSS实例：[19]调节效应如何画图">
+<ul>
+<li>你看到我的Excel文件，里面就是这个样子，你需要将你的方程的系数写入第二行，X是自变量，M是调节变量，X*M就是交互项</li>
+</ul>
+<img src="/2016/02/23/SPSS实例：[19]调节效应如何画图/0b907cd9f2d3572c32194dc68813632763d0c3f6.jpg" alt="SPSS实例：[19]调节效应如何画图" title="SPSS实例：[19]调节效应如何画图">
+<ul>
+<li>我的方法你们可以借鉴，我同时复制这四个值</li>
+</ul>
+<img src="/2016/02/23/SPSS实例：[19]调节效应如何画图/566d0fdfa9ec8a1345e186faf503918fa1ecc0f6.jpg" alt="SPSS实例：[19]调节效应如何画图" title="SPSS实例：[19]调节效应如何画图">
+<ul>
+<li>然后选中A2</li>
+</ul>
+<img src="/2016/02/23/SPSS实例：[19]调节效应如何画图/29752a9b033b5bb52e3c5ae434d3d539b700bc86.jpg" alt="SPSS实例：[19]调节效应如何画图" title="SPSS实例：[19]调节效应如何画图">
+<ul>
+<li>转至粘贴，竖着的原数据就会撗起来</li>
+</ul>
+<img src="/2016/02/23/SPSS实例：[19]调节效应如何画图/72ccb7773912b31b2ac8b7338418367adbb4e1c1.jpg" alt="SPSS实例：[19]调节效应如何画图" title="SPSS实例：[19]调节效应如何画图">
+<ul>
+<li>接着我们设置M的值，看你的调节变量的标准差，取正负一个标准差，分别写到E2和E3</li>
+</ul>
+<img src="/2016/02/23/SPSS实例：[19]调节效应如何画图/b74124f33a87e950dafc897612385343faf2b486.jpg" alt="SPSS实例：[19]调节效应如何画图" title="SPSS实例：[19]调节效应如何画图">
+<ul>
+<li>x值比较简单，看你的X取值范围，取最大值和最小值</li>
+</ul>
+<img src="/2016/02/23/SPSS实例：[19]调节效应如何画图/e8112b2ac65c1038a195b4d8b0119313b17e8986.jpg" alt="SPSS实例：[19]调节效应如何画图" title="SPSS实例：[19]调节效应如何画图">
+<ul>
+<li>最后，你的图就自动画好了，截图，粘贴到你的文章中，ok，觉得文章好就分享给你的小伙伴吧。</li>
+</ul>
+<img src="/2016/02/23/SPSS实例：[19]调节效应如何画图/4e0b3ea4462309f7a8b77c08700e0cf3d6cad695.jpg" alt="SPSS实例：[19]调节效应如何画图" title="SPSS实例：[19]调节效应如何画图">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

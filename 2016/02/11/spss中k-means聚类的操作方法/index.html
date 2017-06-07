@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="spss中k-means聚类的操作方法"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>spss中k-means聚类的操作方法 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/02/11/spss中k-means聚类的操作方法/">
+                spss中k-means聚类的操作方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>k-means聚类是聚类方法中的一种，通常我们要预先确定case到底可以分为几类，然后才能进行这个聚类分析。另外，注意查看各个变量的量纲、平均数、方差齐性，如果不满足同质性，需要进行正太化转变，当然，数据要满足正态分布才可以啊哦。<br>工具/原料</p>
+<ul>
+<li><p>这种聚类方法不能自动的计算变量的Z分数，如果数据差异过大，量纲不同，需要进行z分数的转换，下面的操作没有告诉你如何转换z分数，你需要注意</p>
+</li>
+<li><p>k-means的聚类的原理是迭代，迭代本身是无限的过程，如果没有命令，计算机就一直迭代下去，这样计算会很慢，所以我们设置一个迭代次数，比如100，那么迭代100次就必须停止。活着spss中有迭代停止的标准</p>
+</li>
+<li><p>spss20.0<br>方法/步骤</p>
+</li>
+</ul>
+<ul>
+<li>准备好数据，在菜单栏上执行：analyse–classify–k-means cluster，打开k平均数对话框</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/f636afc379310a5527e38d21b74543a98326101b.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>将聚类用到的指标变量放入variables，将客户的编码放到label cases by当中，把客户编号作为case的标签</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/7c1ed21b0ef41bd5c367ba2151da81cb39db3d2a.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>接着要设置聚类的类别数目，如图所示，这个数目不是随便给的，他有两个来源：要么是你根据工作经验，认为数据分为几类是最合理的；要么是你有前人的研究证明分为几类。</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/d50735fae6cd7b89e3a368560f2442a7d8330e13.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>在主对话框中，点击iterate按钮，打开迭代对话框</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/29381f30e924b8991cff2bed6e061d950b7bf620.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>将最大迭代次数设置为100，下图你看到的默认的迭代次数为10，但是数据量越大，迭代次数就应该越多，所以我们设置为100.点击continue按钮，返回到主对话框。</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/902397dda144ad345c32da52d0a20cf430ad8551.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>点击save按钮，因为我们想要保存分类的结果，并将结果保存到一个变量当中</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/95eef01f3a292df5cefcf0c0bc315c6034a87323.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>打开一个自对话框，勾选cluster membership，点击continue返回到主对话框</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/5bafa40f4bfbfbed216e6aaa78f0f736afc31f2b.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>点击ok，开始运行数据，并输出数据结果</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/0eb30f2442a7d93348dbb8a6ad4bd11372f001f7.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>我们看到的第一个表格叫做初始聚类中心，它列出每一个类别初始的中心点，这些中心点都是spss自动生成的。因为case的顺序会影响到中心点的位置，所以我们需要让case的顺序是随机的，有必要的时候要进行随机化处理</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/3812b31bb051f819244a5f9fdab44aed2f73e7fc.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>下面的两个表格是迭代过程表，你可以看到每一次迭代中心点的变化值，当中心点的变化小于初始类别中心最小距离的2%的时候，迭代就停止了，你看到的第二幅图在迭代35次以后就停止了迭代</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/79f0f736afc379319a9ddafcebc4b74542a91169.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<img src="/2016/02/11/spss中k-means聚类的操作方法/7dd98d1001e939013292d1eb7bec54e737d19656.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>下面这个表格叫做最终聚类中心，也就是各个类别在各个变量上的平均值，它可以帮助我们根据变量的平均值来给分类赋予实际的意义</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/dcc451da81cb39dbc6cc3883d0160924aa1830d2.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<ul>
+<li>最后的表格叫做各个类别case数，你可以读出在每一个类别中有多少case</li>
+</ul>
+<img src="/2016/02/11/spss中k-means聚类的操作方法/b3b7d0a20cf431adc32d1cec4b36acaf2fdd9863.jpg" alt="spss中k-means聚类的操作方法" title="spss中k-means聚类的操作方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

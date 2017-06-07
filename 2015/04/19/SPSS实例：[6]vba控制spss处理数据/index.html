@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="SPSS实例：[6]vba控制spss处理数据"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>SPSS实例：[6]vba控制spss处理数据 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/">
+                SPSS实例：[6]vba控制spss处理数据
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <pre><code>使用vba来控制spss处理数据，使得我们可以批量进行spss操作，大大加快我们的工作速度。比如，前两天有网友问我如何进行一万次回归分析，我直接写了一段vba代码，很快就能处理完，并整理成分析报告。这就是vba与spss合作所带来的效果，因为篇幅有限，下面只给大家概述一下如何在vba中调用spss对象，并进行数据处理，想要了解更详细的教程，希望您持续关注我写的教程。转载请注明出处（作者百度ID为：qq675495787）
+</code></pre><ul>
+<li>概述spss对象：spss对象是控制spss程序的对象集合。spss对象的指令变换点是ISpssApp对象，它是所有对象的容器，内含所有对象。下面的树形图介绍了spss对象所包含的属性和方法，这些属性和方法会在以后的教程中跟大家介绍。</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/9f1011b30f2442a74f8bfa94d343ad4bd113023e.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<ul>
+<li><p>引用spss类库：如果你想要写spss脚本，你必然要用到spss对象。在spss脚本中，你可以使用objSPSSApp为全局变量来调用spss对象，在此之前要确保这个对象已经被创建好了（实际上，创建了spss对象就使spss程序开始运行了，只不过你看不到程序界面，说实话，你什么都看不到）。</p>
+</li>
+<li><p>换一种说法，如果你想要在其他编程语言中使用spss，你需要首先创建ISpssApp对象。例如，在微软的VB编辑器中（使用vba），首先你必须在VBA工程中引用spss对象类库（也就是：spsstype library，spss pivot table<br>type library和spss RTF type library）。操作方法是，在vbe中，点击工具–引用；找到这几个类库，然后勾选他们，点击确定按钮。</p>
+</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/0db52fadcbef76096a269fae2cdda3cc7cd99e96.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/4a77b2af2edda3cc59c9be1103e93901213f9296.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<ul>
+<li><p>声明spss对象变量：引用了spss类库以后，我们可以在vba中声明spss对象变量了。代码如下：</p>
+</li>
+<li><p>Dimspss as object</p>
+</li>
+<li><p>Set<br>spss=createobject(“spss.application16”)</p>
+</li>
+<li><p>实际上我们更建议使用对象类来声明变量，所以上面的语句应当写成：</p>
+</li>
+<li><p>Dimspss as ispssapp</p>
+</li>
+<li><p>Set spss=new<br>spsswinlib.application16</p>
+</li>
+<li><p>这样的写法可以加快你的代码编写速度。</p>
+</li>
+<li><p>设置spss程序可见性：以上两个小代码可以启动spss程序，当你不需要看到这个程序的时候，你应该让其保持隐身，在后台运行，你看不到spss程序。如果你想要看到spss程序，你应该设置spss对象的可见性属性为true。如下图所示，我们打开一个数据文件“卡方检验”，然后设置数据文件的可见性为1，这样就可以看到spss程序了，否则是看不到的，但是即便看不到他们也是运行中的。</p>
+</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/35da1d3b5bb5c9ea117f05d2d739b6003af3b337.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<ul>
+<li><p>小试牛刀：我们试试如何读取spss的版本号，输入代码</p>
+</li>
+<li><p>a = spss.GetSPSSVersion</p>
+</li>
+<li><p>MsgBox a</p>
+</li>
+<li><p>这段代码就是用变量a存放spss的版本号，然后用消息框显示a的数值。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

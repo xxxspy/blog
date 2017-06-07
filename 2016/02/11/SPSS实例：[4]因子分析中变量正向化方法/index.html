@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="SPSS实例：[4]因子分析中变量正向化方法"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>SPSS实例：[4]因子分析中变量正向化方法 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/">
+                SPSS实例：[4]因子分析中变量正向化方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>因子分析算是spss高级进阶的内容了，一般缺少统计基础的人很难理解因子分析的数据基础，导致在数据分析的时候忽略很多细节，导致错误的发生。在因子分析中最容易发生的一个错误就是某些变量的因子载荷出现负数而没有对其进行处理，有的研究直接删除因子载荷为负数的变量，这不是一个可取的方法。</p>
+<ul>
+<li>什么条件下需要进行指标正向化：在因子载荷绝对值很大而符号为负的时候，我们要将其正向化；或者我们在数据分析之前就已经知道哪几个变量是负向变量，我举一个例子，如下图所示，这是8个城市的7个环境指标，其中X1–X4是正向指标，值越大环境越好；而剩下的指标就是负向指标，值越大环境越差。那么对于负向指标我们需要进行正向化。</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/f9589818367adab4ea7d61868ad4b31c8601e403.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<ul>
+<li>无法判定是否需要正向化怎么办？我们可以预先进行一次因子分析，使用上面表格中的数据，进行一次因素分析，并进行正交旋转。旋转后的成分矩阵，如图所示：我们看到权重最大的因子是成分1，5–7变量为负数，且绝对值很大，所以这三个变量有必要进行正向化。</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/245e8bcad1c8a78683782ecb6609c93d71cf5061.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<ul>
+<li>spss中变量正向化的方法：在spss中，我们一般采用原始变量的负数或者倒数来进行正向化。在spss菜单中选择：转换–计算变量</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/b3ba5d166d224f4ae83f14d608f790529922d116.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<ul>
+<li>打开计算变量对话框，输入一个变量名，然后输入公式，公式中的V5是原始的变量名，前面加一个符号就可以实现转换了，点击ok按钮</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/4a77b2af2edda3cc7b6ddfe500e93901203f922e.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<ul>
+<li>转换后得到的就是一个新变量b5，如图所示，以此方法你可以实现所有的变量的正向化。</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/38403f3fb80e7bec5a5364242e2eb9389a506b2e.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<ul>
+<li>使用新的变量进行因子分析：关于因子分析的方法你可以参考我以前写的文章，这里不是重点，这里的重点是如何进行变量的正太化。好了，教程到此了。欢迎大家关注我的后续文章。</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/58af236d55fbb2fb875c3ed74e4a20a44723dc45.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

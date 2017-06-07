@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="怎样将excel中的联系人导入到邮箱"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>怎样将excel中的联系人导入到邮箱 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/01/03/怎样将excel中的联系人导入到邮箱/">
+                怎样将excel中的联系人导入到邮箱
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>在日常的办公中，我们整理客户资料的时候经常是使用excel，如果要想给这些客服发邮件，我们就得将他们的邮件地址一个一个的输入到邮箱里，不过，还有更简单的做法，那就是利用批量导入联系人的方法实现一键导入，下面是具体的方法，本人用的是126邮箱，经测试，其他邮箱导入的方法也是一样的。<br>方法/步骤</p>
+<ul>
+<li></li>
+<li><p>先打开要导入的excel文件，格式不正确的文件是无法导入的，我们要对其进行修改。首先你要检查这个文件是不是有标题栏，没有标题栏的话，很多邮箱都不能导入，所以我们最好先插入标题栏，如图所示，右键单击第一行，然后再打开的菜单中选择【插入】</p>
+</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/71cf3bc79f3df8dc7f79ae0fcd11728b461028e3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>导入到标题栏以后，我们按照‘联系组   姓名   邮件地址   联系地址   邮政编码   联系电话   移动电话   公司   ’这样的顺序整理你的联系人的信息，当然，如果你的联系人的信息没有这么多，你可以空着不填，比如没有电话，你就空着这一栏就可以了，如下图所示就是整理好的联系人的信息</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/aa64034f78f0f7364ca66d9f0a55b319eac413d7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>点击excel的开始按钮，打开开始菜单，然后执行：另存为–其他格式</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/f9dcd100baa1cd11c3f253beb912c8fcc2ce2de3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>在打开的另存为对话框中，我们将保存的格式设置为csv，这是个大邮箱都承认的导入格式，然后选择一个保存的位置，点击‘保存’</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/962bd40735fae6cdb4ec8aff0fb30f2443a70fd7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>弹出一个警告消息，不用管它，点击‘是’</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/4610b912c8fcc3ce7584e8ad9245d688d53f20e3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>来到你的邮箱，在菜单栏上选择【通讯录】，打开联系人的列表</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/a5c27d1ed21b0ef4dbb0b9c0ddc451da80cb3ed7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>在标题栏，找到【更多】选项，点击它可以打开一个下拉列表，在该下拉列表里，找到【导入通讯录】这个选项</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/d31b0ef41bd5ad6e1fa1457481cb39dbb7fd3cd7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>打开导入通讯录页面，点击浏览按钮，查找你刚才保存的文件</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/e7cd7b899e510fb3dd415609d933c895d0430cd7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li>选择你要上传的文件，然后点击【打开】</li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/fd039245d688d43f3cedb06c7d1ed21b0ff43be3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<ul>
+<li><p>设置遇到重复的邮件地址的时候是该覆盖还是不导入，也就是跳过该记录，按照你需要的自己进行设定，一般就是选择【不导入】。点击确定按钮，完成导入。</p>
+</li>
+<li></li>
+<li></li>
+</ul>
+<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/d833c895d143ad4b0976675e82025aafa50f06d7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/excel/">#excel</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

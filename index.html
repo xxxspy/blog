@@ -524,6 +524,461 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<img src="/2017/06/01/hello-world/1e71f724b899a901f17c560a17950a7b0208f506.jpg" alt="test-image" title="test-image">
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">
+                SPSS实例：[2]卡方检验百分比差异
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天讲的卡方检验只是多种卡方检验中的一种，你还看一去看我最新的几篇文章讲分层卡方、相关样本卡方、kappa一致性系数等，这里【<a href="http://jingyan.baidu.com/season/33651?pn=26】" target="_blank" rel="external">http://jingyan.baidu.com/season/33651?pn=26】</a></p>
+<ul>
+<li>第一步是录入数据，我们录入数据的方式如下图：class是分组变量，0值代表A组，1代表B组，effect是是否敏感变量，0代表不敏感，1代表敏感，num是频次，也就是各个组的个案数目。你可以比对上面的交叉表来看看spss数据结构</li>
+</ul>
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/5beeba0f4bfbfbed4aedf0be79f0f736aec31f78.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<ul>
+<li>接着，我们要对数据进行加权，很多人问为什么要加权，实际上我们采用上图所示的数据结构就决定了我们必须用频次进行加权，这样可以让上面的那种数据结构表示呈交叉表。如果没有加权的话，会出现错误，我们待会会看到一个错误的结果，就是没有加权的结果。加权的方法是data–weight cases</li>
+</ul>
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/2f9cbdcc7cd98d10692ecaf0203fb80e7aec903e.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<ul>
+<li>将频次放入变量框，然后点击ok按钮，加权成成功</li>
+</ul>
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/3790312eb9389b503d0526938435e5dde6116e3e.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<ul>
+<li>接着在菜单栏上执行：analyse–descriptive statistics–crosstabs，打开交叉表对话框</li>
+</ul>
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/08b68e529822720e2134243b7acb0a46f31fab3e.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<ul>
+<li>在这个对话框中，我们需要将行和列变量放入各自的框中，注意看行和列变量不要弄颠倒了，回顾上面的数据结构，你自己对比一下，哪一个是行变量</li>
+</ul>
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/8759287adab44aedd3fa7825b21c8701a08bfb79.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/263e802f0708283818ba1ad5b999a9014d08f179.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<ul>
+<li>点击statistic按钮，设置卡方统计量</li>
+</ul>
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/246cca2a2834349b41fca844c8ea15ce37d3be3e.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/b74124f33a87e95079ed35ad11385343faf2b43e.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<ul>
+<li>点击cells按钮，选择输出的参数</li>
+</ul>
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/62667cd0f703918fbc66fb0b503d269758eec479.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/3c2c4bfbb2fb431648a8bcbb21a4462308f7d379.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<ul>
+<li>最后出现的是卡方检验的结果了，第一个表格是交叉表，显示了期望值和实际值</li>
+</ul>
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/246cca2a2834349b41b1a844c8ea15ce37d3be79.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<ul>
+<li><p>接着是卡方检验表，这是最关键的结果。我们根据样本量的大小来决定看哪一行的指标</p>
+</li>
+<li><p>假如我们的总样本数N》40且交叉表中每一个cells中频数均大于5，卡方检验的结果是精确的，可以参考第一行的指标，也就是pearson-chi-square（显然我们的案例满足这个条件）sig值小于.05，说明差异显著，说明两组病人对药物的反应是不同的；假如样本总量N&lt;40，或者cells中有一个频数小于5，我们只能看校正后的卡方值，也就是第二行数据，或者我们看fisher精确概率法获得的值，也就是第四行，这两行都得到了显著的结果；</p>
+</li>
+</ul>
+<img src="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/3bb22487e950352a8bd6e3c95243fbf2b3118b79.jpg" alt="SPSS实例：[2]卡方检验百分比差异" title="SPSS实例：[2]卡方检验百分比差异">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/19/SPSS实例：[23]如何对数据进行排序/">
+                SPSS实例：[23]如何对数据进行排序
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们今天来学习一个简单的功能，在spss中如何对数据进行排序，虽然简单，但是很重要。我刚才处理的数据是从Excel中导入的，接着还有其他Excel中的数据要粘贴到spss中，我需要先让spss中的数据按照年级、专业排序，然后才能保证粘贴数据的时候能够按照年级和专业的顺序去粘贴，下面我们来看看如何排序吧。</p>
+<ul>
+<li>在菜单中执行：data-sort cases，打开排序对话框</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/58af236d55fbb2fb93e62b704d4a20a44723dc40.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>我们想要让spss按照年级排序，当case与case的年级相同的时候，按照专业进行排序，如图所示，将年级和专业按照先后顺序放入sort by框中</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/bf487563f6246b60eed4c116e9f81a4c500fa2bf.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>设置排序的方式是【升序】，如图所示，选择ascending，相反你可以选择desceding来降序</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/7787b9efce1b9d16d51fe903f1deb48f8d5464bc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>接着，我们其实可以点击ok来完成排序，但是没用一次spss就看一下它的syntax是非常好的习惯，这样你很快就能学会基本的syntax操作，学会syntax好处就是你比别人处理数据的速度大大提升，十倍百倍的速度提升，点击paste可以看到syntax</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/b5ce925494eef01f15cc6ba7e2fe9925bd317dbc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>你看到了，其实只需要用两句简单的代码就能实现排序的功能</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/95afee1f3a292df5d11bdf77be315c6035a873bc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>我们还是回到界面中，点击ok</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/9864a2315c6034a8683acbe3c9134954082376bc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>排序好了以后，你最好保存一下结果</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/5f9e93b1cb13495433c69b06544e9258d0094abc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>现在的数据就是按照年级和专业进行的排序，你学会了吗？请关注我的系列教程：spss实例教程，你将看到一个专业的数据分析员是如何在工作中使用spss的。</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/d019d2bf6c81800a5c3dfa6cb33533fa838b47bc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/">
+                SPSS实例：[17]进行sobel检验(小白教程)
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>通常我们在做中介效应的时候，遇到有一个系数没有达到显著性水平，我们需要进行sobel检验，但是sobel检验的公式非常麻烦，如果你按计算器就很麻烦了，更何况你还有很多中介效应去验证，所以今天我给大家分享一个Excel可以很快的计算。</p>
+<ul>
+<li>从下面的参考资料里下载一个Excel文件</li>
+</ul>
+<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/d478a8003af33a879120f002c45c10385343b51e.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<ul>
+<li>下载下来以后，打开Excel，你会看到一个这样的表格</li>
+</ul>
+<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/cdfe7281800a19d87b53741d31fa828ba61e4613.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<ul>
+<li>将你的三个模型的三线表粘贴过来</li>
+</ul>
+<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/c856613e6709c93da9a2feef9d3df8dcd1005413.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<ul>
+<li>我们在对应的位置写入对应的值，soble值会自动的计算出来，是否显著这一栏会告诉是否显著，如果显著说明中介效应显著</li>
+</ul>
+<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/bd7faf3533fa828b6d736dfbff1f4134970a5a13.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<ul>
+<li>跟大家分享一下各个单元格的公式，看下面的公示栏就知道了。</li>
+</ul>
+<img src="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/bbe0d311728b47105b7f0dd4c1cec3fdfc032313.jpg" alt="SPSS实例：[17]进行sobel检验(小白教程)" title="SPSS实例：[17]进行sobel检验(小白教程)">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/11/SPSS python教程：[7]读取透视表中的平均数/">
+                SPSS python教程：[7]读取透视表中的平均数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>由于经常有人问怎么将数据中心化，笨方法就是手工去算，但是我打算用点高级的东西，从描述性统计的输出的透视表中，读取平均数，然后再用变量的每一个值减去平均数。这篇文章介绍一下最关键的一个步骤，那就是从输出的描述性统计中读取平均数。</p>
+<ul>
+<li>先看一下所有的代码。然后我们再逐步解释</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/f677b1c379310a5540f30c74b54543a983261018.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>首先是BEGIN PROGRAM和END PROGRAM,这两者之间插入python代码，也就是说python代码必须在这两者之间才能正确执行，之前有讲过</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/245e8bcad1c8a7867b2d978e6509c93d71cf50e8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>装载spss和apssaux模块，spss模块很熟悉，但是spssaux模块是一个附加模块，在帮助文件中，没有关于它的，只能去自己搜索了。或者在python中使用help(spssaux)</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/f392492c11dfa9eca8f8849760d0f703908fc119.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>fpath中保存数据文件路径</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/6391e903918fa0ec2011b68d249759ee3c6ddb19.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>spss打开该数据文件，注意这里用到了一些syntax命令，这些都是基本的。如果你不会写syntax也无妨，你可以在spss中手动操作一下，得到描述性统计，在结果输出文档中，就能看到用到的syntax，你再将其粘贴过来就可以了。</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/b7bc4c66d01609247d227f9bd60735fae7cd34e8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>然后cmd中存有进行描述性统计的syntax命令</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/d5462bfae6cd7b89426be7030d2442a7d8330ee8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>spssaux.createxmloutput将执行cmd命令，然后将结果保存在xml工作空间中，可以设置visible为True来看到输出结果</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/476217f79052982245e5eb43d5ca7bcb0b46d419.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>读取透视表中的的某个以数值，注意观察参数，对照着透视表你就能理解了。</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/6a2112338744ebf85ea7b6bfdbf9d72a6159a719.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>最后将读取得到的平均数值打印出来，成功！</li>
+</ul>
+<img src="/2016/10/11/SPSS%20python教程：[7]读取透视表中的平均数/a54e55fbfbedab64ef759040f536afc378311ee8.jpg" alt="SPSS python教程：[7]读取透视表中的平均数" title="SPSS python教程：[7]读取透视表中的平均数">
+<ul>
+<li>最近在进行spss的自动化处理数据，有兴趣的可以联系我。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/05/SPSS绘图教程：[1]教程简介/">
+                SPSS绘图教程：[1]教程简介
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这篇文章是spss绘图教程的第一篇，简单介绍一下该系列教程的主要内容。该系列教程没有啥难懂的东西，都是在数据分析工作中经常用到的一些绘图技巧和基本知识。写这个系列教程的初衷是因为我们的spss教科书中很少有绘图的教程，所以很多学生都在问我怎么绘图，我现在把我会的所有绘图知识都写下来，方便大家查阅，大家可以将这系列教程收藏起来，以便以后查阅。</p>
+<ul>
+<li>首先是数据的准备，绘图对数据的格式要求非常严格，所以在绘图前需要对数据进行整理。</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/e865a699a9014c083efcb31d087b02087af4f400.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>条形图的绘制以及修改。</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/32bb9c8ba61ea8d319c9efbc950a304e241f5864.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>折线图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/0862c354564e925807fb1d569e82d158cdbf4e78.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>区域图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/9dc3cf58ccbf6c815cf8b750be3eb13532fa4078.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>饼图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/b0742dfa828ba61e4b2153974334970a314e5978.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>散点图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/4075890a304e251f7c387f40a586c9177e3e5378.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>直方图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/86d5bac27d1ed21b0b23b55daf6eddc450da3f64.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>高低图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/ac2fc3c451da81cb320c18755066d01608243164.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>箱图的绘制以及修改</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/389aa8fd5266d01606f30590952bd40734fa3564.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>双轴图的绘制以及修改（有两种图形）</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/cc506c8b4710b912320e6d46c1fdfc0393452278.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>图形元素的设置</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/48151723dd54564e46037e81b1de9c82d0584fe1.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<ul>
+<li>脚注题注等的设置</li>
+</ul>
+<img src="/2016/10/05/SPSS绘图教程：[1]教程简介/f7426d8da97739128a9b1fd9fa198618377ae28e.jpg" alt="SPSS绘图教程：[1]教程简介" title="SPSS绘图教程：[1]教程简介">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/03/SPSS python教程：[6]读取PivotTable行标签/">
+                SPSS python教程：[6]读取PivotTable行标签
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss输出的结果文档用到最多的就是数据透视表（pivot table），在spss中，数据透视表被分为三个部分：行标签列表、列标签列表、数据列表。你可能还不理解这些内容。我们从这篇开始介绍数据透视表的行标签，并用python读取行标签，然后输出。看看代码吧：</p>
+<ul>
+<li>这是在spss结果文档中输出的一个数据透视表，我们要读取它的行标签</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/8b527d2762d0f7036208ba450afa513d2797c5b6.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>这就是行标签，但是它并不像我们看到的那么简单，我们试着读取行标签就知道了</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6c63514a20a4462308668afb9a22720e0df3d7bf.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>创建一个python脚本文件：outputTrim.py，下图中你可以看到该文件存放的目录</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/48151723dd54564efa5acaa0b1de9c82d1584f28.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>接着先写入代码StartClient和stopclient，所有操作spss的代码都应该放在这两句之间。</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/dc15484e9258d109d807862bd358ccbf6d814d07.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>我们详细讲解一下代码的意义，先看这两句，假如我们只打开了一个结果文档，我们使用第一句代码可以获取该文档的句柄；第二句获取该文档下所有的输出项目，里面包含但不仅限于数据透视表，outputItems是一个列表</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/9864a2315c6034a83fae9618c91349540823769f.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>通过循环，我们可以找到名称为’Descriptive Statistics’的数据透视表。我们看下面的if语句，首先判断输出项是不是PIVOT，然后判断该输出项的标题为’Descriptive Statistics’的PIVOT，获取标题用的是GetDescription</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/263e802f07082838c19ff28dba99a9014d08f15e.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>这句代码是将找到的这个输出项转换为数据透视表，这样才能使用数据透视表所具有的类和方法</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/814b07d8bc3eb13540169922a41ea8d3fc1f4412.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>这一句就是获取数据透视表的行标签</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/9304c888d43f879430a461b7d01b0ef41ad53a94.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>我们用这个循环来输出所有的行标签，看看输出结果是啥样的</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/35e940df8db1cb132a38158adf54564e93584b92.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>这就是输出结果，跟数据透视表对比一下，你就知道行标签到底代表着什么。</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6f4703950a7b02089dae167860d9f2d3562cc881.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6c63514a20a4462308668afb9a22720e0df3d7bf.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/03/SPSS实例：[31]统计选项频数/">
+                SPSS实例：[31]统计选项频数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如有一个单选题，有五个选项，我现在想知道每一个选项有都少人选，怎么办？其实这是一个最简单的频率统计问题，我们把在spss中的统计过程列在以下，请参考：</p>
+<ul>
+<li>首先，我们在菜单栏上执行：分析–描述统计–频数</li>
+</ul>
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/9864a2315c6034a885a32ccfc9134954082376f8.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
+<ul>
+<li>在这里，我们将想要统计的题目放到变量框</li>
+</ul>
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/1b0d4f0fd9f9d72aed368753d62a2834359bbbeb.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
+<ul>
+<li>点击ok开始统计</li>
+</ul>
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/fc5e5f34970a304ed18337b4d3c8a786c8175c98.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
+<ul>
+<li>在输出的表格中，我们的频率一栏就是我们要统计的内容了。</li>
+</ul>
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/fab3ac119313b07e6eefc7460ed7912396dd8ceb.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
 
         </div>
     
@@ -535,6 +990,19 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
 </div>
 
 
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="disabled" href="/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/2/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -568,6 +1036,10 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
             
             <li>
                 <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

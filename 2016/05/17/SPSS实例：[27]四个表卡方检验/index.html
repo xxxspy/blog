@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="SPSS实例：[27]四个表卡方检验"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>SPSS实例：[27]四个表卡方检验 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/05/17/SPSS实例：[27]四个表卡方检验/">
+                SPSS实例：[27]四个表卡方检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>我们先来讲一个案例，我们想要知道两个年龄组的儿童在同一个问题上回答的正确性是否不同，统计出来的四格表是这样的：</p>
+<ul>
+<li>原始数据的数据结构，见下图。在这里没有频数，只有年龄组和是否正确这两个变量</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/b25d9901a18b87d6ed86b557050828381e30fd77.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>在菜单栏上执行：分析–描述统计–交叉表</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/90cebeec08fa513dc28074963f6d55fbb2fbd915.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>将年龄组设置为行变量，是否正确设置为列变量；然后设置统计量，点击statistic</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/425773224f4a20a4ab34248f92529822720ed015.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>勾选卡方值，这样才能输出卡方值</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/61183b2dd42a283433672f4359b5c9ea14cebf71.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>首先看到的表格是基本的频数统计，没什么好说的，大家都懂</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/eab9044c510fd9f9d6324d21272dd42a2834a415.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>看第二个表格是最关键的信息，我们看sig值，如果小于0.05就可以认为达到了显著水平，拒绝虚无假设，认为年龄对答案的正确性产生了影响。</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/373bc4b44aed2e7348429e648501a18b86d6fa94.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>先整理数据，数据结构见下图</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/d048adde9c82d15882c456f9820a19d8bd3e42f0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>接着进行加权</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/a75fb6d3fd1f4134cd710a36271f95cad0c85ef0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>用频数进行加权，点击ok</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/bd70426034a85edfce0af16b4b540923dc5475b0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>接下来的步骤都是一样的，见上面。</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/8cf0d513495409239aef6c369058d109b2de49b0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

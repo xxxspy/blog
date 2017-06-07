@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="spss三维散点图如何验证线型关系"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>spss三维散点图如何验证线型关系 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/03/17/spss三维散点图如何验证线型关系/">
+                spss三维散点图如何验证线型关系
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>最近要做一个三个变量的多重线型回归，有两个自变量，为了做出回归模型，先要验证这三个变量的关系是不是线型的，所以需要先从直观上观察三者的关系，这就用到了散点图，关于二维的散点图很简单，就不介绍了，我们就来看看三维的散点图是怎么观察线型关系的。<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>打开spss，数据都准备好了以后，在菜单栏上执行：图形–图标建构程序</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/ca1349540923dd5480125e97d109b3de9d8248e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>你会看到一个提示框，因为要建构图表必须要先确定各个变量的测量水平，也就是说变量是分类变量、等级变量、还是等距变量，如果你的变量都定义好了，你可以点击确定。如果你不确定自己的变量，你要点击“定义变量属性”进行进一步的设置，我们看看如何设置变量的属性</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/d009b3de9c82d15810e3a04e800a19d8bd3e42e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/ae51f3deb48f8c5453cb3cd03a292df5e0fe7f31.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>点击【定义变量属性】以后，我们会看到下面这个对话框，将你要用来制作图表的三个变量放到右侧窗口，然后点击继续</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/a71ea8d3fd1f41347f56fc81251f95cad0c85ee8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>打开一个新的窗口，在左侧窗口中选中一个变量，在右侧窗口中修改这个变量的属性，我们看到测量级别这个属性，这就是我们要设定的属性，因为我们要验证线型关系，所以三个变量都应该是度量数据，所以你将这三个变量都设置成度量数据即可，点击确定，退出设定</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/48540923dd54564e457d1dc6b3de9c82d1584f31.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>打开同样的方式来到这个对话框，我们点击确定，开始设置图表</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/d009b3de9c82d15810e3a04e800a19d8bd3e42e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>切换到库选项下，找到散点图分类</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/9e3df8dcd100baa1354dbe444710b912c9fc2ee8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>因为我们有三个变量，所以应该选择三维散点图，将三维散点图拖放到图表绘制区域</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/738b4710b912c8fc3e920f32fc039245d78821e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>将三个变量分别放到这个散点图的不同的坐标轴上，一般我们将因变量放到纵轴上，其他两个自变量随便放即可</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/a71ea8d3fd1f41347f2ffc81251f95cad1c85e31.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>点击确定按钮，完成图表的绘制</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/b2de9c82d158ccbfb1c24cc519d8bc3eb03541d7.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>我们看结果输出面板出现了一个散点图，这就是我们绘制的图了，但是从这个图中怎么看出三个变量的线性关系呢/</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/8ad4b31c8701a18bcfd8ebb09e2f07082838fe1a.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>在属性对话框，切换到3D选项下，我们取消勾选“显示线框”，点击下面的应用按钮</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/dcc451da81cb39dbb8a09ea9d0160924aa1830e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>这时候散点图看起来更明显了，继续来看如何看线型关系</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/b03533fa828ba61e4d9031d04134970a314e59d7.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>在菜单栏上执行：编辑–3Drotation</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/9f2f070828381f30a72a7456a9014c086e06f01a.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>你可以看到出现了一个对话框，在这里可以设定具体的旋转角度，不过一般我们不会用到这个功能</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/241f95cad1c8a7862754b3f16709c93d71cf50d7.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li>鼠标点击散点图的任意位置不松手，拖动即可旋转散点图，通过不同角度的观察，你会找到一个视角使得各个点都呈现在一个平面上，从你的角度来看就像一条直线</li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/b999a9014c086e064e9bc6b402087bf40ad1cb1a.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<ul>
+<li><p>这是旋转一定的角度以后看到的效果了：</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/03/17/spss三维散点图如何验证线型关系/9f510fb30f2442a7c56e045ad143ad4bd01302e8.jpg" alt="spss三维散点图如何验证线型关系" title="spss三维散点图如何验证线型关系">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

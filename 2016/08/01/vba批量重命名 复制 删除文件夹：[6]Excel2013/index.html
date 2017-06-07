@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="vba批量重命名 复制 删除文件夹：[6]Excel2013"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>vba批量重命名 复制 删除文件夹：[6]Excel2013 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/08/01/vba批量重命名 复制 删除文件夹：[6]Excel2013/">
+                vba批量重命名 复制 删除文件夹：[6]Excel2013
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>使用Excel中的vba可以帮助我们批量的处理一些文件和文件夹，比如vba批量重命名移动复制删除文件夹，今天我们就来分享几个简单的程序，大家看一下就能懂，帮助我们批量的vba批量重命名移动复制删除文件夹，下面是具体的教程：</p>
+<ul>
+<li>dir函数判断文件夹是否存在：dir函数有两个参数，一个是文件夹的路径，第二个参数见下面第二幅图，他的意义已经在后面标注出来。下面这段程序的意思是如果在本Excel路径下没有找到文件夹“新建文件夹（2）”，那么就弹出消息框说没有该文件夹。</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/2f9cbdcc7cd98d10397b1a5c203fb80e7aec90f4.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/77485536acaf2edd96315f848c1001e93801935f.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>mkdir函数可以创建文件夹：如图所示，它只有一个参数就是文件的路径，我们使用了本工作簿的路径，如图所示</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/4abae5edab64034fca54d36baec379310b551d86.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>rmdir函数可以删除文件夹：如图所示它只有一个参数，那就是文件夹的路径，它的一个应用案例如图所示：注意这个函数只能删除空文件夹，如果文件夹中有文件，那么函数就会提示错误</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/29790130e924b899710769556f061d950a7bf661.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>name函数重命名文件夹或者文件：它其实包括两个部分，As的前面是我们要命名的文件夹路径，As后面是命名后的文件夹路径</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/5af4d7ea15ce36d3c127905d3bf33a87e950b178.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>name函数移动文件夹或者文家：和上面的用法一样，只不过在写As后面的路径的时候我们把路径改成想要移动到的位置，比如对上面的代码进行修改就变成了移动文件夹：</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/0862c354564e92588f2d94839d82d158ccbf4e06.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>使用filesystemobject对象来复制文件夹：注意这个写法有些不同，首先要创建一个对象，然后才能使用它的方法，copyfolder方法也有两个参数，两个参数用逗号隔开，前面是要复制的文件夹，后面是复制得到的文件夹路径</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/245e8bcad1c8a786ba0f57636609c93d70cf5072.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>使用shell打开文件夹：我们用到了explore.exe应用程序，注意其后面有一个空格不能省略，后面是文件夹的路径，注意使用引号，然后最后是一个逗号和参数，各个参数不同，你自己尝试一下</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/bd7faf3533fa828bcef3818efc1f4134960a5a4f.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/excel/">#excel</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

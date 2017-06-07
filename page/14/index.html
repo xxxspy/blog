@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/03/11/spss二分类的logistic回归的操作和分析方法/">
+                spss二分类的logistic回归的操作和分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年03月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>二分类指的是因变量的数据只有两个值，代表事物的两种类别，典型的二分类变量如性别、是否患病等。因变量为二分变量原则上是无法做回归的，在回归方程中的因变量实质上是概率，而不是变量本身。在理解二分类变量以后，我们看看如何做二分类变量的logistic回归。<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>打开数据以后，菜单栏上依次点击：analyse–regression–binary logistic，打开二分回归对话框</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/e850352ac65c1038bd6b882fb2119313b17e89c2.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>将因变量和自变量放入格子的列表里，如图所示，上面的是因变量，下面的是自变量，我们看到这里有三个自变量</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/d788d43f8794a4c22380a1c60ef41bd5ac6e39bf.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>设置回归方法，这里选择最简单的方法：enter，它指的是将所有的变量一次纳入到方程。其他方法都是逐步进入的方法，在前面的文章中有介绍，这里就不再熬述。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/2f738bd4b31c8701013bf40b277f9e2f0608ff4a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/060828381f30e9241f17dddc4c086e061c95f7a8.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>点击ok，开始处理数据并检验回归方程，等待一会就会弹出数据结果窗口</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/962bd40735fae6cd1494ea8c0fb30f2442a70f3e.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>看到的第一个结果是对case的描述，第一个列表告诉你有多少数据参与的计算，有多少数据是缺省值；第二个列表告诉你因变量的编码方式，得分为1代表患病，得分为0代表没有患病</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/c75c10385343fbf25d16e7ceb07eca8065388f21.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>这个列表告诉你在没有任何自变量进入以前，预测所有的case都是患病的正确率，正确率为%52.6</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/9345d688d43f8794f85f09c3d21b0ef41ad53abe.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>下面这个列表告诉你在没有任何自变量进入以前，常数项的预测情况。B是没有引入自变量时常数项的估计值，SE它的标准误，Wald是对总体回归系数是否为0进行统计学检验的卡方。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/00e93901213fb80e72b2213a36d12f2eb83894ff.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>下面这个表格结果，通过sig值可以知道如果将模型外的各个变量纳入模型，则整个模型的拟合优度改变是否有统计学意义。 sig值小于0.05说明有统计学意义</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/9d82d158ccbf6c81b40b6f05bc3eb13533fa401a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>这个表格是对模型的全局检验，为似然比检验，供给出三个结果：同样sig值&lt;0.05表明有统计学意义。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/55e736d12f2eb938968c391fd5628535e4dd6f7d.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/09fa513d269759ee816d2226b2fb43166d22df1a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>下面的结果展示了-2log似然值和两个伪决定系数。两个伪决定系数反应的是自变量解释了因变量的变异占因变量的总变异的比例。他们俩的值不同因为使用的方法不同。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/e7cd7b899e510fb361763a7ad933c895d0430ceb.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>分类表，这里展示了使用该回归方程对case进行分类，其准确度为%71.8。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/08f790529822720ecb13af177bcb0a46f31fab7a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>最后是输出回归方程中的各变量的系数和对系数的检验额值，sig值表明该系数是否具有统计学意义。到此，回归方程就求出来了。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/d058ccbf6c81800a2bcbc5e3b13533fa828b4734.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/03/01/SPSS实例：[26]如何使用注册码安装spss22.0/">
+                SPSS实例：[26]如何使用注册码安装spss22.0
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年03月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss如何使用序列号进行安装呢，其实很简单，就是不知道在哪里输入序列号，我们来看看我的安装演示吧。</p>
+<ul>
+<li>首先，我们打开下载得到的文件夹，找到【破解教程】这个压缩包</li>
+</ul>
+<img src="/2015/03/01/SPSS实例：[26]如何使用注册码安装spss22.0/9dc3cf58ccbf6c81a70f7ab7be3eb13533fa4071.jpg" alt="SPSS实例：[26]如何使用注册码安装spss22.0" title="SPSS实例：[26]如何使用注册码安装spss22.0">
+<ul>
+<li>接着，在这个压缩包里，你会看到有一个readme文件，我们双击打开它</li>
+</ul>
+<img src="/2015/03/01/SPSS实例：[26]如何使用注册码安装spss22.0/c87c6ecf3bc79f3dc6d9b26fb8a1cd11728b2971.jpg" alt="SPSS实例：[26]如何使用注册码安装spss22.0" title="SPSS实例：[26]如何使用注册码安装spss22.0">
+<ul>
+<li>接着，我们会看到有一列乱码，这就是序列码，将其复制下来</li>
+</ul>
+<img src="/2015/03/01/SPSS实例：[26]如何使用注册码安装spss22.0/c9d4cf43ad4bd113199ae16d58afa40f4afb05de.jpg" alt="SPSS实例：[26]如何使用注册码安装spss22.0" title="SPSS实例：[26]如何使用注册码安装spss22.0">
+<ul>
+<li>打开spss22.0的安装文件，然后一直点击下一步即可</li>
+</ul>
+<img src="/2015/03/01/SPSS实例：[26]如何使用注册码安装spss22.0/d35a10f41bd5ad6e8ec132b583cb39dbb6fd3c71.jpg" alt="SPSS实例：[26]如何使用注册码安装spss22.0" title="SPSS实例：[26]如何使用注册码安装spss22.0">
+<ul>
+<li>直到我们看到输入序列码的提示，输入刚才复制的代码，然后点击下一步，你就完成了！</li>
+</ul>
+<img src="/2015/03/01/SPSS实例：[26]如何使用注册码安装spss22.0/7e7f7909c93d70cf0631fd52fadcd100bba12b62.jpg" alt="SPSS实例：[26]如何使用注册码安装spss22.0" title="SPSS实例：[26]如何使用注册码安装spss22.0">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/23/SPSS实例：[25]列联表相关/">
+                SPSS实例：[25]列联表相关
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如何求两个二分类数据的相关系数？或者两个变量不都是二分类，可能还有三分类、四分类，我们怎么求他们的相关呢？这种数据有一个特点就是，这两个变量都是名义变量，他们的数据没有大小之分，只有类别的不同，比如性别就是一个名义变量，我们定义男生为1，女生为2，不能说明女生大于男生。今天我们就来学习一下如何使用spss求列联表相关，而列联表相关就是用来求解分类数据（不连续数据）的相关的。</p>
+<ul>
+<li>数据的录入形式：如图所示，年龄组取值分别为0和1，图书顺序取值分别为1和2</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/29752a9b033b5bb53d7f579534d3d539b700bcf6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>打开交叉表分析对话框，如图所示，找到菜单</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/54baacfb43166d2299df62ff442309f79152d2f6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>我们将这两个变量分别放入行和列框中，这就是我们要求相关的两个变量</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/08b68e529822720ed166959179cb0a46f31fabf6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>点击statistics，设置要输出的参数</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/4e83cb628535e5ddc1c1d2b474c6a7efcf1b62a8.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>在这里，我们用到了contingency coefficient（列联系数），点击continue按钮</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/8474fbdde71190ef5e16e5b4cc1b9d16fcfa60a8.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>回到主对话框，我们点击ok即可开始处理数据</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/9c57e3faaf51f3de9b5fce0f96eef01f3b2979a8.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>在结果中，我们主要看到列联系数的值和近似sig值，显然，相关系数很小，也不显著，说明两个变量不相关。</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/d56b3634349b033ba8208bb117ce36d3d439bdf6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>如果觉得这篇文章写的还可以，记得分享给你的小伙伴！！</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/b74124f33a87e950ae5a650712385343faf2b4c9.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/">
+                统计分析amos21安装破解方法附带密钥注册码
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>amos是出色的统计分析软件, 通常我们使用amos进行结构方程的分析,因为它有强大而又简单的绘图功能,所以受到很多社会学者的青睐。下面我们分享一个破解该软件的方法,希望对各个研究者有所帮助。</p>
+<ul>
+<li>首先我们去下载amos软件,下面的链接上有这个软件的下载链接,里面还有一个破解文件,这个文件是最重要的。先安装amos,一直点击下一步,到下面这个界面的时候,选择下面第二个选项,也就是临时版本</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/6648d73d70cf3bc778b342c2d000baa1cd112a2a.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<ul>
+<li>接着我们要设置临时文件夹,我们使用软件默认的安装文件夹就可以了,点击右面的浏览按钮</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/0ef2112442a7d933d8546b5dac4bd11372f001e4.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<ul>
+<li>在打开的对话框中,有一个temp的文件,双击这个文件即可</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/d872d695d143ad4bc2d2c9ee83025aafa50f06e4.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<ul>
+<li>接着打开开始菜单，找到ibm spss amos，里面有一个注册快捷方式，点击它，如图所示</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/d56b3634349b033b27c073f414ce36d3d539bd11.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<ul>
+<li>打开这个授予许可对话框，点击下一步，选择立即授予产品许可</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/72b19c025aafa40f535c41f3aa64034f79f019c2.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/78701455b319ebc49484f9b78326cffc1f1716e4.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<ul>
+<li>从下面的参考文献中下载下来的压缩包里有一个注册码，将注册码填写进去，然后点击下一步即可完成注册</li>
+</ul>
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/3bc6f750352ac65c974de95dfaf2b21193138a11.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/c71d0e385343fbf23864290db17eca8065388f11.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/17/SPSS实例：[11]如何检验调节作用/">
+                SPSS实例：[11]如何检验调节作用
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们今天用到了spss中的分层回归，这种方法其实和回归没有太大差异，只是在回归的时候，分两个步骤进行，然后对两步中的R方值的改变大小进行显著性检验，如果达到了预先设置的显著性水平，就可以证明调节作用。我们来看看具体的步骤：</p>
+<ul>
+<li><p>明确变量类型：我们今天使用的自变量、调节变量、因变量都是连续性变量，或者说是等距变量。</p>
+</li>
+<li><p>我们在菜单栏上执行：分析——回归——线性回归，如图所示</p>
+</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/b6045da98226cffc7dc6f7a0bb014a90f703eaf1.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>接着，我们要输入变量，放入因变量，然后放入自变量和调节变量，自变量和调节变量都在independent框中，图中没有列出调节变量，你别跟着犯错。点击next按钮，进入第二层</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/5f9e93b1cb1349540abca076544e9258d0094ac6.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>在第二层中，independent框中不仅仅有自变量和调节变量，还有自变量和调节变量的交互项，假如你不知道这个交互项是从哪里来的，你可以在百度经验中搜索【回归模型中如何增加交互项】。这里就不再详述了。</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/43e6c733c895d143e009af3171f082025aaf0761.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>我们点击statistics按钮，进行设置</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/0e655ca7d933c8959c80d069d31373f0830200e2.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>在这里需要重点勾选R方改变值或者其他你感兴趣的指标，如图所示，然后点击继续</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/b110e6198618367aaa6537cf2c738bd4b21ce5f1.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>我们先看R方的改变值是否达到了显著水平，如果达到了显著水平，然后找到模型的系数检验结果，因为保密原因，我把变量的名称都隐去了，你可以看到红色方框中就是交互项的系数检验，B值达到显著水平，说明调节作用得到了证明。</li>
+</ul>
+<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/fab3ac119313b07ef982761b0ed7912397dd8ca2.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
+<ul>
+<li>为了进一步看到调节变量是如何起到调节作用的，也就是具体的调节方向，我们需要进一步来进行探究，因为篇幅太长，我们在下一篇文章中讲【检验调节变量的调节方向】</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/15/spss逻辑回归的操作和分析方法/">
+                spss逻辑回归的操作和分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>在菜单栏上执行：analyse–regression–binary</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/d8f9d72a6059252d6801bdc1349b033b5ab5b9e5.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>将患病率作为因变量，将其他三个作为自变量，设置好这几个</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/14ce36d3d539b600fcdfaf72e950352ac75cb7e6.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>点击ok，开始处理数据</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/241f95cad1c8a786ebf9e7cb6709c93d71cf5027.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>我们看到第一个表格是描述性的，也就是一个交叉表格，我们从这个表格可以看到我们的数据的基本情况</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/35a85edf8db1cb134ee391d6dd54564e93584b68.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>接着就是回归模型的检验，看sig值这一列就可以看到各个自变量的系数是否显著，如果显著说明这个回归模型是可靠的</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/7dd98d1001e93901c5d020fb7bec54e737d19621.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/15/spss利用count计算指定变量值的出现次数/">
+                spss利用count计算指定变量值的出现次数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> count可以统计频数，并将频数生成一个新的变量，比如说，有10道题是问你是否赞同某个说法，5级评分，分别为：非常赞同、赞同、不知道、反对、非常反对。我们要知道某个人的综合的态度，就要统计出来这个人赞同的数量，用count就可以实现了。<br>方法/步骤</p>
+<ul>
+<li>打开数据以后，在菜单栏上执行：transform–count ，打开count对话框</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/c2fdfc039245d688d4db4928a4c27d1ed31b2464.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>在打开的对话框中，在目标变量中输入态度，并将填写变量的标签，将要统计的态度a1–a10都添加到numeric variables</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/9345d688d43f8794a5e2b2a2d21b0ef41bd53a18.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>点击define value，对变量进行条件限制</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/9345d688d43f8794a626b3a2d21b0ef41ad53a64.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>勾选range这个选项，然后在两个文本框中分别输入1和2，也就是限定了分数的范围是1到2，然后点击continue</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/d53f8794a4c27d1ed13bc1481bd5ad6eddc43818.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>返回到了count对话框，点击ok按钮，运行</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/a5c27d1ed21b0ef41ef562d2ddc451da81cb3e18.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>我们看到这里已经多了一个态度变量</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/d31b0ef41bd5ad6ed5209f6681cb39dbb7fd3c64.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li><p>最后在菜单栏上执行：analyze–descriptive statistic–frequencies，对不同态度进行统计</p>
+</li>
+<li></li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/dcc451da81cb39dbbddd9ddad0160924ab183018.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/05/SVN教程：[5]部署django到SAE全过程/">
+                SVN教程：[5]部署django到SAE全过程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>之前写过一篇在SAE上部署django的教程，现在返回来看犯了很多错误，所以在这里更正一篇，希望大家见谅，其实我也不是什么高手，难免有错误，下面看看在新浪sae上部署django的完整过程吧。</p>
+<ul>
+<li>先去新浪sae上登陆，找到你建立的应用，然后点击【创建一个版本】，如果你没有创建过版本，可能只有一个版本</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/1899a23eb13533fa86fe2d63aad3fd1f40345bf7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>输入版本号，这个数字是任意的，我就按照版本3来做</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/a992e31f4134970a3a3bae6297cad1c8a6865df7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>回到Deltatest文件夹，如果你看过前面的文章就知道这个文件夹是什么，如果你没有跟着做，你看一下这篇文章就知道：<a href="http://jingyan.baidu.com/article/6525d4b135bb1dac7d2e94ad.html看完这篇文章，右键单击这个文件夹，然后选择【svn更新】" target="_blank" rel="external">http://jingyan.baidu.com/article/6525d4b135bb1dac7d2e94ad.html看完这篇文章，右键单击这个文件夹，然后选择【svn更新】</a></li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/a6c7d7177f3e6709db48fbb239c79f3df9dc55f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>更新完毕以后，你会看到这里多了一个文件夹3，这个文件夹就跟sae上的版本3相同了。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/718e25c79f3df8dcc67531dccf11728b461028f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>点击进入文件夹3，可以看到有这两个文件。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/c87c6ecf3bc79f3dee1f5a7db8a1cd11738b2945.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>打开cmd命令窗口，我们先进入文件夹3，如图所示的命令：</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/9e7ce6dcd100baa1d4d2f9f64510b912c9fc2e45.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>接着，我们在该文件夹下面创建一个新工程，比如工程名称叫做Deltatest</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/cc506c8b4710b912d53f48b3c1fdfc0393452245.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>回到文件夹3，这里就会多了一个文件夹deltatest，双击进入deltatest文件夹</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/9304c888d43f87948101f663d01b0ef41ad53a45.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>这里面还有一个Deltatest文件夹<br>这是deltatest文件夹内的文件</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/a583631ed21b0ef432a02613dfc451da80cb3ef7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/1a94b36eddc451daacbeb2a6b4fd5266d11632f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>我们将这两个文件剪切</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/aa59892bd40735fad1b8f0f49c510fb30e2408f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>复制到这里，也就是文件夹3下面</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/1f569482b9014a90afc0f8f0ab773912b21bee46.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>好了后面就简单了，我们要配置一下两个文件，第一个是index.wsgi文件，里面写这些内容：</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/6391e903918fa0ec88c3de40249759ee3d6ddb3c.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>第二个文件是config.yawm</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/9f6e190828381f30826237e4ab014c086f06f0c1.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>最后，提交一下</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/f7426d8da9773912ea023f2cfa198618367ae21c.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>注意点选【全部】，不然漏掉某些文件，你就失败了。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/79b1e936afc3793140603c64e9c4b74543a91137.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>在浏览器输入你的app的网址，看看能不能出现django的欢迎界面吧！！有问题可以在下面留言奥。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/dbf554ed2e738bd4d5690c7ca38b87d6267ff9f0.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/05/spss分层聚类的操作方法和分析方法/">
+                spss分层聚类的操作方法和分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>聚类是一个将case分类的数据，它不是一个严格的统计方法，所以是一个很有争议的方法。但是因为没有可以替代他的方法，所以现在大家也都在用。<br>方法/步骤</p>
+<ul>
+<li>依次点击：analyse–classify–hierarchical cluster，打开分层聚类对话框</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/f7246b600c33874428699da8510fd9f9d62aa0b2.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>在聚类分析对话框中，<br>将聚类用到的变量都放到variables中</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/d009b3de9c82d158eccce465800a19d8bd3e4293.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>将地区变量放入case标签中，他的意思是每一个数据都用地区这个值来命名</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/6f061d950a7b0208e175823562d9f2d3562cc8a2.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>点击plot按钮，打开对话框，设置要输出的图</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/54fbb2fb43166d22e049a940462309f79052d22c.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>在打开的对话框中，勾选dendrogram，然后点击continue按钮。这个dendrogram是层次聚类谱系图，最后我们还会分析这个图</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/5243fbf2b21193136c14436465380cd790238d8b.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>点击method按钮，设置聚类的方法</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/8cb1cb1349540923cacddcaa9258d109b2de49b9.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>如图所示，通常我们用到的聚类方法是wards method，接着我们需要把变量转换成z分数，点击continue按钮</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/4b90f603738da97744dc39ffb051f8198718e377.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>点击save按钮，填写希望保存的聚类类别数范围3–8，据此选项，spss将在数据编辑窗口中添加7个变量，分别标明聚类数位3–8类情况下各省市所属的类</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/314e251f95cad1c8883943f37f3e6709c83d5167.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>设置输出的聚类类别数范围3–8，点击continue按钮</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/5882b2b7d0a20cf4d4b7470b76094b36acaf993b.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>点击ok按钮，开始输出数据处理的结果</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/63d0f703918fa0ecabc1ddd9269759ee3c6ddbe4.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>你看到的下面的这个表格叫做聚类过程表，其内容并不是经常被关注，因为大部分实际应用中，聚类的具体过程是被忽略的。但是聚类系数可以帮助我们判断将数据分为几类最合适，判断的方法是，相邻的两个数据变化的幅度显著大于前面的系数的变化范围，这时候分类在这里就是最好的</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/ac345982b2b7d0a2e8d5bd49cbef76094a369ac2.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<ul>
+<li>最后是层次聚类谱系图，从这个图中可看到聚类的过程，根据你的需求选择分类的组数</li>
+</ul>
+<img src="/2015/02/05/spss分层聚类的操作方法和分析方法/32fa828ba61ea8d3d90dcfd0970a304e251f5832.jpg" alt="spss分层聚类的操作方法和分析方法" title="spss分层聚类的操作方法和分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/19/SPSS实例：[13]检验调节变量的调节方向/">
+                SPSS实例：[13]检验调节变量的调节方向
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇文章中我们讲了【SPSS实例：[11]如何检验调节作用】，这篇文章呢，我们要深入分析调节变量到底是如何调节自变量对因变量的作用的。我们先来看一下上一篇文章中得到的结果：在模型3中，我们可以看到红色方框中，交互项的系数是显著的，而其他系数是不显著的。</p>
+<ul>
+<li><p>我们根据上图中的模型3，可以得到一个回归方程：Y=1.12-0.008<em>A</em>B；其中Y是因变量，A是自变量，B是调节变量。</p>
+</li>
+<li><p>因为我们在做调节效应的验证之前，首先做了数据的中心化，如果你没有做中心化，你可以看这篇文章【数据中心化的手工操作】先将数据中心化然后，再进行层次回归，最后才能对调节变量的调节方向进行探索。</p>
+</li>
+<li><p>我们使用描述性统计计算出调节变量B的标准差</p>
+</li>
+</ul>
+<img src="/2015/01/19/SPSS实例：[13]检验调节变量的调节方向/8c511fe93901213ffda563cf56e736d12e2e95cb.jpg" alt="SPSS实例：[13]检验调节变量的调节方向" title="SPSS实例：[13]检验调节变量的调节方向">
+<ul>
+<li>然后设B的值分别为一个正标准差或一个负标准差，得到两个方程：</li>
+</ul>
+<img src="/2015/01/19/SPSS实例：[13]检验调节变量的调节方向/91ae68c6a7efce1bc988e4d9ad51f3deb58f65c6.jpg" alt="SPSS实例：[13]检验调节变量的调节方向" title="SPSS实例：[13]检验调节变量的调节方向">
+<ul>
+<li>然后取B两个真实的值，从你的数据库里面挑两个，然后带入方程，求得Y值，你就可以在Excel里绘制出散点图。</li>
+</ul>
+<img src="/2015/01/19/SPSS实例：[13]检验调节变量的调节方向/cf5a8316fdfaaf51a45aadac8e5494eef01f7a2c.jpg" alt="SPSS实例：[13]检验调节变量的调节方向" title="SPSS实例：[13]检验调节变量的调节方向">
+<ul>
+<li>从上面的散点图中我们就可以看到，调节变量取不同的值得时候，自变量和因变量之间的斜率是不同的。这样你就可以看到，再什么情况下斜率比较大，也就是红色的那条线。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/13/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/15/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

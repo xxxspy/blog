@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="SPSS实例：[5]龙骨图（聚类谱系图）怎么看"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>SPSS实例：[5]龙骨图（聚类谱系图）怎么看 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/">
+                SPSS实例：[5]龙骨图（聚类谱系图）怎么看
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>通常在层次聚类分析中，我们的数据处理结果会出现龙骨图或者叫做分类谱系图，其实在很多论文中，我们不需要报告龙骨图，所以大部分spss课本中并没有对龙骨图进行详细的介绍，在这，我给大家分享一篇经验，讲一下如何分析龙骨图（聚类谱系图）。</p>
+<ul>
+<li>两种样式的龙骨图，如图所示：下面第一幅图是spss20.0的样式，而在低版本中，spss出现的龙骨图是下面第二幅图的样式，不管哪种样式，分析的方法都是一样的。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/08b68e529822720e31c034317acb0a46f31fabb4.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/3bb22487e950352a98abf2c35243fbf2b0118bf0.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>龙骨图的本质是让我们看到聚类的过程：为了清晰可见，我们使用spss20.0产生的龙骨图，最左侧一列数字代表不同的省份，对省份进行分类，第一次分类结果是从各个数字延伸出来的直线相交点，如图所示，红色方框就是第一次聚类产生的类别。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/c8ab0bce36d3d539eed6d9083b87e950372ab0d7.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>同样的方式，我们看第二次聚类的结果为，假如我问你，第一个类别包含哪些省份？你应该能够说出来，应当是山西、江西、内蒙、吉林、安徽。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/245e8bcad1c8a78671bb9cc56609c93d71cf502d.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>横断法观察分类个数：通常我们使用一条线截断分类线来获得分类结果，如图所示。画一条竖直的直线，与分类线相交，我们看到出现了5个交点，所以应该是分成五类，而我们看最上面一条刻度线，红线与刻度线相交的点就是类间距离。分成五类的类间距离就是8。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/6a22e8246b600c33c2530e031b4c510fd8f9a190.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>类间距离的计算方法有很多种，通常使用的是组间平均距离法师最稳健的方法，所以通常我们说类间距离的时候说的都是组间平均距离，它指的是各组数据点两两之间的距离的平均。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/6f4703950a7b02086510ef2a63d9f2d3552cc8e5.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="spss协方差分析如何进行事后两两比较"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>spss协方差分析如何进行事后两两比较 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/08/03/spss协方差分析如何进行事后两两比较/">
+                spss协方差分析如何进行事后两两比较
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p> 在进行两两比较之前，我们最后先做一个协方差分析，在前面的文章讲了如何进行协方差分析，如果写反差分析显示出来了显著的结果，然后再进行两两的事后检验，下面是具体的过程：<br>方法/步骤</p>
+<ul>
+<li>先进行协方差分析，结果如果达到了显著水平，在进行两两比较，在菜单栏上执行analyze–general linear model–univariate</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/377adab44aed2e73568980d58701a18b86d6fae3.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>将自变量、因变量、斜变量都放到相应的位置，这里评定得分是因变量，培训方式是自变量、家庭指数是斜变量</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/37d12f2eb9389b501ecbe6ab8535e5dde7116e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击options按钮，进入子对话框</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/f2deb48f8c5494ee911609e02df5e0fe99257e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>将培训方式，也就是自变量放到右侧的列表里，勾选下面的描述统计和方差齐性检验，点击继续按钮</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/dc54564e9258d109c1d7af4bd158ccbf6c814d16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击model按钮，选择模型</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/a71ea8d3fd1f413416030387251f95cad1c85e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>选择full factorial，然后点击continue按钮，返回主对话框</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/c83d70cf3bc79f3d76d5e2c9baa1cd11728b2916.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击paste按钮，进入命令编辑窗口</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/b3119313b07eca8051663f1e912397dda04483e3.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>在这里你会看到很多代码，我们留下前三行，如图所示，然后删除其他的行</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/b7fd5266d01609240011a4e2d40735fae6cd3416.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>编辑下面的六行代码，使用的是lmatrix命令，我们知道培训方式有三个水平，所以要进行三次两两比较才能将所有的水平进行比较。</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/d50735fae6cd7b892f583c7a0f2442a7d9330e16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li>点击运行按钮，开始处理数据</li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/9a504fc2d5628535b183d4d890ef76c6a6ef63e3.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<ul>
+<li><p>在出来的结果中，我们主要看的是定制假设检验，因为上面的命令中用了三次LMATRIX，所以会有三个定制假设检验，我们主要看下面的sig值，如图所示，这个值小于0.05就可以认为是有差异的</p>
+</li>
+<li></li>
+</ul>
+<img src="/2015/08/03/spss协方差分析如何进行事后两两比较/5bafa40f4bfbfbed6b6d308678f0f736afc31f16.jpg" alt="spss协方差分析如何进行事后两两比较" title="spss协方差分析如何进行事后两两比较">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/spss/">#spss</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

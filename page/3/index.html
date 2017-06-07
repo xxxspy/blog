@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="DataScience"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>page - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+            <h1 id="main-title" class="title">DataScience</h1>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/">
+                spss多项选择题（多重反应）如何做交互分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们经常做的是单项选择题的交互分析，现在有一个多项选择题，怎么知道别的变量对这个变量有影响呢？那就需要使用下面这个方法，对多重反应做交互分析，下面的一个例子就是分析性别对信息来源的选择有没有影响，信息来源就是一个多重选择题。<br>方法/步骤</p>
+<ul>
+<li>在做交互分析以前先要做数据集，如图所示，在菜单栏上执行：analyze–multiple response–define</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/aa64034f78f0f736690748f10a55b319eac41340.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>将所有选项构成的变量都放到变量集列表中</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/e61190ef76c6a7ef941cafd6fdfaaf51f3de6603.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>设定这些题中有几个分类，如果是是否型的勾选【dichotomies】</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/f2deb48f8c5494ee921808e92df5e0fe99257e03.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>填写数据集的名称和标签，点击添加按钮，数据集定义完成</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/5d6034a85edf8db1a7147b940923dd54564e7403.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>在菜单栏上执行：analyze–multiple response–crosstable</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/8ad4b31c8701a18b641216bf9e2f07082938fe41.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>将刚才定义好的数据集放到row列表，将性别变量放到column列表</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/cdbf6c81800a19d8c63983f533fa828ba61e4603.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>选中性别，定义一下这个变量，点击define ranges</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/a8014c086e061d95e5bf33c87bf40ad163d9ca41.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>因为性别变量就是1和2，所以输入最大值和最小值，然后点击continue按钮</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/a8ec8a13632762d00cc7a04fa0ec08fa503dc641.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>回到这个对话框，点击options按钮，定义输出结果</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/91529822720e0cf3d80f4a0b0a46f21fbf09aa41.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>这里需要勾选输出列变量的百分比，所以选中column，点击continue按钮</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/730e0cf3d7ca7bcb1b83c3dfbe096b63f724a841.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>回到这个对话框，点击ok按钮，开始输出结果</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/a5c27d1ed21b0ef4b9d29faeddc451da81cb3e03.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li><p>分析这个结果，我们看到男女比例基本上没有太大的差别，所以性别和信息来源这两个变量没有交互作用</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/6a600c338744ebf8008960cfd9f9d72a6159a741.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/">
+                spss20.0中excel和txt格式的数据如何导入
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>excel和txt是我们存放数据的两种基本格式，这两种格式不能在spss中直接打开，需要我们进行设置，尤其是txt文件，因为它的数据组织形式很多，spss需要进行更多的设置才能成功导入数据，下面分别介绍了导入excel和txt文件的方法。<br>方法一：导入excel数据</p>
+<ul>
+<li>打开spss，然后在菜单栏上执行：file–open–data</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/9345d688d43f8794c79d10abd21b0ef41ad53ad0.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>打开open data对话框，选择files type为excel，否则你看不到excel文件</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/d53f8794a4c27d1eb74463411bd5ad6edcc438d0.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>选中你要导入的excel，然后点击open按钮</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/f703738da97739122854dde4f8198618377ae2c1.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>因为excel文件中有很多工作表，我们需要选择你要导入的工作表</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/80cb39dbb6fd5266bf496491ab18972bd50736d0.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>这接着我们看到这里问你变量名是否包含在excel数据中，假如excel表格中有标题，我们就勾选这个选项，假如表格没有标题，直接就是数据，那么不需要勾选这个选项，点击ok按钮</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/38dbb6fd5266d016797bc6ad972bd40734fa35d0.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li><p>我们可以看到数据导入成功，并且变量名设置成了excel的表格的标题</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/8718367adab44aed8c3ce661b31c8701a08bfbc1.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<p>方法二：导入txt数据</p>
+<ul>
+<li>打开spss ，在菜单栏上执行：file–open–data</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/a686c9177f3e6709861a1e7a3bc79f3df8dc5518.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>选择文件类型为text</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/9e3df8dcd100baa19b361c3e4710b912c8fc2e18.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>找到要导入的数据，然后点击open按钮</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/7af40ad162d9f2d3ef027f6aa9ec8a136327cc20.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>打开一个对话框，先选择是否预先设定的格式，我们没有预定的格式，否则你也不会看到这个文章，勾选no，然后点击next</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/f3d3572c11dfa9ec313d0d9262d0f703918fc120.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>选择你的变量是如何组织的，我们看看excel中的数据，一个变量和另一个变量中间隔着一个空格，所以我们要选择格式的时候选择第一个【delimited】，任意的一种符号隔开的数据都要选择这个选项</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/b812c8fcc3cec3fda124fcf0d688d43f87942718.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/8b13632762d0f7032ea1ce5908fa513d2697c520.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>接着打开一个对话框，设置你的第一条数据是从第几行开始的，我们刚才看到txt中的数据了，是从第一行开始的，所以填写1</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/908fa0ec08fa513de5b9375b3d6d55fbb2fbd920.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>接着你要设置你的数据是如何呈现的，一般就死每一行一个case，也就是txt文件中，一行存放一条数据</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/d31b0ef41bd5ad6eb5e33f6f81cb39dbb6fd3c18.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>最后选择要导入多少数据，勾选【all of the cases】，意思是导入所有的数据</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/38dbb6fd5266d0166603c5ad972bd40735fa3518.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>选择哪个符号将数据隔开了，在本案例中，是空格隔开了数据，所以选择space或者tab</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/21a4462309f79052570c1cbb0cf3d7ca7bcbd520.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li><p>最后设定变量的名称，从data preview中选择一个变量，然后在变量名称这一栏填写变量的名称，依此方法给所有的变量都命名，最后点击finish完成数据的导入。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/962bd40735fae6cd0eaef0e40fb30f2442a70f18.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/0df3d7ca7bcb0a462731d0bc6b63f6246b60af20.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/f31fbe096b63f624b24e62868744ebf81a4ca320.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/">
+                spss多重线性回归逐步回归法操作和结果解释方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss经常用到的一个回归方法是stepwise，也就是逐步回归，它指的是每次只纳入或者移除一个变量进入模型， 这个方法虽然好用，但是最后可能出现几个模型都比较合适，你就要比较这几个模型的优劣，这是个麻烦事，这里就给大家简单的分析分析。<br>方法/步骤</p>
+<ul>
+<li>打开spss以后，打开数据，这些都准备好了以后，我们开始拟合方程，在菜单栏上执行：analyze—regression—linear，打开回归拟合对话框</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/728da9773912b31b8e3533ca8618367adbb4e1fc.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li>在这里，我们将因变量放大dependent栏，将自变量都放到independent栏</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/21a4462309f79052ea3eb9dd0cf3d7ca7bcbd534.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li>将method设置为stepwise，这就是逐步回归法</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/359b033b5bb5c9ea99d2fd00d539b6003af3b334.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li>点击ok按钮，开始输出拟合结果</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/5243fbf2b21193132a1a015365380cd790238dfc.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li>我们看到的第一个表格是变量进入和移除的情况，因为这个模型拟合的比较好，所以我们看变量只有进入没有移除，但大部分的时候变量是有进有出的，在移除的变量这一栏也应该有变量的</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/728da9773912b31b8e2c33ca8618367adbb4e195.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li>第二个表格是模型的概况，我们看到下图中标出来的四个参数，分别是负相关系数、决定系数、校正决定系数、随机误差的估计值，这些值（除了随机误差的估计值）都是越大表明模型的效果越好，根据比较，第四个模型应该是最好的</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/d4628535e5dde7112e8bbd15a7efce1b9c1661fc.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li><p>方差分析表，四个模型都给出了方差分析的结果，这个表格可以检验是否所有偏回归系数全为0，sig值小于0.05可以证明模型的偏回归系数至少有一个不为零</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/63d0f703918fa0ec6c879aee269759ee3c6ddb95.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li><p>参数的检验，这个表格给出了对偏回归系数和标准偏回归系数的检验，偏回归系数用于不同模型的比较，标准偏回归系数用于同一个模型的不同系数的检验，其值越大表明对因变量的影响越大。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/241f95cad1c8a7862673b4ed6709c93d71cf50fc.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/05/spss如何检验残差是否符合正态分布/">
+                spss如何检验残差是否符合正态分布
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在做回归的时候，残差的分布必须是正态分布，否则就会使得得到的回归方程没有任何实际的意义。在检验残差的分布是否为正态的时候，我们要用到pp图和直方图，下面就是我们做pp图和直方图的方法，还附有对这两种图的分析方法。<br>方法/步骤</p>
+<ul>
+<li>在菜单栏上执行：分析–回归–线性，打开线性回归对话框</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/e7cd7b899e510fb3fc5ab174d933c895d0430c96.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li>将自变量和因变量都放到各自的位置，如图所示，dependent栏是因变量，independent是自变量栏</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/58ee3d6d55fbb2fb00a49ef14f4a20a44723dc42.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li><p>设置好变量以后，我们点击plots按钮，设置一下要绘制的图形</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/faedab64034f78f0f4955c1079310a55b2191cb2.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li>将y轴设置为概率，将x轴设置为残差，如图所示</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/b7003af33a87e9505ebe358f10385343faf2b4ac.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li>勾选直方图和pp图，如图所示，这样才可以输出这两个图，点击continue按钮返回主菜单</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/3b87e950352ac65c7daca090fbf2b21192138aac.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li>点击ok按钮，开始输出数据</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/4610b912c8fcc3ce14990fd09245d688d53f20fc.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li>我们先来看直方图，这个图形中你要看这个图形分布是否符合正态分布的样子，其实正态分布只是要求数据大概符合正态，下面这个样子就大概可以认为数据是符合正态分布的</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/b17eca8065380cd7e7b7640ea144ad34588281ac.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li><p>pp图要看点和线的关系，如果点都围绕在线的周围，如图所示，就可以认为数据是符合正态分布的，这也是一个大概的检验方法，因为线性回归没有对残差的分布形态做出特别严格的要求，只要大概符合就可以了。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/0d338744ebf81a4c08bd2a2ad72a6059242da642.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/01/vba批量重命名 复制 删除文件夹：[6]Excel2013/">
+                vba批量重命名 复制 删除文件夹：[6]Excel2013
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用Excel中的vba可以帮助我们批量的处理一些文件和文件夹，比如vba批量重命名移动复制删除文件夹，今天我们就来分享几个简单的程序，大家看一下就能懂，帮助我们批量的vba批量重命名移动复制删除文件夹，下面是具体的教程：</p>
+<ul>
+<li>dir函数判断文件夹是否存在：dir函数有两个参数，一个是文件夹的路径，第二个参数见下面第二幅图，他的意义已经在后面标注出来。下面这段程序的意思是如果在本Excel路径下没有找到文件夹“新建文件夹（2）”，那么就弹出消息框说没有该文件夹。</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/2f9cbdcc7cd98d10397b1a5c203fb80e7aec90f4.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/77485536acaf2edd96315f848c1001e93801935f.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>mkdir函数可以创建文件夹：如图所示，它只有一个参数就是文件的路径，我们使用了本工作簿的路径，如图所示</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/4abae5edab64034fca54d36baec379310b551d86.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>rmdir函数可以删除文件夹：如图所示它只有一个参数，那就是文件夹的路径，它的一个应用案例如图所示：注意这个函数只能删除空文件夹，如果文件夹中有文件，那么函数就会提示错误</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/29790130e924b899710769556f061d950a7bf661.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>name函数重命名文件夹或者文件：它其实包括两个部分，As的前面是我们要命名的文件夹路径，As后面是命名后的文件夹路径</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/5af4d7ea15ce36d3c127905d3bf33a87e950b178.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>name函数移动文件夹或者文家：和上面的用法一样，只不过在写As后面的路径的时候我们把路径改成想要移动到的位置，比如对上面的代码进行修改就变成了移动文件夹：</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/0862c354564e92588f2d94839d82d158ccbf4e06.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>使用filesystemobject对象来复制文件夹：注意这个写法有些不同，首先要创建一个对象，然后才能使用它的方法，copyfolder方法也有两个参数，两个参数用逗号隔开，前面是要复制的文件夹，后面是复制得到的文件夹路径</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/245e8bcad1c8a786ba0f57636609c93d70cf5072.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<ul>
+<li>使用shell打开文件夹：我们用到了explore.exe应用程序，注意其后面有一个空格不能省略，后面是文件夹的路径，注意使用引号，然后最后是一个逗号和参数，各个参数不同，你自己尝试一下</li>
+</ul>
+<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/bd7faf3533fa828bcef3818efc1f4134960a5a4f.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/23/SPSS实例：[10]分割数据的方法/">
+                SPSS实例：[10]分割数据的方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我手上有一批数据，我们要分别计算本科生和专科生的性别、年级、年龄等变量的频率，我们可以将数据按照学历来分组，然后再进行描述性统计就能得到两个平行结果，一个是本科的一个是专科的。当然，如果我们做方差分析、回归分析，先将数据分组也一样可以得到不同人群的同样的结果。我们来看看具体的方法：</p>
+<ul>
+<li>首先我们打开数据，在菜单中执行：data–splitfile，进行数据分割</li>
+</ul>
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/0d729944ebf81a4c9674bcdbd52a6059252da61b.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
+<ul>
+<li>然后我们选择compare groups，这样可以对比两组人群（本科和专科）</li>
+</ul>
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/4a77b2af2edda3cc8f6ce83203e93901203f92dd.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
+<ul>
+<li>将学历这个变量发那个如分组列表里</li>
+</ul>
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/a28d62d98d1001e9cfb4441dba0e7bec55e797dd.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
+<ul>
+<li>点击ok，运行分组命令</li>
+</ul>
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/00a82701213fb80e825931c534d12f2eb83894dd.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
+<ul>
+<li>接着我们做一个描述性统计来看看结果</li>
+</ul>
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/c8ab0bce36d3d539637b5fd13887e950352ab01b.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
+<ul>
+<li>这是是得到的结果，我们看到数据结果分为两行，第一行是本科生，第二行是专科生。</li>
+</ul>
+<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/fab3ac119313b07e2bfb001a0ed7912397dd8c1b.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/">
+                SPSS实例：[5]龙骨图（聚类谱系图）怎么看
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>通常在层次聚类分析中，我们的数据处理结果会出现龙骨图或者叫做分类谱系图，其实在很多论文中，我们不需要报告龙骨图，所以大部分spss课本中并没有对龙骨图进行详细的介绍，在这，我给大家分享一篇经验，讲一下如何分析龙骨图（聚类谱系图）。</p>
+<ul>
+<li>两种样式的龙骨图，如图所示：下面第一幅图是spss20.0的样式，而在低版本中，spss出现的龙骨图是下面第二幅图的样式，不管哪种样式，分析的方法都是一样的。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/08b68e529822720e31c034317acb0a46f31fabb4.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/3bb22487e950352a98abf2c35243fbf2b0118bf0.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>龙骨图的本质是让我们看到聚类的过程：为了清晰可见，我们使用spss20.0产生的龙骨图，最左侧一列数字代表不同的省份，对省份进行分类，第一次分类结果是从各个数字延伸出来的直线相交点，如图所示，红色方框就是第一次聚类产生的类别。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/c8ab0bce36d3d539eed6d9083b87e950372ab0d7.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>同样的方式，我们看第二次聚类的结果为，假如我问你，第一个类别包含哪些省份？你应该能够说出来，应当是山西、江西、内蒙、吉林、安徽。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/245e8bcad1c8a78671bb9cc56609c93d71cf502d.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>横断法观察分类个数：通常我们使用一条线截断分类线来获得分类结果，如图所示。画一条竖直的直线，与分类线相交，我们看到出现了5个交点，所以应该是分成五类，而我们看最上面一条刻度线，红线与刻度线相交的点就是类间距离。分成五类的类间距离就是8。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/6a22e8246b600c33c2530e031b4c510fd8f9a190.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<ul>
+<li>类间距离的计算方法有很多种，通常使用的是组间平均距离法师最稳健的方法，所以通常我们说类间距离的时候说的都是组间平均距离，它指的是各组数据点两两之间的距离的平均。</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/6f4703950a7b02086510ef2a63d9f2d3552cc8e5.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/19/SPSS实例：[39]如何统计频率/">
+                SPSS实例：[39]如何统计频率
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如何做人口统计学变量的频数统计？这个是spss的最基本功能，很简单，但是很多刚接触spss又想很快写完论文的人都不知道，我今天就写一篇教程，讲一下如何去做，下面是具体的过程：</p>
+<ul>
+<li>先来看一下我的数据，都录入到了spss</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/a992e31f4134970a1c2c4ca997cad1c8a6865d9d.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>依次打开菜单：analyse–descriptive statistics–frequencies，打开描述性统计</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/0b07ec1fbe096b634be102d60e338744eaf8ac79.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>打开了一个对话框，我们将要统计频率的变量放入到右侧的变量框，如图所示</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/4a77b2af2edda3cc9377e4a603e93901203f9262.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>默认情况下，结果会输出频率和百分比，当然，我们还可以点击statistics，选择更多统计量</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/9dc3cf58ccbf6c81a183706ebe3eb13532fa4044.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>在这里你还可以选择最大值、最小值、四分位数等</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/32bb9c8ba61ea8d3d4962882950a304e241f5844.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>我们看一下输出的结果：这是学生专业的频率统计</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/5f9e93b1cb1349541eaab4e2544e9258d0094a44.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<ul>
+<li>这是学生年级的频率统计</li>
+</ul>
+<img src="/2016/07/19/SPSS实例：[39]如何统计频率/f15e24292df5e0fe96acd5875e6034a85fdf7244.jpg" alt="SPSS实例：[39]如何统计频率" title="SPSS实例：[39]如何统计频率">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/15/SPSS实例：[35]优势比OR计算方法/">
+                SPSS实例：[35]优势比OR计算方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>优势比OR：是一个比值的比，是反应阳性人群中试验因素有无的 比例与反应阴性人群中试验因素有无的比例之比。假如有一个实验分为对照组和实验组，OR值得计算方法就是实验组中患病人数与非患病人数之比除以对照组中患病人数与非患病人数之比。所以就是一个比值的比。</p>
+<ul>
+<li>在spss中，计算优势比OR值得方法是在交叉分析中，先打开交叉分析对话框</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/43e6c733c895d143f5d8a29471f082025baf079f.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>先将两个变量放入到对应的框中</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/42e89c26cffc1e17e411ca864890f603728de998.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>打开统计量对话框</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/b8405490f603738ddae44a95b11bb051f919ec98.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>勾选【risk】，也就是风险评估分析</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/b110e6198618367aa027396a2c738bd4b21ce598.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>结果页面中，我们看结果OR值就已经有了。不过OR值只有卡方检验显著时才是有价值的。卡方不显著时，就不用提OR值了。</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/9f6e190828381f306eb7cb1eab014c086f06f098.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/05/SPSS python教程：[2]怎样使用python代码/">
+                SPSS python教程：[2]怎样使用python代码
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>怎样在spss中使用python代码呢？有很多种方法。最简单的方法是复制别人的代码，粘贴到代码运行窗口，然后运行一下；当然大部分时间是我们自己写代码，或者我们使用自己已经编辑好的函数进行处理，总之我们这篇文章就来介绍一下我经常用到的方法。这里只是介绍一下，给你一个启示，以后的教程里我们会详细介绍各种方法，所以如果你看到这里，有些东西不懂，可以暂且不管。</p>
+<ul>
+<li>最简单的就是复制别人写好的python代码，然后稍加修改（主要是修改变量名和文件路径），然后运行一下即可。大家一定要注意，python是开源的，与之相应的是大批志愿者贡献自己的代码，所以很多时候我们都是直接从网上复制代码，拿来编辑一下就用。</li>
+</ul>
+<img src="/2016/07/05/SPSS%20python教程：[2]怎样使用python代码/faacb564034f78f0da8806657b310a55b2191c61.jpg" alt="SPSS python教程：[2]怎样使用python代码" title="SPSS python教程：[2]怎样使用python代码">
+<ul>
+<li><p>更多时候，我们要根据别人写的代码，自己再写一遍代码，当然，如果你已经有python编程经验，这很好办，否则你要先入门，尤其是python独特的书写格式，很多时候都容易让人犯错。</p>
+</li>
+<li><p>写函数：如果有一些python代码模块你经常用到，可以写成一个函数，放到py文件中，然后再调用该文件中的函数，这样就可以重复利用这个函数了。方便以后数据分析的时候使用。</p>
+</li>
+</ul>
+<img src="/2016/07/05/SPSS%20python教程：[2]怎样使用python代码/3c2c4bfbb2fb431602c0e7ec22a4462308f7d30e.jpg" alt="SPSS python教程：[2]怎样使用python代码" title="SPSS python教程：[2]怎样使用python代码">
+<ul>
+<li><p>写自己的模块：模块就是一个py文件，里面可以写函数或者类。通过引入模块，你就可以使用该模块下的所有方法和属性。增加了代码的可读性和易维护性。</p>
+</li>
+<li><p>建立一个工具栏按钮：想一下，只要你点击按钮就能执行一段python代码，替你搞定繁琐的工作。我们可以开发一个按钮，将其置于工具栏，用的时候直接点击工具栏上的按钮即可，这个我们以后会详细介绍。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+        </section>
+    </div>
+</div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="" href="/page/2/">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="" href="/page/4/">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

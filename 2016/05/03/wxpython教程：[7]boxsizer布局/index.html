@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="wxpython教程：[7]boxsizer布局"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>wxpython教程：[7]boxsizer布局 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2016/05/03/wxpython教程：[7]boxsizer布局/">
+                wxpython教程：[7]boxsizer布局
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>今天我们说一下使用boxsizer进行布局的方法，这种布局方式更适合制作有很多不同种类控件的界面。boxsizer分为横向和纵向两种，如果你想要把控件水平排列，就使用横向boxsizer，如果你想让控件都垂直排列，就使用纵向boxsizer，当然很多界面既有横向排列又有纵向排列的控件，我们就可以使用boxsizer的嵌套。</p>
+<ul>
+<li>这是我们今天用到的第一部分代码，你运行它的话就可以看到一个界面，有一个标签和文本框，他们是水平排列的。下面我们逐句解释。</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/f76575600c3387447d6a8929520fd9f9d62aa0fd.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>这三句话很简单，首先创建了一个panel面板，然后创建一个纵向box，最后创建一个横向box，我们的目的是创建一个既有横向排列的控件又有纵向排列的控件，所以先创建两个不同box，然后再让他们嵌套起来。</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/5202e5f2b211931301af59e566380cd790238dbc.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>创建一个标签，然后将标签添加到hbox1当中。flag和border结合使用，border是边框的宽度，flag表明哪一个边框。proportion是比例的意思，假如在一个横向box中有两个控件，两个控件的proportion相等，那么Frame大小改变的时候，两个控件大小保持相同。如果proportion=0，那么大小不变。<br>flag可以用的值有：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/310f3b1f95cad1c8a2455a727c3e6709c83d51ad.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/6648d73d70cf3bc794a66cb9d200baa1cc112a85.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>再向hbox1中添加一个文本框控件，注意proportion</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/a1ad16fa513d26972434a90856fbb2fb4216d845.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>最后是将横向文本框嵌套于纵向文本框。可以设置边框。目前我们还看不到为什么要做这样一个嵌套，因为控件还很少，仅有的两个控件是水平排列的。如果我们想再增加几个控件，并且控件位于这两个控件下方，我们就需要再创建一个横向box，并将横向box添加到纵向box中。</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/3790312eb9389b50818940078635e5dde7116e36.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>代码的最后是配置box：如果没有该命令，我们之前设置的sizer都是不起作用的</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/a75fb6d3fd1f41346997a52b261f95cad0c85e80.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>这是最后完成的效果：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/48151723dd54564e7e76476cb0de9c82d1584f11.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>下面我们再添加2个横向的box，并且其中增加—个控件</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/58c3acb7d0a20cf488945c8a75094b36acaf9924.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>最终的全部代码：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/a1ad16fa513d26972387aa0856fbb2fb4216d8d4.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<ul>
+<li>生成的界面：</li>
+</ul>
+<img src="/2016/05/03/wxpython教程：[7]boxsizer布局/d56b3634349b033bc6d85e8f16ce36d3d439bdd0.jpg" alt="wxpython教程：[7]boxsizer布局" title="wxpython教程：[7]boxsizer布局">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/python/">#python</a> <a href="/tags/wxpython/">#wxpython</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

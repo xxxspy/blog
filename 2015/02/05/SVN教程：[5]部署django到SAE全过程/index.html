@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="SVN教程：[5]部署django到SAE全过程"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>SVN教程：[5]部署django到SAE全过程 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2015/02/05/SVN教程：[5]部署django到SAE全过程/">
+                SVN教程：[5]部署django到SAE全过程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>之前写过一篇在SAE上部署django的教程，现在返回来看犯了很多错误，所以在这里更正一篇，希望大家见谅，其实我也不是什么高手，难免有错误，下面看看在新浪sae上部署django的完整过程吧。</p>
+<ul>
+<li>先去新浪sae上登陆，找到你建立的应用，然后点击【创建一个版本】，如果你没有创建过版本，可能只有一个版本</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/1899a23eb13533fa86fe2d63aad3fd1f40345bf7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>输入版本号，这个数字是任意的，我就按照版本3来做</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/a992e31f4134970a3a3bae6297cad1c8a6865df7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>回到Deltatest文件夹，如果你看过前面的文章就知道这个文件夹是什么，如果你没有跟着做，你看一下这篇文章就知道：<a href="http://jingyan.baidu.com/article/6525d4b135bb1dac7d2e94ad.html看完这篇文章，右键单击这个文件夹，然后选择【svn更新】" target="_blank" rel="external">http://jingyan.baidu.com/article/6525d4b135bb1dac7d2e94ad.html看完这篇文章，右键单击这个文件夹，然后选择【svn更新】</a></li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/a6c7d7177f3e6709db48fbb239c79f3df9dc55f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>更新完毕以后，你会看到这里多了一个文件夹3，这个文件夹就跟sae上的版本3相同了。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/718e25c79f3df8dcc67531dccf11728b461028f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>点击进入文件夹3，可以看到有这两个文件。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/c87c6ecf3bc79f3dee1f5a7db8a1cd11738b2945.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>打开cmd命令窗口，我们先进入文件夹3，如图所示的命令：</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/9e7ce6dcd100baa1d4d2f9f64510b912c9fc2e45.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>接着，我们在该文件夹下面创建一个新工程，比如工程名称叫做Deltatest</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/cc506c8b4710b912d53f48b3c1fdfc0393452245.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>回到文件夹3，这里就会多了一个文件夹deltatest，双击进入deltatest文件夹</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/9304c888d43f87948101f663d01b0ef41ad53a45.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>这里面还有一个Deltatest文件夹<br>这是deltatest文件夹内的文件</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/a583631ed21b0ef432a02613dfc451da80cb3ef7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/1a94b36eddc451daacbeb2a6b4fd5266d11632f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>我们将这两个文件剪切</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/aa59892bd40735fad1b8f0f49c510fb30e2408f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>复制到这里，也就是文件夹3下面</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/1f569482b9014a90afc0f8f0ab773912b21bee46.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>好了后面就简单了，我们要配置一下两个文件，第一个是index.wsgi文件，里面写这些内容：</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/6391e903918fa0ec88c3de40249759ee3d6ddb3c.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>第二个文件是config.yawm</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/9f6e190828381f30826237e4ab014c086f06f0c1.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>最后，提交一下</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/f7426d8da9773912ea023f2cfa198618367ae21c.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>注意点选【全部】，不然漏掉某些文件，你就失败了。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/79b1e936afc3793140603c64e9c4b74543a91137.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>在浏览器输入你的app的网址，看看能不能出现django的欢迎界面吧！！有问题可以在下面留言奥。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/dbf554ed2e738bd4d5690c7ca38b87d6267ff9f0.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/django/">#django</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
