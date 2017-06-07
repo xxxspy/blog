@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
     <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -171,9 +171,9 @@
     
         <div class="content">
             <h2 id="第一步：-构建潜在语义空间"><a href="#第一步：-构建潜在语义空间" class="headerlink" title="第一步： 构建潜在语义空间"></a>第一步： 构建潜在语义空间</h2><ul>
-<li><h4 id="分词：将备注信息切分成词"><a href="#分词：将备注信息切分成词" class="headerlink" title="分词：将备注信息切分成词"></a>分词：将备注信息切分成词</h4></li>
-<li><h4 id="清理：将标点符号清理掉"><a href="#清理：将标点符号清理掉" class="headerlink" title="清理：将标点符号清理掉"></a>清理：将标点符号清理掉</h4></li>
-<li><h4 id="构建词在备注信息中的词频矩阵-如："><a href="#构建词在备注信息中的词频矩阵-如：" class="headerlink" title="构建词在备注信息中的词频矩阵, 如："></a>构建词在备注信息中的词频矩阵, 如：</h4></li>
+<li>分词：将备注信息切分成词</li>
+<li>清理：将标点符号清理掉</li>
+<li>构建词在备注信息中的词频矩阵, 如：</li>
 </ul>
 <p><code>\[
     \begin{array}{c | ccc}
@@ -186,23 +186,27 @@
     \end{array}
 \]</code></p>
 <ul>
-<li><h4 id="进行加权，用tf-idf方法"><a href="#进行加权，用tf-idf方法" class="headerlink" title="进行加权，用tf-idf方法"></a>进行加权，用<code>tf-idf</code>方法</h4></li>
-<li><h5 id="根据如下公式对矩阵进行svd分解"><a href="#根据如下公式对矩阵进行svd分解" class="headerlink" title="根据如下公式对矩阵进行svd分解"></a>根据如下公式对矩阵进行svd分解</h5></li>
+<li><p>进行加权，用<code>tf-idf</code>方法</p>
+</li>
+<li><p>根据如下公式对矩阵进行svd分解</p>
+</li>
 </ul>
 <p><code>\[
 \{X\}=\{W\}\{S\}\{P\}
 \]</code></p>
 <p>如果你使用python，你可以使用<code>numpy.linalg.SVD</code>函数来做这个分解。</p>
 <ul>
-<li><h4 id="筛选对角矩阵S中最大的n个特征值，然后选出W和P中与特征值对应的特征向量，组合起来形成相应的-W-39-和-P-39"><a href="#筛选对角矩阵S中最大的n个特征值，然后选出W和P中与特征值对应的特征向量，组合起来形成相应的-W-39-和-P-39" class="headerlink" title="筛选对角矩阵S中最大的n个特征值，然后选出W和P中与特征值对应的特征向量，组合起来形成相应的\(W&#39;\)和\(P&#39;\)"></a>筛选对角矩阵<code>S</code>中最大的n个特征值，然后选出<code>W</code>和<code>P</code>中与特征值对应的特征向量，组合起来形成相应的<code>\(W&#39;\)</code>和<code>\(P&#39;\)</code></h4></li>
-<li><h4 id="最后根据公式反向计算词文矩阵X-39-，得到潜在语义空间："><a href="#最后根据公式反向计算词文矩阵X-39-，得到潜在语义空间：" class="headerlink" title="最后根据公式反向计算词文矩阵X&#39;，得到潜在语义空间："></a>最后根据公式反向计算词文矩阵<code>X&#39;</code>，得到潜在语义空间：</h4></li>
+<li><p>筛选对角矩阵<code>S</code>中最大的n个特征值，然后选出<code>W</code>和<code>P</code>中与特征值对应的特征向量，组合起来形成相应的<code>\(W&#39;\)</code>和<code>\(P&#39;\)</code></p>
+</li>
+<li><p>最后根据公式反向计算词文矩阵<code>X&#39;</code>，得到潜在语义空间：</p>
+</li>
 </ul>
 <p><code>\[
 \{W&#39;\}\{S&#39;\}\{P&#39;\}=\{X&#39;\}
 \]</code></p>
 <p>得到的X’矩阵中，每一行都是一个词向量。</p>
 <ul>
-<li><h4 id="求备注向量"><a href="#求备注向量" class="headerlink" title="求备注向量"></a>求备注向量</h4></li>
+<li>求备注向量</li>
 </ul>
 <p>在原始的词频矩阵X中，每一列代表一个备注中，词的词频，我们把它叫做备注的词频向量——<code>\(V_i\)</code>，其中下标<code>i</code>表示第i<br>个备注。由于在上一步中我们求得了每个词的语义向量。所以备注的词频向量就可以转换成词所在的语义空间向量<code>\(V&#39;_i\)</code>。让向量<code>\(w_j\)</code>表示X’中j词的语义向量。假如矩阵中有n个词。</p>
 <p><code>\[
@@ -583,7 +587,23 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
     </ul>
 </div>
 
+            
         </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <ul class="list-inline footer-social-icons">
