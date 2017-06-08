@@ -155,6 +155,95 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">
+                探索过程数据在全球大规模机器考试中的应用
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017年06月08日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            
+
+	<div class="row">
+    <embed src="/pdfs/探索过程数据在全球大规模机器考试中的应用.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2017/06/08/selenim数据采集入门-for-psychologist/">
+                selenim数据采集入门(for psychologist)
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017年06月08日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>本篇文章主要用于向非技术人员介绍如何使用python-selenium来简单的采集网页数据的方法。本篇文章用的python版本是3.5 64位，安装32位还是64位python主要看你的系统，如果你的系统是64位，你安装两种版本都可以，但是如果你的系统是32位，你只能选择32的python，chrome-webdriver的下载链接会附的后面。</p>
+<h3 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h3><h4 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h4><p>非常简单，就是一路下一步即可。重点是你要记录下python安装在哪里，一会要用到。</p>
+<h4 id="安装selenium"><a href="#安装selenium" class="headerlink" title="安装selenium"></a>安装selenium</h4><p>打开Windows的dos窗口，输入如下命令，然后回车</p>
+<p><code>pip install -U selenium</code></p>
+<h4 id="安装浏览器驱动器"><a href="#安装浏览器驱动器" class="headerlink" title="安装浏览器驱动器"></a>安装浏览器驱动器</h4><p>首先，你自己要去安装最新的chrome浏览器，这个不在这里介绍。</p>
+<p>第二步，从这里下载chrome浏览器的驱动器，链接：<a href="http://pan.baidu.com/s/1pKUyrAr" target="_blank" rel="external">http://pan.baidu.com/s/1pKUyrAr</a> 密码：390v</p>
+<p>你会得到一个<code>chromedriver.exe</code>文件，不需要安装，但是你得把它放到python能找到它的地方，你可以通过下图的方式找到python安装在哪里，如图所示，<code>C:\Users\wangluobu\AppData\Local\Programs\Python\Python35\Scripts\</code>就是我要找的位置，我就把<code>chromedriver.exe</code>放到这个目录下。</p>
+<img src="/2017/06/08/selenim数据采集入门-for-psychologist/find-python.jpg" alt="find-python" title="find-python">
+<p>第三步， 测试是否能从python启动chrome浏览器。</p>
+<p>新建一个python程序文件，任何一个以<code>.py</code>结尾的文本文件都可以，你可以把一个记事本文件的后缀名改为<code>py</code>，创建好该文件后，右键单击该文件，选择<code>Edit With IDLE</code>，输入如下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> selenium</div><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line">driver=webdriver.Chrome()</div><div class="line">driver.get(<span class="string">"http://mlln.cn/"</span>)</div></pre></td></tr></table></figure>
+<p>代码填好了，按下快捷键<code>F5</code>就应该能看到chrome浏览器打开，并定位到网站<code>mlln.cn</code>。</p>
+<h3 id="chrome网页调试工具"><a href="#chrome网页调试工具" class="headerlink" title="chrome网页调试工具"></a>chrome网页调试工具</h3><p>网页开发人员经常会用调试工具来查看网页的源码。chrome浏览器自带调试工具，用chrome打开网址<code>mlln.cn</code>，然后按下F2可以看到调试工具。</p>
+<p>你要会定位一个网页元素，进而查看它的源码。使用这个位于左上角的小工具，点击它。</p>
+<img src="/2017/06/08/selenim数据采集入门-for-psychologist/debug-tools1.jpg" alt="debug-tools1.jpg" title="">
+<p>然后点击网页上的标题，你会再代码窗口看到网页标题对应的代码。</p>
+<img src="/2017/06/08/selenim数据采集入门-for-psychologist/debug-tools2.jpg" alt="debug-tools2.jpg" title="">
+<p>假如现在我们想要采集的数据就是该网页的标题，我们需要写一个python脚本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> selenium</div><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line">driver=webdriver.Chrome()</div><div class="line">driver.get(<span class="string">"http://mlln.cn/"</span>)</div><div class="line">h1 = driver.find_element_by_id(<span class="string">'main-title'</span>)  <span class="comment"># 根据id获取元素H1</span></div><div class="line">print(h1.text)  <span class="comment">#打印H1标签内的文本</span></div></pre></td></tr></table></figure>
+<p>你现在知道了，只有配合网页调试工具，我们才能知道我们要的数据在哪里。</p>
+<h3 id="selenium-入门"><a href="#selenium-入门" class="headerlink" title="selenium 入门"></a>selenium 入门</h3><p>使用selenium需要有网页制作的基础知识，也就是要懂HTML，遇到复杂的问题可以根据HTML知识来解决，如果你不懂HTML，你可以花两天时间了解一下。</p>
+<h4 id="定位元素"><a href="#定位元素" class="headerlink" title="定位元素"></a>定位元素</h4><p>selenium提供了多种方法帮你找到你要的数据。这个列表就是所有：</p>
+<p>定位单个元素的方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">find_element_by_id  <span class="comment">#我们刚才用的就是这个方法</span></div><div class="line">find_element_by_name</div><div class="line">find_element_by_xpath</div><div class="line">find_element_by_link_text</div><div class="line">find_element_by_partial_link_text</div><div class="line">find_element_by_tag_name</div><div class="line">find_element_by_class_name</div><div class="line">find_element_by_css_selector</div></pre></td></tr></table></figure>
+<p>定位多个元素的方法，这些方法都返回一个列表：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">find_elements_by_name</div><div class="line">find_elements_by_xpath</div><div class="line">find_elements_by_link_text</div><div class="line">find_elements_by_partial_link_text</div><div class="line">find_elements_by_tag_name</div><div class="line">find_elements_by_class_name</div><div class="line">find_elements_by_css_selector</div></pre></td></tr></table></figure>
+<h4 id="常用方法举例"><a href="#常用方法举例" class="headerlink" title="常用方法举例"></a>常用方法举例</h4><h4 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h4><h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<li>下载chrome浏览器的驱动器，链接：<a href="http://pan.baidu.com/s/1pKUyrAr" target="_blank" rel="external">http://pan.baidu.com/s/1pKUyrAr</a> 密码：390v</li>
+</ul>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2017/06/05/抽样系统备注文本信息自动化分类器/">
                 抽样系统备注文本信息自动化分类器
             </a>
@@ -956,125 +1045,6 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/10/19/numpy函数：[12]数组切片/">
-                numpy函数：[12]数组切片
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年10月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我们可以向使用列表切片一样使用数组切片，如果会使用liest切片，那么这篇文章就是温习一下而已，下面我们来看看具体的数组切片是如何使用的。</p>
-<ul>
-<li>从numpy中引入所有</li>
-</ul>
-<img src="/2016/10/19/numpy函数：[12]数组切片/c71d0e385343fbf21a8108bcb27eca8064388f45.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<ul>
-<li>创建一个包含10个元素的一位数组</li>
-</ul>
-<img src="/2016/10/19/numpy函数：[12]数组切片/d1571724ab18972bf1a4ae55e4cd7b899f510a57.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<ul>
-<li>我们可以使用一个下标获取数组中相应的值，也可以更改它的值</li>
-</ul>
-<img src="/2016/10/19/numpy函数：[12]数组切片/b3508d13b07eca80c9a89778932397dda0448345.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<ul>
-<li>使用冒号获取连续的几个元素，如获取第四个到第五个元素</li>
-</ul>
-<img src="/2016/10/19/numpy函数：[12]数组切片/34bbf8cd7b899e512510948b40a7d933c9950d57.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<ul>
-<li>省略冒号前的数字，表示从头开始</li>
-</ul>
-<img src="/2016/10/19/numpy函数：[12]数组切片/43e6c733c895d1439de84abc71f082025baf0757.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<ul>
-<li>使用负数表示从后往前数，-1表示从后往前数第一个数</li>
-</ul>
-<img src="/2016/10/19/numpy函数：[12]数组切片/30ecd5ef76094b36163fb572a1cc7cd98c109d45.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<ul>
-<li>-2表示从后往前第二个，以此类推</li>
-</ul>
-<img src="/2016/10/19/numpy函数：[12]数组切片/a28d62d98d1001e9f991ba90ba0e7bec55e79745.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<img src="/2016/10/19/numpy函数：[12]数组切片/b258f5c4b74543a9c18554531c178a82b8011457.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<ul>
-<li>还可以设置步长来读取数组元素</li>
-</ul>
-<img src="/2016/10/19/numpy函数：[12]数组切片/b6045da98226cffc5bb4112dbb014a90f703ea50.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<ul>
-<li>步长为-1，其他参数不设置，就是将数组进行了倒序排列</li>
-</ul>
-<img src="/2016/10/19/numpy函数：[12]数组切片/1f569482b9014a90bfa0e822ab773912b21bee50.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<ul>
-<li>使用负数步长需要让第一个下表大于第二个下标</li>
-</ul>
-<img src="/2016/10/19/numpy函数：[12]数组切片/a005b3345982b2b7635e905b33adcbef77099b29.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/">
-                numpy函数：[8]logspace()创建等比数列数组
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年10月17日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>上一篇介绍了numpy.linspace用于创建等差数列，现在介绍logspace用于创建等比数列。其实用法差不多，但是有一个特殊的地方需要注意。</p>
-<ul>
-<li>先来看一个例子，我们让开始点位0，结束点为0，元素个数为10，看看输出结果。为什么是酱紫呢？难道不都是0么？</li>
-</ul>
-<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/a992e31f4134970ad07f90b297cad1c8a6865de4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
-<ul>
-<li>因为logspace中，开始点和结束点是10的幂，0代表10的0次方，9代表10的9次方。我们看看下面的例子。<br>】</li>
-</ul>
-<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/964b2e4e251f95ca32f9122bcb177f3e660952e4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
-<ul>
-<li>假如，我们想要改变基数，不让它以10为底数，我们可以改变base参数，将其设置为2试试</li>
-</ul>
-<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/d089b986c9177f3e80387c9072cf3bc79e3d56e4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
-<ul>
-<li>假如我们想要不包含结束点，可以设置endpoint为0</li>
-</ul>
-<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/c87c6ecf3bc79f3d14ed64adb8a1cd11738b29e4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1117,19 +1087,19 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

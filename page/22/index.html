@@ -155,6 +155,141 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/10/03/python教程：[74]列表排序/">
+                python教程：[74]列表排序
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>列表排序，做数据经常用到的一个方法，在python中想实现排序有时候觉得挺难，比如按照行排序或按照列排序，写起来都不简单，今天在这里总结一下在python中实现排序的所有方法，如有不全，请下面留言。</p>
+<ul>
+<li>最简单的排序莫过于直接使用sort对一维的列表排序，创建一个列表</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/1cd4147b02087bf4bfd92fddf1d3572c11dfcf8a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<ul>
+<li>使用sort就地排序（就地排序就是改变了原始list的排序，而sorted不改变原始list数据）</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/29790130e924b899073c010c6d061d950a7bf647.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<ul>
+<li>可以使用reverse参数进行反向排序。</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/a84052086e061d95b8464f0c78f40ad162d9ca47.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<ul>
+<li>创建一个二维列表</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/425773224f4a20a48a2b44f393529822720ed08a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<ul>
+<li>使用operator进行排序，还是sort方法，使用key参数，下面根据第二列数据排序</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/8b527d2762d0f7032eb2ede80bfa513d2697c547.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<ul>
+<li>多维排序，先根据第一列排序，然而第二列，然后第三列</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/425773224f4a20a48a1e44f393529822720ed047.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<ul>
+<li>lambda用于写匿名函数，根据第二列数据排序，x表示列表中的元素，x[1]表示元素中的第二个值</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/eab9044c510fd9f937222d5d262dd42a2834a48a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<ul>
+<li>反向排序</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/d56b3634349b033bbcbd84ee16ce36d3d539bd8a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<ul>
+<li>元组排序和list排序一样，当然还可以对object构成的列表排序，下面创建一个元组构成的列表</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/3792cb39b6003af3d48fa454362ac65c1038b68a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<ul>
+<li>使用operator</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/3bc6f750352ac65ce2301e47f8f2b21193138a8a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<ul>
+<li>使用lambda</li>
+</ul>
+<img src="/2015/10/03/python教程：[74]列表排序/35da1d3b5bb5c9eafcf37bd7d639b6003af3b347.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/">
+                Excel2013：[2]从单元格批量创建文件夹
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天要给每个一学生整理一个文件夹，存放他们的资料，我看了看Excel里的名单，好家伙，100多个名单，要创建100多个文件夹，累挺。我只能用程序来创建了，其实Excel可以帮助我们干很多事情，现在就让你知道，它还能写程序。当然你不懂代码也能做啦，不信就看看。</p>
+<ul>
+<li>假如，我们要给每个一名字创建一个文件夹</li>
+</ul>
+<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/83cab81ea8d3fd1f6383e629324e251f94ca5fdf.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
+<ul>
+<li>在B1输入公式=”MD “ &amp; A1  ，注意这个公式中，MD后面还有一个额空格，公式的意思就是在名字前面增加了一个MD和空格</li>
+</ul>
+<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/faacb564034f78f092e4dee07b310a55b2191cf2.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
+<ul>
+<li>向下拖拽，快速填充所有的行</li>
+</ul>
+<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/c856613e6709c93d5d784ae49d3df8dcd00054df.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
+<ul>
+<li>我们会看到生成这么一列，我们需要将其复制下来</li>
+</ul>
+<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/4bd1e803738da9774fc0c238b251f8198718e3f3.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
+<ul>
+<li>粘贴到文本文件里，然后保存为bat文件</li>
+</ul>
+<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/310f3b1f95cad1c88f62b8347d3e6709c83d518c.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
+<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/6648d73d70cf3bc7b0d989ffd300baa1cc112a8c.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
+<ul>
+<li>我们看到这个文件就在这里呢，双击打开运行</li>
+</ul>
+<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/e78c65899e510fb35b243084db33c895d1430ca0.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
+<ul>
+<li>批量创建的文件夹就在这里喽。</li>
+</ul>
+<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/43e6c733c895d143f44ba33071f082025aaf07a0.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/10/01/python 线性代数：[11]判断正定矩阵/">
                 python 线性代数：[11]判断正定矩阵
             </a>
@@ -937,129 +1072,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/19/excel如何打印特定的行/">
-                excel如何打印特定的行
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>在excel打印的时候，有些行我们不想要打印，我们有两个办法，一是隐藏行，二是给行建立组合，下面提供了这两种方法的具体操作，你会发现第二种方法更加的简单。<br>方法/步骤</p>
-<ul>
-<li>我们看到，黄色的行是不需要打印的，怎么办</li>
-</ul>
-<img src="/2015/09/19/excel如何打印特定的行/7e3e6709c93d70cf965a8df2f8dcd100bba12ba8.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
-<ul>
-<li>我们先选中一行，比如选中第二行，然后在菜单栏上执行：经典菜单–格式–行–隐藏行</li>
-</ul>
-<img src="/2015/09/19/excel如何打印特定的行/6f061d950a7b02086b97181e62d9f2d3562cc8f6.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
-<ul>
-<li>行隐藏了以后，我们接着选中第二个要隐藏的行，然后按下F4即可重复上面的操作，这样我们可以快速的隐藏所有的行</li>
-</ul>
-<img src="/2015/09/19/excel如何打印特定的行/a044ad345982b2b78d0e1e3b31adcbef77099bbf.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
-<ul>
-<li>通过打印预览你可以看到，隐藏的行都不能被打印了。</li>
-</ul>
-<img src="/2015/09/19/excel如何打印特定的行/42a98226cffc1e176503abce4a90f603728de995.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
-<ul>
-<li>想要恢复隐藏的行可以选中所有的行以后，在菜单栏上执行：格式–行–取消隐藏</li>
-</ul>
-<img src="/2015/09/19/excel如何打印特定的行/b151f8198618367a212958222e738bd4b21ce5a9.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
-<ul>
-<li>上面这种方法有一个弊端，就是你每次都得隐藏和取消隐藏行，非常麻烦，下面我们讲个更加简单的方法，比如下面的数据，我们仍然要隐藏黄色的行，可以选中这一行，然后同时按下alt+shift+→   ，这样就可以看到左侧多了一个空白区域</li>
-</ul>
-<img src="/2015/09/19/excel如何打印特定的行/4bed2e738bd4b31c879fb34487d6277f9f2ff8a9.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
-<ul>
-<li>同样的方法，给所有的行都添加一个组合</li>
-</ul>
-<img src="/2015/09/19/excel如何打印特定的行/c75c10385343fbf2e37281dcb07eca8064388ff6.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
-<ul>
-<li>想要隐藏黄色的行，你只要点击按钮1，如图所示</li>
-</ul>
-<img src="/2015/09/19/excel如何打印特定的行/3c6d55fbb2fb431648bc5d8520a4462308f7d3a9.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
-<ul>
-<li><p>想要展开所有的行你只要点击按钮2，这样你就可以快速的转换两种模式了</p>
-</li>
-<li></li>
-</ul>
-<img src="/2015/09/19/excel如何打印特定的行/f603918fa0ec08fa4fa3345859ee3d6d54fbdaa9.jpg" alt="excel如何打印特定的行" title="excel如何打印特定的行">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/19/spss如何检验残差的方差齐性/">
-                spss如何检验残差的方差齐性
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>残差的方差齐性是回归分析要满足的一个条件， 通常我们要用散点图来检验残差的方差齐性，根据散点图可以看到标准化的残差随着估计值的变化趋势，下面是具体的分析方法：<br>工具/原料</p>
-<ul>
-<li>spss20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>打开线性回归的对话框：analyse–regression–linear</li>
-</ul>
-<img src="/2015/09/19/spss如何检验残差的方差齐性/35a85edf8db1cb137eac61d7dd54564e93584b28.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
-<ul>
-<li>在回归分析中， 将GDP作为因变量，其他的变量可以作为自变量，将这些变量放入各自的框中</li>
-</ul>
-<img src="/2015/09/19/spss如何检验残差的方差齐性/f11f3a292df5e0feb66ad5c55c6034a85fdf7287.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
-<ul>
-<li>点击plot按钮，打开图标的设置对话框</li>
-</ul>
-<img src="/2015/09/19/spss如何检验残差的方差齐性/34fae6cd7b899e5173eb66d042a7d933c9950d88.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
-<ul>
-<li>将如图所示的选项勾选，这是散点图，我们可以看到残差随着估计值的变化趋势</li>
-</ul>
-<img src="/2015/09/19/spss如何检验残差的方差齐性/3b87e950352ac65ce7413ab7fbf2b21192138aaa.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
-<ul>
-<li>我们看到这就是需要的散点图，纵坐标是标准化的参差值，横坐标是估计值，如果散点图拟合的直线平行于横坐标，那么就可以认为残差是齐性的。</li>
-</ul>
-<img src="/2015/09/19/spss如何检验残差的方差齐性/9922720e0cf3d7caa34f63b2f21fbe096a63a9bd.jpg" alt="spss如何检验残差的方差齐性" title="spss如何检验残差的方差齐性">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1102,19 +1114,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

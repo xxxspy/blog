@@ -155,6 +155,132 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/08/19/python 线性代数：[13]求相关矩阵/">
+                python 线性代数：[13]求相关矩阵
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>求n个变量之间的相关系数，我们直接求这几个变量之间的相关矩阵即可。上一篇讲了求身高体重之间的协方差，我们现在就来求他们之间的相关系数矩阵。</p>
+<ul>
+<li>引入numpy模块</li>
+</ul>
+<img src="/2015/08/19/python%20线性代数：[13]求相关矩阵/0d729944ebf81a4ccb294b3ed52a6059242da6eb.jpg" alt="python 线性代数：[13]求相关矩阵" title="python 线性代数：[13]求相关矩阵">
+<ul>
+<li>身高用s表示，体重用t表示，采集了三个人的数据，如下</li>
+</ul>
+<img src="/2015/08/19/python%20线性代数：[13]求相关矩阵/29752a9b033b5bb56dcc870934d3d539b700bceb.jpg" alt="python 线性代数：[13]求相关矩阵" title="python 线性代数：[13]求相关矩阵">
+<ul>
+<li>创建矩阵y</li>
+</ul>
+<img src="/2015/08/19/python%20线性代数：[13]求相关矩阵/346bd85c103853434bd420d69113b07ecb8088eb.jpg" alt="python 线性代数：[13]求相关矩阵" title="python 线性代数：[13]求相关矩阵">
+<ul>
+<li>我们使用numpy.corrcoef方法求相关矩阵，左下角或者右上角就是身高与体重的相关系数，而对角线上元素是t与t或者s与s的相关系数</li>
+</ul>
+<img src="/2015/08/19/python%20线性代数：[13]求相关矩阵/adee30dda3cc7cd94a36932e3b01213fb90e91eb.jpg" alt="python 线性代数：[13]求相关矩阵" title="python 线性代数：[13]求相关矩阵">
+<ul>
+<li>再增加一个变量</li>
+</ul>
+<img src="/2015/08/19/python%20线性代数：[13]求相关矩阵/dc15484e9258d10940a80e45d358ccbf6d814dbb.jpg" alt="python 线性代数：[13]求相关矩阵" title="python 线性代数：[13]求相关矩阵">
+<ul>
+<li>求相关矩阵：</li>
+</ul>
+<img src="/2015/08/19/python%20线性代数：[13]求相关矩阵/2e6fa7389b504fc2064417f2e7dde71191ef6deb.jpg" alt="python 线性代数：[13]求相关矩阵" title="python 线性代数：[13]求相关矩阵">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/19/Python统计分析：[3]单因素方差分析/">
+                Python统计分析：[3]单因素方差分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>Python 实现单因素方差分析用到了scipy.stats.f_oneway()方法，用法很简单，只不过在用之前需要先检验方差齐性，用到了levene test。</p>
+<ul>
+<li>引入相关模块</li>
+</ul>
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/ae8267310a55b319747a8c0240a98226cefc1782.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<ul>
+<li>读取数据，数据保存在text文件中，就是两列数据，列之间用逗号隔开，参数header=None指的是数据头部没有标题，names参数指定列的名称<br>我们可以看到输出的数据：</li>
+</ul>
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/b29f8282d158ccbf2159bb4d1ad8bc3eb03541a4.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/90cebeec08fa513df32962a93e6d55fbb3fbd983.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<ul>
+<li>数据分组，因为数据中group列有三个值表示数据来自不同的组</li>
+</ul>
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/263e802f07082838a28ed263bb99a9014d08f183.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<ul>
+<li>将这三个分组后的数据保存到一个列表args里，有变成经验的应该知道<em>args的作用，不懂的百度 Python </em>args</li>
+</ul>
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/e865a699a9014c08acb826d2097b02087af4f483.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<ul>
+<li>首先进行levene test，如果p小于0.05，就警告方差不齐</li>
+</ul>
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/948bcfc8a786c91720e65c4eca3d70cf3ac757a4.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<ul>
+<li>之后再进行方差分析<br>方差分析结果：</li>
+</ul>
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/a583631ed21b0ef4630d9629dec451da80cb3ea4.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/6398ecd3572c11df6552b154602762d0f603c283.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/a583631ed21b0ef4630d9629dec451da80cb3ea4.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<ul>
+<li>很多时候我们不知道数据分成多少组，需要自动生成不同组的数据，可以用下面的方法：</li>
+</ul>
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/f99dcf00baa1cd111b537c57ba12c8fcc2ce2da4.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<ul>
+<li>检验的结果也是一样的。</li>
+</ul>
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/734f12f3d7ca7bcbecf8c958bd096b63f724a883.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<ul>
+<li>如果你熟悉Statsmodels，你可以这么做来输出更优雅的结果：<br>输出结果为：</li>
+</ul>
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/cbc17b380cd791239e1fe103ae345982b3b7808e.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<img src="/2015/08/19/Python统计分析：[3]单因素方差分析/3853ad1bb051f8192f14773dd9b44aed2e73e751.jpg" alt="Python统计分析：[3]单因素方差分析" title="Python统计分析：[3]单因素方差分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/08/17/Excel2013：[21]柱形图如何增加系列线/">
                 Excel2013：[21]柱形图如何增加系列线
             </a>
@@ -650,138 +776,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/">
-                spss如何用散点图检验两个变量之间的交互作用
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年08月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>散点图如图所示， 就是由一些点所构成的图，他是怎么看出交互作用的呢？好吧，我们一步一步来做你就懂了，下面是具体的过程。<br>工具/原料</p>
-<ul>
-<li>spss<br>方法/步骤</li>
-</ul>
-<ul>
-<li>首先在spss中准备好数据，然后在菜单栏上执行：graphs–散点图，如图所示，我这里是spss20.0，如果你要是其他的版本，菜单是不一样的，你得找找散点图在哪里</li>
-</ul>
-<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/4e4a20a4462309f7380b0cd1720e0cf3d6cad689.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
-<ul>
-<li>弹出一个窗口，让你选择使用哪个散点图，我们选择第一个最简单的散点图</li>
-</ul>
-<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/64380cd7912397dd762039c75982b2b7d1a2879c.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
-<ul>
-<li>因为我们要检验摸底考试成绩与教学方法之间的交互作用，所以你看好了，期末考试是因变量，也就是在y轴，而摸底考试成绩在x轴，分类变量是教学方法</li>
-</ul>
-<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/91529822720e0cf37ba3ef380a46f21fbf09aa99.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
-<ul>
-<li>点击ok按钮，开始输出散点图，如图所示，那是一个初步的散点图</li>
-</ul>
-<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/8b82b9014a90f60303803c843912b31bb151edc5.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
-<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/d788d43f8794a4c2411047e80ef41bd5ac6e39c5.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
-<ul>
-<li>在散点图上右键单击，然后选择在新的窗口中编辑</li>
-</ul>
-<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/9e3df8dcd100baa1e203e7784710b912c9fc2ec1.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
-<ul>
-<li>我们要用到上面两个按钮，第一个是所有的点拟合直线，其实就是忽略教学方法这个变量，得到一条回归曲线，但是我们为了比较教学方法，所以需要给不同的教学方法分别绘制回归线，所以点击右侧的按钮</li>
-</ul>
-<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/7af40ad162d9f2d3c619842ca9ec8a136227cced.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
-<ul>
-<li>出现了两条回归线，这两条回归线代表不同的教学方法，这两条线如果是平行的就可以认为他们是没有交互作用的，显然这个线有交叉的取向，我们只能先假定有交互作用的取向，但是还无法说达到了显著的水平。</li>
-</ul>
-<img src="/2015/08/11/spss如何用散点图检验两个变量之间的交互作用/9922720e0cf3d7cad7ea9fb5f21fbe096a63a9d1.jpg" alt="spss如何用散点图检验两个变量之间的交互作用" title="spss如何用散点图检验两个变量之间的交互作用">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/">
-                Excel2013：[6]为不同的区域设置不同密码
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年08月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>有时候，我们给客户开发的Excel报表需要设置密码，防止他们随便编辑，把表格弄乱。为了让不同的人编辑表格的不同部分，我们就是用不同区域设置不同密码，下面是具体的方法：</p>
-<ul>
-<li>我们先取消所有单元格的锁定和隐藏状态，按下快捷键ctr+a，选中所有单元格；然后按下ctr+1，打开【设置单元格格式】对话框。在保护选项下，取消勾选锁定和隐藏</li>
-</ul>
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/9a1151c2d5628535a14ac43792ef76c6a7ef633a.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<ul>
-<li>然后我们选中要保护的单元格，记得是要保护的，也就是要设置密码的，同样是在这个对话框，我们勾选锁定和隐藏</li>
-</ul>
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/9864a2315c6034a8076eae97c9134954082376dc.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<ul>
-<li>在审阅标签下，选择【允许用户编辑区域】</li>
-</ul>
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/064936381f30e92460c68a274e086e061d95f703.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<ul>
-<li>打开这个对话框，我们点击【新建】</li>
-</ul>
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/4d4970061d950a7bdc5758d208d162d9f2d3c903.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<ul>
-<li>设置你要保护的单元格的区域，然后设置一个密码，点击确定</li>
-</ul>
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/fc5e5f34970a304e5652b6ecd3c8a786c9175c70.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<ul>
-<li>再新建一个保护区域，同样设置一个不同的密码</li>
-</ul>
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/f392492c11dfa9ec6c4c400160d0f703918fc103.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/7e7f7909c93d70cf478abc1bfadcd100baa12b70.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<ul>
-<li>点击左下角【保护工作表】</li>
-</ul>
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/bbe0d311728b47103d5febdac1cec3fdfc032370.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<ul>
-<li>我们在这里输入总密码，这个密码一旦泄露，他们就可以对所有的单元格进行编辑</li>
-</ul>
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/4651a712c8fcc3ce44b0df259045d688d43f2070.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<ul>
-<li>返回表单，你编辑一个区域试试，如果是没有设置密码的区域，它提示你不可以更改；如果是有密码的区域，你必须先输入密码才能修改</li>
-</ul>
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/c28fddfdfc0392455cc5f7198594a4c27d1e2570.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<img src="/2015/08/11/Excel2013：[6]为不同的区域设置不同密码/4e0b3ea4462309f7690dbb04700e0cf3d7cad603.jpg" alt="Excel2013：[6]为不同的区域设置不同密码" title="Excel2013：[6]为不同的区域设置不同密码">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -824,19 +818,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

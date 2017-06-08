@@ -155,6 +155,125 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/02/23/python高级教程：[1]列表迭代/">
+                python高级教程：[1]列表迭代
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>Python在列表迭代时有许多灵活的用法，如果不用心去设计会让你走很多弯路，比如我们设定一个这样的问题：我们想找到年龄大于30的人的名字，现在有两个列表一个为names，存放着所有人的名字，一个为ages存放有所有人的年龄：</p>
+<ul>
+<li><p>我们用菜鸟的方式来解决这个问题：</p>
+</li>
+<li><p>在这里，我们创建了一个空列表oldPeople用来存放那些年龄大于30的人的名字。然后通过循环来获得那些“老人”。</p>
+</li>
+</ul>
+<img src="/2015/02/23/python高级教程：[1]列表迭代/d4239b35e5dde71187a438b3a1efce1b9c1661c5.jpg" alt="python高级教程：[1]列表迭代" title="python高级教程：[1]列表迭代">
+<ul>
+<li><p>另一种菜鸟的方式也好不到哪里去：</p>
+</li>
+<li><p>我们增加了一个递增变量i,for name in names这种写法就可以不必每次都重新获取name值；</p>
+</li>
+</ul>
+<img src="/2015/02/23/python高级教程：[1]列表迭代/8640bf8b87d6277f3d33487d2e381f30e924fc17.jpg" alt="python高级教程：[1]列表迭代" title="python高级教程：[1]列表迭代">
+<ul>
+<li>我们首先可以想到enumerate可以即得到索引i，又得到列表元素name，但是这仍然不是最佳的方式</li>
+</ul>
+<img src="/2015/02/23/python高级教程：[1]列表迭代/3853ad1bb051f8191e04790fdcb44aed2e73e717.jpg" alt="python高级教程：[1]列表迭代" title="python高级教程：[1]列表迭代">
+<ul>
+<li>一种极具Python风格的写法，只需要一句代码就可以完成这个任务。</li>
+</ul>
+<img src="/2015/02/23/python高级教程：[1]列表迭代/b0742dfa828ba61e97cab36a4734970a304e590b.jpg" alt="python高级教程：[1]列表迭代" title="python高级教程：[1]列表迭代">
+<ul>
+<li>所谓的Python高级教程就是这些，我们提供一些实例来对比菜鸟和Python高手之间的区别，以便于菜鸟能够快速的晋级为高手，如果你觉得这篇文章对你有帮助，请收藏！如果想转载，请注明作者。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/23/SPSS实例：[25]列联表相关/">
+                SPSS实例：[25]列联表相关
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如何求两个二分类数据的相关系数？或者两个变量不都是二分类，可能还有三分类、四分类，我们怎么求他们的相关呢？这种数据有一个特点就是，这两个变量都是名义变量，他们的数据没有大小之分，只有类别的不同，比如性别就是一个名义变量，我们定义男生为1，女生为2，不能说明女生大于男生。今天我们就来学习一下如何使用spss求列联表相关，而列联表相关就是用来求解分类数据（不连续数据）的相关的。</p>
+<ul>
+<li>数据的录入形式：如图所示，年龄组取值分别为0和1，图书顺序取值分别为1和2</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/29752a9b033b5bb53d7f579534d3d539b700bcf6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>打开交叉表分析对话框，如图所示，找到菜单</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/54baacfb43166d2299df62ff442309f79152d2f6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>我们将这两个变量分别放入行和列框中，这就是我们要求相关的两个变量</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/08b68e529822720ed166959179cb0a46f31fabf6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>点击statistics，设置要输出的参数</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/4e83cb628535e5ddc1c1d2b474c6a7efcf1b62a8.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>在这里，我们用到了contingency coefficient（列联系数），点击continue按钮</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/8474fbdde71190ef5e16e5b4cc1b9d16fcfa60a8.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>回到主对话框，我们点击ok即可开始处理数据</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/9c57e3faaf51f3de9b5fce0f96eef01f3b2979a8.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>在结果中，我们主要看到列联系数的值和近似sig值，显然，相关系数很小，也不显著，说明两个变量不相关。</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/d56b3634349b033ba8208bb117ce36d3d439bdf6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<ul>
+<li>如果觉得这篇文章写的还可以，记得分享给你的小伙伴！！</li>
+</ul>
+<img src="/2015/02/23/SPSS实例：[25]列联表相关/b74124f33a87e950ae5a650712385343faf2b4c9.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/02/19/Python教程：[36]如何替换字符串/">
                 Python教程：[36]如何替换字符串
             </a>
@@ -630,144 +749,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/">
-                numpy函数：[14]数组的列表下标存取方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年02月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>除了使用切片存取数组的元素之外，还可以使用整数列表作为下标存取方法。我们来看看具体的用法：</p>
-<ul>
-<li>先从numpy包引入所有</li>
-</ul>
-<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/b87985504fc2d56241674772e51190ef77c66c87.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
-<ul>
-<li>创建一个一位数组a</li>
-</ul>
-<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/a8ad9413632762d09da13320a2ec08fa503dc657.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
-<ul>
-<li>假如要读取下标为2,4,6,8的数组元素，我们可以写用列表[2,4,6,8]作为下标</li>
-</ul>
-<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/e6508eef76c6a7ef04493fb9fffaaf51f2de6687.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
-<ul>
-<li>换一个试试</li>
-</ul>
-<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/9c57e3faaf51f3de7bdd2efb96eef01f3b297987.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
-<ul>
-<li>由于这种方式获取的数组并不与原数组共享内存，所以改变一个数组的元素并不改变另一个数组中对应元素的值。</li>
-</ul>
-<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/8d158aeef01f3a29f9a742519b25bc315d607c87.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
-<ul>
-<li>我们还可以通过列表下表进行赋值</li>
-</ul>
-<img src="/2015/02/15/numpy函数：[14]数组的列表下标存取方法/99636c0e0cf3d7ca0469a8e9f01fbe096a63a957.jpg" alt="numpy函数：[14]数组的列表下标存取方法" title="numpy函数：[14]数组的列表下标存取方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/02/15/Excel2013：[44]日程表的用法/">
-                Excel2013：[44]日程表的用法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年02月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>这是Excel2013版的新功能，是在数据透视表中使用的，类似切片器，功能非常强大，如果你在报表中哟on个到了日程表，你的老板一定会很欣赏的看到你。好了，废话不多说，我们来看具体教程。</p>
-<ul>
-<li>我们先来做一个数据透视表，先来看看我的数据，各种日期下的各种水果的销量</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/a992e31f4134970ada4b8e4297cad1c8a7865d60.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>我们插入一个数据透视表</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/6648d73d70cf3bc76a385381d300baa1cd112a60.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>数据源就是刚才你的看到的那堆数据，点击确定按钮</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/3a86813df8dcd10042a4664c708b4710b9122f60.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>选择三个变量添加到数据透视表中</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/0b07ec1fbe096b638d61c03d0e338744ebf8ac20.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>一开始就是酱紫，看起来很凌乱，使用分组的功能，可以按月来进行汇总，具体教程见【Excel2013[45]如何按月/年汇总日期数据】</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/6a2112338744ebf89a09fa52dbf9d72a6059a720.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>分组分好了以后，我们在【分析】标签下，插入一个【日程表】</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/8605f5f81a4c510f5bbc7c776259252dd42aa520.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>弹出一个对话框，这里提示你选择对哪一个变量进行操作，勾选【日期】，点击确定</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/7c5fcc1b0ef41bd5a768769953da81cb39db3d60.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>这就是日程表了，我们点击下拉列表，切换到按月来显示</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/ac2fc3c451da81cb37dd1da05066d01609243160.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>看看，点击日程表中的1月份，在数据透视表中就会出现一月份的数据</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/5202e5f2b21193132a3b61dd67380cd791238d20.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>点击二月份就会出现二月份的数据</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/0d968f2397dda1440c71f2dfb0b7d0a20cf48620.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>当然，拖动鼠标可以选中多个月份</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/ac754782b2b7d0a2a9b19af0c9ef76094b369a20.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>当然，你还可以试试按照季度来显示</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/0865b518972bd40723fc4d9079899e510fb30960.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<ul>
-<li>你自己感受一下</li>
-</ul>
-<img src="/2015/02/15/Excel2013：[44]日程表的用法/34bbf8cd7b899e5115b5a47940a7d933c8950d60.jpg" alt="Excel2013：[44]日程表的用法" title="Excel2013：[44]日程表的用法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -810,19 +791,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

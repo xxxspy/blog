@@ -155,6 +155,138 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/04/01/spss多元方差分析的操作方法和结果分析/">
+                spss多元方差分析的操作方法和结果分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> 多元方差分析就是有多个因变量的分析，但是这几个因变量并不是没有关系的，他们应该属于同一种质的不同的形式，比如一个问卷的几个不同的维度。下面我们来具体的操作一下多元方差分析。<br>方法/步骤</p>
+<ul>
+<li>在spss中打开数据，在菜单栏上执行：analyse–general linear model–multivariate，打开多元方差分析对话框</li>
+</ul>
+<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/ac4bd11373f082021f6c0ec64bfbfbedaa641b48.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
+<ul>
+<li>将所有的因变量都放到第一个列表里，将自变量放到固定因素列表里</li>
+</ul>
+<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/9213b07eca806538b27d3bea97dda144ac3482b0.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
+<ul>
+<li>点击options按钮，打开子对话框</li>
+</ul>
+<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/279759ee3d6d55fb3903e9df6d224f4a21a4dd06.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
+<ul>
+<li>将自变量矫正方式放到右侧的display means，勾选如图所示的三个选项，用来展示描述统计、方差齐性、效应大小，点击继续，返回到主对话框</li>
+</ul>
+<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/aec379310a55b319ba071d8c43a98226cefc1748.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
+<ul>
+<li>点击post hoc，设置事后检验</li>
+</ul>
+<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/b219ebc4b74543a9d6e565351e178a82b8011448.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
+<ul>
+<li>将自变量矫正方式放到事后检验的列表里，然后在方差齐性的方法中选择lsd，在方差不齐性的方法中选dunnet c，点击continue按钮</li>
+</ul>
+<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/adaf2edda3cc7cd942baab203901213fb90e91b0.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
+<ul>
+<li>点击ok按钮，开始数据处理</li>
+</ul>
+<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/0b46f21fbe096b636adcc1a90c338744eaf8ac06.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
+<ul>
+<li>我们先来分析多变量检验，如图所示的红色方框中显示的是检验的不同方法，有时候不同的方法会显示出不同的结果，你要分别解释，下面的结果是一致的</li>
+</ul>
+<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/377adab44aed2e73ed1719d58701a18b86d6fa49.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
+<ul>
+<li>我们以wilks lambda方法为例，看sig值为000说明差异显著，篇eta方位0.375说明可以解释变异的37.5%</li>
+</ul>
+<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/d52a2834349b033bf04d632315ce36d3d439bd06.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
+<ul>
+<li><p>接着看主体间效应的检验，在矫正方式这一栏，也就是自变量的这一栏，乍一看三个水平的自变量都达到了显著水平，但是，其实不然，因为对自变量的多次比较会造成一类错误的概率增加，所以我们要用显著性水平除以自变量的水平数，也就是0.05/3=0.17，这样来看重复减少这个水平是达不到显著水平的。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/1e30e924b899a9013fcbc4cf1d950a7b0308f549.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/">
+                SPSS实例：[9]因子载荷图怎么做
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年03月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天有网友提问关于因子载荷图（loading plots）怎么做，说实话我也有点忘记了，现在来跟大家一起学习一下，如何做因子载荷图。它是在主成分分析和因子分析中用到的。</p>
+<ul>
+<li>打开菜单，如图所示</li>
+</ul>
+<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/1e71f724b899a9015f13841f1f950a7b0208f5b2.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
+<ul>
+<li>将用到的变量放入右侧列表</li>
+</ul>
+<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/4651a712c8fcc3ce021e151a9045d688d53f20fa.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
+<ul>
+<li>点击rotation按钮</li>
+</ul>
+<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/fd428c45d688d43f41774ddb7f1ed21b0ff43bfa.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
+<ul>
+<li>勾选因子载荷图，如图所示，点击继续</li>
+</ul>
+<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/3c2c4bfbb2fb43164039a55322a4462309f7d3b2.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
+<ul>
+<li>提取得到5个主成分</li>
+</ul>
+<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/91138622720e0cf3e1d191d20846f21fbe09aab2.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
+<ul>
+<li>这个就是因子载荷图，双击它可以修改外观样式。图中最多只能展示三个因子</li>
+</ul>
+<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/79b1e936afc37931fab65a00e9c4b74542a911fa.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
+<ul>
+<li>点击旋转按钮，可以设置我们观察3D图的角度，让你更详细的了解这个图的分布</li>
+</ul>
+<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/263e802f070828380fd4003dba99a9014d08f1fb.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/03/23/Excel2013：[19]如何添加设置页眉页脚/">
                 Excel2013：[19]如何添加设置页眉页脚
             </a>
@@ -634,141 +766,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/03/11/spss二分类的logistic回归的操作和分析方法/">
-                spss二分类的logistic回归的操作和分析方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年03月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>二分类指的是因变量的数据只有两个值，代表事物的两种类别，典型的二分类变量如性别、是否患病等。因变量为二分变量原则上是无法做回归的，在回归方程中的因变量实质上是概率，而不是变量本身。在理解二分类变量以后，我们看看如何做二分类变量的logistic回归。<br>工具/原料</p>
-<ul>
-<li>spss20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>打开数据以后，菜单栏上依次点击：analyse–regression–binary logistic，打开二分回归对话框</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/e850352ac65c1038bd6b882fb2119313b17e89c2.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>将因变量和自变量放入格子的列表里，如图所示，上面的是因变量，下面的是自变量，我们看到这里有三个自变量</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/d788d43f8794a4c22380a1c60ef41bd5ac6e39bf.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>设置回归方法，这里选择最简单的方法：enter，它指的是将所有的变量一次纳入到方程。其他方法都是逐步进入的方法，在前面的文章中有介绍，这里就不再熬述。</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/2f738bd4b31c8701013bf40b277f9e2f0608ff4a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/060828381f30e9241f17dddc4c086e061c95f7a8.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>点击ok，开始处理数据并检验回归方程，等待一会就会弹出数据结果窗口</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/962bd40735fae6cd1494ea8c0fb30f2442a70f3e.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>看到的第一个结果是对case的描述，第一个列表告诉你有多少数据参与的计算，有多少数据是缺省值；第二个列表告诉你因变量的编码方式，得分为1代表患病，得分为0代表没有患病</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/c75c10385343fbf25d16e7ceb07eca8065388f21.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>这个列表告诉你在没有任何自变量进入以前，预测所有的case都是患病的正确率，正确率为%52.6</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/9345d688d43f8794f85f09c3d21b0ef41ad53abe.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>下面这个列表告诉你在没有任何自变量进入以前，常数项的预测情况。B是没有引入自变量时常数项的估计值，SE它的标准误，Wald是对总体回归系数是否为0进行统计学检验的卡方。</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/00e93901213fb80e72b2213a36d12f2eb83894ff.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>下面这个表格结果，通过sig值可以知道如果将模型外的各个变量纳入模型，则整个模型的拟合优度改变是否有统计学意义。 sig值小于0.05说明有统计学意义</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/9d82d158ccbf6c81b40b6f05bc3eb13533fa401a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>这个表格是对模型的全局检验，为似然比检验，供给出三个结果：同样sig值&lt;0.05表明有统计学意义。</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/55e736d12f2eb938968c391fd5628535e4dd6f7d.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/09fa513d269759ee816d2226b2fb43166d22df1a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>下面的结果展示了-2log似然值和两个伪决定系数。两个伪决定系数反应的是自变量解释了因变量的变异占因变量的总变异的比例。他们俩的值不同因为使用的方法不同。</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/e7cd7b899e510fb361763a7ad933c895d0430ceb.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>分类表，这里展示了使用该回归方程对case进行分类，其准确度为%71.8。</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/08f790529822720ecb13af177bcb0a46f31fab7a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<ul>
-<li>最后是输出回归方程中的各变量的系数和对系数的检验额值，sig值表明该系数是否具有统计学意义。到此，回归方程就求出来了。</li>
-</ul>
-<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/d058ccbf6c81800a2bcbc5e3b13533fa828b4734.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/03/11/numpy函数：[7]linspace创建等差数列/">
-                numpy函数：[7]linspace创建等差数列
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年03月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>numpy.linspace是用于创建一个一位数组，并且是等差数列构成的一位数组，它蕞常用的有三个参数，当然不只有三个参数，我们通过例子来了解一下它是如何使用的：</p>
-<ul>
-<li>首先，我们看一下第一个例子，用到三个参数，第一个参数表示起始点、第二个参数表示终止点，第三个参数表示数列的个数。</li>
-</ul>
-<img src="/2015/03/11/numpy函数：[7]linspace创建等差数列/834344afa40f4bfb989dc4c9014f78f0f636189a.jpg" alt="numpy函数：[7]linspace创建等差数列" title="numpy函数：[7]linspace创建等差数列">
-<ul>
-<li>我经常用它创建一个元素全部是1的等差数列，或者你也可以让所有元素为0</li>
-</ul>
-<img src="/2015/03/11/numpy函数：[7]linspace创建等差数列/0fb505d5ad6eddc41915ee663bdbb6fd53663379.jpg" alt="numpy函数：[7]linspace创建等差数列" title="numpy函数：[7]linspace创建等差数列">
-<ul>
-<li>我们看一下linspace创建的数组的元素的数据格式，当然是浮点型</li>
-</ul>
-<img src="/2015/03/11/numpy函数：[7]linspace创建等差数列/ae8267310a55b31980f3c7e841a98226cefc17e1.jpg" alt="numpy函数：[7]linspace创建等差数列" title="numpy函数：[7]linspace创建等差数列">
-<ul>
-<li>我们还可以使用参数endpoint来决定是否包含终止值，如果不设置这个参数，默认是True。我们看一下例子：注意步长改变了。</li>
-</ul>
-<img src="/2015/03/11/numpy函数：[7]linspace创建等差数列/c8ab0bce36d3d5397f554b5e3887e950342ab080.jpg" alt="numpy函数：[7]linspace创建等差数列" title="numpy函数：[7]linspace创建等差数列">
-<ul>
-<li>我试了试两个参数，也是可以的，但是创建的这个数组，我不太清楚是什么意义，有懂得人可以给我留言</li>
-</ul>
-<img src="/2015/03/11/numpy函数：[7]linspace创建等差数列/e8112b2ac65c103899088c5fb0119313b17e89fe.jpg" alt="numpy函数：[7]linspace创建等差数列" title="numpy函数：[7]linspace创建等差数列">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -811,19 +808,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

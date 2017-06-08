@@ -155,6 +155,119 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/05/15/spss如何使用变量的取值模式进行聚类/">
+                spss如何使用变量的取值模式进行聚类
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss聚类分析中，默认的聚类方法是按照变量的取值水平进行聚类，但是有时候，为了符合我们研究的要求，需要按照变量的取值模式进行聚类，这时候就用到了这里提到的一个方法：By case<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>先在spss中打开你要处理的数据，然后点击菜单：analyse–classify–hierarchical cluster，打开聚类分析的对话框</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/bf096b63f6246b604ca28fa1ebf81a4c500fa2b2.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>将指标变量放入independent列表，然后把地区放入标签栏，因为地区可以作为case的标签</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/80cb39dbb6fd526603e700c1ab18972bd5073612.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>点击method按钮，这就是我们的重头戏，在在方法对话框中，我们需要设置Z分数的计算方法</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/77094b36acaf2eddcd37753c8d1001e938019324.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>如图所示，将standardised设置为Z score，然后勾选by case</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/c75c10385343fbf2eb1299f6b07eca8065388f2c.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>点击ok，开始处理数据，等会就输出结果</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/a71ea8d3fd1f41343caf39ab251f95cad0c85e4e.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>第一个表格是聚类过程表，从聚类系数可以帮助我们判断将数据分为几类最合适，判断的方法是，相邻的两个数据变化的幅度显著大于前面的系数的变化范围，这时候分类在这里就是最好的</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/b03533fa828ba61e0fd9f7fa4134970a304e592b.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<ul>
+<li>这里叫做层次聚类谱系图，该图也是帮助我们查看聚类过程的，我们看到如图所示，沿着垂直方向画一条线，这条线与图中的水平线交叉点就是分的类别，有几个交叉点就有几个类别。当然，你所画的线可以决定你的数据分成了几类，越往右边，分类数目越少</li>
+</ul>
+<img src="/2016/05/15/spss如何使用变量的取值模式进行聚类/7af40ad162d9f2d34b591b3aa9ec8a136227cc9e.jpg" alt="spss如何使用变量的取值模式进行聚类" title="spss如何使用变量的取值模式进行聚类">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/15/Python教程：[41]判断抓取的网页的编码方式/">
+                Python教程：[41]判断抓取的网页的编码方式
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在抓取网页的时候经常遇到网页编码问题，我们需要将抓取的网页进行解码以后才能正确得到网页上的 内容，那么怎么获取网页的编码方式呢？很多人还在手动去查看网页源码，然后找到charset吗？下面是百度经验的编辑器页面的编码方式。</p>
+<ul>
+<li>引入两个模块，urllib2用于获取源码，chardet用于检测编码方式</li>
+</ul>
+<img src="/2016/05/15/Python教程：[41]判断抓取的网页的编码方式/507c389759ee3d6d7a8957d741166d224f4ade24.jpg" alt="Python教程：[41]判断抓取的网页的编码方式" title="Python教程：[41]判断抓取的网页的编码方式">
+<ul>
+<li>先获取网页，存放于f中</li>
+</ul>
+<img src="/2016/05/15/Python教程：[41]判断抓取的网页的编码方式/8367d1fc1e178a824434afbcf403738da977e860.jpg" alt="Python教程：[41]判断抓取的网页的编码方式" title="Python教程：[41]判断抓取的网页的编码方式">
+<ul>
+<li>读取网页的内容，存放在txt中</li>
+</ul>
+<img src="/2016/05/15/Python教程：[41]判断抓取的网页的编码方式/f7426d8da9773912b02d557dfa198618367ae260.jpg" alt="Python教程：[41]判断抓取的网页的编码方式" title="Python教程：[41]判断抓取的网页的编码方式">
+<ul>
+<li>使用detect方法来获得网页的编码方式</li>
+</ul>
+<img src="/2016/05/15/Python教程：[41]判断抓取的网页的编码方式/eab9044c510fd9f99e588575272dd42a2834a424.jpg" alt="Python教程：[41]判断抓取的网页的编码方式" title="Python教程：[41]判断抓取的网页的编码方式">
+<ul>
+<li>我们读取一下网页编码方式：</li>
+</ul>
+<img src="/2016/05/15/Python教程：[41]判断抓取的网页的编码方式/8697397f9e2f07083b0efa1ceb24b899a901f260.jpg" alt="Python教程：[41]判断抓取的网页的编码方式" title="Python教程：[41]判断抓取的网页的编码方式">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/">
                 amos21.0教程：[3]结构方程中的结构模型
             </a>
@@ -668,135 +781,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/">
-                Excel2013：[40]美化单元格立体来点立体感
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>闲来无事美化一下以前做的单元格，把二维单元格弄成有立体感的，怎么样？这么做它看起来就像是一个小小的数字键盘，我们如果给它加上超链接，这些单元格就变成一个个按钮。好吧，看看具体的教程：</p>
-<ul>
-<li>先填写数据，如图所示，我把单元格的大小也调整了一下，有数字的单元格宽和高都更大，这样可以突出显示</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/8474fbdde71190ef5afa99b8cc1b9d16fdfa6010.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<ul>
-<li>上一点背景色，淡淡的灰色</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/ac0acf1373f08202c842995849fbfbedaa641b41.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<ul>
-<li>选中有数字的单元格，设置对齐方式为居中对齐</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/4abae5edab64034fe01dca61adc379310b551d41.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<ul>
-<li>还是选中这些有数字的单元格</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/42e89c26cffc1e172e6f84564890f603728de942.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<ul>
-<li>打开格式对话框</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/8bc3a7014a90f603db6094203b12b31bb151ed42.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<ul>
-<li>切换到边框选项下</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/dc15484e9258d109f4e2a2d5d358ccbf6c814d10.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<ul>
-<li>我们来先设置线型和颜色，线性为粗线，颜色为白色或者浅灰色</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/dbf554ed2e738bd407f1ba56a38b87d6267ff942.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<ul>
-<li>绘制上边框和左边框</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/1899a23eb13533fad3b79849aad3fd1f41345b10.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<ul>
-<li>接着设置颜色为黑色，线型不变</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/fc5e5f34970a304e7d23ab9dd3c8a786c9175c10.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<ul>
-<li>绘制下边框和右边框，点击确定按钮</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/245e8bcad1c8a786952b41696509c93d70cf5010.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<ul>
-<li>看一下，立体感是不是出来了。</li>
-</ul>
-<img src="/2016/05/03/Excel2013：[40]美化单元格立体来点立体感/d019d2bf6c81800a54e48269b33533fa828b4710.jpg" alt="Excel2013：[40]美化单元格立体来点立体感" title="Excel2013：[40]美化单元格立体来点立体感">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/01/Python统计分析：[4]多因素方差分析/">
-                Python统计分析：[4]多因素方差分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>上一篇文章介绍了Python做统计中如何实现单因素方差分析，这篇文章介绍一下如何做多因素方差分析以及当主效应显著时如何做多重比较。</p>
-<ul>
-<li>引入相关模块</li>
-</ul>
-<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/509b9fcb39dbb6fdbb2901510a24ab18972b371c.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
-<ul>
-<li>读取数据（如果你需要我案例中的数据，可以联系我索要）</li>
-</ul>
-<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/d1571724ab18972b3a48e4bde5cd7b899e510a1c.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
-<ul>
-<li>删除空值并打印数据<br>我们可以看到数据是酱紫的：</li>
-</ul>
-<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/c9d4cf43ad4bd1138f0e524559afa40f4afb0543.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
-<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/43e6c733c895d1435404005470f082025aaf071c.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
-<ul>
-<li>用statsmodels中的anova_lm，注意公式formula的写法<br>这是随即设计的两因素方差分析的结果：结果显示fetus的主效应显著</li>
-</ul>
-<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/734f12f3d7ca7bcb5a362358bd096b63f624a83d.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
-<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/d0526df082025aaf5a409abcf8edab64034f1a1c.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
-<ul>
-<li>阴虚fetus的主效应显著，所以有必要进行事后简单，使用tukey方法进行多重比较的方法及结果：<br>输出的结果显示，三个水平均均值均呈现显著差异（reject==Ture）</li>
-</ul>
-<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/f35ea0096b63f6243e10dd748444ebf81a4ca33d.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
-<img src="/2016/05/01/Python统计分析：[4]多因素方差分析/834344afa40f4bfbfbbd7a23004f78f0f736181c.jpg" alt="Python统计分析：[4]多因素方差分析" title="Python统计分析：[4]多因素方差分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -839,19 +823,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

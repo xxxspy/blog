@@ -155,6 +155,127 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/03/17/spss协方差分析中如何进行交互作用的检验/">
+                spss协方差分析中如何进行交互作用的检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>协方差分析前必须进行交互作用的检验，为的是满足协方差分析的平行性假设，存在交互作用就无法进行协方差分析了。下面是具体的过程：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>打开数据，在菜单栏上点击analyse–GML–univariate，打开协方差的对话框</li>
+</ul>
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/d31b0ef41bd5ad6e9d14c72981cb39dbb7fd3c07.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<ul>
+<li>在打开的这个对话框中，我们要将因变量、固定因素、斜变量放入各自的框中，点击model按钮，设置模型</li>
+</ul>
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/e824b899a9014c08e9518a660a7b02087af4f48f.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/d439b6003af33a872fcea2d9c65c10385243b556.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<ul>
+<li>在这，需要将两个自变量和他们的交互项放入到模型框中，点击continue按钮</li>
+</ul>
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/f636afc379310a55d0bc7c37b74543a98326105c.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<ul>
+<li>回到主对话框，点击ok按钮开始处理数据，等待几分钟才能出现图，因为绘图需要一些时间</li>
+</ul>
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/91529822720e0cf37e00ec380a46f21fbf09aa7a.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<ul>
+<li>我们看到这两个变量的交互作用并不显著，这说明协方差分析是可行的</li>
+</ul>
+<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/4ec2d5628535e5dd16df071c76c6a7efcf1b6206.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/03/15/spss聚类分析如何对分类结果进行检验/">
+                spss聚类分析如何对分类结果进行检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年03月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>聚类分析的结果都知道，就是获得几个类别，那么我们怎么知道这些类别是合理的呢？这里提供一个方法，就是利用means方法，检验各个类别在所有变量上的差异，如果差异显著，我们就可以认为分类结果是可靠的。<br>方法/步骤</p>
+<ul>
+<li>假设我们现在已经得到了聚类的结果，所有的case都已经分类了，我们看到在数据窗口已经形成了若干个新的变量，显示了case的分类结果，如图所示，这里显示了三个聚类的结果，分别是把数据分为3、4、5类的结果</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/f7246b600c338744ad481ea9510fd9f9d62aa051.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/b7003af33a87e9506ff8c2b910385343faf2b473.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>在菜单栏上执行：analyse–compare means–means，打开平均数对话框</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/6d81800a19d8bc3e18e6371f828ba61ea9d3457c.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>将指标变量都放入因变量框中，然后将分组变量（聚类分析得到的变量）放入因变量中</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/b17eca8065380cd7f4db9338a144ad3458828119.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>点击ok按钮，开始运行数据，并显示结果</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/5ab5c9ea15ce36d380dbb2e53af33a87e850b103.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>我们会看到三种分类结果各自的平均数，下面的三个表格分别是将case分为5、4、3类的结果，当然这种方法只能计算出各组平均数，如何检验平均数的差异就要用到下面的方法</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/902397dda144ad3431eab752d0a20cf430ad8589.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/622762d0f703918f89c40d1f513d269758eec4c9.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/d53f8794a4c27d1e1f510b111bd5ad6edcc438eb.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>在菜单栏上执行：analyse–compare means–one way anova</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/d01373f082025aaf4f5a4e1efbedab64024f1afe.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>将指标变量放到因变量列表，将分组变量放入factor中，然后点击ok，开始处理数据</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/b17eca8065380cd7f5a69238a144ad34588281ae.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<ul>
+<li>我们看到下面的这个表格就是对平均数的差异的检验了，看sig这一列，除了一个指标，其他指标都达到了显著的水平，这说明这种分类还是比较有效的。</li>
+</ul>
+<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/503d269759ee3d6d7a57b71e43166d224e4ade55.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/03/15/amos21.0教程：[10]复制和修改测量模型/">
                 amos21.0教程：[10]复制和修改测量模型
             </a>
@@ -671,106 +792,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/02/23/spss线性回归中强影响点的诊断方法/">
-                spss线性回归中强影响点的诊断方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年02月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>强影响点会影响线性回归的回归效果，所以我们需要对这些数据进行筛选，那么如何诊断中这些数据呢？我们通常是使用强影响点诊断，下面是具体的方法：<br>工具/原料</p>
-<ul>
-<li>spss20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>在菜单栏上执行：analyse–regression–linear，打开线性回归对话框</li>
-</ul>
-<img src="/2016/02/23/spss线性回归中强影响点的诊断方法/8d5494eef01f3a29044c8d0a9925bc315d607c69.jpg" alt="spss线性回归中强影响点的诊断方法" title="spss线性回归中强影响点的诊断方法">
-<ul>
-<li>将自变量和因变量放入各自的框框中，上面的是因变量，下面的是自变量</li>
-</ul>
-<img src="/2016/02/23/spss线性回归中强影响点的诊断方法/9825bc315c6034a87165e045cb1349540823766a.jpg" alt="spss线性回归中强影响点的诊断方法" title="spss线性回归中强影响点的诊断方法">
-<ul>
-<li>点击statistic按钮，我们设置检验强影响点的参数</li>
-</ul>
-<img src="/2016/02/23/spss线性回归中强影响点的诊断方法/e4dde71190ef76c6b954a3ef9d16fdfaae51676b.jpg" alt="spss线性回归中强影响点的诊断方法" title="spss线性回归中强影响点的诊断方法">
-<ul>
-<li>勾选如图所示的选项，我们看到一个数值3是我们自己填的，3代表三个标准差，在3个标准差以外的数据就会作为强影响点，这里只是诊断强影响点，而不会 在处理数据的时候删除这些数据</li>
-</ul>
-<img src="/2016/02/23/spss线性回归中强影响点的诊断方法/7aec54e736d12f2eac84f6a44fc2d56284356874.jpg" alt="spss线性回归中强影响点的诊断方法" title="spss线性回归中强影响点的诊断方法">
-<ul>
-<li>点击ok按钮，开始处理数据并输出诊断的结果表格</li>
-</ul>
-<img src="/2016/02/23/spss线性回归中强影响点的诊断方法/3b292df5e0fe9925908c319434a85edf8cb17175.jpg" alt="spss线性回归中强影响点的诊断方法" title="spss线性回归中强影响点的诊断方法">
-<ul>
-<li>这个表格就是对强影响点的诊断，case number这个就是被诊断出来的强影响点的case编号，我们可以删除这些强影响点以后再进行数据的处理</li>
-</ul>
-<img src="/2016/02/23/spss线性回归中强影响点的诊断方法/7dd98d1001e939012eb6d5fa7bec54e737d196b9.jpg" alt="spss线性回归中强影响点的诊断方法" title="spss线性回归中强影响点的诊断方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/02/23/python 字符串类型错误/">
-                python 字符串类型错误
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年02月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天调程序发现总出现错误TypeError: ‘str’ does not support the buffer interface，研究了很久才发现，错误在与python的版本不同，我们来看看如何更改。</p>
-<ul>
-<li>这是我的源码，是不是和你的挺像？红色方框的位置出现了错误。也就是在sendto函数这里，我们发送一个字符串，但是提示我们类型错误</li>
-</ul>
-<img src="/2016/02/23/python%20字符串类型错误/b6045da98226cffc9fd6d59ebb014a90f703eadb.jpg" alt="python 字符串类型错误" title="python 字符串类型错误">
-<ul>
-<li>新版本的python对字符串对象做了很大的更改，使得原先的函数产生了很大的不同，所以我们需要添加一个参数。这个问题就解决了。</li>
-</ul>
-<img src="/2016/02/23/python%20字符串类型错误/4651a712c8fcc3ce8812a31f9045d688d53f2088.jpg" alt="python 字符串类型错误" title="python 字符串类型错误">
-<ul>
-<li>但是，还有一个问题，这种方法发送的字符串发送的结果是b’hello，怎么办呢，我们使用转码函数试试。print(cs.recv(1024).decode(‘utf-8’))</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -813,19 +834,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

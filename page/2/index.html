@@ -155,6 +155,125 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/10/19/numpy函数：[12]数组切片/">
+                numpy函数：[12]数组切片
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们可以向使用列表切片一样使用数组切片，如果会使用liest切片，那么这篇文章就是温习一下而已，下面我们来看看具体的数组切片是如何使用的。</p>
+<ul>
+<li>从numpy中引入所有</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/c71d0e385343fbf21a8108bcb27eca8064388f45.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>创建一个包含10个元素的一位数组</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/d1571724ab18972bf1a4ae55e4cd7b899f510a57.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>我们可以使用一个下标获取数组中相应的值，也可以更改它的值</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/b3508d13b07eca80c9a89778932397dda0448345.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>使用冒号获取连续的几个元素，如获取第四个到第五个元素</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/34bbf8cd7b899e512510948b40a7d933c9950d57.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>省略冒号前的数字，表示从头开始</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/43e6c733c895d1439de84abc71f082025baf0757.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>使用负数表示从后往前数，-1表示从后往前数第一个数</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/30ecd5ef76094b36163fb572a1cc7cd98c109d45.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>-2表示从后往前第二个，以此类推</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/a28d62d98d1001e9f991ba90ba0e7bec55e79745.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<img src="/2016/10/19/numpy函数：[12]数组切片/b258f5c4b74543a9c18554531c178a82b8011457.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>还可以设置步长来读取数组元素</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/b6045da98226cffc5bb4112dbb014a90f703ea50.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>步长为-1，其他参数不设置，就是将数组进行了倒序排列</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/1f569482b9014a90bfa0e822ab773912b21bee50.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<ul>
+<li>使用负数步长需要让第一个下表大于第二个下标</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[12]数组切片/a005b3345982b2b7635e905b33adcbef77099b29.jpg" alt="numpy函数：[12]数组切片" title="numpy函数：[12]数组切片">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/">
+                numpy函数：[8]logspace()创建等比数列数组
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇介绍了numpy.linspace用于创建等差数列，现在介绍logspace用于创建等比数列。其实用法差不多，但是有一个特殊的地方需要注意。</p>
+<ul>
+<li>先来看一个例子，我们让开始点位0，结束点为0，元素个数为10，看看输出结果。为什么是酱紫呢？难道不都是0么？</li>
+</ul>
+<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/a992e31f4134970ad07f90b297cad1c8a6865de4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
+<ul>
+<li>因为logspace中，开始点和结束点是10的幂，0代表10的0次方，9代表10的9次方。我们看看下面的例子。<br>】</li>
+</ul>
+<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/964b2e4e251f95ca32f9122bcb177f3e660952e4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
+<ul>
+<li>假如，我们想要改变基数，不让它以10为底数，我们可以改变base参数，将其设置为2试试</li>
+</ul>
+<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/d089b986c9177f3e80387c9072cf3bc79e3d56e4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
+<ul>
+<li>假如我们想要不包含结束点，可以设置endpoint为0</li>
+</ul>
+<img src="/2016/10/17/numpy函数：[8]logspace()创建等比数列数组/c87c6ecf3bc79f3d14ed64adb8a1cd11738b29e4.jpg" alt="numpy函数：[8]logspace()创建等比数列数组" title="numpy函数：[8]logspace()创建等比数列数组">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/10/15/SPSS实例：[17]进行sobel检验(小白教程)/">
                 SPSS实例：[17]进行sobel检验(小白教程)
             </a>
@@ -662,111 +781,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/10/03/Python教程：[61]创建文件夹 目录/">
-                Python教程：[61]创建文件夹 目录
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>python如何创建文件夹，用到了mkdir和makedirs两个方法，前者创建一层目录，后者创建多层目录，下面我们来看看具体是怎么用的。</p>
-<ul>
-<li>先要引入os模块</li>
-</ul>
-<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/ac754782b2b7d0a2c2fbb31dc9ef76094a369ac5.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
-<ul>
-<li>使用mkdir方法创建一个tt文件夹，参数是文件夹的路径：</li>
-</ul>
-<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/caae68094b36acaffad2217c7ed98d1000e99cc5.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
-<ul>
-<li>假如我们使用mkdir方法创建多层文件夹，也就是说，文件夹f:/tt1和文件夹f:/tt1/tt1都是不存在的，这时候就会出现错误</li>
-</ul>
-<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/7d98931001e93901fb303abe79ec54e737d196c5.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
-<ul>
-<li>我们可以使用makedirs方法来创建多层目录：</li>
-</ul>
-<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/8697397f9e2f07085e689d80eb24b899a801f286.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
-<ul>
-<li>写完这篇文章，你可能想知道，如何删除目录呢，幸好我前几天已经写完了一篇如何删除文件夹的文章，具体见：<a href="http://jingyan.baidu.com/article/39810a23e80384b636fda639.html" target="_blank" rel="external">http://jingyan.baidu.com/article/39810a23e80384b636fda639.html</a></li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/10/03/Python教程：[3]input和raw_input函数/">
-                Python教程：[3]input和raw_input函数
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天使用python3.2来编辑程序的时候，突然发现一个错误name ‘raw_input’ is not defined，原因是从版本3.0 开始去掉了raw_input 函数，改用input。所以两个函数合并在了一起，所以今天只讲input函数就可以了。input函数用于弹出一个对话框，提示用户输入内容，输入的内容可以直接显示出来，也可以赋值给某个变量。</p>
-<ul>
-<li>基本用法是：input(‘输入要显示的文字’)</li>
-</ul>
-<img src="/2016/10/03/Python教程：[3]input和raw_input函数/f7426d8da97739129adc0f4bfa198618377ae2e7.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
-<ul>
-<li>弹出一个对话框，让你输入，假如我们输入“你好”</li>
-</ul>
-<img src="/2016/10/03/Python教程：[3]input和raw_input函数/a8362712b31bb051d3de3902347adab44bede0e7.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
-<ul>
-<li>立刻会出现这个输入的内容。</li>
-</ul>
-<img src="/2016/10/03/Python教程：[3]input和raw_input函数/4bac30738bd4b31cb4c61e9185d6277f9f2ff8e7.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
-<ul>
-<li>我们输入</li>
-</ul>
-<img src="/2016/10/03/Python教程：[3]input和raw_input函数/ca5257540923dd54952c2d42d309b3de9c82487a.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
-<ul>
-<li>弹出对话框，假如我们输入“www”</li>
-</ul>
-<img src="/2016/10/03/Python教程：[3]input和raw_input函数/ac2fc3c451da81cbc3f609e75066d0160924314d.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
-<ul>
-<li>a的值就是“www”</li>
-</ul>
-<img src="/2016/10/03/Python教程：[3]input和raw_input函数/a28d62d98d1001e9a225e125ba0e7bec54e79744.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -809,19 +823,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

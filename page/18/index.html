@@ -155,6 +155,155 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/02/05/Python教程：[7]IF语句基本用法/">
+                Python教程：[7]IF语句基本用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>python的if语句和其他语言有些不同，它没有用括号来表示代码块，而是使用缩进，现在乍听一下你可能不太明白，用下面的例子来感受一下缩进的写法：</p>
+<ul>
+<li>if的基本语法格式看下面：第一行是条件语句，如果满足条件就会执行第二行，没有括号或者结束语句，比如endif，没有。</li>
+</ul>
+<img src="/2016/02/05/Python教程：[7]IF语句基本用法/adee30dda3cc7cd9c7d80ef23b01213fb90e91e0.jpg" alt="Python教程：[7]IF语句基本用法" title="Python教程：[7]IF语句基本用法">
+<ul>
+<li>假如第二行没有缩进，就会产生错误。</li>
+</ul>
+<img src="/2016/02/05/Python教程：[7]IF语句基本用法/8cf0d51349540923ac1e46559058d109b3de4962.jpg" alt="Python教程：[7]IF语句基本用法" title="Python教程：[7]IF语句基本用法">
+<ul>
+<li>新手容易犯一个错误就是条件语句后面不写冒号，出现这样的错误：</li>
+</ul>
+<img src="/2016/02/05/Python教程：[7]IF语句基本用法/f9589818367adab494973e6889d4b31c8701e413.jpg" alt="Python教程：[7]IF语句基本用法" title="Python教程：[7]IF语句基本用法">
+<ul>
+<li>我们假如有多个条件，我们可以使用else，当条件不满足的时候执行它下面的语句块。当然else是顶个写，并且后面记得写冒号。</li>
+</ul>
+<img src="/2016/02/05/Python教程：[7]IF语句基本用法/027a45b5c9ea15ce1e3cc522b4003af33b87b28f.jpg" alt="Python教程：[7]IF语句基本用法" title="Python教程：[7]IF语句基本用法">
+<ul>
+<li>如果还有更多的条件，我们可以使用elif，同样不要忘记冒号和缩进</li>
+</ul>
+<img src="/2016/02/05/Python教程：[7]IF语句基本用法/dbf554ed2e738bd45301961aa38b87d6277ff9be.jpg" alt="Python教程：[7]IF语句基本用法" title="Python教程：[7]IF语句基本用法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/02/05/Excel2013：[26]如何将ABCD替换成数字/">
+                Excel2013：[26]如何将ABCD替换成数字
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>经常给别人做数据分析，拿到的数据都是很不规范的，比如下面这个例子，单元格中的数据是ABCD而不是数字1234，这样的数据是无法放入到spss中进行处理的，所以我们需要对这个进行重新编码，在Excel中使用vba是比较快速的方法，这里我跟大家分享一下我的方法：</p>
+<ul>
+<li>明确目标：把ABCD转换成1234，如图所示，题目1这一列是我转换完成的，题目3这一列是还没有进行转换的。</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[26]如何将ABCD替换成数字/a8362712b31bb051727be651347adab44aede029.jpg" alt="Excel2013：[26]如何将ABCD替换成数字" title="Excel2013：[26]如何将ABCD替换成数字">
+<ul>
+<li>我们使用快捷键alt + F11，打开vbe编辑窗口</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[26]如何将ABCD替换成数字/8640bf8b87d6277f084d67412a381f30e924fc29.jpg" alt="Excel2013：[26]如何将ABCD替换成数字" title="Excel2013：[26]如何将ABCD替换成数字">
+<ul>
+<li>掺入一个模块：菜单上执行【插入】-【模块】</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[26]如何将ABCD替换成数字/d1571724ab18972bb45255b3e4cd7b899e510a1b.jpg" alt="Excel2013：[26]如何将ABCD替换成数字" title="Excel2013：[26]如何将ABCD替换成数字">
+<ul>
+<li><p>将这段代码粘贴到模块中：</p>
+</li>
+<li><p>Sub 替换abcd()</p>
+</li>
+<li><p>Dim iRng As Range</p>
+</li>
+<li><p>Set iRng = Selection</p>
+</li>
+<li><p>For Each icell In iRng</p>
+</li>
+<li><p>txt = icell.Value</p>
+</li>
+<li><p>Select Case txt</p>
+</li>
+<li><p>Case “A”</p>
+</li>
+<li><p>icell.Value = 1</p>
+</li>
+<li><p>Case “B”</p>
+</li>
+<li><p>icell.Value = 2</p>
+</li>
+<li><p>Case “C”</p>
+</li>
+<li><p>icell.Value = 3</p>
+</li>
+<li><p>Case “D”</p>
+</li>
+<li><p>icell.Value = 4</p>
+</li>
+<li><p>Case “E”</p>
+</li>
+<li><p>icell.Value = 5</p>
+</li>
+<li><p>End Select</p>
+</li>
+<li><p>Next icell</p>
+</li>
+<li><p>End Sub</p>
+</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[26]如何将ABCD替换成数字/0b3a1c087bf40ad1c6bb929a552c11dfa9ecce29.jpg" alt="Excel2013：[26]如何将ABCD替换成数字" title="Excel2013：[26]如何将ABCD替换成数字">
+<ul>
+<li>保存并关闭vbe窗口，然后按下快捷键alt+F8，打开宏编辑窗口，选中这个唯一的宏，然后点击【选项】按钮</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[26]如何将ABCD替换成数字/f392492c11dfa9ec2371036e60d0f703918fc129.jpg" alt="Excel2013：[26]如何将ABCD替换成数字" title="Excel2013：[26]如何将ABCD替换成数字">
+<ul>
+<li>设置快捷键为Ctrl+q，然后点击确定按钮</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[26]如何将ABCD替换成数字/0b14ad19ebc4b7453efce26fcdfc1e178a82151b.jpg" alt="Excel2013：[26]如何将ABCD替换成数字" title="Excel2013：[26]如何将ABCD替换成数字">
+<ul>
+<li>下面开始使用这个宏来转化数据，如图，先选中要转换的这一列，然后按下快捷键【Ctrl+q】，你可以看到数据快速得到转换。abcd都变成了1234</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[26]如何将ABCD替换成数字/58af236d55fbb2fbf5740d6b4d4a20a44623dc29.jpg" alt="Excel2013：[26]如何将ABCD替换成数字" title="Excel2013：[26]如何将ABCD替换成数字">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/02/05/Python教程：[33]setuptools安装扩展库的方法/">
                 Python教程：[33]setuptools安装扩展库的方法
             </a>
@@ -636,123 +785,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/01/19/numpy函数：[4]reshape用法/">
-                numpy函数：[4]reshape用法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年01月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天我们学习一个新函数reshape，顾名思义，它就是用于该表数组的形状的，它是数组对象中的方法，我们还是来看具体的例子吧：</p>
-<ul>
-<li>同样要引入numpy，名称为np</li>
-</ul>
-<img src="/2016/01/19/numpy函数：[4]reshape用法/c9bdddcec3fdfc03c787811fd63f8794a5c2265e.jpg" alt="numpy函数：[4]reshape用法" title="numpy函数：[4]reshape用法">
-<ul>
-<li>我们先来创建一个数组a，你们可以看到这是一个一维的数组</li>
-</ul>
-<img src="/2016/01/19/numpy函数：[4]reshape用法/5af4d7ea15ce36d33419ee9738f33a87e950b13d.jpg" alt="numpy函数：[4]reshape用法" title="numpy函数：[4]reshape用法">
-<ul>
-<li>我们使用reshape()方法来更改数组的形状，我们看看数组d成为了一个二维数组</li>
-</ul>
-<img src="/2016/01/19/numpy函数：[4]reshape用法/509b9fcb39dbb6fd36a487810b24ab18962b375e.jpg" alt="numpy函数：[4]reshape用法" title="numpy函数：[4]reshape用法">
-<ul>
-<li>当然我们还可以得到一个三维数组f</li>
-</ul>
-<img src="/2016/01/19/numpy函数：[4]reshape用法/0e655ca7d933c895a3b6f5dcd31373f083020009.jpg" alt="numpy函数：[4]reshape用法" title="numpy函数：[4]reshape用法">
-<ul>
-<li>形状变化的原则是数组元素不能发生改变，比如这样写就是错误的，因为数组元素发生了变化。</li>
-</ul>
-<img src="/2016/01/19/numpy函数：[4]reshape用法/d1571724ab18972bbdc5626de4cd7b899f510a5e.jpg" alt="numpy函数：[4]reshape用法" title="numpy函数：[4]reshape用法">
-<ul>
-<li>通过reshape生成的新数组和原始数组公用一个内存，也就是说，假如更改一个数组的元素，另一个数组也将发生改变。看看下面的例子：</li>
-</ul>
-<img src="/2016/01/19/numpy函数：[4]reshape用法/647912d7912397dd5264f5a35b82b2b7d0a2873d.jpg" alt="numpy函数：[4]reshape用法" title="numpy函数：[4]reshape用法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/">
-                spss多重反应下的频次分析方法（多项选择题分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年01月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>在问卷调查中经常用到多项选择题，分析多项选择题的方法就是multiple response，我们举一个例子，在网络调查问卷中有一题是：你获得信息的主要来源有哪些？选项有：网络、报纸、电视、读书、听说、手机。这是一个有六个选项的多项选择题，你改如何对各个选项的频率进行分析呢？下面是具体的方法：<br>方法/步骤</p>
-<ul>
-<li>spss中打开数据，为了对多项选择题进行频次分析，先要设定一个变量集，因为在spss中，多项选择题额答案不能直接输入，只能将每一个变量当作一个单项选择题，每一题有一个答案或者没有答案。我们先要做的就是将所有的选项构成的单项选择题组成变量集，如图所示，在菜单栏上执行：analyze–multiple response–define sets</li>
-</ul>
-<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/7c1ed21b0ef41bd5b80b1d7b51da81cb38db3de0.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
-<ul>
-<li>将所有的选项变量放到变量集中</li>
-</ul>
-<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/8b13632762d0f703fcc6605308fa513d2797c5cd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
-<ul>
-<li>选择变量是如何编码的，我们刚才看到了，每个变量都有6个选项，这就是分类变量了，所以要选择category。如果每个选项变量是是否形式的，应该选择dichotomies。</li>
-</ul>
-<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/d50735fae6cd7b89ba34cf0c0f2442a7d8330ee0.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
-<ul>
-<li>给变量添加一个名称，并填写标签，如图所示，然后点击add按钮，最后点击关闭按钮。</li>
-</ul>
-<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/0e2442a7d933c895fb266df4d11373f0830200e0.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
-<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/91529822720e0cf35783bb740a46f21fbf09aacd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
-<ul>
-<li>接着就要对多项选择题进行分析了，在菜单栏上执行：analyze–multiple response–frequencies</li>
-</ul>
-<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/6a600c338744ebf8910591b0d9f9d72a6159a7cd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
-<ul>
-<li>将你刚才新家的变量集添加到右侧列表里，点击ok按钮，开始输出结果</li>
-</ul>
-<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/1f178a82b9014a90b266b332a9773912b21beee1.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
-<ul>
-<li><p>我们来分析一下输出结果，N是选择对应选项的人数，百分比指的是在所有的选择中，该项占的百分比，个案百分比指的是选择该选项的人占所有人数的百分比</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/01/19/spss多重反应下的频次分析方法（多项选择题分析/359b033b5bb5c9ea8287f66cd539b6003bf3b3cd.jpg" alt="spss多重反应下的频次分析方法（多项选择题分析" title="spss多重反应下的频次分析方法（多项选择题分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -795,19 +827,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

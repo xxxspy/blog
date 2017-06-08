@@ -155,6 +155,115 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/08/19/Python教程：[27]字符串时间转换成时间戳/">
+                Python教程：[27]字符串时间转换成时间戳
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们使用time模块来实现数据格式的转换，假如我想要读取现在的时间，我们得到的是一个时间戳，那么如何转换格式，得到你能看懂的时间呢，下面的代码可以帮助你。</p>
+<ul>
+<li>引入时间模块</li>
+</ul>
+<img src="/2016/08/19/Python教程：[27]字符串时间转换成时间戳/7d98931001e93901ec4a372b79ec54e736d19618.jpg" alt="Python教程：[27]字符串时间转换成时间戳" title="Python教程：[27]字符串时间转换成时间戳">
+<ul>
+<li>使用time.time方法可以生成时间戳，这个时间戳是自1970年以后经过的秒数，精确到小数后3位，也就是微秒。</li>
+</ul>
+<img src="/2016/08/19/Python教程：[27]字符串时间转换成时间戳/2e6fa7389b504fc203170a10e7dde71190ef6d18.jpg" alt="Python教程：[27]字符串时间转换成时间戳" title="Python教程：[27]字符串时间转换成时间戳">
+<ul>
+<li>我们把时间戳赋值给t，然后使用localtime函数来转换成可以读懂的格式时间对象</li>
+</ul>
+<img src="/2016/08/19/Python教程：[27]字符串时间转换成时间戳/6391e903918fa0ec883dde18249759ee3c6ddbea.jpg" alt="Python教程：[27]字符串时间转换成时间戳" title="Python教程：[27]字符串时间转换成时间戳">
+<ul>
+<li>我们设置一下时间格式，然后使用strftime函数来转换，得到字符串。关于时间的格式，下面有详细的讲。</li>
+</ul>
+<img src="/2016/08/19/Python教程：[27]字符串时间转换成时间戳/5d212aa85edf8db12466c6710b23dd54564e7418.jpg" alt="Python教程：[27]字符串时间转换成时间戳" title="Python教程：[27]字符串时间转换成时间戳">
+<ul>
+<li>你怎么知道哪个字符代表的是年月还是日，下面的表格可以告诉你。</li>
+</ul>
+<img src="/2016/08/19/Python教程：[27]字符串时间转换成时间戳/c2bce2039245d688ca6117b1a6c27d1ed21b2400.jpg" alt="Python教程：[27]字符串时间转换成时间戳" title="Python教程：[27]字符串时间转换成时间戳">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/19/Excel2013：[56]打开csv文件乱码/">
+                Excel2013：[56]打开csv文件乱码
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>大部分csv文件是从网页上下载下来的，所以我们通常需要将csv文件以正确的编码方式打开，关于编码的问题我就不多说了，说了可能也不太容易理解，所以我们直接在说一些解决方法。通常是在Excel中设置语言编码，但是Excel中没有明确的设置编码方式的地方，只能找到一个妥协的方法：其实很简单，看下面详细教程：</p>
+<ul>
+<li>首先打开选项面板，如图，它在菜单的最下面</li>
+</ul>
+<img src="/2016/08/19/Excel2013：[56]打开csv文件乱码/11794d43fbf2b2112f19375dc98065380cd78eab.jpg" alt="Excel2013：[56]打开csv文件乱码" title="Excel2013：[56]打开csv文件乱码">
+<ul>
+<li>在选项中，点击【语言】</li>
+</ul>
+<img src="/2016/08/19/Excel2013：[56]打开csv文件乱码/906289dda144ad349f693494d3a20cf430ad8594.jpg" alt="Excel2013：[56]打开csv文件乱码" title="Excel2013：[56]打开csv文件乱码">
+<ul>
+<li>在语言设置界面，你可能看到了，默认情况下，英语是默认语言，我们选择【中文】，然后点击右侧按钮【设为默认】</li>
+</ul>
+<img src="/2016/08/19/Excel2013：[56]打开csv文件乱码/b13fd48065380cd7502910fea244ad34598281ab.jpg" alt="Excel2013：[56]打开csv文件乱码" title="Excel2013：[56]打开csv文件乱码">
+<ul>
+<li>弹出警告选项，我们直接点击【是】</li>
+</ul>
+<img src="/2016/08/19/Excel2013：[56]打开csv文件乱码/ac754782b2b7d0a2c51fb78ec8ef76094a369a94.jpg" alt="Excel2013：[56]打开csv文件乱码" title="Excel2013：[56]打开csv文件乱码">
+<ul>
+<li>关闭当前的Excel，然后重新打开</li>
+</ul>
+<img src="/2016/08/19/Excel2013：[56]打开csv文件乱码/caae68094b36acafe13625ef7fd98d1000e99c94.jpg" alt="Excel2013：[56]打开csv文件乱码" title="Excel2013：[56]打开csv文件乱码">
+<ul>
+<li>原先为乱码的地方，现在都变成了中文</li>
+</ul>
+<img src="/2016/08/19/Excel2013：[56]打开csv文件乱码/77485536acaf2edd7327fafa8e1001e938019394.jpg" alt="Excel2013：[56]打开csv文件乱码" title="Excel2013：[56]打开csv文件乱码">
+<ul>
+<li>本人经常分享一些数据处理的教程，有志于统计分析、数据处理方面发展的人请持续关注该博客。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/08/19/Excel2013：[38]数据透视表字段分组/">
                 Excel2013：[38]数据透视表字段分组
             </a>
@@ -666,132 +775,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/15/python 线性代数：[15]从协方差阵计算相关阵/">
-                python 线性代数：[15]从协方差阵计算相关阵
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>其实Python的numpy包有可以直接计算相关矩阵/协方差矩阵的方法，但是这篇文章是教大家如何理解他俩之间的关系的，所以我们给出协方差矩阵，求相关矩阵。利用公式：</p>
-<ul>
-<li>引入numpy模块</li>
-</ul>
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/90cebeec08fa513d1aee8d9f3e6d55fbb3fbd9e8.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<ul>
-<li>创建一个协方差矩阵<br>这个矩阵为：</li>
-</ul>
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/507c389759ee3d6d6a82668a40166d224e4adee8.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/c87c6ecf3bc79f3d34aa0571b9a1cd11738b29ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<ul>
-<li>我们先求得协方差矩阵的尺寸</li>
-</ul>
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/d019d2bf6c81800aafae684fb23533fa838b47ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<ul>
-<li>生成一个与sigma同大小的单位矩阵：e<br>输出为：</li>
-</ul>
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/cdfe7281800a19d80b48654430fa828ba71e46ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/ac0acf1373f08202a0e7707e48fbfbedab641b3f.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<ul>
-<li>计算方差矩阵，其实就是利用单位矩阵消除协方差矩阵中的非对角线元素</li>
-</ul>
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/808a27dbb6fd5266375edd55a818972bd407363f.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/c28fddfdfc0392450efe004e8494a4c27c1e25ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<ul>
-<li>求得标准差矩阵</li>
-</ul>
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/a75fb6d3fd1f4134287ce43f261f95cad0c85eed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/020e66f0f736afc37a78de24b019ebc4b745123f.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<ul>
-<li>求得标准差的逆矩阵</li>
-</ul>
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/e78c65899e510fb3fe6c96d6da33c895d1430c3f.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/ea85a94543a98226c5b5ca668982b9014a90eb38.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<ul>
-<li>根据公式就求得了相关系数矩阵</li>
-</ul>
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/a6c7d7177f3e6709014ba4be38c79f3df9dc55ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/0fb505d5ad6eddc4b3ac55ba3adbb6fd536633ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/">
-                Python统计分析：[6]单因素重复测量方差分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>单因素重复测量方差分析:[repeated measuers anova in python]</p>
-<ul>
-<li>引入相关模块</li>
-</ul>
-<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/c71d0e385343fbf211710c5fb37eca8065388f2a.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
-<ul>
-<li>读取数据，并打印查看数据<br>数据在整理前是这样的：这是重复测量方差分析标准的数据格式，scoreA和scoreB分别是前测和后测成绩，ID表示被试的编号，group在今天的教程中没用，忽略他</li>
-</ul>
-<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/fab3ac119313b07e6ce0fa740fd7912397dd8c2a.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
-<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/83cab81ea8d3fd1fb2ba0846334e251f94ca5fd8.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
-<ul>
-<li>整理数据很关键，我们用到了pandas.concat来合并两个数据框<br>最终得到的数据如下：一个因变量score和两个自变量（ID和group）</li>
-</ul>
-<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/dc15484e9258d109565003ced258ccbf6d814dd8.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
-<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/4075890a304e251f62444e84a486c9177e3e53d8.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
-<ul>
-<li>回忆上一篇的知识，我们需要写一个公式定义模型，然后进行拟合</li>
-</ul>
-<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/814b07d8bc3eb135dd741dc7a51ea8d3fc1f44d8.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
-<ul>
-<li>最后得到的重复测量的方差分析结果，ID是被试差异造成的影响，可以不看；group就是实验处理效应，它是不显著的。</li>
-</ul>
-<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/245e8bcad1c8a7863399e0726409c93d71cf50d8.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
-<ul>
-<li>假如我们用spss进行重复测量的方差分析，得到的结果是：和上面的结果是一样的。至此我们就实现了单因素重复测量的方差分析，下一节继续介绍多因素混合设计方差分析。</li>
-</ul>
-<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/38403f3fb80e7becea64969d2c2eb9389a506bd5.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -834,19 +817,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

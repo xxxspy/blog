@@ -155,6 +155,148 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/07/01/DataNitro：[4]CellRange对象/">
+                DataNitro：[4]CellRange对象
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>CellRange在之前介绍过，我们大概也知道CellRange就是几个单元格组成的区域，今天来系统地看一下CellRange有哪些方法和属性。</p>
+<ul>
+<li>创建或者获取一个CellRange，我们可以用这些写法：注意print只是我为了输出这些CellRange的名字，与今天的学习内容无关。下面三种写法意义相同。</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/b94f65ec54e736d1fb7b355a98504fc2d562693d.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>上一种写法代表了一个连续区域，下面的写法代表不连续区域：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/7d98931001e93901eee5346c78ec54e737d196ba.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>通过名称获取一个区域：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/9f6e190828381f30856335fbaa014c086e06f02f.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>我们还可以指明区域所在的sheet</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/5327ce160924ab18a639596536fae6cd7b890b71.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>迭代的方式输出所有单元格：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/a75fb6d3fd1f41349197bd2c261f95cad0c85e84.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>一个区域内包含多少单元格：可以用len()</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/27d647ee3d6d55fb3563ce746e224f4a21a4ddf8.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>像列表一样，我们可以使用索引来得到区域内任意一个单元格：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/b29f8282d158ccbf97200d681ad8bc3eb0354181.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li><p>这篇文章略去的属性有：</p>
+</li>
+<li><p>value,formula,color,hyperlink,comment,font，row,col,position,name,sheet，table，这些与Cell属性相同，参考上一篇文章</p>
+</li>
+<li><p>合并两个区域，用加号就好了</p>
+</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/6a22e8246b600c331d16659a194c510fd9f9a132.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>将Cell添加进CellRange</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/cf5a8316fdfaaf51128b3aed8f5494eef01f7a3d.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li>将Cell从CellRange中删除：</li>
+</ul>
+<img src="/2016/07/01/DataNitro：[4]CellRange对象/72ccb7773912b31beaca767b8518367adbb4e1fb.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
+<ul>
+<li><p>其他方法：</p>
+</li>
+<li><p>如：claer,copy_from,copy_format_from,is_empty,set_name等</p>
+</li>
+<li><p>#可以参考Cell的方法</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/">
+                Python教程：[20]urlsplit和urlparse的区别
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年06月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>urlsplit和urlparse非常相像，用法基本一致，但是他们有略微的不同，split函数在分割的时候，path和params属性是在一起的，我们看下面的例子。</p>
+<ul>
+<li>先用urlparse函数来分割url</li>
+</ul>
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/55a628d12f2eb938980b2fdfd7628535e5dd6f7d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/d4239b35e5dde71199b416dba5efce1b9d16617d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
+<ul>
+<li>将结果打印出来</li>
+</ul>
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/cf5a8316fdfaaf51e385d4928e5494eef01f7a7d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
+<ul>
+<li>我们看到输出的结果，有params这一项</li>
+</ul>
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/ae10eddeb48f8c5487b5900238292df5e0fe7f7d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
+<ul>
+<li>接着使用urlsplit函数，可选参数不能输出，所以只能再前面加了以井号</li>
+</ul>
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/a75fb6d3fd1f4134a32e5053271f95cad1c85e46.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
+<ul>
+<li><p>我们比较一下两个结果</p>
+</li>
+<li><p>urlparse函数</p>
+</li>
+<li><p>urlsplit函数</p>
+</li>
+</ul>
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/310f3b1f95cad1c89ea2a90a7d3e6709c93d5146.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
+<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/7e7f7909c93d70cf04e3ff20fadcd100baa12b46.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/">
                 网页数据采集：[3]python如何利用抓包数据
             </a>
@@ -644,167 +786,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/">
-                spss20.0单因素方差分析的操作和结果分析方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年06月05日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>单因素方差分析指的是自变量只有一个的方差分析，实验的设计一般是将被试随机分配到不同的自变量水平，这样不同的分组就代表着不同的自变量水平，值得注意的是，自变量虽然只有一个，但是因变量可以有两个甚至更多。下面是具体的方法。<br>工具/原料</p>
-<ul>
-<li>spss20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>在spss中打开你要处理的数据，在菜单栏上执行：analyse-compare means–one-way anova，打开单因素方差分析对话框 </li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/a9d3fd1f4134970a6ab77ed895cad1c8a6865d04.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li>在这个对话框中，将因变量放到dependent list中，将自变量放到factor中，这个研究中有两个因变量，所以把两个因变量都放到上面的列表里</li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/2934349b033b5bb532384e0936d3d539b700bc5e.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li>点击post hoc，打开一个对话框，设置事后检验的方法</li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/c8177f3e6709c93d133660009f3df8dcd0005404.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li>在这个对话框中，我们在上面的方差齐性的方法中选择tukey和REGWQ，在方差不齐性的方法中选择dunnetts，点击continue继续</li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/14ce36d3d539b6003a206140e950352ac75cb75e.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li>回到了anova的对话框，点击options按钮，设置要输出的基本结果</li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/279759ee3d6d55fb686218d16d224f4a21a4dda5.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li>这里选择描述统计结果和方差齐性检验，点击continue按钮</li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/3c6d55fbb2fb4316b1bb148d20a4462308f7d3a5.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li>点击ok按钮，开始处理数据</li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/359b033b5bb5c9eae90f6d14d539b6003bf3b34d.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li>我们看到的结果中，第一个输出的表格就是描述统计，从这个表格里我们可以看到均值和标准差，在研究报告中，通常要报告这两个参数</li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/d53f8794a4c27d1ea5e255331bd5ad6edcc43804.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li>接着看方差齐性检验，方差不齐性的话是不能够用方差齐性的方法来检验的，还好，这里显示，显著性都没有达到最小值0.05，所以是不显著的，这证明方差是齐性的</li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/d6ca7bcb0a46f21f579030a4f6246b600d33aea5.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li>接着看单因素方差分析表，反应时sig值不显著，而错误率达到了显著的水平，这说明实验处理对错误率产生了影响，但是对反应时没有影响</li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/11385343fbf2b2119ad1ebb9ca8065380dd78e4d.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li><p>接着看事后检验，因为反应时是没有显著差异的，所以就不必再看反应时的事后检验，直接看错误率的事后检验，从图中标注的红色方框可以看到，第一组和二三组都有显著的差异，而第二组和第三组没有显著差异。关于dunnet方法，它适合在方差不齐性的时候使用，因为方差齐性，不必去看这个方法的检验结果了</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/adaf2edda3cc7cd993c35a2e3901213fb90e915e.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<ul>
-<li><p>最后我们看这个表格，这里有两个检验方法都是在方差齐性的时候使用的，我们从红色方框可以看出第一组分为一组，第二三组分为一组，它的意思是上面的结果是一致的。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/06/05/spss20.0单因素方差分析的操作和结果分析方法/6159252dd42a2834cc0258fc5bb5c9ea14cebfa5.jpg" alt="spss20.0单因素方差分析的操作和结果分析方法" title="spss20.0单因素方差分析的操作和结果分析方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/06/01/DataNitro：[7]sheet操作(B)/">
-                DataNitro：[7]sheet操作(B)
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年06月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>接着上一篇的sheet操作（A篇），下面讲不那么性感的B篇。</p>
-<ul>
-<li>clear_sheet：清空工作表，可以清空当前工作簿，也可以指定其他工作表</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/9304c888d43f8794a4eed27dd11b0ef41bd53a14.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<ul>
-<li>all_sheets：可以返回所有非隐藏sheet，也可以返回包含隐藏的sheet</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/a992e31f4134970ad5088a7c96cad1c8a7865d2f.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<ul>
-<li>new_sheet：新建一个sheet，可以指定新建sheet的名称，也可以不指定，你是自由的</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/d35a10f41bd5ad6edbe8feb982cb39dbb6fd3c14.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<ul>
-<li>remove_sheet：删除sheet，可以删除当前活动sheet也可以选择其他sheet</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/948bcfc8a786c9179478c86aca3d70cf3bc7572f.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<ul>
-<li>hide_sheet/is_hidden:用法基本也是一样的，你畜类旁通一下</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/7e7f7909c93d70cfd481305efbdcd100baa12b2f.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<ul>
-<li>recalc_sheet：重新计算sheet，适用于工作表中有公式，需要更新的。</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/509b9fcb39dbb6fd594a7f750a24ab18972b3714.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<ul>
-<li>rename_sheet:重命名，第一个参数表示被重命名的sheet，第二个参数表示新名称</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/389aa8fd5266d0160408047b942bd40735fa3514.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<ul>
-<li>all_cells：返回所有非空单元格（CellRange）对象，你可以通过遍历的方式对这些单元格进行操作</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/aa59892bd40735faf4e1d4ea9d510fb30f240814.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<ul>
-<li>merge_cells/unmerge_cells：合并和拆分单元格。</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/4651a712c8fcc3ce39bb53609145d688d43f202f.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<ul>
-<li>get_merged_range:返回合并单元格的范围</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/43e6c733c895d143b6677e7070f082025aaf0714.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<ul>
-<li>last_cell_in_col/last_cell_in_row：返回某个列或者行中最后一个非空单元格，这个方法非常有用，经常用来判断一个sheet中的数据有多少行和多少列</li>
-</ul>
-<img src="/2016/06/01/DataNitro：[7]sheet操作(B)/9304c888d43f8794a485d27dd11b0ef41bd53a2f.jpg" alt="DataNitro：[7]sheet操作(B)" title="DataNitro：[7]sheet操作(B)">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -847,19 +828,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

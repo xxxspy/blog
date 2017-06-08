@@ -155,6 +155,132 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/08/15/python 线性代数：[15]从协方差阵计算相关阵/">
+                python 线性代数：[15]从协方差阵计算相关阵
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>其实Python的numpy包有可以直接计算相关矩阵/协方差矩阵的方法，但是这篇文章是教大家如何理解他俩之间的关系的，所以我们给出协方差矩阵，求相关矩阵。利用公式：</p>
+<ul>
+<li>引入numpy模块</li>
+</ul>
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/90cebeec08fa513d1aee8d9f3e6d55fbb3fbd9e8.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<ul>
+<li>创建一个协方差矩阵<br>这个矩阵为：</li>
+</ul>
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/507c389759ee3d6d6a82668a40166d224e4adee8.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/c87c6ecf3bc79f3d34aa0571b9a1cd11738b29ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<ul>
+<li>我们先求得协方差矩阵的尺寸</li>
+</ul>
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/d019d2bf6c81800aafae684fb23533fa838b47ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<ul>
+<li>生成一个与sigma同大小的单位矩阵：e<br>输出为：</li>
+</ul>
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/cdfe7281800a19d80b48654430fa828ba71e46ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/ac0acf1373f08202a0e7707e48fbfbedab641b3f.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<ul>
+<li>计算方差矩阵，其实就是利用单位矩阵消除协方差矩阵中的非对角线元素</li>
+</ul>
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/808a27dbb6fd5266375edd55a818972bd407363f.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/c28fddfdfc0392450efe004e8494a4c27c1e25ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<ul>
+<li>求得标准差矩阵</li>
+</ul>
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/a75fb6d3fd1f4134287ce43f261f95cad0c85eed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/020e66f0f736afc37a78de24b019ebc4b745123f.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<ul>
+<li>求得标准差的逆矩阵</li>
+</ul>
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/e78c65899e510fb3fe6c96d6da33c895d1430c3f.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/ea85a94543a98226c5b5ca668982b9014a90eb38.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<ul>
+<li>根据公式就求得了相关系数矩阵</li>
+</ul>
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/a6c7d7177f3e6709014ba4be38c79f3df9dc55ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<img src="/2016/08/15/python%20线性代数：[15]从协方差阵计算相关阵/0fb505d5ad6eddc4b3ac55ba3adbb6fd536633ed.jpg" alt="python 线性代数：[15]从协方差阵计算相关阵" title="python 线性代数：[15]从协方差阵计算相关阵">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/">
+                Python统计分析：[6]单因素重复测量方差分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>单因素重复测量方差分析:[repeated measuers anova in python]</p>
+<ul>
+<li>引入相关模块</li>
+</ul>
+<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/c71d0e385343fbf211710c5fb37eca8065388f2a.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
+<ul>
+<li>读取数据，并打印查看数据<br>数据在整理前是这样的：这是重复测量方差分析标准的数据格式，scoreA和scoreB分别是前测和后测成绩，ID表示被试的编号，group在今天的教程中没用，忽略他</li>
+</ul>
+<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/fab3ac119313b07e6ce0fa740fd7912397dd8c2a.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
+<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/83cab81ea8d3fd1fb2ba0846334e251f94ca5fd8.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
+<ul>
+<li>整理数据很关键，我们用到了pandas.concat来合并两个数据框<br>最终得到的数据如下：一个因变量score和两个自变量（ID和group）</li>
+</ul>
+<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/dc15484e9258d109565003ced258ccbf6d814dd8.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
+<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/4075890a304e251f62444e84a486c9177e3e53d8.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
+<ul>
+<li>回忆上一篇的知识，我们需要写一个公式定义模型，然后进行拟合</li>
+</ul>
+<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/814b07d8bc3eb135dd741dc7a51ea8d3fc1f44d8.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
+<ul>
+<li>最后得到的重复测量的方差分析结果，ID是被试差异造成的影响，可以不看；group就是实验处理效应，它是不显著的。</li>
+</ul>
+<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/245e8bcad1c8a7863399e0726409c93d71cf50d8.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
+<ul>
+<li>假如我们用spss进行重复测量的方差分析，得到的结果是：和上面的结果是一样的。至此我们就实现了单因素重复测量的方差分析，下一节继续介绍多因素混合设计方差分析。</li>
+</ul>
+<img src="/2016/08/11/Python统计分析：[6]单因素重复测量方差分析/38403f3fb80e7becea64969d2c2eb9389a506bd5.jpg" alt="Python统计分析：[6]单因素重复测量方差分析" title="Python统计分析：[6]单因素重复测量方差分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/08/11/Excel2013：[48]对数坐标轴怎么弄/">
                 Excel2013：[48]对数坐标轴怎么弄
             </a>
@@ -752,124 +878,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/01/vba批量重命名 复制 删除文件夹：[6]Excel2013/">
-                vba批量重命名 复制 删除文件夹：[6]Excel2013
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>使用Excel中的vba可以帮助我们批量的处理一些文件和文件夹，比如vba批量重命名移动复制删除文件夹，今天我们就来分享几个简单的程序，大家看一下就能懂，帮助我们批量的vba批量重命名移动复制删除文件夹，下面是具体的教程：</p>
-<ul>
-<li>dir函数判断文件夹是否存在：dir函数有两个参数，一个是文件夹的路径，第二个参数见下面第二幅图，他的意义已经在后面标注出来。下面这段程序的意思是如果在本Excel路径下没有找到文件夹“新建文件夹（2）”，那么就弹出消息框说没有该文件夹。</li>
-</ul>
-<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/2f9cbdcc7cd98d10397b1a5c203fb80e7aec90f4.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
-<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/77485536acaf2edd96315f848c1001e93801935f.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
-<ul>
-<li>mkdir函数可以创建文件夹：如图所示，它只有一个参数就是文件的路径，我们使用了本工作簿的路径，如图所示</li>
-</ul>
-<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/4abae5edab64034fca54d36baec379310b551d86.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
-<ul>
-<li>rmdir函数可以删除文件夹：如图所示它只有一个参数，那就是文件夹的路径，它的一个应用案例如图所示：注意这个函数只能删除空文件夹，如果文件夹中有文件，那么函数就会提示错误</li>
-</ul>
-<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/29790130e924b899710769556f061d950a7bf661.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
-<ul>
-<li>name函数重命名文件夹或者文件：它其实包括两个部分，As的前面是我们要命名的文件夹路径，As后面是命名后的文件夹路径</li>
-</ul>
-<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/5af4d7ea15ce36d3c127905d3bf33a87e950b178.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
-<ul>
-<li>name函数移动文件夹或者文家：和上面的用法一样，只不过在写As后面的路径的时候我们把路径改成想要移动到的位置，比如对上面的代码进行修改就变成了移动文件夹：</li>
-</ul>
-<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/0862c354564e92588f2d94839d82d158ccbf4e06.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
-<ul>
-<li>使用filesystemobject对象来复制文件夹：注意这个写法有些不同，首先要创建一个对象，然后才能使用它的方法，copyfolder方法也有两个参数，两个参数用逗号隔开，前面是要复制的文件夹，后面是复制得到的文件夹路径</li>
-</ul>
-<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/245e8bcad1c8a786ba0f57636609c93d70cf5072.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
-<ul>
-<li>使用shell打开文件夹：我们用到了explore.exe应用程序，注意其后面有一个空格不能省略，后面是文件夹的路径，注意使用引号，然后最后是一个逗号和参数，各个参数不同，你自己尝试一下</li>
-</ul>
-<img src="/2016/08/01/vba批量重命名%20复制%20删除文件夹：[6]Excel2013/bd7faf3533fa828bcef3818efc1f4134960a5a4f.jpg" alt="vba批量重命名 复制 删除文件夹：[6]Excel2013" title="vba批量重命名 复制 删除文件夹：[6]Excel2013">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/01/Excel2013：[54]计算月龄/">
-                Excel2013：[54]计算月龄
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>在心理学的研究中，经常要计算被试的月龄，也就是从出生到现在经历的月的个数。那么在Excel中是如何计算月龄的呢？用到了一个函数DateDif函数，下面是具体的用法：</p>
-<ul>
-<li>我们现在有一列生日和一个测试日期，要计算月龄其实就是他俩相减</li>
-</ul>
-<img src="/2016/08/01/Excel2013：[54]计算月龄/caae68094b36acafa3046a0f7ed98d1000e99c1a.jpg" alt="Excel2013：[54]计算月龄" title="Excel2013：[54]计算月龄">
-<ul>
-<li>首先，我们要保证上面这两列数据都是日期格式</li>
-</ul>
-<img src="/2016/08/01/Excel2013：[54]计算月龄/9304c888d43f8794434eb4ddd01b0ef41ad53a55.jpg" alt="Excel2013：[54]计算月龄" title="Excel2013：[54]计算月龄">
-<ul>
-<li>接着选中月龄的第一行，然后输入公式</li>
-</ul>
-<img src="/2016/08/01/Excel2013：[54]计算月龄/d35a10f41bd5ad6e3048981983cb39dbb7fd3c55.jpg" alt="Excel2013：[54]计算月龄" title="Excel2013：[54]计算月龄">
-<ul>
-<li>公式的写法是：</li>
-</ul>
-<img src="/2016/08/01/Excel2013：[54]计算月龄/8474fbdde71190efd71f6e2ccc1b9d16fcfa601a.jpg" alt="Excel2013：[54]计算月龄" title="Excel2013：[54]计算月龄">
-<ul>
-<li><p>DATEDIF的第一个参数是N2，也就是开始时间；第二个参数是结束时间O2，之所以添加了$符号是因为这样可以在公式快速填充的时候保持该单元格地址不变；第三个参数是单位m，也就是month的意思，如果你想要计算年龄，可以使用单位“Y”，如果想要计算天数可以使用单位“D”</p>
-</li>
-<li><p>写好了以后，拖动右下角可以快速填充，得到其他月龄</p>
-</li>
-</ul>
-<img src="/2016/08/01/Excel2013：[54]计算月龄/b7bc4c66d01609245e945ee8d60735fae7cd3455.jpg" alt="Excel2013：[54]计算月龄" title="Excel2013：[54]计算月龄">
-<ul>
-<li>这就是计算好的月龄了。</li>
-</ul>
-<img src="/2016/08/01/Excel2013：[54]计算月龄/e1bf8725bc315c608671971c8fb1cb134854771a.jpg" alt="Excel2013：[54]计算月龄" title="Excel2013：[54]计算月龄">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -912,19 +920,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

@@ -155,6 +155,125 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/07/05/pandas教程：[18]匹配字符串/">
+                pandas教程：[18]匹配字符串
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>pandas可以检测字符串是否包含某字符模式或者匹配它，这在处理一些字符串数据的时候非常有用，下面我们来用几个例子说明一下。</p>
+<ul>
+<li>首先，我们创建一个数据序列<br>查看数据序列：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/5202e5f2b21193133c3f72b466380cd791238d73.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/1e71f724b899a90109ecd9321e950a7b0308f59e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>检测数据序列中哪些元素包含一个字母和一个数字的字符模式<br>匹配结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/b13fd48065380cd701622fe9a244ad3459828173.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/7d98931001e93901827e003a78ec54e736d19673.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>我们可以使用na参数来规定出现NaN数据的时候匹配成True还是False<br>结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/0d968f2397dda1443e75e1b6b1b7d0a20cf48673.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/0b3a1c087bf40ad12e3d45e7542c11dfa8ecce9e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>match方法可以严格匹配字符串：<br>输出结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/8640bf8b87d6277fa0cbb03c2b381f30e824fc9e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/55a628d12f2eb9383111f7f6d6628535e5dd6f73.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li><p>还有，我们可以检查字符串开始字符，假设我们想要查找以字母a开头的数据，可以用startswith或者contains，注意contains中第一个参数，不懂得童鞋可以去看Python的正则表达式</p>
+</li>
+<li><p>输出结果：</p>
+</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/caae68094b36acafb39c1bf87fd98d1001e99c73.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/4e83cb628535e5dd485028db75c6a7efce1b6273.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>同样道理，可以检查结束字符串<br>输出结果为：</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/9f6e190828381f30abc00fadaa014c086f06f09e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/a8ad9413632762d0a3e726bba3ec08fa503dc69e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<ul>
+<li>还有很多字符串方法，这里不一一距离，你看一下简介用到的时候再去学</li>
+</ul>
+<img src="/2015/07/05/pandas教程：[18]匹配字符串/54baacfb43166d222fae9790452309f79152d29e.jpg" alt="pandas教程：[18]匹配字符串" title="pandas教程：[18]匹配字符串">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/03/SPSS python教程：[4]startclient/">
+                SPSS python教程：[4]startclient
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用python控制spss的时候，我们必须在使用spss的任何功能前，先启动spss，这就是用到了StartClient方法。假如我们完成了所有spss的工作，这时候我们就可以使用StopClient方法来结束spss进程。下面看一个例子。</p>
+<ul>
+<li>首先我们在syntax编辑窗口中运行python，首先应该想到使用BEGIN PROGRAM.和END PROGRAM.来将python代码包括起来。</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/42e89c26cffc1e178d6963a64890f603728de910.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>然后引入SpssClient模块，这样才能使用它的StartClient方法</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/ac754782b2b7d0a2786eed0ac9ef76094a369a47.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>我们启动spss客户端的方法就是这样了，记住，通常使用完spss以后，要通过StopClient方法来关闭它。</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/e78c65899e510fb3e5bb9e00db33c895d0430c4c.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>真正实现功能的是这两句代码，先不用管它什么意思</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/73ca5910b912c8fc0e641f5afe039245d7882157.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<ul>
+<li>运行结果是输出了当前的工作文件夹：</li>
+</ul>
+<img src="/2015/07/03/SPSS%20python教程：[4]startclient/c28fddfdfc039245073608988594a4c27c1e2563.jpg" alt="SPSS python教程：[4]startclient" title="SPSS python教程：[4]startclient">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/07/01/SPSS实例：[37]最优尺度回归/">
                 SPSS实例：[37]最优尺度回归
             </a>
@@ -619,143 +738,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/06/17/Excel2013：[42]修改批注中的默认前面/">
-                Excel2013：[42]修改批注中的默认前面
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年06月17日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>这篇文章的标题写错了，应该是《修改批注默认签名》，希望管理员看懂啊了给改一下《修改批注默认签名》</p>
-<ul>
-<li>我们看到默认的批注签名都是：administrator，现在就要修改它</li>
-</ul>
-<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/9864a2315c6034a853c2e2e6c913495409237671.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
-<ul>
-<li>点击【文件】按钮</li>
-</ul>
-<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/5d212aa85edf8db1c40e26030b23dd54564e7471.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
-<ul>
-<li>看到打开了开始菜单，我们选择【选项】按钮</li>
-</ul>
-<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/9f6e190828381f30621bd7ceab014c086e06f01c.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
-<ul>
-<li>切换到【常规】标签下面，对这就是这里</li>
-</ul>
-<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/9319cf09b3de9c82c945a3e86e81800a19d84371.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
-<ul>
-<li>找到用户名，修改用户名为你需要的名字</li>
-</ul>
-<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/6dc09e0a19d8bc3eaf285cad808ba61ea8d34571.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
-<ul>
-<li>点击确定按钮，设置完成</li>
-</ul>
-<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/245e8bcad1c8a786e20a10696509c93d70cf5071.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
-<ul>
-<li>插入一个批注试试效果</li>
-</ul>
-<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/90cebeec08fa513d84a836b93f6d55fbb2fbd91c.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
-<ul>
-<li>现在批注的签名已经成为你想要的了。哈哈，更多教程，请关注我的百度经验。我们是专业的数据分析员，喜欢分享在工作中遇到的各种经验</li>
-</ul>
-<img src="/2015/06/17/Excel2013：[42]修改批注中的默认前面/7e7f7909c93d70cf0bdaf06afadcd100baa12b71.jpg" alt="Excel2013：[42]修改批注中的默认前面" title="Excel2013：[42]修改批注中的默认前面">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/06/15/spss如何做交叉表分析/">
-                spss如何做交叉表分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年06月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p> 交叉表分析主要用来检验两个变量之间是否存在关系，或者说是否独立，其零假设为两个变量之间没有关系。我们在实际的工作中，经常用交叉表来分析比例是否相等。比如我们来分析一下，不同的性别对不同的报纸的选择有什么不同，就是要用交叉表分析了，下面是具体的方法。<br>方法/步骤</p>
-<ul>
-<li>在spss中打开数据，然后依次打开：analyze–descriptive–crosstabs，打开交叉表对话框</li>
-</ul>
-<img src="/2015/06/15/spss如何做交叉表分析/7dd98d1001e939013903dcb17bec54e736d1963f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
-<ul>
-<li>将性别放到行列表，将对读物的选择变量放到列，这样就构成了一个交叉表</li>
-</ul>
-<img src="/2015/06/15/spss如何做交叉表分析/4ec2d5628535e5ddc32df45076c6a7efce1b623f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
-<ul>
-<li>接下来我们要设置输出的结果，点击statistics，打开一个新的对话框</li>
-</ul>
-<img src="/2015/06/15/spss如何做交叉表分析/8435e5dde71190ef50fac350ce1b9d16fdfa603f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
-<ul>
-<li>勾选chi-square（卡方检验），勾选phi and cramer’s V（衡量交互分析中两个变量关系强度的指标），点击continue，回到交叉表对话框</li>
-</ul>
-<img src="/2015/06/15/spss如何做交叉表分析/b812c8fcc3cec3fd9b5bf6fad688d43f869427d3.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
-<ul>
-<li>点击cells，设置cell中要展示的数据</li>
-</ul>
-<img src="/2015/06/15/spss如何做交叉表分析/f2deb48f8c5494eec0235e962df5e0fe99257e3f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
-<ul>
-<li>在这里勾选observed（各单元格的观测次数），勾选row（行单元格的百分比），点击continue，回到交叉表对话框</li>
-</ul>
-<img src="/2015/06/15/spss如何做交叉表分析/8694a4c27d1ed21b61ac7f6aad6eddc450da3fd3.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
-<ul>
-<li>点击ok按钮，输出检验结果</li>
-</ul>
-<img src="/2015/06/15/spss如何做交叉表分析/e1fe9925bc315c6003943a608db1cb134954773f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
-<ul>
-<li>先看到的第一个表格就是交叉表，性别为行、选择的读物为列</li>
-</ul>
-<img src="/2015/06/15/spss如何做交叉表分析/9825bc315c6034a866e3e90ecb1349540923763f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
-<ul>
-<li>卡方检验结果：我们主要是看pearson卡方检验，sig值小于0.05，因此我们认为不同的性别的人对周末读物的选择有显著的差别</li>
-</ul>
-<img src="/2015/06/15/spss如何做交叉表分析/bd315c6034a85edfb48dafac49540923dd54753f.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
-<ul>
-<li><p>最后一个表格，输出的是phi值和V值，两个都是代表两个变量之间的关系的紧密度的，数值小于0.1说明关系不紧密，即性别与周末读物的选择没有明显的关系，这个结论和上面的卡方检验有出入，所以我们需要进一步进行两两比较。</p>
-</li>
-<li></li>
-<li></li>
-</ul>
-<img src="/2015/06/15/spss如何做交叉表分析/4d086e061d950a7bbe531e4b0ad162d9f3d3c9df.jpg" alt="spss如何做交叉表分析" title="spss如何做交叉表分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -798,19 +780,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

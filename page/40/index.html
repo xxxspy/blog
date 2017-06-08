@@ -155,6 +155,266 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/01/05/spss交叉设计如何进行方差分析/">
+                spss交叉设计如何进行方差分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>交叉设计是自身配对基础上发展的设计方法，是一种特殊的自身对照设计，通常的设计方案为被试分为两组，一组接受实验的顺序是AB，一组接受的实验顺序是BA，这样就形成了对照，这样的设计如何进行方差分析呢？下面是具体的方法：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>首先要明白数据的录入方式，如图所示，stage就是接受条件AB的阶段</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/f603918fa0ec08faab3c106659ee3d6d55fbda37.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<ul>
+<li>在菜单栏上执行：analyse–GLM–univariate，打开方差分析对话框</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/b8014a90f603738d79ee0fe3b31bb051f919ec4f.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<ul>
+<li>将自变量和因变量放入格子的框中，点击model按钮，开始设置模型</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/e1fe9925bc315c605105682e8db1cb134854775a.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/024f78f0f736afc3b8283da4b319ebc4b64512ce.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<ul>
+<li>勾选“custom”，然后将三个变量放入右侧的模型框中</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/03087bf40ad162d91cef60dd11dfa9ec8b13cdea.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/63d0f703918fa0ecf0c666cc269759ee3c6ddbea.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<ul>
+<li>将type设置为maineffect，意思是没有交互作用，回到主菜单，点击ok</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/80cb39dbb6fd526675313ed5ab18972bd50736dc.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/34fae6cd7b899e51a19438d542a7d933c9950ddc.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<ul>
+<li>我们看到输出的结果，治疗方案treat边缘显著，但是质量的顺序stage是不显著的，判断标准就是sig值</li>
+</ul>
+<img src="/2015/01/05/spss交叉设计如何进行方差分析/7dd98d1001e9390164138fff7bec54e737d196d9.jpg" alt="spss交叉设计如何进行方差分析" title="spss交叉设计如何进行方差分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/05/python 线性代数：[9]求矩阵的秩/">
+                python 线性代数：[9]求矩阵的秩
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>矩阵的秩，课本上是这么定义的：</p>
+<ul>
+<li>先引入numpy模块</li>
+</ul>
+<img src="/2015/01/05/python%20线性代数：[9]求矩阵的秩/834344afa40f4bfba7e0dda3014f78f0f63618d1.jpg" alt="python 线性代数：[9]求矩阵的秩" title="python 线性代数：[9]求矩阵的秩">
+<ul>
+<li>创建一个单位矩阵i</li>
+</ul>
+<img src="/2015/01/05/python%20线性代数：[9]求矩阵的秩/020e66f0f736afc31b3c7c92b119ebc4b64512d1.jpg" alt="python 线性代数：[9]求矩阵的秩" title="python 线性代数：[9]求矩阵的秩">
+<ul>
+<li>计算单位矩阵i的秩</li>
+</ul>
+<img src="/2015/01/05/python%20线性代数：[9]求矩阵的秩/a84052086e061d95802574cf79f40ad163d9caa3.jpg" alt="python 线性代数：[9]求矩阵的秩" title="python 线性代数：[9]求矩阵的秩">
+<ul>
+<li>改变一下i右下角元素的值，设置为0</li>
+</ul>
+<img src="/2015/01/05/python%20线性代数：[9]求矩阵的秩/1cd4147b02087bf4878f141ef0d3572c10dfcfa3.jpg" alt="python 线性代数：[9]求矩阵的秩" title="python 线性代数：[9]求矩阵的秩">
+<ul>
+<li>重新计算矩阵的秩，得到3</li>
+</ul>
+<img src="/2015/01/05/python%20线性代数：[9]求矩阵的秩/f392492c11dfa9ec194d15e060d0f703908fc1a3.jpg" alt="python 线性代数：[9]求矩阵的秩" title="python 线性代数：[9]求矩阵的秩">
+<ul>
+<li><p>以下是我们用到的所有代码：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>import numpy</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>i=numpy.eye(4)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>i</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1.,  0.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  1.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  1.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  0.,  1.]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.matrix_rank(i)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#6>“, line 1, in <module></module></pyshell#6></p>
+</li>
+<li><p>numpy.matrix_rank(i)</p>
+</li>
+<li><p>AttributeError: ‘module’ object has no attribute ‘matrix_rank’</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.linalg.matrix_rank(i)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>4</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>i[-1,-1]=0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>i</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1.,  0.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  1.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  1.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  0.,  0.]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>i[1,1]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>1.0</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.linalg.matrix_rank(i)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>3</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/01/05/Excel2013：[52]月日年格式的日期转换为年月日/">
                 Excel2013：[52]月日年格式的日期转换为年月日
             </a>
@@ -418,19 +678,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

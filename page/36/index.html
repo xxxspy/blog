@@ -155,6 +155,141 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/03/11/spss二分类的logistic回归的操作和分析方法/">
+                spss二分类的logistic回归的操作和分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年03月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>二分类指的是因变量的数据只有两个值，代表事物的两种类别，典型的二分类变量如性别、是否患病等。因变量为二分变量原则上是无法做回归的，在回归方程中的因变量实质上是概率，而不是变量本身。在理解二分类变量以后，我们看看如何做二分类变量的logistic回归。<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>打开数据以后，菜单栏上依次点击：analyse–regression–binary logistic，打开二分回归对话框</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/e850352ac65c1038bd6b882fb2119313b17e89c2.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>将因变量和自变量放入格子的列表里，如图所示，上面的是因变量，下面的是自变量，我们看到这里有三个自变量</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/d788d43f8794a4c22380a1c60ef41bd5ac6e39bf.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>设置回归方法，这里选择最简单的方法：enter，它指的是将所有的变量一次纳入到方程。其他方法都是逐步进入的方法，在前面的文章中有介绍，这里就不再熬述。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/2f738bd4b31c8701013bf40b277f9e2f0608ff4a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/060828381f30e9241f17dddc4c086e061c95f7a8.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>点击ok，开始处理数据并检验回归方程，等待一会就会弹出数据结果窗口</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/962bd40735fae6cd1494ea8c0fb30f2442a70f3e.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>看到的第一个结果是对case的描述，第一个列表告诉你有多少数据参与的计算，有多少数据是缺省值；第二个列表告诉你因变量的编码方式，得分为1代表患病，得分为0代表没有患病</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/c75c10385343fbf25d16e7ceb07eca8065388f21.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>这个列表告诉你在没有任何自变量进入以前，预测所有的case都是患病的正确率，正确率为%52.6</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/9345d688d43f8794f85f09c3d21b0ef41ad53abe.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>下面这个列表告诉你在没有任何自变量进入以前，常数项的预测情况。B是没有引入自变量时常数项的估计值，SE它的标准误，Wald是对总体回归系数是否为0进行统计学检验的卡方。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/00e93901213fb80e72b2213a36d12f2eb83894ff.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>下面这个表格结果，通过sig值可以知道如果将模型外的各个变量纳入模型，则整个模型的拟合优度改变是否有统计学意义。 sig值小于0.05说明有统计学意义</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/9d82d158ccbf6c81b40b6f05bc3eb13533fa401a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>这个表格是对模型的全局检验，为似然比检验，供给出三个结果：同样sig值&lt;0.05表明有统计学意义。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/55e736d12f2eb938968c391fd5628535e4dd6f7d.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/09fa513d269759ee816d2226b2fb43166d22df1a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>下面的结果展示了-2log似然值和两个伪决定系数。两个伪决定系数反应的是自变量解释了因变量的变异占因变量的总变异的比例。他们俩的值不同因为使用的方法不同。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/e7cd7b899e510fb361763a7ad933c895d0430ceb.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>分类表，这里展示了使用该回归方程对case进行分类，其准确度为%71.8。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/08f790529822720ecb13af177bcb0a46f31fab7a.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<ul>
+<li>最后是输出回归方程中的各变量的系数和对系数的检验额值，sig值表明该系数是否具有统计学意义。到此，回归方程就求出来了。</li>
+</ul>
+<img src="/2015/03/11/spss二分类的logistic回归的操作和分析方法/d058ccbf6c81800a2bcbc5e3b13533fa828b4734.jpg" alt="spss二分类的logistic回归的操作和分析方法" title="spss二分类的logistic回归的操作和分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/03/11/numpy函数：[7]linspace创建等差数列/">
+                numpy函数：[7]linspace创建等差数列
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年03月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>numpy.linspace是用于创建一个一位数组，并且是等差数列构成的一位数组，它蕞常用的有三个参数，当然不只有三个参数，我们通过例子来了解一下它是如何使用的：</p>
+<ul>
+<li>首先，我们看一下第一个例子，用到三个参数，第一个参数表示起始点、第二个参数表示终止点，第三个参数表示数列的个数。</li>
+</ul>
+<img src="/2015/03/11/numpy函数：[7]linspace创建等差数列/834344afa40f4bfb989dc4c9014f78f0f636189a.jpg" alt="numpy函数：[7]linspace创建等差数列" title="numpy函数：[7]linspace创建等差数列">
+<ul>
+<li>我经常用它创建一个元素全部是1的等差数列，或者你也可以让所有元素为0</li>
+</ul>
+<img src="/2015/03/11/numpy函数：[7]linspace创建等差数列/0fb505d5ad6eddc41915ee663bdbb6fd53663379.jpg" alt="numpy函数：[7]linspace创建等差数列" title="numpy函数：[7]linspace创建等差数列">
+<ul>
+<li>我们看一下linspace创建的数组的元素的数据格式，当然是浮点型</li>
+</ul>
+<img src="/2015/03/11/numpy函数：[7]linspace创建等差数列/ae8267310a55b31980f3c7e841a98226cefc17e1.jpg" alt="numpy函数：[7]linspace创建等差数列" title="numpy函数：[7]linspace创建等差数列">
+<ul>
+<li>我们还可以使用参数endpoint来决定是否包含终止值，如果不设置这个参数，默认是True。我们看一下例子：注意步长改变了。</li>
+</ul>
+<img src="/2015/03/11/numpy函数：[7]linspace创建等差数列/c8ab0bce36d3d5397f554b5e3887e950342ab080.jpg" alt="numpy函数：[7]linspace创建等差数列" title="numpy函数：[7]linspace创建等差数列">
+<ul>
+<li>我试了试两个参数，也是可以的，但是创建的这个数组，我不太清楚是什么意义，有懂得人可以给我留言</li>
+</ul>
+<img src="/2015/03/11/numpy函数：[7]linspace创建等差数列/e8112b2ac65c103899088c5fb0119313b17e89fe.jpg" alt="numpy函数：[7]linspace创建等差数列" title="numpy函数：[7]linspace创建等差数列">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/03/03/Excel2013：[33]如何取消隐藏时输入密码/">
                 Excel2013：[33]如何取消隐藏时输入密码
             </a>
@@ -596,125 +731,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/02/23/python高级教程：[1]列表迭代/">
-                python高级教程：[1]列表迭代
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年02月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>Python在列表迭代时有许多灵活的用法，如果不用心去设计会让你走很多弯路，比如我们设定一个这样的问题：我们想找到年龄大于30的人的名字，现在有两个列表一个为names，存放着所有人的名字，一个为ages存放有所有人的年龄：</p>
-<ul>
-<li><p>我们用菜鸟的方式来解决这个问题：</p>
-</li>
-<li><p>在这里，我们创建了一个空列表oldPeople用来存放那些年龄大于30的人的名字。然后通过循环来获得那些“老人”。</p>
-</li>
-</ul>
-<img src="/2015/02/23/python高级教程：[1]列表迭代/d4239b35e5dde71187a438b3a1efce1b9c1661c5.jpg" alt="python高级教程：[1]列表迭代" title="python高级教程：[1]列表迭代">
-<ul>
-<li><p>另一种菜鸟的方式也好不到哪里去：</p>
-</li>
-<li><p>我们增加了一个递增变量i,for name in names这种写法就可以不必每次都重新获取name值；</p>
-</li>
-</ul>
-<img src="/2015/02/23/python高级教程：[1]列表迭代/8640bf8b87d6277f3d33487d2e381f30e924fc17.jpg" alt="python高级教程：[1]列表迭代" title="python高级教程：[1]列表迭代">
-<ul>
-<li>我们首先可以想到enumerate可以即得到索引i，又得到列表元素name，但是这仍然不是最佳的方式</li>
-</ul>
-<img src="/2015/02/23/python高级教程：[1]列表迭代/3853ad1bb051f8191e04790fdcb44aed2e73e717.jpg" alt="python高级教程：[1]列表迭代" title="python高级教程：[1]列表迭代">
-<ul>
-<li>一种极具Python风格的写法，只需要一句代码就可以完成这个任务。</li>
-</ul>
-<img src="/2015/02/23/python高级教程：[1]列表迭代/b0742dfa828ba61e97cab36a4734970a304e590b.jpg" alt="python高级教程：[1]列表迭代" title="python高级教程：[1]列表迭代">
-<ul>
-<li>所谓的Python高级教程就是这些，我们提供一些实例来对比菜鸟和Python高手之间的区别，以便于菜鸟能够快速的晋级为高手，如果你觉得这篇文章对你有帮助，请收藏！如果想转载，请注明作者。</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/02/23/SPSS实例：[25]列联表相关/">
-                SPSS实例：[25]列联表相关
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年02月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>如何求两个二分类数据的相关系数？或者两个变量不都是二分类，可能还有三分类、四分类，我们怎么求他们的相关呢？这种数据有一个特点就是，这两个变量都是名义变量，他们的数据没有大小之分，只有类别的不同，比如性别就是一个名义变量，我们定义男生为1，女生为2，不能说明女生大于男生。今天我们就来学习一下如何使用spss求列联表相关，而列联表相关就是用来求解分类数据（不连续数据）的相关的。</p>
-<ul>
-<li>数据的录入形式：如图所示，年龄组取值分别为0和1，图书顺序取值分别为1和2</li>
-</ul>
-<img src="/2015/02/23/SPSS实例：[25]列联表相关/29752a9b033b5bb53d7f579534d3d539b700bcf6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
-<ul>
-<li>打开交叉表分析对话框，如图所示，找到菜单</li>
-</ul>
-<img src="/2015/02/23/SPSS实例：[25]列联表相关/54baacfb43166d2299df62ff442309f79152d2f6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
-<ul>
-<li>我们将这两个变量分别放入行和列框中，这就是我们要求相关的两个变量</li>
-</ul>
-<img src="/2015/02/23/SPSS实例：[25]列联表相关/08b68e529822720ed166959179cb0a46f31fabf6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
-<ul>
-<li>点击statistics，设置要输出的参数</li>
-</ul>
-<img src="/2015/02/23/SPSS实例：[25]列联表相关/4e83cb628535e5ddc1c1d2b474c6a7efcf1b62a8.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
-<ul>
-<li>在这里，我们用到了contingency coefficient（列联系数），点击continue按钮</li>
-</ul>
-<img src="/2015/02/23/SPSS实例：[25]列联表相关/8474fbdde71190ef5e16e5b4cc1b9d16fcfa60a8.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
-<ul>
-<li>回到主对话框，我们点击ok即可开始处理数据</li>
-</ul>
-<img src="/2015/02/23/SPSS实例：[25]列联表相关/9c57e3faaf51f3de9b5fce0f96eef01f3b2979a8.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
-<ul>
-<li>在结果中，我们主要看到列联系数的值和近似sig值，显然，相关系数很小，也不显著，说明两个变量不相关。</li>
-</ul>
-<img src="/2015/02/23/SPSS实例：[25]列联表相关/d56b3634349b033ba8208bb117ce36d3d439bdf6.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
-<ul>
-<li>如果觉得这篇文章写的还可以，记得分享给你的小伙伴！！</li>
-</ul>
-<img src="/2015/02/23/SPSS实例：[25]列联表相关/b74124f33a87e950ae5a650712385343faf2b4c9.jpg" alt="SPSS实例：[25]列联表相关" title="SPSS实例：[25]列联表相关">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -757,19 +773,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

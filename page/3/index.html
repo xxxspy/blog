@@ -155,6 +155,111 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/10/03/Python教程：[61]创建文件夹 目录/">
+                Python教程：[61]创建文件夹 目录
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>python如何创建文件夹，用到了mkdir和makedirs两个方法，前者创建一层目录，后者创建多层目录，下面我们来看看具体是怎么用的。</p>
+<ul>
+<li>先要引入os模块</li>
+</ul>
+<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/ac754782b2b7d0a2c2fbb31dc9ef76094a369ac5.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
+<ul>
+<li>使用mkdir方法创建一个tt文件夹，参数是文件夹的路径：</li>
+</ul>
+<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/caae68094b36acaffad2217c7ed98d1000e99cc5.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
+<ul>
+<li>假如我们使用mkdir方法创建多层文件夹，也就是说，文件夹f:/tt1和文件夹f:/tt1/tt1都是不存在的，这时候就会出现错误</li>
+</ul>
+<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/7d98931001e93901fb303abe79ec54e737d196c5.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
+<ul>
+<li>我们可以使用makedirs方法来创建多层目录：</li>
+</ul>
+<img src="/2016/10/03/Python教程：[61]创建文件夹%20目录/8697397f9e2f07085e689d80eb24b899a801f286.jpg" alt="Python教程：[61]创建文件夹 目录" title="Python教程：[61]创建文件夹 目录">
+<ul>
+<li>写完这篇文章，你可能想知道，如何删除目录呢，幸好我前几天已经写完了一篇如何删除文件夹的文章，具体见：<a href="http://jingyan.baidu.com/article/39810a23e80384b636fda639.html" target="_blank" rel="external">http://jingyan.baidu.com/article/39810a23e80384b636fda639.html</a></li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/03/Python教程：[3]input和raw_input函数/">
+                Python教程：[3]input和raw_input函数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天使用python3.2来编辑程序的时候，突然发现一个错误name ‘raw_input’ is not defined，原因是从版本3.0 开始去掉了raw_input 函数，改用input。所以两个函数合并在了一起，所以今天只讲input函数就可以了。input函数用于弹出一个对话框，提示用户输入内容，输入的内容可以直接显示出来，也可以赋值给某个变量。</p>
+<ul>
+<li>基本用法是：input(‘输入要显示的文字’)</li>
+</ul>
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/f7426d8da97739129adc0f4bfa198618377ae2e7.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
+<ul>
+<li>弹出一个对话框，让你输入，假如我们输入“你好”</li>
+</ul>
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/a8362712b31bb051d3de3902347adab44bede0e7.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
+<ul>
+<li>立刻会出现这个输入的内容。</li>
+</ul>
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/4bac30738bd4b31cb4c61e9185d6277f9f2ff8e7.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
+<ul>
+<li>我们输入</li>
+</ul>
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/ca5257540923dd54952c2d42d309b3de9c82487a.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
+<ul>
+<li>弹出对话框，假如我们输入“www”</li>
+</ul>
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/ac2fc3c451da81cbc3f609e75066d0160924314d.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
+<ul>
+<li>a的值就是“www”</li>
+</ul>
+<img src="/2016/10/03/Python教程：[3]input和raw_input函数/a28d62d98d1001e9a225e125ba0e7bec54e79744.jpg" alt="Python教程：[3]input和raw_input函数" title="Python教程：[3]input和raw_input函数">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/10/03/SPSS实例：[24]卡方检验百分比是否相同/">
                 SPSS实例：[24]卡方检验百分比是否相同
             </a>
@@ -804,123 +909,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/09/19/DataNitro：[6]sheet操作(A)/">
-                DataNitro：[6]sheet操作(A)
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年09月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天继续我们的datanitro，讲一讲对sheet的操作，sheet就是工作表（擦！你以为我们不知道啊！），因为内容比较多，我们分为A篇和B篇，看完A篇（A篇听起来很性感），觉得好看再看B篇。</p>
-<ul>
-<li>active_sheet：返回当前活动工作表（当前活动的也就是你正在操作的，鼠标点一下某个sheet就会激活这个sheet）。如果你不传入任何参数，他会返回活动sheet的名称，如果你传入一个sheet名称，就会激活该sheet：</li>
-</ul>
-<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/d5462bfae6cd7b8986cda4d00c2442a7d8330e84.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
-<ul>
-<li>display_sheet：展示某个工作表：它的用法和上面一样，传不传参数，它的功能不同，其实datanitro的很多方法都是这样的，你畜类旁通一下，因为很多时候我是不会重复的说这个事情的。</li>
-</ul>
-<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/d5462bfae6cd7b898914a3d00c2442a7d9330e2d.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
-<ul>
-<li>clear_row和clear_col：清空某行或者某列：他们可以使用整数、列表、Cell对象CellRange对象作为参数。当使用Cell或者CellRange的时候，他们清空的是这些单元格所在的行或者列</li>
-</ul>
-<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/cdfe7281800a19d863fd1d5630fa828ba71e46ac.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
-<ul>
-<li><p>del_row/del_col用法也是同上，顾名思义，删除行或者列。</p>
-</li>
-<li><p>hide_row/hide_col用法稍微不同，顾名思义，隐藏行或者列。可以传入整数、列表，还可以指定隐藏某个特定的工作表中的行。</p>
-</li>
-</ul>
-<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/d66b7e59252dd42aadde98f8003b5bb5c8eab84b.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
-<ul>
-<li>row_is_hidded/col_is_hidden：判断某行/列是否被隐藏，如果被隐藏，返回True，否则返回False。只能接受整数作为参数，而是否指定某个工作表是可选的，如果不指定，那么就指的是当前活动的工作表</li>
-</ul>
-<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/86d5bac27d1ed21b0824b7b6ae6eddc450da3fb0.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
-<ul>
-<li>insert_row/insert_col：这两个方法你应该亲手测试一下，传入不同的参数看看效果，它可以接受的参数有整数，Cell对象，列表；还可以指定某个工作表。</li>
-</ul>
-<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/c8ab0bce36d3d5393bea96903987e950342ab04b.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
-<ul>
-<li>aotofit：设置自动列宽，它有两个可选参数：工作表和CellRange地址</li>
-</ul>
-<img src="/2016/09/19/DataNitro：[6]sheet操作(A)/c71d0e385343fbf224fb3f70b37eca8064388f4b.jpg" alt="DataNitro：[6]sheet操作(A)" title="DataNitro：[6]sheet操作(A)">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/09/17/Python教程：[21]url转码方法/">
-                Python教程：[21]url转码方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年09月17日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>在url中有一些是不能被打印或者不被web服务器作为有效url的字符必须转码以后再能使用，所以我们就用到了quote函数，quote函数的语法如下：quote(urldata,safe+’/‘)；逗号、下划线、句点斜线和字母数字这类符号是不需要转化的，通常中文是需要转换的。那些被转换的字符前面会加上一个百分号，同时转换成了16进制字符。</p>
-<ul>
-<li>先引入urllib模块</li>
-</ul>
-<img src="/2016/09/17/Python教程：[21]url转码方法/ac754782b2b7d0a2e49d59b0c9ef76094b369a0c.jpg" alt="Python教程：[21]url转码方法" title="Python教程：[21]url转码方法">
-<ul>
-<li>假如我们要对下面的url进行转码，注意观察各种字符的变化</li>
-</ul>
-<img src="/2016/09/17/Python教程：[21]url转码方法/8d158aeef01f3a29239f88e39b25bc315c607c0c.jpg" alt="Python教程：[21]url转码方法" title="Python教程：[21]url转码方法">
-<ul>
-<li>使用quote方法，进行转码</li>
-</ul>
-<img src="/2016/09/17/Python教程：[21]url转码方法/f15e24292df5e0fe894fd42c5e6034a85edf720c.jpg" alt="Python教程：[21]url转码方法" title="Python教程：[21]url转码方法">
-<ul>
-<li>我们看看转码得到的结果：</li>
-</ul>
-<img src="/2016/09/17/Python教程：[21]url转码方法/4abae5edab64034f15769f2badc379310a551d20.jpg" alt="Python教程：[21]url转码方法" title="Python教程：[21]url转码方法">
-<ul>
-<li>我们想要得到原先的url，可以使用quote的逆函数unquote</li>
-</ul>
-<img src="/2016/09/17/Python教程：[21]url转码方法/020e66f0f736afc309b76248b119ebc4b7451220.jpg" alt="Python教程：[21]url转码方法" title="Python教程：[21]url转码方法">
-<ul>
-<li>得到反转码以后的url，我们看到这种方法并没有返回中文字符。</li>
-</ul>
-<img src="/2016/09/17/Python教程：[21]url转码方法/8cf0d51349540923c43e3e539058d109b3de490c.jpg" alt="Python教程：[21]url转码方法" title="Python教程：[21]url转码方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -963,19 +951,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

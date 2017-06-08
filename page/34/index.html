@@ -155,6 +155,129 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/04/17/Django教程：[7]网站根目录的设置/">
+                Django教程：[7]网站根目录的设置
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>现在我们开启开发服务器，然后访问一下网站根目录，也就是127.0.0.1:8000，你会发现出现了404错误提示，这是因为Django依赖于指定给该路径的模式来返回内容，现在我们并没有给改路径指定返回的内容，我们怎么设置呢？</p>
+<ul>
+<li>打开你的站点所在文件夹，找到view.py，使用IDLE进行编辑；根据我前面的文章可以知道，view.py是我自己创建的，不是startproject的时候自动创建的，所以你可能创建了不同名称的文件。</li>
+</ul>
+<img src="/2015/04/17/Django教程：[7]网站根目录的设置/4a77b2af2edda3cca0d8f15a03e93901213f9249.jpg" alt="Django教程：[7]网站根目录的设置" title="Django教程：[7]网站根目录的设置">
+<ul>
+<li>在该文件中添加一个函数homepage，它只返回一句话“这是首页”</li>
+</ul>
+<img src="/2015/04/17/Django教程：[7]网站根目录的设置/d7c9ca3f8794a4c2482fae510cf41bd5ad6e3978.jpg" alt="Django教程：[7]网站根目录的设置" title="Django教程：[7]网站根目录的设置">
+<ul>
+<li>接着哦我们打开urls.py</li>
+</ul>
+<img src="/2015/04/17/Django教程：[7]网站根目录的设置/30ecd5ef76094b3675ae5297a1cc7cd98d109d49.jpg" alt="Django教程：[7]网站根目录的设置" title="Django教程：[7]网站根目录的设置">
+<ul>
+<li>添加两句话，第一句引用homepage（刚才添加的函数）；第二句将hongpage与url模式相连接</li>
+</ul>
+<img src="/2015/04/17/Django教程：[7]网站根目录的设置/d1571724ab18972b903649b0e4cd7b899e510a78.jpg" alt="Django教程：[7]网站根目录的设置" title="Django教程：[7]网站根目录的设置">
+<ul>
+<li>这样，我们再访问网站根目录的时候就会得到网站首页</li>
+</ul>
+<img src="/2015/04/17/Django教程：[7]网站根目录的设置/966aca0735fae6cd3cb8e21b0db30f2442a70f78.jpg" alt="Django教程：[7]网站根目录的设置" title="Django教程：[7]网站根目录的设置">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/15/Python统计分析：[8]单因素卡方检验/">
+                Python统计分析：[8]单因素卡方检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>卡方检验主要用于检验计数数据是否符合某种分布，比如男女比率本应该是1:1，但实际采集的样本可能是1:2，那么1:1和1:2之间有没有差异，我们需要用卡方检验来比较。</p>
+<ul>
+<li>先引入相关模块</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/3c2c4bfbb2fb43164eaebc1823a4462308f7d3e4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>实例化ChiSqure1way对象</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/4e0b3ea4462309f7b8de6b70710e0cf3d6cad6e4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>运行卡方检验，如果我们只输入一个参数，表示我们要检验这一列数据分布是否均匀，也就是各组频数是否相等</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/834344afa40f4bfb253a5836004f78f0f63618af.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>基本检验结果首先是数据的描述</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/bf487563f6246b6038bf7416e8f81a4c500fa2e4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>接着是卡方检验结果，根据p值可知两组差异不显著</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/ae8267310a55b3190c13441740a98226cefc17af.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>统计量检验</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/504ec7f9d72a605919a127782b34349b023bbae4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>假如我们输入两个参数，可以指定各组频数的期望值</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/aa251d4f78f0f7364c148a630955b319eac413af.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>结果是这样的：</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/61183b2dd42a28340b17f06958b5c9ea14cebfe4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>对于结果，我们可以使用字典的方式读取个别值，比如卡方：</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/020e66f0f736afc39de6f907b019ebc4b64512af.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/35da1d3b5bb5c9ea5642c581d639b6003bf3b3e4.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<ul>
+<li>对于其他值，我们可以参考下面的列表：</li>
+</ul>
+<img src="/2015/04/15/Python统计分析：[8]单因素卡方检验/d0526df082025aaf7febbfa9f8edab64024f1abc.jpg" alt="Python统计分析：[8]单因素卡方检验" title="Python统计分析：[8]单因素卡方检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/04/15/Python教程：[2]pythonwin安装与下载/">
                 Python教程：[2]pythonwin安装与下载
             </a>
@@ -717,138 +840,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/04/01/spss多元方差分析的操作方法和结果分析/">
-                spss多元方差分析的操作方法和结果分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年04月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p> 多元方差分析就是有多个因变量的分析，但是这几个因变量并不是没有关系的，他们应该属于同一种质的不同的形式，比如一个问卷的几个不同的维度。下面我们来具体的操作一下多元方差分析。<br>方法/步骤</p>
-<ul>
-<li>在spss中打开数据，在菜单栏上执行：analyse–general linear model–multivariate，打开多元方差分析对话框</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/ac4bd11373f082021f6c0ec64bfbfbedaa641b48.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>将所有的因变量都放到第一个列表里，将自变量放到固定因素列表里</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/9213b07eca806538b27d3bea97dda144ac3482b0.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>点击options按钮，打开子对话框</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/279759ee3d6d55fb3903e9df6d224f4a21a4dd06.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>将自变量矫正方式放到右侧的display means，勾选如图所示的三个选项，用来展示描述统计、方差齐性、效应大小，点击继续，返回到主对话框</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/aec379310a55b319ba071d8c43a98226cefc1748.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>点击post hoc，设置事后检验</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/b219ebc4b74543a9d6e565351e178a82b8011448.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>将自变量矫正方式放到事后检验的列表里，然后在方差齐性的方法中选择lsd，在方差不齐性的方法中选dunnet c，点击continue按钮</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/adaf2edda3cc7cd942baab203901213fb90e91b0.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>点击ok按钮，开始数据处理</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/0b46f21fbe096b636adcc1a90c338744eaf8ac06.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>我们先来分析多变量检验，如图所示的红色方框中显示的是检验的不同方法，有时候不同的方法会显示出不同的结果，你要分别解释，下面的结果是一致的</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/377adab44aed2e73ed1719d58701a18b86d6fa49.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li>我们以wilks lambda方法为例，看sig值为000说明差异显著，篇eta方位0.375说明可以解释变异的37.5%</li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/d52a2834349b033bf04d632315ce36d3d439bd06.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<ul>
-<li><p>接着看主体间效应的检验，在矫正方式这一栏，也就是自变量的这一栏，乍一看三个水平的自变量都达到了显著水平，但是，其实不然，因为对自变量的多次比较会造成一类错误的概率增加，所以我们要用显著性水平除以自变量的水平数，也就是0.05/3=0.17，这样来看重复减少这个水平是达不到显著水平的。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2015/04/01/spss多元方差分析的操作方法和结果分析/1e30e924b899a9013fcbc4cf1d950a7b0308f549.jpg" alt="spss多元方差分析的操作方法和结果分析" title="spss多元方差分析的操作方法和结果分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/">
-                SPSS实例：[9]因子载荷图怎么做
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年03月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天有网友提问关于因子载荷图（loading plots）怎么做，说实话我也有点忘记了，现在来跟大家一起学习一下，如何做因子载荷图。它是在主成分分析和因子分析中用到的。</p>
-<ul>
-<li>打开菜单，如图所示</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/1e71f724b899a9015f13841f1f950a7b0208f5b2.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>将用到的变量放入右侧列表</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/4651a712c8fcc3ce021e151a9045d688d53f20fa.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>点击rotation按钮</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/fd428c45d688d43f41774ddb7f1ed21b0ff43bfa.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>勾选因子载荷图，如图所示，点击继续</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/3c2c4bfbb2fb43164039a55322a4462309f7d3b2.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>提取得到5个主成分</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/91138622720e0cf3e1d191d20846f21fbe09aab2.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>这个就是因子载荷图，双击它可以修改外观样式。图中最多只能展示三个因子</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/79b1e936afc37931fab65a00e9c4b74542a911fa.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<ul>
-<li>点击旋转按钮，可以设置我们观察3D图的角度，让你更详细的了解这个图的分布</li>
-</ul>
-<img src="/2015/03/23/SPSS实例：[9]因子载荷图怎么做/263e802f070828380fd4003dba99a9014d08f1fb.jpg" alt="SPSS实例：[9]因子载荷图怎么做" title="SPSS实例：[9]因子载荷图怎么做">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -891,19 +882,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

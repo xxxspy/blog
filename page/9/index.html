@@ -155,6 +155,121 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/07/15/SPSS实例：[35]优势比OR计算方法/">
+                SPSS实例：[35]优势比OR计算方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>优势比OR：是一个比值的比，是反应阳性人群中试验因素有无的 比例与反应阴性人群中试验因素有无的比例之比。假如有一个实验分为对照组和实验组，OR值得计算方法就是实验组中患病人数与非患病人数之比除以对照组中患病人数与非患病人数之比。所以就是一个比值的比。</p>
+<ul>
+<li>在spss中，计算优势比OR值得方法是在交叉分析中，先打开交叉分析对话框</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/43e6c733c895d143f5d8a29471f082025baf079f.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>先将两个变量放入到对应的框中</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/42e89c26cffc1e17e411ca864890f603728de998.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>打开统计量对话框</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/b8405490f603738ddae44a95b11bb051f919ec98.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>勾选【risk】，也就是风险评估分析</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/b110e6198618367aa027396a2c738bd4b21ce598.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<ul>
+<li>结果页面中，我们看结果OR值就已经有了。不过OR值只有卡方检验显著时才是有价值的。卡方不显著时，就不用提OR值了。</li>
+</ul>
+<img src="/2016/07/15/SPSS实例：[35]优势比OR计算方法/9f6e190828381f306eb7cb1eab014c086f06f098.jpg" alt="SPSS实例：[35]优势比OR计算方法" title="SPSS实例：[35]优势比OR计算方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/11/python 线性代数：[17]线性组合的协方差/">
+                python 线性代数：[17]线性组合的协方差
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们先来看这个练习题：</p>
+<ul>
+<li>先来创建这个X矩阵</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/425773224f4a20a490994a8593529822730ed0aa.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>创建两个系数向量</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/6c63514a20a44623de4dd3209b22720e0df3d7aa.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>先计算X的协方差矩阵<br>结果为：</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/54baacfb43166d229b9163d6452309f79152d24b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/fab3ac119313b07ec83b264a0fd7912396dd8caa.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>计算X的均值向量，注意设置axis为0<br>求得结果为：</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/f35ea0096b63f62488da4f418444ebf81b4ca3aa.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/3792cb39b6003af3c25caa22362ac65c1138b64b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>求得两个线性组合的均值：<br>结果为：</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/6a2112338744ebf8fdf6127ddaf9d72a6159a7aa.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/3bb22487e950352a3d87534a5043fbf2b3118b4b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>求两个线性组合的方差<br>结果为：</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/734f12f3d7ca7bcbd49db16dbd096b63f724a84b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/fab3ac119313b07ec85c264a0fd7912396dd8c4b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<ul>
+<li>求两个线性组合的协方差：<br>结果为：</li>
+</ul>
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/504ec7f9d72a6059c9f697582b34349b023bba4b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<img src="/2016/07/11/python%20线性代数：[17]线性组合的协方差/0d968f2397dda144a5e81af0b1b7d0a20df4864b.jpg" alt="python 线性代数：[17]线性组合的协方差" title="python 线性代数：[17]线性组合的协方差">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/07/11/Excel2013：[45]如何按月 年汇总日期数据/">
                 Excel2013：[45]如何按月 年汇总日期数据
             </a>
@@ -645,148 +760,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/07/01/DataNitro：[4]CellRange对象/">
-                DataNitro：[4]CellRange对象
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年07月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>CellRange在之前介绍过，我们大概也知道CellRange就是几个单元格组成的区域，今天来系统地看一下CellRange有哪些方法和属性。</p>
-<ul>
-<li>创建或者获取一个CellRange，我们可以用这些写法：注意print只是我为了输出这些CellRange的名字，与今天的学习内容无关。下面三种写法意义相同。</li>
-</ul>
-<img src="/2016/07/01/DataNitro：[4]CellRange对象/b94f65ec54e736d1fb7b355a98504fc2d562693d.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
-<ul>
-<li>上一种写法代表了一个连续区域，下面的写法代表不连续区域：</li>
-</ul>
-<img src="/2016/07/01/DataNitro：[4]CellRange对象/7d98931001e93901eee5346c78ec54e737d196ba.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
-<ul>
-<li>通过名称获取一个区域：</li>
-</ul>
-<img src="/2016/07/01/DataNitro：[4]CellRange对象/9f6e190828381f30856335fbaa014c086e06f02f.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
-<ul>
-<li>我们还可以指明区域所在的sheet</li>
-</ul>
-<img src="/2016/07/01/DataNitro：[4]CellRange对象/5327ce160924ab18a639596536fae6cd7b890b71.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
-<ul>
-<li>迭代的方式输出所有单元格：</li>
-</ul>
-<img src="/2016/07/01/DataNitro：[4]CellRange对象/a75fb6d3fd1f41349197bd2c261f95cad0c85e84.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
-<ul>
-<li>一个区域内包含多少单元格：可以用len()</li>
-</ul>
-<img src="/2016/07/01/DataNitro：[4]CellRange对象/27d647ee3d6d55fb3563ce746e224f4a21a4ddf8.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
-<ul>
-<li>像列表一样，我们可以使用索引来得到区域内任意一个单元格：</li>
-</ul>
-<img src="/2016/07/01/DataNitro：[4]CellRange对象/b29f8282d158ccbf97200d681ad8bc3eb0354181.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
-<ul>
-<li><p>这篇文章略去的属性有：</p>
-</li>
-<li><p>value,formula,color,hyperlink,comment,font，row,col,position,name,sheet，table，这些与Cell属性相同，参考上一篇文章</p>
-</li>
-<li><p>合并两个区域，用加号就好了</p>
-</li>
-</ul>
-<img src="/2016/07/01/DataNitro：[4]CellRange对象/6a22e8246b600c331d16659a194c510fd9f9a132.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
-<ul>
-<li>将Cell添加进CellRange</li>
-</ul>
-<img src="/2016/07/01/DataNitro：[4]CellRange对象/cf5a8316fdfaaf51128b3aed8f5494eef01f7a3d.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
-<ul>
-<li>将Cell从CellRange中删除：</li>
-</ul>
-<img src="/2016/07/01/DataNitro：[4]CellRange对象/72ccb7773912b31beaca767b8518367adbb4e1fb.jpg" alt="DataNitro：[4]CellRange对象" title="DataNitro：[4]CellRange对象">
-<ul>
-<li><p>其他方法：</p>
-</li>
-<li><p>如：claer,copy_from,copy_format_from,is_empty,set_name等</p>
-</li>
-<li><p>#可以参考Cell的方法</p>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/">
-                Python教程：[20]urlsplit和urlparse的区别
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年06月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>urlsplit和urlparse非常相像，用法基本一致，但是他们有略微的不同，split函数在分割的时候，path和params属性是在一起的，我们看下面的例子。</p>
-<ul>
-<li>先用urlparse函数来分割url</li>
-</ul>
-<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/55a628d12f2eb938980b2fdfd7628535e5dd6f7d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
-<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/d4239b35e5dde71199b416dba5efce1b9d16617d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
-<ul>
-<li>将结果打印出来</li>
-</ul>
-<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/cf5a8316fdfaaf51e385d4928e5494eef01f7a7d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
-<ul>
-<li>我们看到输出的结果，有params这一项</li>
-</ul>
-<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/ae10eddeb48f8c5487b5900238292df5e0fe7f7d.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
-<ul>
-<li>接着使用urlsplit函数，可选参数不能输出，所以只能再前面加了以井号</li>
-</ul>
-<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/a75fb6d3fd1f4134a32e5053271f95cad1c85e46.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
-<ul>
-<li><p>我们比较一下两个结果</p>
-</li>
-<li><p>urlparse函数</p>
-</li>
-<li><p>urlsplit函数</p>
-</li>
-</ul>
-<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/310f3b1f95cad1c89ea2a90a7d3e6709c93d5146.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
-<img src="/2016/06/23/Python教程：[20]urlsplit和urlparse的区别/7e7f7909c93d70cf04e3ff20fadcd100baa12b46.jpg" alt="Python教程：[20]urlsplit和urlparse的区别" title="Python教程：[20]urlsplit和urlparse的区别">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -829,19 +802,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

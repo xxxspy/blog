@@ -155,6 +155,113 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/04/05/SPSS python教程：[9]getValuesFromXml/">
+                SPSS python教程：[9]getValuesFromXml
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>前两篇文章介绍了如何获取透视表中的平均数，现在更深入的探讨一下其中用到的spssaux.GetValuesFromXMLWorkspace方法。在这篇文章中【<a href="http://jingyan.baidu.com/article/c275f6bac03a22e33c75674c.html】，可以看到我使用该方法。现在我们具体探讨一下：" target="_blank" rel="external">http://jingyan.baidu.com/article/c275f6bac03a22e33c75674c.html】，可以看到我使用该方法。现在我们具体探讨一下：</a></p>
+<ul>
+<li>先看一个数据透视表，想办法获取IAI的平均数</li>
+</ul>
+<img src="/2016/04/05/SPSS%20python教程：[9]getValuesFromXml/9304c888d43f8794096a7eafd01b0ef41ad53a5e.jpg" alt="SPSS python教程：[9]getValuesFromXml" title="SPSS python教程：[9]getValuesFromXml">
+<ul>
+<li>我们使用spssaux.GetValuesFromXMLWorkspace，如下图那样写一段代码就能得到IAI的平均数。其中用到了很多参数，下面我们分析一下这些参数都是什么：</li>
+</ul>
+<img src="/2016/04/05/SPSS%20python教程：[9]getValuesFromXml/99636c0e0cf3d7ca66ea0ef7f01fbe096a63a9d7.jpg" alt="SPSS python教程：[9]getValuesFromXml" title="SPSS python教程：[9]getValuesFromXml">
+<ul>
+<li><p>首先是handle参数，它是结果项目的句柄，也就是上面的透视表的句柄。你要从中获取数据。而你怎么知道它的句柄的？是在创建该透视表的时候得到的，具体请看上篇文章【<a href="http://jingyan.baidu.com/article/cb5d6105088fe2005d2fe04d.html】" target="_blank" rel="external">http://jingyan.baidu.com/article/cb5d6105088fe2005d2fe04d.html】</a></p>
+</li>
+<li><p>其次是tablesubtype参数，我们可以在这里看到透视表的subtype</p>
+</li>
+</ul>
+<img src="/2016/04/05/SPSS%20python教程：[9]getValuesFromXml/cc506c8b4710b9126b11c67fc1fdfc039345221b.jpg" alt="SPSS python教程：[9]getValuesFromXml" title="SPSS python教程：[9]getValuesFromXml">
+<ul>
+<li>rowcategory参数：行类别，它标识出行坐标，rowcategory=”IAI”就表示成下图</li>
+</ul>
+<img src="/2016/04/05/SPSS%20python教程：[9]getValuesFromXml/9e7ce6dcd100baa15390743a4510b912c9fc2eb7.jpg" alt="SPSS python教程：[9]getValuesFromXml" title="SPSS python教程：[9]getValuesFromXml">
+<ul>
+<li>columncategory参数：列类别，标志出列坐标，colCategory=’Mean’可以表示为下图</li>
+</ul>
+<img src="/2016/04/05/SPSS%20python教程：[9]getValuesFromXml/bf487563f6246b602ece81f5e9f81a4c500fa22b.jpg" alt="SPSS python教程：[9]getValuesFromXml" title="SPSS python教程：[9]getValuesFromXml">
+<ul>
+<li>cellAttrib单元格属性：任何一个单元格都有text和number两个属性，我们想要获得text的值就用cellAttrib=’text’</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/04/05/SPSS自动化：[1]应用对象的属性及其用法/">
+                SPSS自动化：[1]应用对象的属性及其用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在上一篇经验《vba控制spss处理数据》中，我们介绍了vba使用spss对象来控制spss，下面我们接着来讲如何使用spss对象的属性，因为spss对象的属性有十几个（见下图），下面的列表呈现了spss对象所具有的属性，可能不全，希望指正。我们来一一介绍这些属性的用法和功能。</p>
+<ul>
+<li>alerts属性：语法格式为spss.alerts=boolean。boolean值可以是1或者0，如果值为1，则spss程序允许弹出警告窗口，如果值为0，则spss程序不会弹出警告窗口。该属性可读可写，下面是我在vba中调用alerts属性的方法。</li>
+</ul>
+<img src="/2016/04/05/SPSS自动化：[1]应用对象的属性及其用法/b9d8b7014c086e06f3031b7e00087bf40ad1cb19.jpg" alt="SPSS自动化：[1]应用对象的属性及其用法" title="SPSS自动化：[1]应用对象的属性及其用法">
+<ul>
+<li>currentdirectory属性：设置文件存放目录。该属性可读可写，下面是在vba中读取当前目录的代码。当然你可以使用该属性来设置当前目录。</li>
+</ul>
+<img src="/2016/04/05/SPSS自动化：[1]应用对象的属性及其用法/7e7f7909c93d70cfb61c8d38fadcd100bba12be5.jpg" alt="SPSS自动化：[1]应用对象的属性及其用法" title="SPSS自动化：[1]应用对象的属性及其用法">
+<ul>
+<li>options属性：利用该属性可以获取options对象，它提供了与spss选项设置的链接，选项设置我们并不陌生，以后我们会详细的介绍使用options对spss进行设置，现在你只要知道读取options属性的方法，下面是代码实例：首先要把变量opt声明为选项对象，然后在读取选项对象。</li>
+</ul>
+<img src="/2016/04/05/SPSS自动化：[1]应用对象的属性及其用法/9252ae7eca8065383c2f892695dda144ac3482fa.jpg" alt="SPSS自动化：[1]应用对象的属性及其用法" title="SPSS自动化：[1]应用对象的属性及其用法">
+<ul>
+<li>spssifo属性：这个属性可以获得当前spss打开的数据文件中的变量信息。示例代码如下：</li>
+</ul>
+<img src="/2016/04/05/SPSS自动化：[1]应用对象的属性及其用法/8a95ad1c8701a18b5dc43d7a9c2f07082838fe9d.jpg" alt="SPSS自动化：[1]应用对象的属性及其用法" title="SPSS自动化：[1]应用对象的属性及其用法">
+<ul>
+<li>还有很多属性，未完待续。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/04/03/Excel2013：[30]subtotal函数按照字体颜色求和/">
                 Excel2013：[30]subtotal函数按照字体颜色求和
             </a>
@@ -716,127 +823,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/03/17/spss协方差分析中如何进行交互作用的检验/">
-                spss协方差分析中如何进行交互作用的检验
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年03月17日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>协方差分析前必须进行交互作用的检验，为的是满足协方差分析的平行性假设，存在交互作用就无法进行协方差分析了。下面是具体的过程：<br>工具/原料</p>
-<ul>
-<li>spss20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>打开数据，在菜单栏上点击analyse–GML–univariate，打开协方差的对话框</li>
-</ul>
-<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/d31b0ef41bd5ad6e9d14c72981cb39dbb7fd3c07.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
-<ul>
-<li>在打开的这个对话框中，我们要将因变量、固定因素、斜变量放入各自的框中，点击model按钮，设置模型</li>
-</ul>
-<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/e824b899a9014c08e9518a660a7b02087af4f48f.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
-<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/d439b6003af33a872fcea2d9c65c10385243b556.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
-<ul>
-<li>在这，需要将两个自变量和他们的交互项放入到模型框中，点击continue按钮</li>
-</ul>
-<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/f636afc379310a55d0bc7c37b74543a98326105c.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
-<ul>
-<li>回到主对话框，点击ok按钮开始处理数据，等待几分钟才能出现图，因为绘图需要一些时间</li>
-</ul>
-<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/91529822720e0cf37e00ec380a46f21fbf09aa7a.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
-<ul>
-<li>我们看到这两个变量的交互作用并不显著，这说明协方差分析是可行的</li>
-</ul>
-<img src="/2016/03/17/spss协方差分析中如何进行交互作用的检验/4ec2d5628535e5dd16df071c76c6a7efcf1b6206.jpg" alt="spss协方差分析中如何进行交互作用的检验" title="spss协方差分析中如何进行交互作用的检验">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/03/15/spss聚类分析如何对分类结果进行检验/">
-                spss聚类分析如何对分类结果进行检验
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年03月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>聚类分析的结果都知道，就是获得几个类别，那么我们怎么知道这些类别是合理的呢？这里提供一个方法，就是利用means方法，检验各个类别在所有变量上的差异，如果差异显著，我们就可以认为分类结果是可靠的。<br>方法/步骤</p>
-<ul>
-<li>假设我们现在已经得到了聚类的结果，所有的case都已经分类了，我们看到在数据窗口已经形成了若干个新的变量，显示了case的分类结果，如图所示，这里显示了三个聚类的结果，分别是把数据分为3、4、5类的结果</li>
-</ul>
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/f7246b600c338744ad481ea9510fd9f9d62aa051.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/b7003af33a87e9506ff8c2b910385343faf2b473.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<ul>
-<li>在菜单栏上执行：analyse–compare means–means，打开平均数对话框</li>
-</ul>
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/6d81800a19d8bc3e18e6371f828ba61ea9d3457c.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<ul>
-<li>将指标变量都放入因变量框中，然后将分组变量（聚类分析得到的变量）放入因变量中</li>
-</ul>
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/b17eca8065380cd7f4db9338a144ad3458828119.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<ul>
-<li>点击ok按钮，开始运行数据，并显示结果</li>
-</ul>
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/5ab5c9ea15ce36d380dbb2e53af33a87e850b103.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<ul>
-<li>我们会看到三种分类结果各自的平均数，下面的三个表格分别是将case分为5、4、3类的结果，当然这种方法只能计算出各组平均数，如何检验平均数的差异就要用到下面的方法</li>
-</ul>
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/902397dda144ad3431eab752d0a20cf430ad8589.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/622762d0f703918f89c40d1f513d269758eec4c9.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/d53f8794a4c27d1e1f510b111bd5ad6edcc438eb.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<ul>
-<li>在菜单栏上执行：analyse–compare means–one way anova</li>
-</ul>
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/d01373f082025aaf4f5a4e1efbedab64024f1afe.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<ul>
-<li>将指标变量放到因变量列表，将分组变量放入factor中，然后点击ok，开始处理数据</li>
-</ul>
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/b17eca8065380cd7f5a69238a144ad34588281ae.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<ul>
-<li>我们看到下面的这个表格就是对平均数的差异的检验了，看sig这一列，除了一个指标，其他指标都达到了显著的水平，这说明这种分类还是比较有效的。</li>
-</ul>
-<img src="/2016/03/15/spss聚类分析如何对分类结果进行检验/503d269759ee3d6d7a57b71e43166d224e4ade55.jpg" alt="spss聚类分析如何对分类结果进行检验" title="spss聚类分析如何对分类结果进行检验">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -879,19 +865,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>

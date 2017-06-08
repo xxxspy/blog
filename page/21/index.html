@@ -155,6 +155,118 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/">
+                VBA如何判断一个日期是星期几[2]Excel2013教程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们经常要将日期转换成星期，这个在Excel中很容易实现，但是如何使用vba来转换，这个可能大家就不熟悉了，今天就来给大家演示一下如何使用vba来进行日期到星期的转换：</p>
+<ul>
+<li>首先打开Excel，如图所示，有一列日期，我们在第二列输入周几，作为星期列</li>
+</ul>
+<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/310f3b1f95cad1c8d1cbed4f7e3e6709c93d5122.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
+<ul>
+<li>我们切换到vb界面，如图所示，在菜单栏上执行：开发工具–vb</li>
+</ul>
+<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/814b07d8bc3eb13558cfa6d3a71ea8d3fd1f440a.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
+<ul>
+<li>双击模块，打开模块，在这个模块中定义一个函数，如图所示：在下面的参考资料里有这个Excel文件的下载链接</li>
+</ul>
+<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/c28fddfdfc0392455cc5f0678694a4c27d1e2522.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
+<ul>
+<li>接着我们选中b2单元格，输入公式：=周几（a2），这样就可以计算周几了</li>
+</ul>
+<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/d57e9994a4c27d1e5d562aac1ad5ad6eddc43822.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
+<ul>
+<li>拖动b2单元格的右下角，快速填充下面的单元格，到此我们就完成了所有的日期的转换</li>
+</ul>
+<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/3a86813df8dcd1003a94e949738b4710b9122f0a.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
+<img src="/2015/10/19/VBA如何判断一个日期是星期几[2]Excel2013教程/cc506c8b4710b9124dc9e796c2fdfc039245220a.jpg" alt="VBA如何判断一个日期是星期几[2]Excel2013教程" title="VBA如何判断一个日期是星期几[2]Excel2013教程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/10/17/pandas教程：[14]按月分组/">
+                pandas教程：[14]按月分组
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们经常处理的数据是不规范的，尤其是包含日期的数据，通常需要做一些转换，今天我们就做一个按月分组的实例，具体过程如下：</p>
+<ul>
+<li>引入相关模块</li>
+</ul>
+<img src="/2015/10/17/pandas教程：[14]按月分组/0865b518972bd4075882b5eb78899e510fb3091b.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<ul>
+<li>创建一个DataFrame对象，索引为日期<br>查看一下数据的前5行</li>
+</ul>
+<img src="/2015/10/17/pandas教程：[14]按月分组/7ac880510fb30f2431df8a15cb95d143ad4b031b.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<img src="/2015/10/17/pandas教程：[14]按月分组/b5ce925494eef01f1b827ed3e3fe9925bd317dd6.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<ul>
+<li>假如索引为日期Series，按月分组很简单，用到了一个lambda函数<br>分组后的情况：</li>
+</ul>
+<img src="/2015/10/17/pandas教程：[14]按月分组/4abae5edab64034ff988a410acc379310a551d1b.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<img src="/2015/10/17/pandas教程：[14]按月分组/3b6833f5e0fe9925999a0f4637a85edf8cb171d6.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<ul>
+<li>但是有时候，索引不是日期，但是有一列数据为日期格式，因此，我们同样可以使用一个lambda函数来进行分组：<br>分组结果为：</li>
+</ul>
+<img src="/2015/10/17/pandas教程：[14]按月分组/b258f5c4b74543a9085e9cda1d178a82b901141b.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<img src="/2015/10/17/pandas教程：[14]按月分组/8367d1fc1e178a82377919b6f503738da977e824.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<ul>
+<li>但实际上，我们还可以将日期数据列设置为索引就可以使用上一种方法啦：<br>输出结果：</li>
+</ul>
+<img src="/2015/10/17/pandas教程：[14]按月分组/b8405490f603738d3b0f6a34b01bb051f819ec24.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<img src="/2015/10/17/pandas教程：[14]按月分组/0862c354564e9258e1a2e0f89f82d158cdbf4ed6.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<ul>
+<li>假如，我们的日期数据是以字符串的形式存储的，也不必着急，我们可以轻松的将其转换为Date<br>数据结果为：</li>
+</ul>
+<img src="/2015/10/17/pandas教程：[14]按月分组/d048adde9c82d158f8143fa7830a19d8bd3e42d6.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<img src="/2015/10/17/pandas教程：[14]按月分组/9dc3cf58ccbf6c81b6a14afebf3eb13532fa40d6.jpg" alt="pandas教程：[14]按月分组" title="pandas教程：[14]按月分组">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/10/15/SVN教程：[4]SAE上部署django/">
                 SVN教程：[4]SAE上部署django
             </a>
@@ -1031,141 +1143,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/03/python教程：[74]列表排序/">
-                python教程：[74]列表排序
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>列表排序，做数据经常用到的一个方法，在python中想实现排序有时候觉得挺难，比如按照行排序或按照列排序，写起来都不简单，今天在这里总结一下在python中实现排序的所有方法，如有不全，请下面留言。</p>
-<ul>
-<li>最简单的排序莫过于直接使用sort对一维的列表排序，创建一个列表</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/1cd4147b02087bf4bfd92fddf1d3572c11dfcf8a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<ul>
-<li>使用sort就地排序（就地排序就是改变了原始list的排序，而sorted不改变原始list数据）</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/29790130e924b899073c010c6d061d950a7bf647.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<ul>
-<li>可以使用reverse参数进行反向排序。</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/a84052086e061d95b8464f0c78f40ad162d9ca47.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<ul>
-<li>创建一个二维列表</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/425773224f4a20a48a2b44f393529822720ed08a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<ul>
-<li>使用operator进行排序，还是sort方法，使用key参数，下面根据第二列数据排序</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/8b527d2762d0f7032eb2ede80bfa513d2697c547.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<ul>
-<li>多维排序，先根据第一列排序，然而第二列，然后第三列</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/425773224f4a20a48a1e44f393529822720ed047.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<ul>
-<li>lambda用于写匿名函数，根据第二列数据排序，x表示列表中的元素，x[1]表示元素中的第二个值</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/eab9044c510fd9f937222d5d262dd42a2834a48a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<ul>
-<li>反向排序</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/d56b3634349b033bbcbd84ee16ce36d3d539bd8a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<ul>
-<li>元组排序和list排序一样，当然还可以对object构成的列表排序，下面创建一个元组构成的列表</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/3792cb39b6003af3d48fa454362ac65c1038b68a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<ul>
-<li>使用operator</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/3bc6f750352ac65ce2301e47f8f2b21193138a8a.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<ul>
-<li>使用lambda</li>
-</ul>
-<img src="/2015/10/03/python教程：[74]列表排序/35da1d3b5bb5c9eafcf37bd7d639b6003af3b347.jpg" alt="python教程：[74]列表排序" title="python教程：[74]列表排序">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/">
-                Excel2013：[2]从单元格批量创建文件夹
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天要给每个一学生整理一个文件夹，存放他们的资料，我看了看Excel里的名单，好家伙，100多个名单，要创建100多个文件夹，累挺。我只能用程序来创建了，其实Excel可以帮助我们干很多事情，现在就让你知道，它还能写程序。当然你不懂代码也能做啦，不信就看看。</p>
-<ul>
-<li>假如，我们要给每个一名字创建一个文件夹</li>
-</ul>
-<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/83cab81ea8d3fd1f6383e629324e251f94ca5fdf.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
-<ul>
-<li>在B1输入公式=”MD “ &amp; A1  ，注意这个公式中，MD后面还有一个额空格，公式的意思就是在名字前面增加了一个MD和空格</li>
-</ul>
-<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/faacb564034f78f092e4dee07b310a55b2191cf2.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
-<ul>
-<li>向下拖拽，快速填充所有的行</li>
-</ul>
-<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/c856613e6709c93d5d784ae49d3df8dcd00054df.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
-<ul>
-<li>我们会看到生成这么一列，我们需要将其复制下来</li>
-</ul>
-<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/4bd1e803738da9774fc0c238b251f8198718e3f3.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
-<ul>
-<li>粘贴到文本文件里，然后保存为bat文件</li>
-</ul>
-<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/310f3b1f95cad1c88f62b8347d3e6709c83d518c.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
-<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/6648d73d70cf3bc7b0d989ffd300baa1cc112a8c.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
-<ul>
-<li>我们看到这个文件就在这里呢，双击打开运行</li>
-</ul>
-<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/e78c65899e510fb35b243084db33c895d1430ca0.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
-<ul>
-<li>批量创建的文件夹就在这里喽。</li>
-</ul>
-<img src="/2015/10/03/Excel2013：[2]从单元格批量创建文件夹/43e6c733c895d143f44ba33071f082025aaf07a0.jpg" alt="Excel2013：[2]从单元格批量创建文件夹" title="Excel2013：[2]从单元格批量创建文件夹">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1208,19 +1185,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2016/10/23/SPSS实例：[2]卡方检验百分比差异/">SPSS实例：[2]卡方检验百分比差异</a>
             </li>
             
         </ul>
