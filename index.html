@@ -155,47 +155,13 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">
-                探索过程数据在全球大规模机器考试中的应用
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2017年06月08日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            
-
-	<div class="row">
-    <embed src="/pdfs/探索过程数据在全球大规模机器考试中的应用.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2017/06/08/selenim数据采集入门-for-psychologist/">
+            <a href="/2017/06/10/selenim数据采集入门-for-psychologist/">
                 selenim数据采集入门(for psychologist)
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2017年06月08日</span>
+                <span class="date">2017年06月10日</span>
             
             
             
@@ -211,26 +177,44 @@
 <h4 id="安装浏览器驱动器"><a href="#安装浏览器驱动器" class="headerlink" title="安装浏览器驱动器"></a>安装浏览器驱动器</h4><p>首先，你自己要去安装最新的chrome浏览器，这个不在这里介绍。</p>
 <p>第二步，从这里下载chrome浏览器的驱动器，链接：<a href="http://pan.baidu.com/s/1pKUyrAr" target="_blank" rel="external">http://pan.baidu.com/s/1pKUyrAr</a> 密码：390v</p>
 <p>你会得到一个<code>chromedriver.exe</code>文件，不需要安装，但是你得把它放到python能找到它的地方，你可以通过下图的方式找到python安装在哪里，如图所示，<code>C:\Users\wangluobu\AppData\Local\Programs\Python\Python35\Scripts\</code>就是我要找的位置，我就把<code>chromedriver.exe</code>放到这个目录下。</p>
-<img src="/2017/06/08/selenim数据采集入门-for-psychologist/find-python.jpg" alt="find-python" title="find-python">
+<img src="/2017/06/10/selenim数据采集入门-for-psychologist/find-python.jpg" alt="find-python" title="find-python">
 <p>第三步， 测试是否能从python启动chrome浏览器。</p>
 <p>新建一个python程序文件，任何一个以<code>.py</code>结尾的文本文件都可以，你可以把一个记事本文件的后缀名改为<code>py</code>，创建好该文件后，右键单击该文件，选择<code>Edit With IDLE</code>，输入如下代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> selenium</div><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line">driver=webdriver.Chrome()</div><div class="line">driver.get(<span class="string">"http://mlln.cn/"</span>)</div></pre></td></tr></table></figure>
 <p>代码填好了，按下快捷键<code>F5</code>就应该能看到chrome浏览器打开，并定位到网站<code>mlln.cn</code>。</p>
 <h3 id="chrome网页调试工具"><a href="#chrome网页调试工具" class="headerlink" title="chrome网页调试工具"></a>chrome网页调试工具</h3><p>网页开发人员经常会用调试工具来查看网页的源码。chrome浏览器自带调试工具，用chrome打开网址<code>mlln.cn</code>，然后按下F2可以看到调试工具。</p>
 <p>你要会定位一个网页元素，进而查看它的源码。使用这个位于左上角的小工具，点击它。</p>
-<img src="/2017/06/08/selenim数据采集入门-for-psychologist/debug-tools1.jpg" alt="debug-tools1.jpg" title="">
+<img src="/2017/06/10/selenim数据采集入门-for-psychologist/debug-tools1.jpg" alt="debug-tools1.jpg" title="">
 <p>然后点击网页上的标题，你会再代码窗口看到网页标题对应的代码。</p>
-<img src="/2017/06/08/selenim数据采集入门-for-psychologist/debug-tools2.jpg" alt="debug-tools2.jpg" title="">
+<img src="/2017/06/10/selenim数据采集入门-for-psychologist/debug-tools2.jpg" alt="debug-tools2.jpg" title="">
 <p>假如现在我们想要采集的数据就是该网页的标题，我们需要写一个python脚本：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> selenium</div><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line">driver=webdriver.Chrome()</div><div class="line">driver.get(<span class="string">"http://mlln.cn/"</span>)</div><div class="line">h1 = driver.find_element_by_id(<span class="string">'main-title'</span>)  <span class="comment"># 根据id获取元素H1</span></div><div class="line">print(h1.text)  <span class="comment">#打印H1标签内的文本</span></div></pre></td></tr></table></figure>
 <p>你现在知道了，只有配合网页调试工具，我们才能知道我们要的数据在哪里。</p>
 <h3 id="selenium-入门"><a href="#selenium-入门" class="headerlink" title="selenium 入门"></a>selenium 入门</h3><p>使用selenium需要有网页制作的基础知识，也就是要懂HTML，遇到复杂的问题可以根据HTML知识来解决，如果你不懂HTML，你可以花两天时间了解一下。</p>
-<h4 id="定位元素"><a href="#定位元素" class="headerlink" title="定位元素"></a>定位元素</h4><p>selenium提供了多种方法帮你找到你要的数据。这个列表就是所有：</p>
-<p>定位单个元素的方法：</p>
+<h4 id="定位标签"><a href="#定位标签" class="headerlink" title="定位标签"></a>定位标签</h4><p>要知道网页代码是由很多嵌套的标签构成的，为了获取网页中的数据，我们其实就是要获取标签内的文本。</p>
+<p>selenium提供了多种方法帮你找到你要的标签。这个列表就是所有：</p>
+<p>定位单个标签的方法，他们都返回一个标签。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">find_element_by_id  <span class="comment">#我们刚才用的就是这个方法</span></div><div class="line">find_element_by_name</div><div class="line">find_element_by_xpath</div><div class="line">find_element_by_link_text</div><div class="line">find_element_by_partial_link_text</div><div class="line">find_element_by_tag_name</div><div class="line">find_element_by_class_name</div><div class="line">find_element_by_css_selector</div></pre></td></tr></table></figure>
-<p>定位多个元素的方法，这些方法都返回一个列表：</p>
+<p>定位多个标签的方法，这些方法都返回一个列表：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">find_elements_by_name</div><div class="line">find_elements_by_xpath</div><div class="line">find_elements_by_link_text</div><div class="line">find_elements_by_partial_link_text</div><div class="line">find_elements_by_tag_name</div><div class="line">find_elements_by_class_name</div><div class="line">find_elements_by_css_selector</div></pre></td></tr></table></figure>
-<h4 id="常用方法举例"><a href="#常用方法举例" class="headerlink" title="常用方法举例"></a>常用方法举例</h4><h4 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h4><h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<h4 id="常用方法举例"><a href="#常用方法举例" class="headerlink" title="常用方法举例"></a>常用方法举例</h4><h5 id="find-element-by-id"><a href="#find-element-by-id" class="headerlink" title="find_element_by_id"></a>find_element_by_id</h5><p>id是唯一标记html元素的属性，一个页面上不会有重复的id标签，所以你可以使用<code>find_element_by_id</code>快速的找到一个标签。但是有id属性的标签非常少。</p>
+<p>加入我们想要获取网站的名字是什么，你需要分析页面上标题的标签，我们还以<code>mlln.cn</code>为例子，它的网站标题标签的代码是<code>&lt;h1 id=&quot;main-title&quot; class=&quot;title&quot;&gt;DataScience&lt;/h1&gt;</code>，我们想得到的是标题DataScience:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">from selenium import webdriver  #引入webdriver</div><div class="line">driver=webdriver.Chrome()       #打开浏览器</div><div class="line">driver.get(&quot;http://mlln.cn/&quot;)   #打开页面</div><div class="line">element=driver.find_element_by_id(&apos;main-title&apos;) #找到h1标签</div><div class="line">title=element.text   #获取h1元素内的文本</div></pre></td></tr></table></figure>
+<h5 id="find-element-by-class-name-amp-find-elements-by-class-name"><a href="#find-element-by-class-name-amp-find-elements-by-class-name" class="headerlink" title="find_element_by_class_name &amp; find_elements_by_class_name"></a>find_element_by_class_name &amp; find_elements_by_class_name</h5><p>class是标签的类别，所以通常有多个标签有相同的class，但是如果我们只想得到第一个特定class的标签，那么我们只需要使用find_element_by_class_name，如果我们想要获取所有特定class的标签，我们需要使用find_elements_by_class_name。</p>
+<p>比如我们想要获取第一篇文章的发布日期，日期的标签是这样的形式：<code>&lt;span class=&quot;date&quot;&gt;2017年06月08日&lt;/span&gt;</code>，我们看到这个标签的class是date，那么：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">first_element=driver.find_element_by_class_name(<span class="string">'date'</span>)</div><div class="line">date=first_element.text</div></pre></td></tr></table></figure>
+<p>或者，我们想要获取所有日期，我们就要用第二个方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">all_elements=driver.find_elements_by_class_name(<span class="string">'date'</span>)</div><div class="line">dates=[]<span class="comment">#用列表存放将要获取的日期</span></div><div class="line"><span class="comment"># 通过for循环获取所有的日期</span></div><div class="line"><span class="keyword">for</span> ele <span class="keyword">in</span> all_elements:</div><div class="line">	dates.append(ele.text)</div><div class="line">print(dates)</div></pre></td></tr></table></figure>
+<h5 id="find-element-by-tag-name-amp-find-elements-by-tag-name"><a href="#find-element-by-tag-name-amp-find-elements-by-tag-name" class="headerlink" title="find_element_by_tag_name &amp; find_elements_by_tag_name"></a>find_element_by_tag_name &amp; find_elements_by_tag_name</h5><p>tag就是标签的意思，也就是我们本篇文章一直说的html标签，如果我们知道想要某个标签的名字, 比如还是想得到网站标题，它的源码是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;h1 id=&quot;main-title&quot; class=&quot;title&quot;&gt;DataScience&lt;/h1&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">first_element=driver.find_element_by_tag_name(<span class="string">'h1'</span>)</div><div class="line">print(first_element.text)</div></pre></td></tr></table></figure>
+<p>我们可以看下所有的h1标签都是什么：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">for ele in driver.find_elements_by_tag_name(&apos;h1&apos;):</div><div class="line">	print(ele.text)</div></pre></td></tr></table></figure>
+<h5 id="link-text-链接文字"><a href="#link-text-链接文字" class="headerlink" title="link_text (链接文字)"></a>link_text (链接文字)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">find_element_by_link_text</div><div class="line">find_elements_by_link_text</div><div class="line">find_element_by_partial_link_text</div><div class="line">find_elements_by_partial_link_text</div></pre></td></tr></table></figure>
+<p>link(链接)大家都知道，点击链接就能跳转到新的页面。我们可以根据链接内的文字获取链接标签。partial_link就是链接的一部分，也就是说你不用输入链接的所有文字，只需要输入一部分，但是这部分文字必须特征明显，以至于能找到你真正想要的链接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">eles=driver.find_elements_by_partial_link_text(&apos;数据&apos;)</div><div class="line">for e in eles:</div><div class="line">	print(e.text)</div></pre></td></tr></table></figure>
+<h5 id="xpath"><a href="#xpath" class="headerlink" title="xpath"></a>xpath</h5><p>xpath是描述html标签位置的方法，需要一些学习成本（大概2小时），通常我们不会用到这种方法，因为比较麻烦。这里已经超出本篇文章的范围，有兴趣的可以在<a href="http://www.w3school.com.cn/xpath/index.asp" target="_blank" rel="external">这里</a>学习。</p>
+<h4 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h4><h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
 <li>下载chrome浏览器的驱动器，链接：<a href="http://pan.baidu.com/s/1pKUyrAr" target="_blank" rel="external">http://pan.baidu.com/s/1pKUyrAr</a> 密码：390v</li>
 </ul>
 
@@ -614,6 +598,40 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 <img src="/2017/06/01/hello-world/1e71f724b899a901f17c560a17950a7b0208f506.jpg" alt="test-image" title="test-image">
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2017/01/08/探索过程数据在全球大规模机器考试中的应用/">
+                探索过程数据在全球大规模机器考试中的应用
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017年01月08日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            
+
+	<div class="row">
+    <embed src="/pdfs/探索过程数据在全球大规模机器考试中的应用.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
         </div>
     
 
@@ -1087,11 +1105,7 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
         <ul>
             
             <li>
-                <a class="footer-post" href="/2017/06/08/探索过程数据在全球大规模机器考试中的应用/">探索过程数据在全球大规模机器考试中的应用</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/08/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
@@ -1100,6 +1114,10 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
             
             <li>
                 <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
