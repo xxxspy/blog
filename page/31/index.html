@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,133 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/">
+                DataNitro：[1]怎样在Excel中使用python脚本
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>怎么在Excel中运行python脚本？这个问题由来已久，很多pythoner都希望直接用python控制Excel，但是只能从外部调用，有没有一个VBA的东西可以直接在Excel中运行呢？答案是有，DataNitro就是这么一个东西，看看下面Excel中的界面，他就是了，可以直接点击‘run’来运行一个Python脚本。下面我们来看看它是如何安装与配置的。</p>
+<ul>
+<li>先安装python2.7，其他版本不知道行不行，但是这个肯定行，然后配置环境变量，保证python在该环境中，打开开始菜单，找到计算机，然后右键单击它，选择【属性】</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/00a82701213fb80e416877e135d12f2eb938940f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>找到高级系统设置</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/4e83cb628535e5dda375b3e975c6a7efce1b626f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>找到环境变量，点击该按钮，打开环境变量设置窗口</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/ae10eddeb48f8c54db6ad31939292df5e0fe7f0f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>找到Path系统变量，然后点击【编辑】</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/3b6833f5e0fe9925e9557f6637a85edf8db1716f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>在这里，确保python的安装目录在，没有的话，添加进去</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/5d212aa85edf8db191976a520a23dd54564e740f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>下面就可以安装该插件了，去官网下载一个；或者百度一下，各大下载网站都有</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/8cf0d51349540923803775489158d109b3de496e.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>双击即可安装，安装过程就是一路点击’下一步，不过有一步需要注意</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/b13fd48065380cd7b447b4dba244ad345982816f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/c87c6ecf3bc79f3d85bff206b9a1cd11728b296e.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/78701455b319ebc40f2660af8126cffc1e17166e.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/29790130e924b89971826f0e6d061d950a7bf60f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>在这里，不要勾选python，如果通过这种方式安装python，你原先安装的python就无法使用了</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/eab9044c510fd9f9ddae435f262dd42a2834a40f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<ul>
+<li>最后安装完成，打开Excel就可以看到datanitro了</li>
+</ul>
+<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/969cbf44ad34598298d3f3a40ff431adcbef846f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/23/pandas教程：[6]计数统计/">
+                pandas教程：[6]计数统计
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>经过之前的学习，我们现在可以做一个简单的统计了，比如计数，这是最简单的统计，我们现在就使用pandas统计一下数据中各个专业学生的数目：</p>
+<ul>
+<li>先来引入pandas，并且从csv文件中读取数据</li>
+</ul>
+<img src="/2015/05/23/pandas教程：[6]计数统计/8640bf8b87d6277fc3b99f2b2b381f30e924fc3f.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
+<ul>
+<li>查看一下前三行数据，看读取数据是否正确</li>
+</ul>
+<img src="/2015/05/23/pandas教程：[6]计数统计/29790130e924b899ca97d42b6d061d950a7bf63f.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
+<img src="/2015/05/23/pandas教程：[6]计数统计/8697397f9e2f070877d28713ea24b899a801f28b.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
+<ul>
+<li>选择数据：之前也有相关的教程，假如现在我们要统计【专业名称】这一列，那么需要学会选择它：</li>
+</ul>
+<img src="/2015/05/23/pandas教程：[6]计数统计/6391e903918fa0ec7e27c91e259759ee3c6ddb86.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
+<ul>
+<li>计数统计我们使用：save_counts()，打印这个结果，查看一下</li>
+</ul>
+<img src="/2015/05/23/pandas教程：[6]计数统计/09bb4f3d269759ee47b0cdd8b1fb43166c22df86.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
+<img src="/2015/05/23/pandas教程：[6]计数统计/d872d695d143ad4be32dead381025aafa40f0666.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
+<ul>
+<li>绘制柱形图，使用plot方法，如果想要输出该图，使用get_figure()和savefig()</li>
+</ul>
+<img src="/2015/05/23/pandas教程：[6]计数统计/27d647ee3d6d55fbce26db356e224f4a21a4dd86.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
+<ul>
+<li>最后我们可以在D盘下找到plot.png，这就是绘制好的bar图了。</li>
+</ul>
+<img src="/2015/05/23/pandas教程：[6]计数统计/b3ba5d166d224f4aa079de000af790529922d186.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -615,120 +743,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/05/11/spss怎么合并变量/">
-                spss怎么合并变量
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年05月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>合并变量是合并数据的一种方法，比如我今天给被试测量几个变量，过几天再测了几个变量，这些数据合并在一起就是合并变量，这不是将case合并，这是关键，下面我来演示一下这个过程。<br>方法/步骤</p>
-<ul>
-<li>打开spss以后，先要打开第一个要合并的数据，然后合并变量如图所示，在菜单栏上执行：data–merge file–addvariable</li>
-</ul>
-<img src="/2015/05/11/spss怎么合并变量/8ad4b31c8701a18bcec8ecc29e2f07082838fe18.jpg" alt="spss怎么合并变量" title="spss怎么合并变量">
-<ul>
-<li>打开合并变量对话框，点击浏览选项，找到要合并的第二个文件</li>
-</ul>
-<img src="/2015/05/11/spss怎么合并变量/a08b87d6277f9e2f4b16e3851f30e924b899f318.jpg" alt="spss怎么合并变量" title="spss怎么合并变量">
-<ul>
-<li>找到要合并的第二个文件，然后点击open</li>
-</ul>
-<img src="/2015/05/11/spss怎么合并变量/d8f9d72a6059252d5212e389349b033b5bb5b932.jpg" alt="spss怎么合并变量" title="spss怎么合并变量">
-<ul>
-<li>回到合并变量对话框，点击continue按钮，进行下一步设置</li>
-</ul>
-<img src="/2015/05/11/spss怎么合并变量/9f2f070828381f30a63a7324a9014c086e06f018.jpg" alt="spss怎么合并变量" title="spss怎么合并变量">
-<ul>
-<li>在这里，我们先看到右边的列表指的是合并变量以后的数据，左侧的列表显示的是被排除的变量，这些变量之所以被排除是因为两个数据表出现了相同的变量。</li>
-</ul>
-<img src="/2015/05/11/spss怎么合并变量/1e30e924b899a9011e16a5bb1d950a7b0208f518.jpg" alt="spss怎么合并变量" title="spss怎么合并变量">
-<ul>
-<li>要想合并变量必须制定关键变量，也就是key variables，因为我们的关键变量是id，这个id在new active dataset中，先选中id，然后点击如图所示的按钮，让id变为排除变量</li>
-</ul>
-<img src="/2015/05/11/spss怎么合并变量/a8014c086e061d955f65c9b57bf40ad162d9ca18.jpg" alt="spss怎么合并变量" title="spss怎么合并变量">
-<ul>
-<li>接着在排除变量中，选中id，点击如图所示的按钮，将其添加到关键变量中</li>
-</ul>
-<img src="/2015/05/11/spss怎么合并变量/1c950a7b02087bf452cfa964f2d3572c11dfcf18.jpg" alt="spss怎么合并变量" title="spss怎么合并变量">
-<ul>
-<li><p>点击ok按钮，开始合并变量，一般会弹出警告框，点击ok即可。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2015/05/11/spss怎么合并变量/3bf33a87e950352a5264db855343fbf2b2118b32.jpg" alt="spss怎么合并变量" title="spss怎么合并变量">
-<img src="/2015/05/11/spss怎么合并变量/63d9f2d3572c11dff4f241ae632762d0f703c218.jpg" alt="spss怎么合并变量" title="spss怎么合并变量">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/05/11/ipython教程：设置Notebook/">
-                ipython教程：设置Notebook
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年05月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我们有两种方式来设置你的ipython notebook，一种方式是通过命令行启动notebook服务器的时候，在ipython notebook后面添加一个参数来设置notebook服务器；另一种方式是创建一个ipython_notebook_config.py文件来写入你的设置参数。今天我们就讲一下后者。</p>
-<ul>
-<li>这个文件应该放在你的ipython的文件夹下的profile文件夹。通过命令ipython locate来找到这个ipython_notebook_config.py文件放在哪里。</li>
-</ul>
-<img src="/2015/05/11/ipython教程：设置Notebook/f35ea0096b63f6248d5e328a8244ebf81b4ca3fd.jpg" alt="ipython教程：设置Notebook" title="ipython教程：设置Notebook">
-<ul>
-<li>这样你可以打开这个文件夹，看看里面都有什么：所有的配置文件都放在了profile_default文件夹。如果没有看到这个文件夹，你可以使用ipython prifile create来创建</li>
-</ul>
-<img src="/2015/05/11/ipython教程：设置Notebook/7c5fcc1b0ef41bd5d9a4e37d54da81cb38db3d00.jpg" alt="ipython教程：设置Notebook" title="ipython教程：设置Notebook">
-<img src="/2015/05/11/ipython教程：设置Notebook/9f1011b30f2442a75c22882cd443ad4bd01302cf.jpg" alt="ipython教程：设置Notebook" title="ipython教程：设置Notebook">
-<ul>
-<li>当然你可以给你的profile文件夹起个名字，比如就叫profile_aaa，你可以这样写命令：ipython profile create aaa</li>
-</ul>
-<img src="/2015/05/11/ipython教程：设置Notebook/d872d695d143ad4b5802334987025aafa50f06cf.jpg" alt="ipython教程：设置Notebook" title="ipython教程：设置Notebook">
-<img src="/2015/05/11/ipython教程：设置Notebook/dbf554ed2e738bd41da1c7b8a48b87d6267ff97c.jpg" alt="ipython教程：设置Notebook" title="ipython教程：设置Notebook">
-<ul>
-<li>如果你想要使用aaa这个profile，我们在启动ipython notebook的时候使用命令：ipython notebook –profile==aaa</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -771,19 +785,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -875,45 +889,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

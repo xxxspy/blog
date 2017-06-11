@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,108 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/23/Excel2013：[28]countif函数用法大全/">
+                Excel2013：[28]countif函数用法大全
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>countif函数时我们经常用到的函数之一，经过组合它可以求得任何我们想要的计数结果，下面是具体的用法：</p>
+<ul>
+<li>假如我们要统计男女生的人数，我们可以在E5单元格输入公式=COUNTIF(A2:A21,”男”)；公式中A2:A21是我们计数的范围，第二个参数“男”表示对单元格中为男的计数</li>
+</ul>
+<img src="/2015/07/23/Excel2013：[28]countif函数用法大全/61183b2dd42a28344b75b77259b5c9ea14cebfbd.jpg" alt="Excel2013：[28]countif函数用法大全" title="Excel2013：[28]countif函数用法大全">
+<ul>
+<li>同样的，在F5单元格输入公式也可以求得女生人数：=COUNTIF(A2:A21,”女”)</li>
+</ul>
+<img src="/2015/07/23/Excel2013：[28]countif函数用法大全/d56b3634349b033bda5b7da317ce36d3d439bdbd.jpg" alt="Excel2013：[28]countif函数用法大全" title="Excel2013：[28]countif函数用法大全">
+<ul>
+<li>假如我们要统计成绩大于60的人数</li>
+</ul>
+<img src="/2015/07/23/Excel2013：[28]countif函数用法大全/35da1d3b5bb5c9ea9620829ad739b6003bf3b3bd.jpg" alt="Excel2013：[28]countif函数用法大全" title="Excel2013：[28]countif函数用法大全">
+<ul>
+<li>我们可以在单元格中输入公式=COUNTIF(B2:B21,”&gt;=60”)</li>
+</ul>
+<img src="/2015/07/23/Excel2013：[28]countif函数用法大全/dc15484e9258d10963cf29cbd358ccbf6c814d58.jpg" alt="Excel2013：[28]countif函数用法大全" title="Excel2013：[28]countif函数用法大全">
+<ul>
+<li>假如我们要计算一个区间内的人数，我们可以使用两个countif函数，运用减法就可以算出来，下面是计算成绩在60到65之间的个数</li>
+</ul>
+<img src="/2015/07/23/Excel2013：[28]countif函数用法大全/9dc3cf58ccbf6c81551bac91be3eb13533fa4058.jpg" alt="Excel2013：[28]countif函数用法大全" title="Excel2013：[28]countif函数用法大全">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/23/wxpython教程：[4]菜单中的图标/">
+                wxpython教程：[4]菜单中的图标
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们看到的菜单中多半是有一个图标的，那么今天我们就来做一个菜单，菜单选项左侧有一个图标。要达到这个目的我们必须手动创建一个选项。下面是今天代码的全部：由于这些大部分代码在之前的文章中有讲解，所以这篇文章就着重讲不同的部分。</p>
+<ul>
+<li>先创建一个选项：注意第二个参数设定了该选项的id，以后绑定方法的时候可以用id来表示该选项</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/0e655ca7d933c895c3031a14d21373f082020024.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>设置选项的图标用到了方法：SetBitmap，该方法需要传入一个Bitmap对象：exit.jpg是我自己做的一个图片</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/c9d4cf43ad4bd11366b0355d59afa40f4bfb0524.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>将创建好的选项添加到菜单</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/72b19c025aafa40f52bb4cb2a864034f78f01924.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>将选项与方法绑定，这样点击该菜单选项就能执行OnQuit动作。注意现在用id来表示跟哪个选项进行的绑定，因为我们在</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/55a628d12f2eb9383071f89dd6628535e5dd6f06.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<ul>
+<li>这是最后做出来的效果图</li>
+</ul>
+<img src="/2015/07/23/wxpython教程：[4]菜单中的图标/b25d9901a18b87d61b3c2670040828381f30fd20.jpg" alt="wxpython教程：[4]菜单中的图标" title="wxpython教程：[4]菜单中的图标">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -1029,118 +1132,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/07/05/python高级教程：[3]生成器方法send throw clos/">
-                python高级教程：[3]生成器方法send throw clos
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年07月05日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>这一篇接着讲Python的生成器，生成器总共有四个方法你可以看一下：next方法已经说过了，接下来说一下其余的三个方法。</p>
-<ul>
-<li>send：用于传递参数，实现与生成器的交互，我们举一个例子，下面的函数dog代表一只狗。当程序运行到food=(yield)的时候就会被挂起，等待生成器调用send方法，这时候我调用d.send(u’骨头’)，骨头就会被传递到food这个变量中，然后程序就说”我吃饱了”。仔细看一下下面的输出内容你就会明白。所以，send实际上是把yield变成了一个输入入口。</li>
-</ul>
-<img src="/2015/07/05/python高级教程：[3]生成器方法send%20throw%20clos/2e6fa7389b504fc2fc62bdbae3dde71190ef6d14.jpg" alt="python高级教程：[3]生成器方法send throw clos" title="python高级教程：[3]生成器方法send throw clos">
-<ul>
-<li>stop用于停止生成器，如果再stop之后调用next，就会引发StopIteration错误。</li>
-</ul>
-<img src="/2015/07/05/python高级教程：[3]生成器方法send%20throw%20clos/b29f8282d158ccbf2069b9851fd8bc3eb035417c.jpg" alt="python高级教程：[3]生成器方法send throw clos" title="python高级教程：[3]生成器方法send throw clos">
-<ul>
-<li>throw用于给生成器传递一个error，结合stop，我们可以做一些有意思的事情：</li>
-</ul>
-<img src="/2015/07/05/python高级教程：[3]生成器方法send%20throw%20clos/346bd85c10385343ffbf889e9513b07ecb8088d9.jpg" alt="python高级教程：[3]生成器方法send throw clos" title="python高级教程：[3]生成器方法send throw clos">
-<ul>
-<li><p>根据上面的例子我们可以知道，实际上stop可以在生成器内部引发一个GeneratorExit错误，我们可以使用try…except GeneratorExit句型捕获该错误，然后做一些善后的事情。</p>
-</li>
-<li><p>注意，在捕获GeneratorExit错误以后，你需要raise StopIteration错误，否则程序就没有终止的时候了。</p>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/">
-                Excel2013：[17]数据透视表有两个汇总项
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年07月05日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>现在我想要在分类汇总的时候出现两个汇总项，看下面的数据，假如我要在一个数据透视表里看到两个汇总项，也就是重量和中转费。我们的目的是统计上一站和目的网点之间中转费和重量的总计，下面看看如何具体来做。</p>
-<ul>
-<li>先插入一个数据透视表，如图所示</li>
-</ul>
-<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/027a45b5c9ea15ce702a270eb4003af33b87b2b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
-<ul>
-<li>打开一个对话框，我们默认在新的工作表放置数据透视表，点击确定按钮</li>
-</ul>
-<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/e8112b2ac65c10381cba09c5b0119313b17e89b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
-<ul>
-<li>看到界面的右侧出现了一个数据透视表字段，将行和列字段拖动到对应的位置</li>
-</ul>
-<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/b13fd48065380cd7c6da65eaa344ad34588281b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
-<ul>
-<li>接着讲想要统计的字段拖动到下面的值字段</li>
-</ul>
-<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/b3ba5d166d224f4a06feb5140bf790529822d117.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
-<ul>
-<li>设置值字段，我们点击【计数项：重量】，在打开的菜单中选择：值字段设置</li>
-</ul>
-<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/caae68094b36acaf4a2451fb7ed98d1000e99cb6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
-<ul>
-<li>在打开的对话框中，我们选择【求和】，点击确定按钮</li>
-</ul>
-<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/d68b65cb0a46f21f8f539854f4246b600c33ae17.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
-<ul>
-<li>同样，设置第二个字段</li>
-</ul>
-<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/b94f65ec54e736d140d74b0f99504fc2d46269b6.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
-<ul>
-<li>至此，我们就完成了任务。</li>
-</ul>
-<img src="/2015/07/05/Excel2013：[17]数据透视表有两个汇总项/389aa8fd5266d016ccc8532f952bd40734fa35a1.jpg" alt="Excel2013：[17]数据透视表有两个汇总项" title="Excel2013：[17]数据透视表有两个汇总项">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1183,19 +1174,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -1287,45 +1278,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,128 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/">
+                SPSS实例：[34]二分类变量关联程度的度量
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>现在有一个食物中毒的问题，我们想要知道吃了某种食物的人是否更容易中毒呢？看一下现在的数据。看food变量，我用数字0代表没吃食物，用数字1代表吃了某种食物；看posion变量，我使用0表示没中毒，用1表示中毒了。频率就不解释了，你懂。</p>
+<ul>
+<li>使用频率对case进行加权。这个说过很多遍了，不懂的人去看这里的加权部分：<a href="http://jingyan.baidu.com/article/9113f81b2e988c2b3214c70f.html" target="_blank" rel="external">http://jingyan.baidu.com/article/9113f81b2e988c2b3214c70f.html</a></li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/a84052086e061d959af7728f79f40ad163d9ca91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>加权ok以后，我们找到交叉表分析</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/1e71f724b899a901c1501e811f950a7b0308f5e5.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>把两个变量分别放入不同的框中</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/6391e903918fa0ec977621ba249759ee3c6ddb91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>点击统计量按钮，我们来设置一下输出的统计量</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/507c389759ee3d6df1a3c27c41166d224e4adee5.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>我们选择Risk指数，也就是风险评估，当然你也得选择卡方</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/08b68e529822720ea37fa74d79cb0a46f31fab91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>回到主界面，点击ok按钮，开始处理数据</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/bf487563f6246b60b4bff7c3e9f81a4c500fa291.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>先看卡方检验结果，卡方显示显著，表示是否吃某种食物与中毒与否是相关的。</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/1b0d4f0fd9f9d72adfd555aad62a2834359bbb91.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<ul>
+<li>接着看风险评估，OR值如图所示，它表示吃了某种食物的人比没有吃该事物的人中毒的概率高出24倍</li>
+</ul>
+<img src="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/f76575600c33874451a06acb530fd9f9d62aa0e5.jpg" alt="SPSS实例：[34]二分类变量关联程度的度量" title="SPSS实例：[34]二分类变量关联程度的度量">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/05/Python教程：[50]单行多行注释/">
+                Python教程：[50]单行多行注释
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>python注释用的是符号#，但只能注释一行，如果要写一大片文字，最好还是使用三个单引号进行注释，另外，如果你用的是中文注释，还需要在文件头部声明编码方式，下面我们看看几个例子：</p>
+<ul>
+<li>首先在第一行必须声明编码方式</li>
+</ul>
+<img src="/2015/09/05/Python教程：[50]单行多行注释/3bc6f750352ac65cc7bb3ae3f9f2b21192138aa1.jpg" alt="Python教程：[50]单行多行注释" title="Python教程：[50]单行多行注释">
+<ul>
+<li>单行注释，用一个#就可以了，同时被注释的文字显示为红色（不一样的编辑器显示的颜色不同）</li>
+</ul>
+<img src="/2015/09/05/Python教程：[50]单行多行注释/570f8c58d109b3de81f4b8f8cebf6c81810a4c93.jpg" alt="Python教程：[50]单行多行注释" title="Python教程：[50]单行多行注释">
+<ul>
+<li>多行注释就用三个单引号，注意要在注释首位都用三个单引号</li>
+</ul>
+<img src="/2015/09/05/Python教程：[50]单行多行注释/b3508d13b07eca80bbbb6577932397dda04483a1.jpg" alt="Python教程：[50]单行多行注释" title="Python教程：[50]单行多行注释">
+<ul>
+<li>现在我写了这些代码，按下F5运行一下</li>
+</ul>
+<img src="/2015/09/05/Python教程：[50]单行多行注释/814b07d8bc3eb135168ceb2ba41ea8d3fc1f4493.jpg" alt="Python教程：[50]单行多行注释" title="Python教程：[50]单行多行注释">
+<ul>
+<li>你会看到只输出了ok</li>
+</ul>
+<img src="/2015/09/05/Python教程：[50]单行多行注释/58c3acb7d0a20cf4d92ea24f74094b36adaf99a1.jpg" alt="Python教程：[50]单行多行注释" title="Python教程：[50]单行多行注释">
+<ul>
+<li>假如我们删掉首行的编码声明</li>
+</ul>
+<img src="/2015/09/05/Python教程：[50]单行多行注释/2f9cbdcc7cd98d10f06a50a1233fb80e7aec90a1.jpg" alt="Python教程：[50]单行多行注释" title="Python教程：[50]单行多行注释">
+<ul>
+<li>再按下F5就会提示你生命编码方式，点击edit my file就会自动添加一个编码方式。</li>
+</ul>
+<img src="/2015/09/05/Python教程：[50]单行多行注释/c87c6ecf3bc79f3dc0aab8a0b8a1cd11738b2993.jpg" alt="Python教程：[50]单行多行注释" title="Python教程：[50]单行多行注释">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -620,114 +743,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/08/23/pandas教程：[29]柱形图/">
-                pandas教程：[29]柱形图
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年08月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>上一篇文章做了一个散点图以及散点图的趋势线，这篇文章转向柱形图，柱形图一般适用于离散数据，而直方图更多用于连续数据。下面是具体绘制过程：</p>
-<ul>
-<li>引入相关模块<br>创建一个10x4的DataFrame</li>
-</ul>
-<img src="/2015/08/23/pandas教程：[29]柱形图/6dc09e0a19d8bc3e8ed97ebb818ba61ea9d345aa.jpg" alt="pandas教程：[29]柱形图" title="pandas教程：[29]柱形图">
-<img src="/2015/08/23/pandas教程：[29]柱形图/83cab81ea8d3fd1f04d8da4b334e251f94ca5faa.jpg" alt="pandas教程：[29]柱形图" title="pandas教程：[29]柱形图">
-<ul>
-<li>绘制一个柱形图很简单，只要在plot里指定kind为bar<br>这是输出的图plot1.png,有没有发现这个图很难看？</li>
-</ul>
-<img src="/2015/08/23/pandas教程：[29]柱形图/e865a699a9014c08ded650d4097b02087af4f497.jpg" alt="pandas教程：[29]柱形图" title="pandas教程：[29]柱形图">
-<img src="/2015/08/23/pandas教程：[29]柱形图/d7c9ca3f8794a4c21ef29f5a0df41bd5ac6e39aa.jpg" alt="pandas教程：[29]柱形图" title="pandas教程：[29]柱形图">
-<ul>
-<li>可以如此设置柱形图的样式：<br>现在这个图变成了这个样式，如果你还是喜欢上一个图，你就设置mpl_style为none即可</li>
-</ul>
-<img src="/2015/08/23/pandas教程：[29]柱形图/1cd4147b02087bf4bf012f98f1d3572c10dfcf97.jpg" alt="pandas教程：[29]柱形图" title="pandas教程：[29]柱形图">
-<img src="/2015/08/23/pandas教程：[29]柱形图/0fb505d5ad6eddc43836cc8a3adbb6fd536633aa.jpg" alt="pandas教程：[29]柱形图" title="pandas教程：[29]柱形图">
-<ul>
-<li>堆积直方图只需要设置stacked=True<br>绘制出来的堆积柱形图：</li>
-</ul>
-<img src="/2015/08/23/pandas教程：[29]柱形图/7ab514d162d9f2d3effc5c9eaaec8a136227cc97.jpg" alt="pandas教程：[29]柱形图" title="pandas教程：[29]柱形图">
-<img src="/2015/08/23/pandas教程：[29]柱形图/ac2fc3c451da81cb5237fbbc5166d016082431aa.jpg" alt="pandas教程：[29]柱形图" title="pandas教程：[29]柱形图">
-<ul>
-<li>很多时候我们的柱形图是延水平方向的，这时候需要设置kind=‘barh’<br>现在该图变成了水平方向的柱形图</li>
-</ul>
-<img src="/2015/08/23/pandas教程：[29]柱形图/f99dcf00baa1cd1125670a51ba12c8fcc2ce2daa.jpg" alt="pandas教程：[29]柱形图" title="pandas教程：[29]柱形图">
-<img src="/2015/08/23/pandas教程：[29]柱形图/bf487563f6246b60d6e3ca05e8f81a4c500fa297.jpg" alt="pandas教程：[29]柱形图" title="pandas教程：[29]柱形图">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/">
-                spss因素分析如何对对因子载荷矩阵进行排序
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年08月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>在确定因子意义的时候需要看变量和因子的关系，如果比如某个因子在某个变量上的载荷为0.9，我们可以认为这个变量和因子的关系很紧密，可以用这个变量来解释这个因子，对载荷进行排序就可以帮助我们一眼看到因子之间的不同。<br>方法/步骤</p>
-<ul>
-<li>在spss中准备好数据，然后在菜单栏上执行analyse–dimension reduction–factor，打开factor analyse对话框</li>
-</ul>
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/024f78f0f736afc3d61343b1b319ebc4b64512c2.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
-<ul>
-<li>将所有需要分析的变量放到variables框中，点击箭头按钮可以添加变量</li>
-</ul>
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/838ba61ea8d3fd1f2b45deee304e251f94ca5f91.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
-<ul>
-<li>点击option按钮，打开选项对话框</li>
-</ul>
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/0df3d7ca7bcb0a460845f7ed6b63f6246a60affb.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
-<ul>
-<li>在选项对话框中，找到coefficient display format，勾选下面的sorted by size，这样设置就是为了让输出的因素载荷矩阵按照因素载荷的大小进行排序，方便我们查看结果</li>
-</ul>
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/bd315c6034a85edfd9ca82f749540923dc54759b.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
-<ul>
-<li>我们看到下面的两个表格，都是旋转因子以后的载荷矩阵，他们的区别是，第二个表格中的载荷已经经过了排序，我们可以直观的看到不同的变量在各个因子上的载荷，并将变量分类。</li>
-</ul>
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/b999a9014c086e06cb72439f02087bf40bd1cb08.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
-<img src="/2015/08/23/spss因素分析如何对对因子载荷矩阵进行排序/1c950a7b02087bf4d0362b3df2d3572c10dfcf08.jpg" alt="spss因素分析如何对对因子载荷矩阵进行排序" title="spss因素分析如何对对因子载荷矩阵进行排序">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -770,19 +785,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -874,45 +889,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

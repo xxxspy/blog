@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,121 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/15/spss逻辑回归的操作和分析方法/">
+                spss逻辑回归的操作和分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>在菜单栏上执行：analyse–regression–binary</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/d8f9d72a6059252d6801bdc1349b033b5ab5b9e5.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>将患病率作为因变量，将其他三个作为自变量，设置好这几个</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/14ce36d3d539b600fcdfaf72e950352ac75cb7e6.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>点击ok，开始处理数据</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/241f95cad1c8a786ebf9e7cb6709c93d71cf5027.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>我们看到第一个表格是描述性的，也就是一个交叉表格，我们从这个表格可以看到我们的数据的基本情况</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/35a85edf8db1cb134ee391d6dd54564e93584b68.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<ul>
+<li>接着就是回归模型的检验，看sig值这一列就可以看到各个自变量的系数是否显著，如果显著说明这个回归模型是可靠的</li>
+</ul>
+<img src="/2015/02/15/spss逻辑回归的操作和分析方法/7dd98d1001e93901c5d020fb7bec54e737d19621.jpg" alt="spss逻辑回归的操作和分析方法" title="spss逻辑回归的操作和分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/15/spss利用count计算指定变量值的出现次数/">
+                spss利用count计算指定变量值的出现次数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> count可以统计频数，并将频数生成一个新的变量，比如说，有10道题是问你是否赞同某个说法，5级评分，分别为：非常赞同、赞同、不知道、反对、非常反对。我们要知道某个人的综合的态度，就要统计出来这个人赞同的数量，用count就可以实现了。<br>方法/步骤</p>
+<ul>
+<li>打开数据以后，在菜单栏上执行：transform–count ，打开count对话框</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/c2fdfc039245d688d4db4928a4c27d1ed31b2464.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>在打开的对话框中，在目标变量中输入态度，并将填写变量的标签，将要统计的态度a1–a10都添加到numeric variables</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/9345d688d43f8794a5e2b2a2d21b0ef41bd53a18.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>点击define value，对变量进行条件限制</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/9345d688d43f8794a626b3a2d21b0ef41ad53a64.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>勾选range这个选项，然后在两个文本框中分别输入1和2，也就是限定了分数的范围是1到2，然后点击continue</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/d53f8794a4c27d1ed13bc1481bd5ad6eddc43818.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>返回到了count对话框，点击ok按钮，运行</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/a5c27d1ed21b0ef41ef562d2ddc451da81cb3e18.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li>我们看到这里已经多了一个态度变量</li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/d31b0ef41bd5ad6ed5209f6681cb39dbb7fd3c64.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<ul>
+<li><p>最后在菜单栏上执行：analyze–descriptive statistic–frequencies，对不同态度进行统计</p>
+</li>
+<li></li>
+</ul>
+<img src="/2015/02/15/spss利用count计算指定变量值的出现次数/dcc451da81cb39dbbddd9ddad0160924ab183018.jpg" alt="spss利用count计算指定变量值的出现次数" title="spss利用count计算指定变量值的出现次数">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -683,150 +799,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/02/01/pandas教程：[13]agg分组多种计算/">
-                pandas教程：[13]agg分组多种计算
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年02月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>有时候aggregate不能满足需求，因为我们要对分组数据进行多种计算，比如要同时计算各组数据的平均数、标准差、总数等等，这时候用agg()就比较好了。</p>
-<ul>
-<li>先引入必要的变量，并且创建一个DataFrame<br>我们可以看一下DataFrame包含哪些数据</li>
-</ul>
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/246cca2a2834349b2ee45d93caea15ce37d3be82.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/2f9cbdcc7cd98d1052363f27223fb80e7aec9082.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<ul>
-<li>按照颜色将数据分组：</li>
-</ul>
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/77485536acaf2eddecc67bff8e1001e9390193b5.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<ul>
-<li>计算各组数据的总数、平均数、标准差<br>计算结果为：</li>
-</ul>
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/027a45b5c9ea15ce070cd31fb5003af33b87b282.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/00a82701213fb80e2c3352c135d12f2eb8389482.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<ul>
-<li>假如我们只需要对a列数据进行计算，可以选择a列：<br>计算结果为：</li>
-</ul>
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/3792cb39b6003af30f58ef76362ac65c1138b682.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/ae10eddeb48f8c54ffe4f73939292df5e0fe7fb5.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<ul>
-<li>假如我们需要定制显示的标题，也可以如此设置：<br>输出结果为：</li>
-</ul>
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/c71d0e385343fbf28ece9535b37eca8064388f82.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/9a1151c2d56285358502e13793ef76c6a6ef6382.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<ul>
-<li>另外，我们还可以通过lambda匿名函数来进行特殊的计算：<br>计算各组数据的绝对值的平均数（离均差）：</li>
-</ul>
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/b87985504fc2d562db3fe2fbe41190ef76c66cb5.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/e49cf91190ef76c6c330c83d9e16fdfaae516782.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<ul>
-<li>我们还可以使用字符串作为一个function，要正确使用字符串，必须先学习groupby对象有哪些可用的方法。这种方式可以实现一些更高级的功能，比如定制计算方法，不建议新手使用。<br>计算结果为：</li>
-</ul>
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/ac754782b2b7d0a2452b378bc8ef76094a369a82.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<img src="/2015/02/01/pandas教程：[13]agg分组多种计算/9319cf09b3de9c82ae52cb996f81800a19d843b5.jpg" alt="pandas教程：[13]agg分组多种计算" title="pandas教程：[13]agg分组多种计算">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/">
-                Excel2013：[46]如何绘制半圆饼图
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年01月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>很多时候需要美化你的图表这样才能让人感觉你是一个有创意的员工，是一个对工作有激情的员工。额。。好吧，其实这句话我也不信，但信不信由你，我现在开始讲如何绘制一个半圆的饼图。</p>
-<ul>
-<li>先来看一下我的数据，下面要对这些数据绘制半圆饼图；先选中这些数据</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/245e8bcad1c8a786a48d52616509c93d71cf50fe.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>在插入一个饼图</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/eab9044c510fd9f9d6a84d06272dd42a2934a4e6.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>这里是自动生成的一个饼图</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/61183b2dd42a283432192e6459b5c9ea14cebfe6.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>点击两次半圆的【总计】部分，选中它，然后右键单击它，选择填充【白色】</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/3a86813df8dcd100cc3be04e708b4710b8122ffe.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>好了，半圆饼图的雏形已经有了，我们接着要删除【总计】这个标签了。</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/bbe0d311728b4710c388e5a3c1cec3fdfd0323fe.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>右键单击饼图，然后我们在这里可以看到有一个【设置图表区域格式】</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/1a94b36eddc451da0a7c1484b4fd5266d1163293.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>如何旋转饼图：来到这里，设置系列选项，我们设置第一扇区起始角度为270</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/4651a712c8fcc3cebe67d15c9045d688d53f20fe.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>看一下这一步我们的效果喽</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/b853d6fcc3cec3fd8299bf1ad488d43f869427fe.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>如果你给它添加上标签会更好看</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/b74124f33a87e95024a8eb0312385343faf2b4e6.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>接着可以再设置一下数据标签格式，也是在右键菜单中</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/d7c9ca3f8794a4c2f984ff440cf41bd5ac6e39fe.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>在打开的选项中，我们设置为【值】而不是【百分比】，因为百分比是错误的百分比呀！</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/c71d0e385343fbf2a493be4cb27eca8064388fe6.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<ul>
-<li>最终的效果就是它了。</li>
-</ul>
-<img src="/2015/01/23/Excel2013：[46]如何绘制半圆饼图/5202e5f2b2119313a8fce7df67380cd790238de6.jpg" alt="Excel2013：[46]如何绘制半圆饼图" title="Excel2013：[46]如何绘制半圆饼图">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -869,19 +841,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -973,45 +945,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

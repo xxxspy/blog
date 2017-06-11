@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,104 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/15/Python教程：[37]处理网页源码中的 x22字符/">
+                Python教程：[37]处理网页源码中的 x22字符
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>python采集网页，不一样的网页有不一样的编码方式，我今天采集的一个网页处理起来有点麻烦，不仅仅是编码的问题，我尝试了各种编码最后还是没有解决这个问题，我们来看看下面，源码里有大量的\x22，其实你一看就知道是双引号，但是我print出来，按照常理双引号应该显示正常，为什么这里不行了呢？如果你知道原因，可以指导我一下，我说说我的解决方法吧。</p>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/">
+                spss多重线性回归逐步回归法操作和结果解释方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss经常用到的一个回归方法是stepwise，也就是逐步回归，它指的是每次只纳入或者移除一个变量进入模型， 这个方法虽然好用，但是最后可能出现几个模型都比较合适，你就要比较这几个模型的优劣，这是个麻烦事，这里就给大家简单的分析分析。<br>方法/步骤</p>
+<ul>
+<li>打开spss以后，打开数据，这些都准备好了以后，我们开始拟合方程，在菜单栏上执行：analyze—regression—linear，打开回归拟合对话框</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/728da9773912b31b8e3533ca8618367adbb4e1fc.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li>在这里，我们将因变量放大dependent栏，将自变量都放到independent栏</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/21a4462309f79052ea3eb9dd0cf3d7ca7bcbd534.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li>将method设置为stepwise，这就是逐步回归法</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/359b033b5bb5c9ea99d2fd00d539b6003af3b334.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li>点击ok按钮，开始输出拟合结果</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/5243fbf2b21193132a1a015365380cd790238dfc.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li>我们看到的第一个表格是变量进入和移除的情况，因为这个模型拟合的比较好，所以我们看变量只有进入没有移除，但大部分的时候变量是有进有出的，在移除的变量这一栏也应该有变量的</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/728da9773912b31b8e2c33ca8618367adbb4e195.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li>第二个表格是模型的概况，我们看到下图中标出来的四个参数，分别是负相关系数、决定系数、校正决定系数、随机误差的估计值，这些值（除了随机误差的估计值）都是越大表明模型的效果越好，根据比较，第四个模型应该是最好的</li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/d4628535e5dde7112e8bbd15a7efce1b9c1661fc.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li><p>方差分析表，四个模型都给出了方差分析的结果，这个表格可以检验是否所有偏回归系数全为0，sig值小于0.05可以证明模型的偏回归系数至少有一个不为零</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/63d0f703918fa0ec6c879aee269759ee3c6ddb95.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<ul>
+<li><p>参数的检验，这个表格给出了对偏回归系数和标准偏回归系数的检验，偏回归系数用于不同模型的比较，标准偏回归系数用于同一个模型的不同系数的检验，其值越大表明对因变量的影响越大。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/15/spss多重线性回归逐步回归法操作和结果解释方法/241f95cad1c8a7862673b4ed6709c93d71cf50fc.jpg" alt="spss多重线性回归逐步回归法操作和结果解释方法" title="spss多重线性回归逐步回归法操作和结果解释方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -671,213 +770,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/01/Mysql教程：[2]access转mysql（A）/">
-                Mysql教程：[2]access转mysql（A）
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天我们要使用一个软件来将access的mdb文件转成mysql文件，这个软件的名称就叫做access2mysql,今天是该教程的第一篇，主要将如何注册该软件，你看下面有第二篇的链接，讲具体如何转的。教程非常简单有效。如果你已经安装了该软件，可以直接看这篇教程，教你如何转的。<a href="http://jingyan.baidu.com/article/ff42efa964dab7c19f220210.html" target="_blank" rel="external">http://jingyan.baidu.com/article/ff42efa964dab7c19f220210.html</a></p>
-<ul>
-<li>在我的网盘里下载access2mysql，下载下来以后，打开压缩包，双击这个文件即可下载地址：<a href="http://pan.baidu.com/s/1sjnmNgx" target="_blank" rel="external">http://pan.baidu.com/s/1sjnmNgx</a></li>
-</ul>
-<img src="/2016/08/01/Mysql教程：[2]access转mysql（A）/834344afa40f4bfb3861a41e014f78f0f6361883.jpg" alt="Mysql教程：[2]access转mysql（A）" title="Mysql教程：[2]access转mysql（A）">
-<ul>
-<li>这里可以设置安装的位置，我们使用系统默认的就好了，一直点击下一步就安装好了</li>
-</ul>
-<img src="/2016/08/01/Mysql教程：[2]access转mysql（A）/95afee1f3a292df58d1f935fbe315c6035a87358.jpg" alt="Mysql教程：[2]access转mysql（A）" title="Mysql教程：[2]access转mysql（A）">
-<ul>
-<li>还没注册呢，接着回到桌面，你会看到这里多了一个快捷方式，打开它</li>
-</ul>
-<img src="/2016/08/01/Mysql教程：[2]access转mysql（A）/2cb4fefe9925bc312c813ed25cdf8db1ca137058.jpg" alt="Mysql教程：[2]access转mysql（A）" title="Mysql教程：[2]access转mysql（A）">
-<ul>
-<li>选择注册，如图所示</li>
-</ul>
-<img src="/2016/08/01/Mysql教程：[2]access转mysql（A）/b853d6fcc3cec3fd5c19993fd488d43f87942711.jpg" alt="Mysql教程：[2]access转mysql（A）" title="Mysql教程：[2]access转mysql（A）">
-<ul>
-<li>注册界面，按照我填的信息进行填，否则就会注册失败：Name: Jan LadendorfCompany: 这里留空不填E-Mail:peter666@kfz.zeichen.wsSN：A52GFRQB&gt;AXMGGC7617RUB1AO47Z61B0XPYK214T8LIM</li>
-</ul>
-<img src="/2016/08/01/Mysql教程：[2]access转mysql（A）/a75fb6d3fd1f41341deb3a34271f95cad0c85e58.jpg" alt="Mysql教程：[2]access转mysql（A）" title="Mysql教程：[2]access转mysql（A）">
-<ul>
-<li>最后你会看到注册成功的提示啦。</li>
-</ul>
-<img src="/2016/08/01/Mysql教程：[2]access转mysql（A）/9f1011b30f2442a76429c3efd343ad4bd1130211.jpg" alt="Mysql教程：[2]access转mysql（A）" title="Mysql教程：[2]access转mysql（A）">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/01/Python教程：[72]classmethod装饰器/">
-                Python教程：[72]classmethod装饰器
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>classmethod装饰器用于装饰类方法，怎么说呢？通常我们想要调用类中的某个方法时，需要先将其实例化，然后利用实例调用该方法，但是如果我们想要用类（而不是实例）直接调用方法，那就需要使用classmethod装饰器了，下面看看具体的解释：</p>
-<ul>
-<li>现在我们声明一个类：foo，其中包含两个方法，f1为实例方法，调用时需要先将类实例化；f2为类函数，调用前不需要实例化，注意f2的参数为cls，也就是类本身，而不是self。具体看下面的例子</li>
-</ul>
-<img src="/2016/08/01/Python教程：[72]classmethod装饰器/1899a23eb13533fa623009eaaad3fd1f40345b35.jpg" alt="Python教程：[72]classmethod装饰器" title="Python教程：[72]classmethod装饰器">
-<ul>
-<li>加入我们想要调用f1，f1为实例函数，所以需要先将其实例化，foo_sl是foo的一个实例</li>
-</ul>
-<img src="/2016/08/01/Python教程：[72]classmethod装饰器/a75fb6d3fd1f413472b19fba271f95cad0c85e35.jpg" alt="Python教程：[72]classmethod装饰器" title="Python教程：[72]classmethod装饰器">
-<ul>
-<li>调用f1：</li>
-</ul>
-<img src="/2016/08/01/Python教程：[72]classmethod装饰器/310f3b1f95cad1c84d3d66e37d3e6709c83d5135.jpg" alt="Python教程：[72]classmethod装饰器" title="Python教程：[72]classmethod装饰器">
-<ul>
-<li>假如我们使用类直接调用f1，就会提示错误</li>
-</ul>
-<img src="/2016/08/01/Python教程：[72]classmethod装饰器/c87c6ecf3bc79f3d0a677ef4b8a1cd11738b2935.jpg" alt="Python教程：[72]classmethod装饰器" title="Python教程：[72]classmethod装饰器">
-<ul>
-<li>而类方法就可以直接调用</li>
-</ul>
-<img src="/2016/08/01/Python教程：[72]classmethod装饰器/a75fb6d3fd1f413472d29fba271f95cad3c85eca.jpg" alt="Python教程：[72]classmethod装饰器" title="Python教程：[72]classmethod装饰器">
-<ul>
-<li>当然，实例也可以直接调用类方法：</li>
-</ul>
-<img src="/2016/08/01/Python教程：[72]classmethod装饰器/a6c7d7177f3e670927e5df3b39c79f3dfadc55ca.jpg" alt="Python教程：[72]classmethod装饰器" title="Python教程：[72]classmethod装饰器">
-<ul>
-<li><p>以下为本经验用到的所有的代码：</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>class foo(object):</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>def f1(self):</p>
-</li>
-<li><p>print ‘normal’</p>
-</li>
-<li><p>@classmethod</p>
-</li>
-<li><p>def f2(cls):</p>
-</li>
-<li><p>print ‘class’</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>foo_sl=foo()</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>foo_sl.f1()</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>normal</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>foo_sl.f2()</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>class</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>foo.f1()</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>Traceback (most recent call last):</p>
-</li>
-<li><p>File “<pyshell#42>“, line 1, in <module></module></pyshell#42></p>
-</li>
-<li><p>foo.f1()</p>
-</li>
-<li><p>TypeError: unbound method f1() must be called with foo instance as first argument (got nothing instead)</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>foo.f2()</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>class</p>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -920,19 +812,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -1024,45 +916,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

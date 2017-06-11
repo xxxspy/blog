@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,122 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/01/spss多重共线性的诊断方法/">
+                spss多重共线性的诊断方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss诊断多重共线性是在多重线性回归的时候容易出现的一个问题，他指的是多个变量可能高相关，造成了模型方程的不稳定，一般是在方程求出来以后，发现方程的问题，然后进行的方程的诊断，下面是诊断多重共线性的步骤:<br>方法/步骤</p>
+<ul>
+<li>多重共线性的诊断是在回归中进行的，所以先打开回归的对话框：analyse–regression–linear，打开线性回归对话框</li>
+</ul>
+<img src="/2016/07/01/spss多重共线性的诊断方法/d1160924ab18972b3fb4c029e6cd7b899f510a43.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<ul>
+<li>将自变量因变量都放到各自的位置，然后点击statistic</li>
+</ul>
+<img src="/2016/07/01/spss多重共线性的诊断方法/d000baa1cd11728b96f14cc1c8fcc3cec2fd2c71.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<ul>
+<li>在该对话框中，有一个多重共线性诊断的选项，勾选他，如图所示，点击continue按钮，返回主对话框</li>
+</ul>
+<img src="/2016/07/01/spss多重共线性的诊断方法/63d0f703918fa0ec326ca4ee269759ee3c6ddbae.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<ul>
+<li>点击ok按钮，开始输出诊断结果</li>
+</ul>
+<img src="/2016/07/01/spss多重共线性的诊断方法/b812c8fcc3cec3fd2ae26796d688d43f86942771.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<ul>
+<li>我们先来看这两个参数，特征根（Eigenvalue）：多个维度特征根约为0证明存在多重共线性；条件指数（Condition Index）：大于10时提示我们可能存在多重共线性</li>
+</ul>
+<img src="/2016/07/01/spss多重共线性的诊断方法/279759ee3d6d55fbf26db6c56d224f4a21a4ddae.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<ul>
+<li><p>接着来看相关系数矩阵，找到数值接近1的相关，这也提示出可能存在多重共线性。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/07/01/spss多重共线性的诊断方法/7c1ed21b0ef41bd54d8f281751da81cb38db3d71.jpg" alt="spss多重共线性的诊断方法" title="spss多重共线性的诊断方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/">
+                Excel2013：[49]日期坐标轴删除周六日
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如果坐标轴是日期类型的数据，那么Excel会自动的填充缺少的日期，这样的图表看起来就不是连续的，在某些日期中就会出现空白，我们看一下下面的例子就知道了。</p>
+<ul>
+<li>我们来看一下，由于商店在周六日休息，所以在周六日就没有营业额，我们使用这样的数据来插入一个直方图</li>
+</ul>
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/faacb564034f78f0cdaa33ae7b310a55b2191c8e.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
+<ul>
+<li>在菜单栏选择【插入】【直方图】</li>
+</ul>
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/aa251d4f78f0f736945fe55c0855b319eac4138e.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
+<ul>
+<li>我们看一下插入的数据，系统自动填充了没有的日期，造成这种难看的直方图</li>
+</ul>
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/020e66f0f736afc345ad9638b119ebc4b645128e.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
+<ul>
+<li>我们下面来改善这种情况，先选中横坐标</li>
+</ul>
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/3b6833f5e0fe992561e0c00d36a85edf8cb17144.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
+<ul>
+<li>在坐标轴上右键单击选择【设置坐标轴格式】</li>
+</ul>
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/2cb4fefe9925bc3182b1a8c55cdf8db1ca137044.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
+<ul>
+<li>在设置窗口，我们看到了，默认的选项是【根据数据自动选择】，我们将其更改为【文本坐标轴】，这样它就不会自动填充没有的日期了</li>
+</ul>
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/9864a2315c6034a8be0e11dcc913495408237644.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
+<ul>
+<li>这是更改后的直方图，空白数据已经被删掉了。</li>
+</ul>
+<img src="/2016/07/01/Excel2013：[49]日期坐标轴删除周六日/b258f5c4b74543a9c0ba53911c178a82b801148e.jpg" alt="Excel2013：[49]日期坐标轴删除周六日" title="Excel2013：[49]日期坐标轴删除周六日">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -655,137 +772,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/06/15/word转pdf教程/">
-                word转pdf教程
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年06月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>word转换pdf格式有各种好处，首先有的电脑上不支持word文档，或者只支持一部分word格式，比如只支持doc而不支持docx，转换成pdf以后，就可以使用pdf 软件打开，而不必使用word了，在打印的时候，pdf格式不会发生变化，但是word经常因为电脑的不同而变化，所以pdf格式更加的稳定，下面介绍了两种word转换pdf的方法，你可以尝试一下奥。<br>方法一：使用word转换</p>
-<ul>
-<li>打开你要转换格式的word文档，编辑好了以后，我们就要开始转换了，点击左上角的这个开始按钮</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/f2deb48f8c5494ee02b798b52df5e0fe98257e81.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>在打开的列表中选择：另存为–PDF 。有的人在另存为的次级列表中没有pdf选项，怎么办，下面的第五步告诉你怎么办。</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/cb8065380cd791235f4003d8ad345982b3b780fe.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>弹出了另存诶对话框，选择好文件存放的位置，然后设置文件名，记得文件名的后缀是pdf，然后点击发布即可。</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/a686c9177f3e6709d294d2533bc79f3df9dc5581.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>等待一分钟以后，你会看到自动打开一个pdf文件，这就是你转化而成的。</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/4610b912c8fcc3ceeb545e9f9245d688d53f2081.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>假如你的word没有另存为pdf插件，你需要手动安装（许多word07是没有的，不仅仅你自己没有奥）。去百度经验里搜索：word没有“另存为PDF或XPS”选项怎么办 。根据这个教程你会找到解决方法。记得投票支持作者呀</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/d50735fae6cd7b89dcf8ad2f0f2442a7d8330e81.jpg" alt="word转pdf教程" title="word转pdf教程">
-<p>方法二：使用第三方工具work转pdf</p>
-<ul>
-<li><p>第三方工具的好处是不用安装插件，而且很多还可以实现批量的Word转pdf，还能pdf与Word互转。</p>
-</li>
-<li><p>我们随便找一个工具来师范一下如何用第三方工具Word转pdf，点击【选择文件】</p>
-</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/bd3eb13533fa828b9067da52f51f4134970a5a3e.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>在弹出的对话框中选择一个文件，你一次只能选择一个文件，如果想要多个文件，需要返回步骤2，再添加一个。或者你可以使用客户端，如果你要转的文件很多，客户端版看起来很好用（右）。</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/b03533fa828ba61e9faa8f9e4934970a304e593e.jpg" alt="word转pdf教程" title="word转pdf教程">
-<img src="/2016/06/15/word转pdf教程/8b13632762d0f7032288d26d00fa513d2697c54d.jpg" alt="word转pdf教程" title="word转pdf教程">
-<img src="/2016/06/15/word转pdf教程/d0c8a786c9177f3e587fbcbc78cf3bc79f3d5633.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>最后点击开始转换，等待一秒钟，你就可以下载了。</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/a686c9177f3e67098a44024e33c79f3df8dc553e.jpg" alt="word转pdf教程" title="word转pdf教程">
-<ul>
-<li>下载</li>
-</ul>
-<img src="/2016/06/15/word转pdf教程/94cad1c8a786c9173e471588c13d70cf3bc7573e.jpg" alt="word转pdf教程" title="word转pdf教程">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/06/11/Python统计分析：[5]调用R/">
-                Python统计分析：[5]调用R
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年06月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>Python做统计还不太成熟，很多需要的统计方法并没有现成的Python模块或者方法，而笔者也不是专门的统计出身，所以并不想自己去开发一些算法，所以我选择调用R来实现部分统计功能，毕竟R包含的统计包更多。今天示范一下如何在Python中调用R来进行一些简单的统计。</p>
-<ul>
-<li>先引入相关模块，rpy2就是Python中的r接口</li>
-</ul>
-<img src="/2016/06/11/Python统计分析：[5]调用R/78701455b319ebc4c68329e18126cffc1f17168b.jpg" alt="Python统计分析：[5]调用R" title="Python统计分析：[5]调用R">
-<ul>
-<li>假如我们想要用R中的一些常量，比如pi，可以这样调用<br>输出结果为：</li>
-</ul>
-<img src="/2016/06/11/Python统计分析：[5]调用R/dc854fda81cb39dbf98d382ed3160924ab18303d.jpg" alt="Python统计分析：[5]调用R" title="Python统计分析：[5]调用R">
-<img src="/2016/06/11/Python统计分析：[5]调用R/b6045da98226cffc6b67e0caba014a90f603ea3e.jpg" alt="Python统计分析：[5]调用R" title="Python统计分析：[5]调用R">
-<ul>
-<li>我们还可以将pandas的DataFrame对象转换为R中的data.frame对象或者matrix，下面先读取一个数据，生成DataFrame</li>
-</ul>
-<img src="/2016/06/11/Python统计分析：[5]调用R/42e89c26cffc1e17fc44d3494990f603728de994.jpg" alt="Python统计分析：[5]调用R" title="Python统计分析：[5]调用R">
-<ul>
-<li>生成r中的dataframe<br>输出结果为：</li>
-</ul>
-<img src="/2016/06/11/Python统计分析：[5]调用R/834344afa40f4bfb9c9dc12c004f78f0f736183d.jpg" alt="Python统计分析：[5]调用R" title="Python统计分析：[5]调用R">
-<img src="/2016/06/11/Python统计分析：[5]调用R/8b527d2762d0f7033349caa40bfa513d2797c594.jpg" alt="Python统计分析：[5]调用R" title="Python统计分析：[5]调用R">
-<ul>
-<li>转换为矩阵：</li>
-</ul>
-<img src="/2016/06/11/Python统计分析：[5]调用R/2f3295d4b31c8701294ded9e247f9e2f0608ff94.jpg" alt="Python统计分析：[5]调用R" title="Python统计分析：[5]调用R">
-<ul>
-<li>当然，我们还可以调用R中的方法来进行绘图，比如绘制一个散点图：<br>你会看到弹出一个窗口，展示了绘制好的散点图：</li>
-</ul>
-<img src="/2016/06/11/Python统计分析：[5]调用R/a54e55fbfbedab646a3f12b8f436afc379311e3d.jpg" alt="Python统计分析：[5]调用R" title="Python统计分析：[5]调用R">
-<img src="/2016/06/11/Python统计分析：[5]调用R/b258f5c4b74543a9f156a5b41d178a82b901143d.jpg" alt="Python统计分析：[5]调用R" title="Python统计分析：[5]调用R">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -828,19 +814,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -932,45 +918,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

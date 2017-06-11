@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,114 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/10/03/SPSS实例：[36]分层卡方检验/">
+                SPSS实例：[36]分层卡方检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>现在我手头有一个研究数据，数据描述的是不同的年龄组儿童、不同的阅读顺序对是否受到干扰的影响。我们来看一下数据你就懂了。有两个年龄组分别为0和1代表；图书顺序也是两个分别为1和2，是否受到了干扰我们用0和1表示。我们想知道在不同的年龄组下图书顺序是否影响干扰。这时候用到了分层卡方检验，以年龄组作为分层变量。</p>
+<ul>
+<li>首先打开交叉表分析对话框</li>
+</ul>
+<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/7d98931001e93901c59ec08979ec54e737d196ae.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
+<ul>
+<li>将年龄组放入到分层变量框</li>
+</ul>
+<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/55a628d12f2eb93870f13745d7628535e4dd6fae.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
+<ul>
+<li>打开【statistics】对话框，勾选卡方和CMH统计量，点击继续</li>
+</ul>
+<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/d4239b35e5dde711614e0e41a5efce1b9c1661ae.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
+<ul>
+<li>我们看统计结果，首先是层间一致性检验。sig值显示差异不显著，说明不同年龄组中，图书顺序与干扰的关系是相同的。</li>
+</ul>
+<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/faacb564034f78f0a967d7447b310a55b2191cdd.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
+<ul>
+<li>接着看分层卡方检验结果，即考虑到年龄因素后，图书顺序与干扰的影响。这里显示图书顺序与干扰是无关的。隐私sig值均大于.05</li>
+</ul>
+<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/78701455b319ebc4d3143b2e8026cffc1f1716dd.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
+<ul>
+<li>最后要看的是优势比，主要看Estimate对应的值.861，关于优势比的概念，我们可以看我之前的一篇文章<a href="http://jingyan.baidu.com/article/bea41d437dbcb7b4c51be6be.html" target="_blank" rel="external">http://jingyan.baidu.com/article/bea41d437dbcb7b4c51be6be.html</a></li>
+</ul>
+<img src="/2015/10/03/SPSS实例：[36]分层卡方检验/cdfe7281800a19d8a89cc9b231fa828ba71e46ae.jpg" alt="SPSS实例：[36]分层卡方检验" title="SPSS实例：[36]分层卡方检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/10/03/SPSS python教程：[5]SpssClient简介/">
+                SPSS python教程：[5]SpssClient简介
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>SpssClient是用python实现spss操作的必定要引入的一个模块，我们今天就来看一下该模块下有哪些子模块，然后简单说一下我们按照什么顺序来写这一系列教程，重点讲什么，看看你自己是否需要看这篇教程。</p>
+<ul>
+<li>先来看看SpssClient模块下有哪些类我们可以在python中使用。主要的大类有五个：DataDocList，SyntaxDocsList，OutputDocsList，SpssServerConfList，SpssScriptContext，我们下面分别介绍这五个类别</li>
+</ul>
+<img src="/2015/10/03/SPSS%20python教程：[5]SpssClient简介/4651a712c8fcc3ce50afebab9045d688d53f20ff.jpg" alt="SPSS python教程：[5]SpssClient简介" title="SPSS python教程：[5]SpssClient简介">
+<ul>
+<li>DataDocList，就是spss的数据文件列表。用它来读取、修改、操作数据，数据文件的后缀名是sav</li>
+</ul>
+<img src="/2015/10/03/SPSS%20python教程：[5]SpssClient简介/509b9fcb39dbb6fdf1a3c8be0b24ab18962b376a.jpg" alt="SPSS python教程：[5]SpssClient简介" title="SPSS python教程：[5]SpssClient简介">
+<ul>
+<li>SyntaxDocsList，就是spss的syntax文件列表，里面都是syntax代码，或者可能掺杂有python代码，它用于读取、修改、操作syntax代码，syntax文件的后缀名是sps</li>
+</ul>
+<img src="/2015/10/03/SPSS%20python教程：[5]SpssClient简介/0ef2112442a7d9337976c9ebaf4bd11372f00108.jpg" alt="SPSS python教程：[5]SpssClient简介" title="SPSS python教程：[5]SpssClient简介">
+<ul>
+<li>OutputDocsList，就是spss的统计结果输出文件列表，里面存放着spss的统计结果，我们可以在python中使用该类来修改、操作结果数据，结果输出文件的后缀名比较熟悉，就是spv</li>
+</ul>
+<img src="/2015/10/03/SPSS%20python教程：[5]SpssClient简介/d0526df082025aaf1cec5353f9edab64024f1a08.jpg" alt="SPSS python教程：[5]SpssClient简介" title="SPSS python教程：[5]SpssClient简介">
+<ul>
+<li><p>SpssServerConfList，该类用于spssserver，由于在我的工作中并没有用到过spss服务器，所以我的教程里不包括spssserver的相关内容</p>
+</li>
+<li><p>SpssScriptContext，该类用于返回脚本文件的环境，现在还不涉及，以后用可能用到，但不是现在。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -971,107 +1080,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/23/python高级教程：[3]yield生成器/">
-                python高级教程：[3]yield生成器
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>基于yield这个指令，Python可以挂起一个程序并返回中间结果，被挂起的程序会保持自己的执行环境，在必要的时候再重启它。</p>
-<ul>
-<li>先看看yield的简单用法：yield_example表示一个2的n次方的无穷数列，我们想要它输出前10项，就用[ye.next() for a in range(10)]</li>
-</ul>
-<img src="/2015/09/23/python高级教程：[3]yield生成器/9864a2315c6034a8fd2d583fcd13495408237606.jpg" alt="python高级教程：[3]yield生成器" title="python高级教程：[3]yield生成器">
-<ul>
-<li><p>一个生成器的next()方法可以让程序运行，并输出yield的值，然后再次被挂起，直到下一个next被调用。这句I是一个生成器。我们经常使用生成器来表示一个无穷数列，下面看一个复杂的例子。</p>
-</li>
-<li><p>用yield写一个分组数列，分组数列的定义是：</p>
-</li>
-</ul>
-<img src="/2015/09/23/python高级教程：[3]yield生成器/034965f40ad162d9db928fa217dfa9ec8b13cdd5.jpg" alt="python高级教程：[3]yield生成器" title="python高级教程：[3]yield生成器">
-<img src="/2015/09/23/python高级教程：[3]yield生成器/43e6c733c895d1435df9069d75f082025baf0746.jpg" alt="python高级教程：[3]yield生成器" title="python高级教程：[3]yield生成器">
-<ul>
-<li>实现分组数列的代码：</li>
-</ul>
-<img src="/2015/09/23/python高级教程：[3]yield生成器/570f8c58d109b3de377306d6cabf6c81810a4c05.jpg" alt="python高级教程：[3]yield生成器" title="python高级教程：[3]yield生成器">
-<ul>
-<li>为什么使用字典作为sublist函数的参数，这是因为在传参的时候，如果参数是字典，那么传递的是一个指针，而不是字典的数据，因此当sublist改变了字典的数据的时候，位于fenqunlist函数中的kwargs字典的数据也会发生改变，这是我所希望的。</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/23/amos21.0教程：[7]如何启动amos/">
-                amos21.0教程：[7]如何启动amos
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>amos使用最多的就是graphic界面了，也就是绘图界面，我们知道amos主要是用鼠标绘制模型，所以我们的amos接下来的很多篇教程都是教你如何绘制模型的，今天我们先来看看如何启动amos的graphic界面。有三种方法：</p>
-<ul>
-<li>最简单的方法是在桌面上的快捷方式启动，但是这个快捷方式不是自动安装的，需要你自己动手建立快捷方式</li>
-</ul>
-<img src="/2015/09/23/amos21.0教程：[7]如何启动amos/b3f6cea20cf431ad2db01bc14a36acaf2fdd98ad.jpg" alt="amos21.0教程：[7]如何启动amos" title="amos21.0教程：[7]如何启动amos">
-<ul>
-<li>如果你没有建立快捷方式，你可以在开始菜单中启动amos，如图所示，在开始菜单中找到【所有程序】–IBM spss statistics–amos 21–amos graphics</li>
-</ul>
-<img src="/2015/09/23/amos21.0教程：[7]如何启动amos/4a77b2af2edda3cc9086e0d800e93901203f92ad.jpg" alt="amos21.0教程：[7]如何启动amos" title="amos21.0教程：[7]如何启动amos">
-<ul>
-<li>或者你可以从spss中启动amos，打开spss后，在analyse–IBM spss amos，这样也可以启动amos，但是前提条件是spss中存有数据，如图没有数据是无法启动的。</li>
-</ul>
-<img src="/2015/09/23/amos21.0教程：[7]如何启动amos/4d4970061d950a7b9703163c0bd162d9f3d3c9d1.jpg" alt="amos21.0教程：[7]如何启动amos" title="amos21.0教程：[7]如何启动amos">
-<ul>
-<li>在spss中还有一个菜单有IBM amos的选项，但是这个选项是一个网页链接，不是启动amos的，大家不要混淆。</li>
-</ul>
-<img src="/2015/09/23/amos21.0教程：[7]如何启动amos/2f9cbdcc7cd98d10efb654c9203fb80e7aec90ad.jpg" alt="amos21.0教程：[7]如何启动amos" title="amos21.0教程：[7]如何启动amos">
-<ul>
-<li>我们看到这就是我启动的amos绘图界面了，我们就是要在这里绘制模型</li>
-</ul>
-<img src="/2015/09/23/amos21.0教程：[7]如何启动amos/0b907cd9f2d3572c8ad4c4248b13632763d0c3d1.jpg" alt="amos21.0教程：[7]如何启动amos" title="amos21.0教程：[7]如何启动amos">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1114,19 +1122,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -1218,45 +1226,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

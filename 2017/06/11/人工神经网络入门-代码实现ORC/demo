@@ -1,0 +1,246 @@
+<html>
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.0.11/synaptic.min.js"></script>
+</head>
+<body>
+    <style>
+        body {
+          margin: 0;
+          font-family: Helvetica;
+          font-weight: 100;
+        }
+        svg {
+          shape-rendering: crispEdges;
+          cursor: pointer;
+        }
+        .controls {
+          position: absolute;
+          left: 410px;
+          top: 10px;
+          font-size: 20px;
+        }
+    </style>
+    <div class="controls">
+        在表格里写入一个一个数字(0-9)<br />
+        <button class="clear"> 清空 </button>
+        <button class="recognize">识别</button>
+        <div>预测结果： <span class="prediction"> ?? </span> </div>
+        信度：<div class="confidence"></div>
+        <div class="confidences">
+        </div>
+    </div>
+    <!-- draw a grid -->
+    <script type="text/javascript">
+    var gL=50, gridN=8, boxLength=gL * gridN
+    var svg=d3.select('body').append('svg').attr("width",boxLength)
+        .attr("height",boxLength)
+    var data=d3.range(gridN*gridN).map(function(d){
+        return {i: d%gridN, j:Math.floor(d/gridN), id: d, active:0}
+    })
+
+    var grids=svg.append('g').attr('class', 'grids')
+        .selectAll('rect').data(data).enter().append('rect')
+        .attr("width", gL).attr("height", gL)
+        .attr('x', function(d){return gL*d.i})
+        .attr('y', function(d){return gL*d.j})
+        .style('stroke', 'rgba(255, 255, 255, 0.2)')
+
+    function updateGrid(g){
+        g.style('fill', function(d){
+            return d.active ? 'rgba(255,255,255,1)':'black'
+        })
+
+    }
+    var conf = d3.select('.confidences').selectAll('div')
+        .data(d3.range(10)).enter()
+        .append('div').text(function(d){return d + ': '})
+
+    var bar=conf.append('div').attr('class', 'bg')
+        .style("width",'60px')
+        .style("height", '20px')
+        .style("display", 'inline-block')
+
+    bar.append('div').attr('class', 'fg')
+        .style("width", '20%')
+        .style("height", '100%')
+        .style('background-color', 'rgba(0, 0, 0, 0.8)')
+
+    svg.on('mousedown', function(){
+        grids.on('mousemove',function(d){
+            d.active=1
+            updateGrid(d3.select(this))
+        })
+    }).on('mouseup',function(){
+        grids.on('mousemove',null)
+    })
+
+    function updateState(){
+        var input = data.map(function(d){return d.active})
+        var output = trainer.network.activate(input)
+        var max = -1, maxId = -1
+        output.forEach(function(d, i) { if (d > max) max = d, maxId = i })
+        conf.data(output).select('.fg')
+            .style('width', function(d) { return d * 100 + '%' })
+        d3.select('.prediction').text(maxId)
+        d3.select('.confidence').text(max)
+
+    }
+    d3.select('button.clear').on('click', resetBlocks)
+    d3.select('button.recognize').on('click', updateState)
+
+    function resetBlocks() {
+      grids.each(function(d) { d.active = 0 }).call(updateGrid)
+    }
+
+    </script>
+
+
+
+
+
+
+
+    <!-- network graph -->
+    <style type="text/css">
+        text {
+          pointer-events: none;
+        }
+
+        .node:hover {
+          stroke: #999;
+          stroke-opacity: .6;
+          stroke-width: 4px;
+        }
+
+        .link {
+          stroke: #999;
+          stroke-opacity: .6;
+        }
+    </style>
+    <script type="text/javascript">
+
+    var width = 960,
+        height = 1400,
+        nodeSize = 10;
+
+    var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+
+    window.show_network=function(network) {
+        
+
+        // get network size
+        var netsize = {}
+        allLayers=[network.layers.input]
+        network.layers.hidden.forEach(function(l){
+            allLayers.push(l)
+        })
+        allLayers.push(network.layers.output)
+        console.log(allLayers)
+
+        // calc distances between nodes
+        largestLayerSize=0
+        allLayers.forEach(function(d){if(d.size>largestLayerSize){
+            largestLayerSize=d.size
+        }})
+
+        var xdist = width / allLayers.length,
+            ydist = height / largestLayerSize;
+
+        // create node locations
+        layerCount=0
+        var links = [];
+        allLayers.map(function(layer) {
+            layerCount +=1
+            layer.layerCount=layerCount
+            neurons=layer.neurons()
+            nNeurons=neurons.length
+            maxYDistance=nNeurons * ydist
+            startY=(height-maxYDistance)/2
+            neuCount=0
+            neurons.forEach(function(neuron){
+                neuCount +=1
+                neuron.x=(layerCount - 0.5) * xdist
+                neuron.y=(neuCount - 0.5 ) * ydist + startY
+                connections=neuron.connections.projected
+                keys=Object.keys(connections)
+                keys.forEach(function(id){
+                    links.push(connections[id])
+                })
+            })
+        });
+
+        // draw links
+        var link = svg.selectAll(".link")
+            .data(links)
+          .enter().append("line")
+            .attr("class", "link")
+            .attr("x1", function(d) { return d.from.x; })
+            .attr("y1", function(d) { return d.from.y; })
+            .attr("x2", function(d) { return d.to.x; })
+            .attr("y2", function(d) { return d.to.y; })
+            .style("stroke-width", function(d) { return d.weight * 10; });
+
+        // draw nodes
+        var node = svg.selectAll(".node")
+            .data(network.neurons())
+          .enter().append("g")
+            .attr("transform", function(d) {
+                return "translate(" + d.neuron.x + "," + d.neuron.y + ")"; }
+            );
+
+        var circle = node.append("circle")
+            .attr("class", "node")
+            .attr("r", nodeSize)
+            .style("fill", function(d) { return color(d.layer.layerCount); });
+
+
+        node.append("text")
+            .attr("dx", "-.35em")
+            .attr("dy", ".35em")
+            .text(function(d) { return d.neuron.ID; });
+    }
+    </script>
+
+
+
+
+
+    <!-- neural network codes -->
+    <script type="text/javascript">
+        var myNetwork = new synaptic.Architect.Perceptron(64, 25, 10)
+        var trainer = new synaptic.Trainer(myNetwork)
+
+        function train(){
+            d3.text('http://bl.ocks.org/vicapow/raw/d5f5afc1e182ee50c4a2/8563e14dad023daa655f61b65498e914af022331/training-data.csv', function(err, data) {
+              if (err) {
+                data=trainData
+              }
+              var ts, te, idx
+              data = d3.csvParseRows(data, function(row) { return row.map(Number) })
+                .map(function(d) {
+                // Expected output.
+                var t = d3.range(10).map(function() { return 0 })
+                t[d[0]] = 1
+                return { input: d.slice(1), output: t }
+              })
+                ts=Date.now()
+                trainer.train(data)
+                te=Date.now()
+                console.log('Time Spend: '+ (te-ts))
+            })
+        }
+
+        train()
+        window.show_network(myNetwork)
+
+    </script>
+
+
+</body>
+</html>

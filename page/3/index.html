@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,124 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/03/Python统计分析：[2]相关样本T检验/">
+                Python统计分析：[2]相关样本T检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇文章介绍了独立样本T检验，现在接着使用Python进行相关样本的T检验，主要用到了scipy.stats.ttest_rel，我们先来看看其基本的用法：</p>
+<ul>
+<li>引入相关模块，这次我们使用stats的</li>
+</ul>
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/8640bf8b87d6277f111a614c2b381f30e924fc7f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<ul>
+<li>产生两列随机变量，用到了stats。norm.rvs，参数loc表示平均数，scale表示标准差，size是样本量<br>这是产生的两个变量的数据的一部分</li>
+</ul>
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/1b0d4f0fd9f9d72aa8094369d72a2834349bbb12.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/99636c0e0cf3d7cac1fe6c02f11fbe096b63a97f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<ul>
+<li>ttest_rel的用法：输出t和p值<br>从p值可以看出，这两列数据是没有差异的。</li>
+</ul>
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/29790130e924b8993c342a4c6d061d950a7bf67f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/734f12f3d7ca7bcbb173945bbd096b63f624a87f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<ul>
+<li>当然，ttest_rel还可以接受pandas.DataFrame数据，先从excel中读取数据<br>我们可以看一下数据的基本内容：</li>
+</ul>
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/d56b3634349b033b95e5afae16ce36d3d539bd12.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/969cbf44ad34598255e7b6e60ff431adcbef8412.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<ul>
+<li>我们可以选择scoreA和ScoreB这两列数据进行T检验<br>输出的结果可见两列变量均值无差异</li>
+</ul>
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/54baacfb43166d22fe7f46e0452309f79052d27f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/b3f6cea20cf431ad20bf104d4836acaf2edd9812.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<ul>
+<li>我们还可以同时对多个变量进行检验，比如：<br>这是产生的结果可见：第一个array表示t值，两个表示p值，因此我们可以知道p(scoreA)=0.126&gt;0.05</li>
+</ul>
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/d478a8003af33a873f00536ec55c10385343b512.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/0db52fadcbef7609a666caeb2ddda3cc7cd99e12.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/">
+                numpy函数：[11]fromfunction以函数式创建数组
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>给函数绘图的时候经常需要创建一个数组，这时候就用到了fromfunction函数，用以从函数中创建数组，我们下面还是用具体的例子说明一下fromfunction的方法：</p>
+<ul>
+<li>先从numpy中引入所有</li>
+</ul>
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/d019d2bf6c81800aec6d2a91b33533fa838b4762.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
+<ul>
+<li>我们创建一个函数，它是y=i*2的表示形式</li>
+</ul>
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/814b07d8bc3eb135cb4f1424a41ea8d3fc1f4462.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
+<ul>
+<li>我们使用fromfunction函数，创建一个数组a，看a返回的的结果，所以a中存储的就是y的值，而i其实就是数组的索引，数组a反应的是i取值从0到1时，y的值。fromfunction的第二个参数定义了数组的形状，也就是说参数(5,)表示i取值范围是[0,1,2,3,4]</li>
+</ul>
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/a75fb6d3fd1f413469bfa6e1271f95cad0c85e62.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
+<ul>
+<li>假如要创建的是二维数组，也就是说函数式有两个自变量，比如y=i*j这个函数，我们在python的表示形式是</li>
+</ul>
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/a992e31f4134970acffbb3b097cad1c8a6865d62.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
+<ul>
+<li>以这个函数创建一个数组，我们看结果,参数(10,10)表示i的取值范围和j的取值范围是[0,1,2,3,4,5,6,7,8,9]，数组b中存放的就是函数返回的值</li>
+</ul>
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/245e8bcad1c8a786cda1e9916509c93d71cf5062.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
+<ul>
+<li>换一种取值范围，看看结果</li>
+</ul>
+<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/3853ad1bb051f819d3ffa0d5d8b44aed2f73e71c.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
+<ul>
+<li>这个很好理解</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -773,142 +892,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/09/23/Python统计分析：[7]混合设计的方差分析/">
-                Python统计分析：[7]混合设计的方差分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年09月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>混合设计的方差分析就是既有组内变量又有组间变量的方差分析。想要进行这样的方差分析，如果还是用python.statsmodels就不太方便了，因此用到了Python的另一个还比较年轻的统计包pyvttbl,它对anova的支持更全面，使用也更方便，这里我们就看看如何用pyvttbl来实现混合设计的方差分析。</p>
-<ul>
-<li>引入DataFrame对象，注意此Dataframe不是pandas.DataFrame</li>
-</ul>
-<img src="/2016/09/23/Python统计分析：[7]混合设计的方差分析/cebd00178a82b90162ea4c4f708da9773812efcc.jpg" alt="Python统计分析：[7]混合设计的方差分析" title="Python统计分析：[7]混合设计的方差分析">
-<ul>
-<li>读取数据</li>
-</ul>
-<img src="/2016/09/23/Python统计分析：[7]混合设计的方差分析/b8405490f603738d820d835eb01bb051f919eccc.jpg" alt="Python统计分析：[7]混合设计的方差分析" title="Python统计分析：[7]混合设计的方差分析">
-<ul>
-<li>我们看一下pyvttbl.DataFrame的结构，有一个变量是必须的——SUBJECT，也就是被试编号，同一个被试有相同的编号，这是我们必须提供的，否则在后面的分析中会出错。</li>
-</ul>
-<img src="/2016/09/23/Python统计分析：[7]混合设计的方差分析/373bc4b44aed2e73beae09508401a18b86d6facc.jpg" alt="Python统计分析：[7]混合设计的方差分析" title="Python统计分析：[7]混合设计的方差分析">
-<ul>
-<li>我们用anova方法进行混合设计的方差分析，需要制定因变量score，组间变量group，组内变量test</li>
-</ul>
-<img src="/2016/09/23/Python统计分析：[7]混合设计的方差分析/2f3295d4b31c870199f13d9a247f9e2f0608ffcc.jpg" alt="Python统计分析：[7]混合设计的方差分析" title="Python统计分析：[7]混合设计的方差分析">
-<ul>
-<li>打印出来的结果有很多，首先看组间效应的检验，group的F和sig值<br>与此相对应，我们输出spss中的结果</li>
-</ul>
-<img src="/2016/09/23/Python统计分析：[7]混合设计的方差分析/9f6e190828381f30d65e02d5aa014c086f06f0cc.jpg" alt="Python统计分析：[7]混合设计的方差分析" title="Python统计分析：[7]混合设计的方差分析">
-<img src="/2016/09/23/Python统计分析：[7]混合设计的方差分析/5beeba0f4bfbfbedb3cbb9037bf0f736aec31ff8.jpg" alt="Python统计分析：[7]混合设计的方差分析" title="Python统计分析：[7]混合设计的方差分析">
-<ul>
-<li>接着是组间效应的检验，包括交互效应<br>以下是spss中的输出结果</li>
-</ul>
-<img src="/2016/09/23/Python统计分析：[7]混合设计的方差分析/8367d1fc1e178a829eaef0dcf503738da877e8f9.jpg" alt="Python统计分析：[7]混合设计的方差分析" title="Python统计分析：[7]混合设计的方差分析">
-<img src="/2016/09/23/Python统计分析：[7]混合设计的方差分析/4bd1e803738da97715bd0957b351f8198718e3f9.jpg" alt="Python统计分析：[7]混合设计的方差分析" title="Python统计分析：[7]混合设计的方差分析">
-<ul>
-<li>最后是边际均值</li>
-</ul>
-<img src="/2016/09/23/Python统计分析：[7]混合设计的方差分析/8759287adab44aed1adc3198b01c8701a08bfbf9.jpg" alt="Python统计分析：[7]混合设计的方差分析" title="Python统计分析：[7]混合设计的方差分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/09/23/spss如何使用K-S进行正态性检验/">
-                spss如何使用K-S进行正态性检验
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年09月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>在对数据进行t检验或者f检验之前需要让数据满足正态性的要求，所以应该对数据进行正态性检验，检验正态性的方法中，K-S检验是最普遍的方法之一，下面我们就来具体的操作一下图和进行K-S检验。<br>方法/步骤</p>
-<ul>
-<li>我拿到数据以后，先要在spss中组织数据，如图所示，第一列变量是我们要检验是否为正态的变量，第二列是数据的分组，即他们的组号。有的时候你的数据没有分组，也就是只有一个组，那就没有必要写group列了</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/c2cec3fdfc0392458db6a68a8794a4c27d1e2537.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>为了分别检验每个分组的数据是否符合正态分布，我们要先将各个组分离（如果你的数据只有一个组那就没必要进行这一步了），如图所示在菜单栏上执行：data—split file</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/71cf3bc79f3df8dc8133c814cd11728b4710282c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>勾选【organize output by groups】，它的意思是分组呈现变量结果，将分组情况这个变量添加到group based on中，点击ok按钮</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/d000baa1cd11728b1323cba7c8fcc3cec3fd2c2c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>接着要对正太性进行检验了，我们在菜单栏上执行：analyze–nonparametric—one sample</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/80cb39dbb6fd5266ba287b91ab18972bd4073637.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>切换到fileds这个选项，然后将你要检验的变量放到右侧的text fields中</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/9345d688d43f8794faf10fabd21b0ef41bd53a2c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>切换到settings选项，然后点击【choose test】，勾选右侧的K-S检验，如图所示。然后点击下方的options</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/0ff41bd5ad6eddc434e9f37e39dbb6fd5266332c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>打开如图所示的对话框，我们将normal这个选项勾选，因为没有已知的正太分布的参数，所以选择use sample data，点击ok</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/dcc451da81cb39dbdece20d3d0160924ab18302c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>切换到text options 设置显著性水平，如图所示，一般为0.05或者0.01</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/72f082025aafa40f34c58958ab64034f78f01937.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li>点击run，你就会看到数据处理的结果了</li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/ac4bd11373f08202279cd6ba4bfbfbedab641b2c.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<ul>
-<li><p>下面是各个组的检验结果，结果显示的很详细，每个组都没有达到显著水平，接受原假设，即所有的组都是正态分布的。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/cefc1e178a82b901dbae84b6738da9773912ef30.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/f703738da97739122525c2e4f8198618367ae230.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<img src="/2016/09/23/spss如何使用K-S进行正态性检验/b21bb051f8198618ac44a8014aed2e738bd4e630.jpg" alt="spss如何使用K-S进行正态性检验" title="spss如何使用K-S进行正态性检验">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -951,19 +934,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -1055,45 +1038,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

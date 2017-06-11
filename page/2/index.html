@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,116 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/19/numpy函数：[2]tile函数用法/">
+                numpy函数：[2]tile函数用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>tile函数位于python模块 numpy.lib.shape_base中，他的功能是重复某个数组。比如tile(A,n)，功能是将数组A重复n次，构成一个新的数组，我们还是使用具体的例子来说明问题：</p>
+<ul>
+<li>先来引入numpy下的所有方法</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[2]tile函数用法/f677b1c379310a5583d241f8b54543a98326108c.jpg" alt="numpy函数：[2]tile函数用法" title="numpy函数：[2]tile函数用法">
+<ul>
+<li>我们创建一个a，如图下图，使用tile来创建b，注意看b的数据结构</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[2]tile函数用法/43e6c733c895d1438c637b2f71f082025aaf0761.jpg" alt="numpy函数：[2]tile函数用法" title="numpy函数：[2]tile函数用法">
+<ul>
+<li>假如我们输入一个元组(1,2)，我们会得到一样的结果，与上面相同的b</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[2]tile函数用法/d57e9994a4c27d1eda87a4c819d5ad6edcc438dd.jpg" alt="numpy函数：[2]tile函数用法" title="numpy函数：[2]tile函数用法">
+<ul>
+<li>当然，我们想要a变为一个二维数组，就要换一种重复的方式了。</li>
+</ul>
+<img src="/2016/10/19/numpy函数：[2]tile函数用法/0fb505d5ad6eddc45c462bf73bdbb6fd536633dd.jpg" alt="numpy函数：[2]tile函数用法" title="numpy函数：[2]tile函数用法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/19/SPSS实例：[23]如何对数据进行排序/">
+                SPSS实例：[23]如何对数据进行排序
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们今天来学习一个简单的功能，在spss中如何对数据进行排序，虽然简单，但是很重要。我刚才处理的数据是从Excel中导入的，接着还有其他Excel中的数据要粘贴到spss中，我需要先让spss中的数据按照年级、专业排序，然后才能保证粘贴数据的时候能够按照年级和专业的顺序去粘贴，下面我们来看看如何排序吧。</p>
+<ul>
+<li>在菜单中执行：data-sort cases，打开排序对话框</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/58af236d55fbb2fb93e62b704d4a20a44723dc40.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>我们想要让spss按照年级排序，当case与case的年级相同的时候，按照专业进行排序，如图所示，将年级和专业按照先后顺序放入sort by框中</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/bf487563f6246b60eed4c116e9f81a4c500fa2bf.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>设置排序的方式是【升序】，如图所示，选择ascending，相反你可以选择desceding来降序</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/7787b9efce1b9d16d51fe903f1deb48f8d5464bc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>接着，我们其实可以点击ok来完成排序，但是没用一次spss就看一下它的syntax是非常好的习惯，这样你很快就能学会基本的syntax操作，学会syntax好处就是你比别人处理数据的速度大大提升，十倍百倍的速度提升，点击paste可以看到syntax</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/b5ce925494eef01f15cc6ba7e2fe9925bd317dbc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>你看到了，其实只需要用两句简单的代码就能实现排序的功能</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/95afee1f3a292df5d11bdf77be315c6035a873bc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>我们还是回到界面中，点击ok</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/9864a2315c6034a8683acbe3c9134954082376bc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>排序好了以后，你最好保存一下结果</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/5f9e93b1cb13495433c69b06544e9258d0094abc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<ul>
+<li>现在的数据就是按照年级和专业进行的排序，你学会了吗？请关注我的系列教程：spss实例教程，你将看到一个专业的数据分析员是如何在工作中使用spss的。</li>
+</ul>
+<img src="/2016/10/19/SPSS实例：[23]如何对数据进行排序/d019d2bf6c81800a5c3dfa6cb33533fa838b47bc.jpg" alt="SPSS实例：[23]如何对数据进行排序" title="SPSS实例：[23]如何对数据进行排序">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -663,124 +774,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/10/03/Python统计分析：[2]相关样本T检验/">
-                Python统计分析：[2]相关样本T检验
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>上一篇文章介绍了独立样本T检验，现在接着使用Python进行相关样本的T检验，主要用到了scipy.stats.ttest_rel，我们先来看看其基本的用法：</p>
-<ul>
-<li>引入相关模块，这次我们使用stats的</li>
-</ul>
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/8640bf8b87d6277f111a614c2b381f30e924fc7f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<ul>
-<li>产生两列随机变量，用到了stats。norm.rvs，参数loc表示平均数，scale表示标准差，size是样本量<br>这是产生的两个变量的数据的一部分</li>
-</ul>
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/1b0d4f0fd9f9d72aa8094369d72a2834349bbb12.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/99636c0e0cf3d7cac1fe6c02f11fbe096b63a97f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<ul>
-<li>ttest_rel的用法：输出t和p值<br>从p值可以看出，这两列数据是没有差异的。</li>
-</ul>
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/29790130e924b8993c342a4c6d061d950a7bf67f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/734f12f3d7ca7bcbb173945bbd096b63f624a87f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<ul>
-<li>当然，ttest_rel还可以接受pandas.DataFrame数据，先从excel中读取数据<br>我们可以看一下数据的基本内容：</li>
-</ul>
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/d56b3634349b033b95e5afae16ce36d3d539bd12.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/969cbf44ad34598255e7b6e60ff431adcbef8412.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<ul>
-<li>我们可以选择scoreA和ScoreB这两列数据进行T检验<br>输出的结果可见两列变量均值无差异</li>
-</ul>
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/54baacfb43166d22fe7f46e0452309f79052d27f.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/b3f6cea20cf431ad20bf104d4836acaf2edd9812.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<ul>
-<li>我们还可以同时对多个变量进行检验，比如：<br>这是产生的结果可见：第一个array表示t值，两个表示p值，因此我们可以知道p(scoreA)=0.126&gt;0.05</li>
-</ul>
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/d478a8003af33a873f00536ec55c10385343b512.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<img src="/2016/10/03/Python统计分析：[2]相关样本T检验/0db52fadcbef7609a666caeb2ddda3cc7cd99e12.jpg" alt="Python统计分析：[2]相关样本T检验" title="Python统计分析：[2]相关样本T检验">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/">
-                numpy函数：[11]fromfunction以函数式创建数组
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年10月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>给函数绘图的时候经常需要创建一个数组，这时候就用到了fromfunction函数，用以从函数中创建数组，我们下面还是用具体的例子说明一下fromfunction的方法：</p>
-<ul>
-<li>先从numpy中引入所有</li>
-</ul>
-<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/d019d2bf6c81800aec6d2a91b33533fa838b4762.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
-<ul>
-<li>我们创建一个函数，它是y=i*2的表示形式</li>
-</ul>
-<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/814b07d8bc3eb135cb4f1424a41ea8d3fc1f4462.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
-<ul>
-<li>我们使用fromfunction函数，创建一个数组a，看a返回的的结果，所以a中存储的就是y的值，而i其实就是数组的索引，数组a反应的是i取值从0到1时，y的值。fromfunction的第二个参数定义了数组的形状，也就是说参数(5,)表示i取值范围是[0,1,2,3,4]</li>
-</ul>
-<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/a75fb6d3fd1f413469bfa6e1271f95cad0c85e62.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
-<ul>
-<li>假如要创建的是二维数组，也就是说函数式有两个自变量，比如y=i*j这个函数，我们在python的表示形式是</li>
-</ul>
-<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/a992e31f4134970acffbb3b097cad1c8a6865d62.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
-<ul>
-<li>以这个函数创建一个数组，我们看结果,参数(10,10)表示i的取值范围和j的取值范围是[0,1,2,3,4,5,6,7,8,9]，数组b中存放的就是函数返回的值</li>
-</ul>
-<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/245e8bcad1c8a786cda1e9916509c93d71cf5062.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
-<ul>
-<li>换一种取值范围，看看结果</li>
-</ul>
-<img src="/2016/10/03/numpy函数：[11]fromfunction以函数式创建数组/3853ad1bb051f819d3ffa0d5d8b44aed2f73e71c.jpg" alt="numpy函数：[11]fromfunction以函数式创建数组" title="numpy函数：[11]fromfunction以函数式创建数组">
-<ul>
-<li>这个很好理解</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -823,19 +816,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -927,45 +920,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

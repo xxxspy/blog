@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="站点介绍"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>站点介绍 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    // <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/06/11/人工神经网络入门-代码实现ORC/">
+                人工神经网络入门+代码实现ORC
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017年06月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.0.11/synaptic.min.js"></script>
+<div class="row">
+	<div id="orc-container" class="col-md-6 col-lg-6 col-sm-12"></div>
+	<div class="controls col-md-6 col-lg-6 col-sm-12">
+        在表格里写入一个一个数字(0-9)<br>
+        <button class="clear btn btn-default"> 清空 </button>
+        <button class="recognize btn btn-default">识别</button>
+        <div>预测结果： <span class="prediction"> ?? </span> </div>
+        信度：<div class="confidence"></div>
+        <div class="confidences">
+        </div>
+    </div>
+</div>
+<div class="row" id="network-container"></div>
+
+
+<!-- orc -->
+   <style>
+        body {
+          margin: 0;
+          font-family: Helvetica;
+          font-weight: 100;
+        }
+        svg {
+          shape-rendering: crispEdges;
+          cursor: pointer;
+        }
+        .controls {
+        }
+    </style>
+    
+    <!-- draw a grid -->
+    <script type="text/javascript">
+    var gL=50, gridN=8, boxLength=gL * gridN
+    var svg=d3.select('#orc-container').append('svg').attr("width",boxLength)
+        .attr("height",boxLength)
+    var data=d3.range(gridN*gridN).map(function(d){
+        return {i: d%gridN, j:Math.floor(d/gridN), id: d, active:0}
+    })
+
+    var grids=svg.append('g').attr('class', 'grids')
+        .selectAll('rect').data(data).enter().append('rect')
+        .attr("width", gL).attr("height", gL)
+        .attr('x', function(d){return gL*d.i})
+        .attr('y', function(d){return gL*d.j})
+        .style('stroke', 'rgba(255, 255, 255, 0.2)')
+
+    function updateGrid(g){
+        g.style('fill', function(d){
+            return d.active ? 'rgba(255,255,255,1)':'black'
+        })
+
+    }
+    var conf = d3.select('.confidences').selectAll('div')
+        .data(d3.range(10)).enter()
+        .append('div').text(function(d){return d + ': '})
+
+    var bar=conf.append('div').attr('class', 'bg')
+        .style("width",'60px')
+        .style("height", '20px')
+        .style("display", 'inline-block')
+
+    bar.append('div').attr('class', 'fg')
+        .style("width", '20%')
+        .style("height", '100%')
+        .style('background-color', 'rgba(0, 0, 0, 0.8)')
+
+    svg.on('mousedown', function(){
+        grids.on('mousemove',function(d){
+            d.active=1
+            updateGrid(d3.select(this))
+        })
+    }).on('mouseup',function(){
+        grids.on('mousemove',null)
+    })
+
+    function updateState(){
+        var input = data.map(function(d){return d.active})
+        var output = trainer.network.activate(input)
+        var max = -1, maxId = -1
+        output.forEach(function(d, i) { if (d > max) max = d, maxId = i })
+        conf.data(output).select('.fg')
+            .style('width', function(d) { return d * 100 + '%' })
+        d3.select('.prediction').text(maxId)
+        d3.select('.confidence').text(max)
+
+    }
+    d3.select('button.clear').on('click', resetBlocks)
+    d3.select('button.recognize').on('click', updateState)
+
+    function resetBlocks() {
+      grids.each(function(d) { d.active = 0 }).call(updateGrid)
+    }
+
+    </script>
+
+
+
+   <!-- network graph -->
+    <style type="text/css">
+        text {
+          pointer-events: none;
+        }
+
+        .node:hover {
+          stroke: #999;
+          stroke-opacity: .6;
+          stroke-width: 4px;
+        }
+
+        .link {
+          stroke: #999;
+          stroke-opacity: .6;
+        }
+    </style>
+    <script type="text/javascript">
+
+    var width = 960,
+        height = 1400,
+        nodeSize = 10;
+
+    var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+    var svg = d3.select("#network-container").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+
+    window.show_network=function(network) {
+        
+
+        // get network size
+        var netsize = {}
+        allLayers=[network.layers.input]
+        network.layers.hidden.forEach(function(l){
+            allLayers.push(l)
+        })
+        allLayers.push(network.layers.output)
+        console.log(allLayers)
+
+        // calc distances between nodes
+        largestLayerSize=0
+        allLayers.forEach(function(d){if(d.size>largestLayerSize){
+            largestLayerSize=d.size
+        }})
+
+        var xdist = width / allLayers.length,
+            ydist = height / largestLayerSize;
+
+        // create node locations
+        layerCount=0
+        var links = [];
+        allLayers.map(function(layer) {
+            layerCount +=1
+            layer.layerCount=layerCount
+            neurons=layer.neurons()
+            nNeurons=neurons.length
+            maxYDistance=nNeurons * ydist
+            startY=(height-maxYDistance)/2
+            neuCount=0
+            neurons.forEach(function(neuron){
+                neuCount +=1
+                neuron.x=(layerCount - 0.5) * xdist
+                neuron.y=(neuCount - 0.5 ) * ydist + startY
+                connections=neuron.connections.projected
+                keys=Object.keys(connections)
+                keys.forEach(function(id){
+                    links.push(connections[id])
+                })
+            })
+        });
+
+        // draw links
+        var link = svg.selectAll(".link")
+            .data(links)
+          .enter().append("line")
+            .attr("class", "link")
+            .attr("x1", function(d) { return d.from.x; })
+            .attr("y1", function(d) { return d.from.y; })
+            .attr("x2", function(d) { return d.to.x; })
+            .attr("y2", function(d) { return d.to.y; })
+            .style("stroke-width", function(d) { return d.weight * 10; });
+
+        // draw nodes
+        var node = svg.selectAll(".node")
+            .data(network.neurons())
+          .enter().append("g")
+            .attr("transform", function(d) {
+                return "translate(" + d.neuron.x + "," + d.neuron.y + ")"; }
+            );
+
+        var circle = node.append("circle")
+            .attr("class", "node")
+            .attr("r", nodeSize)
+            .style("fill", function(d) { return color(d.layer.layerCount); });
+
+
+        node.append("text")
+            .attr("dx", "-.35em")
+            .attr("dy", ".35em")
+            .text(function(d) { return d.neuron.ID; });
+    }
+    </script>
+
+
+
+    <script type="text/javascript">
+        var myNetwork = new synaptic.Architect.Perceptron(64, 25, 10)
+        var trainer = new synaptic.Trainer(myNetwork)
+
+        function train(){
+            d3.text('data', function(err, data) {
+              if (err) {
+                throw err
+              }
+              var ts, te, idx
+              data = d3.csvParseRows(data, function(row) { return row.map(Number) })
+                .map(function(d) {
+                // Expected output.
+                var t = d3.range(10).map(function() { return 0 })
+                t[d[0]] = 1
+                return { input: d.slice(1), output: t }
+              })
+                ts=Date.now()
+                trainer.train(data)
+                te=Date.now()
+                console.log('Time Spend: '+ (te-ts))
+            })
+        }
+
+        train()
+        window.show_network(myNetwork)
+
+    </script>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/ORC/">#ORC</a> <a href="/tags/神经网络/">#神经网络</a> <a href="/tags/3djs/">#3djs</a> <a href="/tags/synaptic/">#synaptic</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+                <span> | </span><a class="footer-post" href="http://mlln.cn/baidusitemap.xml" target="_blank">网站地图</a><span> | </span>
+            
+                <span> | </span><a class="footer-post" href="http://mlln.cn/sitemap.xml" target="_blank">DataScience</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+[object Object]
+
+</body>
+
+</html>

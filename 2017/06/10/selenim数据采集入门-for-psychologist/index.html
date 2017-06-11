@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="selenim数据采集入门(for psychologist)"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>selenim数据采集入门(for psychologist) - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -215,7 +216,14 @@
 <p>link(链接)大家都知道，点击链接就能跳转到新的页面。我们可以根据链接内的文字获取链接标签。partial_link就是链接的一部分，也就是说你不用输入链接的所有文字，只需要输入一部分，但是这部分文字必须特征明显，以至于能找到你真正想要的链接。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">eles=driver.find_elements_by_partial_link_text(&apos;数据&apos;)</div><div class="line">for e in eles:</div><div class="line">	print(e.text)</div></pre></td></tr></table></figure>
 <h5 id="xpath"><a href="#xpath" class="headerlink" title="xpath"></a>xpath</h5><p>xpath是描述html标签位置的方法，需要一些学习成本（大概2小时），通常我们不会用到这种方法，因为比较麻烦。这里已经超出本篇文章的范围，有兴趣的可以在<a href="http://www.w3school.com.cn/xpath/index.asp" target="_blank" rel="external">这里</a>学习。</p>
-<h4 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h4><h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
+<h4 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h4><p>通常数据量不太大的时候，我们使用txt文本存储数据就可以了，这种数据用excel也能打开，然后你再进行一些数据转换。</p>
+<p>比如现在我们采集了n个用户的m个特征，我们的数据应该是使用嵌套列表来存放数据:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">data=[</div><div class="line">	[<span class="string">'user1'</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>],</div><div class="line">	[<span class="string">'user2'</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>],</div><div class="line">	[<span class="string">'user3'</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>],</div><div class="line">	[<span class="string">'user4'</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>],</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>这样的数据是如何形成的？我们模拟一个生成这样的数据的过程：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">data=[]  <span class="comment">#一个空列表用于存放所有用户数据</span></div><div class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">4</span>):</div><div class="line">	u=<span class="string">'user'</span> + str(n)</div><div class="line">	user_data=[u,] <span class="comment">#子列表，用于存放一个用户的数据</span></div><div class="line">	<span class="keyword">for</span> m <span class="keyword">in</span> range(<span class="number">5</span>):</div><div class="line">		user_data.append(m)  <span class="comment">#把数据填充到列表中，m只是一个占位符</span></div><div class="line"></div><div class="line">	data.append(user_data)   <span class="comment">#把一个用户的数据追加到data中</span></div></pre></td></tr></table></figure>
+<p>这样的数据我们得写入到一个txt文件中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">file_name=<span class="string">'data.txt'</span></div><div class="line">f=open(file_name, <span class="string">'w'</span>)  <span class="comment">#打开一个文件</span></div><div class="line"><span class="keyword">for</span> user_data <span class="keyword">in</span> data:</div><div class="line">	<span class="comment">#把数据都转换成字符串</span></div><div class="line">	user_data=[str(d) <span class="keyword">for</span> d <span class="keyword">in</span> user_data]</div><div class="line">	<span class="comment">#把列表转换成字符串</span></div><div class="line">	string_data=<span class="string">','</span>.join(user_data)</div><div class="line">	<span class="comment"># 写入到文件</span></div><div class="line">	f.writeline(string_data)</div><div class="line">f.close()  <span class="comment">#最后要关闭文件</span></div></pre></td></tr></table></figure>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><ul>
 <li>下载chrome浏览器的驱动器，链接：<a href="http://pan.baidu.com/s/1pKUyrAr" target="_blank" rel="external">http://pan.baidu.com/s/1pKUyrAr</a> 密码：390v</li>
 </ul>
 
@@ -259,19 +267,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -363,45 +371,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

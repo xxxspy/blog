@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,112 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/">
+                SPSS实例：[4]因子分析中变量正向化方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>因子分析算是spss高级进阶的内容了，一般缺少统计基础的人很难理解因子分析的数据基础，导致在数据分析的时候忽略很多细节，导致错误的发生。在因子分析中最容易发生的一个错误就是某些变量的因子载荷出现负数而没有对其进行处理，有的研究直接删除因子载荷为负数的变量，这不是一个可取的方法。</p>
+<ul>
+<li>什么条件下需要进行指标正向化：在因子载荷绝对值很大而符号为负的时候，我们要将其正向化；或者我们在数据分析之前就已经知道哪几个变量是负向变量，我举一个例子，如下图所示，这是8个城市的7个环境指标，其中X1–X4是正向指标，值越大环境越好；而剩下的指标就是负向指标，值越大环境越差。那么对于负向指标我们需要进行正向化。</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/f9589818367adab4ea7d61868ad4b31c8601e403.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<ul>
+<li>无法判定是否需要正向化怎么办？我们可以预先进行一次因子分析，使用上面表格中的数据，进行一次因素分析，并进行正交旋转。旋转后的成分矩阵，如图所示：我们看到权重最大的因子是成分1，5–7变量为负数，且绝对值很大，所以这三个变量有必要进行正向化。</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/245e8bcad1c8a78683782ecb6609c93d71cf5061.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<ul>
+<li>spss中变量正向化的方法：在spss中，我们一般采用原始变量的负数或者倒数来进行正向化。在spss菜单中选择：转换–计算变量</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/b3ba5d166d224f4ae83f14d608f790529922d116.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<ul>
+<li>打开计算变量对话框，输入一个变量名，然后输入公式，公式中的V5是原始的变量名，前面加一个符号就可以实现转换了，点击ok按钮</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/4a77b2af2edda3cc7b6ddfe500e93901203f922e.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<ul>
+<li>转换后得到的就是一个新变量b5，如图所示，以此方法你可以实现所有的变量的正向化。</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/38403f3fb80e7bec5a5364242e2eb9389a506b2e.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<ul>
+<li>使用新的变量进行因子分析：关于因子分析的方法你可以参考我以前写的文章，这里不是重点，这里的重点是如何进行变量的正太化。好了，教程到此了。欢迎大家关注我的后续文章。</li>
+</ul>
+<img src="/2016/02/11/SPSS实例：[4]因子分析中变量正向化方法/58af236d55fbb2fb875c3ed74e4a20a44723dc45.jpg" alt="SPSS实例：[4]因子分析中变量正向化方法" title="SPSS实例：[4]因子分析中变量正向化方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/02/05/Excel2013：[32]多选题录入到一个单元格怎么办/">
+                Excel2013：[32]多选题录入到一个单元格怎么办
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天处理了一个数据，录入格式非常不规范，他将一道多选题录入到了一个单元格，看下面图，一个单元格里放入了ABCD等多个选项，这样是无法做统计分析的，尤其是无法再spss做分析，必须要拆分单元格才可以，下面的教程就是教大家，多选题录入到了一个单元格，怎么将其重新编码成0和1构成的矩阵。</p>
+<ul>
+<li>在【题目24】单元格后面依次填入24个英文字符（ps，这个多选题有24个选项，如果你的多选题只有4个选项，可以只输入abcd四个字母）。你可以参考我以前的文章：【Excel2013 快速填充26个英文字母】</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[32]多选题录入到一个单元格怎么办/b94f65ec54e736d1f0bd3b7499504fc2d46269e5.jpg" alt="Excel2013：[32]多选题录入到一个单元格怎么办" title="Excel2013：[32]多选题录入到一个单元格怎么办">
+<ul>
+<li>在AF2单元格，我们输入公式：=IF(ISERROR(IF(FIND(AF$1,$AE2)&gt;0,1,0)),0,IF(FIND(AF$1,$AE2)&gt;0,1,0))</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[32]多选题录入到一个单元格怎么办/9dc3cf58ccbf6c8187019a94be3eb13533fa405c.jpg" alt="Excel2013：[32]多选题录入到一个单元格怎么办" title="Excel2013：[32]多选题录入到一个单元格怎么办">
+<ul>
+<li>向下快速填充，填充满整列</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[32]多选题录入到一个单元格怎么办/2e6fa7389b504fc236380779e7dde71190ef6d2c.jpg" alt="Excel2013：[32]多选题录入到一个单元格怎么办" title="Excel2013：[32]多选题录入到一个单元格怎么办">
+<ul>
+<li>选中AF整列，然后向右拖动右下角，快速填充24个列</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[32]多选题录入到一个单元格怎么办/e49cf91190ef76c64eb54c579f16fdfaaf51672c.jpg" alt="Excel2013：[32]多选题录入到一个单元格怎么办" title="Excel2013：[32]多选题录入到一个单元格怎么办">
+<ul>
+<li>到此为止，我们就完成了所有将一个单元格的多选题答案转换成了0-1矩阵。这样就可以放入spss中进行分析了。</li>
+</ul>
+<img src="/2016/02/05/Excel2013：[32]多选题录入到一个单元格怎么办/fcbbb151f3deb48f7c0e16a2f21f3a292df5782c.jpg" alt="Excel2013：[32]多选题录入到一个单元格怎么办" title="Excel2013：[32]多选题录入到一个单元格怎么办">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -673,118 +780,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/">
-                spss20.0多重线型回归模型的操作方法和结果分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年01月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>为了能够简要的说明操作方法，我们这里只用两个自变量和一个因变量，使用进入的方法进行多重线性回归分析，下面有操作的方法和对结果的分析方法。<br>方法/步骤</p>
-<ul>
-<li>在确定你的数据已经进行了线性关系的验证以后，再进行回归分析，因为前面的文章有讲如何验证线型关系，所以这里就不说了，直接进行回归分析，在菜单栏上执行：分析–回归</li>
-</ul>
-<img src="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/d1a20cf431adcbefd5879bf9acaf2edda2cc9f9a.jpg" alt="spss20.0多重线型回归模型的操作方法和结果分析" title="spss20.0多重线型回归模型的操作方法和结果分析">
-<ul>
-<li>打开线性回归对话框，将因变量和自变量都放到各自的位置，如图所示</li>
-</ul>
-<img src="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/3b87e950352ac65c8069838cfbf2b21192138ae5.jpg" alt="spss20.0多重线型回归模型的操作方法和结果分析" title="spss20.0多重线型回归模型的操作方法和结果分析">
-<ul>
-<li>记得选择方法为进入，因为你的自变量只有两个，在自变量较少的时候使用进入这个方法是最常用的，点击确定，去看结果输出窗口</li>
-</ul>
-<img src="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/8435e5dde71190efcc487720ce1b9d16fcfa609a.jpg" alt="spss20.0多重线型回归模型的操作方法和结果分析" title="spss20.0多重线型回归模型的操作方法和结果分析">
-<ul>
-<li>要分析的结果主要有两个，一个是方差分析，如图所示，我们要看sig值是否显著，如果值小于0.01我们就认为它是显著的，这就证明我们建立的模型是可行的，至少一个自变量的回归系数不为零</li>
-</ul>
-<img src="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/fcfaaf51f3deb48f4eda4421f01f3a292cf5789a.jpg" alt="spss20.0多重线型回归模型的操作方法和结果分析" title="spss20.0多重线型回归模型的操作方法和结果分析">
-<ul>
-<li><p>接着看系数的检验，这个主要是看回归系数是否达到了显著水平，结果显示系数是显著的</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/0dd7912397dda1443165894db2b7d0a20df486e5.jpg" alt="spss20.0多重线型回归模型的操作方法和结果分析" title="spss20.0多重线型回归模型的操作方法和结果分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/">
-                SPSS实例：[30]kappa系数怎么计算
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年01月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>假如有两个评分者针对一批作文进行分级，分为好中差三级，分级结果见下表。你怎么判定这两个评分者的评分结果是否一致呢？这时候就要计算卡帕系数了。</p>
-<ul>
-<li>好中差分别用123来表示，将数据录入到spss中</li>
-</ul>
-<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/fab3ac119313b07ea149be440ed7912396dd8c43.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
-<ul>
-<li>接着，我们再给数据加权，用频数作为加权变量，不会的可以参考我上一篇文章，这里不再重复。<a href="http://jingyan.baidu.com/article/9f7e7ec050c3c36f28155434.html" target="_blank" rel="external">http://jingyan.baidu.com/article/9f7e7ec050c3c36f28155434.html</a></li>
-</ul>
-<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/b25aae51f8198618261306c848ed2e738ad4e6e3.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
-<ul>
-<li>接着，打开菜单：分析–描述统计-交叉表，将两个变量分别放入行和列变量</li>
-</ul>
-<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/2f3295d4b31c8701b6e25baa257f9e2f0608ffe3.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
-<ul>
-<li>设置输出的描述性统计，这里就是输出kappa系数的地方</li>
-</ul>
-<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/fd428c45d688d43f541278be7f1ed21b0ff43b80.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
-<ul>
-<li>勾选kappa系数，然后点击继续按钮</li>
-</ul>
-<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/29790130e924b899896890746c061d950b7bf6e3.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
-<ul>
-<li>回到了主菜单，我们点击ok按钮</li>
-</ul>
-<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/4d4970061d950a7b2761a78808d162d9f3d3c9e3.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
-<ul>
-<li>评分者一致性系数就到此计算出来了。</li>
-</ul>
-<img src="/2016/01/23/SPSS实例：[30]kappa系数怎么计算/1cd4147b02087bf42db8bea5f0d3572c10dfcfe3.jpg" alt="SPSS实例：[30]kappa系数怎么计算" title="SPSS实例：[30]kappa系数怎么计算">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -827,19 +822,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -931,45 +926,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 

@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="DataScience"/>
+        <meta property="og:title" content="站点介绍"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>page - DataScience</title>
+    <title>站点介绍 - DataScience</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -71,6 +71,7 @@
     }
     </style>
 
+    
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -149,6 +150,128 @@
 </header>
 
         <section class="main">
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/11/Python教程：[19]urlunparse()用法/">
+                Python教程：[19]urlunparse()用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>前一篇文章我们讲了urlparse函数，我在这里补充一点，在python的新版本中，urlparse模块已经不能用了，想要使用rulparse函数只能是在低版本中使用，我这里示范的代码是在python2.7中测试的，这也是目前比较稳定的版本。其实从前面的文章中看到urlparse函数，你就知道urlunparse函数的用法，下面是具体的例子。</p>
+<ul>
+<li>先引入两个方法，urlparse和urlunparse</li>
+</ul>
+<img src="/2015/06/11/Python教程：[19]urlunparse()用法/29752a9b033b5bb51e9f4ad334d3d539b600bc10.jpg" alt="Python教程：[19]urlunparse()用法" title="Python教程：[19]urlunparse()用法">
+<ul>
+<li>我们将一个url分割成不同的部分，用的是urlparse，然后将不同的部分在合并成url，用的是urlunparse方法。</li>
+</ul>
+<img src="/2015/06/11/Python教程：[19]urlunparse()用法/7787b9efce1b9d16f269f04cf1deb48f8c546435.jpg" alt="Python教程：[19]urlunparse()用法" title="Python教程：[19]urlunparse()用法">
+<ul>
+<li>我们看到分割后的parsed，他被分成不同的部分，这个上一篇文章就讲过</li>
+</ul>
+<img src="/2015/06/11/Python教程：[19]urlunparse()用法/d478a8003af33a8737256a37c45c10385343b510.jpg" alt="Python教程：[19]urlunparse()用法" title="Python教程：[19]urlunparse()用法">
+<ul>
+<li>使用urlparse分割过的可以用urlunparse来合并，重新形成url</li>
+</ul>
+<img src="/2015/06/11/Python教程：[19]urlunparse()用法/3bc6f750352ac65cf14d0c5ef9f2b21193138a10.jpg" alt="Python教程：[19]urlunparse()用法" title="Python教程：[19]urlunparse()用法">
+<ul>
+<li><p>所有的代码如下：</p>
+</li>
+<li><p>from urlparse import urlparse</p>
+</li>
+<li><p>from urlparse import urlunparse</p>
+</li>
+<li><p>parsed=urlparse(‘<a href="http://user:pass@NetLoc:80/path;parameters?query=argument#fragment" target="_blank" rel="external">http://user:pass@NetLoc:80/path;parameters?query=argument#fragment</a>‘)</p>
+</li>
+<li><p>url=urlunparse(parsed)</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/11/Excel2013：[22]禁止录入重复值/">
+                Excel2013：[22]禁止录入重复值
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>当我们录入数据的时候，有些内容是不允许重复的，比如身份证号码，电话号码，我们可以使用设置数据有效性来禁止录入重复的数据，在Excel2013中，数据有效性又叫做数据验证，下面我们来看看如何在Excel2013中限制录入重复数据。</p>
+<ul>
+<li>我们先来选中A2单元格，也就是空单元格最上面的一个</li>
+</ul>
+<img src="/2015/06/11/Excel2013：[22]禁止录入重复值/a992e31f4134970ac104815b97cad1c8a7865d14.jpg" alt="Excel2013：[22]禁止录入重复值" title="Excel2013：[22]禁止录入重复值">
+<ul>
+<li>我们切换到【数据】标签，打开【数据验证】对话框</li>
+</ul>
+<img src="/2015/06/11/Excel2013：[22]禁止录入重复值/dc15484e9258d109529438c6d358ccbf6c814d14.jpg" alt="Excel2013：[22]禁止录入重复值" title="Excel2013：[22]禁止录入重复值">
+<ul>
+<li>在设置标签下，找到验证条件为【自定义】<br>、</li>
+</ul>
+<img src="/2015/06/11/Excel2013：[22]禁止录入重复值/9dc3cf58ccbf6c816640bd9cbe3eb13533fa4014.jpg" alt="Excel2013：[22]禁止录入重复值" title="Excel2013：[22]禁止录入重复值">
+<ul>
+<li>我们在公式这一栏，输入公式=countif($A$2:A2,A2)=1</li>
+</ul>
+<img src="/2015/06/11/Excel2013：[22]禁止录入重复值/b3f6cea20cf431ad65bcd24d4936acaf2edd981d.jpg" alt="Excel2013：[22]禁止录入重复值" title="Excel2013：[22]禁止录入重复值">
+<ul>
+<li>切换到【出错警告】标签下面</li>
+</ul>
+<img src="/2015/06/11/Excel2013：[22]禁止录入重复值/00a82701213fb80ec1bff0a334d12f2eb938941d.jpg" alt="Excel2013：[22]禁止录入重复值" title="Excel2013：[22]禁止录入重复值">
+<ul>
+<li>我们设置出错时的提示信息，如下图所示，点击确定按钮，完成设置</li>
+</ul>
+<img src="/2015/06/11/Excel2013：[22]禁止录入重复值/207ea60e7bec54e78a828b6abb389b504fc26a1d.jpg" alt="Excel2013：[22]禁止录入重复值" title="Excel2013：[22]禁止录入重复值">
+<ul>
+<li>拖转A2单元格，快速填充其他单元格</li>
+</ul>
+<img src="/2015/06/11/Excel2013：[22]禁止录入重复值/2f9cbdcc7cd98d10b7ba9d45233fb80e7bec901d.jpg" alt="Excel2013：[22]禁止录入重复值" title="Excel2013：[22]禁止录入重复值">
+<ul>
+<li>我们来测试一下是否设置成功，录入一个重复的数据，看到错误提示信息</li>
+</ul>
+<img src="/2015/06/11/Excel2013：[22]禁止录入重复值/718e25c79f3df8dc2f4a1ee5cf11728b47102814.jpg" alt="Excel2013：[22]禁止录入重复值" title="Excel2013：[22]禁止录入重复值">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
             
                 
 <div class="post">
@@ -689,133 +812,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/">
-                DataNitro：[1]怎样在Excel中使用python脚本
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年05月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>怎么在Excel中运行python脚本？这个问题由来已久，很多pythoner都希望直接用python控制Excel，但是只能从外部调用，有没有一个VBA的东西可以直接在Excel中运行呢？答案是有，DataNitro就是这么一个东西，看看下面Excel中的界面，他就是了，可以直接点击‘run’来运行一个Python脚本。下面我们来看看它是如何安装与配置的。</p>
-<ul>
-<li>先安装python2.7，其他版本不知道行不行，但是这个肯定行，然后配置环境变量，保证python在该环境中，打开开始菜单，找到计算机，然后右键单击它，选择【属性】</li>
-</ul>
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/00a82701213fb80e416877e135d12f2eb938940f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<ul>
-<li>找到高级系统设置</li>
-</ul>
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/4e83cb628535e5dda375b3e975c6a7efce1b626f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<ul>
-<li>找到环境变量，点击该按钮，打开环境变量设置窗口</li>
-</ul>
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/ae10eddeb48f8c54db6ad31939292df5e0fe7f0f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<ul>
-<li>找到Path系统变量，然后点击【编辑】</li>
-</ul>
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/3b6833f5e0fe9925e9557f6637a85edf8db1716f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<ul>
-<li>在这里，确保python的安装目录在，没有的话，添加进去</li>
-</ul>
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/5d212aa85edf8db191976a520a23dd54564e740f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<ul>
-<li>下面就可以安装该插件了，去官网下载一个；或者百度一下，各大下载网站都有</li>
-</ul>
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/8cf0d51349540923803775489158d109b3de496e.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<ul>
-<li>双击即可安装，安装过程就是一路点击’下一步，不过有一步需要注意</li>
-</ul>
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/b13fd48065380cd7b447b4dba244ad345982816f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/c87c6ecf3bc79f3d85bff206b9a1cd11728b296e.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/78701455b319ebc40f2660af8126cffc1e17166e.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/29790130e924b89971826f0e6d061d950a7bf60f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<ul>
-<li>在这里，不要勾选python，如果通过这种方式安装python，你原先安装的python就无法使用了</li>
-</ul>
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/eab9044c510fd9f9ddae435f262dd42a2834a40f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<ul>
-<li>最后安装完成，打开Excel就可以看到datanitro了</li>
-</ul>
-<img src="/2015/05/23/DataNitro：[1]怎样在Excel中使用python脚本/969cbf44ad34598298d3f3a40ff431adcbef846f.jpg" alt="DataNitro：[1]怎样在Excel中使用python脚本" title="DataNitro：[1]怎样在Excel中使用python脚本">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/05/23/pandas教程：[6]计数统计/">
-                pandas教程：[6]计数统计
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年05月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>经过之前的学习，我们现在可以做一个简单的统计了，比如计数，这是最简单的统计，我们现在就使用pandas统计一下数据中各个专业学生的数目：</p>
-<ul>
-<li>先来引入pandas，并且从csv文件中读取数据</li>
-</ul>
-<img src="/2015/05/23/pandas教程：[6]计数统计/8640bf8b87d6277fc3b99f2b2b381f30e924fc3f.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
-<ul>
-<li>查看一下前三行数据，看读取数据是否正确</li>
-</ul>
-<img src="/2015/05/23/pandas教程：[6]计数统计/29790130e924b899ca97d42b6d061d950a7bf63f.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
-<img src="/2015/05/23/pandas教程：[6]计数统计/8697397f9e2f070877d28713ea24b899a801f28b.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
-<ul>
-<li>选择数据：之前也有相关的教程，假如现在我们要统计【专业名称】这一列，那么需要学会选择它：</li>
-</ul>
-<img src="/2015/05/23/pandas教程：[6]计数统计/6391e903918fa0ec7e27c91e259759ee3c6ddb86.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
-<ul>
-<li>计数统计我们使用：save_counts()，打印这个结果，查看一下</li>
-</ul>
-<img src="/2015/05/23/pandas教程：[6]计数统计/09bb4f3d269759ee47b0cdd8b1fb43166c22df86.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
-<img src="/2015/05/23/pandas教程：[6]计数统计/d872d695d143ad4be32dead381025aafa40f0666.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
-<ul>
-<li>绘制柱形图，使用plot方法，如果想要输出该图，使用get_figure()和savefig()</li>
-</ul>
-<img src="/2015/05/23/pandas教程：[6]计数统计/27d647ee3d6d55fbce26db356e224f4a21a4dd86.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
-<ul>
-<li>最后我们可以在D盘下找到plot.png，这就是绘制好的bar图了。</li>
-</ul>
-<img src="/2015/05/23/pandas教程：[6]计数统计/b3ba5d166d224f4aa079de000af790529922d186.jpg" alt="pandas教程：[6]计数统计" title="pandas教程：[6]计数统计">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -858,19 +854,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/02/MathJax入门/">MathJax入门</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/01/hello-world/">Hello World</a>
             </li>
             
         </ul>
@@ -962,45 +958,7 @@
 </footer>
 
 <!-- After footer scripts -->
-
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
-
-
-<!-- baidu_static -->
-
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-<!-- baidu_search -->
-
-	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
-
-<!-- baidu_share -->
-
-	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
+[object Object]
 
 </body>
 
