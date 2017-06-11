@@ -73,6 +73,7 @@
 
     
     
+    
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
@@ -172,10 +173,9 @@
     
         <div class="content">
             
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.0.11/synaptic.min.js"></script>
-<div class="row">
-	<div id="orc-container" class="col-md-6 col-lg-6 col-sm-12"></div>
-	<div class="controls col-md-6 col-lg-6 col-sm-12">
+<div class="row" id="content-body">
+    <div id="orc-container" class="col-md-6 col-lg-6 col-sm-12"></div>
+    <div class="controls col-md-6 col-lg-6 col-sm-12">
         在表格里写入一个一个数字(0-9)<br>
         <button class="clear btn btn-default"> 清空 </button>
         <button class="recognize btn btn-default">识别</button>
@@ -186,6 +186,12 @@
     </div>
 </div>
 <div class="row" id="network-container"></div>
+<div class="row btn-group" id="network-buttons">
+    <button class="btn btn-lg btn-default" id="reduce-neuron">减少神经元</button>
+    <input id="num-nodes" type="number" class="btn btn-default btn-large form-group" value="25" title="隐层神经元个数" height="100%">
+    <button class="btn btn-lg btn-default" id="add-neuron">增加神经元</button>
+    <button class="btn btn-lg btn-default" id="network-run">训练</button>
+</div>
 
 
 <!-- orc -->
@@ -205,67 +211,72 @@
     
     <!-- draw a grid -->
     <script type="text/javascript">
-    var gL=50, gridN=8, boxLength=gL * gridN
-    var svg=d3.select('#orc-container').append('svg').attr("width",boxLength)
-        .attr("height",boxLength)
-    var data=d3.range(gridN*gridN).map(function(d){
-        return {i: d%gridN, j:Math.floor(d/gridN), id: d, active:0}
-    })
 
-    var grids=svg.append('g').attr('class', 'grids')
-        .selectAll('rect').data(data).enter().append('rect')
-        .attr("width", gL).attr("height", gL)
-        .attr('x', function(d){return gL*d.i})
-        .attr('y', function(d){return gL*d.j})
-        .style('stroke', 'rgba(255, 255, 255, 0.2)')
+        if ('d3' in window){
+            var gL=50, gridN=8, boxLength=gL * gridN
+            var svg=d3.select('#orc-container').append('svg').attr("width",boxLength)
+                .attr("height",boxLength)
+            var data=d3.range(gridN*gridN).map(function(d){
+                return {i: d%gridN, j:Math.floor(d/gridN), id: d, active:0}
+            })
 
-    function updateGrid(g){
-        g.style('fill', function(d){
-            return d.active ? 'rgba(255,255,255,1)':'black'
-        })
+            var grids=svg.append('g').attr('class', 'grids')
+                .selectAll('rect').data(data).enter().append('rect')
+                .attr("width", gL).attr("height", gL)
+                .attr('x', function(d){return gL*d.i})
+                .attr('y', function(d){return gL*d.j})
+                .style('stroke', 'rgba(255, 255, 255, 0.2)')
 
-    }
-    var conf = d3.select('.confidences').selectAll('div')
-        .data(d3.range(10)).enter()
-        .append('div').text(function(d){return d + ': '})
+            function updateGrid(g){
+                g.style('fill', function(d){
+                    return d.active ? 'rgba(255,255,255,1)':'black'
+                })
 
-    var bar=conf.append('div').attr('class', 'bg')
-        .style("width",'60px')
-        .style("height", '20px')
-        .style("display", 'inline-block')
+            }
+            var conf = d3.select('.confidences').selectAll('div')
+                .data(d3.range(10)).enter()
+                .append('div').text(function(d){return d + ': '})
 
-    bar.append('div').attr('class', 'fg')
-        .style("width", '20%')
-        .style("height", '100%')
-        .style('background-color', 'rgba(0, 0, 0, 0.8)')
+            var bar=conf.append('div').attr('class', 'bg')
+                .style("width",'60px')
+                .style("height", '20px')
+                .style("display", 'inline-block')
 
-    svg.on('mousedown', function(){
-        grids.on('mousemove',function(d){
-            d.active=1
-            updateGrid(d3.select(this))
-        })
-    }).on('mouseup',function(){
-        grids.on('mousemove',null)
-    })
+            bar.append('div').attr('class', 'fg')
+                .style("width", '20%')
+                .style("height", '100%')
+                .style('background-color', 'rgba(0, 0, 0, 0.8)')
 
-    function updateState(){
-        var input = data.map(function(d){return d.active})
-        var output = trainer.network.activate(input)
-        var max = -1, maxId = -1
-        output.forEach(function(d, i) { if (d > max) max = d, maxId = i })
-        conf.data(output).select('.fg')
-            .style('width', function(d) { return d * 100 + '%' })
-        d3.select('.prediction').text(maxId)
-        d3.select('.confidence').text(max)
+            svg.on('mousedown', function(){
+                grids.on('mousemove',function(d){
+                    d.active=1
+                    updateGrid(d3.select(this))
+                })
+            }).on('mouseup',function(){
+                grids.on('mousemove',null)
+            })
 
-    }
-    d3.select('button.clear').on('click', resetBlocks)
-    d3.select('button.recognize').on('click', updateState)
+            function updateState(){
+                var input = data.map(function(d){return d.active})
+                var output = window.network.activate(input)
+                var max = -1, maxId = -1
+                output.forEach(function(d, i) { if (d > max) max = d, maxId = i })
+                conf.data(output).select('.fg')
+                    .style('width', function(d) { return d * 100 + '%' })
+                d3.select('.prediction').text(maxId)
+                d3.select('.confidence').text(max)
 
-    function resetBlocks() {
-      grids.each(function(d) { d.active = 0 }).call(updateGrid)
-    }
+            }
+            d3.select('button.clear').on('click', resetBlocks)
+            d3.select('button.recognize').on('click', updateState)
 
+            function resetBlocks() {
+              grids.each(function(d) { d.active = 0 }).call(updateGrid)
+            }
+        }else{
+            document.getElementById('content-body').innerHTML='本篇文章内容特殊，只有打开文章才能看到。'
+            document.getElementById('network-buttons').innerHTML=''
+        }
     </script>
 
 
@@ -288,124 +299,155 @@
         }
     </style>
     <script type="text/javascript">
+    if ('d3' in window){
+        var width = 960,
+            height = 1400,
+            nodeSize = 10;
 
-    var width = 960,
-        height = 1400,
-        nodeSize = 10;
+        var color = d3.scaleOrdinal(d3.schemeCategory20);
 
-    var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-    var svg = d3.select("#network-container").append("svg")
-        .attr("width", width)
-        .attr("height", height);
+        var svg = d3.select("#network-container").append("svg")
+            .attr("width", width)
+            .attr("height", height);
 
 
-    window.show_network=function(network) {
-        
-
-        // get network size
-        var netsize = {}
-        allLayers=[network.layers.input]
-        network.layers.hidden.forEach(function(l){
-            allLayers.push(l)
-        })
-        allLayers.push(network.layers.output)
-        console.log(allLayers)
-
-        // calc distances between nodes
-        largestLayerSize=0
-        allLayers.forEach(function(d){if(d.size>largestLayerSize){
-            largestLayerSize=d.size
-        }})
-
-        var xdist = width / allLayers.length,
-            ydist = height / largestLayerSize;
-
-        // create node locations
-        layerCount=0
-        var links = [];
-        allLayers.map(function(layer) {
-            layerCount +=1
-            layer.layerCount=layerCount
-            neurons=layer.neurons()
-            nNeurons=neurons.length
-            maxYDistance=nNeurons * ydist
-            startY=(height-maxYDistance)/2
-            neuCount=0
-            neurons.forEach(function(neuron){
-                neuCount +=1
-                neuron.x=(layerCount - 0.5) * xdist
-                neuron.y=(neuCount - 0.5 ) * ydist + startY
-                connections=neuron.connections.projected
-                keys=Object.keys(connections)
-                keys.forEach(function(id){
-                    links.push(connections[id])
-                })
+        window.show_network=function(network) {
+            
+            svg.selectAll('*').remove()
+            // get network size
+            var netsize = {}
+            allLayers=[network.layers.input]
+            network.layers.hidden.forEach(function(l){
+                allLayers.push(l)
             })
-        });
+            allLayers.push(network.layers.output)
 
-        // draw links
-        var link = svg.selectAll(".link")
-            .data(links)
-          .enter().append("line")
-            .attr("class", "link")
-            .attr("x1", function(d) { return d.from.x; })
-            .attr("y1", function(d) { return d.from.y; })
-            .attr("x2", function(d) { return d.to.x; })
-            .attr("y2", function(d) { return d.to.y; })
-            .style("stroke-width", function(d) { return d.weight * 10; });
+            // calc distances between nodes
+            largestLayerSize=0
+            allLayers.forEach(function(d){if(d.size>largestLayerSize){
+                largestLayerSize=d.size
+            }})
 
-        // draw nodes
-        var node = svg.selectAll(".node")
-            .data(network.neurons())
-          .enter().append("g")
-            .attr("transform", function(d) {
-                return "translate(" + d.neuron.x + "," + d.neuron.y + ")"; }
-            );
+            var xdist = width / allLayers.length,
+                ydist = height / largestLayerSize;
 
-        var circle = node.append("circle")
-            .attr("class", "node")
-            .attr("r", nodeSize)
-            .style("fill", function(d) { return color(d.layer.layerCount); });
+            // create node locations
+            layerCount=0
+            var links = [];
+            allLayers.map(function(layer) {
+                layerCount +=1
+                layer.layerCount=layerCount
+                neurons=layer.neurons()
+                nNeurons=neurons.length
+                maxYDistance=nNeurons * ydist
+                startY=(height-maxYDistance)/2
+                neuCount=0
+                neurons.forEach(function(neuron){
+                    neuCount +=1
+                    neuron.x=(layerCount - 0.5) * xdist
+                    neuron.y=(neuCount - 0.5 ) * ydist + startY
+                    connections=neuron.connections.projected
+                    keys=Object.keys(connections)
+                    keys.forEach(function(id){
+                        links.push(connections[id])
+                    })
+                })
+            });
+
+            // draw links
+            var link = svg.selectAll(".link")
+                .data(links)
+              .enter().append("line")
+                .attr("class", "link")
+                .attr("x1", function(d) { return d.from.x; })
+                .attr("y1", function(d) { return d.from.y; })
+                .attr("x2", function(d) { return d.to.x; })
+                .attr("y2", function(d) { return d.to.y; })
+                .style("stroke-width", function(d) { return d.weight * 10; });
+
+            // draw nodes
+            console.log(network.neurons())
+            var node = svg.selectAll(".node")
+                .data(network.neurons())
+              .enter().append("g")
+                .attr("transform", function(d) {
+                    return "translate(" + d.neuron.x + "," + d.neuron.y + ")"; }
+                );
+
+            var circle = node.append("circle")
+                .attr("class", "node")
+                .attr("r", nodeSize)
+                .style("fill", function(d) { return color(d.layer.layerCount); });
 
 
-        node.append("text")
-            .attr("dx", "-.35em")
-            .attr("dy", ".35em")
-            .text(function(d) { return d.neuron.ID; });
+            node.append("text")
+                .attr("dx", "-.35em")
+                .attr("dy", ".35em")
+                .text(function(d, i) { return i; })
+        }
+
+        var numInput=d3.select('#num-nodes')
+        var addBtn=d3.select('#add-neuron').on('click', function(){
+            value=numInput.attr('value')
+            value = parseInt(value)
+            numInput.attr('value', value + 1)
+        })
+        var reduceBtn=d3.select('#reduce-neuron').on('click', function(){
+            value= parseInt(numInput.attr('value'))
+            value = (value > 1)? value -1 : 0
+            numInput.attr('value', value)
+        })
+        var runBtn= d3.select('#network-run').on('click', function(){
+            num=parseInt(numInput.attr('value'))
+            if(num>0){
+                myNetwork=new synaptic.Architect.Perceptron(64, num, 10)
+                trainer=new synaptic.Trainer(myNetwork)
+                window.train(trainer)
+                window.show_network(myNetwork)
+                window.network=myNetwork
+                window.trainer=trainer
+                alert('训练完成')
+            }else{
+                alert('神经元的数量必须大于0')
+            }
+        })
     }
     </script>
 
 
 
     <script type="text/javascript">
-        var myNetwork = new synaptic.Architect.Perceptron(64, 25, 10)
-        var trainer = new synaptic.Trainer(myNetwork)
+        if('synaptic' in window){
+            var myNetwork = new synaptic.Architect.Perceptron(64, 25, 10)
+            var trainer = new synaptic.Trainer(myNetwork)
 
-        function train(){
-            d3.text('data', function(err, data) {
-              if (err) {
-                throw err
-              }
-              var ts, te, idx
-              data = d3.csvParseRows(data, function(row) { return row.map(Number) })
-                .map(function(d) {
-                // Expected output.
-                var t = d3.range(10).map(function() { return 0 })
-                t[d[0]] = 1
-                return { input: d.slice(1), output: t }
-              })
-                ts=Date.now()
-                trainer.train(data)
-                te=Date.now()
-                console.log('Time Spend: '+ (te-ts))
-            })
+            function train(trainer){
+                d3.text('data', function(err, data) {
+                  if (err) {
+                    throw err
+                  }
+                  var ts, te, idx
+                  data = d3.csvParseRows(data, function(row) { return row.map(Number) })
+                    .map(function(d) {
+                    // Expected output.
+                    var t = d3.range(10).map(function() { return 0 })
+                    t[d[0]] = 1
+                    return { input: d.slice(1), output: t }
+                  })
+                    ts=Date.now()
+                    trainer.train(data)
+                    te=Date.now()
+                    console.log('Time Spend: '+ (te-ts))
+                })
+            }
+            window.train=train
+            train(trainer)
+            window.network=myNetwork
+            window.trianer=trainer
+            window.show_network(myNetwork)
         }
-
-        train()
-        window.show_network(myNetwork)
-
     </script>
+
 
         </div>
     
