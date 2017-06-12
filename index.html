@@ -450,11 +450,11 @@
 
 <h3 id="计算计算过程"><a href="#计算计算过程" class="headerlink" title="计算计算过程"></a>计算计算过程</h3><h4 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h4><p>假设网络中所有的参数已知，根据一个输入向量x，求输出向量y。</p>
 <p>首先输入是一个64维向量：</p>
-<p><code>\[ x=\lfet [ x_1, x_2,\dots x_d \right] \](d=64)</code></p>
+<p><code>\[ x=\left[ x_1, x_2,\dots x_d \right] \](d=64)</code></p>
 <p>而输出向量应该是一个10维的向量，用来表征10个数字的识别概率。</p>
 <p><code>\[ \hat y=\left [ \hat y_1, \hat y_2,\dots \hat y_l \right](l=10) \]</code></p>
 <h4 id="已知条件："><a href="#已知条件：" class="headerlink" title="已知条件："></a>已知条件：</h4><p>-输入层到隐层神经元之间的链接权重<code>v</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">\[ </div><div class="line">v=\left| &#123; \begin&#123;array&#125;&#123;c&#125;</div><div class="line">v_&#123;11&#125; &amp; v_&#123;12&#125; &amp; \dots &amp; v_&#123;1d&#125;\\</div><div class="line">v_&#123;21&#125; &amp; v_&#123;22&#125; &amp; \dots &amp; v_&#123;2d&#125;\\</div><div class="line">\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\</div><div class="line">v_&#123;q1&#125; &amp; v_&#123;q2&#125; &amp; \dots &amp; v_&#123;qd&#125;</div><div class="line">\end&#123;array&#125; &#125;\right| (d=64, q=\text&#123;count of hidden layer neurons&#125;)</div><div class="line">\]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">\[ v=\left| &#123; \begin&#123;array&#125;&#123;c&#125;</div><div class="line">v_&#123;11&#125; &amp; v_&#123;12&#125; &amp; \dots &amp; v_&#123;1d&#125;\\</div><div class="line">v_&#123;21&#125; &amp; v_&#123;22&#125; &amp; \dots &amp; v_&#123;2d&#125;\\</div><div class="line">\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\</div><div class="line">v_&#123;q1&#125; &amp; v_&#123;q2&#125; &amp; \dots &amp; v_&#123;qd&#125;</div><div class="line">\end&#123;array&#125; &#125;\right| (d=64, q=\text&#123;count of hidden layer neurons&#125;)\]</div></pre></td></tr></table></figure>
 <ul>
 <li>隐层神经元的阈值b</li>
 </ul>
