@@ -72,6 +72,39 @@
     </style>
 
     
+        <!-- mathjax -->
+        <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    menuSettings: {
+      zoom: "None"
+    },
+    showMathMenu: false,
+    jax: ["input/TeX","output/CommonHTML"],
+    extensions: ["tex2jax.js"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js"],
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [["\\(", "\\)"]],
+      displayMath: [["\\[", "\\]"]],
+      skipTags: ['^(?!code).*$']
+    }
+  });
+  var maths = document.getElementsByTagName("code");
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub,maths]);
+</script>
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [ ['\\(','\\)']]}});
+</script> -->
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script> -->
+
+    
     
         <!-- d3js -->
         <script src="https://d3js.org/d3.v4.min.js"></script>
