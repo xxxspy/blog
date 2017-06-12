@@ -495,7 +495,7 @@
 <p>而输出向量应该是一个10维的向量，用来表征10个数字的识别概率。</p>
 <p><code>\[ \hat y=\left [ \hat y_1, \hat y_2,\dots \hat y_l \right](l=10) \]</code></p>
 <h4 id="已知条件："><a href="#已知条件：" class="headerlink" title="已知条件："></a>已知条件：</h4><p>-输入层到隐层神经元之间的链接权重<code>v</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">v=\left| &#123; \begin&#123;array&#125;&#123;c&#125;</div><div class="line">v_&#123;11&#125; &amp; v_&#123;12&#125; &amp; \dots &amp; v_&#123;1d&#125;\\</div><div class="line">v_&#123;21&#125; &amp; v_&#123;22&#125; &amp; \dots &amp; v_&#123;2d&#125;\\</div><div class="line">\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\</div><div class="line">v_&#123;q1&#125; &amp; v_&#123;q2&#125; &amp; \dots &amp; v_&#123;qd&#125;</div><div class="line">\end&#123;array&#125; &#125;\right| (d=64, q=\text&#123;count of hidden layer neurons&#125;)</div><div class="line">\]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">\[ </div><div class="line">v=\left| &#123; \begin&#123;array&#125;&#123;c&#125;</div><div class="line">v_&#123;11&#125; &amp; v_&#123;12&#125; &amp; \dots &amp; v_&#123;1d&#125;\\</div><div class="line">v_&#123;21&#125; &amp; v_&#123;22&#125; &amp; \dots &amp; v_&#123;2d&#125;\\</div><div class="line">\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\</div><div class="line">v_&#123;q1&#125; &amp; v_&#123;q2&#125; &amp; \dots &amp; v_&#123;qd&#125;</div><div class="line">\end&#123;array&#125; &#125;\right| (d=64, q=\text&#123;count of hidden layer neurons&#125;)</div><div class="line">\]</div></pre></td></tr></table></figure>
 <ul>
 <li>隐层神经元的阈值b</li>
 </ul>
@@ -503,7 +503,7 @@
 <ul>
 <li>隐层到输出层的权重<code>w</code>：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">w=\left| &#123; \begin&#123;array&#125;&#123;c&#125;</div><div class="line">w_&#123;11&#125; &amp; w_&#123;12&#125; &amp; \dots &amp; w_&#123;1q&#125;\\</div><div class="line">w_&#123;21&#125; &amp; w_&#123;22&#125; &amp; \dots &amp; w_&#123;2q&#125;\\</div><div class="line">\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\</div><div class="line">w_&#123;l1&#125; &amp; w_&#123;l2&#125; &amp; \dots &amp; w_&#123;lq&#125;</div><div class="line">\end&#123;array&#125; &#125;\right| (l=10, q=\text&#123;count of hidden layer neurons&#125;)</div><div class="line">\]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">\[</div><div class="line">w=\left| &#123; \begin&#123;array&#125;&#123;c&#125;</div><div class="line">w_&#123;11&#125; &amp; w_&#123;12&#125; &amp; \dots &amp; w_&#123;1q&#125;\\</div><div class="line">w_&#123;21&#125; &amp; w_&#123;22&#125; &amp; \dots &amp; w_&#123;2q&#125;\\</div><div class="line">\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\</div><div class="line">w_&#123;l1&#125; &amp; w_&#123;l2&#125; &amp; \dots &amp; w_&#123;lq&#125;</div><div class="line">\end&#123;array&#125; &#125;\right| (l=10, q=\text&#123;count of hidden layer neurons&#125;)</div><div class="line">\]</div></pre></td></tr></table></figure>
 <ul>
 <li>输出层的阈值`( \theta )</li>
 </ul>
@@ -523,11 +523,11 @@
 <ul>
 <li>输出神经元输入</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">\gamma = w · \beta + \theta</div><div class="line">\]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\[</div><div class="line">\gamma = w · \beta + \theta</div><div class="line">\]</div></pre></td></tr></table></figure>
 <ul>
 <li>输出神经元的激活</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">f(\gamma)</div><div class="line">\]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\[</div><div class="line">f(\gamma)</div><div class="line">\]</div></pre></td></tr></table></figure>
     </div>
 
     
