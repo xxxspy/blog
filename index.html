@@ -285,7 +285,7 @@
 <p>准备数据，我们要得到输入和输出矩阵，输入矩阵每一行是一个64维的向量，输出矩阵每一行是一个10维矩阵</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">data=open(<span class="string">'orc-data.csv'</span>,<span class="string">'r'</span>).readlines()</div><div class="line">data=[line.strip().split(<span class="string">','</span>) <span class="keyword">for</span> line <span class="keyword">in</span> data]</div><div class="line">data=[list(map(row, int)) <span class="keyword">for</span> row <span class="keyword">in</span> data]</div><div class="line">data=[list(map(int, row)) <span class="keyword">for</span> row <span class="keyword">in</span> data]</div><div class="line">X=[row[<span class="number">1</span>:] <span class="keyword">for</span> row <span class="keyword">in</span> data]</div><div class="line">temp_Y=[row[<span class="number">0</span>] <span class="keyword">for</span> row <span class="keyword">in</span> data]</div><div class="line">Y=[]</div><div class="line"><span class="keyword">for</span> y <span class="keyword">in</span> temp_Y:</div><div class="line">	v=[<span class="number">0</span>]*<span class="number">10</span></div><div class="line">	v[y]=<span class="number">1</span></div><div class="line">	Y.append(v)</div></pre></td></tr></table></figure>
 <p>现在我们得到了两个矩阵X和Y。网络结构已经建好，我们可以训练这个模型了</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">model.compile(<span class="number">4</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">model.compile(loss=<span class="string">'categorical_crossentropy'</span>,</div><div class="line">				optimizer=<span class="string">'adam'</span>,</div><div class="line">				metrics=[<span class="string">'accuracy'</span>])</div><div class="line">model.fid(X, Y, batch_size=<span class="number">100</span>, nb_epoch=<span class="number">20</span>)</div></pre></td></tr></table></figure>
         </div>
     
 
@@ -787,7 +787,7 @@ if ('d3' in window){
     <div class="post-header index">
         <h1 class="title">
             <a href="/2017/06/10/selenim数据采集入门-for-psychologist/">
-                selenim数据采集入门(for psychologist)
+                selenium数据采集入门(for psychologist)
             </a>
         </h1>
         <div class="post-info">

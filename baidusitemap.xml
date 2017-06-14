@@ -4,6 +4,52 @@
 
     
   <url>
+    <loc>http://mlln.cn/2017/06/13/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9Cpython%E5%BA%93keras%E5%9C%A8windows%E4%B8%8B%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%EF%BC%8C%E5%B8%A6%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/</loc>
+    <lastmod>2017-06-14T08:13:20.319Z</lastmod>
+    <data>
+        <display>
+        <title>神经网络python库keras在windows下部署过程，带下载链接</title>
+        <pubTime>2017-06-13T02:00:15.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>神经网络</tag>
+         
+        <tag>keras</tag>
+         
+        <tag>机器学习</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mlln.cn/2017/06/10/selenim%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%85%A5%E9%97%A8-for-psychologist/</loc>
+    <lastmod>2017-06-14T08:02:49.043Z</lastmod>
+    <data>
+        <display>
+        <title>selenium数据采集入门(for psychologist)</title>
+        <pubTime>2017-06-10T07:52:00.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>selenium</tag>
+         
+        <tag>psychology</tag>
+         
+        <tag>数据采集</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://mlln.cn/2017/06/14/%E8%BF%9C%E7%A8%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E8%BD%BD%E5%92%8C%E6%9F%A5%E8%AF%A2%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2017-06-14T06:21:00.044Z</lastmod>
     <data>
@@ -29,29 +75,6 @@
         <pubTime>2017-06-13T09:57:23.000Z</pubTime>
         
         <tag>文本挖掘</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://mlln.cn/2017/06/13/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9Cpython%E5%BA%93keras%E5%9C%A8windows%E4%B8%8B%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%EF%BC%8C%E5%B8%A6%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/</loc>
-    <lastmod>2017-06-13T05:49:06.087Z</lastmod>
-    <data>
-        <display>
-        <title>神经网络python库keras在windows下部署过程，带下载链接</title>
-        <pubTime>2017-06-13T02:00:15.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>神经网络</tag>
-         
-        <tag>keras</tag>
-         
-        <tag>机器学习</tag>
          
          
            
@@ -119,29 +142,6 @@
              
               <breadCrumb title="数学分析" url="http://mlln.cn/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://mlln.cn/2017/06/10/selenim%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%85%A5%E9%97%A8-for-psychologist/</loc>
-    <lastmod>2017-06-10T02:49:27.627Z</lastmod>
-    <data>
-        <display>
-        <title>selenim数据采集入门(for psychologist)</title>
-        <pubTime>2017-06-10T07:52:00.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>selenium</tag>
-         
-        <tag>psychology</tag>
-         
-        <tag>数据采集</tag>
-         
-         
-           
         </display>
     </data>
     </url>
@@ -3099,7 +3099,7 @@
 
     
   <url>
-    <loc>http://mlln.cn/2015/03/01/Django%E6%95%99%E7%A8%8B%EF%BC%9A%5B5%5DURLpattern%E7%9A%84%E8%AF%AD%E6%B3%95%20-%20%E5%89%AF%E6%9C%AC/</loc>
+    <loc>http://mlln.cn/2015/03/01/Django%E6%95%99%E7%A8%8B%EF%BC%9A%5B5%5DURLpattern%E7%9A%84%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2017-06-07T14:21:10.292Z</lastmod>
     <data>
         <display>
@@ -3116,7 +3116,7 @@
 
     
   <url>
-    <loc>http://mlln.cn/2015/03/01/Django%E6%95%99%E7%A8%8B%EF%BC%9A%5B5%5DURLpattern%E7%9A%84%E8%AF%AD%E6%B3%95/</loc>
+    <loc>http://mlln.cn/2015/03/01/Django%E6%95%99%E7%A8%8B%EF%BC%9A%5B5%5DURLpattern%E7%9A%84%E8%AF%AD%E6%B3%95%20-%20%E5%89%AF%E6%9C%AC/</loc>
     <lastmod>2017-06-07T14:21:10.292Z</lastmod>
     <data>
         <display>
