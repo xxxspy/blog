@@ -157,6 +157,177 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/05/15/wxpython教程：[6]简单布局管理/">
+                wxpython教程：[6]简单布局管理
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>一个软件的界面又很多控件，这些控件是如何布局的？今天我们先来看一下简单的布局方式，之后我们再来看看一些复杂的布局（利用sizer）实现的布局。</p>
+<ul>
+<li><p>接着用之前写的代码，我们看一下代码：<br>很多内容都是之前的文章里介绍的，这里只是添加了两行代码：</p>
+</li>
+<li><p>panel=wx.Panel(self,-1)#创建一个面板对象</p>
+</li>
+<li><p>wx.TextCtrl(panel,pos=(3,3),size=(250,250))#添加一个文本框，并设置它的位置和大小</p>
+</li>
+</ul>
+<img src="/2015/05/15/wxpython教程：[6]简单布局管理/3a86813df8dcd100a92c4274718b4710b8122ff7.jpg" alt="wxpython教程：[6]简单布局管理" title="wxpython教程：[6]简单布局管理">
+<ul>
+<li><p>Panel是窗口的容器，通常其大小与Frame一样，在其上放置各种控件，比如放置按钮、文本框等。</p>
+</li>
+<li><p>创建文本框的时候，我们传入pos和size参数，顾名思义，就是位置和大小，这段代码：wx.TextCtrl(panel,pos=(3,3),size=(250,250))就是设置文本框的位置是x=3，y=3；大小是长宽都是250的正方形。</p>
+</li>
+<li><p>这就是我们看到的界面：<br>改变界面大小，文本框控件的位置和大小是不变的</p>
+</li>
+</ul>
+<img src="/2015/05/15/wxpython教程：[6]简单布局管理/3bb22487e950352a687e805d5043fbf2b2118b0d.jpg" alt="wxpython教程：[6]简单布局管理" title="wxpython教程：[6]简单布局管理">
+<img src="/2015/05/15/wxpython教程：[6]简单布局管理/346bd85c103853434ad022749013b07eca80880d.jpg" alt="wxpython教程：[6]简单布局管理" title="wxpython教程：[6]简单布局管理">
+<ul>
+<li>我们一眼就能看出这种方式布局的局限性，于是，也许下面这种方式更加简便与灵活：我们直接将文本框嫁接到Frame上，而不是利用Panel：</li>
+</ul>
+<img src="/2015/05/15/wxpython教程：[6]简单布局管理/4e83cb628535e5dd30b3008a75c6a7efcf1b628d.jpg" alt="wxpython教程：[6]简单布局管理" title="wxpython教程：[6]简单布局管理">
+<ul>
+<li>如此一来，文本框铺满整个Frame，大小与Fram相同，改变Frame大小，文本框也跟着变化：</li>
+</ul>
+<img src="/2015/05/15/wxpython教程：[6]简单布局管理/0862c354564e9258228323bb9f82d158cdbf4ef5.jpg" alt="wxpython教程：[6]简单布局管理" title="wxpython教程：[6]简单布局管理">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/15/pandas教程：[25]插值法填补缺失值/">
+                pandas教程：[25]插值法填补缺失值
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用插值法可以计算缺失值的估计值，所谓的插值法就是通过两点（x0，y0），（x1，y1）估计中间点的值，假设y=f(x)是一条直线，通过已知的两点来计算函数f(x),然后只要知道x就能求出y，以此方法来估计缺失值。当然我们也可以假设f（x)不是直线，二是其他函数。</p>
+<ul>
+<li>引入相关模块并创建一个数据框<br>数据框的内容为：<br>‘</li>
+</ul>
+<img src="/2015/05/15/pandas教程：[25]插值法填补缺失值/62667cd0f703918f03ed62cd523d269759eec4be.jpg" alt="pandas教程：[25]插值法填补缺失值" title="pandas教程：[25]插值法填补缺失值">
+<img src="/2015/05/15/pandas教程：[25]插值法填补缺失值/0865b518972bd40763af8cfa78899e510fb30909.jpg" alt="pandas教程：[25]插值法填补缺失值" title="pandas教程：[25]插值法填补缺失值">
+<ul>
+<li>使用插值法估计缺失值<br>输出结果为：</li>
+</ul>
+<img src="/2015/05/15/pandas教程：[25]插值法填补缺失值/b13fd48065380cd74f81fdeaa244ad34588281df.jpg" alt="pandas教程：[25]插值法填补缺失值" title="pandas教程：[25]插值法填补缺失值">
+<img src="/2015/05/15/pandas教程：[25]插值法填补缺失值/99636c0e0cf3d7cacdca6071f11fbe096b63a9be.jpg" alt="pandas教程：[25]插值法填补缺失值" title="pandas教程：[25]插值法填补缺失值">
+<ul>
+<li><p>我们可以计算一下缺失值实际上上前一个值和后一个值得平均数，因为interpolate（）假设函数是直线形式</p>
+</li>
+<li><p>假如index是数字，我们还可以根据数字来进行插值，用到参数method=’values’<br>比较一下插值的结果与上一个结果的不同之处这时候索引的数值实际上就是用于估计y的x值</p>
+</li>
+</ul>
+<img src="/2015/05/15/pandas教程：[25]插值法填补缺失值/dc854fda81cb39dbf9a83851d3160924ab183009.jpg" alt="pandas教程：[25]插值法填补缺失值" title="pandas教程：[25]插值法填补缺失值">
+<img src="/2015/05/15/pandas教程：[25]插值法填补缺失值/7a8a1446f21fbe09d1629c1368600c338744adbe.jpg" alt="pandas教程：[25]插值法填补缺失值" title="pandas教程：[25]插值法填补缺失值">
+<ul>
+<li>同样道理，如果index是时间，我们可以用method=time来达到同样的效果<br>输出结果为：</li>
+</ul>
+<img src="/2015/05/15/pandas教程：[25]插值法填补缺失值/54baacfb43166d22e24b4a93452309f79052d2be.jpg" alt="pandas教程：[25]插值法填补缺失值" title="pandas教程：[25]插值法填补缺失值">
+<img src="/2015/05/15/pandas教程：[25]插值法填补缺失值/f35ea0096b63f624d76166048444ebf81a4ca3be.jpg" alt="pandas教程：[25]插值法填补缺失值" title="pandas教程：[25]插值法填补缺失值">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/11/SPSS实例：[22]如何将几个变量相加减乘除/">
+                SPSS实例：[22]如何将几个变量相加减乘除
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如何计算几个变量之间的和？如何计算几个变量的乘积？或者是差、商？我们都可以使用spss菜单中的compute方法，这是spss的最基本的功能，只是大家很少去用就忘记了，下面我就干呢大家一起温习一下如何计算变量之间的和。</p>
+<ul>
+<li>我们打开spss的数据，在菜单中依次点击：transform–compute variables</li>
+</ul>
+<img src="/2015/05/11/SPSS实例：[22]如何将几个变量相加减乘除/d089b986c9177f3e80e97c7672cf3bc79e3d56a9.jpg" alt="SPSS实例：[22]如何将几个变量相加减乘除" title="SPSS实例：[22]如何将几个变量相加减乘除">
+<ul>
+<li>在打开的对话框中，我们输入变量名称，也就是几个变量相加后得到的一个变量的名字，然后点击【type&amp;label】</li>
+</ul>
+<img src="/2015/05/11/SPSS实例：[22]如何将几个变量相加减乘除/d019d2bf6c81800acf030975b33533fa838b47ac.jpg" alt="SPSS实例：[22]如何将几个变量相加减乘除" title="SPSS实例：[22]如何将几个变量相加减乘除">
+<ul>
+<li>输入标签【几个变量的和】，标签是对变量的解释，点击【继续】</li>
+</ul>
+<img src="/2015/05/11/SPSS实例：[22]如何将几个变量相加减乘除/a992e31f4134970ad095905497cad1c8a6865dac.jpg" alt="SPSS实例：[22]如何将几个变量相加减乘除" title="SPSS实例：[22]如何将几个变量相加减乘除">
+<ul>
+<li>接着我们选中一个想要计算的变量，点击【添加】按钮</li>
+</ul>
+<img src="/2015/05/11/SPSS实例：[22]如何将几个变量相加减乘除/948bcfc8a786c91799e5d242cb3d70cf3ac757ac.jpg" alt="SPSS实例：[22]如何将几个变量相加减乘除" title="SPSS实例：[22]如何将几个变量相加减乘除">
+<ul>
+<li>添加过来就是一个变量名，我们输入“+”号，然后再选入第二个变量</li>
+</ul>
+<img src="/2015/05/11/SPSS实例：[22]如何将几个变量相加减乘除/b7bc4c66d0160924a2f92260d60735fae7cd34a9.jpg" alt="SPSS实例：[22]如何将几个变量相加减乘除" title="SPSS实例：[22]如何将几个变量相加减乘除">
+<ul>
+<li>最后形成三个变量相加，点击ok按钮就可以计算新的变量了</li>
+</ul>
+<img src="/2015/05/11/SPSS实例：[22]如何将几个变量相加减乘除/7ac880510fb30f2450466c78ca95d143ac4b03a9.jpg" alt="SPSS实例：[22]如何将几个变量相加减乘除" title="SPSS实例：[22]如何将几个变量相加减乘除">
+<ul>
+<li>切换到变量视图下，看看是不是多了一个变量，这就是计算得到的和</li>
+</ul>
+<img src="/2015/05/11/SPSS实例：[22]如何将几个变量相加减乘除/d57e9994a4c27d1e2fc0bbbf19d5ad6edcc438ac.jpg" alt="SPSS实例：[22]如何将几个变量相加减乘除" title="SPSS实例：[22]如何将几个变量相加减乘除">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/05/11/spss怎么合并变量/">
                 spss怎么合并变量
             </a>
@@ -623,366 +794,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/05/03/python 线性代数：[10]求方阵的特征值特征向量/">
-                python 线性代数：[10]求方阵的特征值特征向量
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年05月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>求方阵（矩阵）的特征值和特征向量用的是python中的numpy.linagl.eig方法，它需要一个二维数组作为参数，输出一个一位数组（元素为特征值）和一个二维数组（特征向量组），我们还是在例子中学习一哈：</p>
-<ul>
-<li>先引入numpy模块</li>
-</ul>
-<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/a1ad16fa513d2697caee42aa57fbb2fb4216d8cd.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
-<ul>
-<li>创建一个对角矩阵，关于diag的用法可以看我前几篇文章</li>
-</ul>
-<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/29752a9b033b5bb57ea46a0934d3d539b700bc93.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
-<ul>
-<li>求矩阵x的特征值和特征向量，特征值保存在a中，特征向量保存在b中</li>
-</ul>
-<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/b3ba5d166d224f4abaa439e40bf790529922d1cd.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
-<ul>
-<li><p>使用循环的方法，我们来验证一下特征值和特征向量，验证的方法是特征值和特征向量的定义法：</p>
-</li>
-<li><p>设A为n阶矩阵，若存在常数λ及非零的n维向量x，使得</p>
-</li>
-<li><p>Ax=λx，</p>
-</li>
-<li><p>则称λ是矩阵A的特征值，x是A属于特征值λ的特征向量。</p>
-</li>
-</ul>
-<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/5202e5f2b21193137630b54767380cd790238d93.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
-<ul>
-<li>这是我今天犯的错误：</li>
-</ul>
-<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/6a22e8246b600c332d44943f184c510fd8f9a1cd.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
-<ul>
-<li><p>这是今天用到的所有代码：</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>import numpy</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>x=numpy.diag((1,2,3))</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>x</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[1, 0, 0],</p>
-</li>
-<li><p>[0, 2, 0],</p>
-</li>
-<li><p>[0, 0, 3]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>a,b=numpy.linalg.eig(x)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>a</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([ 1.,  2.,  3.])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>b</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[ 1.,  0.,  0.],</p>
-</li>
-<li><p>[ 0.,  1.,  0.],</p>
-</li>
-<li><p>[ 0.,  0.,  1.]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>for i in range(3):</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>if numpy.dot(x,b[:][i])==a[i]*b[:][i]:</p>
-</li>
-<li><p>print ‘正确’</p>
-</li>
-<li><p>else:print ‘错误‘</p>
-</li>
-<li><p>SyntaxError: EOL while scanning string literal</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>for i in range(3):</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>if numpy.dot(x,b[:][i])==a[i]*b[:][i]:</p>
-</li>
-<li><p>print ‘正确’</p>
-</li>
-<li><p>else:print ‘错误’</p>
-</li>
-<li><p>Traceback (most recent call last):</p>
-</li>
-<li><p>File “<pyshell#38>“, line 2, in <module></module></pyshell#38></p>
-</li>
-<li><p>if numpy.dot(x,b[:][i])==a[i]*b[:][i]:</p>
-</li>
-<li><p>ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>for i in range(3):</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>if (numpy.dot(x,b[:][i])==a[i]*b[:][i]).all():</p>
-</li>
-<li><p>print ‘正确’</p>
-</li>
-<li><p>else:print ‘错误’</p>
-</li>
-<li><p>正确</p>
-</li>
-<li><p>正确</p>
-</li>
-<li><p>正确</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/05/03/pandas教程：[11]aggregate分组计算/">
-                pandas教程：[11]aggregate分组计算
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年05月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>一旦对数据分组，接下来一定是对各组数据进行计算，这是通过groupby.aggregate()实现的，我们来看一下今天的例子：</p>
-<ul>
-<li>先引入必要的模块，然后创建一个DataFrame对象，如果你看了前几篇文章，应该已经知道这个DataFrame了。<br>这是内部数据：</li>
-</ul>
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/bf487563f6246b602a038662e8f81a4c510fa253.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/9e7ce6dcd100baa16f0973ad4410b912c8fc2ebb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<ul>
-<li>根据两个索引color、food进行分组</li>
-</ul>
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/f76575600c338744c3c81b6a520fd9f9d72aa053.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<ul>
-<li>计算各组总和：<br>计算结果为：</li>
-</ul>
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/310f3b1f95cad1c8309ec8317c3e6709c93d51bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/b853d6fcc3cec3fd551b9363d588d43f879427bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<ul>
-<li>计算结果默认使用了两个分组索引color和food作为新的DataFrame的索引（注意计算结果为一个DataFrame对象），可以使用reset_index()来将两个索引转化为列变量<br>结果为：</li>
-</ul>
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/d66b7e59252dd42a180435bd003b5bb5c9eab853.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/3bb22487e950352afb6c111e5043fbf2b2118b53.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<ul>
-<li>在分组是也可以使用as_index参数达到reset_index()的效果：<br>计算结果为：</li>
-</ul>
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/fd428c45d688d43f2a8ca5e47e1ed21b0ef43bbb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/1a94b36eddc451da37d338fdb5fd5266d01632bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<ul>
-<li>另外我们经常用到的一个方法为size()返回各组数据量<br>结果为：</li>
-</ul>
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/dc854fda81cb39db0ee55340d3160924ab1830bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/aa59892bd40735fa26d57aaf9d510fb30f2408bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<ul>
-<li>最后，还有一个经常用到的方法为describe()，对各组数据进行描述性统计：<br>计算结果为：</li>
-</ul>
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/34bbf8cd7b899e51ccab0e0241a7d933c8950dbb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/d872d695d143ad4b1b0b72d681025aafa40f06bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/05/01/SPSS实例：[38]spss22.0安装教程/">
-                SPSS实例：[38]spss22.0安装教程
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年05月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我以前用的是spss20.0，现在为什么要升级到spss22，因为新版本对中文支持更好，界面更加友好，帮助系统也是中文的，更重要的是spss22默认安装的时候可以安装python插件，让你可以在python中调用spss程序，大大减小数据分析工作中的重复劳动，废话不多说，我把自己安装的过程截图到下面。并进行简要说明。</p>
-<ul>
-<li>从网上下载一个安装文件，我用的是64位系统；打开安装文件</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/6398ecd3572c11df6526b6b5612762d0f603c276.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>解压，这个不用说</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/d68b65cb0a46f21f56e057c5f4246b600d33ae15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>在这个界面选择单个用户许可证，除非你明确知道自己是网络许可的。</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/27d647ee3d6d55fb6b317fb06f224f4a21a4dd76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>当然，用人家的产品得同意人家的协议，点击下一步</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/eab9044c510fd9f925c35cff272dd42a2934a415.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>随便输入一个名字啦，点击下一步</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/d66b7e59252dd42adedd083d013b5bb5c8eab815.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>我们当然是用简体中文啦，点击下一步</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/08b68e529822720eef39eb6c79cb0a46f31fab76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>这个就不建议大家装了，我反正没用过这个功能，点击下一步</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/11794d43fbf2b2119bf98cd8c88065380dd78e15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>这个是关键，我们需要安装，因为很多时候我们会用到python代码来处理数据，到时候你没安装的话，就是个麻烦事了。装上它，哪怕不用呢。</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/647912d7912397ddaeae91925b82b2b7d1a28715.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/eab9044c510fd9f925e05cff272dd42a2934a476.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>接受吧，点击下一步</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/29752a9b033b5bb53320296834d3d539b700bc76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>选择安装的位置，我一般安装到非系统盘，毕竟spss很大，装在c盘太占空间，到时候c盘没空间就不好闹了。</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/c8ab0bce36d3d53948ca06553887e950342ab076.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>这个就点击确定。</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/3bc6f750352ac65c14f36fe5f9f2b21192138a76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>弹出一个授权许可的界面，点击立即授权，点击下一步</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/b87985504fc2d562afdfd97be51190ef77c66c15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>我们输入序列码，点击下一步</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/e6508eef76c6a7effef1a1b0fffaaf51f2de6615.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>提示你授权许可完成</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/f29faa8f8c5494eec8f5068f2ff5e0fe98257e15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<ul>
-<li>重启系统，看看是否安装成功</li>
-</ul>
-<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/caae68094b36acaf34169f6a7ed98d1000e99c76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1025,19 +836,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

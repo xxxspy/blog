@@ -157,6 +157,175 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/04/19/SPSS实例：[29]相关样本卡方检验/">
+                SPSS实例：[29]相关样本卡方检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们先看这一个案例吧。然后具体来说一下。该案例来自于网络。</p>
+<ul>
+<li>数据的组织形式：在spss中，我们这样录入数据，1表示阳性、2表示阴性，最后一列为频数。这只是数据形式之一，假如我们的数据是原始数据类型的，而没有统计成频率形式，我们看这一篇文章就可以了：</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/faacb564034f78f0f6b07abf7b310a55b2191c87.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>先加权数据，假如我们数据是原始数据，而不是频数数据就可以不加权，这样你参考上面一篇文章。</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/d68b65cb0a46f21ff0e3bd1ff4246b600d33ae6c.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>在菜单栏上执行：分析–描述统计–交叉表</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/7d98931001e93901a73d6e7279ec54e736d19604.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>将两种方法先分别放入行和列中</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/30ecd5ef76094b36d36af8a1a1cc7cd98c109d47.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>点击统计量</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/d56b3634349b033b045f1f9617ce36d3d439bd6c.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>选择卡方值和McNemar，后者是真正的相关卡方检验要看的概率值</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/027a45b5c9ea15ce54390345b4003af33b87b26c.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<ul>
+<li>数据结果中，你可以看大盘McNemar检验中sig值为0.002，显著！结论为拒绝虚无假设，认为这两种方法检验结果是有差异的。</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[29]相关样本卡方检验/8c511fe93901213f3fcbad9056e736d12e2e9547.jpg" alt="SPSS实例：[29]相关样本卡方检验" title="SPSS实例：[29]相关样本卡方检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/">
+                SPSS实例：[32]卡方检验分类变量是否相关
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如我们的变量都是分类变量，我们怎么检验分类变量是否相关呢？我们这时候用到了卡方检验，下面是卡方检验的详细步骤：</p>
+<ul>
+<li>看图，我们想要检验第九题对第一题有没有相关，或者可以说，第九题对第一题有没有影响呢？我们选择卡方检验</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/a1ad16fa513d2697fe2b56ed57fbb2fb4216d843.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>数据的组织形式就是这样每一列代表一个问卷的答案</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/6dc09e0a19d8bc3e93b5587a808ba61ea9d34585.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>然后我们在菜单栏上选择【分析】【描述统计】【交叉表】</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/0d729944ebf81a4c90cab279d52a6059242da643.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>把第一题和第九题分别放入相应的变量框，点击【statistics】</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/246cca2a2834349bcafe3035cbea15ce37d3be43.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>在打开的对话框中，我们选择卡方值，点击【continue】</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/b74124f33a87e950e6efaddc12385343faf2b443.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>回到这个主对话框，点击【ok】</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/9e7ce6dcd100baa1f491190b4510b912c9fc2e85.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<ul>
+<li>这时候我们看到统计结果，我们要在论文中报告卡方值和sig值。sig值如果小于0.05，说明相关显著，也就是第九题会显著影响第一题。现在看到的结论是两者没有相关，第九题不影响第一题的选择。</li>
+</ul>
+<img src="/2016/04/19/SPSS实例：[32]卡方检验分类变量是否相关/73ca5910b912c8fcfd4ea87dfe039245d7882185.jpg" alt="SPSS实例：[32]卡方检验分类变量是否相关" title="SPSS实例：[32]卡方检验分类变量是否相关">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/04/17/amos21.0教程：[8]如何更改界面语言/">
+                amos21.0教程：[8]如何更改界面语言
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年04月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天打开amos使用的时候发现amos的界面语言变成了日语，日了，怎么改回来？我从网上找了一堆方法，均告失败，然后就自己探索了一下，发现了这个设置语言的地方，真的是很隐蔽呀。下面是具体的方法：</p>
+<ul>
+<li>首先打开开始菜单，找到所有程序，在这里我们可以找到amos</li>
+</ul>
+<img src="/2016/04/17/amos21.0教程：[8]如何更改界面语言/b7bc4c66d0160924fbddf8e3d50735fae7cd340a.jpg" alt="amos21.0教程：[8]如何更改界面语言" title="amos21.0教程：[8]如何更改界面语言">
+<ul>
+<li>接着找到IBM文件夹下面的amos 21，点击打开文件夹</li>
+</ul>
+<img src="/2016/04/17/amos21.0教程：[8]如何更改界面语言/1899a23eb13533faa377c9d6a9d3fd1f43345bc1.jpg" alt="amos21.0教程：[8]如何更改界面语言" title="amos21.0教程：[8]如何更改界面语言">
+<ul>
+<li>在这个文件夹里有language这个选项，点击打开</li>
+</ul>
+<img src="/2016/04/17/amos21.0教程：[8]如何更改界面语言/32bb9c8ba61ea8d3d9e32efc960a304e271f58c1.jpg" alt="amos21.0教程：[8]如何更改界面语言" title="amos21.0教程：[8]如何更改界面语言">
+<ul>
+<li>弹出来一个窗口，让我们选择语言，我们选择英语即可，点击ok</li>
+</ul>
+<img src="/2016/04/17/amos21.0教程：[8]如何更改界面语言/d002b34bd11373f0e2c73567a50f4bfbfaed040a.jpg" alt="amos21.0教程：[8]如何更改界面语言" title="amos21.0教程：[8]如何更改界面语言">
+<ul>
+<li>好了，现在我的界面变成了英语的了</li>
+</ul>
+<img src="/2016/04/17/amos21.0教程：[8]如何更改界面语言/ae8267310a55b3198601d88d42a98226cefc170a.jpg" alt="amos21.0教程：[8]如何更改界面语言" title="amos21.0教程：[8]如何更改界面语言">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/04/15/pandas教程：[21]带有缺失值的计算/">
                 pandas教程：[21]带有缺失值的计算
             </a>
@@ -606,187 +775,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/">
-                Excel2013：[5]阿拉伯数字与大写中文数字互转
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年03月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>使用Excel可以快速的将阿拉伯数字转换成大小写中文数字，方法很简单，就是设置一下数字格式，我们看下面的步步教程吧：</p>
-<ul>
-<li>先填充一个数字序列</li>
-</ul>
-<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/b110e6198618367a13d76ec92c738bd4b31ce50d.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
-<ul>
-<li>选中这个序列</li>
-</ul>
-<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/dbf554ed2e738bd47e7fa325a38b87d6277ff90d.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
-<ul>
-<li>右键单击，选择【设置单元格格式】</li>
-</ul>
-<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/b5ce925494eef01f6b2309d1e2fe9925bc317dab.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
-<ul>
-<li>打开对话框，点击【数字】标签，打开它</li>
-</ul>
-<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/2cb4fefe9925bc310a6a108c5cdf8db1cb1370ab.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
-<ul>
-<li>我们要设置格式为特殊格式中的【中文大写数字】</li>
-</ul>
-<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/1e71f724b899a901956b4a221f950a7b0208f50d.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
-<ul>
-<li>ok，现在是不是已经转化过来了。</li>
-</ul>
-<img src="/2016/03/23/Excel2013：[5]阿拉伯数字与大写中文数字互转/0862c354564e9258b10397fa9e82d158ccbf4eab.jpg" alt="Excel2013：[5]阿拉伯数字与大写中文数字互转" title="Excel2013：[5]阿拉伯数字与大写中文数字互转">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/03/23/Python教程：[15]TCP客户端程序/">
-                Python教程：[15]TCP客户端程序
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年03月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>上一篇文章我们讲了如何编写服务器程序，现在我们要编写客户端程序，我们同样是在例子中讲解，方便你实现快速开发。实际上我有其他语言的编程基础，我学习python一个星期就可以开发小型软件了，就是在例子中学习，而不是翻一本书。下面是具体的例子：</p>
-<ul>
-<li>有了上一篇文章的基础，我们再来看下面的代码的时候就非常简单了。首先设置服务器的地址，因为服务器就是在本机上，所以设置成localhost；接着设置端口，一定要和服务器的端口一样，否则就会出现错误；然后设置缓存大小，ADDR其实就是地址+端口。</li>
-</ul>
-<img src="/2016/03/23/Python教程：[15]TCP客户端程序/9f6e190828381f300287b785ab014c086f06f0c5.jpg" alt="Python教程：[15]TCP客户端程序" title="Python教程：[15]TCP客户端程序">
-<ul>
-<li>接下来的两句就是建立套接字，然后绑定到ADDR的地址上，我们看及时编译的出现了错误提示，因为我没有开启服务器，或者端口号设置错误了。你改过来就好了。</li>
-</ul>
-<img src="/2016/03/23/Python教程：[15]TCP客户端程序/29790130e924b899448943146c061d950a7bf622.jpg" alt="Python教程：[15]TCP客户端程序" title="Python教程：[15]TCP客户端程序">
-<ul>
-<li>接着就是数据传输部分，和上一篇文章的一样，你自己看一下就懂了。</li>
-</ul>
-<img src="/2016/03/23/Python教程：[15]TCP客户端程序/7ab514d162d9f2d3a0a41ec3abec8a136327cc22.jpg" alt="Python教程：[15]TCP客户端程序" title="Python教程：[15]TCP客户端程序">
-<ul>
-<li>程序运行时，我们可以看到服务器端已经提示连接成功，这时候如果你在客户端输入数据，就会看到数据的传输，服务器添加一个时间戳，然后再返回数据到客户端。</li>
-</ul>
-<img src="/2016/03/23/Python教程：[15]TCP客户端程序/647912d7912397dd9a27bd285b82b2b7d0a28704.jpg" alt="Python教程：[15]TCP客户端程序" title="Python教程：[15]TCP客户端程序">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/03/19/DataNitro：[10]Image对象/">
-                DataNitro：[10]Image对象
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年03月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>excel里有很多图片和图表，我们使用datanitro也可以对这些图片进行操作，这就用到了Image对象。</p>
-<ul>
-<li>插入图片：</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/1e71f724b899a90136a7ec6a1e950a7b0308f599.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>在Python shell里插入一个图片：</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/4d4970061d950a7b7ca7f99809d162d9f3d3c999.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>它可以立刻显示在excel里</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/8697397f9e2f07085dbb9d5cea24b899a801f2f5.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>设置图片的坐标：</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/1e71f724b899a901368bec6a1e950a7b0308f5f5.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>设置图片的高度和宽度</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/27d647ee3d6d55fb2054c17a6e224f4a21a4dd99.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>设置图片的旋转角度</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/034965f40ad162d97050d54012dfa9ec8b13cdf5.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>这是旋转后的效果</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/6c63514a20a446239158123e9b22720e0df3d799.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>删除图片</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/476217f790529822e9a18e9fd4ca7bcb0b46d499.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>替换图片：保持图片原先的属性不变</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/d68b65cb0a46f21f1fa6e90ff5246b600d33ae99.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>使用Python的pyplot模块绘图</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/f76575600c3387444c579820520fd9f9d62aa099.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>返回所有图片</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/29752a9b033b5bb57a6997a235d3d539b700bcf5.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<ul>
-<li>锁定图片，用于图片的排版，可以让图片与单元格绑定</li>
-</ul>
-<img src="/2016/03/19/DataNitro：[10]Image对象/3792cb39b6003af383046b3c362ac65c1138b6f5.jpg" alt="DataNitro：[10]Image对象" title="DataNitro：[10]Image对象">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -829,19 +817,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

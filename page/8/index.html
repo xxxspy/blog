@@ -157,6 +157,212 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/08/05/mysql教程：[1]下载安装与配置/">
+                mysql教程：[1]下载安装与配置
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这是mysql教程第一篇，我介绍一下自己的平台：windows7 64位，安装mysql版本是5.6，mysql 5.6的32位和64位的下载链接都在文章最下面的参考资料里（下载密码就是在链接后面），大家可以看文章的下面下载适合自己的版本，我就用的是64位。</p>
+<ul>
+<li>第一步我们先在C:Program Files路径下，建立一个新文件夹，命名为mysql</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/58af236d55fbb2fbbfba776d4d4a20a44723dcf9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>将下载下来的压缩包解压到mysql文件夹汇总</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/f76575600c338744fb550003530fd9f9d62aa0f9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>最后我解压得到的mysql就是酱紫了：注意看地址栏，看看和你是不是一样；当然你可以和我不一样，但是在后面的步骤中我是需要用到mysql的解压路径的，所以，希望你注意一下啦。了</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/7787b9efce1b9d16a98eb51ef1deb48f8d5464c0.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>我们打开计算机的【属性】面板，你可能叫【我的电脑】，随便啦</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/148f28d3d539b6001b5e20c8eb50352ac75cb7f9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>打开【高级系统设置】，，，哎，过程很繁琐呀</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/9864a2315c6034a83cab97fec9134954082376c0.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>切换到【高级】标签下，打开环境变量</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/906289dda144ad346a2fa8f8d2a20cf430ad85f9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>新建一个系统该变量，点击【新建】</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/310f3b1f95cad1c8d8f2d3587d3e6709c83d51c0.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>变量名设置为【MYSQL_HOME】，变量值设置为mysql的解压路径【C:Program Filesmysql】</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/4e0b3ea4462309f791cd836d700e0cf3d6cad6eb.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>接着找到path，编辑一下，点击【编辑】</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/ae10eddeb48f8c54cd43ea5038292df5e1fe7ff9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>将新的路径添加进去，注意是添加不是覆盖，添加的路径是【%MYSQL_HOME%in】，注意与其他路径用分号隔开</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/5d212aa85edf8db1afbe531b0b23dd54574e74f9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>打开dos窗口（win+r，输入cmd，点击确定）</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/cc506c8b4710b9124651d981c1fdfc03934522f9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>我们将路径重新定位到mysqlin下，用到了cd命令，你可以看我写的文章【dos命令：[1]cd用法】来直到cd的意义。我们现在输入的命令是【cd /d c:Program Filesin】</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/4abae5edab64034fc384ed79adc379310b551dc0.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<ul>
+<li>接着我们输入命令【mysqld install MySQL –defaults-file=”D:Program Filesmysqlmy-default.ini”】，看到成功安装的提示了没？这说明已经安装成功了。欢呼吧，你可以开始mysql开发了。下一篇文章我们会讲到如何运行mysql服务器。</li>
+</ul>
+<img src="/2016/08/05/mysql教程：[1]下载安装与配置/a583631ed21b0ef48178b721dfc451da80cb3ef9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/05/spss如何检验残差是否符合正态分布/">
+                spss如何检验残差是否符合正态分布
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在做回归的时候，残差的分布必须是正态分布，否则就会使得得到的回归方程没有任何实际的意义。在检验残差的分布是否为正态的时候，我们要用到pp图和直方图，下面就是我们做pp图和直方图的方法，还附有对这两种图的分析方法。<br>方法/步骤</p>
+<ul>
+<li>在菜单栏上执行：分析–回归–线性，打开线性回归对话框</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/e7cd7b899e510fb3fc5ab174d933c895d0430c96.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li>将自变量和因变量都放到各自的位置，如图所示，dependent栏是因变量，independent是自变量栏</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/58ee3d6d55fbb2fb00a49ef14f4a20a44723dc42.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li><p>设置好变量以后，我们点击plots按钮，设置一下要绘制的图形</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/faedab64034f78f0f4955c1079310a55b2191cb2.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li>将y轴设置为概率，将x轴设置为残差，如图所示</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/b7003af33a87e9505ebe358f10385343faf2b4ac.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li>勾选直方图和pp图，如图所示，这样才可以输出这两个图，点击continue按钮返回主菜单</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/3b87e950352ac65c7daca090fbf2b21192138aac.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li>点击ok按钮，开始输出数据</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/4610b912c8fcc3ce14990fd09245d688d53f20fc.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li>我们先来看直方图，这个图形中你要看这个图形分布是否符合正态分布的样子，其实正态分布只是要求数据大概符合正态，下面这个样子就大概可以认为数据是符合正态分布的</li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/b17eca8065380cd7e7b7640ea144ad34588281ac.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<ul>
+<li><p>pp图要看点和线的关系，如果点都围绕在线的周围，如图所示，就可以认为数据是符合正态分布的，这也是一个大概的检验方法，因为线性回归没有对残差的分布形态做出特别严格的要求，只要大概符合就可以了。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/05/spss如何检验残差是否符合正态分布/0d338744ebf81a4c08bd2a2ad72a6059242da642.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/03/excel怎样给坐标轴添加标题/">
+                excel怎样给坐标轴添加标题
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>excel中自动建立的图标是没有坐标轴的标题的，为了让用户看懂图表，我们必须给图表添加坐标轴标题，下面就介绍了一种添加方法，具体步骤如下：<br>步骤/方法</p>
+<ul>
+<li>斜着拖动鼠标，选中数据源，据此来建立图表</li>
+</ul>
+<img src="/2016/08/03/excel怎样给坐标轴添加标题/d31b0ef41bd5ad6e29a8b34c81cb39dbb7fd3cc7.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
+<ul>
+<li>在菜单栏上点击插入–柱形图，选择一种柱形图的样式</li>
+</ul>
+<img src="/2016/08/03/excel怎样给坐标轴添加标题/79f0f736afc379311d38518febc4b74542a911c7.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
+<ul>
+<li>插入了图表以后，我们来给图表添加标题，如图，在菜单栏上执行：坐标轴标题–主要纵坐标标题–竖排标题</li>
+</ul>
+<img src="/2016/08/03/excel怎样给坐标轴添加标题/00e93901213fb80ee76cb67136d12f2eb83894d3.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
+<ul>
+<li>在图表上多了一个文本框，在这个文本框中，将这几个字改为：降水量</li>
+</ul>
+<img src="/2016/08/03/excel怎样给坐标轴添加标题/2e2eb9389b504fc276e267a3e5dde71191ef6dd3.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
+<img src="/2016/08/03/excel怎样给坐标轴添加标题/29381f30e924b899936cae9e6e061d950b7bf6c0.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
+<ul>
+<li>接着再在菜单栏上执行：坐标轴标题–主要横坐标轴标题–坐标轴下方标题</li>
+</ul>
+<img src="/2016/08/03/excel怎样给坐标轴添加标题/8d5494eef01f3a29997502689925bc315d607cd3.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
+<ul>
+<li>在添加的文本框中输入：月份，这样给坐标轴添加标题就设置完成了。</li>
+</ul>
+<img src="/2016/08/03/excel怎样给坐标轴添加标题/35a85edf8db1cb13f4d4ebb5dd54564e93584bd3.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/08/01/Mysql教程：[2]access转mysql（A）/">
                 Mysql教程：[2]access转mysql（A）
             </a>
@@ -903,187 +1109,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/07/23/SPSS实例：[10]分割数据的方法/">
-                SPSS实例：[10]分割数据的方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年07月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我手上有一批数据，我们要分别计算本科生和专科生的性别、年级、年龄等变量的频率，我们可以将数据按照学历来分组，然后再进行描述性统计就能得到两个平行结果，一个是本科的一个是专科的。当然，如果我们做方差分析、回归分析，先将数据分组也一样可以得到不同人群的同样的结果。我们来看看具体的方法：</p>
-<ul>
-<li>首先我们打开数据，在菜单中执行：data–splitfile，进行数据分割</li>
-</ul>
-<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/0d729944ebf81a4c9674bcdbd52a6059252da61b.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
-<ul>
-<li>然后我们选择compare groups，这样可以对比两组人群（本科和专科）</li>
-</ul>
-<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/4a77b2af2edda3cc8f6ce83203e93901203f92dd.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
-<ul>
-<li>将学历这个变量发那个如分组列表里</li>
-</ul>
-<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/a28d62d98d1001e9cfb4441dba0e7bec55e797dd.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
-<ul>
-<li>点击ok，运行分组命令</li>
-</ul>
-<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/00a82701213fb80e825931c534d12f2eb83894dd.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
-<ul>
-<li>接着我们做一个描述性统计来看看结果</li>
-</ul>
-<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/c8ab0bce36d3d539637b5fd13887e950352ab01b.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
-<ul>
-<li>这是是得到的结果，我们看到数据结果分为两行，第一行是本科生，第二行是专科生。</li>
-</ul>
-<img src="/2016/07/23/SPSS实例：[10]分割数据的方法/fab3ac119313b07e2bfb001a0ed7912397dd8c1b.jpg" alt="SPSS实例：[10]分割数据的方法" title="SPSS实例：[10]分割数据的方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/">
-                Excel2013教程-快速创建大量指定名称的工作表
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年07月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>根据一列名称来创建一对工作表，工作表的名称就是这一列数据中的数据，这该怎么办？这里分享一个快速创建的方法，不使用任何vba代码，手工操作就可以完成。</p>
-<ul>
-<li>打开Excel，选中我们工作表名称这一列数据</li>
-</ul>
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/bd70426034a85edf6e2c502f48540923dc5475df.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<ul>
-<li>在插入选项下，找到数据透视表，我们点击它</li>
-</ul>
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/b9d8b7014c086e067877914703087bf40bd1cba4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<ul>
-<li>打开了一个对话框，我们看到选中的区域已经添加到了对话框中，直接点击确定按钮</li>
-</ul>
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/a84052086e061d956c9999347af40ad163d9caa4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<ul>
-<li>在工作表的右侧出现了一个对话框，如图所示，首选勾选报表名称，这是我们选择的数据的第一个单元格的值</li>
-</ul>
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/1cd4147b02087bf46333f9e5f3d3572c10dfcfa4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<ul>
-<li>在分析选项下找到【选项】菜单，如图所示，在选项菜单中，点击【显示报表筛选页】</li>
-</ul>
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/109eb7ec8a13632713326c3f908fa0ec09fac7a4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/bd7faf3533fa828b508333effc1f4134960a5adf.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/a1ad16fa513d2697210ca65154fbb2fb4216d8a4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<ul>
-<li>出现了一个对话框，直接点击确定按钮</li>
-</ul>
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/58af236d55fbb2fb3ff4f61e4e4a20a44723dca4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<ul>
-<li>我们看到，工作表已经创建好了，接着设置工作表的格式，如图所示</li>
-</ul>
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/6c63514a20a4462388150b6e9922720e0df3d7a4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<ul>
-<li>将列标题复制下载</li>
-</ul>
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/476217f790529822f6ec97cfd6ca7bcb0b46d4a4.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<ul>
-<li>选中所有的单元格，方法是使用shift键，点击【北京】和【sheets5】，这样之间的工作表就选中了</li>
-</ul>
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/c87c6ecf3bc79f3dff424a3cbba1cd11738b29df.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<ul>
-<li>将复制好的内容粘贴到【北京】工作表，这样所有的被选中的工作表中都粘贴了这个列标题，这样具有相同格式的大量工作表就创建完成了</li>
-</ul>
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/f99dcf00baa1cd117915dc2cb812c8fcc2ce2ddf.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<img src="/2016/07/19/Excel2013教程-快速创建大量指定名称的工作表/c28fddfdfc039245c5164f038694a4c27c1e25df.jpg" alt="Excel2013教程-快速创建大量指定名称的工作表" title="Excel2013教程-快速创建大量指定名称的工作表">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/">
-                SPSS实例：[5]龙骨图（聚类谱系图）怎么看
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年07月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>通常在层次聚类分析中，我们的数据处理结果会出现龙骨图或者叫做分类谱系图，其实在很多论文中，我们不需要报告龙骨图，所以大部分spss课本中并没有对龙骨图进行详细的介绍，在这，我给大家分享一篇经验，讲一下如何分析龙骨图（聚类谱系图）。</p>
-<ul>
-<li>两种样式的龙骨图，如图所示：下面第一幅图是spss20.0的样式，而在低版本中，spss出现的龙骨图是下面第二幅图的样式，不管哪种样式，分析的方法都是一样的。</li>
-</ul>
-<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/08b68e529822720e31c034317acb0a46f31fabb4.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
-<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/3bb22487e950352a98abf2c35243fbf2b0118bf0.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
-<ul>
-<li>龙骨图的本质是让我们看到聚类的过程：为了清晰可见，我们使用spss20.0产生的龙骨图，最左侧一列数字代表不同的省份，对省份进行分类，第一次分类结果是从各个数字延伸出来的直线相交点，如图所示，红色方框就是第一次聚类产生的类别。</li>
-</ul>
-<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/c8ab0bce36d3d539eed6d9083b87e950372ab0d7.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
-<ul>
-<li>同样的方式，我们看第二次聚类的结果为，假如我问你，第一个类别包含哪些省份？你应该能够说出来，应当是山西、江西、内蒙、吉林、安徽。</li>
-</ul>
-<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/245e8bcad1c8a78671bb9cc56609c93d71cf502d.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
-<ul>
-<li>横断法观察分类个数：通常我们使用一条线截断分类线来获得分类结果，如图所示。画一条竖直的直线，与分类线相交，我们看到出现了5个交点，所以应该是分成五类，而我们看最上面一条刻度线，红线与刻度线相交的点就是类间距离。分成五类的类间距离就是8。</li>
-</ul>
-<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/6a22e8246b600c33c2530e031b4c510fd8f9a190.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
-<ul>
-<li>类间距离的计算方法有很多种，通常使用的是组间平均距离法师最稳健的方法，所以通常我们说类间距离的时候说的都是组间平均距离，它指的是各组数据点两两之间的距离的平均。</li>
-</ul>
-<img src="/2016/07/19/SPSS实例：[5]龙骨图（聚类谱系图）怎么看/6f4703950a7b02086510ef2a63d9f2d3552cc8e5.jpg" alt="SPSS实例：[5]龙骨图（聚类谱系图）怎么看" title="SPSS实例：[5]龙骨图（聚类谱系图）怎么看">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1126,19 +1151,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

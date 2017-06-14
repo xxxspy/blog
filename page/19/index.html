@@ -157,6 +157,204 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/02/03/python 线性代数：[16]线性组合均值协方差阵/">
+                python 线性代数：[16]线性组合均值协方差阵
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这里从《实用多元统计分析》（理查德~约翰逊)这本书里摘出一个例子，看题目：</p>
+<ul>
+<li>引入相关模块</li>
+</ul>
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/09bb4f3d269759ee2a25ae8ab1fb43166d22df3f.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<ul>
+<li>创建几个符号，代码已知量</li>
+</ul>
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/58af236d55fbb2fb595e96534c4a20a44623dc3f.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<ul>
+<li>sigma代表已知的X矩阵的协方差矩阵<br>sigma =</li>
+</ul>
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/e6508eef76c6a7efbffe6767fefaaf51f2de665c.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/61183b2dd42a283403d3f84a58b5c9ea15cebf3f.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<ul>
+<li>u代表已知的x矩阵的均值向量<br>这是均值向量</li>
+</ul>
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/99636c0e0cf3d7ca5e83f137f11fbe096b63a93f.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/5af4d7ea15ce36d3e8714d7139f33a87e950b13f.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<ul>
+<li>、这是线性组合的系数矩阵</li>
+</ul>
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/f15e24292df5e0fee4c046405f6034a85fdf725c.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/570f8c58d109b3de17672b29cfbf6c81810a4c5c.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<ul>
+<li>计算均值向量，利用均值向量的计算公式：<br>代码为：<br>求得：</li>
+</ul>
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/9304c888d43f8794105b866fd11b0ef41ad53a88.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/1b0d4f0fd9f9d72a5311de5cd72a2834349bbb3f.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/cdfe7281800a19d82ddb4b4430fa828ba71e465c.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<ul>
+<li><p>同样，我们利用协方差矩阵的公式：<br>代码为：</p>
+</li>
+<li><p>求得结果为：</p>
+</li>
+</ul>
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/b29f8282d158ccbfe14b7b7b1ad8bc3eb03541b9.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/e1bf8725bc315c60b44da4ae8eb1cb134854775c.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<img src="/2016/02/03/python%20线性代数：[16]线性组合均值协方差阵/b13fd48065380cd7dc6b6caca244ad345982813f.jpg" alt="python 线性代数：[16]线性组合均值协方差阵" title="python 线性代数：[16]线性组合均值协方差阵">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/02/01/python 线性代数：[18]线性规划求最优解/">
+                python 线性代数：[18]线性规划求最优解
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> 现在有个需要解决的问题：我找到了一份实习工作，于是想租一个房子，最好离工作近点，但是还没毕业，学校时不时有事，还不能离学校远了；而且有时候还要去女朋友那里，她希望我就住在她附近，于是，我怎么选择房子的地址？假定：公司、学校、女盆友的在地图上的坐标分别是：（1,1），（4,6），（9,2），求我的房子的坐标？</p>
+<ul>
+<li>我们解决的方法是用scipy提供的一个scipy.optimize.minimize 方法，首先要写出一个计算距离的方程：</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/61183b2dd42a28343bbf204358b5c9ea15cebf19.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/cc506c8b4710b9124cece0b6c0fdfc039245220d.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>分别把三个地点的横坐标和纵坐标都保存在两个列向量里</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/c9bdddcec3fdfc031a55f5f0d73f8794a4c2260d.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>找一个起始点：</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/9c57e3faaf51f3def9aeaf2c97eef01f3a29791e.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>看一下，随便选择的这个住址到三个地点的距离的平方和<br>求得这个值很大：6224</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/d35a10f41bd5ad6e4fd472a282cb39dbb6fd3c0d.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>求最优解</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/5f9e93b1cb1349545502fe2c554e9258d1094a1e.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li><p>求得最优解<br>输出为：</p>
+</li>
+<li><p>[ 4.66666667  3.        ]</p>
+</li>
+<li><p>46.6666666667</p>
+</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/ca5257540923dd54086fb120d209b3de9c82481e.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>将地图绘制出来<br>求得我的地址就标在地图上（house的地方）</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/7ac880510fb30f24e1b7fa4bcb95d143ad4b030d.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/948bcfc8a786c917081f4471ca3d70cf3bc7571e.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>有的人还说了，假如我的预算有限，只能租得起五环边上的房子，那么问题也很简单，就是设定我的房子的坐标是(x,y)，假如五环到市中心（0,0）的距离为r=10，那么我的房子在五环边上，就可以用等式x<strong>2+y</strong>2-100=0来表示。可以写到我的代码里：</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/91138622720e0cf32f5c5cb10946f21fbf09aa96.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>在求最优解得时候，我们加上一个参数constraints</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/0db2c9ca7bcb0a46098999736863f6246a60af96.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>最后我们将五环也绘制在图上，看看我的房子是不是在五环上：</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/cdfe7281800a19d8df3f994f30fa828ba61e4678.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<ul>
+<li>最后求得的结果绘图如下：蓝色线就表示五环</li>
+</ul>
+<img src="/2016/02/01/python%20线性代数：[18]线性规划求最优解/54baacfb43166d22bfdc07de452309f79152d296.jpg" alt="python 线性代数：[18]线性规划求最优解" title="python 线性代数：[18]线性规划求最优解">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/02/01/SPSS实例：[18]中介效应占总效应百分比/">
+                SPSS实例：[18]中介效应占总效应百分比
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年02月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天跟大家分享的是一个用Excel计算中介效应占总效应的百分比的方法。这个百分比我们都知道，就是中介效应比总效应，看过我前面文章的人应该都知道如何进行中介效应的检验了，假如我们得出的结论是部分中介效应，那么我们需要计算总效应中的百分之多少是中介效应，所以我就做了一个Excel文件，可以帮助大家快速计算，下面是方法：</p>
+<ul>
+<li>从下面的参考资料里现在我在百度网盘里的文件</li>
+</ul>
+<img src="/2016/02/01/SPSS实例：[18]中介效应占总效应百分比/d68b65cb0a46f21fe423a14bf4246b600c33ae50.jpg" alt="SPSS实例：[18]中介效应占总效应百分比" title="SPSS实例：[18]中介效应占总效应百分比">
+<ul>
+<li>打开里面的Excel文件，我们看到这样一个表格</li>
+</ul>
+<img src="/2016/02/01/SPSS实例：[18]中介效应占总效应百分比/00a82701213fb80eee0a9dcf34d12f2eb8389494.jpg" alt="SPSS实例：[18]中介效应占总效应百分比" title="SPSS实例：[18]中介效应占总效应百分比">
+<ul>
+<li>我们举一个例子来说明如何使用，下面的三线表格就是我们中介效应检验的三个方程，看不懂的可以去翻我前面的文章</li>
+</ul>
+<img src="/2016/02/01/SPSS实例：[18]中介效应占总效应百分比/f677b1c379310a55a34921ecb54543a98226107d.jpg" alt="SPSS实例：[18]中介效应占总效应百分比" title="SPSS实例：[18]中介效应占总效应百分比">
+<ul>
+<li>将对应的值放入表格中的对应位置，在D2单元格就会出现百分比，那就是你需要的中介效应占总效应的百分比。</li>
+</ul>
+<img src="/2016/02/01/SPSS实例：[18]中介效应占总效应百分比/72ccb7773912b31baf0132318418367adab4e17e.jpg" alt="SPSS实例：[18]中介效应占总效应百分比" title="SPSS实例：[18]中介效应占总效应百分比">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/01/23/spss20.0多重线型回归模型的操作方法和结果分析/">
                 spss20.0多重线型回归模型的操作方法和结果分析
             </a>
@@ -546,261 +744,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/01/15/SPSS实例：[21]调节效应检验方法/">
-                SPSS实例：[21]调节效应检验方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年01月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>经常给人做数据分析，似乎大家遇到的一个瓶颈就是调节效应怎么做，我也不怕砸自己的饭碗，就将方法分享给大家，希望大家受用。</p>
-<ul>
-<li>在spss中，打开线性回归的菜单，如图所示</li>
-</ul>
-<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/3853ad1bb051f819fde94644d8b44aed2f73e7b5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
-<ul>
-<li>我们先将因变量【职业探索】、自变量【自我概念】、调节变量【社会支持】放入各自的框框。</li>
-</ul>
-<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/a992e31f4134970a15dc552197cad1c8a6865dd5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
-<ul>
-<li>点击下一层，设置第二个方程</li>
-</ul>
-<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/b110e6198618367aa7453ad32c738bd4b21ce5b5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
-<ul>
-<li>这第二层比第一层增加了一个交互项</li>
-</ul>
-<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/8759287adab44aed5182fbeab11c8701a08bfbb5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
-<ul>
-<li>点击statistic，设置输出什么参数</li>
-</ul>
-<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/a6c7d7177f3e6709e4af00f139c79f3df9dc55d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
-<ul>
-<li>一定要选择R方改变量，点击continue，然后点击ok</li>
-</ul>
-<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/c856613e6709c93d5e5d4bf99d3df8dcd00054d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
-<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/310f3b1f95cad1c88e14b9297d3e6709c83d51d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
-<ul>
-<li>我们可以看r方的该变量，第二个方程，sig F change值小于0.05，证明调节效应存在</li>
-</ul>
-<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/6648d73d70cf3bc7afaf88e2d300baa1cc112ad5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
-<ul>
-<li>我们看输出的结果，第一个红框是系数，也就是前面介绍的abcc’，sig值是他们的显著性水平，交互项系数的sig值小于0.05，说明存在调节效应。</li>
-</ul>
-<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/373bc4b44aed2e730b25c3228501a18b86d6fab5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
-<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/b853d6fcc3cec3fdc791e27bd488d43f869427d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/01/15/SPSS python教程：[8]CreateXMLOutput/">
-                SPSS python教程：[8]CreateXMLOutput
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年01月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>上一篇文章我们介绍了如何使用OMS（结果输出系统）来获取某个变量的平均数，今天我们接着这个话题，讲一讲上一篇文章中用到的spssaux.CreateXMLOutput。</p>
-<ul>
-<li>通常，如果你想学习一个模块，你只要用help（）方法即可</li>
-</ul>
-<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/1cd4147b02087bf403379869f0d3572c10dfcf1c.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
-<ul>
-<li>我们看到CreateXMLOutput有四个参数，除了cmd，其他都是可选的，我们来介绍一下这几个参数</li>
-</ul>
-<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/0b907cd9f2d3572c1c39535c8813632763d0c31c.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
-<ul>
-<li>cmd是syntax命令，比如下面计算平均数的一个syntax</li>
-</ul>
-<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/fab3ac119313b07e81649e880ed7912396dd8c12.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
-<ul>
-<li>omsid翻译为命令标识符：命令标识符可用于所有统计和绘图过程，以及在查看器的概要窗格中生成包含自己的可识别标题的输出区的任何其他命令。这些标识符通常（但不总是）与菜单上的过程名称和对话框标题相同或类似，这些名称和标题通常（但不总是）与基础命令名称相同。怎样查看一个输出表格的omsid呢，我们看一下截图：</li>
-</ul>
-<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/a84052086e061d950e4efeb879f40ad163d9cae3.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
-<ul>
-<li>subtype：表子类型是可以生成的枢轴表的不同类型。某些子类型仅由一个命令生成；其他子类型可由多个命令生成（尽管表看上去并不相同）。虽然表子类型名称通常是描述性的，但也可以选择其他名称（尤其是选择了大量命令时）；并且，两个子类型的名称可以非常类似。我们也可以查看一个表的子类型：</li>
-</ul>
-<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/2f9cbdcc7cd98d105f4bc5b1233fb80e7aec9050.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
-<ul>
-<li>最后是visible属性，也就是可见属性，默认情况下，我们是不能看到输出结果的，但是visible设置为1就可以在结果视图中看到输出结果。</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/01/15/SPSS自动化：[3]结果输出文档对象的属性/">
-                SPSS自动化：[3]结果输出文档对象的属性
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年01月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <ul>
-<li><p>1&gt;designated属性</p>
-</li>
-<li><p>2&gt;height 和width属性</p>
-</li>
-<li><p>3&gt;items属性</p>
-</li>
-<li><p>用法：</p>
-</li>
-<li><p>Dim objoutputdoc as ispssoutputdoc</p>
-</li>
-<li><p>Set objoutputdoc=objspssapp.getgesignatedoutputdoc           ‘声明变量并获取指定的输出文档。</p>
-</li>
-<li><p>Dim objoutputitems as ispssitems</p>
-</li>
-<li><p>Dim objoutputitem as ispssitem</p>
-</li>
-<li><p>Set objoutputitems=objoutputdoc.items         ‘声明并获取项目对象</p>
-</li>
-<li><p>Dim intcount as integer</p>
-</li>
-<li><p>Dim strtype() as string</p>
-</li>
-<li><p>Intcount=objoutputitems.count</p>
-</li>
-<li><p>Redim strtype(intcount)</p>
-</li>
-<li><p>For i=0 to count-1</p>
-</li>
-<li><p>Objoutputitem=objoutputitems.getitem(i)</p>
-</li>
-<li><p>Strtype(i)=objoutputitem.spsstype</p>
-</li>
-<li><p>Next I</p>
-</li>
-<li><p>4&gt;label属性：返回或者设置某个输出项的标签</p>
-</li>
-<li><p>用法：</p>
-</li>
-<li><p>Dim objoutputdoc as ispssoutputdoc</p>
-</li>
-<li><p>Set objoutputdoc=objspssapp.openoutputdoc(“c:\out.spo”)</p>
-</li>
-<li><p>Dim objoutputitems as ispssitems</p>
-</li>
-<li><p>Dim objoutputitem as ispssitem</p>
-</li>
-<li><p>Set objoutputitems=objoutputdoc.items</p>
-</li>
-<li><p>Dim intcount as integer</p>
-</li>
-<li><p>Intcount=objoutputitems.count</p>
-</li>
-<li><p>For i=0 to intcount-1</p>
-</li>
-<li><p>Set objoutputitem=objoutputitems.getitem(i)</p>
-</li>
-<li><p>If objoutputitem.label=’notes’ then</p>
-</li>
-<li><p>Objoutputitem.selected=true</p>
-</li>
-<li><p>Exit for</p>
-</li>
-<li><p>End if</p>
-</li>
-<li><p>Next i</p>
-</li>
-<li><p>5&gt;left和top属性：设置输出文档对象的位置</p>
-</li>
-<li><p>7&gt;outliningtoolbarvisible属性：在输出浏览器窗口中显示或者隐藏外观工具条。</p>
-</li>
-<li><p>用法：objoutputdoc.outliningtoolbarvisible=true</p>
-</li>
-<li><p>8&gt;printoptions属性：返回打印选项对象。</p>
-</li>
-<li><p>用法：</p>
-</li>
-<li><p>Setobjprintoptions=objoutputdoc.printoptions</p>
-</li>
-<li><p>Objprintoptions.headertext=”str”</p>
-</li>
-<li><p>Objprintoptions.papersize=4</p>
-</li>
-<li><p>Objprintoptions.papersource=1</p>
-</li>
-<li><p>Objprintoptions.startingpagenumber=10  ‘从第十页开始打印</p>
-</li>
-<li><p>Objoutputdoc.printdoc</p>
-</li>
-<li><p>8&gt;splitterpositon属性：返回或者设置分割线的位置。</p>
-</li>
-<li><p>用法：</p>
-</li>
-<li><p>objoutputdoc.splitterposition=objoutputdoc.width/2</p>
-</li>
-<li><p>9&gt;standardtoolbarvisible属性：返回或者设置标准工具条的可见性。</p>
-</li>
-<li><p>用法：</p>
-</li>
-<li><p>Objoutputdoc.standardtoolbarvisible=true</p>
-</li>
-<li><p>10&gt;visible属性：可见性。</p>
-</li>
-<li><p>11&gt;windowstate属性：窗口状态属性。</p>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -843,19 +786,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

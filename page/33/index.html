@@ -157,6 +157,366 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/05/03/python 线性代数：[10]求方阵的特征值特征向量/">
+                python 线性代数：[10]求方阵的特征值特征向量
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>求方阵（矩阵）的特征值和特征向量用的是python中的numpy.linagl.eig方法，它需要一个二维数组作为参数，输出一个一位数组（元素为特征值）和一个二维数组（特征向量组），我们还是在例子中学习一哈：</p>
+<ul>
+<li>先引入numpy模块</li>
+</ul>
+<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/a1ad16fa513d2697caee42aa57fbb2fb4216d8cd.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
+<ul>
+<li>创建一个对角矩阵，关于diag的用法可以看我前几篇文章</li>
+</ul>
+<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/29752a9b033b5bb57ea46a0934d3d539b700bc93.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
+<ul>
+<li>求矩阵x的特征值和特征向量，特征值保存在a中，特征向量保存在b中</li>
+</ul>
+<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/b3ba5d166d224f4abaa439e40bf790529922d1cd.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
+<ul>
+<li><p>使用循环的方法，我们来验证一下特征值和特征向量，验证的方法是特征值和特征向量的定义法：</p>
+</li>
+<li><p>设A为n阶矩阵，若存在常数λ及非零的n维向量x，使得</p>
+</li>
+<li><p>Ax=λx，</p>
+</li>
+<li><p>则称λ是矩阵A的特征值，x是A属于特征值λ的特征向量。</p>
+</li>
+</ul>
+<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/5202e5f2b21193137630b54767380cd790238d93.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
+<ul>
+<li>这是我今天犯的错误：</li>
+</ul>
+<img src="/2015/05/03/python%20线性代数：[10]求方阵的特征值特征向量/6a22e8246b600c332d44943f184c510fd8f9a1cd.jpg" alt="python 线性代数：[10]求方阵的特征值特征向量" title="python 线性代数：[10]求方阵的特征值特征向量">
+<ul>
+<li><p>这是今天用到的所有代码：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>import numpy</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x=numpy.diag((1,2,3))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 0, 0],</p>
+</li>
+<li><p>[0, 2, 0],</p>
+</li>
+<li><p>[0, 0, 3]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a,b=numpy.linalg.eig(x)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([ 1.,  2.,  3.])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1.,  0.,  0.],</p>
+</li>
+<li><p>[ 0.,  1.,  0.],</p>
+</li>
+<li><p>[ 0.,  0.,  1.]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>for i in range(3):</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>if numpy.dot(x,b[:][i])==a[i]*b[:][i]:</p>
+</li>
+<li><p>print ‘正确’</p>
+</li>
+<li><p>else:print ‘错误‘</p>
+</li>
+<li><p>SyntaxError: EOL while scanning string literal</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>for i in range(3):</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>if numpy.dot(x,b[:][i])==a[i]*b[:][i]:</p>
+</li>
+<li><p>print ‘正确’</p>
+</li>
+<li><p>else:print ‘错误’</p>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#38>“, line 2, in <module></module></pyshell#38></p>
+</li>
+<li><p>if numpy.dot(x,b[:][i])==a[i]*b[:][i]:</p>
+</li>
+<li><p>ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>for i in range(3):</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>if (numpy.dot(x,b[:][i])==a[i]*b[:][i]).all():</p>
+</li>
+<li><p>print ‘正确’</p>
+</li>
+<li><p>else:print ‘错误’</p>
+</li>
+<li><p>正确</p>
+</li>
+<li><p>正确</p>
+</li>
+<li><p>正确</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/03/pandas教程：[11]aggregate分组计算/">
+                pandas教程：[11]aggregate分组计算
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>一旦对数据分组，接下来一定是对各组数据进行计算，这是通过groupby.aggregate()实现的，我们来看一下今天的例子：</p>
+<ul>
+<li>先引入必要的模块，然后创建一个DataFrame对象，如果你看了前几篇文章，应该已经知道这个DataFrame了。<br>这是内部数据：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/bf487563f6246b602a038662e8f81a4c510fa253.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/9e7ce6dcd100baa16f0973ad4410b912c8fc2ebb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>根据两个索引color、food进行分组</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/f76575600c338744c3c81b6a520fd9f9d72aa053.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>计算各组总和：<br>计算结果为：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/310f3b1f95cad1c8309ec8317c3e6709c93d51bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/b853d6fcc3cec3fd551b9363d588d43f879427bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>计算结果默认使用了两个分组索引color和food作为新的DataFrame的索引（注意计算结果为一个DataFrame对象），可以使用reset_index()来将两个索引转化为列变量<br>结果为：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/d66b7e59252dd42a180435bd003b5bb5c9eab853.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/3bb22487e950352afb6c111e5043fbf2b2118b53.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>在分组是也可以使用as_index参数达到reset_index()的效果：<br>计算结果为：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/fd428c45d688d43f2a8ca5e47e1ed21b0ef43bbb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/1a94b36eddc451da37d338fdb5fd5266d01632bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>另外我们经常用到的一个方法为size()返回各组数据量<br>结果为：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/dc854fda81cb39db0ee55340d3160924ab1830bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/aa59892bd40735fa26d57aaf9d510fb30f2408bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<ul>
+<li>最后，还有一个经常用到的方法为describe()，对各组数据进行描述性统计：<br>计算结果为：</li>
+</ul>
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/34bbf8cd7b899e51ccab0e0241a7d933c8950dbb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<img src="/2015/05/03/pandas教程：[11]aggregate分组计算/d872d695d143ad4b1b0b72d681025aafa40f06bb.jpg" alt="pandas教程：[11]aggregate分组计算" title="pandas教程：[11]aggregate分组计算">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/05/01/SPSS实例：[38]spss22.0安装教程/">
+                SPSS实例：[38]spss22.0安装教程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年05月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我以前用的是spss20.0，现在为什么要升级到spss22，因为新版本对中文支持更好，界面更加友好，帮助系统也是中文的，更重要的是spss22默认安装的时候可以安装python插件，让你可以在python中调用spss程序，大大减小数据分析工作中的重复劳动，废话不多说，我把自己安装的过程截图到下面。并进行简要说明。</p>
+<ul>
+<li>从网上下载一个安装文件，我用的是64位系统；打开安装文件</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/6398ecd3572c11df6526b6b5612762d0f603c276.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>解压，这个不用说</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/d68b65cb0a46f21f56e057c5f4246b600d33ae15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>在这个界面选择单个用户许可证，除非你明确知道自己是网络许可的。</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/27d647ee3d6d55fb6b317fb06f224f4a21a4dd76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>当然，用人家的产品得同意人家的协议，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/eab9044c510fd9f925c35cff272dd42a2934a415.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>随便输入一个名字啦，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/d66b7e59252dd42adedd083d013b5bb5c8eab815.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>我们当然是用简体中文啦，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/08b68e529822720eef39eb6c79cb0a46f31fab76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>这个就不建议大家装了，我反正没用过这个功能，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/11794d43fbf2b2119bf98cd8c88065380dd78e15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>这个是关键，我们需要安装，因为很多时候我们会用到python代码来处理数据，到时候你没安装的话，就是个麻烦事了。装上它，哪怕不用呢。</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/647912d7912397ddaeae91925b82b2b7d1a28715.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/eab9044c510fd9f925e05cff272dd42a2934a476.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>接受吧，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/29752a9b033b5bb53320296834d3d539b700bc76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>选择安装的位置，我一般安装到非系统盘，毕竟spss很大，装在c盘太占空间，到时候c盘没空间就不好闹了。</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/c8ab0bce36d3d53948ca06553887e950342ab076.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>这个就点击确定。</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/3bc6f750352ac65c14f36fe5f9f2b21192138a76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>弹出一个授权许可的界面，点击立即授权，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/b87985504fc2d562afdfd97be51190ef77c66c15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>我们输入序列码，点击下一步</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/e6508eef76c6a7effef1a1b0fffaaf51f2de6615.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>提示你授权许可完成</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/f29faa8f8c5494eec8f5068f2ff5e0fe98257e15.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<ul>
+<li>重启系统，看看是否安装成功</li>
+</ul>
+<img src="/2015/05/01/SPSS实例：[38]spss22.0安装教程/caae68094b36acaf34169f6a7ed98d1000e99c76.jpg" alt="SPSS实例：[38]spss22.0安装教程" title="SPSS实例：[38]spss22.0安装教程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/05/01/SPSS实例：[33]混合设计的方差分析/">
                 SPSS实例：[33]混合设计的方差分析
             </a>
@@ -614,273 +974,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/04/19/Statsmodels：[1]模块简介/">
-                Statsmodels：[1]模块简介
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年04月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>Statsmodels是Python的统计建模和计量经济学工具包，包括一些描述统计、统计模型估计和推断。这篇文章是Statsmodels系列文章的第一篇，主要介绍一下Statsmodels能干什么，以方便一些初学者选择是否需要学习该模块。之后我会发布一些列入门教程，一是作为笔记自己查看，而是作为教程可供学者快速入门，下面我们来看看Statsmodels有啥特性吧。</p>
-<ul>
-<li>Liner regression models：线性回归模型</li>
-</ul>
-<img src="/2015/04/19/Statsmodels：[1]模块简介/b74124f33a87e950c0238e6813385343fbf2b4bb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
-<ul>
-<li>Gneralized linear models：一般线型模型，主要用于各种设计的方差分析</li>
-</ul>
-<img src="/2015/04/19/Statsmodels：[1]模块简介/d0526df082025aaf232303cff8edab64034f1a65.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
-<ul>
-<li>robust linear models:</li>
-</ul>
-<img src="/2015/04/19/Statsmodels：[1]模块简介/346bd85c1038534302fbfa259013b07eca8088bb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
-<ul>
-<li>Discrete choice models：离散选择模型，logit模型属于离散选择模型，主要用于微观计量经济学范畴</li>
-</ul>
-<img src="/2015/04/19/Statsmodels：[1]模块简介/ae8267310a55b31979e8ff7140a98226cffc1765.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
-<ul>
-<li>ANOVA：方差分析模型</li>
-</ul>
-<img src="/2015/04/19/Statsmodels：[1]模块简介/b258f5c4b74543a9170a87c81d178a82b9011465.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
-<ul>
-<li>Time series analysis：时间序列分析</li>
-</ul>
-<img src="/2015/04/19/Statsmodels：[1]模块简介/fab3ac119313b07e37892d0c0fd7912397dd8cbb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
-<ul>
-<li>Nonparametric estimators：非参检验</li>
-</ul>
-<img src="/2015/04/19/Statsmodels：[1]模块简介/b8405490f603738d345b7126b01bb051f819ec66.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
-<ul>
-<li>a wide range of statistical tests:各种统计检验</li>
-</ul>
-<img src="/2015/04/19/Statsmodels：[1]模块简介/969cbf44ad345982b7bd98960ff431adcbef84bb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
-<ul>
-<li>以各种方式输出表格：text，latex，html；读取各种格式的数据</li>
-</ul>
-<img src="/2015/04/19/Statsmodels：[1]模块简介/ac754782b2b7d0a20bfe7999c8ef76094b369abb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
-<ul>
-<li>绘图功能</li>
-</ul>
-<img src="/2015/04/19/Statsmodels：[1]模块简介/d1e312f431adcbef7c030302afaf2edda3cc9fbb.jpg" alt="Statsmodels：[1]模块简介" title="Statsmodels：[1]模块简介">
-<ul>
-<li><p>extensive unit tests to ensure correctness of results:大量的整体检验以保证结果的正确性</p>
-</li>
-<li><p>活跃的开发团体正在开发大量可用的工具</p>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/04/19/Excel2013：[59]匹配不同工作表记录/">
-                Excel2013：[59]匹配不同工作表记录
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年04月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>如何匹配不同工作表中的记录？假如有多个工作表，第一个工作表作为基本表，用于和其他几个表匹配记录，假如一条记录同时出现在了基本表和其他表中，我们就在基本表中标识出来。怎么实现这个过程？</p>
-<ul>
-<li>首先将Excel文件存为可以执行vba的格式，xlsm格式</li>
-</ul>
-<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/caae68094b36acaf906a34eb7fd98d1000e99ce4.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
-<ul>
-<li>我们利用SN号作为一条记录是否重复的指标，假如两条记录SN号相同，则认为两条记录匹配</li>
-</ul>
-<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/d002b34bd11373f0b4cccd88a70f4bfbfaed04f2.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
-<ul>
-<li>打开开发工具下的visual basic，或者可以按下快捷键alt+F11</li>
-</ul>
-<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/7d98931001e93901e5882f2978ec54e737d196e4.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
-<ul>
-<li>打开vb界面，我们双击 thisworkbook，大概一个代码界面</li>
-</ul>
-<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/a54e55fbfbedab643f81efd7f436afc378311ef2.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
-<ul>
-<li>复制以下代码到代码界面</li>
-</ul>
-<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/d019d2bf6c81800aeb562419b23533fa828b4733.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
-<ul>
-<li>将鼠标光标移动到代码的任意位置，按下快捷键F5即可执行代码，执行结果可见：在第一个工作表的最后一列标志出了某条记录出现在哪一个工作表中，如果所有工作表都没有匹配，则输出无匹配。</li>
-</ul>
-<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/f15e24292df5e0fe79922b165f6034a85fdf72e4.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
-<ul>
-<li>注意基本工作表总是位于最前面。也是Excel认为的第一个工作表，代码总是用第一个表中的数据与其他表中的数据去匹配，匹配成功则输出工作表的名称。</li>
-</ul>
-<img src="/2015/04/19/Excel2013：[59]匹配不同工作表记录/148f28d3d539b600985ba2a0ea50352ac75cb7d5.jpg" alt="Excel2013：[59]匹配不同工作表记录" title="Excel2013：[59]匹配不同工作表记录">
-<ul>
-<li><p>本教程用到的代码：复制可用。</p>
-</li>
-<li><p>Sub pipei()</p>
-</li>
-<li><p>Set d = CreateObject(“scripting.dictionary”)</p>
-</li>
-<li><p>For i = 2 To Worksheets.Count</p>
-</li>
-<li><p>For j = 1 To Sheets(i).Cells(1, 300).End(xlToLeft).Column</p>
-</li>
-<li><p>If Sheets(i).Cells(1, j).Text = “SN号” Then</p>
-</li>
-<li><p>For r = 2 To Sheets(i).Cells(65536, j).End(xlUp).Row</p>
-</li>
-<li><p>If Not (Sheets(i).Cells(r, j).Value = 0 Or Sheets(i).Cells(r, j).Text = “”) Then</p>
-</li>
-<li><p>d.Add Sheets(i).Cells(r, j).Text, Sheets(i).Name</p>
-</li>
-<li><p>End If</p>
-</li>
-<li><p>Next r</p>
-</li>
-<li><p>End If</p>
-</li>
-<li><p>Next j</p>
-</li>
-<li><p>Next i</p>
-</li>
-<li><p>Sheets(1).Activate</p>
-</li>
-<li><p>max_col = Cells(1, 300).End(xlToLeft).Column</p>
-</li>
-<li><p>For c = 1 To max_col</p>
-</li>
-<li><p>If Cells(1, c).Text = “SN号” Then</p>
-</li>
-<li><p>For r = 2 To Cells(65536, c).End(xlUp).Row</p>
-</li>
-<li><p>If d.exists(Cells(r, c).Text) Then</p>
-</li>
-<li><p>Cells(r, max_col + 1) = d.Item(Cells(r, c).Text)</p>
-</li>
-<li><p>Else</p>
-</li>
-<li><p>Cells(r, max_col + 1) = “无匹配”</p>
-</li>
-<li><p>End If</p>
-</li>
-<li><p>Next r</p>
-</li>
-<li><p>End If</p>
-</li>
-<li><p>Next c</p>
-</li>
-<li><p>MsgBox “ok”</p>
-</li>
-<li><p>End Sub</p>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/">
-                SPSS实例：[28]卡方检验百分比与理论值差异
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年04月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我们有一个研究检验某种疗法的有效性，统计了实施前后的人数，我们想要比较实施前和实施后人数是否有差异，怎么比较？有两种数据结构，得使用不同的方法，下面将要介绍的是这种数据没有原始数据，只有计数数据，如下图。变量9表示人数，实施前后表示该方法实施前用0表示，实施后用1表示。另外一种数据结构是你有原始数据，而不是计数数据，你可以参考我以前的文章：<a href="http://jingyan.baidu.com/article/d8072ac4587f6dec95cefd9a.html" target="_blank" rel="external">http://jingyan.baidu.com/article/d8072ac4587f6dec95cefd9a.html</a></p>
-<ul>
-<li>首先要给数据加权，我们在data菜单下，选择case加权</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/c71d0e385343fbf213af316fb27eca8064388fb8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>将变量9放入频数变量框，点击【ok】，完成加权（如果有原始数据，则不需要加权）</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/29790130e924b899f378ee746c061d950b7bf6f3.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>接着我们来做卡方检验，在菜单栏上执行：分析–非参检验–遗留选项–卡方检验</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/906289dda144ad34f23c10cbd2a20cf430ad85b8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>将实施前后变量放入检验变量框。</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/0db52fadcbef7609f9880ed32cdda3cc7dd99eb8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>这里有一个问题，如果你的数据有一个单元格频数小于5，你得使用精确卡方检验，需要点击【exact】进行设置</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/f99dcf00baa1cd117002e46cbb12c8fcc2ce2d82.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>勾选这个选项，点击继续</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/c9bdddcec3fdfc039bcc75f4d63f8794a5c22682.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>接着设置这里，我们可以检验不同组人数是否相同，使用【所有分类相同】；</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/27d647ee3d6d55fbc02fe06a6f224f4a21a4dd56.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>也可以自己设定频数，比如我设定为2和6，当然今天我们只讲上面的【所有分类相同】的情况。</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/1cd4147b02087bf46a59c1a5f0d3572c10dfcf82.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>这里就是检验结果了，sig值大于0.05，结果不显著，说明两组之间没有差异。</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/30ecd5ef76094b361f118ca1a1cc7cd98c109db8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>如果你用的是精确检验就会看大有一个精确sig值</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/91138622720e0cf3abe7dfb70846f21fbe09aa2f.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -923,19 +1016,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

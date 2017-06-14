@@ -157,6 +157,261 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/01/15/SPSS实例：[21]调节效应检验方法/">
+                SPSS实例：[21]调节效应检验方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>经常给人做数据分析，似乎大家遇到的一个瓶颈就是调节效应怎么做，我也不怕砸自己的饭碗，就将方法分享给大家，希望大家受用。</p>
+<ul>
+<li>在spss中，打开线性回归的菜单，如图所示</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/3853ad1bb051f819fde94644d8b44aed2f73e7b5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>我们先将因变量【职业探索】、自变量【自我概念】、调节变量【社会支持】放入各自的框框。</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/a992e31f4134970a15dc552197cad1c8a6865dd5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>点击下一层，设置第二个方程</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/b110e6198618367aa7453ad32c738bd4b21ce5b5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>这第二层比第一层增加了一个交互项</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/8759287adab44aed5182fbeab11c8701a08bfbb5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>点击statistic，设置输出什么参数</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/a6c7d7177f3e6709e4af00f139c79f3df9dc55d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>一定要选择R方改变量，点击continue，然后点击ok</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/c856613e6709c93d5e5d4bf99d3df8dcd00054d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/310f3b1f95cad1c88e14b9297d3e6709c83d51d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>我们可以看r方的该变量，第二个方程，sig F change值小于0.05，证明调节效应存在</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/6648d73d70cf3bc7afaf88e2d300baa1cc112ad5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<ul>
+<li>我们看输出的结果，第一个红框是系数，也就是前面介绍的abcc’，sig值是他们的显著性水平，交互项系数的sig值小于0.05，说明存在调节效应。</li>
+</ul>
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/373bc4b44aed2e730b25c3228501a18b86d6fab5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<img src="/2016/01/15/SPSS实例：[21]调节效应检验方法/b853d6fcc3cec3fdc791e27bd488d43f869427d5.jpg" alt="SPSS实例：[21]调节效应检验方法" title="SPSS实例：[21]调节效应检验方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/15/SPSS python教程：[8]CreateXMLOutput/">
+                SPSS python教程：[8]CreateXMLOutput
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇文章我们介绍了如何使用OMS（结果输出系统）来获取某个变量的平均数，今天我们接着这个话题，讲一讲上一篇文章中用到的spssaux.CreateXMLOutput。</p>
+<ul>
+<li>通常，如果你想学习一个模块，你只要用help（）方法即可</li>
+</ul>
+<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/1cd4147b02087bf403379869f0d3572c10dfcf1c.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
+<ul>
+<li>我们看到CreateXMLOutput有四个参数，除了cmd，其他都是可选的，我们来介绍一下这几个参数</li>
+</ul>
+<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/0b907cd9f2d3572c1c39535c8813632763d0c31c.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
+<ul>
+<li>cmd是syntax命令，比如下面计算平均数的一个syntax</li>
+</ul>
+<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/fab3ac119313b07e81649e880ed7912396dd8c12.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
+<ul>
+<li>omsid翻译为命令标识符：命令标识符可用于所有统计和绘图过程，以及在查看器的概要窗格中生成包含自己的可识别标题的输出区的任何其他命令。这些标识符通常（但不总是）与菜单上的过程名称和对话框标题相同或类似，这些名称和标题通常（但不总是）与基础命令名称相同。怎样查看一个输出表格的omsid呢，我们看一下截图：</li>
+</ul>
+<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/a84052086e061d950e4efeb879f40ad163d9cae3.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
+<ul>
+<li>subtype：表子类型是可以生成的枢轴表的不同类型。某些子类型仅由一个命令生成；其他子类型可由多个命令生成（尽管表看上去并不相同）。虽然表子类型名称通常是描述性的，但也可以选择其他名称（尤其是选择了大量命令时）；并且，两个子类型的名称可以非常类似。我们也可以查看一个表的子类型：</li>
+</ul>
+<img src="/2016/01/15/SPSS%20python教程：[8]CreateXMLOutput/2f9cbdcc7cd98d105f4bc5b1233fb80e7aec9050.jpg" alt="SPSS python教程：[8]CreateXMLOutput" title="SPSS python教程：[8]CreateXMLOutput">
+<ul>
+<li>最后是visible属性，也就是可见属性，默认情况下，我们是不能看到输出结果的，但是visible设置为1就可以在结果视图中看到输出结果。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/15/SPSS自动化：[3]结果输出文档对象的属性/">
+                SPSS自动化：[3]结果输出文档对象的属性
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <ul>
+<li><p>1&gt;designated属性</p>
+</li>
+<li><p>2&gt;height 和width属性</p>
+</li>
+<li><p>3&gt;items属性</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Dim objoutputdoc as ispssoutputdoc</p>
+</li>
+<li><p>Set objoutputdoc=objspssapp.getgesignatedoutputdoc           ‘声明变量并获取指定的输出文档。</p>
+</li>
+<li><p>Dim objoutputitems as ispssitems</p>
+</li>
+<li><p>Dim objoutputitem as ispssitem</p>
+</li>
+<li><p>Set objoutputitems=objoutputdoc.items         ‘声明并获取项目对象</p>
+</li>
+<li><p>Dim intcount as integer</p>
+</li>
+<li><p>Dim strtype() as string</p>
+</li>
+<li><p>Intcount=objoutputitems.count</p>
+</li>
+<li><p>Redim strtype(intcount)</p>
+</li>
+<li><p>For i=0 to count-1</p>
+</li>
+<li><p>Objoutputitem=objoutputitems.getitem(i)</p>
+</li>
+<li><p>Strtype(i)=objoutputitem.spsstype</p>
+</li>
+<li><p>Next I</p>
+</li>
+<li><p>4&gt;label属性：返回或者设置某个输出项的标签</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Dim objoutputdoc as ispssoutputdoc</p>
+</li>
+<li><p>Set objoutputdoc=objspssapp.openoutputdoc(“c:\out.spo”)</p>
+</li>
+<li><p>Dim objoutputitems as ispssitems</p>
+</li>
+<li><p>Dim objoutputitem as ispssitem</p>
+</li>
+<li><p>Set objoutputitems=objoutputdoc.items</p>
+</li>
+<li><p>Dim intcount as integer</p>
+</li>
+<li><p>Intcount=objoutputitems.count</p>
+</li>
+<li><p>For i=0 to intcount-1</p>
+</li>
+<li><p>Set objoutputitem=objoutputitems.getitem(i)</p>
+</li>
+<li><p>If objoutputitem.label=’notes’ then</p>
+</li>
+<li><p>Objoutputitem.selected=true</p>
+</li>
+<li><p>Exit for</p>
+</li>
+<li><p>End if</p>
+</li>
+<li><p>Next i</p>
+</li>
+<li><p>5&gt;left和top属性：设置输出文档对象的位置</p>
+</li>
+<li><p>7&gt;outliningtoolbarvisible属性：在输出浏览器窗口中显示或者隐藏外观工具条。</p>
+</li>
+<li><p>用法：objoutputdoc.outliningtoolbarvisible=true</p>
+</li>
+<li><p>8&gt;printoptions属性：返回打印选项对象。</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Setobjprintoptions=objoutputdoc.printoptions</p>
+</li>
+<li><p>Objprintoptions.headertext=”str”</p>
+</li>
+<li><p>Objprintoptions.papersize=4</p>
+</li>
+<li><p>Objprintoptions.papersource=1</p>
+</li>
+<li><p>Objprintoptions.startingpagenumber=10  ‘从第十页开始打印</p>
+</li>
+<li><p>Objoutputdoc.printdoc</p>
+</li>
+<li><p>8&gt;splitterpositon属性：返回或者设置分割线的位置。</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>objoutputdoc.splitterposition=objoutputdoc.width/2</p>
+</li>
+<li><p>9&gt;standardtoolbarvisible属性：返回或者设置标准工具条的可见性。</p>
+</li>
+<li><p>用法：</p>
+</li>
+<li><p>Objoutputdoc.standardtoolbarvisible=true</p>
+</li>
+<li><p>10&gt;visible属性：可见性。</p>
+</li>
+<li><p>11&gt;windowstate属性：窗口状态属性。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/01/11/pandas教程：[4]Dataframe筛选数据/">
                 pandas教程：[4]Dataframe筛选数据
             </a>
@@ -378,65 +633,6 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2016/01/03/spss20.0安装和破解方法【附许可证】/">
-                spss20.0安装和破解方法【附许可证】
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年01月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>#####该方法已经失效#####大家不要骂街####<br>方法/步骤</p>
-<ul>
-<li>下一步</li>
-</ul>
-<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/7c1ed21b0ef41bd597c8467751da81cb38db3d9d.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
-<ul>
-<li>准备安装</li>
-</ul>
-<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/f636afc379310a55ecdf7077b74543a9832610bd.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
-<ul>
-<li>下一步</li>
-</ul>
-<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/0bd162d9f2d3572c9d19325f8a13632763d0c3be.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
-<ul>
-<li>下一步</li>
-</ul>
-<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/3c6d55fbb2fb4316f1e4d4f920a4462308f7d3be.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
-<ul>
-<li>因为我们一般使用的就是中文，</li>
-</ul>
-<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/5ab5c9ea15ce36d36b9f2db33af33a87e850b19e.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
-<ul>
-<li>。点击图中所示按钮</li>
-</ul>
-<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/c75c10385343fbf27ad708a0b07eca8064388fbe.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
-<ul>
-<li>继续</li>
-</ul>
-<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/4ec2d5628535e5dd0ab70b5c76c6a7efcf1b629e.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
             <a href="/2016/01/03/怎样将excel中的联系人导入到邮箱/">
                 怎样将excel中的联系人导入到邮箱
             </a>
@@ -513,6 +709,65 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/01/03/spss20.0安装和破解方法【附许可证】/">
+                spss20.0安装和破解方法【附许可证】
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>#####该方法已经失效#####大家不要骂街####<br>方法/步骤</p>
+<ul>
+<li>下一步</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/7c1ed21b0ef41bd597c8467751da81cb38db3d9d.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>准备安装</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/f636afc379310a55ecdf7077b74543a9832610bd.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>下一步</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/0bd162d9f2d3572c9d19325f8a13632763d0c3be.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>下一步</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/3c6d55fbb2fb4316f1e4d4f920a4462308f7d3be.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>因为我们一般使用的就是中文，</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/5ab5c9ea15ce36d36b9f2db33af33a87e850b19e.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>。点击图中所示按钮</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/c75c10385343fbf27ad708a0b07eca8064388fbe.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<ul>
+<li>继续</li>
+</ul>
+<img src="/2016/01/03/spss20.0安装和破解方法【附许可证】/4ec2d5628535e5dd0ab70b5c76c6a7efcf1b629e.jpg" alt="spss20.0安装和破解方法【附许可证】" title="spss20.0安装和破解方法【附许可证】">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/01/01/DataNitro：[5]Cell对象方法/">
                 DataNitro：[5]Cell对象方法
             </a>
@@ -574,176 +829,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/23/SPSS实例：[40]如何更改界面语言/">
-                SPSS实例：[40]如何更改界面语言
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>spss内置多国语言，除非你用的spss版本，老到该退休的版本，那时候只有英文版，现在的版本比如20、21、22都内置多国语言，可以自行设置。下面是具体的过程：</p>
-<ul>
-<li>先随便启动一个spss，我的版本是22</li>
-</ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/fd428c45d688d43f30fb53c47e1ed21b0ef43b73.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
-<ul>
-<li>我通用的是英文版，先看一下如何改成中文，点击edit–opetions</li>
-</ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/0865b518972bd407fc7911cb78899e510fb3090f.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
-<ul>
-<li>找到language选项，这里有设置输出结果的语言和用户界面的语言，都设置成中文即可</li>
-</ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/0b14ad19ebc4b745a62a7520ccfc1e178a82150f.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
-<ul>
-<li>当然，我们还可以选择是繁体中文还是简体中文</li>
-</ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/b110e6198618367a2fdbbdeb2d738bd4b31ce57c.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
-<ul>
-<li>点击确定即可设置完成，</li>
-</ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/62667cd0f703918fb668fffc523d269759eec408.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
-<ul>
-<li>做一个简单的描述统计，看看输出语言是不是中文，是简体中文还是繁体中文，都已经转换为简体中文了</li>
-</ul>
-<img src="/2015/10/23/SPSS实例：[40]如何更改界面语言/fd428c45d688d43f31f15cc47e1ed21b0ef43b69.jpg" alt="SPSS实例：[40]如何更改界面语言" title="SPSS实例：[40]如何更改界面语言">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/23/excel如何夸文件同步数据/">
-                excel如何夸文件同步数据
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>在一个excel的单元格里如何显示另一个excel文件单元格里的数据我们可以使用文件引用，很简单，下面是具体的过程：</p>
-<ul>
-<li>我们看到我现在有几个excel文件，现在想要在A.xlsx中显示B1.xlsx中的数据，打开A.xlsx</li>
-</ul>
-<img src="/2015/10/23/excel如何夸文件同步数据/3b6833f5e0fe99250d3e9b2837a85edf8db1715d.jpg" alt="excel如何夸文件同步数据" title="excel如何夸文件同步数据">
-<ul>
-<li><p>随便找一个单元格输入公式：=’F:\数据分析存档\excel[b1.xlsx]Sheet1’!A1 </p>
-</li>
-<li><p>这个公式的意思是：文件的路径+[文件名称]+工作表名！单元格地址</p>
-</li>
-</ul>
-<img src="/2015/10/23/excel如何夸文件同步数据/9864a2315c6034a8ead04af9c81349540923765d.jpg" alt="excel如何夸文件同步数据" title="excel如何夸文件同步数据">
-<img src="/2015/10/23/excel如何夸文件同步数据/d1e312f431adcbeffac58d7eafaf2edda2cc9f92.jpg" alt="excel如何夸文件同步数据" title="excel如何夸文件同步数据">
-<ul>
-<li>这样在这个单元格里已经显示了另一个excel的内容，下面我们增加一个功能</li>
-</ul>
-<img src="/2015/10/23/excel如何夸文件同步数据/d1e312f431adcbeffac58d7eafaf2edda2cc9f92.jpg" alt="excel如何夸文件同步数据" title="excel如何夸文件同步数据">
-<ul>
-<li>增加一个超链接，点击超链接就可以打开所引用的文件，右键单击单元格，选择【超链接】</li>
-</ul>
-<img src="/2015/10/23/excel如何夸文件同步数据/570f8c58d109b3de228d1610cfbf6c81800a4c5d.jpg" alt="excel如何夸文件同步数据" title="excel如何夸文件同步数据">
-<ul>
-<li>在打开的对话框中选择你所引用的文件夹，点击确定即可</li>
-</ul>
-<img src="/2015/10/23/excel如何夸文件同步数据/00a82701213fb80eec2092af35d12f2eb8389492.jpg" alt="excel如何夸文件同步数据" title="excel如何夸文件同步数据">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/23/Python教程：[54]matplotlib引用错误/">
-                Python教程：[54]matplotlib引用错误
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>安装好了matplotlib，但是引入的时候出现问题，无法引用，提示引用错误：ImportError: matplotlib requires pyparsing。然后通过安装pyparsing模块解决了这个问题，为了让大家都解决这个问题，我把我遇到问题描述在这里：</p>
-<ul>
-<li>首先，我用的是exe文件装的matplotlib模块：</li>
-</ul>
-<img src="/2015/10/23/Python教程：[54]matplotlib引用错误/54baacfb43166d2221538a0e442309f79152d2c1.jpg" alt="Python教程：[54]matplotlib引用错误" title="Python教程：[54]matplotlib引用错误">
-<ul>
-<li><p>安装过程没有任何提示错误，但是引用的时候出现问题：提示错误</p>
-</li>
-<li><p>Traceback (most recent call last):</p>
-</li>
-<li><p>File “<pyshell#0>“, line 1, in <module></module></pyshell#0></p>
-</li>
-<li><p>import matplotlib</p>
-</li>
-<li><p>File “D:\Python27\lib\site-packages\matplotlib__init__.py”, line 125, in <module></module></p>
-</li>
-<li><p>raise ImportError(“matplotlib requires pyparsing”)</p>
-</li>
-<li><p>ImportError: matplotlib requires pyparsing</p>
-</li>
-<li><p>解决问题的方法是安装pyparsing，用到setuptools，如果你没有安装setuptools，你可以在这里安装：<a href="http://jingyan.baidu.com/article/b907e627dd80df46e7891c2c.html" target="_blank" rel="external">http://jingyan.baidu.com/article/b907e627dd80df46e7891c2c.html</a></p>
-</li>
-<li><p>接着我们打开命令窗口，输入命令easy_install pyparsing</p>
-</li>
-</ul>
-<img src="/2015/10/23/Python教程：[54]matplotlib引用错误/fc5e5f34970a304ec9993f60d3c8a786c8175cb6.jpg" alt="Python教程：[54]matplotlib引用错误" title="Python教程：[54]matplotlib引用错误">
-<ul>
-<li>接着，我们引入matplotlib，就成功了</li>
-</ul>
-<img src="/2015/10/23/Python教程：[54]matplotlib引用错误/c9bdddcec3fdfc03902a7c22d63f8794a5c2269e.jpg" alt="Python教程：[54]matplotlib引用错误" title="Python教程：[54]matplotlib引用错误">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -786,19 +871,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

@@ -157,6 +157,233 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/08/19/SPSS实例：[3]两个变量相关的结果分析/">
+                SPSS实例：[3]两个变量相关的结果分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>两个变量之间的相关是最简单的相关关系，我们以皮尔逊积差相关来作为例子，讲解一下spss的操作方法，和结果的解释方法。</p>
+<ul>
+<li>操作方法：在spss中，我们在菜单中找到：分析–相关–二相关，打开相关对话框，然后将相关的变量放入框中，点击ok即可</li>
+</ul>
+<img src="/2016/08/19/SPSS实例：[3]两个变量相关的结果分析/6dc09e0a19d8bc3e1087de09838ba61ea9d34523.jpg" alt="SPSS实例：[3]两个变量相关的结果分析" title="SPSS实例：[3]两个变量相关的结果分析">
+<ul>
+<li>一般出现的第一个结果是描述性统计，mean两个变量的平均数，std deviation是标准差，N是case数目</li>
+</ul>
+<img src="/2016/08/19/SPSS实例：[3]两个变量相关的结果分析/5f9e93b1cb1349549d9130a7574e9258d0094a23.jpg" alt="SPSS实例：[3]两个变量相关的结果分析" title="SPSS实例：[3]两个变量相关的结果分析">
+<ul>
+<li>correlations表格中呈现的是相关系数和显著性水平，假如我们要看变量1和变量2之间的相关，我们看下面的交叉表，横行看var00001，列就好看var00002，行和列交叉的地方就是他们相关系数所在格，找到pearson correlation这一行对应的数字，就是相关系数，相关系数为.923，达到了高相关，而且因为显著性水平sig值达到了.000，所以是显著相关，好了，如何解释相关结果，你学会了吗？</li>
+</ul>
+<img src="/2016/08/19/SPSS实例：[3]两个变量相关的结果分析/9319cf09b3de9c824aea214c6d81800a18d84323.jpg" alt="SPSS实例：[3]两个变量相关的结果分析" title="SPSS实例：[3]两个变量相关的结果分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/">
+                spss多项选择题（多重反应）如何做交互分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们经常做的是单项选择题的交互分析，现在有一个多项选择题，怎么知道别的变量对这个变量有影响呢？那就需要使用下面这个方法，对多重反应做交互分析，下面的一个例子就是分析性别对信息来源的选择有没有影响，信息来源就是一个多重选择题。<br>方法/步骤</p>
+<ul>
+<li>在做交互分析以前先要做数据集，如图所示，在菜单栏上执行：analyze–multiple response–define</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/aa64034f78f0f736690748f10a55b319eac41340.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>将所有选项构成的变量都放到变量集列表中</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/e61190ef76c6a7ef941cafd6fdfaaf51f3de6603.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>设定这些题中有几个分类，如果是是否型的勾选【dichotomies】</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/f2deb48f8c5494ee921808e92df5e0fe99257e03.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>填写数据集的名称和标签，点击添加按钮，数据集定义完成</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/5d6034a85edf8db1a7147b940923dd54564e7403.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>在菜单栏上执行：analyze–multiple response–crosstable</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/8ad4b31c8701a18b641216bf9e2f07082938fe41.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>将刚才定义好的数据集放到row列表，将性别变量放到column列表</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/cdbf6c81800a19d8c63983f533fa828ba61e4603.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>选中性别，定义一下这个变量，点击define ranges</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/a8014c086e061d95e5bf33c87bf40ad163d9ca41.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>因为性别变量就是1和2，所以输入最大值和最小值，然后点击continue按钮</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/a8ec8a13632762d00cc7a04fa0ec08fa503dc641.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>回到这个对话框，点击options按钮，定义输出结果</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/91529822720e0cf3d80f4a0b0a46f21fbf09aa41.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>这里需要勾选输出列变量的百分比，所以选中column，点击continue按钮</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/730e0cf3d7ca7bcb1b83c3dfbe096b63f724a841.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li>回到这个对话框，点击ok按钮，开始输出结果</li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/a5c27d1ed21b0ef4b9d29faeddc451da81cb3e03.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<ul>
+<li><p>分析这个结果，我们看到男女比例基本上没有太大的差别，所以性别和信息来源这两个变量没有交互作用</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/17/spss多项选择题（多重反应）如何做交互分析/6a600c338744ebf8008960cfd9f9d72a6159a741.jpg" alt="spss多项选择题（多重反应）如何做交互分析" title="spss多项选择题（多重反应）如何做交互分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/">
+                spss20.0中excel和txt格式的数据如何导入
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>excel和txt是我们存放数据的两种基本格式，这两种格式不能在spss中直接打开，需要我们进行设置，尤其是txt文件，因为它的数据组织形式很多，spss需要进行更多的设置才能成功导入数据，下面分别介绍了导入excel和txt文件的方法。<br>方法一：导入excel数据</p>
+<ul>
+<li>打开spss，然后在菜单栏上执行：file–open–data</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/9345d688d43f8794c79d10abd21b0ef41ad53ad0.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>打开open data对话框，选择files type为excel，否则你看不到excel文件</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/d53f8794a4c27d1eb74463411bd5ad6edcc438d0.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>选中你要导入的excel，然后点击open按钮</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/f703738da97739122854dde4f8198618377ae2c1.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>因为excel文件中有很多工作表，我们需要选择你要导入的工作表</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/80cb39dbb6fd5266bf496491ab18972bd50736d0.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>这接着我们看到这里问你变量名是否包含在excel数据中，假如excel表格中有标题，我们就勾选这个选项，假如表格没有标题，直接就是数据，那么不需要勾选这个选项，点击ok按钮</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/38dbb6fd5266d016797bc6ad972bd40734fa35d0.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li><p>我们可以看到数据导入成功，并且变量名设置成了excel的表格的标题</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/8718367adab44aed8c3ce661b31c8701a08bfbc1.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<p>方法二：导入txt数据</p>
+<ul>
+<li>打开spss ，在菜单栏上执行：file–open–data</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/a686c9177f3e6709861a1e7a3bc79f3df8dc5518.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>选择文件类型为text</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/9e3df8dcd100baa19b361c3e4710b912c8fc2e18.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>找到要导入的数据，然后点击open按钮</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/7af40ad162d9f2d3ef027f6aa9ec8a136327cc20.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>打开一个对话框，先选择是否预先设定的格式，我们没有预定的格式，否则你也不会看到这个文章，勾选no，然后点击next</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/f3d3572c11dfa9ec313d0d9262d0f703918fc120.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>选择你的变量是如何组织的，我们看看excel中的数据，一个变量和另一个变量中间隔着一个空格，所以我们要选择格式的时候选择第一个【delimited】，任意的一种符号隔开的数据都要选择这个选项</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/b812c8fcc3cec3fda124fcf0d688d43f87942718.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/8b13632762d0f7032ea1ce5908fa513d2697c520.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>接着打开一个对话框，设置你的第一条数据是从第几行开始的，我们刚才看到txt中的数据了，是从第一行开始的，所以填写1</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/908fa0ec08fa513de5b9375b3d6d55fbb2fbd920.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>接着你要设置你的数据是如何呈现的，一般就死每一行一个case，也就是txt文件中，一行存放一条数据</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/d31b0ef41bd5ad6eb5e33f6f81cb39dbb6fd3c18.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>最后选择要导入多少数据，勾选【all of the cases】，意思是导入所有的数据</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/38dbb6fd5266d0166603c5ad972bd40735fa3518.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li>选择哪个符号将数据隔开了，在本案例中，是空格隔开了数据，所以选择space或者tab</li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/21a4462309f79052570c1cbb0cf3d7ca7bcbd520.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<ul>
+<li><p>最后设定变量的名称，从data preview中选择一个变量，然后在变量名称这一栏填写变量的名称，依此方法给所有的变量都命名，最后点击finish完成数据的导入。</p>
+</li>
+<li></li>
+</ul>
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/962bd40735fae6cd0eaef0e40fb30f2442a70f18.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/0df3d7ca7bcb0a462731d0bc6b63f6246b60af20.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<img src="/2016/08/17/spss20.0中excel和txt格式的数据如何导入/f31fbe096b63f624b24e62868744ebf81a4ca320.jpg" alt="spss20.0中excel和txt格式的数据如何导入" title="spss20.0中excel和txt格式的数据如何导入">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/08/15/Python教程：[37]处理网页源码中的 x22字符/">
                 Python教程：[37]处理网页源码中的 x22字符
             </a>
@@ -565,212 +792,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/05/mysql教程：[1]下载安装与配置/">
-                mysql教程：[1]下载安装与配置
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月05日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>这是mysql教程第一篇，我介绍一下自己的平台：windows7 64位，安装mysql版本是5.6，mysql 5.6的32位和64位的下载链接都在文章最下面的参考资料里（下载密码就是在链接后面），大家可以看文章的下面下载适合自己的版本，我就用的是64位。</p>
-<ul>
-<li>第一步我们先在C:Program Files路径下，建立一个新文件夹，命名为mysql</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/58af236d55fbb2fbbfba776d4d4a20a44723dcf9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>将下载下来的压缩包解压到mysql文件夹汇总</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/f76575600c338744fb550003530fd9f9d62aa0f9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>最后我解压得到的mysql就是酱紫了：注意看地址栏，看看和你是不是一样；当然你可以和我不一样，但是在后面的步骤中我是需要用到mysql的解压路径的，所以，希望你注意一下啦。了</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/7787b9efce1b9d16a98eb51ef1deb48f8d5464c0.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>我们打开计算机的【属性】面板，你可能叫【我的电脑】，随便啦</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/148f28d3d539b6001b5e20c8eb50352ac75cb7f9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>打开【高级系统设置】，，，哎，过程很繁琐呀</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/9864a2315c6034a83cab97fec9134954082376c0.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>切换到【高级】标签下，打开环境变量</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/906289dda144ad346a2fa8f8d2a20cf430ad85f9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>新建一个系统该变量，点击【新建】</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/310f3b1f95cad1c8d8f2d3587d3e6709c83d51c0.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>变量名设置为【MYSQL_HOME】，变量值设置为mysql的解压路径【C:Program Filesmysql】</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/4e0b3ea4462309f791cd836d700e0cf3d6cad6eb.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>接着找到path，编辑一下，点击【编辑】</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/ae10eddeb48f8c54cd43ea5038292df5e1fe7ff9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>将新的路径添加进去，注意是添加不是覆盖，添加的路径是【%MYSQL_HOME%in】，注意与其他路径用分号隔开</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/5d212aa85edf8db1afbe531b0b23dd54574e74f9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>打开dos窗口（win+r，输入cmd，点击确定）</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/cc506c8b4710b9124651d981c1fdfc03934522f9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>我们将路径重新定位到mysqlin下，用到了cd命令，你可以看我写的文章【dos命令：[1]cd用法】来直到cd的意义。我们现在输入的命令是【cd /d c:Program Filesin】</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/4abae5edab64034fc384ed79adc379310b551dc0.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<ul>
-<li>接着我们输入命令【mysqld install MySQL –defaults-file=”D:Program Filesmysqlmy-default.ini”】，看到成功安装的提示了没？这说明已经安装成功了。欢呼吧，你可以开始mysql开发了。下一篇文章我们会讲到如何运行mysql服务器。</li>
-</ul>
-<img src="/2016/08/05/mysql教程：[1]下载安装与配置/a583631ed21b0ef48178b721dfc451da80cb3ef9.jpg" alt="mysql教程：[1]下载安装与配置" title="mysql教程：[1]下载安装与配置">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/05/spss如何检验残差是否符合正态分布/">
-                spss如何检验残差是否符合正态分布
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月05日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>在做回归的时候，残差的分布必须是正态分布，否则就会使得得到的回归方程没有任何实际的意义。在检验残差的分布是否为正态的时候，我们要用到pp图和直方图，下面就是我们做pp图和直方图的方法，还附有对这两种图的分析方法。<br>方法/步骤</p>
-<ul>
-<li>在菜单栏上执行：分析–回归–线性，打开线性回归对话框</li>
-</ul>
-<img src="/2016/08/05/spss如何检验残差是否符合正态分布/e7cd7b899e510fb3fc5ab174d933c895d0430c96.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
-<ul>
-<li>将自变量和因变量都放到各自的位置，如图所示，dependent栏是因变量，independent是自变量栏</li>
-</ul>
-<img src="/2016/08/05/spss如何检验残差是否符合正态分布/58ee3d6d55fbb2fb00a49ef14f4a20a44723dc42.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
-<ul>
-<li><p>设置好变量以后，我们点击plots按钮，设置一下要绘制的图形</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/08/05/spss如何检验残差是否符合正态分布/faedab64034f78f0f4955c1079310a55b2191cb2.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
-<ul>
-<li>将y轴设置为概率，将x轴设置为残差，如图所示</li>
-</ul>
-<img src="/2016/08/05/spss如何检验残差是否符合正态分布/b7003af33a87e9505ebe358f10385343faf2b4ac.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
-<ul>
-<li>勾选直方图和pp图，如图所示，这样才可以输出这两个图，点击continue按钮返回主菜单</li>
-</ul>
-<img src="/2016/08/05/spss如何检验残差是否符合正态分布/3b87e950352ac65c7daca090fbf2b21192138aac.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
-<ul>
-<li>点击ok按钮，开始输出数据</li>
-</ul>
-<img src="/2016/08/05/spss如何检验残差是否符合正态分布/4610b912c8fcc3ce14990fd09245d688d53f20fc.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
-<ul>
-<li>我们先来看直方图，这个图形中你要看这个图形分布是否符合正态分布的样子，其实正态分布只是要求数据大概符合正态，下面这个样子就大概可以认为数据是符合正态分布的</li>
-</ul>
-<img src="/2016/08/05/spss如何检验残差是否符合正态分布/b17eca8065380cd7e7b7640ea144ad34588281ac.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
-<ul>
-<li><p>pp图要看点和线的关系，如果点都围绕在线的周围，如图所示，就可以认为数据是符合正态分布的，这也是一个大概的检验方法，因为线性回归没有对残差的分布形态做出特别严格的要求，只要大概符合就可以了。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/08/05/spss如何检验残差是否符合正态分布/0d338744ebf81a4c08bd2a2ad72a6059242da642.jpg" alt="spss如何检验残差是否符合正态分布" title="spss如何检验残差是否符合正态分布">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/03/excel怎样给坐标轴添加标题/">
-                excel怎样给坐标轴添加标题
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>excel中自动建立的图标是没有坐标轴的标题的，为了让用户看懂图表，我们必须给图表添加坐标轴标题，下面就介绍了一种添加方法，具体步骤如下：<br>步骤/方法</p>
-<ul>
-<li>斜着拖动鼠标，选中数据源，据此来建立图表</li>
-</ul>
-<img src="/2016/08/03/excel怎样给坐标轴添加标题/d31b0ef41bd5ad6e29a8b34c81cb39dbb7fd3cc7.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
-<ul>
-<li>在菜单栏上点击插入–柱形图，选择一种柱形图的样式</li>
-</ul>
-<img src="/2016/08/03/excel怎样给坐标轴添加标题/79f0f736afc379311d38518febc4b74542a911c7.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
-<ul>
-<li>插入了图表以后，我们来给图表添加标题，如图，在菜单栏上执行：坐标轴标题–主要纵坐标标题–竖排标题</li>
-</ul>
-<img src="/2016/08/03/excel怎样给坐标轴添加标题/00e93901213fb80ee76cb67136d12f2eb83894d3.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
-<ul>
-<li>在图表上多了一个文本框，在这个文本框中，将这几个字改为：降水量</li>
-</ul>
-<img src="/2016/08/03/excel怎样给坐标轴添加标题/2e2eb9389b504fc276e267a3e5dde71191ef6dd3.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
-<img src="/2016/08/03/excel怎样给坐标轴添加标题/29381f30e924b899936cae9e6e061d950b7bf6c0.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
-<ul>
-<li>接着再在菜单栏上执行：坐标轴标题–主要横坐标轴标题–坐标轴下方标题</li>
-</ul>
-<img src="/2016/08/03/excel怎样给坐标轴添加标题/8d5494eef01f3a29997502689925bc315d607cd3.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
-<ul>
-<li>在添加的文本框中输入：月份，这样给坐标轴添加标题就设置完成了。</li>
-</ul>
-<img src="/2016/08/03/excel怎样给坐标轴添加标题/35a85edf8db1cb13f4d4ebb5dd54564e93584bd3.jpg" alt="excel怎样给坐标轴添加标题" title="excel怎样给坐标轴添加标题">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -813,19 +834,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

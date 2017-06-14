@@ -157,6 +157,318 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/10/05/Python教程：[24]connect MySQL 10060错误/">
+                Python教程：[24]connect MySQL 10060错误
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天使用python链接mysql数据的时候发现总是提示错误“Can’t connect to MySQL server (10060)”经过我反复尝试，发现错误在于python链接数据库的时间过长，链接失效了，所以需要重新连接。我们可以判断返回的错误自动进行连接。不过并不是所有的10060错误都是这个原因。我也罗列了各种问题和解决的方法。</p>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/10/05/python 线性代数：[7]解多元一次方程/">
+                python 线性代数：[7]解多元一次方程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>用python的numpy包中的linalg.solve()方法解多元一次方程，如果你对矩阵解方程非常熟悉，那么现在只是学习一下这个函数就好了。如果你不是很熟悉用矩阵解方程，你需要看一下线性代数的课本。</p>
+<ul>
+<li>首先看一下我们要解的方程，将这个方程格式调整好，按照x-y-z-常数项的顺序排列</li>
+</ul>
+<img src="/2015/10/05/python%20线性代数：[7]解多元一次方程/b8405490f603738d0d597bd5b11bb051f919ecf3.jpg" alt="python 线性代数：[7]解多元一次方程" title="python 线性代数：[7]解多元一次方程">
+<ul>
+<li>将未知数的系数写下来，排列成一个矩阵a，如下</li>
+</ul>
+<img src="/2015/10/05/python%20线性代数：[7]解多元一次方程/f7426d8da97739121535f296fa198618377ae2f3.jpg" alt="python 线性代数：[7]解多元一次方程" title="python 线性代数：[7]解多元一次方程">
+<ul>
+<li>常数项构成一个一维数组（向量）</li>
+</ul>
+<img src="/2015/10/05/python%20线性代数：[7]解多元一次方程/8759287adab44aed835dc913b11c8701a08bfbf3.jpg" alt="python 线性代数：[7]解多元一次方程" title="python 线性代数：[7]解多元一次方程">
+<ul>
+<li>使用linalg.solve方法解方程，参数a指的是系数矩阵，参数b指的是常数项矩阵</li>
+</ul>
+<img src="/2015/10/05/python%20线性代数：[7]解多元一次方程/d1571724ab18972baa6d773de4cd7b899f510ab6.jpg" alt="python 线性代数：[7]解多元一次方程" title="python 线性代数：[7]解多元一次方程">
+<ul>
+<li>我们得到的解对不对呢？使用点乘的方法可以验证一下，系数乘以未知数可以得到常数项</li>
+</ul>
+<img src="/2015/10/05/python%20线性代数：[7]解多元一次方程/8640bf8b87d6277f2a0145cf2a381f30e824fcf3.jpg" alt="python 线性代数：[7]解多元一次方程" title="python 线性代数：[7]解多元一次方程">
+<ul>
+<li><p>今天用到的所有代码如下</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a=[[1,2,1],[2,-1,3],[3,1,2]]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a=np.array(a)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1,  2,  1],</p>
+</li>
+<li><p>[ 2, -1,  3],</p>
+</li>
+<li><p>[ 3,  1,  2]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b=[7,7,18]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b=np.array(b)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([ 7,  7, 18])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x=np.solve(a,b)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#31>“, line 1, in <module></module></pyshell#31></p>
+</li>
+<li><p>x=np.solve(a,b)</p>
+</li>
+<li><p>AttributeError: ‘module’ object has no attribute ‘solve’</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x=np.linalg.solve(a,b)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([ 7.,  1., -2.])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.dot(a,x)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([  7.,   7.,  18.])</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/10/03/spss按照3个标准差筛选数据的方法/">
+                spss按照3个标准差筛选数据的方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>在数据处理的时候，一般来说数据都是正态分布的，按照正态分布的性质，三个标准差以外的数据都，可以被看作是错误的数据从而排除掉，现在跟大家分享一下如何根据标准差来筛选数据。<br>方法/步骤</p>
+<ul>
+<li>要想按照标准差筛选数据，必须先要求出每个数据的Z分数，如图所示，在菜单栏上执行analyze–descriptive statistic–descriptive，打开描述统计对话框</li>
+</ul>
+<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/a1ec08fa513d26976bba3d8c55fbb2fb4216d8f1.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
+<ul>
+<li>将我们要筛选的数据放入到变量对话框中，勾选save standardized values as variables，这样就能输出Z分数了，点击ok按钮，输出结果</li>
+</ul>
+<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/cc11728b4710b9120051c32fc3fdfc039345224a.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
+<ul>
+<li>我们看到，在数据窗口中多了一列数据，这就是我们求得的z分数，接下来要根据这组数据。来筛选数据</li>
+</ul>
+<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/a08b87d6277f9e2f10d528d91f30e924b999f37a.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
+<ul>
+<li>在菜单栏上执行data—select cases，打开数据筛选对话框</li>
+</ul>
+<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/43a7d933c895d1434761d0f273f082025baf07cf.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
+<ul>
+<li>我们对case按照标准差进行选择，需要根据条件来选择，所以选择if conditions is satisfied，点击if来设置条件</li>
+</ul>
+<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/cb8065380cd79123fe93a0a5ad345982b3b780eb.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
+<ul>
+<li>在这里我们输入公式Zx2  &lt;= 3 &amp; Zx2  &gt;=  -3 ，这个条件的意思就是选择数值在3和-3之间。点击continue按钮，返回到主对话框</li>
+</ul>
+<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/b2de9c82d158ccbfcba582eb19d8bc3eb03541c1.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
+<ul>
+<li>在主对话框中，点击ok按钮，开始处理数据</li>
+</ul>
+<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/5ab5c9ea15ce36d38268b4e13af33a87e850b1f6.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
+<ul>
+<li>最后我们看一下处理的效果，超过三个标准差的数据在前面都有一个斜杠表示删除了。以后处理数据的时候他们就不参与了</li>
+</ul>
+<img src="/2015/10/03/spss按照3个标准差筛选数据的方法/b8389b504fc2d562010ce73ce71190ef77c66cde.jpg" alt="spss按照3个标准差筛选数据的方法" title="spss按照3个标准差筛选数据的方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/10/03/SPSS实例：[36]分层卡方检验/">
                 SPSS实例：[36]分层卡方检验
             </a>
@@ -886,201 +1198,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/23/spss怎样将两批数据合并/">
-                spss怎样将两批数据合并
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我们看到下图中有两个sav文件，也就是两批数据，这两批数据的变量都是一样的，只是不同时间收集的两批数据，现在我们要合并者两个文件，得到一批总的数据，怎么办？下面是具体的步骤奥。<br>工具/原料</p>
-<ul>
-<li>spss 20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>打开spss，先打开一个sav文件，然后在菜单栏上执行：data—merge files–add cases，打开合并文件的窗口</li>
-</ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/9358d109b3de9c8289ac83626c81800a18d84315.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
-<ul>
-<li>接下来你看到的这个窗口可能有两种情况，一个情况是你只打开了一个要合并的sav文件，另一个文件没有打开，那么你要选择第二个选项，如图所示，然后点击浏览按钮</li>
-</ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/42166d224f4a20a4ac51592a90529822730ed094.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
-<ul>
-<li>打开浏览窗口，找到你的第二个数据，然后选中它，点击打开，这样就完成了基本的合并文件的操作</li>
-</ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/838ba61ea8d3fd1f2250c7d7304e251f94ca5f85.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
-<ul>
-<li>回到了合并文件的主对话框，点击continue按钮，进入合并数据向导。</li>
-</ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/023b5bb5c9ea15ce3ebd85e4b6003af33b87b28f.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
-<ul>
-<li>如果我们同时打开了两个数据文件，那么在合并文件对话框中，你会看到第一个选项中有第二个文件，如图所示，这时候你直接在这里选择该文件即可，同样是点击continue即可合并数据</li>
-</ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/503d269759ee3d6db110e22643166d224e4ade0d.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
-<ul>
-<li>在该向导里，你会遇到两种情况，第一个情况是在upaired variables列表里有有量，如图所示，这时候你要决定这个变量有没有用，如果没用就不用管他，在新的数据里他就不会出现。如果这个变量是有用的，选中这个变量，点击下面的rename</li>
-</ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/aec379310a55b31941c0e69843a98226cffc1725.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
-<ul>
-<li>打开一个rename对话框，输入新的名称，然后点击continue，回到上面的对话框</li>
-</ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/37d12f2eb9389b507c3684bf8535e5dde6116e15.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
-<ul>
-<li>点击添加按钮，即可完成变量的添加，注意，因为该变量只存在于一个sav文件中，所以合并数据以后，有部分case在该变量上是没有值得。</li>
-</ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/9358d109b3de9c8287859d626c81800a18d8437e.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
-<ul>
-<li>点击ok按钮，数据合并完成。</li>
-</ul>
-<img src="/2015/09/23/spss怎样将两批数据合并/d833c895d143ad4b4b7e212d82025aafa50f068e.jpg" alt="spss怎样将两批数据合并" title="spss怎样将两批数据合并">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/23/spss中拉丁方设计如何进行方差分析/">
-                spss中拉丁方设计如何进行方差分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>工具/原料</p>
-<ul>
-<li>spss<br>方法/步骤</li>
-</ul>
-<ul>
-<li>首先打开spss，以如图所示的方式录入数据，week和day是两个需要控制的变量，music是自变量，score是因变量</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/242dd42a2834349b2b1d7744c9ea15ce37d3bed3.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<ul>
-<li>数据准备好以后，在菜单栏上执行：analyse–GLM–univariate，打开方差分析对话框</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/63d9f2d3572c11df55bba6e2632762d0f603c28d.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<ul>
-<li>打开对话框以后，先将自变量和因变量放入各自的位置，如图所示</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/6a600c338744ebf805d87dfed9f9d72a6159a741.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<ul>
-<li>点击model按钮，设置一下模型</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/b151f8198618367a3b2e661c2e738bd4b21ce548.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<ul>
-<li>系统默认的是full factorial，我们要勾选custom</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/c2cec3fdfc0392457688f9ce8794a4c27d1e2535.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<ul>
-<li>将三个自变量放入右侧的model框中</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/cdbf6c81800a19d8c3399cc433fa828ba61e463c.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<ul>
-<li>将type设置为main effect ，因为我们默认这三个变量是没有交互作用的</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/a044ad345982b2b792a9210531adcbef76099b38.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<ul>
-<li>返回到主菜单，点击ok开始运行数据处理，并输出结果</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/a8014c086e061d95f9622ff97bf40ad163d9cacf.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<ul>
-<li>我们看方差检验的结果，三个变量中，music和day对应的sig值小于0.05，说明这两个变量的效应是显著的。</li>
-</ul>
-<img src="/2015/09/23/spss中拉丁方设计如何进行方差分析/63d0f703918fa0ec0a9e7ccc269759ee3c6ddb91.jpg" alt="spss中拉丁方设计如何进行方差分析" title="spss中拉丁方设计如何进行方差分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/23/Python教程：[40]列表与字符串相互转换/">
-                Python教程：[40]列表与字符串相互转换
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>以前玩vb没有体会到python这么强大的功能，列表与字符串可以直接的相互转换，非常方便，我们就好好的来享受一把吧！</p>
-<ul>
-<li>首先我们来初始化一个list（列表）</li>
-</ul>
-<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/11794d43fbf2b211f7135056c88065380cd78eae.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
-<ul>
-<li>使用join方法来转换列表，将列表转换成字符串，注意join是字符串的方法，前面必须是字符串，我用的是“;”,也就是分号，然后连接成的字符串就是用分号来进行元素的分割的。</li>
-</ul>
-<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/9252ae7eca80653864d7710b95dda144ad3482ae.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
-<ul>
-<li>我们再试试其他的字符串，你感受一下</li>
-</ul>
-<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/4bd1e803738da97731d76c33b251f8198718e3eb.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
-<ul>
-<li>当然，我们还有能力将字符串转换回去，看下面，设置叹号为分隔符，然后对字符串进行切割，得到列表</li>
-</ul>
-<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/a8362712b31bb051f3dc5930347adab44bede0eb.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
-<ul>
-<li>split函数还有第二个参数，你猜猜这是干什么用的，对了，它指的是分割的次数</li>
-</ul>
-<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/b110e6198618367ad47195c52c738bd4b21ce5eb.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
-<ul>
-<li>假如我们分割两次呢，你看看效果。</li>
-</ul>
-<img src="/2015/09/23/Python教程：[40]列表与字符串相互转换/30ecd5ef76094b36d9afcef5a1cc7cd98d109dae.jpg" alt="Python教程：[40]列表与字符串相互转换" title="Python教程：[40]列表与字符串相互转换">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1123,19 +1240,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

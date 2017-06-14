@@ -157,6 +157,384 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/06/15/python 线性代数：[8]计算矩阵距离/">
+                python 线性代数：[8]计算矩阵距离
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>矩阵的距离，这里是的是欧几里得距离，其他距离表示方法我们以后再谈，今天进说一下如何计算两个形状相同矩阵之间的距离。</p>
+<ul>
+<li>创建一个矩阵a和b</li>
+</ul>
+<img src="/2015/06/15/python%20线性代数：[8]计算矩阵距离/bd70426034a85edfa4889fd44b540923dc547585.jpg" alt="python 线性代数：[8]计算矩阵距离" title="python 线性代数：[8]计算矩阵距离">
+<img src="/2015/06/15/python%20线性代数：[8]计算矩阵距离/35e940df8db1cb13626d5de4df54564e93584b85.jpg" alt="python 线性代数：[8]计算矩阵距离" title="python 线性代数：[8]计算矩阵距离">
+<ul>
+<li>先计算得到他俩的距离矩阵c</li>
+</ul>
+<img src="/2015/06/15/python%20线性代数：[8]计算矩阵距离/0862c354564e9258e130e7199e82d158cdbf4e85.jpg" alt="python 线性代数：[8]计算矩阵距离" title="python 线性代数：[8]计算矩阵距离">
+<ul>
+<li>距离矩阵的平方，得到矩阵d</li>
+</ul>
+<img src="/2015/06/15/python%20线性代数：[8]计算矩阵距离/e8112b2ac65c1038be14af35b0119313b17e89a4.jpg" alt="python 线性代数：[8]计算矩阵距离" title="python 线性代数：[8]计算矩阵距离">
+<ul>
+<li>计算矩阵d的迹</li>
+</ul>
+<img src="/2015/06/15/python%20线性代数：[8]计算矩阵距离/6dc09e0a19d8bc3e880c673d808ba61ea9d34585.jpg" alt="python 线性代数：[8]计算矩阵距离" title="python 线性代数：[8]计算矩阵距离">
+<ul>
+<li>然后将得到的e进行开方得到距离：你可以手动算一下是不是正确。</li>
+</ul>
+<img src="/2015/06/15/python%20线性代数：[8]计算矩阵距离/814b07d8bc3eb13509c3d64ca41ea8d3fc1f4485.jpg" alt="python 线性代数：[8]计算矩阵距离" title="python 线性代数：[8]计算矩阵距离">
+<ul>
+<li><p>我们用到的原理就是矩阵的迹的性质，在numpy或者scipy中还有计算距离的函数，我们以后再说</p>
+</li>
+<li><p>今天用到的所有代码如下：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a=[[0,1],[1,0]]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a=np.array(a)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[0, 1],</p>
+</li>
+<li><p>[1, 0]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b=[[1,1],[1,1]]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b=np.array(b)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 1],</p>
+</li>
+<li><p>[1, 1]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>c=a-b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>c</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[-1,  0],</p>
+</li>
+<li><p>[ 0, -1]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>d=np.dot(c,c)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>d</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 0],</p>
+</li>
+<li><p>[0, 1]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>e=np.trace(d)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>e</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>2</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>e**0.5</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>1.4142135623730951</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/">
+                SPSS绘图教程：[3]条形图绘制方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>和上一篇文章一样，开始先打开【图表构建程序】，通常会弹出变量属性校验窗口，不用管它，因为我们在上一篇文章中介绍了如何使用它<br>可以直接点击确定即可。</p>
+<ul>
+<li>首先在库中找到条形图，然后用鼠标将你想要的样式拖拽到预览区域</li>
+</ul>
+<img src="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/207ea60e7bec54e79a3a9ba6bb389b504ec26a71.jpg" alt="SPSS绘图教程：[3]条形图绘制方法" title="SPSS绘图教程：[3]条形图绘制方法">
+<ul>
+<li>然后将变量拖拽到相应的坐标轴，比如年龄组为横轴，干扰与否为纵轴</li>
+</ul>
+<img src="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/d4239b35e5dde7112504c24ea5efce1b9c166171.jpg" alt="SPSS绘图教程：[3]条形图绘制方法" title="SPSS绘图教程：[3]条形图绘制方法">
+<ul>
+<li>在窗口右侧，有一个属性窗口，我们设置统计量，也就是条形图中显示的统计量，用的最多的就是均值。</li>
+</ul>
+<img src="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/ae10eddeb48f8c542b05449738292df5e1fe7f71.jpg" alt="SPSS绘图教程：[3]条形图绘制方法" title="SPSS绘图教程：[3]条形图绘制方法">
+<ul>
+<li>接着，我们可以添加一个误差项，你不知道啥叫误差项？好吧，接着往下看。我们设置误差条形图的显示95%的区间</li>
+</ul>
+<img src="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/48151723dd54564e5d976581b1de9c82d0584f5d.jpg" alt="SPSS绘图教程：[3]条形图绘制方法" title="SPSS绘图教程：[3]条形图绘制方法">
+<ul>
+<li>在条形统的上面就会出现两一条横线，表示95%的区间</li>
+</ul>
+<img src="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/1899a23eb13533fa59441296aad3fd1f40345b5d.jpg" alt="SPSS绘图教程：[3]条形图绘制方法" title="SPSS绘图教程：[3]条形图绘制方法">
+<ul>
+<li>当然，我们还可以设置n个标准差或者标准误作为条形图的误差项</li>
+</ul>
+<img src="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/cdfe7281800a19d864d505bd31fa828ba71e4671.jpg" alt="SPSS绘图教程：[3]条形图绘制方法" title="SPSS绘图教程：[3]条形图绘制方法">
+<ul>
+<li>假如你没有看到属性窗口，或者不小心关闭了，你可以右键单击这个图，选择【属性窗口】，这样就打开它了。</li>
+</ul>
+<img src="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/c28fddfdfc0392452f4760b78594a4c27c1e255d.jpg" alt="SPSS绘图教程：[3]条形图绘制方法" title="SPSS绘图教程：[3]条形图绘制方法">
+<ul>
+<li>点击确定，你就可以看到你绘制好的条形图了。</li>
+</ul>
+<img src="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/a6c7d7177f3e670920d6c44739c79f3df9dc5571.jpg" alt="SPSS绘图教程：[3]条形图绘制方法" title="SPSS绘图教程：[3]条形图绘制方法">
+<ul>
+<li>OH！！不小心出现了错误，你应该能猜到为什么会出错。</li>
+</ul>
+<img src="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/9e7ce6dcd100baa13dfac6034510b912c9fc2e71.jpg" alt="SPSS绘图教程：[3]条形图绘制方法" title="SPSS绘图教程：[3]条形图绘制方法">
+<ul>
+<li>我们把变量名从中文改成英文就好了！就是对中文支持不够好。其实spss22.0已经能够支持中文变量名了。我现在还是spss20.0，该升级了。</li>
+</ul>
+<img src="/2015/06/11/SPSS绘图教程：[3]条形图绘制方法/9f1011b30f2442a7cde37c1dd343ad4bd013025d.jpg" alt="SPSS绘图教程：[3]条形图绘制方法" title="SPSS绘图教程：[3]条形图绘制方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/11/Python教程：[62]读取路径 目录【1】/">
+                Python教程：[62]读取路径 目录【1】
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>已知一个路径，我们怎么知道文件的类型，文件存放的文件夹，根目录呢？今天这篇文章主要就是解决这个问题——根据路径提取有用信息：</p>
+<ul>
+<li>引用path模块，然后我们创建一个路径filepath</li>
+</ul>
+<img src="/2015/06/11/Python教程：[62]读取路径%20目录【1】/8697397f9e2f07085a0c9980eb24b899a801f2e2.jpg" alt="Python教程：[62]读取路径 目录【1】" title="Python教程：[62]读取路径 目录【1】">
+<ul>
+<li>用dirname提取文件夹的路径：</li>
+</ul>
+<img src="/2015/06/11/Python教程：[62]读取路径%20目录【1】/29790130e924b899df35cab86c061d950b7bf6e2.jpg" alt="Python教程：[62]读取路径 目录【1】" title="Python教程：[62]读取路径 目录【1】">
+<ul>
+<li>用basename提取文件名称：</li>
+</ul>
+<img src="/2015/06/11/Python教程：[62]读取路径%20目录【1】/91138622720e0cf34da7fd7b0846f21fbf09aa9b.jpg" alt="Python教程：[62]读取路径 目录【1】" title="Python教程：[62]读取路径 目录【1】">
+<ul>
+<li>用splitdrive分割根目录和其他目录</li>
+</ul>
+<img src="/2015/06/11/Python教程：[62]读取路径%20目录【1】/29790130e924b899df77cab86c061d950b7bf6ac.jpg" alt="Python教程：[62]读取路径 目录【1】" title="Python教程：[62]读取路径 目录【1】">
+<ul>
+<li>用split方法分割文件名及其目录</li>
+</ul>
+<img src="/2015/06/11/Python教程：[62]读取路径%20目录【1】/6a2112338744ebf8bf78d7bfdbf9d72a6159a7e2.jpg" alt="Python教程：[62]读取路径 目录【1】" title="Python教程：[62]读取路径 目录【1】">
+<ul>
+<li>用splitext，注意它的拼写，用于分割后缀名和其他路径：</li>
+</ul>
+<img src="/2015/06/11/Python教程：[62]读取路径%20目录【1】/a005b3345982b2b719e58a4433adcbef77099bfd.jpg" alt="Python教程：[62]读取路径 目录【1】" title="Python教程：[62]读取路径 目录【1】">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/06/11/Python教程：[19]urlunparse()用法/">
                 Python教程：[19]urlunparse()用法
             </a>
@@ -616,203 +994,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/06/01/spss20.0二项式检验的操作方法和结果分析/">
-                spss20.0二项式检验的操作方法和结果分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年06月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p> 只有两个值的变量叫做二分变量，比如性别就是一个二分变量，它只有两个值：男女。为了检验男女的比率是否符合1:1，我们可以使用二项式检验。下面是具体的操作方法和数据结果的分析。<br>方法/步骤</p>
-<ul>
-<li>在spss20.0中，要检验二分变量的两个值的比例是否和理论值相左，我们先在菜单栏上执行：analyze-nonparamecric-legacy dialogs-binomial</li>
-</ul>
-<img src="/2015/06/01/spss20.0二项式检验的操作方法和结果分析/b64543a98226cffc086a6043b9014a90f703eafb.jpg" alt="spss20.0二项式检验的操作方法和结果分析" title="spss20.0二项式检验的操作方法和结果分析">
-<ul>
-<li>将你要检验的这个二分变量放到test variable list中</li>
-</ul>
-<img src="/2015/06/01/spss20.0二项式检验的操作方法和结果分析/4b90f603738da977246f59dab051f8198718e3fb.jpg" alt="spss20.0二项式检验的操作方法和结果分析" title="spss20.0二项式检验的操作方法和结果分析">
-<ul>
-<li>点击options按钮，设置要输出的参数有哪些</li>
-</ul>
-<img src="/2015/06/01/spss20.0二项式检验的操作方法和结果分析/72f082025aafa40f4ca3112cab64034f79f019dd.jpg" alt="spss20.0二项式检验的操作方法和结果分析" title="spss20.0二项式检验的操作方法和结果分析">
-<ul>
-<li>这里我们勾选descriptive就可以了，可以看到数据的描述性统计结果</li>
-</ul>
-<img src="/2015/06/01/spss20.0二项式检验的操作方法和结果分析/42a98226cffc1e179dda53c04a90f603728de9de.jpg" alt="spss20.0二项式检验的操作方法和结果分析" title="spss20.0二项式检验的操作方法和结果分析">
-<ul>
-<li>设置检验的比率，这个比率是其中一个变量值在所有的变量值中的比例，比如男女比例一概是1:1，所以这里应该填写0.5，这样就可以建议男女比例是不是1:1了</li>
-</ul>
-<img src="/2015/06/01/spss20.0二项式检验的操作方法和结果分析/4d086e061d950a7b357591350ad162d9f3d3c9fb.jpg" alt="spss20.0二项式检验的操作方法和结果分析" title="spss20.0二项式检验的操作方法和结果分析">
-<ul>
-<li>点击ok，开始运行，输出结果</li>
-</ul>
-<img src="/2015/06/01/spss20.0二项式检验的操作方法和结果分析/63d9f2d3572c11df979160d2632762d0f603c2fb.jpg" alt="spss20.0二项式检验的操作方法和结果分析" title="spss20.0二项式检验的操作方法和结果分析">
-<ul>
-<li><p>第一个图为描述性统计，第二个图是二项式检验结果，我们看到显著性为0.000这说明该数据的比率与理论值有差异，且差异明显。</p>
-</li>
-<li></li>
-<li></li>
-</ul>
-<img src="/2015/06/01/spss20.0二项式检验的操作方法和结果分析/b151f8198618367af9eca02c2e738bd4b21ce5de.jpg" alt="spss20.0二项式检验的操作方法和结果分析" title="spss20.0二项式检验的操作方法和结果分析">
-<img src="/2015/06/01/spss20.0二项式检验的操作方法和结果分析/503d269759ee3d6d1f86583a43166d224e4adefb.jpg" alt="spss20.0二项式检验的操作方法和结果分析" title="spss20.0二项式检验的操作方法和结果分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/05/23/spss如何利用case studies来自学/">
-                spss如何利用case studies来自学
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年05月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>你还在为学spss找各种教材吗？spss中自带有一套优秀的教材你知道吗？利用它自带的教材，你完全有能力自学成为数据处理高手，如果你不信，可以跟我来看看，下面是具体的使用case studies来学习的步骤，我们以频率统计方法来示范，其他的技术也是一样的。<br>工具/原料</p>
-<ul>
-<li>spss20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>在开始菜单中，展开所有程序，找到spss，启动它</li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/7c1ed21b0ef41bd522599b7051da81cb39db3d2f.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<ul>
-<li>在spss菜单中，点击help菜单，找到case studies，打开它</li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/0ff41bd5ad6eddc4c0edc77f39dbb6fd5266332f.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<ul>
-<li>你会看到，打开了浏览器，跳转到case studies页面，展开case studies，你会看到里面有各种数据处理技术，找到你想要学习的一种技术，比如要学习频率处理称名变量的方法，找到图示中的链接，打开它</li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/ac6eddc451da81cbaaecf0495266d0160924312f.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<ul>
-<li>你会看到这个技术的介绍页面，学习这个软件，英语要过关呀，这里介绍了这个技术，并告诉你要用到的一个素材，图示中标出来的就是我们要用到的素材，记住这个名字，然后我们去找到这个素材。</li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/80cb39dbb6fd526646214f90ab18972bd407362f.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<ul>
-<li>仍然是在开始菜单中，找到spss的快捷方式，右键单击，然后在右键菜单中选择【打开文件位置】</li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/b7fd5266d0160924332fd19fd40735fae6cd342f.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<ul>
-<li>来到spss的安装文件夹，找到samples文件夹，打开它，里面放着各种case</li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/8b82b9014a90f603ccb0efc33912b31bb051ed36.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<ul>
-<li>这里有一个简体中文的case文件夹和一个英文的，我建议你使用英文的，我们在学习的时候英文的是最标准的，以后写论文的时候也会用到英文的。所以打开英文文件夹</li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/962bd40735fae6cde6bed8e50fb30f2442a70f2f.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<ul>
-<li>打开这个文件夹以后，你会看到我们刚才在网页上见到的contacts.sav文件夹，双击打开</li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/4b90f603738da977f82ff5afb051f8198618e336.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<ul>
-<li>看到这里了吧，这就是我们要用到的素材</li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/3812b31bb051f819432570cedab44aed2e73e736.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<ul>
-<li>回到网页上，点击右下角的按钮，鼠标显示【next】，进入下一步</li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/9f510fb30f2442a77b048e21d143ad4bd113022f.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<ul>
-<li><p>在这一步告诉你了操作的方法，一步一步手把手的教你，很好用的。好了你自己去学习吧，我的教程就到这里了。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2015/05/23/spss如何利用case%20studies来自学/c995d143ad4bd113d4c7c4b65aafa40f4bfb052f.jpg" alt="spss如何利用case studies来自学" title="spss如何利用case studies来自学">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/05/23/amos21.0教程：[4]新手必须知道的基本假设/">
-                amos21.0教程：[4]新手必须知道的基本假设
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年05月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>使用amos进行绘图的时候，你必须知道amos的基本假设，否则你会有一头雾水的感觉。下面是我列出来新手必须知道的几个假设。这几个假设就是你在绘图的时候必须要做的，没有任何商量余地，也不给你解释的机会。</p>
-<ul>
-<li>测量模型中指标变量的误差项的路径系数为1。如图所示：</li>
-</ul>
-<img src="/2015/05/23/amos21.0教程：[4]新手必须知道的基本假设/ae8267310a55b319105556fd42a98226cefc174f.jpg" alt="amos21.0教程：[4]新手必须知道的基本假设" title="amos21.0教程：[4]新手必须知道的基本假设">
-<ul>
-<li>从图中区分内因潜变量和外因潜变量的方法是：外因潜变量只有向外的单向箭头，内因潜变量既有指向自己的单向箭头又有向外的单向箭头，注意，这里说的都是单向箭头。</li>
-</ul>
-<img src="/2015/05/23/amos21.0教程：[4]新手必须知道的基本假设/7a8a1446f21fbe092e18179c6a600c338644adb1.jpg" alt="amos21.0教程：[4]新手必须知道的基本假设" title="amos21.0教程：[4]新手必须知道的基本假设">
-<ul>
-<li>测量模型中，至少有一个指标变量的路径系数为1。如图所示：</li>
-</ul>
-<img src="/2015/05/23/amos21.0教程：[4]新手必须知道的基本假设/8a95ad1c8701a18b9344c6c79f2f07082938fe48.jpg" alt="amos21.0教程：[4]新手必须知道的基本假设" title="amos21.0教程：[4]新手必须知道的基本假设">
-<ul>
-<li><p>所有出现在模型中的变量名称必须唯一，不能重复。</p>
-</li>
-<li><p>内因潜变量和内因观测变量必须增设一个残差项，因为所有的内因变量都不能被其他变量完全的解释，必须有残差。如图所示：</p>
-</li>
-</ul>
-<img src="/2015/05/23/amos21.0教程：[4]新手必须知道的基本假设/0d729944ebf81a4c1d743841d62a6059242da6b1.jpg" alt="amos21.0教程：[4]新手必须知道的基本假设" title="amos21.0教程：[4]新手必须知道的基本假设">
-<ul>
-<li>外因潜变量之间使用双箭头建立相关关系。如图所示：</li>
-</ul>
-<img src="/2015/05/23/amos21.0教程：[4]新手必须知道的基本假设/148f28d3d539b6006188db3fe850352ac75cb7b1.jpg" alt="amos21.0教程：[4]新手必须知道的基本假设" title="amos21.0教程：[4]新手必须知道的基本假设">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -855,19 +1036,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

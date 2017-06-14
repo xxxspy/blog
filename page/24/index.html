@@ -157,6 +157,186 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/">
+                spss逻辑回归中哑变量的设置和分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>逻辑回归中，有些自变量是分类变量，同时有两个以上的分类，这就导致了我们在做回归的时候就默认的把该变量当成了等距数据，最后造成了更大的误差。哑变量就是要解决这个问题，下面是具体的方法。<br>方法/步骤</p>
+<ul>
+<li>在spss中打开数据，确定要设置哪个变量为哑变量以后，我们打开逻辑回归对话框，操作方法：analyse–regression–binary logistic</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/8644ebf81a4c510f1d0e5ef76059252dd52aa511.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>将是否吸烟这个变量放到因变量中，将种族放到自变量中，如图所示</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/63d0f703918fa0ecac9ddae0269759ee3c6ddb81.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>选择变量进入方程的方法是enter，因为所有的哑变量必须是同时进入，否则就没有统计学意义了。</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/5882b2b7d0a20cf4d723403276094b36adaf99a8.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>接下来要设置哑变量了，点击categrio按钮，打开变量分类对话框</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/ac345982b2b7d0a2e986ba70cbef76094a369a94.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>将要设置哑变量的变量放入右侧窗口中</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/80cb39dbb6fd5266819582f9ab18972bd50736a4.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>到了最关键的部分，我们要选择哪个分类作为参考分类，设置参考分类必须使参考分类有意义，比如这个例子中，种族类别包括黑人、白人和其他种族，那么其他种族一般被设置为参考分类，那么你怎么知道参考分类是第一个还是最后一个呢，后面要设置last和first。下面一个步骤告诉你</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/622762d0f703918f02e48427513d269759eec422.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>回到变量视图中，找到种族这个变量，在value中可以查看变量值，我们看到其他种族这个分类为3，上面那一步应该设置为last</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/9f2f070828381f3067e83444a9014c086f06f06e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/6f061d950a7b0208ed38860c62d9f2d3562cc86e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/b8389b504fc2d5627cf46800e71190ef77c66c5b.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>点击ok，开始输出统计结果</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/dcc451da81cb39dbfb58dfbbd0160924aa183046.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<ul>
+<li>输出了一大堆数据，我们不用管，因为这里要教大家如何分析哑变量，所以直奔主题，找到variables in the equation表，这个表中，你可以看到有race（1）和race（2）这两个变量，他们就是race的哑变量，B是系数，因为他们都是跟其他种族相比，图中的数据可以看到，白种人比其他种族的人更容以吸烟，黑种人比其他种族更容易吸烟，白种人和黑种人相比，黑种人可能比白种人更容易吸烟，但是需要进一步的检验。</li>
+</ul>
+<img src="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/77c6a7efce1b9d16fc37228cf3deb48f8d54646e.jpg" alt="spss逻辑回归中哑变量的设置和分析方法" title="spss逻辑回归中哑变量的设置和分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/">
+                没有数据分析功能怎么办：[1]Excel数据分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>Excel怎么做回归？Excel怎么做方差分析？Excel怎么做相关检验？Excel怎么聚类分析？Excel怎么做贝叶斯估计？好吧，这一切都可以在数据分析选项中实现，不过，Excel默认安装时可能没有数据分析选项，我们可以自己设置一下让数据分析选项出现，下面是具体的操作：</p>
+<ul>
+<li>首先打开Excel，点击左上角的【文件】，我用的是Excel2013，如果你是用的是其他版本，应该是点击左上角的office按钮</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/b25d9901a18b87d616455b4f060828381f30fd18.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>打开了Excel的office菜单，我们点击选项按钮，如图所示</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/0b3a1c087bf40ad122e337b3562c11dfa9ecce18.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>在选项对话框中，切换到加载项这个页面</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/38403f3fb80e7beccfddf3b12e2eb9389b506b18.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>在管理栏中，选择“Excel加载项”，然后点击转到按钮，打开了加载宏的对话框</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/d8b8c92a6059252db924ed54359b033b5bb5b974.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>在这里我们需要勾选“分析工具库”，这样就可以使用分析工具了。如果我们想要在vba中使用分析工具，还需要勾选下面的选项【分析工具库-vba】，点击确定按钮</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/8bc3a7014a90f60352b66c173812b31bb051ed19.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>好了，怎么找到分析工具库呢？在数据选项下，找到数据分析栏，点击数据分析就可以看到所有的数据分析工具了</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/425773224f4a20a41018cc9791529822720ed019.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<ul>
+<li>这个对话框就是所有的分析工具，可以满足基本的描述和预测统计</li>
+</ul>
+<img src="/2015/09/11/没有数据分析功能怎么办：[1]Excel数据分析/0db2c9ca7bcb0a46ad247b696a63f6246b60af19.jpg" alt="没有数据分析功能怎么办：[1]Excel数据分析" title="没有数据分析功能怎么办：[1]Excel数据分析">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/">
+                amos21.0教程：[2]结构方程模型中的测量模型
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>为了让大家尽快掌握amos的操作和分析方法，我们尽量少讲理论知识，而是专注于软件的理解和应用。今天我们介绍两个基本模型，他们构成了我们的结构方程模型，是学习amos必须知道的，否则你连绘图都不知道如何绘。结构方程模型分为测量模型和结构模型。我们先来学习什么是测量模型。</p>
+<ul>
+<li>首先来看测量模型（如下图所示），测量模型由观察变量和潜在变量构成。观察变量也叫指标变量，就是我们可以直接测量的变量，比如下面的测量模型中，课业压力可以直接测量，我们可以直接问“请给你的课业压力打分”，这样就得到了课业压力的得分；但是生活压力时无法直接测量的，我们需要将“课业压力”“情感压力”“升学压力”这三个指标的综合分来评价生活压力，所以生活压力就是潜在变量。正如图中所示，潜在变量是用圆形表示，指标变量用矩形表示。</li>
+</ul>
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/5202e5f2b211931311486f3364380cd790238def.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<ul>
+<li>测量模型的构成图：接下来我们看看一般的测量模型是如何画的。通常测量模型有三个基本元素，误差、观察变量、潜在变量，三个元素用单向箭头链接起来，箭头指向的方向是被影响的变量，通常来说潜变量影响观察变量的大小，所以箭头都是由潜在变量指向观察变量。误差也是影响观察变量大小的指标，所以箭头也是由误差指向观察变量。</li>
+</ul>
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/a005b3345982b2b77a43aa4730adcbef77099b12.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<ul>
+<li>测量模型回归方程怎么写：下图所示就是一个测量模型，我们可以使用三个回归方程来表示，下面第二幅图就是三个回归方程。注意看观察变量在方程等号的左边。</li>
+</ul>
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/d68b65cb0a46f21fda4caad0f7246b600d33aefe.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/b87985504fc2d5622319246ee61190ef77c66ce5.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<ul>
+<li>反映性指标与构成性指标：下图中，左图中的观察变量叫做反映性指标，即当一个以上指标变量为果、潜在变量为因时，指标变量（观察变量）就叫做反映性指标；反之，如果指标变量为因，它们共同觉醒一个潜在变量时，指标变量就叫做构成性指标，如下面右边的图。需要你注意的是，在amos中和lisrel中，很难对构成性指标进行分析，所以我们以后的结构方程模型中都是使用反映性指标。</li>
+</ul>
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/3790312eb9389b50df7b00d18435e5dde6116e6a.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<ul>
+<li>测量模型与验证性因素分析：其实我们做验证性因素分析就是使用测量模型进行的，验证性因素分析的目的就是要查看几个观察变量在潜变量上的载荷的大小和显著性。在做效度分析的时候，我们通常期望得到的结果就是用验证性因素分析发现观察变量在理论上相关的潜变量上载荷显著，而在不相关的潜在变量上的载荷不显著。</li>
+</ul>
+<img src="/2015/09/11/amos21.0教程：[2]结构方程模型中的测量模型/b853d6fcc3cec3fd2a2844f6d788d43f869427e4.jpg" alt="amos21.0教程：[2]结构方程模型中的测量模型" title="amos21.0教程：[2]结构方程模型中的测量模型">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/09/11/SPSS实例：[34]二分类变量关联程度的度量/">
                 SPSS实例：[34]二分类变量关联程度的度量
             </a>
@@ -558,192 +738,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/01/Excel2013教程-彻底隐藏工作表不能取消的方法/">
-                Excel2013教程-彻底隐藏工作表不能取消的方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我们都知道Excel工作表可以隐藏也可以显示，就是在工作表上右键单击–选择隐藏（取消隐藏），但是对于一个Excel高手来说，你隐藏的还不够，我们可以轻易的查看隐藏的工作表，那么怎么做才能彻底隐藏呢？这里交给大家一个方法，那就是使用vba加密的方法，这里不需要任何vba知识，都是手工操作，没有代码。</p>
-<ul>
-<li><p>首先我们打开Ｅｘｃｅｌ，按下ａｌｔ＋Ｆ１１打开ｖｂａ界面</p>
-</li>
-<li><p>接着我们选中要隐藏的工作表，然后点击菜单栏上的【视图】</p>
-</li>
-</ul>
-<img src="/2015/09/01/Excel2013教程-彻底隐藏工作表不能取消的方法/507c389759ee3d6d216e13c742166d224e4aded7.jpg" alt="Excel2013教程-彻底隐藏工作表不能取消的方法" title="Excel2013教程-彻底隐藏工作表不能取消的方法">
-<ul>
-<li>视图菜单下找到【属性窗口】打开属性窗口</li>
-</ul>
-<img src="/2015/09/01/Excel2013教程-彻底隐藏工作表不能取消的方法/d68b65cb0a46f21f3ab6ca5ff7246b600d33aef9.jpg" alt="Excel2013教程-彻底隐藏工作表不能取消的方法" title="Excel2013教程-彻底隐藏工作表不能取消的方法">
-<ul>
-<li>在属性窗口中找到ｖｉｓｉｂｌｅ选项，我们将其设置为２，如图所示</li>
-</ul>
-<img src="/2015/09/01/Excel2013教程-彻底隐藏工作表不能取消的方法/6a22e8246b600c330efb4ac41b4c510fd8f9a1f9.jpg" alt="Excel2013教程-彻底隐藏工作表不能取消的方法" title="Excel2013教程-彻底隐藏工作表不能取消的方法">
-<ul>
-<li>接着我们在菜单栏上设置【工具】－－ｖｂａ属性</li>
-</ul>
-<img src="/2015/09/01/Excel2013教程-彻底隐藏工作表不能取消的方法/d66b7e59252dd42aba8b95a7023b5bb5c8eab8f9.jpg" alt="Excel2013教程-彻底隐藏工作表不能取消的方法" title="Excel2013教程-彻底隐藏工作表不能取消的方法">
-<ul>
-<li>切换到保护选项下，我们输入密码和确认密码，然后点击确定按钮</li>
-</ul>
-<img src="/2015/09/01/Excel2013教程-彻底隐藏工作表不能取消的方法/35da1d3b5bb5c9ea827197efd439b6003bf3b3f9.jpg" alt="Excel2013教程-彻底隐藏工作表不能取消的方法" title="Excel2013教程-彻底隐藏工作表不能取消的方法">
-<ul>
-<li>好了，我们看看，右键单击工作表，取消隐藏的选项已经变成灰色了。如果你想要显示工作表，还是要在ｖｂａ中设置属性就可以了，只不过打开ｖｂａ的时候需要输入你刚才设置的密码</li>
-</ul>
-<img src="/2015/09/01/Excel2013教程-彻底隐藏工作表不能取消的方法/504ec7f9d72a6059b5b875162934349b023bbad7.jpg" alt="Excel2013教程-彻底隐藏工作表不能取消的方法" title="Excel2013教程-彻底隐藏工作表不能取消的方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/01/pandas教程：[16]字符串操作/">
-                pandas教程：[16]字符串操作
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>有些时候我们的数据是字符串形式的，pandas也能方便的处理，今天我们就举几个例子来操作字符串。</p>
-<ul>
-<li>先来创建一个Series<br>查看下其中的内容</li>
-</ul>
-<img src="/2015/09/01/pandas教程：[16]字符串操作/58c3acb7d0a20cf4dce6a8db75094b36acaf9905.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<img src="/2015/09/01/pandas教程：[16]字符串操作/b29f8282d158ccbf49e5e33e1ad8bc3eb135411d.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<ul>
-<li>将数据转换为小写<br>查看下是不是转换为了小写</li>
-</ul>
-<img src="/2015/09/01/pandas教程：[16]字符串操作/adee30dda3cc7cd9785b62dd3a01213fb80e9105.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<img src="/2015/09/01/pandas教程：[16]字符串操作/6dc09e0a19d8bc3e985150ce818ba61ea8d3451d.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<ul>
-<li>转换为大写</li>
-</ul>
-<img src="/2015/09/01/pandas教程：[16]字符串操作/1899a23eb13533faa9efc52aabd3fd1f41345b1d.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<img src="/2015/09/01/pandas教程：[16]字符串操作/38403f3fb80e7becafac55e52c2eb9389b506b05.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<ul>
-<li>获取字符串的长度，使用len<br>现在所有的字符串转换为了数字，也就是字符串的长度</li>
-</ul>
-<img src="/2015/09/01/pandas教程：[16]字符串操作/a75fb6d3fd1f4134a76e537a261f95cad1c85e1d.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<img src="/2015/09/01/pandas教程：[16]字符串操作/a992e31f4134970a012a462b96cad1c8a7865d1d.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<ul>
-<li>我们还可以切割字符串，将字符串转换为list<br>查看list构成的数据列</li>
-</ul>
-<img src="/2015/09/01/pandas教程：[16]字符串操作/e49cf91190ef76c6a0a3ad2f9e16fdfaaf516705.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<img src="/2015/09/01/pandas教程：[16]字符串操作/c856613e6709c93d4aab58f39c3df8dcd100541d.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<ul>
-<li>如果list构成的数据列比较怪，我们可以使用get方法获得列中的某个元素<br>结果为：</li>
-</ul>
-<img src="/2015/09/01/pandas教程：[16]字符串操作/3a86813df8dcd10085c5ae25718b4710b9122f1d.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<img src="/2015/09/01/pandas教程：[16]字符串操作/73ca5910b912c8fc86aaa0c9ff039245d688211d.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<ul>
-<li>替换字符串，使用replace，replace的第一个参数是正则表达式，第二个参数是要替换成的字符串。<br>输出：</li>
-</ul>
-<img src="/2015/09/01/pandas教程：[16]字符串操作/c28fddfdfc0392459fecb70b8494a4c27d1e251d.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<img src="/2015/09/01/pandas教程：[16]字符串操作/d57e9994a4c27d1e9c7f6dc018d5ad6eddc4381d.jpg" alt="pandas教程：[16]字符串操作" title="pandas教程：[16]字符串操作">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/">
-                spss做因素分析的时候如何输出因素值并形成变量
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>假如因素分析的时候我们会用到因素的值，比如根据因素的值进行排序，那么我们就需要用到save as variables过程。下面我们就要介绍一下如何使用这个过程。<br>工具/原料</p>
-<ul>
-<li>spss 20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>准备好spss中的数据，然后在菜单栏上执行：analyse–dimension reduction–factor</li>
-</ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/b03533fa828ba61e01a6f5f84134970a314e5998.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
-<ul>
-<li>将用于因素分析的变量放入variables框中</li>
-</ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/e824b899a9014c08787915720a7b02087af4f4a2.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
-<ul>
-<li>点击scores按钮，设置要输出的变量</li>
-</ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/a686c9177f3e67097c9f78283bc79f3df9dc554d.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
-<ul>
-<li>打开score对话框，勾选save as variables，就是这个选项用于输出因素分数，点击continue按钮</li>
-</ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/cf1b9d16fdfaaf517b28bc688c5494eef11f7a19.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
-<ul>
-<li>点击ok开始输出数据，并在变量视图输出三个新的变量</li>
-</ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/0ff41bd5ad6eddc49fda882c39dbb6fd52663323.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
-<ul>
-<li>如图所示，你会看到三个多出来的变量</li>
-</ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/6159252dd42a28347e930adc5bb5c9ea15cebf2b.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
-<ul>
-<li>通常我们要根据因素的值来对case进行排序，方法是选中一个因素的所有值，然后右键单击，选择sort descending，你会看到数据从大到小的排序</li>
-</ul>
-<img src="/2015/09/01/spss做因素分析的时候如何输出因素值并形成变量/5ab5c9ea15ce36d38535bfe73af33a87e950b137.jpg" alt="spss做因素分析的时候如何输出因素值并形成变量" title="spss做因素分析的时候如何输出因素值并形成变量">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -786,19 +780,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

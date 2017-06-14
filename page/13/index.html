@@ -157,6 +157,454 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/05/17/Python教程：[51]删除文件及文件夹/">
+                Python教程：[51]删除文件及文件夹
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如有一个txt文件，我想要使用python命令删除它，怎么弄？这里用到了Python的os模块，我们使用例子来说明如何如何删除文件及目录。</p>
+<ul>
+<li>在d盘下有一个tt文本文件，我们来删除它</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/8697397f9e2f0708688ca795eb24b899a801f25f.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li>首先引入os模块</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/e865a699a9014c0828b2a530087b02087af4f45f.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li>使用os下的remove命令来删除该文件，参数是r’d:/tt.txt’，通常路径字符串都是用r字符串</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/1e71f724b899a90109c1d6a31f950a7b0308f574.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li>现在改文件已经被删除，现在我们再运行一下该命令，看看有什么提示错误</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/0b3a1c087bf40ad12e6d4a76552c11dfa8ecce5f.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li>这就是提示的错误，为了写出更见健壮的程序，我们通常要在删除文件前，先检验该文件是否存在。</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/48151723dd54564e598869acb1de9c82d0584f73.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li>使用path.exists命令来检验文件是否存在，参数仍然是路径字符串</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/6dc09e0a19d8bc3e64e58b5f808ba61ea9d34573.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li>配合if语句，我们就可以写出一个健壮的删除文件的命令。</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/83cab81ea8d3fd1f9ae42faf324e251f94ca5f73.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li>上面讲到了如何删除文件，下面说一下如何删除文件夹。我们用到了rmdir方法，它可以直接删除空文件夹</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/814b07d8bc3eb135e7b4382ea41ea8d3fc1f44f1.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li><p>假如文件夹非空，会提示这样的错误：</p>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#8>“, line 1, in <module></module></pyshell#8></p>
+</li>
+<li><p>os.rmdir(r’d:/tt/‘)</p>
+</li>
+<li><p>WindowsError: [Error 145] : ‘d:/tt/‘</p>
+</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/9252ae7eca80653882d42b8695dda144ad34822e.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li><p>假如文件夹不存在，会提示这样的错误：</p>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#16>“, line 1, in <module></module></pyshell#16></p>
+</li>
+<li><p>os.rmdir(r’d:/tt/‘)</p>
+</li>
+<li><p>WindowsError: [Error 2] : ‘d:/tt/‘</p>
+</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/5beeba0f4bfbfbedb239b9ea7af0f736aec31f87.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li>怎么删除非空文件夹？我们用到了shutil模块</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/32bb9c8ba61ea8d32551fb91950a304e241f58f1.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<ul>
+<li>用rmtree命令可以直接删除文件夹，包括内部文件</li>
+</ul>
+<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/83cab81ea8d3fd1f987a2daf324e251f94ca5ff1.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/17/numpy函数：[17]diag函数/">
+                numpy函数：[17]diag函数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>numpy.diag()返回一个矩阵的对角线元素，或者创建一个对角阵（ diagonal array.）。我们还是用例子来说明问题：</p>
+<ul>
+<li>先引入numpy</li>
+</ul>
+<img src="/2016/05/17/numpy函数：[17]diag函数/f6428f8fa0ec08fac9b55e505bee3d6d54fbda55.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
+<ul>
+<li>创建一个对角阵，如下</li>
+</ul>
+<img src="/2016/05/17/numpy函数：[17]diag函数/54baacfb43166d22efc25863442309f79152d255.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
+<ul>
+<li>创建一个二维数组x</li>
+</ul>
+<img src="/2016/05/17/numpy函数：[17]diag函数/55a628d12f2eb93870383705d7628535e4dd6fb5.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
+<ul>
+<li>提起二维数组的对角元素的值，构成一个一位数组</li>
+</ul>
+<img src="/2016/05/17/numpy函数：[17]diag函数/476217f790529822d4867434d5ca7bcb0b46d455.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
+<ul>
+<li>或者，我们可以使用第二个参数，获取其他元素，请自行观察这个值在x数组中的位置</li>
+</ul>
+<img src="/2016/05/17/numpy函数：[17]diag函数/4e83cb628535e5dd1779e82874c6a7efcf1b62b5.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
+<ul>
+<li>接着，你换一个参数试试</li>
+</ul>
+<img src="/2016/05/17/numpy函数：[17]diag函数/e49cf91190ef76c65487b6dc9f16fdfaae5167b5.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
+<ul>
+<li>连续使用两个diag，可以得到一个对角阵，除对角线以外的元素均为零</li>
+</ul>
+<img src="/2016/05/17/numpy函数：[17]diag函数/cf5a8316fdfaaf510bb6cc488e5494eef11f7ab5.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
+<ul>
+<li><p>今天用到的所有代码：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.diag((1,2,3))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 0, 0],</p>
+</li>
+<li><p>[0, 2, 0],</p>
+</li>
+<li><p>[0, 0, 3]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x=numpy.arange(9).reshape((3,3))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[0, 1, 2],</p>
+</li>
+<li><p>[3, 4, 5],</p>
+</li>
+<li><p>[6, 7, 8]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x=numpy.arange(10,19).reshape((3,3))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>x</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[10, 11, 12],</p>
+</li>
+<li><p>[13, 14, 15],</p>
+</li>
+<li><p>[16, 17, 18]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>y=numpy.diag(x)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>y</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([10, 14, 18])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.diag(x,1)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([11, 15])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.diag(x,-1)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([13, 17])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.diag(np.diag(x))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#38>“, line 1, in <module></module></pyshell#38></p>
+</li>
+<li><p>numpy.diag(np.diag(x))</p>
+</li>
+<li><p>NameError: name ‘np’ is not defined</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>numpy.diag(numpy.diag(x))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[10,  0,  0],</p>
+</li>
+<li><p>[ 0, 14,  0],</p>
+</li>
+<li><p>[ 0,  0, 18]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/17/SPSS实例：[27]四个表卡方检验/">
+                SPSS实例：[27]四个表卡方检验
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们先来讲一个案例，我们想要知道两个年龄组的儿童在同一个问题上回答的正确性是否不同，统计出来的四格表是这样的：</p>
+<ul>
+<li>原始数据的数据结构，见下图。在这里没有频数，只有年龄组和是否正确这两个变量</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/b25d9901a18b87d6ed86b557050828381e30fd77.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>在菜单栏上执行：分析–描述统计–交叉表</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/90cebeec08fa513dc28074963f6d55fbb2fbd915.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>将年龄组设置为行变量，是否正确设置为列变量；然后设置统计量，点击statistic</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/425773224f4a20a4ab34248f92529822720ed015.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>勾选卡方值，这样才能输出卡方值</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/61183b2dd42a283433672f4359b5c9ea14cebf71.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>首先看到的表格是基本的频数统计，没什么好说的，大家都懂</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/eab9044c510fd9f9d6324d21272dd42a2834a415.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>看第二个表格是最关键的信息，我们看sig值，如果小于0.05就可以认为达到了显著水平，拒绝虚无假设，认为年龄对答案的正确性产生了影响。</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/373bc4b44aed2e7348429e648501a18b86d6fa94.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>先整理数据，数据结构见下图</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/d048adde9c82d15882c456f9820a19d8bd3e42f0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>接着进行加权</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/a75fb6d3fd1f4134cd710a36271f95cad0c85ef0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>用频数进行加权，点击ok</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/bd70426034a85edfce0af16b4b540923dc5475b0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<ul>
+<li>接下来的步骤都是一样的，见上面。</li>
+</ul>
+<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/8cf0d513495409239aef6c369058d109b2de49b0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/05/17/Django教程：[1]windows下安装Django/">
                 Django教程：[1]windows下安装Django
             </a>
@@ -578,201 +1026,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/11/python 线性代数：[22]习题1.10求逆矩阵/">
-                python 线性代数：[22]习题1.10求逆矩阵
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>接着以前的文章，我们继续学习用Python解线性代数的问题。今天我们要练习一下《线性代数.同济大学出版.第一章习题10》,演示一下如何求矩阵的逆矩阵和验证结果是否正确。</p>
-<ul>
-<li>这是今天我们要做的习题：只做前三题</li>
-</ul>
-<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/0b14ad19ebc4b745eef1ac06cbfc1e178a82157d.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
-<ul>
-<li>将这三个矩阵录入到excel当中</li>
-</ul>
-<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/8bc3a7014a90f603c6d587573d12b31bb051ed7e.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
-<ul>
-<li>开始写代码，先引入这两个库</li>
-</ul>
-<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/8474fbdde71190ef4ce989cfca1b9d16fdfa6054.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
-<ul>
-<li>先来计算第一个矩阵的逆矩阵，用np.linalg.inv来计算arr矩阵的逆矩阵，如果你看不太懂代码，应该去翻看我前两篇文章，里面讲得很详细<br>这是输出的结果：</li>
-</ul>
-<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/3b6833f5e0fe9925f51e724030a85edf8db17154.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
-<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/30ecd5ef76094b3688b401fda7cc7cd98d109db8.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
-<ul>
-<li><p>现在计算第第二个矩阵，我们发现这个矩阵是带有符号的，所以我们用sympy这个库中的Matrix对象来进行计算。我们可以使用Matrix.inv来计算逆矩阵，默认情况下，它使用高斯消去法，如果传入参数LU，它</p>
-</li>
-<li><p>这是输出的两个矩阵：</p>
-</li>
-</ul>
-<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/d048adde9c82d158949042a1840a19d8bc3e4254.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
-<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/ae8267310a55b31941a3986547a98226cffc170c.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
-<ul>
-<li>最后一题，和第一题一样，都是数字，但是现在我想验证一下计算结果，让两个矩阵点乘，如果结果是一个单位矩阵，那么久可以证明两个矩阵互为逆矩阵<br>输出结果为：</li>
-</ul>
-<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/8b527d2762d0f7034cd78ecc0cfa513d2697c57e.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
-<img src="/2016/05/11/python%20线性代数：[22]习题1.10求逆矩阵/29752a9b033b5bb5ca4e24ee32d3d539b700bcc1.jpg" alt="python 线性代数：[22]习题1.10求逆矩阵" title="python 线性代数：[22]习题1.10求逆矩阵">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/">
-                Python机器学习：[1]贝叶斯文本分类器
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月05日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>  最近在我的网站骂我的人比较多，想写一个语义分类器，让电脑自动屏蔽那些骂人的评论，怎么办呢？这就用到了一个机器学习的算法——贝叶斯文本分类器。这个算法很有用处，可以让电脑识别人类语言，如果加上一点心理学的知识，可以让电脑理解人类的文章并让电脑判断作者的个性特征，这就复杂了，现在我们先做一个简单的示范。</p>
-<ul>
-<li>首先是需要一个样本集，用于训练文本分类器：这里面用到了一个分词算法【cs.perse】，其实是一个机械分词算法，cs.py 文件的代码粘贴在最下面。</li>
-</ul>
-<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/35da1d3b5bb5c9ea8a85a169d639b6003bf3b383.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
-<ul>
-<li>下面的函数利用样本创建一个词表，也就是所有词的集合</li>
-</ul>
-<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/b3508d13b07eca80ca739b6d922397dda0448383.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
-<ul>
-<li>下面的函数将一个词表转换成词向量</li>
-</ul>
-<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/647912d7912397dd12243a8e5a82b2b7d1a28798.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
-<ul>
-<li>训练样本得到脏话/非脏话的词分布概率</li>
-</ul>
-<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/9c57e3faaf51f3de6dc41bee97eef01f3b297983.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
-<ul>
-<li>利用贝叶斯条件概率，计算输入的一句话到底是不是骂人的话，如果是骂人的话，就返回1，否则返回0</li>
-</ul>
-<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/5f9e93b1cb134954e1684aee554e9258d0094a83.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
-<ul>
-<li>最后测试一下【’fuck you! mother fucker!’】这句话，输出结果为：1</li>
-</ul>
-<img src="/2016/05/05/Python机器学习：[1]贝叶斯文本分类器/718e25c79f3df8dcdb612d1bce11728b46102898.jpg" alt="Python机器学习：[1]贝叶斯文本分类器" title="Python机器学习：[1]贝叶斯文本分类器">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/">
-                Excel2013：[14]突破数据有效性单行单列限制
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月05日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>给Excel做下拉列表是经常用到的，但是有时候我们的下拉列表需要的数据不仅仅在一行或一列中，可能存在于两列，那时候你会发现，数据有效性无法将两列数据设置成下拉列表的数据源，我们这时候就用到了下面的技巧：</p>
-<ul>
-<li>我们现在要将这两列数据设置成数据有效性的数据源</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/814b07d8bc3eb13559d8a6a0a41ea8d3fd1f444a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>选中第一列的数据</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/bd7faf3533fa828bca3c8cf8ff1f4134970a5a4a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>给这一列数据定义一个名称：公式–定义名称</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/f9589818367adab480e20a5889d4b31c8701e4b8.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>打开这个对话框，将名称设置成：姓名，点击确定按钮</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/32bb9c8ba61ea8d3933d651f950a304e251f584a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>选中要设置下拉列表的这一列，或者要设置数据有效性的这一列</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/e8112b2ac65c10384e6edfd9b0119313b07e895d.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>选择【数据验证】，Excel2013将数据有效性改成了数据验证。</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/4075890a304e251fe6e8f5e3a586c9177f3e534a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>我们设置成序列，勾选图中所示两项，将来源设置成刚才定义的区域【姓名】，点击确定按钮</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/d089b986c9177f3e1f2bed1672cf3bc79f3d564a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>现在出现在下拉列表里的数据只有这三个人的名字，接着要添加别的名字了</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/dc854fda81cb39db20df764dd2160924ab18304a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>打开名称管理器</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/29790130e924b899710a68236c061d950a7bf6bc.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>编辑【姓名】区域</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/0865b518972bd407a8d8c2e679899e510fb3094a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>选中这两列数据作为引用位置，点击确定按钮</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/6f4703950a7b0208a5ff2efa60d9f2d3572cc8bc.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<ul>
-<li>现在来看看，是不是出现了两列的数据</li>
-</ul>
-<img src="/2016/05/05/Excel2013：[14]突破数据有效性单行单列限制/d0526df082025aaf082d6fd0f9edab64034f1a4a.jpg" alt="Excel2013：[14]突破数据有效性单行单列限制" title="Excel2013：[14]突破数据有效性单行单列限制">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -815,19 +1068,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

@@ -157,6 +157,278 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/06/01/SPSS自动化：[2]ispssdatadoc对象方法用法/">
+                SPSS自动化：[2]ispssdatadoc对象方法用法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年06月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>   ispssdatadoc对象从属于document对象，其方法有很多，今天我们来一一介绍，包括他的功能和用法，可能有不太详尽的地方，大家多提意见，欢迎有志于spss自动化的网友交流。</p>
+<ul>
+<li><p>1&gt;clear方法：清除数据。</p>
+</li>
+<li><p>使用方法：objdatadoc.selectcells（”a”,”b”,19,29)</p>
+</li>
+<li><p>Objdatadoc.clear</p>
+</li>
+<li><p>2&gt;copy方法：复制数据。</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>objdatadoc.copy</p>
+</li>
+<li><p>3&gt;cut方法：</p>
+</li>
+<li><p>剪贴对象到剪贴板。使用方法：</p>
+</li>
+<li><p>objoutputdoc.selectalltables</p>
+</li>
+<li><p>Objoutputdoc.cut</p>
+</li>
+<li><p>4&gt;delete方法：删除选定的数据。</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>objoutputdoc.selectlastutput</p>
+</li>
+<li><p>Objoutputdoc.remove</p>
+</li>
+<li><p>5&gt;deletemenuitem方法：删除菜单项</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Objdatadoc.deletemenuitem(“edit”)</p>
+</li>
+<li><p>6&gt;deletemenuitemfromall方法：从所有数据窗中中删除菜单项，用法同上。</p>
+</li>
+<li><p>7&gt;getbannertext方法：获取标题文本</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Banner=objoutputdoc.getbannertext</p>
+</li>
+<li><p>8&gt;getdocumentpath方法：获取文档路径</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Path=objoutputdoc.getdocumentpath</p>
+</li>
+<li><p>9&gt;getfiltervariable方法：获取变量名或者带有标签的变量名</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Objdatadoc.getfiltervariable(false)   ‘false表示只获得变量名不要标签</p>
+</li>
+<li><p>10&gt;getnumberofcases方法：获取case数量</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Num=objdatadoc.getnumberofcases</p>
+</li>
+<li><p>11&gt;gettextdata方法：获取范围内文本格式的数据</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>array=objdatadoc.gettextdata(“a列”,”b列”,12,14)</p>
+</li>
+<li><p>12&gt;getvariables方法：返回一个一维变量数组，可以选择接收变量还变量标签。功能是获得变量名或者带标签的变量名。</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Variablelist=objdatadoc.getvariables(boolean)           ‘boolean取1为获取变量名和标签，取0为仅获取变量名</p>
+</li>
+<li><p>13&gt;getweightingvariable方法：获取加权变量。</p>
+</li>
+<li><p>使用方法：string=objdatadoc.getweightingvariable(boolean)          ‘boolean是1则返回变量名和标签</p>
+</li>
+<li><p>14&gt;invokedialogandexcutesyntax方法：激活一个对话框并运行命令。</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Objdatadoc.invokedialogandexecutesyntax(strpath,spsswindoparent,true)     ‘strpath是菜单路径，例如”analyze&gt;survival&gt;lifetables”；spsswindoparent是父对话框，可取1或者0；true指的是同步，也就是运行命令以后立刻获得控制权。</p>
+</li>
+<li><p>15&gt;invokedialogandreturnsyntax方法：返回一个syntax命令。</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>String=objdatadoc.invokedialogandreturnssyntax(strpath,spsswindoparent)</p>
+</li>
+<li><p>16&gt;paste方法：粘贴</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Objdatadoc.selectcells(‘a列’,’b列’,20,23)    ‘选择区域粘贴</p>
+</li>
+<li><p>Objdatadoc.paste</p>
+</li>
+<li><p>17&gt;printdoc方法：打印</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Objdatadoc.printdoc     ‘使用ispssprintoptions和printrange确定打印内容和方法。</p>
+</li>
+<li><p>18&gt;saveas方法：另存为</p>
+</li>
+<li><p>使用方法：objdatadoc.saveas(“d:\fuck.sav”)</p>
+</li>
+<li><p>19&gt;selectcases方法：选择case</p>
+</li>
+<li><p>使用方法：objdatadoc.selectcases(1,100)     ‘选择1到100的case</p>
+</li>
+<li><p>20&gt;selectcells方法：选择单元格</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Objdatadoc.selectcells(‘a列’,’b列’,1,100)</p>
+</li>
+<li><p>21&gt;selectvariables方法：选择一定范围内的变量</p>
+</li>
+<li><p>使用方法：</p>
+</li>
+<li><p>Objdatadoc.selectvariables(‘a列’,’b列’)</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/23/pandas教程：[30]直方图/">
+                pandas教程：[30]直方图
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上一篇文章介绍了用python.pandas绘制柱形图，今天介绍的直方图与柱形图看起来很像，但是直方图更多用于连续数据而不是分类或者离散数据，下面看看具体的过程：</p>
+<ul>
+<li>引入相关模块</li>
+</ul>
+<img src="/2016/05/23/pandas教程：[30]直方图/eab9044c510fd9f903ad3918262dd42a2934a4ce.jpg" alt="pandas教程：[30]直方图" title="pandas教程：[30]直方图">
+<ul>
+<li>创建一个数据框，查看一下其中的数据<br>这是数据：</li>
+</ul>
+<img src="/2016/05/23/pandas教程：[30]直方图/504ec7f9d72a6059f3aa8d6b2b34349b023bbace.jpg" alt="pandas教程：[30]直方图" title="pandas教程：[30]直方图">
+<img src="/2016/05/23/pandas教程：[30]直方图/964b2e4e251f95caef69fec7ca177f3e660952e7.jpg" alt="pandas教程：[30]直方图" title="pandas教程：[30]直方图">
+<img src="/2016/05/23/pandas教程：[30]直方图/86d5bac27d1ed21b57554294ae6eddc450da3fe7.jpg" alt="pandas教程：[30]直方图" title="pandas教程：[30]直方图">
+<ul>
+<li><p>假如我们绘制a列数据的直方图，可以直接使用hist()方法</p>
+</li>
+<li><p>这是输出的plot.png图（很多人问我为什么要输出图片，直接show()一下图片不好么？我这么做是有用意的，我倾向于用Python做一些数据分析软件，输出图片后可以将其导入word或者excel中，生成数据分析报告，因此show(）是没用的）</p>
+</li>
+</ul>
+<img src="/2016/05/23/pandas教程：[30]直方图/964b2e4e251f95caef69fec7ca177f3e660952e7.jpg" alt="pandas教程：[30]直方图" title="pandas教程：[30]直方图">
+<img src="/2016/05/23/pandas教程：[30]直方图/55a628d12f2eb93893711583d6628535e5dd6f67.jpg" alt="pandas教程：[30]直方图" title="pandas教程：[30]直方图">
+<ul>
+<li>我们可以同时绘制所有列的直方图，得到的是一个numpy.ndarray对象，其元素是matplotlib.axes.AxesSubplot对象<br>输出的结果：<br>如果你使用的Python(x,y)这样的集成平台，那么去掉print后（df.hist(color=’k’, alpha=0.5, bins=50)）可以直接看到有四个图输出，但是如果你是一个程序员我不建议你使用Python（x,y),我也是一样，从来都不用它，所以我们无法直接看到这些图，除非你show或者savefig</li>
+</ul>
+<img src="/2016/05/23/pandas教程：[30]直方图/c856613e6709c93d346e62869c3df8dcd00054e7.jpg" alt="pandas教程：[30]直方图" title="pandas教程：[30]直方图">
+<img src="/2016/05/23/pandas教程：[30]直方图/d35a10f41bd5ad6e8165089b82cb39dbb7fd3ce7.jpg" alt="pandas教程：[30]直方图" title="pandas教程：[30]直方图">
+<ul>
+<li>我们经常用到by参数来设定分组</li>
+</ul>
+<img src="/2016/05/23/pandas教程：[30]直方图/3bc6f750352ac65cf6bf0a02f8f2b21192138ace.jpg" alt="pandas教程：[30]直方图" title="pandas教程：[30]直方图">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/23/Excel2013：[9]隐藏公式同时保护不被修改/">
+                Excel2013：[9]隐藏公式同时保护不被修改
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>以前跟大家分享过如何隐藏公式，但是无法保护公式不被修改，所以就造成了很多问题，很多人向我吐槽，其实我们可以利用前面的方法保护公式不被修改，这样别人既看不到你的公式也不能修改你的公式，具体的方法如下：</p>
+<ul>
+<li>假如我们要保护这个单元格中的公式，我们怎么弄？</li>
+</ul>
+<img src="/2016/05/23/Excel2013：[9]隐藏公式同时保护不被修改/bd7faf3533fa828b76a368fbff1f4134960a5ae3.jpg" alt="Excel2013：[9]隐藏公式同时保护不被修改" title="Excel2013：[9]隐藏公式同时保护不被修改">
+<ul>
+<li>先按下Ctrl+a，选中所有单元格，然后设置单元格格式</li>
+</ul>
+<img src="/2016/05/23/Excel2013：[9]隐藏公式同时保护不被修改/95afee1f3a292df55791590dbe315c6034a8731d.jpg" alt="Excel2013：[9]隐藏公式同时保护不被修改" title="Excel2013：[9]隐藏公式同时保护不被修改">
+<ul>
+<li>先取消隐藏了所有的单元格，取消勾选隐藏，然后点击确定按钮。</li>
+</ul>
+<img src="/2016/05/23/Excel2013：[9]隐藏公式同时保护不被修改/35e940df8db1cb13f63bc90bdf54564e92584b1d.jpg" alt="Excel2013：[9]隐藏公式同时保护不被修改" title="Excel2013：[9]隐藏公式同时保护不被修改">
+<ul>
+<li>找到你要隐藏和保护的单元格，选中他们，然后锁定和隐藏</li>
+</ul>
+<img src="/2016/05/23/Excel2013：[9]隐藏公式同时保护不被修改/109eb7ec8a1363272b68352b938fa0ec09fac7e6.jpg" alt="Excel2013：[9]隐藏公式同时保护不被修改" title="Excel2013：[9]隐藏公式同时保护不被修改">
+<ul>
+<li>回到这里，我们保护一下工作表，设置一个密码</li>
+</ul>
+<img src="/2016/05/23/Excel2013：[9]隐藏公式同时保护不被修改/4651a712c8fcc3ce29403c2b9045d688d53f20e3.jpg" alt="Excel2013：[9]隐藏公式同时保护不被修改" title="Excel2013：[9]隐藏公式同时保护不被修改">
+<ul>
+<li>在这里输入密码，点击确定按钮。</li>
+</ul>
+<img src="/2016/05/23/Excel2013：[9]隐藏公式同时保护不被修改/9304c888d43f8794547fbd36d01b0ef41ad53ae3.jpg" alt="Excel2013：[9]隐藏公式同时保护不被修改" title="Excel2013：[9]隐藏公式同时保护不被修改">
+<ul>
+<li>好了，以后别人想要看你的公式是不太容易的奥。</li>
+</ul>
+<img src="/2016/05/23/Excel2013：[9]隐藏公式同时保护不被修改/b29f8282d158ccbfaad843221bd8bc3eb1354107.jpg" alt="Excel2013：[9]隐藏公式同时保护不被修改" title="Excel2013：[9]隐藏公式同时保护不被修改">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/05/23/spss19.0如何破解/">
                 spss19.0如何破解
             </a>
@@ -620,454 +892,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/17/Python教程：[51]删除文件及文件夹/">
-                Python教程：[51]删除文件及文件夹
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月17日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>假如有一个txt文件，我想要使用python命令删除它，怎么弄？这里用到了Python的os模块，我们使用例子来说明如何如何删除文件及目录。</p>
-<ul>
-<li>在d盘下有一个tt文本文件，我们来删除它</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/8697397f9e2f0708688ca795eb24b899a801f25f.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li>首先引入os模块</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/e865a699a9014c0828b2a530087b02087af4f45f.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li>使用os下的remove命令来删除该文件，参数是r’d:/tt.txt’，通常路径字符串都是用r字符串</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/1e71f724b899a90109c1d6a31f950a7b0308f574.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li>现在改文件已经被删除，现在我们再运行一下该命令，看看有什么提示错误</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/0b3a1c087bf40ad12e6d4a76552c11dfa8ecce5f.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li>这就是提示的错误，为了写出更见健壮的程序，我们通常要在删除文件前，先检验该文件是否存在。</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/48151723dd54564e598869acb1de9c82d0584f73.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li>使用path.exists命令来检验文件是否存在，参数仍然是路径字符串</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/6dc09e0a19d8bc3e64e58b5f808ba61ea9d34573.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li>配合if语句，我们就可以写出一个健壮的删除文件的命令。</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/83cab81ea8d3fd1f9ae42faf324e251f94ca5f73.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li>上面讲到了如何删除文件，下面说一下如何删除文件夹。我们用到了rmdir方法，它可以直接删除空文件夹</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/814b07d8bc3eb135e7b4382ea41ea8d3fc1f44f1.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li><p>假如文件夹非空，会提示这样的错误：</p>
-</li>
-<li><p>Traceback (most recent call last):</p>
-</li>
-<li><p>File “<pyshell#8>“, line 1, in <module></module></pyshell#8></p>
-</li>
-<li><p>os.rmdir(r’d:/tt/‘)</p>
-</li>
-<li><p>WindowsError: [Error 145] : ‘d:/tt/‘</p>
-</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/9252ae7eca80653882d42b8695dda144ad34822e.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li><p>假如文件夹不存在，会提示这样的错误：</p>
-</li>
-<li><p>Traceback (most recent call last):</p>
-</li>
-<li><p>File “<pyshell#16>“, line 1, in <module></module></pyshell#16></p>
-</li>
-<li><p>os.rmdir(r’d:/tt/‘)</p>
-</li>
-<li><p>WindowsError: [Error 2] : ‘d:/tt/‘</p>
-</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/5beeba0f4bfbfbedb239b9ea7af0f736aec31f87.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li>怎么删除非空文件夹？我们用到了shutil模块</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/32bb9c8ba61ea8d32551fb91950a304e241f58f1.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<ul>
-<li>用rmtree命令可以直接删除文件夹，包括内部文件</li>
-</ul>
-<img src="/2016/05/17/Python教程：[51]删除文件及文件夹/83cab81ea8d3fd1f987a2daf324e251f94ca5ff1.jpg" alt="Python教程：[51]删除文件及文件夹" title="Python教程：[51]删除文件及文件夹">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/17/numpy函数：[17]diag函数/">
-                numpy函数：[17]diag函数
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月17日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>numpy.diag()返回一个矩阵的对角线元素，或者创建一个对角阵（ diagonal array.）。我们还是用例子来说明问题：</p>
-<ul>
-<li>先引入numpy</li>
-</ul>
-<img src="/2016/05/17/numpy函数：[17]diag函数/f6428f8fa0ec08fac9b55e505bee3d6d54fbda55.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
-<ul>
-<li>创建一个对角阵，如下</li>
-</ul>
-<img src="/2016/05/17/numpy函数：[17]diag函数/54baacfb43166d22efc25863442309f79152d255.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
-<ul>
-<li>创建一个二维数组x</li>
-</ul>
-<img src="/2016/05/17/numpy函数：[17]diag函数/55a628d12f2eb93870383705d7628535e4dd6fb5.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
-<ul>
-<li>提起二维数组的对角元素的值，构成一个一位数组</li>
-</ul>
-<img src="/2016/05/17/numpy函数：[17]diag函数/476217f790529822d4867434d5ca7bcb0b46d455.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
-<ul>
-<li>或者，我们可以使用第二个参数，获取其他元素，请自行观察这个值在x数组中的位置</li>
-</ul>
-<img src="/2016/05/17/numpy函数：[17]diag函数/4e83cb628535e5dd1779e82874c6a7efcf1b62b5.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
-<ul>
-<li>接着，你换一个参数试试</li>
-</ul>
-<img src="/2016/05/17/numpy函数：[17]diag函数/e49cf91190ef76c65487b6dc9f16fdfaae5167b5.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
-<ul>
-<li>连续使用两个diag，可以得到一个对角阵，除对角线以外的元素均为零</li>
-</ul>
-<img src="/2016/05/17/numpy函数：[17]diag函数/cf5a8316fdfaaf510bb6cc488e5494eef11f7ab5.jpg" alt="numpy函数：[17]diag函数" title="numpy函数：[17]diag函数">
-<ul>
-<li><p>今天用到的所有代码：</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>numpy.diag((1,2,3))</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[1, 0, 0],</p>
-</li>
-<li><p>[0, 2, 0],</p>
-</li>
-<li><p>[0, 0, 3]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>x=numpy.arange(9).reshape((3,3))</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>x</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[0, 1, 2],</p>
-</li>
-<li><p>[3, 4, 5],</p>
-</li>
-<li><p>[6, 7, 8]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>x=numpy.arange(10,19).reshape((3,3))</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>x</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[10, 11, 12],</p>
-</li>
-<li><p>[13, 14, 15],</p>
-</li>
-<li><p>[16, 17, 18]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>y=numpy.diag(x)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>y</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([10, 14, 18])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>numpy.diag(x,1)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([11, 15])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>numpy.diag(x,-1)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([13, 17])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>numpy.diag(np.diag(x))</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>Traceback (most recent call last):</p>
-</li>
-<li><p>File “<pyshell#38>“, line 1, in <module></module></pyshell#38></p>
-</li>
-<li><p>numpy.diag(np.diag(x))</p>
-</li>
-<li><p>NameError: name ‘np’ is not defined</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>numpy.diag(numpy.diag(x))</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[10,  0,  0],</p>
-</li>
-<li><p>[ 0, 14,  0],</p>
-</li>
-<li><p>[ 0,  0, 18]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/05/17/SPSS实例：[27]四个表卡方检验/">
-                SPSS实例：[27]四个表卡方检验
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年05月17日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我们先来讲一个案例，我们想要知道两个年龄组的儿童在同一个问题上回答的正确性是否不同，统计出来的四格表是这样的：</p>
-<ul>
-<li>原始数据的数据结构，见下图。在这里没有频数，只有年龄组和是否正确这两个变量</li>
-</ul>
-<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/b25d9901a18b87d6ed86b557050828381e30fd77.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
-<ul>
-<li>在菜单栏上执行：分析–描述统计–交叉表</li>
-</ul>
-<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/90cebeec08fa513dc28074963f6d55fbb2fbd915.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
-<ul>
-<li>将年龄组设置为行变量，是否正确设置为列变量；然后设置统计量，点击statistic</li>
-</ul>
-<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/425773224f4a20a4ab34248f92529822720ed015.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
-<ul>
-<li>勾选卡方值，这样才能输出卡方值</li>
-</ul>
-<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/61183b2dd42a283433672f4359b5c9ea14cebf71.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
-<ul>
-<li>首先看到的表格是基本的频数统计，没什么好说的，大家都懂</li>
-</ul>
-<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/eab9044c510fd9f9d6324d21272dd42a2834a415.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
-<ul>
-<li>看第二个表格是最关键的信息，我们看sig值，如果小于0.05就可以认为达到了显著水平，拒绝虚无假设，认为年龄对答案的正确性产生了影响。</li>
-</ul>
-<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/373bc4b44aed2e7348429e648501a18b86d6fa94.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
-<ul>
-<li>先整理数据，数据结构见下图</li>
-</ul>
-<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/d048adde9c82d15882c456f9820a19d8bd3e42f0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
-<ul>
-<li>接着进行加权</li>
-</ul>
-<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/a75fb6d3fd1f4134cd710a36271f95cad0c85ef0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
-<ul>
-<li>用频数进行加权，点击ok</li>
-</ul>
-<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/bd70426034a85edfce0af16b4b540923dc5475b0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
-<ul>
-<li>接下来的步骤都是一样的，见上面。</li>
-</ul>
-<img src="/2016/05/17/SPSS实例：[27]四个表卡方检验/8cf0d513495409239aef6c369058d109b2de49b0.jpg" alt="SPSS实例：[27]四个表卡方检验" title="SPSS实例：[27]四个表卡方检验">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1110,19 +934,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

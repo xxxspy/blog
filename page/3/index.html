@@ -157,6 +157,200 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/10/05/python 线性代数：[19]行列式求解/">
+                python 线性代数：[19]行列式求解
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>行列式是线性代数里最重要的概念之一，今天我们使用Python的numpy和sympy包计算几个三阶行列式。下面的计算过程用excel存放矩阵的数据，而用excel里面的datanitro插件来运行Python代码，所以你可能要熟悉一下datanitro这个插件，关于这个插件的全部教程，我都写在了这个系列里：<a href="http://jingyan.baidu.com/season/43508" target="_blank" rel="external">http://jingyan.baidu.com/season/43508</a></p>
+<ul>
+<li>熟悉了这个插件以后，我们看看我们要解决的这四个矩阵：这些练习题来自《线性代数，同济大学第五版第一张课后题》。</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/73ca5910b912c8fc4c2adbe7f8039245d78821fb.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>这接着我们将这些矩阵录入到excel当中。</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/f15e24292df5e0fec472a52b586034a85edf7276.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>接着我们把代码写到1.1.py文件中。</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/4abae5edab64034fc2b2ee2cabc379310a551d59.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>接着，我们在excel的datanitro插件中，引入1.1.py文件，然后run一下就可以看到计算结果：</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/c28fddfdfc03924559e0c8258394a4c27d1e2507.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li><p>以上是大概的流程，接下来具体讲解一下代码的意义。</p>
+</li>
+<li><p>引入需要的两个模块</p>
+</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/11794d43fbf2b211ba8ca964ce8065380cd78e3e.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li><p>先看看第一题，这是计算第一个矩阵的行列式：</p>
+</li>
+<li><p>a,CellRange是datanitro的内置对象，表示excel里面的一个单元格区域，通过它我们可以将这个区域内的值读取出来，存放到lst这个列表里，也就是Python中的list对象；接着用numpy模块的reshap方法，将list转换为3x3的矩阵，然后用刀了det方法计算行列式，最后结果为-4</p>
+</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/647912d7912397dd8e08b72e5d82b2b7d0a28763.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>第二题：红色字体都是注释，没有实际功能。跟第一题相比，第二题用字母代替了数字，所以，我们要用到Python的符号计算包sympy，我们可以看到E就是一个3x3的矩阵，但是需要将E转换为符号矩阵，用到了sp.Matrix，得到M，然后使用m的det方法计算得到行列式，结果是：</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/d56b3634349b033b4ce6d5f011ce36d3d539bd6a.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/d089b986c9177f3e181dd22774cf3bc79f3d56ab.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>第三题，与第二题类似，用到了sp.Matrix，但是我们还用到了sp.factor，这个方法可以将结果提取公因式，最后的计算结果为：</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/a6c7d7177f3e6709b76b6dd53fc79f3df8dc5575.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/b110e6198618367a153456f72a738bd4b31ce518.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<ul>
+<li>如果前三题你都搞懂了，第四题就简单了，没有新知识：</li>
+</ul>
+<img src="/2016/10/05/python%20线性代数：[19]行列式求解/6a2112338744ebf816254c15ddf9d72a6059a700.jpg" alt="python 线性代数：[19]行列式求解" title="python 线性代数：[19]行列式求解">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/03/SPSS python教程：[6]读取PivotTable行标签/">
+                SPSS python教程：[6]读取PivotTable行标签
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss输出的结果文档用到最多的就是数据透视表（pivot table），在spss中，数据透视表被分为三个部分：行标签列表、列标签列表、数据列表。你可能还不理解这些内容。我们从这篇开始介绍数据透视表的行标签，并用python读取行标签，然后输出。看看代码吧：</p>
+<ul>
+<li>这是在spss结果文档中输出的一个数据透视表，我们要读取它的行标签</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/8b527d2762d0f7036208ba450afa513d2797c5b6.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>这就是行标签，但是它并不像我们看到的那么简单，我们试着读取行标签就知道了</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6c63514a20a4462308668afb9a22720e0df3d7bf.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>创建一个python脚本文件：outputTrim.py，下图中你可以看到该文件存放的目录</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/48151723dd54564efa5acaa0b1de9c82d1584f28.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>接着先写入代码StartClient和stopclient，所有操作spss的代码都应该放在这两句之间。</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/dc15484e9258d109d807862bd358ccbf6d814d07.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>我们详细讲解一下代码的意义，先看这两句，假如我们只打开了一个结果文档，我们使用第一句代码可以获取该文档的句柄；第二句获取该文档下所有的输出项目，里面包含但不仅限于数据透视表，outputItems是一个列表</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/9864a2315c6034a83fae9618c91349540823769f.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>通过循环，我们可以找到名称为’Descriptive Statistics’的数据透视表。我们看下面的if语句，首先判断输出项是不是PIVOT，然后判断该输出项的标题为’Descriptive Statistics’的PIVOT，获取标题用的是GetDescription</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/263e802f07082838c19ff28dba99a9014d08f15e.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>这句代码是将找到的这个输出项转换为数据透视表，这样才能使用数据透视表所具有的类和方法</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/814b07d8bc3eb13540169922a41ea8d3fc1f4412.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>这一句就是获取数据透视表的行标签</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/9304c888d43f879430a461b7d01b0ef41ad53a94.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>我们用这个循环来输出所有的行标签，看看输出结果是啥样的</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/35e940df8db1cb132a38158adf54564e93584b92.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<ul>
+<li>这就是输出结果，跟数据透视表对比一下，你就知道行标签到底代表着什么。</li>
+</ul>
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6f4703950a7b02089dae167860d9f2d3562cc881.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<img src="/2016/10/03/SPSS%20python教程：[6]读取PivotTable行标签/6c63514a20a4462308668afb9a22720e0df3d7bf.jpg" alt="SPSS python教程：[6]读取PivotTable行标签" title="SPSS python教程：[6]读取PivotTable行标签">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/10/03/SPSS实例：[31]统计选项频数/">
+                SPSS实例：[31]统计选项频数
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年10月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如有一个单选题，有五个选项，我现在想知道每一个选项有都少人选，怎么办？其实这是一个最简单的频率统计问题，我们把在spss中的统计过程列在以下，请参考：</p>
+<ul>
+<li>首先，我们在菜单栏上执行：分析–描述统计–频数</li>
+</ul>
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/9864a2315c6034a885a32ccfc9134954082376f8.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
+<ul>
+<li>在这里，我们将想要统计的题目放到变量框</li>
+</ul>
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/1b0d4f0fd9f9d72aed368753d62a2834359bbbeb.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
+<ul>
+<li>点击ok开始统计</li>
+</ul>
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/fc5e5f34970a304ed18337b4d3c8a786c8175c98.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
+<ul>
+<li>在输出的表格中，我们的频率一栏就是我们要统计的内容了。</li>
+</ul>
+<img src="/2016/10/03/SPSS实例：[31]统计选项频数/fab3ac119313b07e6eefc7460ed7912396dd8ceb.jpg" alt="SPSS实例：[31]统计选项频数" title="SPSS实例：[31]统计选项频数">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/10/03/Python统计分析：[2]相关样本T检验/">
                 Python统计分析：[2]相关样本T检验
             </a>
@@ -576,323 +770,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/09/23/python 线性代数：[6]逆矩阵 伴随矩阵/">
-                python 线性代数：[6]逆矩阵 伴随矩阵
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年09月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>设A是数域上的一个n阶方阵，若在相同数域上存在另一个n阶矩阵B，使得： AB=BA=E。 则我们称B是A的逆矩阵，而A则被称为可逆矩阵。当矩阵A的行列式|A|不等于0时才存在可逆矩阵。而伴随矩阵的定义我 从网上找到了一个：</p>
-<ul>
-<li>先来求一下矩阵的逆，先引入numpy</li>
-</ul>
-<img src="/2016/09/23/python%20线性代数：[6]逆矩阵%20伴随矩阵/72ccb7773912b31bea8677db8418367adbb4e11f.jpg" alt="python 线性代数：[6]逆矩阵 伴随矩阵" title="python 线性代数：[6]逆矩阵 伴随矩阵">
-<ul>
-<li>然后创建一个方阵A</li>
-</ul>
-<img src="/2016/09/23/python%20线性代数：[6]逆矩阵%20伴随矩阵/f6428f8fa0ec08fad0a9a9555bee3d6d54fbda5c.jpg" alt="python 线性代数：[6]逆矩阵 伴随矩阵" title="python 线性代数：[6]逆矩阵 伴随矩阵">
-<ul>
-<li>使用linalg.det求得方阵的行列式</li>
-</ul>
-<img src="/2016/09/23/python%20线性代数：[6]逆矩阵%20伴随矩阵/09bb4f3d269759eeb9f9da39b0fb43166c22df5c.jpg" alt="python 线性代数：[6]逆矩阵 伴随矩阵" title="python 线性代数：[6]逆矩阵 伴随矩阵">
-<ul>
-<li>使用linalg.inv求得方阵A的逆矩阵</li>
-</ul>
-<img src="/2016/09/23/python%20线性代数：[6]逆矩阵%20伴随矩阵/b25aae51f81986186bad557648ed2e738ad4e61f.jpg" alt="python 线性代数：[6]逆矩阵 伴随矩阵" title="python 线性代数：[6]逆矩阵 伴随矩阵">
-<ul>
-<li>接着我们利用公式：<br>numpy的计算方法：</li>
-</ul>
-<img src="/2016/09/23/python%20线性代数：[6]逆矩阵%20伴随矩阵/08b68e529822720e9c16580879cb0a46f31fab2d.jpg" alt="python 线性代数：[6]逆矩阵 伴随矩阵" title="python 线性代数：[6]逆矩阵 伴随矩阵">
-<img src="/2016/09/23/python%20线性代数：[6]逆矩阵%20伴随矩阵/f9589818367adab4153aa1b189d4b31c8601e41f.jpg" alt="python 线性代数：[6]逆矩阵 伴随矩阵" title="python 线性代数：[6]逆矩阵 伴随矩阵">
-<ul>
-<li><p>以下是今天用到的所有代码</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>import numpy as np</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A=np.array([[1,-2,1],[0,2,-1],[1,1,-2]])</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[ 1, -2,  1],</p>
-</li>
-<li><p>[ 0,  2, -1],</p>
-</li>
-<li><p>[ 1,  1, -2]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A_abs=np.linalg.det(A)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A_abs</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>-3.0000000000000004</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>B=np.linalg.inv(A)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>B</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[ 1.        ,  1.        ,  0.        ],</p>
-</li>
-<li><p>[ 0.33333333,  1.        , -0.33333333],</p>
-</li>
-<li><p>[ 0.66666667,  1.        , -0.66666667]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A_ni=B*A_abs</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A_ni</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[-3., -3., -0.],</p>
-</li>
-<li><p>[-1., -3.,  1.],</p>
-</li>
-<li><p>[-2., -3.,  2.]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A_bansui=B*A_abs</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A_bansui</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[-3., -3., -0.],</p>
-</li>
-<li><p>[-1., -3.,  1.],</p>
-</li>
-<li><p>[-2., -3.,  2.]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/09/23/Python教程：[59]读取txt内容/">
-                Python教程：[59]读取txt内容
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年09月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>前三篇文章主要将写入txt，今天我们讲读取txt，读取txt其实就是以r模式打开txt文件，然后读取其内容，下面看一下代码吧：</p>
-<ul>
-<li>以可读模式打开txt文件：</li>
-</ul>
-<img src="/2016/09/23/Python教程：[59]读取txt内容/55a628d12f2eb9387f1b3072d7628535e4dd6ff9.jpg" alt="Python教程：[59]读取txt内容" title="Python教程：[59]读取txt内容">
-<ul>
-<li>读取第一行内容，保存在line中，然后打印出line</li>
-</ul>
-<img src="/2016/09/23/Python教程：[59]读取txt内容/8474fbdde71190ef9dffd85fcc1b9d16fcfa60ef.jpg" alt="Python教程：[59]读取txt内容" title="Python教程：[59]读取txt内容">
-<ul>
-<li>通过循环就能读出所有行：注意readine每调用一次就会读取下一行</li>
-</ul>
-<img src="/2016/09/23/Python教程：[59]读取txt内容/9c57e3faaf51f3de46b6f3e496eef01f3b2979ef.jpg" alt="Python教程：[59]读取txt内容" title="Python教程：[59]读取txt内容">
-<ul>
-<li>还可以使用这个方法读取所有的行</li>
-</ul>
-<img src="/2016/09/23/Python教程：[59]读取txt内容/ae10eddeb48f8c5460d78faf38292df5e1fe7fef.jpg" alt="Python教程：[59]读取txt内容" title="Python教程：[59]读取txt内容">
-<ul>
-<li>速度更快的方法是直接使用多行读取的方法：readlines，参数5表示读取5行</li>
-</ul>
-<img src="/2016/09/23/Python教程：[59]读取txt内容/8d158aeef01f3a29dacc9f4e9b25bc315d607cef.jpg" alt="Python教程：[59]读取txt内容" title="Python教程：[59]读取txt内容">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/09/23/Mysql教程：[4]查看数据库信息/">
-                Mysql教程：[4]查看数据库信息
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年09月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>怎么查看数据库的用户名？怎么查看mysql数据库的端口号？怎么查看数据库的表？怎么查看数据库名称？等等，这些问题就会在这篇文章里解决，我们看看下面具体的过程吧：</p>
-<ul>
-<li>首先是查看mysql数据库的端口号，使用命令show：</li>
-</ul>
-<img src="/2016/09/23/Mysql教程：[4]查看数据库信息/1899a23eb13533fad8d49360aad3fd1f40345bda.jpg" alt="Mysql教程：[4]查看数据库信息" title="Mysql教程：[4]查看数据库信息">
-<ul>
-<li>查看有哪些数据库：</li>
-</ul>
-<img src="/2016/09/23/Mysql教程：[4]查看数据库信息/b0742dfa828ba61ef48cc8614334970a314e59da.jpg" alt="Mysql教程：[4]查看数据库信息" title="Mysql教程：[4]查看数据库信息">
-<ul>
-<li>查看mysql数据库所有用户：</li>
-</ul>
-<img src="/2016/09/23/Mysql教程：[4]查看数据库信息/b3ba5d166d224f4ac491735d0bf790529822d131.jpg" alt="Mysql教程：[4]查看数据库信息" title="Mysql教程：[4]查看数据库信息">
-<ul>
-<li>查看某个数据库中所有的表：</li>
-</ul>
-<img src="/2016/09/23/Mysql教程：[4]查看数据库信息/cbc17b380cd791238296943aaf345982b3b780ce.jpg" alt="Mysql教程：[4]查看数据库信息" title="Mysql教程：[4]查看数据库信息">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -935,19 +812,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>

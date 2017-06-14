@@ -157,6 +157,215 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/01/15/spss简单因素分析的操作和结果分析方法/">
+                spss简单因素分析的操作和结果分析方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>因素分析是spss中一个重要的功能，他的作用是从多个变量中提取少数几个因子，达到减少指标的目的；有时候因素分析方法用在问卷编制中，可以从各个题项中提取中几个维度。下图看到就是我们要分析的数据，这里有x1–x8这8个变量需要进行因素分析。<br>工具/原料</p>
+<ul>
+<li>sps20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>在菜单栏上执行：analyse–dimension reduction–factor ，打开了因素分析对话框</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/b17eca8065380cd783bec03ca144ad34588281ba.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>打开了因素分析对话框，将要分析的这8个变量放到variables框中，点击箭头按钮可以添加变量</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/21a4462309f790527e8625ef0cf3d7ca7acbd542.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>还是自因素分析的主对话框，点击descriptive按钮，打开描述统计的子对话框</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/fc1f4134970a304e7aadc22bd1c8a786c8175c57.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>在子对话框中，我们需要对因素分析是否合适进行检验，所以勾选如图所示的选项，点击continue返回到主对话框</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/9a504fc2d5628535cacbbff090ef76c6a7ef6333.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>还是在主对话框中，点击extration按钮，打开子对话框</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/8601a18b87d6277f20135fe928381f30e824fcda.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>在这个子对话框中，我们可以输出碎石图，这样可以更加直观的看到各个因素的特征根，对于碎石图的解释后面会有。点击continue，返回主对话框</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/ca1349540923dd541c63cab9d109b3de9d8248ca.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>在主对话框中，点击ok按钮，开始处理数据并输出结果</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/d009b3de9c82d1589c483460800a19d8bd3e421c.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>我们看到的第一个图就是KMO检验，如图所示，kmo值为0.6，这个值不是很理想，一般来说kmo大于0.7可以认为数据具有较好的相关性，因素分析的效果会好一些；当kmo值在0.5以下的时候，不适合做因素分析。接着我们看Bartlett检验，我们看sig值显著，说明应该拒绝变量相互独立的假设，这说明因素分析是合适的。</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/9358d109b3de9c829e98945e6c81800a18d84365.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>接着我们看碎石图，这个图的横轴是因素的序号，纵轴代表特征根，曲线的意思是，随着因素序号的增大，特征根迅速降低。后五个因素的特征根变化非常小，所以我们基本上认为得到三个因子是比较合适的。</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/e1fe9925bc315c60762d073e8db1cb13485477a2.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<ul>
+<li>最后看到的是因子载荷矩阵，从因子载荷矩阵中，我们可以知道各个因子在不同变量中的载荷，同时可以根据表格中的数据求出因子的计算公式我们举一个例子里计算第一个变量：ZX1=0884F1+0.385F2+0.12F3</li>
+</ul>
+<img src="/2015/01/15/spss简单因素分析的操作和结果分析方法/9e3df8dcd100baa1a68c2b6a4710b912c9fc2eba.jpg" alt="spss简单因素分析的操作和结果分析方法" title="spss简单因素分析的操作和结果分析方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/">
+                Excel2013：[37]mmult函数求解二元一次方程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>已知一个二元一次方程，怎样求出方程的解？我们可以规划求解，也可以使用矩阵函数，这里就用mmult函数求解二元一次方程，还用到的辅助函数MINVERSE，下面看看具体的求解过程吧。</p>
+<ul>
+<li>已知条件是两个方程，我们需要进行调整，使方程的形式如图所示，常数项在等号的右边，未知数在等号的左边，且未知数XY的顺序是一致的。</li>
+</ul>
+<img src="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/a28d62d98d1001e95c5dd76aba0e7bec54e79737.jpg" alt="Excel2013：[37]mmult函数求解二元一次方程" title="Excel2013：[37]mmult函数求解二元一次方程">
+<ul>
+<li>建立一个表格，我们整理一下各个系数和常数，如图所示，注意它是如何同方程一一对应的</li>
+</ul>
+<img src="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/8759287adab44aedd7427d81b11c8701a18bfb0d.jpg" alt="Excel2013：[37]mmult函数求解二元一次方程" title="Excel2013：[37]mmult函数求解二元一次方程">
+<ul>
+<li>在解这一栏，我们选中这两个单元格，注意是两个啊哦！</li>
+</ul>
+<img src="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/2e6fa7389b504fc2ba3e7360e7dde71190ef6d37.jpg" alt="Excel2013：[37]mmult函数求解二元一次方程" title="Excel2013：[37]mmult函数求解二元一次方程">
+<ul>
+<li>在公式栏输入公式=MMULT(MINVERSE(A8:B9),C8:C9)，注意两个参数A8：B9 和C8：C9代表那两个区域</li>
+</ul>
+<img src="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/62667cd0f703918fb8defeaf533d269759eec40d.jpg" alt="Excel2013：[37]mmult函数求解二元一次方程" title="Excel2013：[37]mmult函数求解二元一次方程">
+<ul>
+<li>按下Ctrl+shift+回车键，这样就得到了公式的解</li>
+</ul>
+<img src="/2015/01/11/Excel2013：[37]mmult函数求解二元一次方程/d56b3634349b033b64873fbf17ce36d3d539bd0d.jpg" alt="Excel2013：[37]mmult函数求解二元一次方程" title="Excel2013：[37]mmult函数求解二元一次方程">
+<ul>
+<li>你可以验证一下，这个解是不是正确，将求得的解带入方程，看等式是否成立</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/11/Python教程：[71]类的继承/">
+                Python教程：[71]类的继承
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>类（class），可以继承基类以便形成具有自己独特属性的类，我们在面向对象的编程中，经常用到类及其继承，可以说没有什么不是类的，今天我们就来详细探讨一下在python中，类的继承是如何做的。</p>
+<ul>
+<li>我们假设有一个类叫做point，顾名思义，point就是一个点，它有横坐标和纵坐标。我们在python中创建一个point类（书上说类名称都要开头字母大写，这是国际惯例）</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/0e655ca7d933c895234d75f3d31373f0830200cc.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li>最简单的继承类的方式是这样：只需要在生命类的时候加一个括号和基类</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/4e0b3ea4462309f7d403409a700e0cf3d6cad68f.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li><p>这种方法并没有声明该类的构造器，这样它会隐性调用基类的构造器，所以，在实例化的时候，也要注意基类的构造器需要哪些参数，不要出现这样的错误：这种错误容易发生是因为我们在子类的声明中并没有看到什么参数，在使用的时候就容易忘记基类中需要的参数</p>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#11>“, line 1, in <module></module></pyshell#11></p>
+</li>
+<li><p>a=point1()</p>
+</li>
+<li><p>TypeError: <strong>init</strong>() takes exactly 3 arguments (1 given)</p>
+</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/d35a10f41bd5ad6e0302896283cb39dbb7fd3c04.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li>这样来用就没问题了。</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/a84052086e061d952d27dbb079f40ad163d9ca92.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li>类的继承一般情况下，我们都是要重写类的构造器，然后再调用基类的构造器，不然基类的构造器在这种情况下不会自动调用。应该这样写：类point2比基类增加了一个属性z</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/a992e31f4134970a8cc0fca797cad1c8a6865d4c.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li>实例化：</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/30ecd5ef76094b36d019f765a1cc7cd98c109d74.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<ul>
+<li><p>我们看这样一个写法特别容易出错：你能看出哪里错了吗？<br>错误代码：</p>
+</li>
+<li><p>Traceback (most recent call last):</p>
+</li>
+<li><p>File “<pyshell#50>“, line 1, in <module></module></pyshell#50></p>
+</li>
+<li><p>b=point2(1,2,3)</p>
+</li>
+<li><p>File “<pyshell#45>“, line 3, in <strong>init</strong></pyshell#45></p>
+</li>
+<li><p>point.<strong>init</strong>(x,y)</p>
+</li>
+<li><p>TypeError: unbound method <strong>init</strong>() must be called with point instance as first argument (got int instance instead)</p>
+</li>
+</ul>
+<img src="/2015/01/11/Python教程：[71]类的继承/bd7faf3533fa828b103c726bff1f4134960a5ad8.jpg" alt="Python教程：[71]类的继承" title="Python教程：[71]类的继承">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/01/11/DataNitro：[11]自动换行/">
                 DataNitro：[11]自动换行
             </a>
@@ -706,72 +915,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/01/01/pandas教程：[22]填充缺失值/">
-                pandas教程：[22]填充缺失值
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年01月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>当数据中存在NaN缺失值时，我们可以用其他数值替代NaN，主要用到了DataFrame.fillna()方法，下面我们来看看具体的用法：</p>
-<ul>
-<li>先来创建一个带有缺失值的数据框<br>具体数据内容为：</li>
-</ul>
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/570f8c58d109b3debac78e6fcfbf6c81800a4c79.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/b29f8282d158ccbf45c4df3d1ad8bc3eb1354179.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<ul>
-<li>使用0替代缺失值（当然你可以用任意一个数字代替NaN）<br>输出结果为：</li>
-</ul>
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/814b07d8bc3eb1351dbfddbca51ea8d3fd1f4479.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/48151723dd54564eb1728e3eb0de9c82d1584f66.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<ul>
-<li>用一个字符串代替缺失值<br>输出结果为：</li>
-</ul>
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/a75fb6d3fd1f4134a34f6f79261f95cad1c85e79.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/6dc09e0a19d8bc3e9c1f6ccd818ba61ea8d34566.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<ul>
-<li>用前一个数据代替NaN：method=’pad’<br>输出结果为：</li>
-</ul>
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/f99dcf00baa1cd1137ce1827ba12c8fcc3ce2d79.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/4651a712c8fcc3ce89b8a3349145d688d43f2079.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<ul>
-<li>与pad相反，bfill表示用后一个数据代替NaN。这里我们增加一个知识点，用limit限制每列可以替代NaN的数目，下面我们限制每列只能替代一个NaN<br>输出结果为：</li>
-</ul>
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/9304c888d43f8794f4872229d11b0ef41bd53a79.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/b7bc4c66d0160924f55dc81cd70735fae6cd3479.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<ul>
-<li>除了上面用一个具体的值来代替NaN之外，还可以使用平均数或者其他描述性统计量来代替NaN<br>输出结果为：</li>
-</ul>
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/0865b518972bd40754bfb9fa78899e510fb30979.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/34bbf8cd7b899e516af6501341a7d933c8950d79.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<ul>
-<li>另外，我们还可以选择哪一列进行缺失值的处理<br>输出结果为：</li>
-</ul>
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/c9d4cf43ad4bd1131eb5dd3559afa40f4bfb0579.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<img src="/2015/01/01/pandas教程：[22]填充缺失值/808a27dbb6fd52668c3c5613a818972bd4073666.jpg" alt="pandas教程：[22]填充缺失值" title="pandas教程：[22]填充缺失值">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -784,7 +927,7 @@
                 <a class="" href="/page/39/">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
                 </a>
-                <a class="disabled" href="/">
+                <a class="" href="/page/41/">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </a>
             </div>
@@ -814,19 +957,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/测试d3-js在hexo博客中的效果/">测试d3.js在hexo博客中的效果</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/10/selenim数据采集入门-for-psychologist/">selenim数据采集入门(for psychol</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/05/抽样系统备注文本信息自动化分类器/">抽样系统备注文本信息自动化分类器</a>
             </li>
             
         </ul>
