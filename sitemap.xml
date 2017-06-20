@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://mlln.cn/2017/06/02/MathJax%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2017-06-16T01:16:10.262Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://mlln.cn/2017/06/13/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9Cpython%E5%BA%93keras%E5%9C%A8windows%E4%B8%8B%E9%83%A8%E7%BD%B2%E8%BF%87%E7%A8%8B%EF%BC%8C%E5%B8%A6%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5/</loc>
     
     <lastmod>2017-06-14T08:13:20.319Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://mlln.cn/2017/06/11/%E6%B5%8B%E8%AF%95d3-js%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E6%95%88%E6%9E%9C/</loc>
     
     <lastmod>2017-06-11T06:19:24.657Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://mlln.cn/2017/06/02/MathJax%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2017-06-10T04:14:36.910Z</lastmod>
     
   </url>
   
