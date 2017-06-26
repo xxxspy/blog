@@ -157,6 +157,537 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/07/17/gitignore配置详解/">
+                gitignore配置详解
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如果你使用git来管理代码版本，你必须懂得如何使用.gitignore文件，该文件可以指定git忽略哪些文件，在git中的作用非常重要。在理解gitignore的配置之前，我们要先看看这些规则都可以来自哪里。通常git可以从多个地方获取忽略规则，优先级从上到下依次为：</p>
+<ul>
+<li><p>.gitignore文件适合写于项目有关的规则，并且这些规则需要与合作者分享。</p>
+</li>
+<li><p><code>$GIT_DIR/info/exclude</code>适用于与项目有关，但是你不想分享给其他作者，这些规则可能只适用于你自己。</p>
+</li>
+<li><p><code>core.excludesFile</code>适用于你在任何情况下都需要忽略的规则。这种情况不常用。</p>
+</li>
+<li><p>空行不匹配任何文件，所以空行通常是规则分组的分隔符，只是在视觉上将不同的规则分组。</p>
+</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/21e5582309f790527c5640f005f3d7ca7acbd570.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li>以<code>#</code>开始的行代表注释，所以也不匹配任何文件。</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/73ca5910b912c8fcb345f103f5039245d788210e.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li><p>末尾的空格没有任何意义，如果你想匹配空格，你需要在空格前加转义字符``。</p>
+</li>
+<li><p>例如：<code>a</code>这种写法可以匹配<code>a</code></p>
+</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/d7c9ca3f8794a4c20583e0e507f41bd5ac6e3918.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li><p>感叹号<code>!</code>的作用是从已有的忽略规则里排除一部分文件。注意想要让感叹号起作用，必须在前规则中使用通配符<code>*</code>。例如：</p>
+</li>
+<li><p>前规则写成：<code>.env/*</code></p>
+</li>
+<li><p>想要追踪<code>.env</code>文件夹下的<code>data.txt</code>，需要追加一个规则：<code>!.env/data.txt</code></p>
+</li>
+<li><p>如果前规则写成<code>.env</code>，则<code>!.env/data.txt</code>不起作用。</p>
+</li>
+<li><p>如果规则以<code>/</code>结尾，则表示匹配文件夹, 类似的文件和链接都不会匹配。</p>
+</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/4bd1e803738da977974181e5b951f8198718e357.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li>如果规则中不包含<code>/</code>，则规则即可匹配文件夹也可以匹配文件和链接，类似于linux shell中的通配符，可以匹配任何可以与通配符匹配的路径。</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/ae8267310a55b31949fc85bb4aa98226cefc17b3.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li>通配符无法匹配符号<code>/</code>，所以类似这样的规则<code>foo/*.html</code>不能匹配<code>foo/bar/test.html</code>。</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/61183b2dd42a2834ceef31c552b5c9ea14cebf70.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li>规则以<code>/</code>开头表示匹配<code>.gitignore</code>文件所在的目录。也就是说规则<code>/*.txt</code>只能匹配.gitignore所在目录下的所有txt文件，不能匹配其他目录下的txt文件。</li>
+</ul>
+<img src="/2015/07/17/gitignore配置详解/dc854fda81cb39db37766098d9160924aa18300e.jpg" alt="gitignore配置详解" title="gitignore配置详解">
+<ul>
+<li><p>以<code>**/</code>开头的规则表示匹配所有文件夹，规则<code>**/a/b</code>能匹配<code>foo/a/b</code>也能匹配<code>foo/bar/a/b</code></p>
+</li>
+<li><p>以<code>/**</code>结尾的规则表示匹配目录下所有文件和文件夹，规则<code>a/b/**</code>能匹配<code>/a/b/c</code>也能匹配<code>a/b/c/d/e</code></p>
+</li>
+<li><p>规则中间包含<code>/**/</code>表示匹配任意路径，比如规则<code>a/**/b</code>可以匹配<code>a/foo/bar/b</code>和<code>a/e/m/c/b</code>。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/15/python 线性代数：[3]矩阵转置/">
+                python 线性代数：[3]矩阵转置
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>矩阵的转置很简单，就是将矩阵的行变为列，将列变为行，我们先通过例子看一下矩阵转置是怎么做的。然后验证几个规律。</p>
+<ul>
+<li>先创建一个矩阵A</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/faacb564034f78f014b75c027b310a55b2191c40.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>我们使用属性T来得到矩阵A的转置矩阵</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/5327ce160924ab185b0727c637fae6cd7a890beb.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>我们验证第一个性质：(A’)’=A</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/d019d2bf6c81800a81044fffb33533fa838b471b.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>再创建两个尺寸相同的矩阵</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/1899a23eb13533fa1e5755dfaad3fd1f40345b1b.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>验证矩阵转置的第二个性质：(A±B)’=A’±B’</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/dbf554ed2e738bd44d9c74c0a38b87d6267ff940.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>验证矩阵转置的第三个性质：(KA)’=KA’</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/2f3295d4b31c8701a10a7417257f9e2f0608ff40.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li>验证矩阵转置的第四个性质：(A×B)’= B’×A’</li>
+</ul>
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/c87c6ecf3bc79f3d560022c1b8a1cd11738b291b.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/6648d73d70cf3bc733560c1dd300baa1cc112aaa.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
+<ul>
+<li><p>本文用到的所有代码如下：</p>
+</li>
+<li></li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 2, 3],</p>
+</li>
+<li><p>[4, 5, 6]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A.T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 4],</p>
+</li>
+<li><p>[2, 5],</p>
+</li>
+<li><p>[3, 6]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>A.T.T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 2, 3],</p>
+</li>
+<li><p>[4, 5, 6]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>B</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 4],</p>
+</li>
+<li><p>[2, 5],</p>
+</li>
+<li><p>[3, 6]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>D</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[0, 3],</p>
+</li>
+<li><p>[1, 4],</p>
+</li>
+<li><p>[2, 5]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>(B+D).T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1,  3,  5],</p>
+</li>
+<li><p>[ 7,  9, 11]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>B.T+D.T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[ 1,  3,  5],</p>
+</li>
+<li><p>[ 7,  9, 11]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>10*A.T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[10, 40],</p>
+</li>
+<li><p>[20, 50],</p>
+</li>
+<li><p>[30, 60]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>(10*A).T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[10, 40],</p>
+</li>
+<li><p>[20, 50],</p>
+</li>
+<li><p>[30, 60]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.dot(A,B).T</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[14, 32],</p>
+</li>
+<li><p>[32, 77]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.dot(A.T,B.T)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[17, 22, 27],</p>
+</li>
+<li><p>[22, 29, 36],</p>
+</li>
+<li><p>[27, 36, 45]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.dot(B.T,A.T)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[14, 32],</p>
+</li>
+<li><p>[32, 77]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/07/15/Python教程：[11]正则表达式match()函数/">
                 Python教程：[11]正则表达式match()函数
             </a>
@@ -622,135 +1153,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/">
-                SPSS二因素完全随机设计的简单效应检验方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年07月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>spss在做简单效应的时候没有现成的菜单选项，需要你自己编写syntax，所以比较麻烦，在这个教程了，我交给大家一个办法，不用学太多的syntax就能自己做简单效应，下面是具体的方法：<br>工具/原料</p>
-<ul>
-<li>spss20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>在菜单栏上执行：analyse–GLM–univariate，打开方差分析对话框</li>
-</ul>
-<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/6a600c338744ebf8b74dcffdd9f9d72a6059a730.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
-<ul>
-<li>将自变量、因变量放入各自的框中，如图所示，B和Z是两个自变量，他们是完全随机设计，点击ok按钮，开始运行数据</li>
-</ul>
-<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/a08b87d6277f9e2f7e17b6ca1f30e924b999f3d6.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
-<ul>
-<li>我们看到数据的处理效果，交互作用显著，所以我们需要进一步做简单效益的检验</li>
-</ul>
-<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/4d086e061d950a7b8140e5060ad162d9f3d3c9ff.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
-<ul>
-<li>如图所示，点击菜单栏上的按钮，打开刚才用过的univariate对话框</li>
-</ul>
-<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/4ec2d5628535e5dd0d5d0e1d76c6a7efcf1b62fb.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
-<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/203fb80e7bec54e7d481b1dcb9389b504ec26a87.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
-<ul>
-<li>点击下面的paste按钮，来到syntax的编辑窗口</li>
-</ul>
-<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/f3d3572c11dfa9ec016afdd562d0f703908fc1a8.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
-<ul>
-<li><p>在如图所示的位置，添加一个命令：/EMMEANS=TABLES(B*Z)COMPARE(B)ADJ(SIDAK)</p>
-</li>
-<li><p>其中：EMMEANSE是estimated marginal means subcommand的缩写，意思是估计边际平均数  </p>
-</li>
-<li><p>ADJ是比较的方法，还可以用lsd ，bonferroni和sidak这三种方法。</p>
-</li>
-<li><p>单击运行按钮，开始处理数据并输出结果</p>
-</li>
-</ul>
-<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/8694a4c27d1ed21b3fe6b927ad6eddc450da3fc0.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
-<ul>
-<li>我们看到，简单主效应的分析已经出来，通过这个表格我们就能对自变量B各个水平进行精细比较</li>
-</ul>
-<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/1ad5ad6eddc451dab7dd9b29b6fd5266d11632cc.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/07/01/wxpython教程：[2]窗口风格/">
-                wxpython教程：[2]窗口风格
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年07月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>这篇文章接着介绍wxpython.Frame，我们需要设置一下窗口的大小、位置等。下面看一下今天要写的所有代码。</p>
-<ul>
-<li>代码的前两行就不说了，引入了相关模块并创建了一个app</li>
-</ul>
-<img src="/2015/07/01/wxpython教程：[2]窗口风格/0d968f2397dda1440ba4fcddb1b7d0a20df486f5.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
-<ul>
-<li>接着是Frame的设置，我们先来看看style，他有很多可以设置的属性，不同的属性用竖线“|”连接，比如我们想要窗口上有最大化按钮，就设置wx.MAXIMIZE_BOX，如果想要增加最小化按钮，就写成style=wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX ，写一连串属性很麻烦，我们可以用wx.DEFAULT_FRAME_STYLE默认设置，它等于wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX | wx.RESIZE_BORDER | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN<br>其他属性的意义我们直接从官网上看就可以，如下图：</li>
-</ul>
-<img src="/2015/07/01/wxpython教程：[2]窗口风格/4abae5edab64034f575f5269acc379310b551d8b.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
-<img src="/2015/07/01/wxpython教程：[2]窗口风格/109eb7ec8a136327064f515c928fa0ec09fac784.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
-<ul>
-<li><p>接着我们想要设置窗口的大小，用size参数，Frame（…size=(200,250))，这样就将窗口大小设置为200长，250高。</p>
-</li>
-<li><p>使用Move方法可以设置窗口的位置，比如（它表示窗口的左上角在屏幕上的位置）</p>
-</li>
-</ul>
-<img src="/2015/07/01/wxpython教程：[2]窗口风格/ac754782b2b7d0a2a66494f2c8ef76094a369af5.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
-<ul>
-<li>如果我们需要将窗口置于屏幕中央，可以使用Center方法</li>
-</ul>
-<img src="/2015/07/01/wxpython教程：[2]窗口风格/b6045da98226cffc24b82fddba014a90f703ea94.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
-<ul>
-<li>还有其他很多方法设置窗口位置，这里就不演示了：</li>
-</ul>
-<img src="/2015/07/01/wxpython教程：[2]窗口风格/4e83cb628535e5dd279737b075c6a7efcf1b62e3.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
-<ul>
-<li>最后就不用解释了，可以看看你创建的一个窗口</li>
-</ul>
-<img src="/2015/07/01/wxpython教程：[2]窗口风格/8bc3a7014a90f6034c220c283a12b31bb151ed94.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -793,19 +1195,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -933,7 +1335,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

@@ -157,6 +157,146 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/04/19/pandas教程：[27]散点图和抖动图/">
+                pandas教程：[27]散点图和抖动图
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>拿到一个数据我们首先想到的是绘制散点图查看数据的基本分布情况，那么在Python.pandas中，如何绘制散点图呢？散点图的缺陷是什么，为什么要绘制抖动图呢？</p>
+<ul>
+<li>先引入相应的模块</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/b25d9901a18b87d6333d7e6f040828381f30fd00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>读取数据到数据框df<br>打印出前5行数据，可以看到有两列数据，分别是 孩子的身高和父母的身高</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/1e71f724b899a901504a8e461e950a7b0208f500.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/3790312eb9389b50ccbb35228635e5dde7116e3f.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>先绘制一个散点图，x轴为孩子的身高，y轴为父母的身高，将绘制得到的图片保存在D盘下的plot.png文件</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/969cbf44ad345982dfce30e20ff431adcbef843f.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>我们可以看到得到的图片是酱紫的，由于数据点重合在了一起，所以我们看到的散点图很规整，但却隐藏了规律，于是我们想到用到抖动的方法，绘制抖动图</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/08b68e529822720e32b1378a78cb0a46f21fab00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>我们看可以实现抖动的函数：所谓的抖动就是让数据点发生微小的位移，也就是略微改变数据的值，使得数据点不能完全重合，抖动距离的大小用下面函数中的factor参数来决定。</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/d1e312f431adcbef0470ab76afaf2edda3cc9f3f.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>利用上面的函数对df进行处理</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/f392492c11dfa9eca251836761d0f703918fc100.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>我们看得到的数据df2是酱紫的：</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/27d647ee3d6d55fb86b9a3566e224f4a20a4dd00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>现在接着绘制一个散点图，生成的就是抖动图了。alpha参数指的是数据点的透明度</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/6391e903918fa0ec26b8b17d259759ee3d6ddb00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<ul>
+<li>从这个图中我们可以清楚的看到，颜色比较深、数据比较多的点和颜色比较浅、数据比较少的点的位置。</li>
+</ul>
+<img src="/2015/04/19/pandas教程：[27]散点图和抖动图/61183b2dd42a283466d9e37b58b5c9ea15cebf00.jpg" alt="pandas教程：[27]散点图和抖动图" title="pandas教程：[27]散点图和抖动图">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/">
+                SPSS实例：[6]vba控制spss处理数据
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <pre><code>使用vba来控制spss处理数据，使得我们可以批量进行spss操作，大大加快我们的工作速度。比如，前两天有网友问我如何进行一万次回归分析，我直接写了一段vba代码，很快就能处理完，并整理成分析报告。这就是vba与spss合作所带来的效果，因为篇幅有限，下面只给大家概述一下如何在vba中调用spss对象，并进行数据处理，想要了解更详细的教程，希望您持续关注我写的教程。转载请注明出处（作者百度ID为：qq675495787）
+</code></pre><ul>
+<li>概述spss对象：spss对象是控制spss程序的对象集合。spss对象的指令变换点是ISpssApp对象，它是所有对象的容器，内含所有对象。下面的树形图介绍了spss对象所包含的属性和方法，这些属性和方法会在以后的教程中跟大家介绍。</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/9f1011b30f2442a74f8bfa94d343ad4bd113023e.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<ul>
+<li><p>引用spss类库：如果你想要写spss脚本，你必然要用到spss对象。在spss脚本中，你可以使用objSPSSApp为全局变量来调用spss对象，在此之前要确保这个对象已经被创建好了（实际上，创建了spss对象就使spss程序开始运行了，只不过你看不到程序界面，说实话，你什么都看不到）。</p>
+</li>
+<li><p>换一种说法，如果你想要在其他编程语言中使用spss，你需要首先创建ISpssApp对象。例如，在微软的VB编辑器中（使用vba），首先你必须在VBA工程中引用spss对象类库（也就是：spsstype library，spss pivot table<br>type library和spss RTF type library）。操作方法是，在vbe中，点击工具–引用；找到这几个类库，然后勾选他们，点击确定按钮。</p>
+</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/0db52fadcbef76096a269fae2cdda3cc7cd99e96.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/4a77b2af2edda3cc59c9be1103e93901213f9296.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<ul>
+<li><p>声明spss对象变量：引用了spss类库以后，我们可以在vba中声明spss对象变量了。代码如下：</p>
+</li>
+<li><p>Dimspss as object</p>
+</li>
+<li><p>Set<br>spss=createobject(“spss.application16”)</p>
+</li>
+<li><p>实际上我们更建议使用对象类来声明变量，所以上面的语句应当写成：</p>
+</li>
+<li><p>Dimspss as ispssapp</p>
+</li>
+<li><p>Set spss=new<br>spsswinlib.application16</p>
+</li>
+<li><p>这样的写法可以加快你的代码编写速度。</p>
+</li>
+<li><p>设置spss程序可见性：以上两个小代码可以启动spss程序，当你不需要看到这个程序的时候，你应该让其保持隐身，在后台运行，你看不到spss程序。如果你想要看到spss程序，你应该设置spss对象的可见性属性为true。如下图所示，我们打开一个数据文件“卡方检验”，然后设置数据文件的可见性为1，这样就可以看到spss程序了，否则是看不到的，但是即便看不到他们也是运行中的。</p>
+</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[6]vba控制spss处理数据/35da1d3b5bb5c9ea117f05d2d739b6003af3b337.jpg" alt="SPSS实例：[6]vba控制spss处理数据" title="SPSS实例：[6]vba控制spss处理数据">
+<ul>
+<li><p>小试牛刀：我们试试如何读取spss的版本号，输入代码</p>
+</li>
+<li><p>a = spss.GetSPSSVersion</p>
+</li>
+<li><p>MsgBox a</p>
+</li>
+<li><p>这段代码就是用变量a存放spss的版本号，然后用消息框显示a的数值。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/04/19/Statsmodels：[1]模块简介/">
                 Statsmodels：[1]模块简介
             </a>
@@ -875,173 +1015,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/04/15/pandas教程：[3]DataFrame切片操作/">
-                pandas教程：[3]DataFrame切片操作
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年04月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>DataFrame数据框允许我们使用iloc方法来像操作array（数组）一样对DataFrame进行切片操作，其形式上，跟对数组进行切片是一样的，我们下面来演示一下一些典型的切片操作：</p>
-<ul>
-<li>先创建一个6行4列的DataFrame数据框</li>
-</ul>
-<img src="/2015/04/15/pandas教程：[3]DataFrame切片操作/4e83cb628535e5dd397819eb75c6a7efce1b626b.jpg" alt="pandas教程：[3]DataFrame切片操作" title="pandas教程：[3]DataFrame切片操作">
-<ul>
-<li>使用iloc方法，提取第四行数据：</li>
-</ul>
-<img src="/2015/04/15/pandas教程：[3]DataFrame切片操作/4abae5edab64034f33d47e32acc379310a551dad.jpg" alt="pandas教程：[3]DataFrame切片操作" title="pandas教程：[3]DataFrame切片操作">
-<ul>
-<li>我们可以看一下，这种方法得到的返回值是一个series数据</li>
-</ul>
-<img src="/2015/04/15/pandas教程：[3]DataFrame切片操作/79b1e936afc3793145713a1de8c4b74543a911ad.jpg" alt="pandas教程：[3]DataFrame切片操作" title="pandas教程：[3]DataFrame切片操作">
-<ul>
-<li>返回4-5行，1-2列数据，用下面的写法，你可以看到跟array的切片操作是一模一样的额</li>
-</ul>
-<img src="/2015/04/15/pandas教程：[3]DataFrame切片操作/b5ce925494eef01fd140a4f1e3fe9925bc317d6b.jpg" alt="pandas教程：[3]DataFrame切片操作" title="pandas教程：[3]DataFrame切片操作">
-<ul>
-<li>我们也可以提取不连续行和列的数</li>
-</ul>
-<img src="/2015/04/15/pandas教程：[3]DataFrame切片操作/1f569482b9014a90ac27fa89aa773912b31beeae.jpg" alt="pandas教程：[3]DataFrame切片操作" title="pandas教程：[3]DataFrame切片操作">
-<ul>
-<li>想要提取某一样或者某几行的数据，保证所有列都在，可以使用一个冒号来表示所有列</li>
-</ul>
-<img src="/2015/04/15/pandas教程：[3]DataFrame切片操作/72ccb7773912b31bef75711d8518367adab4e1ae.jpg" alt="pandas教程：[3]DataFrame切片操作" title="pandas教程：[3]DataFrame切片操作">
-<ul>
-<li>当然，所有行，也可以用冒号来表示</li>
-</ul>
-<img src="/2015/04/15/pandas教程：[3]DataFrame切片操作/b110e6198618367ab990c3e92d738bd4b31ce5ae.jpg" alt="pandas教程：[3]DataFrame切片操作" title="pandas教程：[3]DataFrame切片操作">
-<ul>
-<li>提取某一个值，去掉所有冒号，比如取第2行第2列的这个数</li>
-</ul>
-<img src="/2015/04/15/pandas教程：[3]DataFrame切片操作/d019d2bf6c81800a18b2353ab23533fa828b476b.jpg" alt="pandas教程：[3]DataFrame切片操作" title="pandas教程：[3]DataFrame切片操作">
-<ul>
-<li>当然，iat是专门提取某个数的方法，它的效率高更高，因此建议在提取单个数的时候用iat</li>
-</ul>
-<img src="/2015/04/15/pandas教程：[3]DataFrame切片操作/8640bf8b87d6277ff20b8e0c2b381f30e924fcae.jpg" alt="pandas教程：[3]DataFrame切片操作" title="pandas教程：[3]DataFrame切片操作">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/04/11/spss协方差分析的操作过程和结果分析方法/">
-                spss协方差分析的操作过程和结果分析方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年04月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p> 协方差分析就是当研究中出现一个变量不是我们想要研究的变量，但是却会影响到我们的研究结果，我们不得不对其进行控制，这时候就可以用协方差分析的方法来控制，协方差分析一个最重要的假设是斜率同质假设，下面就要先检验斜率同质假设，然后才能进行协方差分析。<br>方法/步骤</p>
-<ul>
-<li>协方差分析之前，要先检验一下数据是否满足斜率同质假设，也就是检验自变量和斜变量之间有木有交互作用，如图所示，在菜单栏上执行：analyze–general linear model–univariate</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/9e3df8dcd100baa1d766d84c4710b912c9fc2efa.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>在打开的对话框中，将因变量、自变量、斜变量都放到各自的位置，如图所示，评定得分为因变量，培训方式为自变量，家庭指数为斜变量，点击options按钮，进入子对话框</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/b219ebc4b74543a9d684653b1e178a82b80114ad.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/d31b0ef41bd5ad6ef1fafb1d81cb39dbb7fd3cc1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>在这里将培训方式，也就是自变量移动到display means for中，并且勾选描述统计和方差齐性检验，点击continue按钮继续</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/dcc451da81cb39db86c3f8a1d0160924aa1830c1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>点击model按钮，选择模型</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/4b90f603738da97764b019dcb051f8198718e3ae.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>刚打开这个对话框的时候，默认是full factorial模式，但是我们要检验交互作用，所以要选中custom</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/f703738da9773912edb91a96f8198618377ae2ae.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>将培训方式和家庭指数都放到model里</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/34fae6cd7b899e51348da5e342a7d933c9950dc1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>同时选中培训方式和家庭指数，将type设置为interaction，点击添加按钮，添加到model中，点击continue按钮</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/0b46f21fbe096b636ab9c1a70c338744eaf8aca1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/34fae6cd7b899e5134c4a5e342a7d933c9950dfa.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>点击ok按钮，开始处理数据</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/faedab64034f78f0bb08050479310a55b2191cc1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>在出来的结果中，我们主要是看自变量和斜变量的交互作用，如图所示，sig值大于0.05，所以交互作用不显著，这就满足了斜率同质性假设</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/8601a18b87d6277ff28dadcf28381f30e824fcae.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>接着我们来进行协方差分析，在菜单栏上执行：analyse–general linear model–univariate</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/6159252dd42a28349d06a9fc5bb5c9ea14cebfa1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>将各个变量都放到各自的位置，和上面的步骤一样，点击options按钮</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/1f178a82b9014a90ac3dd94aa9773912b21beec2.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>将培训方式移动到display means for列表里，勾选描述统计、方差齐性、效应值，点击continue继续</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/5ab5c9ea15ce36d37aa41cc73af33a87e850b1a1.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>点击model，选择模型</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/a8773912b31bb05198272cdf367adab44bede0c2.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>选择full factorial，点击continue</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/eac4b74543a982269a8bb4d08a82b9014b90ebfb.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li>点击ok按钮，开始处理数据</li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/03087bf40ad162d98971fdeb11dfa9ec8b13cdae.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<ul>
-<li><p>最后看分析的结果培训方式的效应显著，这说明不同的培训方式会影响到学生最后的分数</p>
-</li>
-<li></li>
-<li></li>
-</ul>
-<img src="/2015/04/11/spss协方差分析的操作过程和结果分析方法/10dfa9ec8a1363271dc75bc4918fa0ec08fac71b.jpg" alt="spss协方差分析的操作过程和结果分析方法" title="spss协方差分析的操作过程和结果分析方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1084,19 +1057,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -1224,7 +1197,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

@@ -157,6 +157,56 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/03/03/pandas教程：[24]删除缺失数据/">
+                pandas教程：[24]删除缺失数据
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年03月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如数据量比较大或者有冗余，我们可以删掉有缺失值的数据，你可以选择删除行或者删除列，用的都是DataFrame.dropna()，当然Series也有dropna方法，用法相同。</p>
+<ul>
+<li>引入相关模块</li>
+</ul>
+<img src="/2015/03/03/pandas教程：[24]删除缺失数据/e78c65899e510fb36d342190da33c895d1430c4c.jpg" alt="pandas教程：[24]删除缺失数据" title="pandas教程：[24]删除缺失数据">
+<ul>
+<li>创建一个带有缺失值的数据框：<br>查看一下数据内容：</li>
+</ul>
+<img src="/2015/03/03/pandas教程：[24]删除缺失数据/5af4d7ea15ce36d30012d53739f33a87e950b160.jpg" alt="pandas教程：[24]删除缺失数据" title="pandas教程：[24]删除缺失数据">
+<img src="/2015/03/03/pandas教程：[24]删除缺失数据/0b907cd9f2d3572cb2cfcadb8913632762d0c34d.jpg" alt="pandas教程：[24]删除缺失数据" title="pandas教程：[24]删除缺失数据">
+<ul>
+<li>通常情况下，我们选择删除行，使用参数axis=0，这是最常用的方法<br>删除后的结果为：</li>
+</ul>
+<img src="/2015/03/03/pandas教程：[24]删除缺失数据/a84052086e061d95966b613f78f40ad162d9ca4d.jpg" alt="pandas教程：[24]删除缺失数据" title="pandas教程：[24]删除缺失数据">
+<img src="/2015/03/03/pandas教程：[24]删除缺失数据/906289dda144ad34b0a9d180d3a20cf431ad8560.jpg" alt="pandas教程：[24]删除缺失数据" title="pandas教程：[24]删除缺失数据">
+<ul>
+<li>还有可能的是，我们选择删除列，这种情况不多，因为通常我们选择用列表示一个变量或者指标，我们通常不会因为有几个缺失值就删除一个变量<br>输出结果为：</li>
+</ul>
+<img src="/2015/03/03/pandas教程：[24]删除缺失数据/0b3a1c087bf40ad1c2c991e4542c11dfa9ecce4d.jpg" alt="pandas教程：[24]删除缺失数据" title="pandas教程：[24]删除缺失数据">
+<img src="/2015/03/03/pandas教程：[24]删除缺失数据/90cebeec08fa513d8b873ad93e6d55fbb2fbd94d.jpg" alt="pandas教程：[24]删除缺失数据" title="pandas教程：[24]删除缺失数据">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/03/01/Django教程：[5]URLpattern的语法/">
                 Django教程：[5]URLpattern的语法
             </a>
@@ -177,6 +227,51 @@
 <li>我们在写url的时候实际上写的是正则表达式，尖号（^）和美元符号（$）都是正则表达式符号，分别表示字符串的开头和结尾。上面添加的url（’^hello/$’）表示url以hello/开头，也以hello/结尾，只有满足这两个条件的url才可以调用hello函数。</li>
 </ul>
 <img src="/2015/03/01/Django教程：[5]URLpattern的语法/fab3ac119313b07ef63b6f720ed7912396dd8c82.jpg" alt="Django教程：[5]URLpattern的语法" title="Django教程：[5]URLpattern的语法">
+<ul>
+<li><p>假如我们写成 ^hello/ ，没有$结尾，表示任何以hello/开头的url都是可以调用hello方法的，比如浏览器中访问<a href="http://127.0.0.1:8001/hello/dfdf也可以调用hello方法。" target="_blank" rel="external">http://127.0.0.1:8001/hello/dfdf也可以调用hello方法。</a></p>
+</li>
+<li><p>假如我们写成 hello/$，没有尖号（^）开头，那么任何以hello/结尾的url都可以调用hello方法。比如<a href="http://127.0.0.1:8001/dfdfdf/hello/" target="_blank" rel="external">http://127.0.0.1:8001/dfdfdf/hello/</a></p>
+</li>
+<li><p>那么，只写 hello/ ，没有尖号和美元符号，那么只要url中包含字符 hello/都可以调用方法 hello 。</p>
+</li>
+<li><p>学习python的正则表达式可以帮助你更好的理解这些内容，下面的参考资料里有python的正则表达式的学习教程。</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/03/01/Django教程：[5]URLpattern的语法 - 副本/">
+                Django教程：[5]URLpattern的语法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年03月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>前一篇文章我们使用Django制作了第一个网页，针对其中的一些问题，我们补充一点知识，这是关于urls.py文件中的URLpattern的，</p>
+<ul>
+<li>我们在写url的时候实际上写的是正则表达式，尖号（^）和美元符号（$）都是正则表达式符号，分别表示字符串的开头和结尾。上面添加的url（’^hello/$’）表示url以hello/开头，也以hello/结尾，只有满足这两个条件的url才可以调用hello函数。</li>
+</ul>
+
 <ul>
 <li><p>假如我们写成 ^hello/ ，没有$结尾，表示任何以hello/开头的url都是可以调用hello方法的，比如浏览器中访问<a href="http://127.0.0.1:8001/hello/dfdf也可以调用hello方法。" target="_blank" rel="external">http://127.0.0.1:8001/hello/dfdf也可以调用hello方法。</a></p>
 </li>
@@ -599,124 +694,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/">
-                统计分析amos21安装破解方法附带密钥注册码
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年02月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>amos是出色的统计分析软件, 通常我们使用amos进行结构方程的分析,因为它有强大而又简单的绘图功能,所以受到很多社会学者的青睐。下面我们分享一个破解该软件的方法,希望对各个研究者有所帮助。</p>
-<ul>
-<li>首先我们去下载amos软件,下面的链接上有这个软件的下载链接,里面还有一个破解文件,这个文件是最重要的。先安装amos,一直点击下一步,到下面这个界面的时候,选择下面第二个选项,也就是临时版本</li>
-</ul>
-<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/6648d73d70cf3bc778b342c2d000baa1cd112a2a.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
-<ul>
-<li>接着我们要设置临时文件夹,我们使用软件默认的安装文件夹就可以了,点击右面的浏览按钮</li>
-</ul>
-<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/0ef2112442a7d933d8546b5dac4bd11372f001e4.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
-<ul>
-<li>在打开的对话框中,有一个temp的文件,双击这个文件即可</li>
-</ul>
-<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/d872d695d143ad4bc2d2c9ee83025aafa50f06e4.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
-<ul>
-<li>接着打开开始菜单，找到ibm spss amos，里面有一个注册快捷方式，点击它，如图所示</li>
-</ul>
-<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/d56b3634349b033b27c073f414ce36d3d539bd11.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
-<ul>
-<li>打开这个授予许可对话框，点击下一步，选择立即授予产品许可</li>
-</ul>
-<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/72b19c025aafa40f535c41f3aa64034f79f019c2.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
-<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/78701455b319ebc49484f9b78326cffc1f1716e4.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
-<ul>
-<li>从下面的参考文献中下载下来的压缩包里有一个注册码，将注册码填写进去，然后点击下一步即可完成注册</li>
-</ul>
-<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/3bc6f750352ac65c974de95dfaf2b21193138a11.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
-<img src="/2015/02/19/统计分析amos21安装破解方法附带密钥注册码/c71d0e385343fbf23864290db17eca8065388f11.jpg" alt="统计分析amos21安装破解方法附带密钥注册码" title="统计分析amos21安装破解方法附带密钥注册码">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/02/17/SPSS实例：[11]如何检验调节作用/">
-                SPSS实例：[11]如何检验调节作用
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年02月17日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我们今天用到了spss中的分层回归，这种方法其实和回归没有太大差异，只是在回归的时候，分两个步骤进行，然后对两步中的R方值的改变大小进行显著性检验，如果达到了预先设置的显著性水平，就可以证明调节作用。我们来看看具体的步骤：</p>
-<ul>
-<li><p>明确变量类型：我们今天使用的自变量、调节变量、因变量都是连续性变量，或者说是等距变量。</p>
-</li>
-<li><p>我们在菜单栏上执行：分析——回归——线性回归，如图所示</p>
-</li>
-</ul>
-<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/b6045da98226cffc7dc6f7a0bb014a90f703eaf1.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
-<ul>
-<li>接着，我们要输入变量，放入因变量，然后放入自变量和调节变量，自变量和调节变量都在independent框中，图中没有列出调节变量，你别跟着犯错。点击next按钮，进入第二层</li>
-</ul>
-<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/5f9e93b1cb1349540abca076544e9258d0094ac6.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
-<ul>
-<li>在第二层中，independent框中不仅仅有自变量和调节变量，还有自变量和调节变量的交互项，假如你不知道这个交互项是从哪里来的，你可以在百度经验中搜索【回归模型中如何增加交互项】。这里就不再详述了。</li>
-</ul>
-<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/43e6c733c895d143e009af3171f082025aaf0761.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
-<ul>
-<li>我们点击statistics按钮，进行设置</li>
-</ul>
-<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/0e655ca7d933c8959c80d069d31373f0830200e2.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
-<ul>
-<li>在这里需要重点勾选R方改变值或者其他你感兴趣的指标，如图所示，然后点击继续</li>
-</ul>
-<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/b110e6198618367aaa6537cf2c738bd4b21ce5f1.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
-<ul>
-<li>我们先看R方的改变值是否达到了显著水平，如果达到了显著水平，然后找到模型的系数检验结果，因为保密原因，我把变量的名称都隐去了，你可以看到红色方框中就是交互项的系数检验，B值达到显著水平，说明调节作用得到了证明。</li>
-</ul>
-<img src="/2015/02/17/SPSS实例：[11]如何检验调节作用/fab3ac119313b07ef982761b0ed7912397dd8ca2.jpg" alt="SPSS实例：[11]如何检验调节作用" title="SPSS实例：[11]如何检验调节作用">
-<ul>
-<li>为了进一步看到调节变量是如何起到调节作用的，也就是具体的调节方向，我们需要进一步来进行探究，因为篇幅太长，我们在下一篇文章中讲【检验调节变量的调节方向】</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -759,19 +736,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -899,7 +876,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

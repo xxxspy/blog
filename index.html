@@ -157,6 +157,105 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2017/06/26/gitlab配置和基本使用方法/">
+                gitlab配置和基本使用方法(写给测试用)
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017年06月26日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h2 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h2><p>打开<a href="http://123.56.79.214:10080/users/sign_in" target="_blank" rel="external">gitlab</a>，注册一个账户。</p>
+<p>记住账号，并把账号发送给管理员，让管理员给你设置权限。</p>
+<p>打开网址查看项目<code>http://123.56.79.214:10080/ydsun/auto_report_client</code>，如果你看不到，说明你还没有权限。</p>
+<h2 id="下载代码"><a href="#下载代码" class="headerlink" title="下载代码"></a>下载代码</h2><p>在项目<a href="http://123.56.79.214:10080/ydsun/auto_report_client" target="_blank" rel="external">主页</a>，找到下载按钮，下载源码。下载得到一个zip压缩包，把压缩包解压到你想要放置源码的地方。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>打开项目<a href="http://123.56.79.214:10080/ydsun/auto_report_client" target="_blank" rel="external">主页</a>，在主页上可以看安装的过程。</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2017/06/22/报告模板书写规范培训/">
+                报告文字模板书写规范培训
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017年06月22日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <blockquote>
+<p>注意，文章中所有 <code>{ {     } }</code> <code>{ %     % }</code> 中间没有空格</p>
+</blockquote>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>用<code>{ {     } }</code>来修饰变量，内部的值会被渲染成文本。比如 <code>我有{ { 1 + 1 } }个苹果</code>会被渲染成 <code>我有2个苹果</code>。</p>
+<p>通常我们会提前设置好一些变量，比如，我们在写模板的时候，为了方便起见，可以先设<code>pro_code=44</code>，即广东省的省代码，这些变量的设置可以在word的常量表里。那么我们在需要用到省代码的地方，可以写成<code>{ { pro_code } }</code>，如此便能在不同的省报告中使用不同的省代码了。</p>
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>我们除了可以设置一些常量(如<code>pro_code</code>)之外，我们还可以计算一些临时变量。比如<code>a = 500*600</code>，这样，我们就得到一个变量2，他的值为500和600的乘积。除此以外，我们更常用的是如下这种形式的计算：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a2=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|which(2)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div></pre></td></tr></table></figure>
+<p>我们分别来说一下其中用到的一些方法。</p>
+<h3 id="Variable-和-table"><a href="#Variable-和-table" class="headerlink" title="Variable 和 table"></a>Variable 和 table</h3><p>表示变量的符号。上面的例子中，等号后面的式子，开头一个V表示<code>variable</code>，这是为了识别数据库中的变量。后面的参数就是变量名。<code>Variabel</code> 后面的 <code>table</code> 指明变量来自于哪一个表。为了方便起见，这两种写法是等价的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">V(&quot;maths_level&quot;)|table(&quot;4stu&quot;) &lt;==&gt; V(&quot;maths_level&quot;, &quot;4stu&quot;)</div></pre></td></tr></table></figure>
+<h3 id="select"><a href="#select" class="headerlink" title="select"></a>select</h3><p><code>select</code>是对数据的选择。上面的例子指明了我们的数据限定在一个省。如果要计算全国数据，直接去掉select及其参数即可。如果需要使用多个筛选条件，比如要选择广东省的男生数据，那么可以用逗号隔开两个条件，写成如下形式：(province 和 gender都是数据库中的变量，他们都需要用引号包裹起来)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select(&#123;&quot;province&quot;:pro_code, &quot;gender&quot;:1&#125;)</div></pre></td></tr></table></figure>
+<h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><p><code>which</code>只有在计算百分比的时候有用，因为他指的是计算谁的百分比。上例中计算的是<code>maths_level</code>为2的百分比。</p>
+<h3 id="percent-amp-mean"><a href="#percent-amp-mean" class="headerlink" title="percent &amp; mean"></a>percent &amp; mean</h3><p>这两个函数都是指明计算方法，顾名思义，前者计算百分比，后者计算平均值。</p>
+<h3 id="format"><a href="#format" class="headerlink" title="format"></a>format</h3><p>顾名思义，<code>format</code>是用来描述数据格式的。参数<code>decimal</code>表明小数位数，<code>multi</code>表明乘数，按照上例来说，percent方法的计算结果都在(0,1)之间，所以我们让结果乘以100，保留1位小数, 另外再加上一个百分号。写法就是：(decimal、multi和suffix的前后顺序不影响结果)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100,&quot;suffix&quot;:&quot;%&quot;&#125;)</div></pre></td></tr></table></figure>
+<p>其实你可以省略format，这时候系统会使用默认的配置，保留一位小数。百分比的结果会乘以100以后再保留一位小数。</p>
+<p>有一个问题需要指出，就是你在计算一个变量的时候，什么时候保留小数位数你得自己设置。例如，如下两种写法是不同的：</p>
+<h4 id="第一种写法：先保留一位小数，再相加"><a href="#第一种写法：先保留一位小数，再相加" class="headerlink" title="第一种写法：先保留一位小数，再相加"></a>第一种写法：先保留一位小数，再相加</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a2=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|which(2)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div><div class="line">a3=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|which(3)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div><div class="line">aa=a2+a3</div></pre></td></tr></table></figure>
+<h4 id="第二种写法：先相加再保留1位小数"><a href="#第二种写法：先相加再保留1位小数" class="headerlink" title="第二种写法：先相加再保留1位小数"></a>第二种写法：先相加再保留1位小数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a2=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|which(2)|percent</div><div class="line">a3=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|which(3)|percent</div><div class="line">aa= (a2+a3)|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div></pre></td></tr></table></figure>
+<h3 id="groupby"><a href="#groupby" class="headerlink" title="groupby"></a>groupby</h3><p><code>groupby</code>是将数据分组，分组后再计算，这样每个组都会得到一个结果。比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">V(&quot;maths&quot;,&quot;4stu&quot;)|groupby(&quot;gender&quot;)|mean</div></pre></td></tr></table></figure>
+<p>这是计算两种性别下maths的平均值。</p>
+<h3 id="mi-amp-ma"><a href="#mi-amp-ma" class="headerlink" title="mi &amp; ma"></a>mi &amp; ma</h3><p>经常配合groupby使用，求最小值和最大值。因为groupby可以计算得到多个值，在多个值里面选择最大值和最小值就用<code>ma</code>和<code>mi</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">V(&quot;maths&quot;,&quot;4stu&quot;)|groupby(&quot;gender&quot;)|mean|mi</div></pre></td></tr></table></figure>
+<h2 id="逻辑判断"><a href="#逻辑判断" class="headerlink" title="逻辑判断"></a>逻辑判断</h2><p>逻辑判断语句的基本写法是:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123; % if a==b % &#125;</div><div class="line">a等于b</div><div class="line">&#123; % elif a&gt;b % &#125;</div><div class="line">a比b大&#123; &#123; a - b &#125; &#125;</div><div class="line">&#123; % else % &#125;</div><div class="line">a比b小&#123; &#123; b-a &#125; &#125;</div><div class="line">&#123; % end % &#125;</div></pre></td></tr></table></figure>
+<p>注意，逻辑判断语句用到的符号是<code>{ % ... % }</code>。其中 if 和 end 标明语句的开始和结尾，中间可以用elif增加判断语句，它是可选的，你可以不使用它，只用<code>if ... else ... end</code>, 你也可以用多个elif。还有就是，虽然我们写了很多行，但是最终渲染得到的内容是没有换行的，也就是任何换行符都会被删除。</p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>在报告中，经常用到非常复杂的计算。例如看下面在报告模板中的真实写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">======Variables=======</div><div class="line"></div><div class="line">a2=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|which(2)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div><div class="line"></div><div class="line">a3=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|which(3)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div><div class="line"></div><div class="line">a4=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|which(4)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div><div class="line"></div><div class="line">pa=a2+a3+a4</div><div class="line"></div><div class="line">a2=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|which(2)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div><div class="line"></div><div class="line">a3=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|which(3)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div><div class="line"></div><div class="line">a4=V(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|which(4)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div><div class="line"></div><div class="line">qga=a2+a3+a4</div><div class="line">=======Content========</div><div class="line"></div><div class="line">&#123; % if pa &gt; qga % &#125;</div><div class="line">高于全国均值&#123; &#123; pa - qga &#125; &#125;</div><div class="line">&#123; % elif pa == qga % &#125;</div><div class="line">等于全国均值</div><div class="line">&#123; % else % &#125;</div><div class="line">低于全国均值&#123; &#123; qga - pa &#125; &#125;</div><div class="line">&#123; % end % &#125;</div></pre></td></tr></table></figure>
+<p>其中有两个特殊的行<code>======Variables=======</code>和<code>=======Content========</code>，他们是分隔符，在两行中间可以定义各种用到的变量，这些变量不会被渲染。而content下面的内容是真正会被渲染的部分，但是这部分又用到了上面定义的变量。</p>
+<hr>
+<h1 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h1><hr>
+<h2 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h2><p>word中的图表都是由数据序列构成的，数据序列可以看成是一列数值，比如<code>(1, 2, 3, 4)</code>就是一个数据序列，我们的系统中，用如下方法表达一个序列：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">v(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div></pre></td></tr></table></figure>
+<p>以上代码中，我们只使用选择了某个省的数据，指明了变量maths_level，并没有指明which，这样就会返回maths_level的所有水平的百分比。百分比会按照水平值从小到大排列，最终的结果就类似于<code>(1.2, 3.4, 90.0, 5.2)</code></p>
+<p>还有一种方法是使用groupby, 它的作用是将数据分组。例如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">v(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|groupby(&quot;gender_new&quot;)|which(1)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div></pre></td></tr></table></figure>
+<p>以上代码中，groupby指明数据按照性别分组，这样计算结果会得到类似这样的结果<code>(90.0, 5.2)</code>，两个数分别表示男生和女生的maths_level为1的百分比。</p>
+<p>另有一种特殊的情况是，一个数据序列由多用算法计算得到，比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">v(&quot;maths_level&quot;)|table(&quot;4stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|which(1)|groupby(&quot;school_loc_new&quot;)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)| merge |v(&quot;maths_level&quot;)|table(&quot;8stu&quot;)|select(&#123;&quot;province&quot;:pro_code&#125;)|which(1)|groupby(&quot;school_loc_new&quot;)|percent|format(&#123;&quot;decimal&quot;:1,&quot;multi&quot;:100&#125;)</div></pre></td></tr></table></figure>
+<p>以上代码使用了merge算法，将前后两种计算结果合并在一起构成一个序列。merge之前计算结果为四年级的数据，如<code>(4.5, 6.5, 2.4)</code>，之后计算的是八年级的数据，结果为<code>(55.4, 34.2, 42.3)</code>，合并之后为<code>(4.5, 6.5, 2.4, 55.4, 34.2, 42.3)</code></p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2017/06/14/远程数据库下载和查询教程/">
                 远程数据库下载和查询教程
             </a>
@@ -1212,75 +1311,6 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2017/06/01/hello-world/">
-                Hello World
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2017年06月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-<img src="/2017/06/01/hello-world/1e71f724b899a901f17c560a17950a7b0208f506.jpg" alt="test-image" title="test-image">
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2017/01/08/探索过程数据在全球大规模机器考试中的应用/">
-                探索过程数据在全球大规模机器考试中的应用
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2017年01月08日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            
-
-	<div class="row">
-    <embed src="/pdfs/探索过程数据在全球大规模机器考试中的应用.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1323,19 +1353,19 @@ n &amp; \text{左} &amp; \text{中} &amp; \text{右} \\
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -1463,7 +1493,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

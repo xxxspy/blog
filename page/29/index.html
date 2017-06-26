@@ -157,6 +157,135 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/">
+                SPSS二因素完全随机设计的简单效应检验方法
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>spss在做简单效应的时候没有现成的菜单选项，需要你自己编写syntax，所以比较麻烦，在这个教程了，我交给大家一个办法，不用学太多的syntax就能自己做简单效应，下面是具体的方法：<br>工具/原料</p>
+<ul>
+<li>spss20.0<br>方法/步骤</li>
+</ul>
+<ul>
+<li>在菜单栏上执行：analyse–GLM–univariate，打开方差分析对话框</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/6a600c338744ebf8b74dcffdd9f9d72a6059a730.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>将自变量、因变量放入各自的框中，如图所示，B和Z是两个自变量，他们是完全随机设计，点击ok按钮，开始运行数据</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/a08b87d6277f9e2f7e17b6ca1f30e924b999f3d6.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>我们看到数据的处理效果，交互作用显著，所以我们需要进一步做简单效益的检验</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/4d086e061d950a7b8140e5060ad162d9f3d3c9ff.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>如图所示，点击菜单栏上的按钮，打开刚才用过的univariate对话框</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/4ec2d5628535e5dd0d5d0e1d76c6a7efcf1b62fb.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/203fb80e7bec54e7d481b1dcb9389b504ec26a87.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>点击下面的paste按钮，来到syntax的编辑窗口</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/f3d3572c11dfa9ec016afdd562d0f703908fc1a8.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li><p>在如图所示的位置，添加一个命令：/EMMEANS=TABLES(B*Z)COMPARE(B)ADJ(SIDAK)</p>
+</li>
+<li><p>其中：EMMEANSE是estimated marginal means subcommand的缩写，意思是估计边际平均数  </p>
+</li>
+<li><p>ADJ是比较的方法，还可以用lsd ，bonferroni和sidak这三种方法。</p>
+</li>
+<li><p>单击运行按钮，开始处理数据并输出结果</p>
+</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/8694a4c27d1ed21b3fe6b927ad6eddc450da3fc0.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<ul>
+<li>我们看到，简单主效应的分析已经出来，通过这个表格我们就能对自变量B各个水平进行精细比较</li>
+</ul>
+<img src="/2015/07/01/SPSS二因素完全随机设计的简单效应检验方法/1ad5ad6eddc451dab7dd9b29b6fd5266d11632cc.jpg" alt="SPSS二因素完全随机设计的简单效应检验方法" title="SPSS二因素完全随机设计的简单效应检验方法">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/07/01/wxpython教程：[2]窗口风格/">
+                wxpython教程：[2]窗口风格
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年07月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这篇文章接着介绍wxpython.Frame，我们需要设置一下窗口的大小、位置等。下面看一下今天要写的所有代码。</p>
+<ul>
+<li>代码的前两行就不说了，引入了相关模块并创建了一个app</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/0d968f2397dda1440ba4fcddb1b7d0a20df486f5.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>接着是Frame的设置，我们先来看看style，他有很多可以设置的属性，不同的属性用竖线“|”连接，比如我们想要窗口上有最大化按钮，就设置wx.MAXIMIZE_BOX，如果想要增加最小化按钮，就写成style=wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX ，写一连串属性很麻烦，我们可以用wx.DEFAULT_FRAME_STYLE默认设置，它等于wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX | wx.RESIZE_BORDER | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX | wx.CLIP_CHILDREN<br>其他属性的意义我们直接从官网上看就可以，如下图：</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/4abae5edab64034f575f5269acc379310b551d8b.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/109eb7ec8a136327064f515c928fa0ec09fac784.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li><p>接着我们想要设置窗口的大小，用size参数，Frame（…size=(200,250))，这样就将窗口大小设置为200长，250高。</p>
+</li>
+<li><p>使用Move方法可以设置窗口的位置，比如（它表示窗口的左上角在屏幕上的位置）</p>
+</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/ac754782b2b7d0a2a66494f2c8ef76094a369af5.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>如果我们需要将窗口置于屏幕中央，可以使用Center方法</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/b6045da98226cffc24b82fddba014a90f703ea94.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>还有其他很多方法设置窗口位置，这里就不演示了：</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/4e83cb628535e5dd279737b075c6a7efcf1b62e3.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<ul>
+<li>最后就不用解释了，可以看看你创建的一个窗口</li>
+</ul>
+<img src="/2015/07/01/wxpython教程：[2]窗口风格/8bc3a7014a90f6034c220c283a12b31bb151ed94.jpg" alt="wxpython教程：[2]窗口风格" title="wxpython教程：[2]窗口风格">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/06/23/Excel2013：[43]如何打印批注/">
                 Excel2013：[43]如何打印批注
             </a>
@@ -622,146 +751,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/06/15/Python教程：[17]UDP客户端程序/">
-                Python教程：[17]UDP客户端程序
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年06月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>python可以快速的写成一个udp客户端程序，前面的文章中我们介绍了如何写udp服务器，服务器其实和客户端的程序时非常类似的，你看了下面的代码就知道了。</p>
-<ul>
-<li>先引入socket模块</li>
-</ul>
-<img src="/2015/06/15/Python教程：[17]UDP客户端程序/9e7ce6dcd100baa195843e974510b912c8fc2e36.jpg" alt="Python教程：[17]UDP客户端程序" title="Python教程：[17]UDP客户端程序">
-<ul>
-<li>设置几个参数：host主机地址，Port端口，bufsiz缓存大小</li>
-</ul>
-<img src="/2015/06/15/Python教程：[17]UDP客户端程序/e1bf8725bc315c601b4e12c38fb1cb1348547787.jpg" alt="Python教程：[17]UDP客户端程序" title="Python教程：[17]UDP客户端程序">
-<ul>
-<li>创建一个udp套接字类型，如图所示，关键参数是第二个SOCK_DGRAM</li>
-</ul>
-<img src="/2015/06/15/Python教程：[17]UDP客户端程序/c28fddfdfc039245b71d98238594a4c27d1e2536.jpg" alt="Python教程：[17]UDP客户端程序" title="Python教程：[17]UDP客户端程序">
-<ul>
-<li>下面的代码用于向服务器发送数据，并接受服务器传来的数据</li>
-</ul>
-<img src="/2015/06/15/Python教程：[17]UDP客户端程序/9319cf09b3de9c82eabe80a36e81800a18d84387.jpg" alt="Python教程：[17]UDP客户端程序" title="Python教程：[17]UDP客户端程序">
-<ul>
-<li><p>下面是完整的代码。</p>
-</li>
-<li><p>from socket import *</p>
-</li>
-<li><p>host=’localhost’  #本地服务器地址</p>
-</li>
-<li><p>port=12345  #客户端端口(确保和服务器的端口一致</p>
-</li>
-<li><p>bufsiz=2048 #缓存大小</p>
-</li>
-<li><p>addc=(host, port) #地址+端口</p>
-</li>
-<li><p>udpclisock=socket(AF_INET,SOCK_DGRAM)  #创建UDP的套接字类型。</p>
-</li>
-<li><p>while True:</p>
-</li>
-<li><p>udpclisock.sendto(b’hello’, addc)</p>
-</li>
-<li><p>data,adds=udpclisock.recvfrom(bufsiz)</p>
-</li>
-<li><p>if not data:</p>
-</li>
-<li><p>break</p>
-</li>
-<li><p>print(data)</p>
-</li>
-<li><p>udpclisock.close()</p>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/06/15/pandas教程：[5]读取csv数据/">
-                pandas教程：[5]读取csv数据
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年06月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>很多数据是从网上下载而来，数据的格式可能是csv，那么pandas可以很容易的从csv格式的文件中读取数据，下面我们来看看具体的过程：</p>
-<ul>
-<li>引入pandas</li>
-</ul>
-<img src="/2015/06/15/pandas教程：[5]读取csv数据/7787b9efce1b9d161dd32272f0deb48f8c54644a.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
-<ul>
-<li>使用pandas下的read_csv方法，读取csv文件，参数是文件的路径，这是一个相对路径，是相对于当前工作目录的，那么如何知道当前的工作目录呢？</li>
-</ul>
-<img src="/2015/06/15/pandas教程：[5]读取csv数据/bd7faf3533fa828ba41825f0fe1f4134970a5aae.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
-<ul>
-<li>使用os.getcwd()方法获取当前工作目录</li>
-</ul>
-<img src="/2015/06/15/pandas教程：[5]读取csv数据/1cd4147b02087bf47fe5effaf1d3572c11dfcf5d.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
-<ul>
-<li>读取前三后数据，查看一下是否读取正确，显然都是乱码，这是什么问题呢？</li>
-</ul>
-<img src="/2015/06/15/pandas教程：[5]读取csv数据/95afee1f3a292df509d71406bf315c6034a8734a.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
-<ul>
-<li>我们需要设定参数encoding，也就是编码方式，如果你不设定编码方式，默认是utf8，现在csv文件是gbk编码的，所以需要使用encoding=’gbk’</li>
-</ul>
-<img src="/2015/06/15/pandas教程：[5]读取csv数据/2cb4fefe9925bc31b049b98b5ddf8db1cb13704a.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
-<ul>
-<li>我用的编辑器是eric4，注意，eric4默认是不支持中文的，如果你想要显示中文，前提是设置正确的编码，在preferences中</li>
-</ul>
-<img src="/2015/06/15/pandas教程：[5]读取csv数据/c87c6ecf3bc79f3debda5c23b9a1cd11728b29ae.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
-<ul>
-<li>设置成utf8即可</li>
-</ul>
-<img src="/2015/06/15/pandas教程：[5]读取csv数据/d041a4a1cd11728b5f163431cbfcc3cec3fd2cae.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
-<ul>
-<li>回到pandas，我们可以有更多选项来设置打开数据时的操作：</li>
-</ul>
-<img src="/2015/06/15/pandas教程：[5]读取csv数据/808a27dbb6fd5266fd228707a818972bd407365c.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -804,19 +793,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -944,7 +933,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

@@ -157,6 +157,161 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/02/11/pandas教程：[12]transformation标准化数据/">
+                pandas教程：[12]transformation标准化数据
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如有一列数据需要转换为以1为标准差以0为平均数的标准分数，如何用pandas实现？今天我们一边介绍数据的标准化，一边感受一下transformation的用法。要知道transformation不仅仅可以实现数据的标准化，它可以实现任何你能想到的数据转换。</p>
+<ul>
+<li>引入相关模块</li>
+</ul>
+<img src="/2015/02/11/pandas教程：[12]transformation标准化数据/8a95ad1c8701a18b1c5a7f599d2f07082838fe30.jpg" alt="pandas教程：[12]transformation标准化数据" title="pandas教程：[12]transformation标准化数据">
+<ul>
+<li>创建一个series对象<br>可以查看一下数据的前五行：</li>
+</ul>
+<img src="/2015/02/11/pandas教程：[12]transformation标准化数据/263e802f07082838bfbcb102bb99a9014c08f130.jpg" alt="pandas教程：[12]transformation标准化数据" title="pandas教程：[12]transformation标准化数据">
+<img src="/2015/02/11/pandas教程：[12]transformation标准化数据/72b19c025aafa40f33cda3cba864034f78f01959.jpg" alt="pandas教程：[12]transformation标准化数据" title="pandas教程：[12]transformation标准化数据">
+<ul>
+<li>我们使用两个lambda函数key和zscore，其中zscore是transform的参数，key是groupby的参数</li>
+</ul>
+<img src="/2015/02/11/pandas教程：[12]transformation标准化数据/4abae5edab64034f04c6af10acc379310a551d59.jpg" alt="pandas教程：[12]transformation标准化数据" title="pandas教程：[12]transformation标准化数据">
+<ul>
+<li>经过这样的转换，每个月的数据已经转换为标准分数（每月数据平均数为0标准差为1），查看一下得到的结果的数据类型，它还是一个series对象</li>
+</ul>
+<img src="/2015/02/11/pandas教程：[12]transformation标准化数据/0b907cd9f2d3572cbf53f1ca8913632762d0c330.jpg" alt="pandas教程：[12]transformation标准化数据" title="pandas教程：[12]transformation标准化数据">
+<ul>
+<li>验证一下结果是否正确，我们先按照月分组数据，然后再计算标准差和平均数</li>
+</ul>
+<img src="/2015/02/11/pandas教程：[12]transformation标准化数据/f392492c11dfa9ec3a9f3b0161d0f703918fc130.jpg" alt="pandas教程：[12]transformation标准化数据" title="pandas教程：[12]transformation标准化数据">
+<ul>
+<li>输出的结果很明显：已经完成了数据的转换。</li>
+</ul>
+<img src="/2015/02/11/pandas教程：[12]transformation标准化数据/0b14ad19ebc4b745c79fda00ccfc1e178a821559.jpg" alt="pandas教程：[12]transformation标准化数据" title="pandas教程：[12]transformation标准化数据">
+<ul>
+<li>欢迎有志于数据分析的人一起交流学习。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/02/05/SVN教程：[5]部署django到SAE全过程/">
+                SVN教程：[5]部署django到SAE全过程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年02月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>之前写过一篇在SAE上部署django的教程，现在返回来看犯了很多错误，所以在这里更正一篇，希望大家见谅，其实我也不是什么高手，难免有错误，下面看看在新浪sae上部署django的完整过程吧。</p>
+<ul>
+<li>先去新浪sae上登陆，找到你建立的应用，然后点击【创建一个版本】，如果你没有创建过版本，可能只有一个版本</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/1899a23eb13533fa86fe2d63aad3fd1f40345bf7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>输入版本号，这个数字是任意的，我就按照版本3来做</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/a992e31f4134970a3a3bae6297cad1c8a6865df7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>回到Deltatest文件夹，如果你看过前面的文章就知道这个文件夹是什么，如果你没有跟着做，你看一下这篇文章就知道：<a href="http://jingyan.baidu.com/article/6525d4b135bb1dac7d2e94ad.html看完这篇文章，右键单击这个文件夹，然后选择【svn更新】" target="_blank" rel="external">http://jingyan.baidu.com/article/6525d4b135bb1dac7d2e94ad.html看完这篇文章，右键单击这个文件夹，然后选择【svn更新】</a></li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/a6c7d7177f3e6709db48fbb239c79f3df9dc55f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>更新完毕以后，你会看到这里多了一个文件夹3，这个文件夹就跟sae上的版本3相同了。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/718e25c79f3df8dcc67531dccf11728b461028f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>点击进入文件夹3，可以看到有这两个文件。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/c87c6ecf3bc79f3dee1f5a7db8a1cd11738b2945.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>打开cmd命令窗口，我们先进入文件夹3，如图所示的命令：</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/9e7ce6dcd100baa1d4d2f9f64510b912c9fc2e45.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>接着，我们在该文件夹下面创建一个新工程，比如工程名称叫做Deltatest</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/cc506c8b4710b912d53f48b3c1fdfc0393452245.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>回到文件夹3，这里就会多了一个文件夹deltatest，双击进入deltatest文件夹</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/9304c888d43f87948101f663d01b0ef41ad53a45.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>这里面还有一个Deltatest文件夹<br>这是deltatest文件夹内的文件</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/a583631ed21b0ef432a02613dfc451da80cb3ef7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/1a94b36eddc451daacbeb2a6b4fd5266d11632f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>我们将这两个文件剪切</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/aa59892bd40735fad1b8f0f49c510fb30e2408f7.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>复制到这里，也就是文件夹3下面</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/1f569482b9014a90afc0f8f0ab773912b21bee46.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>好了后面就简单了，我们要配置一下两个文件，第一个是index.wsgi文件，里面写这些内容：</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/6391e903918fa0ec88c3de40249759ee3d6ddb3c.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>第二个文件是config.yawm</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/9f6e190828381f30826237e4ab014c086f06f0c1.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>最后，提交一下</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/f7426d8da9773912ea023f2cfa198618367ae21c.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>注意点选【全部】，不然漏掉某些文件，你就失败了。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/79b1e936afc3793140603c64e9c4b74543a91137.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<ul>
+<li>在浏览器输入你的app的网址，看看能不能出现django的欢迎界面吧！！有问题可以在下面留言奥。</li>
+</ul>
+<img src="/2015/02/05/SVN教程：[5]部署django到SAE全过程/dbf554ed2e738bd4d5690c7ca38b87d6267ff9f0.jpg" alt="SVN教程：[5]部署django到SAE全过程" title="SVN教程：[5]部署django到SAE全过程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/02/05/Python教程：[70]enumerate遍历列表/">
                 Python教程：[70]enumerate遍历列表
             </a>
@@ -655,122 +810,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/01/19/pandas教程：[15]移动复制删除列/">
-                pandas教程：[15]移动复制删除列
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年01月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>pandas的DataFrame非常灵活，我们可以快速的移动、复制、删除列，今天就用案例来说明一下具体的工作是如何完成的。</p>
-<ul>
-<li>首先我们创建一个dataframe<br>打印一下：</li>
-</ul>
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/b74124f33a87e95019c1d76f13385343faf2b49b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/62667cd0f703918f5bcc1ac9523d269759eec451.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<ul>
-<li>增加列，我们可以把df当作一个object，给它增加一个属性c，如下：<br>这是增加c列以后的数据：</li>
-</ul>
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/0d729944ebf81a4c482ecbcad42a6059252da651.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/4a77b2af2edda3cc3a329c2302e93901203f929b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<ul>
-<li>我们还可以插入一列数据到任意位置：比如插入到第二列<br>插入后的数据：</li>
-</ul>
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/61183b2dd42a283414ba110858b5c9ea15cebf51.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/148f28d3d539b60012d228b4ea50352ac65cb751.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<ul>
-<li>永久删除一列数据用del，虽然我们不建议你这么武断的删除c列：<br>删除后的数据：</li>
-</ul>
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/3790312eb9389b501d29c4518635e5dde6116e9b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/cbc17b380cd79123a0fcb377ae345982b2b78051.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<ul>
-<li>更明智的方法是使用drop，它不改变原有的df中的数据，而是返回另一个dataframe来存放删除后的数据<br>这是df2中的数据：</li>
-</ul>
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/d4239b35e5dde711c70467f5a4efce1b9c16619b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/91ae68c6a7efce1bc6fdecc9ac51f3deb58f659b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<ul>
-<li>移动列也很简单，假如我们想要将c列移动到第一列，我们可以使用pop来输出并删除b列，然后再将b列插入到第一列，这样就完成了移动<br>移动后的结果为：</li>
-</ul>
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/d4239b35e5dde711c6ce64f5a4efce1b9d166151.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<img src="/2015/01/19/pandas教程：[15]移动复制删除列/ae10eddeb48f8c54f505e12c39292df5e1fe7f9b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/01/17/Python教程：[64]判断文件 文件夹/">
-                Python教程：[64]判断文件 文件夹
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年01月17日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>如何判断某个路径是不是存在、是不是文件夹、是不是文件？我们今天就来介绍一下判断文件、文件夹，同样也是用到了os.path模块，下面看看具体的例子：</p>
-<ul>
-<li>装载一下os模块，然后我们写一个路径，这个路径是真是存在的</li>
-</ul>
-<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/5f9e93b1cb134954fcd956e4544e9258d0094a28.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
-<ul>
-<li>判断一下这个目录是不是文件夹，用isdir</li>
-</ul>
-<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/c87c6ecf3bc79f3dede45db0b8a1cd11738b29ed.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
-<ul>
-<li>判断该路径是不是指向一个文件，用isfile</li>
-</ul>
-<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/9e7ce6dcd100baa1d529fe3b4510b912c9fc2eed.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
-<ul>
-<li>判断一下该路径是不是绝对路径：用isabs</li>
-</ul>
-<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/b29f8282d158ccbf927b0bba1bd8bc3eb0354128.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
-<ul>
-<li>判断一下，该路径是否存在：用exists</li>
-</ul>
-<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/cdfe7281800a19d8bdc53a8531fa828ba71e4628.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
-<ul>
-<li>总结一下，os.path模块下的五个判断函数：</li>
-</ul>
-<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/d7c9ca3f8794a4c258265eab0cf41bd5ac6e39ed.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -813,19 +852,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -953,7 +992,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

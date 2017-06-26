@@ -157,6 +157,407 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/10/11/numpy函数：[18]all()和any()比较矩阵/">
+                numpy函数：[18]all()和any()比较矩阵
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>假如我们想要知道矩阵a和矩阵b中所有对应元素是否相等，我们需要使用all方法，假如我们想要知道矩阵a和矩阵b中对应元素是否有一个相等，我们需要使用any方法。下面看几个例子：</p>
+<ul>
+<li>先引入numpy模块</li>
+</ul>
+<img src="/2015/10/11/numpy函数：[18]all()和any()比较矩阵/8640bf8b87d6277fe7f17acf2a381f30e824fc23.jpg" alt="numpy函数：[18]all()和any()比较矩阵" title="numpy函数：[18]all()和any()比较矩阵">
+<ul>
+<li>创建两个数组，当然，在这里，我通常把数组教程矩阵或者向量，这无关紧要</li>
+</ul>
+<img src="/2015/10/11/numpy函数：[18]all()和any()比较矩阵/9dc3cf58ccbf6c818daf641fbe3eb13532fa4069.jpg" alt="numpy函数：[18]all()和any()比较矩阵" title="numpy函数：[18]all()和any()比较矩阵">
+<ul>
+<li>检测一下是否a和b中所有对应元素均相等，如果均相等，返回true，只要有一个不相等，返回false</li>
+</ul>
+<img src="/2015/10/11/numpy函数：[18]all()和any()比较矩阵/b0742dfa828ba61ebc7680d84334970a314e5969.jpg" alt="numpy函数：[18]all()和any()比较矩阵" title="numpy函数：[18]all()和any()比较矩阵">
+<ul>
+<li>创建一个数组c</li>
+</ul>
+<img src="/2015/10/11/numpy函数：[18]all()和any()比较矩阵/0b3a1c087bf40ad1e5078f14552c11dfa8ecce23.jpg" alt="numpy函数：[18]all()和any()比较矩阵" title="numpy函数：[18]all()和any()比较矩阵">
+<ul>
+<li>检测一下是否a和c中所有对应元素均相等，如果均相等，返回true，只要有一个不相等，返回false</li>
+</ul>
+<img src="/2015/10/11/numpy函数：[18]all()和any()比较矩阵/245e8bcad1c8a786d4b202f96509c93d71cf5069.jpg" alt="numpy函数：[18]all()和any()比较矩阵" title="numpy函数：[18]all()和any()比较矩阵">
+<ul>
+<li>但是any相反，只要有一个元素相等就可以返回true</li>
+</ul>
+<img src="/2015/10/11/numpy函数：[18]all()和any()比较矩阵/62667cd0f703918f3132753d533d269758eec423.jpg" alt="numpy函数：[18]all()和any()比较矩阵" title="numpy函数：[18]all()和any()比较矩阵">
+<ul>
+<li>再尝试一次：</li>
+</ul>
+<img src="/2015/10/11/numpy函数：[18]all()和any()比较矩阵/7e7f7909c93d70cf1962e2fafadcd100bba12b69.jpg" alt="numpy函数：[18]all()和any()比较矩阵" title="numpy函数：[18]all()和any()比较矩阵">
+<img src="/2015/10/11/numpy函数：[18]all()和any()比较矩阵/cc506c8b4710b912e359be09c1fdfc0393452269.jpg" alt="numpy函数：[18]all()和any()比较矩阵" title="numpy函数：[18]all()和any()比较矩阵">
+<ul>
+<li><p>本篇教程用到的所有代码都呈现在下方：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>import numpy</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a=numpy.array([1,2,3])</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b=a.copy</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([1, 2, 3])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><built-in method="" copy="" of="" numpy.ndarray="" object="" at="" 0x0000000002ea41d0="">
+</built-in></li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b=a.copy()</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([1, 2, 3])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>(a==b).all()</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>True</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>c=b.copy()</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>c[0]=0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>c</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([0, 2, 3])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([1, 2, 3])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>(a==c).all()</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>False</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>(a==c).any()</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>True</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>c[1]=0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>c</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([0, 0, 3])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>a</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([1, 2, 3])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>(c==a).any()</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>True</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/10/11/pandas教程：[10]groupby选择列和迭代/">
+                pandas教程：[10]groupby选择列和迭代
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>groupby对象可以按照列选择数据，这种做法可以减少运算量，提高运算速度。而这里讲的迭代就是对各个组进行迭代以便对各个组进行不同的操作，因为进行相同的操作不必使用迭代。</p>
+<ul>
+<li>引入相关模块</li>
+</ul>
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/263e802f070828381bc51d01bb99a9014d08f198.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<ul>
+<li>创建一个DataFrame对象，有两个index和两个column</li>
+</ul>
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/064936381f30e924be6c5d244f086e061c95f798.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<ul>
+<li>打印一下，看看DataFrame到底有哪些内容</li>
+</ul>
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/29790130e924b899aef4b82d6d061d950b7bf698.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<ul>
+<li>以color index进行分类，然后选择a列数据，分组计算a列数据的总数<br>计算结果为：</li>
+</ul>
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/a84052086e061d95018ef62d78f40ad163d9ca98.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/7ab514d162d9f2d346d9e5faaaec8a136227cc98.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<ul>
+<li>假如我们不选择a列，直接计算总数，可以得到。如果我们不需要b列的数据，那么显然事先选择a列进行计算可以减少无效的运算</li>
+</ul>
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/90cebeec08fa513d3db7accb3e6d55fbb2fbd943.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/f392492c11dfa9ec9ee6970261d0f703908fc198.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<ul>
+<li>迭代输出各个组的数据：<br>输出结果：</li>
+</ul>
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/62667cd0f703918fb919fcdf523d269758eec498.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/54baacfb43166d226d6ad581452309f79052d243.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<ul>
+<li>假如分类索引有两个，分别是color和food<br>这时候迭代的结果显示，名称变为一个元组：</li>
+</ul>
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/27d647ee3d6d55fbaddbb6336e224f4a20a4dd43.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<img src="/2015/10/11/pandas教程：[10]groupby选择列和迭代/3c2c4bfbb2fb43164fd7bb6f23a4462308f7d398.jpg" alt="pandas教程：[10]groupby选择列和迭代" title="pandas教程：[10]groupby选择列和迭代">
+<ul>
+<li>致力于数据分析的同行，欢迎与我联系交流</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/10/05/Python教程：[24]connect MySQL 10060错误/">
                 Python教程：[24]connect MySQL 10060错误
             </a>
@@ -1038,166 +1439,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/01/DataNitro：[2]调用Python的方法/">
-                DataNitro：[2]调用Python的方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>作为入门的第二篇文章，我们还是要讲一些基础的东西，这篇文章我们介绍一下如何在datanitro下使用Python来操作excel。</p>
-<ul>
-<li>第一种方式，我们可以在Python shell里面运行Python代码，点击它打开</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/5327ce160924ab1887e97a6636fae6cd7a890ba0.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>一开始我们会看到这个界面，出现了欢迎信息，说明你的datanitro Python shell是可以工作的。</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/b3f6cea20cf431ad6860d8684836acaf2fdd98f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>输入一个简单的命令：Cell(1,1).value=’hello world’（注意大小写）；按回车就可以执行</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/adee30dda3cc7cd9279faf883a01213fb90e91f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>这段代码的效果就是单元格A1赋值为hello world</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/d002b34bd11373f09dc0f4cea70f4bfbfaed04a0.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>我们可以使用Python中已经安装的包：</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/7aad4ae736d12f2e0ab735314cc2d562843568f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>我们可以先建立一个Python的脚本文件**.py，然后引入该文件：点击import</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/e49cf91190ef76c61b60607a9e16fdfaae5167f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>找到该Python文件并打开</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/42e89c26cffc1e17b84017604990f603728de9a1.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>你会看到这个文件已经被引入，点击editor就可以编辑该文件</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/8bc3a7014a90f603454f07163a12b31bb151eda1.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>编辑器也是够难看的！但是我们可以先输入以下代码试试：注意#号表示注释，没有任何作用，实质上只有一句话有用：Cell(1,3).value=u’中文’</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/8cf0d513495409230fdbf82f9158d109b2de49f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>然后回到excel，点击run，就可以执行命令</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/570f8c58d109b3de4b0d7f39cfbf6c81810a4cf6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>用过excel函数的都知道它有多么强大，现在我们有机会写自己的函数了，我们需要先建立一个名字为functions.py的文件</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/d048adde9c82d1581530c2e0830a19d8bd3e42f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>在里面写入一个function并保存</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/a84052086e061d955bb9ac6978f40ad163d9caa1.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>记得检查在设置里面是否有允许使用Python自定义函数，如果你没有选，你需要选上他，然后重启excel</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/4075890a304e251f7d457fa9a486c9177e3e53f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<ul>
-<li>现在在单元格里使用一下该函数，你可以看到效果：</li>
-</ul>
-<img src="/2015/10/01/DataNitro：[2]调用Python的方法/964b2e4e251f95ca384709e7ca177f3e660952f6.jpg" alt="DataNitro：[2]调用Python的方法" title="DataNitro：[2]调用Python的方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/01/excel2007如何设置访问权限/">
-                excel2007如何设置访问权限
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>设置访问权限就是允许有限的几个用户进行查看和修改excel，我们通过填写用户的ID即可 允许他们查看工作表，而他们的ID也就是在微软免费注册的账号，相信很多人都有这个账号的，如果没有，安装office的时候会提示你申请账号的。<br>方法/步骤</p>
-<ul>
-<li>新建一个excel工作簿：右键单击空白位置，然后选择新建–excel</li>
-</ul>
-<img src="/2015/10/01/excel2007如何设置访问权限/0df431adcbef7609123bb7012edda3cc7cd99e7f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
-<ul>
-<li>打开excel，在工具栏上执行：审阅—保护工作簿</li>
-</ul>
-<img src="/2015/10/01/excel2007如何设置访问权限/adaf2edda3cc7cd9d31d1a473901213fb80e917f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
-<ul>
-<li>打开一个下拉列表，在这个列表里选择【限制访问】</li>
-</ul>
-<img src="/2015/10/01/excel2007如何设置访问权限/203fb80e7bec54e753dc3480b9389b504fc26a7f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
-<ul>
-<li>弹出权限对话框，在这个对话框里，我们勾选【限制对此工作簿的权限】，然后你就能对下面的内容进行更改。</li>
-</ul>
-<img src="/2015/10/01/excel2007如何设置访问权限/7aec54e736d12f2ede3580fe4fc2d5628535687f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
-<ul>
-<li>在这里输入允许查看和更改该工作簿的用户的ID，有人问这个ID是什么，这是在微软里注册的账号，如果你没有微软的账号是不允许设置权限的，你根本看不到该页面。它会提示你注册账号。</li>
-</ul>
-<img src="/2015/10/01/excel2007如何设置访问权限/8435e5dde71190ef19cbbc41ce1b9d16fdfa607f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
-<ul>
-<li>点击【其他选项】进行更高级的设置</li>
-</ul>
-<img src="/2015/10/01/excel2007如何设置访问权限/cb8065380cd79123d8c2baeaad345982b2b78009.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
-<ul>
-<li>打开高级设置对话框，这里可以设置文件的有效期，过了有效期加密文件就会失效。点击下拉列表可以选择到期时间。</li>
-</ul>
-<img src="/2015/10/01/excel2007如何设置访问权限/a044ad345982b2b784bd175a31adcbef76099b09.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
-<ul>
-<li>下面三个选项是用户可选的三个具体权限，你想要允许他人进行哪些操作：打印，复制，还是编程</li>
-</ul>
-<img src="/2015/10/01/excel2007如何设置访问权限/f11f3a292df5e0fee428a79f5c6034a85edf727f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
-<ul>
-<li>最后填写一下索取权限的邮件地址，也就是你的邮件的地址，当用户想要更改自己的权限的时候，就可以给你发送邮件。</li>
-</ul>
-<img src="/2015/10/01/excel2007如何设置访问权限/5d6034a85edf8db1481e52fa0923dd54564e747f.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
-<ul>
-<li><p>设置完成后，保存文档即可。</p>
-</li>
-<li></li>
-</ul>
-<img src="/2015/10/01/excel2007如何设置访问权限/7dd98d1001e939014020a3a07bec54e736d19609.jpg" alt="excel2007如何设置访问权限" title="excel2007如何设置访问权限">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1240,19 +1481,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -1380,7 +1621,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

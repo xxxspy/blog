@@ -157,6 +157,122 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/01/19/pandas教程：[15]移动复制删除列/">
+                pandas教程：[15]移动复制删除列
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>pandas的DataFrame非常灵活，我们可以快速的移动、复制、删除列，今天就用案例来说明一下具体的工作是如何完成的。</p>
+<ul>
+<li>首先我们创建一个dataframe<br>打印一下：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/b74124f33a87e95019c1d76f13385343faf2b49b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/62667cd0f703918f5bcc1ac9523d269759eec451.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<ul>
+<li>增加列，我们可以把df当作一个object，给它增加一个属性c，如下：<br>这是增加c列以后的数据：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/0d729944ebf81a4c482ecbcad42a6059252da651.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/4a77b2af2edda3cc3a329c2302e93901203f929b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<ul>
+<li>我们还可以插入一列数据到任意位置：比如插入到第二列<br>插入后的数据：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/61183b2dd42a283414ba110858b5c9ea15cebf51.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/148f28d3d539b60012d228b4ea50352ac65cb751.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<ul>
+<li>永久删除一列数据用del，虽然我们不建议你这么武断的删除c列：<br>删除后的数据：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/3790312eb9389b501d29c4518635e5dde6116e9b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/cbc17b380cd79123a0fcb377ae345982b2b78051.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<ul>
+<li>更明智的方法是使用drop，它不改变原有的df中的数据，而是返回另一个dataframe来存放删除后的数据<br>这是df2中的数据：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/d4239b35e5dde711c70467f5a4efce1b9c16619b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/91ae68c6a7efce1bc6fdecc9ac51f3deb58f659b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<ul>
+<li>移动列也很简单，假如我们想要将c列移动到第一列，我们可以使用pop来输出并删除b列，然后再将b列插入到第一列，这样就完成了移动<br>移动后的结果为：</li>
+</ul>
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/d4239b35e5dde711c6ce64f5a4efce1b9d166151.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<img src="/2015/01/19/pandas教程：[15]移动复制删除列/ae10eddeb48f8c54f505e12c39292df5e1fe7f9b.jpg" alt="pandas教程：[15]移动复制删除列" title="pandas教程：[15]移动复制删除列">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/01/17/Python教程：[64]判断文件 文件夹/">
+                Python教程：[64]判断文件 文件夹
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年01月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如何判断某个路径是不是存在、是不是文件夹、是不是文件？我们今天就来介绍一下判断文件、文件夹，同样也是用到了os.path模块，下面看看具体的例子：</p>
+<ul>
+<li>装载一下os模块，然后我们写一个路径，这个路径是真是存在的</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/5f9e93b1cb134954fcd956e4544e9258d0094a28.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<ul>
+<li>判断一下这个目录是不是文件夹，用isdir</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/c87c6ecf3bc79f3dede45db0b8a1cd11738b29ed.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<ul>
+<li>判断该路径是不是指向一个文件，用isfile</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/9e7ce6dcd100baa1d529fe3b4510b912c9fc2eed.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<ul>
+<li>判断一下该路径是不是绝对路径：用isabs</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/b29f8282d158ccbf927b0bba1bd8bc3eb0354128.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<ul>
+<li>判断一下，该路径是否存在：用exists</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/cdfe7281800a19d8bdc53a8531fa828ba71e4628.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<ul>
+<li>总结一下，os.path模块下的五个判断函数：</li>
+</ul>
+<img src="/2015/01/17/Python教程：[64]判断文件%20文件夹/d7c9ca3f8794a4c258265eab0cf41bd5ac6e39ed.jpg" alt="Python教程：[64]判断文件 文件夹" title="Python教程：[64]判断文件 文件夹">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/01/15/spss简单因素分析的操作和结果分析方法/">
                 spss简单因素分析的操作和结果分析方法
             </a>
@@ -814,107 +930,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/01/03/Django教程：[8]第一个动态页面/">
-                Django教程：[8]第一个动态页面
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年01月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天我们写一个动态页面，让我们理解一下动态页面的原理。其实前面我们写过一篇文章介绍如何构建第一个静态页面，你可以搜索【Django教程：[4]制作第一个网页】，今天的这一篇文章与上一篇仅有一点不同，今天是动态的页面，你每次访问这个页面都是不同的。</p>
-<ul>
-<li>我们先在view文件中创建一个函数来返回页面，关于view文件，你应该参考下面的参考资料。我们先引入了datetime模块来计算当前的时间，然后增加一个函数ctime，此函数可以计算当前时间，保存在cutime变量中，然后通过HttpResponse返回到页面</li>
-</ul>
-<img src="/2015/01/03/Django教程：[8]第一个动态页面/ae10eddeb48f8c547927765538292df5e1fe7f91.jpg" alt="Django教程：[8]第一个动态页面" title="Django教程：[8]第一个动态页面">
-<ul>
-<li>接下来设置函数ctime与url的映射。先要引入ctime函数，看下面第一个红色方框；然后再建立函数与url模式的映射关系，看下面第二个红色方框</li>
-</ul>
-<img src="/2015/01/03/Django教程：[8]第一个动态页面/91ae68c6a7efce1b7afc7bb0ad51f3deb58f65b2.jpg" alt="Django教程：[8]第一个动态页面" title="Django教程：[8]第一个动态页面">
-<ul>
-<li>我们在浏览器中输入url既可以看到在相应的url下，打开一个页面，显示当前的日期。</li>
-</ul>
-<img src="/2015/01/03/Django教程：[8]第一个动态页面/3b6833f5e0fe99254ff8da2a36a85edf8cb17191.jpg" alt="Django教程：[8]第一个动态页面" title="Django教程：[8]第一个动态页面">
-<ul>
-<li>刷新页面，你可以看到不同的时间，这就是动态页面。与动态页面相对，还有动态url，我们下一篇文章介绍如何设置动态的url。</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/">
-                spss两因素（有一个连续变量）如何进行方差分析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年01月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>假如两因素的设计，其中一个变量是连续型变量，那么通常的方差分析就没有办法了，必须使用协方差分析，下面是具体的方法。<br>工具/原料</p>
-<ul>
-<li>spss20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>确保数据满足平行性假设的前提下，我们用协方差分析进行检验， 在菜单栏上执行：analyse–GLM–univariate</li>
-</ul>
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/562c11dfa9ec8a13f2aafb23f703918fa1ecc045.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
-<ul>
-<li>将变量放入各自的框中，从上到下依次是：因变量、固定因素、斜变量（连续变量）</li>
-</ul>
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/0df431adcbef76099086355c2edda3cc7dd99e60.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
-<ul>
-<li>点击model按钮，进入model对话框，在custom模式下，设置type为main effect，将两个变量放入模型</li>
-</ul>
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/c2fdfc039245d688e1d61e67a4c27d1ed31b2418.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
-<ul>
-<li>点击options按钮，设置输出的参数，下面第二幅图是设置的参数，如图所示</li>
-</ul>
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/bd315c6034a85edf8ee151e049540923dc547587.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/37d3d539b6003af3f8d573a3352ac65c1138b682.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
-<ul>
-<li>点击ok开始处理数据，并输出结果</li>
-</ul>
-<img src="/2015/01/01/spss两因素（有一个连续变量）如何进行方差分析/50da81cb39dbb6fd109849e50924ab18962b3735.jpg" alt="spss两因素（有一个连续变量）如何进行方差分析" title="spss两因素（有一个连续变量）如何进行方差分析">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -957,19 +972,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -1097,7 +1112,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

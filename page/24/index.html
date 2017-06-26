@@ -157,6 +157,141 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/09/17/spss如何分组进行运算并生成新的变量/">
+                spss如何分组进行运算并生成新的变量
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p> spss中如果要给原始的分数加上相应的分数需要使用compute，我们看一个例子，下面是不同的班级的不同的分数，因为某些原因，我们要给1班的学生的分数加上三分，给二班的学生分数加上两分，这该怎么做呢？下面是具体的方法。<br>方法/步骤</p>
+<ul>
+<li>拿到数据以后，我们在菜单栏上执行：transform–compute variables</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/09fa513d269759ee4a1de947b2fb43166c22dfe9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>打开一个对话框，我们在目标变量中输入新的变量的名称，我们这里输入新成绩</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/c75c10385343fbf215422fafb07eca8064388fd4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>接着，因为不同的班级要加上不同的分数，所以我们需要添加条件，点击左下角的if按钮</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/a044ad345982b2b763f1b04831adcbef77099bd4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>在这里，选择班级这个变量，添加到右侧的条件框中，记得要先勾选【include if case satisfies condition】。然后输入=1，也就是班级=1.最后点击continue按钮</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/7acb0a46f21fbe09e2134a986b600c338644ade9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>回到数据转换对话框，将成绩这个变量添加到右侧的公式中，输入+3，这样我们基本完成了一个任务，就是当班级为1的时候，成绩加上1就形成了新成绩。但是，当班级为2的时候怎么办呢？</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/adaf2edda3cc7cd93043bd553901213fb90e91d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/d8f9d72a6059252d415a9488349b033b5ab5b9e9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>我们点击paste按钮，打开syntax窗口</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/e4dde71190ef76c668bc72a79d16fdfaae5167d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>这是我们看到的代码，模仿第二行的代码，我们写当班级为2的时候，新成绩等于成绩加上2.</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/2cf5e0fe9925bc31823388145edf8db1ca1370d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>这是我们写好的代码。</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/b90e7bec54e736d1ea5e05849b504fc2d46269e9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li>在菜单栏上执行：run–all，运行命令</li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/ca1349540923dd54b01d2ee4d109b3de9d8248d4.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<ul>
+<li><p>这是最后的结果，你看到了，这里生成了新的变量。</p>
+</li>
+<li></li>
+<li></li>
+</ul>
+<img src="/2015/09/17/spss如何分组进行运算并生成新的变量/8c1001e93901213f797ec75054e736d12e2e95e9.jpg" alt="spss如何分组进行运算并生成新的变量" title="spss如何分组进行运算并生成新的变量">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/09/15/spss如何做主成分分析/">
+                spss如何做主成分分析
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年09月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>主成分分析的主要原理是寻找一个适当的线性变换：<br>工具/原料</p>
+<p>方法/步骤</p>
+<ul>
+<li><p>先在spss中准备好要处理的数据，然后在菜单栏上执行：analyse–dimension reduction–factor analyse。打开因素分析对话框</p>
+</li>
+<li><p>我们看到下图就是因素分析的对话框，将要分析的变量都放入variables窗口中</p>
+</li>
+<li><p>点击descriptives按钮，进入次级对话框，这个对话框可以输出我们想要看到的描述统计量</p>
+</li>
+</ul>
+<img src="/2015/09/15/spss如何做主成分分析/a8ec8a13632762d0be7c726fa0ec08fa503dc6a4.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<ul>
+<li>因为做主成分分析需要我们看一下各个变量之间的相关，对变量间的关系有一个了解，所以需要输出相关，勾选coefficience，点击continue，返回主对话框</li>
+</ul>
+<img src="/2015/09/15/spss如何做主成分分析/95eef01f3a292df554247ac5bc315c6035a8737f.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<ul>
+<li>回到主对话框，点击ok，开始输出数据处理结果</li>
+</ul>
+<img src="/2015/09/15/spss如何做主成分分析/060828381f30e9248e904ce14c086e061d95f72e.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<ul>
+<li>你看到的这第一个表格就是相关矩阵，现实的是各个变量之间的相关系数，通过相关系数，你可以看到各个变量之间的相关，进而了解各个变量之间的关系</li>
+</ul>
+<img src="/2015/09/15/spss如何做主成分分析/a9d3fd1f4134970ae03ac0ff95cad1c8a6865d91.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<ul>
+<li>第二个表格显示的主成分分析的过程，我们看到eigenvalues下面的total栏，他的意思就是特征根，他的意义是主成分影响力度的指标，一般以1为标准，如果特征根小于1，说明这个主因素的影响力度还不如一个基本的变量。所以我们只提取特征根大于1的主成分。如图所示，前三个主成分就是大于1的，所以我们只能说有三个主成分。另外，我们看到第一个主成分方差占所有主成分方差的46.9%，第二个占27.5%，第三个占15.0%。这三个累计达到了89.5%。</li>
+</ul>
+<img src="/2015/09/15/spss如何做主成分分析/caef76094b36acafbf1d462c7cd98d1000e99c65.jpg" alt="spss如何做主成分分析" title="spss如何做主成分分析">
+<ul>
+<li>。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/09/15/spss逻辑回归中哑变量的设置和分析方法/">
                 spss逻辑回归中哑变量的设置和分析方法
             </a>
@@ -621,123 +756,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/">
-                spss20.0配对样本如何进行平均数差异检验
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>用这个方法之前先要确定你的数据是否适用于配对样本t检验，一般这样的数据来自同一个人，但是是分两次测量得到的，或者虽然是来自两个人，但是他们是经过匹配的，可以认为两个人在研究的变量上没有差异。<br>方法/步骤</p>
-<ul>
-<li>打开spss导入数据，然后在菜单栏上执行：analyse–compare means–paired samples t test</li>
-</ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/29381f30e924b8996cf21bbd6e061d950b7bf66d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<ul>
-<li>你会看到如下所示的对话框，这里我们要看好了怎么对变量进行配对，先从左侧的列表里选择一个变量，比如选择triglyceride这个变量，点击如图所示的箭头，添加到右侧的列表</li>
-</ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/6f061d950a7b0208b0075d6462d9f2d3562cc86d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<ul>
-<li>接下来找到与上面的那个变量相配对的另一个变量final triglyceride，添加到variable2</li>
-</ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/060828381f30e9247c62feb44c086e061c95f775.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<ul>
-<li>同样的方法，把体重这个配对变量放到配对变量列表</li>
-</ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/63d0f703918fa0ecd0090688269759ee3c6ddb6d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<ul>
-<li>点击ok按钮，开始进行数据处理</li>
-</ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/03087bf40ad162d93c28009911dfa9ec8b13cd75.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<ul>
-<li>你会看到下面的这个统计结果，先来分析第一个表格，关键的数据是均值，你会看到triglyceride这个变量前后的值的变化，从138到124大概下降了14，这是大概的一个数字，并不能说明这个差值是有效的</li>
-</ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/279759ee3d6d55fb6c0814a36d224f4a21a4dd6d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<ul>
-<li>第二个表格展示的是配对样本之间的相关系数，我们可以看到体重的相关系数为0.996，而且sig值达到了0.000，这是一个非常完美的数据，这说明实验处理对体重的影响是一致的。但是上面的这对变量却没有显示出相关关系。</li>
-</ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/a8ec8a13632762d022f8c63aa0ec08fa503dc675.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<ul>
-<li><p>最后我们要看第三个表格，先看均值的差异表明实验前后数据发生了变化，而后面的sig值则说明这个变化是否有效，因为第一个sig值超过了0.05，所以结果是不显著的，不能认为实验是有效的。而第二个sig为0.000，这说明实验的处理效果显著，可以认为该处理方法能够有效的减轻体重</p>
-</li>
-<li></li>
-</ul>
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/908fa0ec08fa513dfc6c0e5b3d6d55fbb3fbd975.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<img src="/2015/09/03/spss20.0配对样本如何进行平均数差异检验/21a4462309f790527ed125bb0cf3d7ca7acbd56d.jpg" alt="spss20.0配对样本如何进行平均数差异检验" title="spss20.0配对样本如何进行平均数差异检验">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/09/01/Python教程：[60]操作txt文件方法总结/">
-                Python教程：[60]操作txt文件方法总结
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年09月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>通过前几篇文章，我们基本上已经了解了如何操作txt文件：创建txt、读取txt、写入txt。今天对前几篇文章做个总结，大家也复习一下：</p>
-<ul>
-<li>创建txt文件，我们用open的w模式，文件不存在，就会自动创建。【详见文章：<a href="http://jingyan.baidu.com/article/cbf0e500f77d542eab289343.html】" target="_blank" rel="external">http://jingyan.baidu.com/article/cbf0e500f77d542eab289343.html】</a></li>
-</ul>
-<img src="/2015/09/01/Python教程：[60]操作txt文件方法总结/bf487563f6246b60a4fb07f4e9f81a4c500fa27e.jpg" alt="Python教程：[60]操作txt文件方法总结" title="Python教程：[60]操作txt文件方法总结">
-<ul>
-<li>写入txt文件，我们使用open的w模式和a模式：【详见文章：<a href="http://jingyan.baidu.com/article/1e5468f92aae08484861b743.html】" target="_blank" rel="external">http://jingyan.baidu.com/article/1e5468f92aae08484861b743.html】</a></li>
-</ul>
-<img src="/2015/09/01/Python教程：[60]操作txt文件方法总结/2e6fa7389b504fc230c90585e7dde71191ef6d59.jpg" alt="Python教程：[60]操作txt文件方法总结" title="Python教程：[60]操作txt文件方法总结">
-<ul>
-<li>写入并关闭，我们换一种简便的写法：【详见文章：<a href="http://jingyan.baidu.com/article/7908e85c73e55aaf491ad243.html】" target="_blank" rel="external">http://jingyan.baidu.com/article/7908e85c73e55aaf491ad243.html】</a></li>
-</ul>
-<img src="/2015/09/01/Python教程：[60]操作txt文件方法总结/9dc3cf58ccbf6c8189169868be3eb13532fa40c9.jpg" alt="Python教程：[60]操作txt文件方法总结" title="Python教程：[60]操作txt文件方法总结">
-<ul>
-<li>读取txt文件，我们使用open的r模式：【详见文章：<a href="http://jingyan.baidu.com/article/fc07f98918ee6012fee51943.html】" target="_blank" rel="external">http://jingyan.baidu.com/article/fc07f98918ee6012fee51943.html】</a></li>
-</ul>
-<img src="/2015/09/01/Python教程：[60]操作txt文件方法总结/3790312eb9389b50ace154d28735e5dde6116ed1.jpg" alt="Python教程：[60]操作txt文件方法总结" title="Python教程：[60]操作txt文件方法总结">
-<ul>
-<li>除了以上提到的几种open模式外，我们还有以下几种：</li>
-</ul>
-<img src="/2015/09/01/Python教程：[60]操作txt文件方法总结/0fb505d5ad6eddc467f5007b3bdbb6fd536633e4.jpg" alt="Python教程：[60]操作txt文件方法总结" title="Python教程：[60]操作txt文件方法总结">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -780,19 +798,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -920,7 +938,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

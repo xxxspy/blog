@@ -157,6 +157,144 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/05/11/spss如何筛选部分case/">
+                spss如何筛选部分case
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>有时候我们需要对部分数据进行处理，这时候需要对满足条件的数据进行筛选，选择出符合要求的数据，select cases命令就是用来处理这种问题的。<br>方法/步骤</p>
+<ul>
+<li>打开spss ，执行file –open–data，打开数据文件</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/95eef01f3a292df55ef04098bc315c6034a87308.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>在菜单栏上执行：data-select cases，打开case选择对话框</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/f11f3a292df5e0fe262b658c5c6034a85edf7208.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>我们看到这里有很多删选的方法，我们一一进行尝试，首先根据条件筛选，选择if condition is satisfied，点击if按钮，打开设置</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/e1fe9925bc315c60f6a687628db1cb1349547708.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<img src="/2016/05/11/spss如何筛选部分case/d009b3de9c82d1580397b53c800a19d8bc3e4222.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>假如我们要筛选id小于45的case，那么我们先选择id，点击添加按钮，然后输入公式条件id&lt;45</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/5fdf8db1cb134954ce2d04e9564e9258d1094a08.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li><p>条件输入以后，点击continue按钮。这样就完成了按照条件筛选</p>
+</li>
+<li><p>、</p>
+</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/d009b3de9c82d15803b1b53c800a19d8bc3e4208.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>假如我们要使用随机选择case的方法，我们就选择random sample of cases，然后点击sample</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/4034970a304e251f4be20875a786c9177f3e5322.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>我们看到这个对话框有两个选项，第一个选择是选择百分比，也就是从所有的case中选择百分之多少的case；第二个选项是从前多少个case中选择多少个case</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/810a19d8bc3eb135e6f45b36a61ea8d3fd1f4408.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>回到select cases 对话框，勾选基于时间或者case范围，看到下面这个对话框，输入case的范围是从第五十个到第100个，点击continue</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/241f95cad1c8a786283fa6836709c93d70cf5022.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<ul>
+<li>最后一个filter variables，也就是过滤变量，这个选项的功能是如果变量中有缺省值，那么这个case就被删除或者排除在外了。</li>
+</ul>
+<img src="/2016/05/11/spss如何筛选部分case/a686c9177f3e67092d15a9723bc79f3df8dc5522.jpg" alt="spss如何筛选部分case" title="spss如何筛选部分case">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/05/11/python 线性代数：[1]矩阵操作/">
+                python 线性代数：[1]矩阵操作
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>今天是这一个系列入门教程的第一篇，简单介绍一下python中是如何操作maxtrix（矩阵）的，然后我们后面就开始用python中的numpy来解决线性代数的问题，比如解方程等，下面我们开始吧：</p>
+<ul>
+<li>我先引入numpy，以后的教程中，我们都引用为np作为简写</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/3c2c4bfbb2fb431647d6a28a22a4462308f7d332.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<ul>
+<li>使用mat函数创建一个2X3矩阵</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/aa59892bd40735fa34b98b499c510fb30e2408b2.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<ul>
+<li>使用shape可以获取矩阵的大小</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/0e655ca7d933c8950b375d8bd31373f0830200b2.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<ul>
+<li>使用下标读取矩阵中的元素</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/e49cf91190ef76c6dc473edb9f16fdfaae51676e.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<ul>
+<li>进行行列转换：</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/263e802f07082838164519e4ba99a9014d08f1b3.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<ul>
+<li>实际上官方文档建议我们使用二维数组代替矩阵来进行矩阵运算；因为二维数组用得较多，而且基本可取代矩阵。比如：可见矩阵和数组基本上都可以</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/0865b518972bd407e5c3170d79899e510eb309ff.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/c9d4cf43ad4bd113afc973c258afa40f4afb05ff.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<ul>
+<li>加减法也是一样的：</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/7ab514d162d9f2d3426fe01fabec8a136227cc81.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<ul>
+<li>当然列表是不能这么尽兴加减的：</li>
+</ul>
+<img src="/2016/05/11/python%20线性代数：[1]矩阵操作/99636c0e0cf3d7ca4b83fb86f01fbe096a63a98e.jpg" alt="python 线性代数：[1]矩阵操作" title="python 线性代数：[1]矩阵操作">
+<ul>
+<li>好啦，我们今天就介绍到这里啦，下一篇继续哈。</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/05/11/python 线性代数：[22]习题1.10求逆矩阵/">
                 python 线性代数：[22]习题1.10求逆矩阵
             </a>
@@ -671,140 +809,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/04/23/Python统计分析：[1]独立样本T检验/">
-                Python统计分析：[1]独立样本T检验
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年04月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>这是《Python统计分析》系列文章的第一篇，该系列文章致力于使用Python进行一般的统计分析，比如T检验、方差分析、回归分析、主成分、聚类、等等。Python有很多统计包可以帮助我们实现我们的目的，《Python统计分析》系列文章用到的包包括但不仅限于：pandas、numpy、scipy、Statsmodels。很多人都知道我写过所有这些包的教程，而《Python统计分析》系列文章可以把以前的内容综合运用起来，所以需要你对这些模块有一定的了解，但不需要精通。</p>
-<ul>
-<li>引入相关的模块，ttest_ind是用于独立样本t检验的（independent samples t test），pandas主要用到它的DataFrame</li>
-</ul>
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/5f9e93b1cb1349547392d817554e9258d0094af1.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<ul>
-<li>读取数据并查看一下数据的前五行<br>我们可以看到数据包含三列，最后一列group表示不同的组，只有1、2两组</li>
-</ul>
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/8367d1fc1e178a8265b04fd3f503738da877e8f2.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/8a95ad1c8701a18b6967223c9d2f07082938fef2.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<ul>
-<li>我们用到了DataFrame的一个筛选数据的功能，比如筛选1组数据<br>我们可以得到这样的数据</li>
-</ul>
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/8b527d2762d0f7039705a6af0bfa513d2797c5ca.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/476217f7905298226abc09b0d4ca7bcb0b46d4f2.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<ul>
-<li>假如现在我们想要比较两组数据在scoreA上是否有差异，我们可以分别筛选得到1组的scoreA和2组的scoreA，然进行t检验<br>检验的结果得到一个tuple，第一个元素是t值，第二个元素是p值，根据p值就知道两列数据均值差异不显著</li>
-</ul>
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/21e5582309f790528ee7744d0ff3d7ca7acbd58d.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/27d647ee3d6d55fbbd6946556e224f4a21a4ddd2.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<ul>
-<li>如果我们想要同时比较scoreA和scoreB也可以，筛选数据的时候加上scoreB即可<br>结果得到的是tuple构成的tuple，第一个tuple元素表示t值，根据结果我们就知道t（scoreA）=1.366，t（scoreB）=0.601,另一个tuple就不解释了吧</li>
-</ul>
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/1f569482b9014a90289276ceaa773912b21beed2.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/08b68e529822720e1561d28978cb0a46f31fabd2.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<ul>
-<li>当然我们还需要注意，ttest_ind默认两组数据方差齐性的，如果想要设置默认方差不齐，可以设置equal_var=False，下面比较一下这两种情况结果的差异</li>
-</ul>
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/148f28d3d539b6000f613fc4ea50352ac75cb7d2.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/c8ab0bce36d3d53982b23fb03987e950342ab0f2.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<ul>
-<li>那么，问题来了（挖掘机到底哪家强？），我们用什么检验两组数据的方差齐性呢——levene test<br>检验结果为p&gt;0.05所以，可以认为方差是相等的。</li>
-</ul>
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/373bc4b44aed2e736145b65f8401a18b86d6fad2.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<img src="/2016/04/23/Python统计分析：[1]独立样本T检验/0d729944ebf81a4c77bddcbad42a6059242da6f2.jpg" alt="Python统计分析：[1]独立样本T检验" title="Python统计分析：[1]独立样本T检验">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/04/19/spss如何输出三线表格/">
-                spss如何输出三线表格
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年04月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p> 三线表格是发表学术文章最基本的格式，我和你一样搞不明白，为什么spss不能直接输出三线表格，毕竟这是我们最常用的格式呀！不管怎么样，我们还是有办法把表格转换成三线格式的，而不必像网上流传的那样在word中进行编辑，那样是非常麻烦的。<br>方法/步骤</p>
-<ul>
-<li>打开spss，先打开你的数据文件，然后在edit菜单栏，打开options选项</li>
-</ul>
-<img src="/2016/04/19/spss如何输出三线表格/500fd9f9d72a60592d5f9c9e2834349b023bbae2.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
-<ul>
-<li>在options选项面板中，切换到pivot tables标签，就是在这里设置表格的基本样式。</li>
-</ul>
-<img src="/2016/04/19/spss如何输出三线表格/d62a6059252dd42a22467c2f033b5bb5c8eab8e2.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
-<ul>
-<li>在pivot tables选项下，你可以看到这里有一个列表，这是表格的预设样式，右侧窗口是预览样式的，从左边的窗口中，选择一个预设样式，这个列表里没有三线表样式，但是这里有类似三线表的样式，我们就是要选择一个类似三线表的，然后再对其进行修改</li>
-</ul>
-<img src="/2016/04/19/spss如何输出三线表格/f31fbe096b63f624943244878744ebf81b4ca3c3.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
-<ul>
-<li>设置好了表格的基本样式以后，工作还没有做完，还要对表格进行编辑，先输出一个表格再说，在菜单栏上执行：analyse–descriptive statistics—descriptives</li>
-</ul>
-<img src="/2016/04/19/spss如何输出三线表格/bf096b63f6246b600c60cff0ebf81a4c500fa2c3.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
-<ul>
-<li>在结果输出窗口，你会看到一个表格，我们双击表格可以对表格数据进行编辑，编辑好了以后</li>
-</ul>
-<img src="/2016/04/19/spss如何输出三线表格/5ab5c9ea15ce36d3c44bfeb43af33a87e850b1e2.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
-<ul>
-<li>在菜单栏上执行：format —–tables properties，打开表格属性面板</li>
-</ul>
-<img src="/2016/04/19/spss如何输出三线表格/c8ea15ce36d3d539a47272473a87e950342ab0e2.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
-<ul>
-<li>切换到border标签，这里对表格的边框进行设定</li>
-</ul>
-<img src="/2016/04/19/spss如何输出三线表格/6a63f6246b600c338617a34c1a4c510fd8f9a1c3.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
-<ul>
-<li>你看到了，这个列表里是各个部分的边框，你需要选中每一个边框，然后在下面的style属性中进行设定，将所有的两线表格都设置为单线的，颜色设置为黑色，保存设置</li>
-</ul>
-<img src="/2016/04/19/spss如何输出三线表格/3bf33a87e950352ad12e588c5343fbf2b3118be2.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
-<ul>
-<li><p>这就是编辑好的表格，是不是已经变成了三线表格：</p>
-</li>
-<li></li>
-</ul>
-<img src="/2016/04/19/spss如何输出三线表格/8644ebf81a4c510fdcaa9f9e6059252dd52aa5c3.jpg" alt="spss如何输出三线表格" title="spss如何输出三线表格">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -847,19 +851,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -987,7 +991,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

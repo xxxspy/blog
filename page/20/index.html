@@ -157,6 +157,116 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/01/17/numpy函数：[16]多维数组切片存取/">
+                numpy函数：[16]多维数组切片存取
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>多维数组和一维数组的存取方法类似，我们这篇文章介绍使用切片来存取一个二维数组，多维数组道理一样，你自己尝试一下即可。</p>
+<ul>
+<li>先从numpy中引入所有</li>
+</ul>
+<img src="/2016/01/17/numpy函数：[16]多维数组切片存取/6a22e8246b600c335b90a648184c510fd8f9a102.jpg" alt="numpy函数：[16]多维数组切片存取" title="numpy函数：[16]多维数组切片存取">
+<ul>
+<li>创建一个一维数组</li>
+</ul>
+<img src="/2016/01/17/numpy函数：[16]多维数组切片存取/eab9044c510fd9f936fe2de9272dd42a2934a402.jpg" alt="numpy函数：[16]多维数组切片存取" title="numpy函数：[16]多维数组切片存取">
+<ul>
+<li>将一维数组重新组织成一个二维数组</li>
+</ul>
+<img src="/2016/01/17/numpy函数：[16]多维数组切片存取/f9589818367adab4eaff60c389d4b31c8601e4c0.jpg" alt="numpy函数：[16]多维数组切片存取" title="numpy函数：[16]多维数组切片存取">
+<ul>
+<li>使用切片来读取第一行中的第二和第三个数，我们看下标【0,2:4】,其中逗号前的数字表示第0轴下标取值范围，逗号之后表示第1维下标取值范围，2:4就表示2-4之间</li>
+</ul>
+<img src="/2016/01/17/numpy函数：[16]多维数组切片存取/8a95ad1c8701a18b21c469cf9c2f07082938fec0.jpg" alt="numpy函数：[16]多维数组切片存取" title="numpy函数：[16]多维数组切片存取">
+<ul>
+<li>我们可以返回一个二维的数组</li>
+</ul>
+<img src="/2016/01/17/numpy函数：[16]多维数组切片存取/e8112b2ac65c1038a797b642b0119313b17e8902.jpg" alt="numpy函数：[16]多维数组切片存取" title="numpy函数：[16]多维数组切片存取">
+<ul>
+<li>只读取第3列的元素（逗号前只有一个冒号，表示所有）</li>
+</ul>
+<img src="/2016/01/17/numpy函数：[16]多维数组切片存取/9252ae7eca806538f703dc9395dda144ac348202.jpg" alt="numpy函数：[16]多维数组切片存取" title="numpy函数：[16]多维数组切片存取">
+<ul>
+<li>也可以设置步长（两个逗号后面的2表示步长为2）</li>
+</ul>
+<img src="/2016/01/17/numpy函数：[16]多维数组切片存取/647912d7912397dd5f90e0845b82b2b7d1a28702.jpg" alt="numpy函数：[16]多维数组切片存取" title="numpy函数：[16]多维数组切片存取">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/01/17/Django教程：[9]如何设置时区/">
+                Django教程：[9]如何设置时区
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年01月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>Django站点的时区和你电脑上的时区必须是一致的，我在北京，所以我们通常设置时区为北京的时区，那么我们怎么具体的设置呢？下面看具体的过程：</p>
+<ul>
+<li>从下面的参考资料里找到时区代码的链接，打开链接</li>
+</ul>
+<img src="/2016/01/17/Django教程：[9]如何设置时区/ac0acf1373f08202182e294549fbfbedaa641bc8.jpg" alt="Django教程：[9]如何设置时区" title="Django教程：[9]如何设置时区">
+<ul>
+<li>在打开的页面中，找到中国的时区，或者找到你自己想要的一个时区</li>
+</ul>
+<img src="/2016/01/17/Django教程：[9]如何设置时区/346bd85c103853434ed43f5b9113b07eca808876.jpg" alt="Django教程：[9]如何设置时区" title="Django教程：[9]如何设置时区">
+<ul>
+<li>接着回到你站点文件夹，打开settings文件，设置时区</li>
+</ul>
+<img src="/2016/01/17/Django教程：[9]如何设置时区/d041a4a1cd11728b5b423358cafcc3cec3fd2c19.jpg" alt="Django教程：[9]如何设置时区" title="Django教程：[9]如何设置时区">
+<ul>
+<li>搜索TIME_ZONE，我们看默认的时区是UTC，也就是国际协调时，不是任何的时区，而是一个国际通用时间。</li>
+</ul>
+<img src="/2016/01/17/Django教程：[9]如何设置时区/72ccb7773912b31beffb72538418367adbb4e1f2.jpg" alt="Django教程：[9]如何设置时区" title="Django教程：[9]如何设置时区">
+<ul>
+<li>将其修改为上海时区，就这样就ok了。保存settings文件</li>
+</ul>
+<img src="/2016/01/17/Django教程：[9]如何设置时区/c9d4cf43ad4bd11330a2084858afa40f4bfb0519.jpg" alt="Django教程：[9]如何设置时区" title="Django教程：[9]如何设置时区">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/01/15/SPSS实例：[21]调节效应检验方法/">
                 SPSS实例：[21]调节效应检验方法
             </a>
@@ -687,148 +797,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/01/03/怎样将excel中的联系人导入到邮箱/">
-                怎样将excel中的联系人导入到邮箱
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年01月03日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>在日常的办公中，我们整理客户资料的时候经常是使用excel，如果要想给这些客服发邮件，我们就得将他们的邮件地址一个一个的输入到邮箱里，不过，还有更简单的做法，那就是利用批量导入联系人的方法实现一键导入，下面是具体的方法，本人用的是126邮箱，经测试，其他邮箱导入的方法也是一样的。<br>方法/步骤</p>
-<ul>
-<li></li>
-<li><p>先打开要导入的excel文件，格式不正确的文件是无法导入的，我们要对其进行修改。首先你要检查这个文件是不是有标题栏，没有标题栏的话，很多邮箱都不能导入，所以我们最好先插入标题栏，如图所示，右键单击第一行，然后再打开的菜单中选择【插入】</p>
-</li>
-</ul>
-<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/71cf3bc79f3df8dc7f79ae0fcd11728b461028e3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
-<ul>
-<li>导入到标题栏以后，我们按照‘联系组   姓名   邮件地址   联系地址   邮政编码   联系电话   移动电话   公司   ’这样的顺序整理你的联系人的信息，当然，如果你的联系人的信息没有这么多，你可以空着不填，比如没有电话，你就空着这一栏就可以了，如下图所示就是整理好的联系人的信息</li>
-</ul>
-<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/aa64034f78f0f7364ca66d9f0a55b319eac413d7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
-<ul>
-<li>点击excel的开始按钮，打开开始菜单，然后执行：另存为–其他格式</li>
-</ul>
-<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/f9dcd100baa1cd11c3f253beb912c8fcc2ce2de3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
-<ul>
-<li>在打开的另存为对话框中，我们将保存的格式设置为csv，这是个大邮箱都承认的导入格式，然后选择一个保存的位置，点击‘保存’</li>
-</ul>
-<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/962bd40735fae6cdb4ec8aff0fb30f2443a70fd7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
-<ul>
-<li>弹出一个警告消息，不用管它，点击‘是’</li>
-</ul>
-<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/4610b912c8fcc3ce7584e8ad9245d688d53f20e3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
-<ul>
-<li>来到你的邮箱，在菜单栏上选择【通讯录】，打开联系人的列表</li>
-</ul>
-<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/a5c27d1ed21b0ef4dbb0b9c0ddc451da80cb3ed7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
-<ul>
-<li>在标题栏，找到【更多】选项，点击它可以打开一个下拉列表，在该下拉列表里，找到【导入通讯录】这个选项</li>
-</ul>
-<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/d31b0ef41bd5ad6e1fa1457481cb39dbb7fd3cd7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
-<ul>
-<li>打开导入通讯录页面，点击浏览按钮，查找你刚才保存的文件</li>
-</ul>
-<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/e7cd7b899e510fb3dd415609d933c895d0430cd7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
-<ul>
-<li>选择你要上传的文件，然后点击【打开】</li>
-</ul>
-<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/fd039245d688d43f3cedb06c7d1ed21b0ff43be3.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
-<ul>
-<li><p>设置遇到重复的邮件地址的时候是该覆盖还是不导入，也就是跳过该记录，按照你需要的自己进行设定，一般就是选择【不导入】。点击确定按钮，完成导入。</p>
-</li>
-<li></li>
-<li></li>
-</ul>
-<img src="/2016/01/03/怎样将excel中的联系人导入到邮箱/d833c895d143ad4b0976675e82025aafa50f06d7.jpg" alt="怎样将excel中的联系人导入到邮箱" title="怎样将excel中的联系人导入到邮箱">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/01/01/DataNitro：[5]Cell对象方法/">
-                DataNitro：[5]Cell对象方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年01月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>这篇文章介绍一下Datanitro常用的一些方法。我们还是用例子来说明，大家比较容易理解，另外想要学习一门计算机语言，一定要亲手实验你的代码，否则学起来很慢。</p>
-<ul>
-<li><p>clear()：清空Cell，例如：</p>
-</li>
-<li><p>#clear()</p>
-</li>
-<li><p>Cell(1,1).clear()</p>
-</li>
-<li><p>copy_from():复制单元格：下面的代码将A21单元格的内容和格式复制到了A22</p>
-</li>
-</ul>
-<img src="/2016/01/01/DataNitro：[5]Cell对象方法/389aa8fd5266d01634b4d47a942bd40734fa35f7.jpg" alt="DataNitro：[5]Cell对象方法" title="DataNitro：[5]Cell对象方法">
-<ul>
-<li>copy_format_from()：仅仅复制单元格格式</li>
-</ul>
-<img src="/2016/01/01/DataNitro：[5]Cell对象方法/99636c0e0cf3d7cada757524f11fbe096a63a9a6.jpg" alt="DataNitro：[5]Cell对象方法" title="DataNitro：[5]Cell对象方法">
-<ul>
-<li>is_empty():判断单元格是否为空，如果为空则返回True，否则返回False</li>
-</ul>
-<img src="/2016/01/01/DataNitro：[5]Cell对象方法/3b6833f5e0fe9925443edc0237a85edf8db17177.jpg" alt="DataNitro：[5]Cell对象方法" title="DataNitro：[5]Cell对象方法">
-<ul>
-<li>offset()：移动：下面的代码将返回A1单元格右边的单元格A2</li>
-</ul>
-<img src="/2016/01/01/DataNitro：[5]Cell对象方法/6648d73d70cf3bc7801478bed200baa1cd112a08.jpg" alt="DataNitro：[5]Cell对象方法" title="DataNitro：[5]Cell对象方法">
-<ul>
-<li>print,这不是cell的方法，但是使用print可以返回cell的名字，注意Cell的参数，有一个sheet1，它明确的指明了是在sheet1中的单元格A1</li>
-</ul>
-<img src="/2016/01/01/DataNitro：[5]Cell对象方法/dc15484e9258d109b7ce1ce0d258ccbf6c814d77.jpg" alt="DataNitro：[5]Cell对象方法" title="DataNitro：[5]Cell对象方法">
-<ul>
-<li>rename()我们还可以给单元格起一个个性化名字，然后使用改名字就可以调用该单元格</li>
-</ul>
-<img src="/2016/01/01/DataNitro：[5]Cell对象方法/b29f8282d158ccbf649100681ad8bc3eb1354177.jpg" alt="DataNitro：[5]Cell对象方法" title="DataNitro：[5]Cell对象方法">
-<ul>
-<li>active_cell():返回当前活动单元格，如果你输入一个参数，比如：active_cell(Cell(‘A1’))，就可以设定A1为活动单元格</li>
-</ul>
-<img src="/2016/01/01/DataNitro：[5]Cell对象方法/d7c9ca3f8794a4c24d3752790df41bd5ad6e3908.jpg" alt="DataNitro：[5]Cell对象方法" title="DataNitro：[5]Cell对象方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -871,19 +839,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -1011,7 +979,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

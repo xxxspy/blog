@@ -157,6 +157,125 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/08/11/SPSS python教程：[1]安装Python Essentials/">
+                SPSS python教程：[1]安装Python Essentials
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这个系列教程是用来教大家如何使用python脚本来操作spss，使用脚本的好处是可以批量处理，如果你有很多数据要处理，他们的处理方法类似，那就需要用到脚本，可以自动化、智能化处理数据，大大减少数据分析的工作量，关于更多好处，你们可以参考spss的官方文档，这里不多少，开始介绍如何设置spss中的python插件：SPSS Python Essentials。</p>
+<ul>
+<li><p>我用的spss版本是22.0，也是最近为了使用SPSS Python Essentials才安装的这个版本，大家可以参考这篇文章，以便正确安装spss 22.0。【<a href="http://jingyan.baidu.com/article/3d69c55187d5faf0cf02d73f.html】" target="_blank" rel="external">http://jingyan.baidu.com/article/3d69c55187d5faf0cf02d73f.html】</a></p>
+</li>
+<li><p>安装好了spss22.0以后，如果你按照上面的安装教程进行的安装，SPSS Python Essentials就自动的安装在了你的spss22.0的安装目录下。接下来我们要进行必要的设置。</p>
+</li>
+<li><p>打开spss22的界面，打开编辑菜单下的【选项】</p>
+</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/ea85a94543a982266fc821b18882b9014b90ebd8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>切换到脚本选项下，我们设置一下缺省脚本语言为python，点击【应用】</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/f9589818367adab4e5d911d589d4b31c8601e4d8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>切换到【文件位置】选项下，设置python的位置，我们有两个选项，一个是随IBM SPSS安装的位置，这就是说，spss22在安装的时候自动安装了python2.7，如果我们想要使用这个python，就选择第一个选项；但是我现在有一个更好的建议，使用我们自己安装的python，也就是说在安装spss之前就有一个python安装好了，我现在想使用这个python，我们可以设置python的其他安装，然后找到这个python安装的目录，最后点击确定就可以了。为什么我建议使用第二种选择呢？因为我的python下有很多安装好的扩展包，需要在处理数据的时候调用，以后安装新的扩展包也很方便。如果使用是、随spss安装的python，还需要另行安装这些扩展包</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/8a95ad1c8701a18b32e218d99c2f07082938fed8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>设置完成以后，我们想要启动python的编辑窗口，需要在开始菜单中启动，如图所示。不能直接从python的安装目录里启动。</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/d35a10f41bd5ad6eaacc6e7c83cb39dbb6fd3c2b.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<ul>
+<li>另外，spss22还有一个bug，我们虽然设置了Python的主目录，但是在新建脚本的时候，还是用的随spss安装的python的shell。所以想要使用python脚本，你就从上面那个方面里启动python shell</li>
+</ul>
+<img src="/2015/08/11/SPSS%20python教程：[1]安装Python%20Essentials/90cebeec08fa513df4a366483f6d55fbb3fbd9d8.jpg" alt="SPSS python教程：[1]安装Python Essentials" title="SPSS python教程：[1]安装Python Essentials">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/08/05/numpy函数：[13]切片数组共享内存/">
+                numpy函数：[13]切片数组共享内存
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月05日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>使用切片的方法获取数组的一部分，并没有创建新的数组，而切片只是原始数组的一种视图，所以改变切片中的数值，也会改变原始数组的元素值，具体通过例子来看一下：</p>
+<ul>
+<li>先从Numpy中引用所有</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/8cf0d513495409233eb9c8e19058d109b2de491a.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>创建一个一位数组a</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/6dc09e0a19d8bc3e5f2aac55808ba61ea9d345d4.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>通过切片获取数组b</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/bd7faf3533fa828b54f3367cff1f4134960a5a1a.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>假如改变数组b中的元素的值</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/948bcfc8a786c9178321f8a6cb3d70cf3ac757d4.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>数组a相应的值也会发生变化</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/948bcfc8a786c91782d3f9a6cb3d70cf3ac7571a.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>假如把a全部赋值给c，也是一样的效果，还是改变了原数组的值</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/a28d62d98d1001e984ecbf90ba0e7bec55e7971a.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>想要保证原始数组的值不发生变化，我们最好使用copy方法获取数组c</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/fcbbb151f3deb48f58b90a41f21f3a292cf5781a.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<ul>
+<li>现在改变数组c的元素的值，数组a将不放生变化。</li>
+</ul>
+<img src="/2015/08/05/numpy函数：[13]切片数组共享内存/48151723dd54564e76474ea6b1de9c82d0584fd4.jpg" alt="numpy函数：[13]切片数组共享内存" title="numpy函数：[13]切片数组共享内存">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/08/05/Python教程：[48]集合对象用法/">
                 Python教程：[48]集合对象用法
             </a>
@@ -616,537 +735,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/07/17/gitignore配置详解/">
-                gitignore配置详解
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年07月17日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>如果你使用git来管理代码版本，你必须懂得如何使用.gitignore文件，该文件可以指定git忽略哪些文件，在git中的作用非常重要。在理解gitignore的配置之前，我们要先看看这些规则都可以来自哪里。通常git可以从多个地方获取忽略规则，优先级从上到下依次为：</p>
-<ul>
-<li><p>.gitignore文件适合写于项目有关的规则，并且这些规则需要与合作者分享。</p>
-</li>
-<li><p><code>$GIT_DIR/info/exclude</code>适用于与项目有关，但是你不想分享给其他作者，这些规则可能只适用于你自己。</p>
-</li>
-<li><p><code>core.excludesFile</code>适用于你在任何情况下都需要忽略的规则。这种情况不常用。</p>
-</li>
-<li><p>空行不匹配任何文件，所以空行通常是规则分组的分隔符，只是在视觉上将不同的规则分组。</p>
-</li>
-</ul>
-<img src="/2015/07/17/gitignore配置详解/21e5582309f790527c5640f005f3d7ca7acbd570.jpg" alt="gitignore配置详解" title="gitignore配置详解">
-<ul>
-<li>以<code>#</code>开始的行代表注释，所以也不匹配任何文件。</li>
-</ul>
-<img src="/2015/07/17/gitignore配置详解/73ca5910b912c8fcb345f103f5039245d788210e.jpg" alt="gitignore配置详解" title="gitignore配置详解">
-<ul>
-<li><p>末尾的空格没有任何意义，如果你想匹配空格，你需要在空格前加转义字符``。</p>
-</li>
-<li><p>例如：<code>a</code>这种写法可以匹配<code>a</code></p>
-</li>
-</ul>
-<img src="/2015/07/17/gitignore配置详解/d7c9ca3f8794a4c20583e0e507f41bd5ac6e3918.jpg" alt="gitignore配置详解" title="gitignore配置详解">
-<ul>
-<li><p>感叹号<code>!</code>的作用是从已有的忽略规则里排除一部分文件。注意想要让感叹号起作用，必须在前规则中使用通配符<code>*</code>。例如：</p>
-</li>
-<li><p>前规则写成：<code>.env/*</code></p>
-</li>
-<li><p>想要追踪<code>.env</code>文件夹下的<code>data.txt</code>，需要追加一个规则：<code>!.env/data.txt</code></p>
-</li>
-<li><p>如果前规则写成<code>.env</code>，则<code>!.env/data.txt</code>不起作用。</p>
-</li>
-<li><p>如果规则以<code>/</code>结尾，则表示匹配文件夹, 类似的文件和链接都不会匹配。</p>
-</li>
-</ul>
-<img src="/2015/07/17/gitignore配置详解/4bd1e803738da977974181e5b951f8198718e357.jpg" alt="gitignore配置详解" title="gitignore配置详解">
-<ul>
-<li>如果规则中不包含<code>/</code>，则规则即可匹配文件夹也可以匹配文件和链接，类似于linux shell中的通配符，可以匹配任何可以与通配符匹配的路径。</li>
-</ul>
-<img src="/2015/07/17/gitignore配置详解/ae8267310a55b31949fc85bb4aa98226cefc17b3.jpg" alt="gitignore配置详解" title="gitignore配置详解">
-<ul>
-<li>通配符无法匹配符号<code>/</code>，所以类似这样的规则<code>foo/*.html</code>不能匹配<code>foo/bar/test.html</code>。</li>
-</ul>
-<img src="/2015/07/17/gitignore配置详解/61183b2dd42a2834ceef31c552b5c9ea14cebf70.jpg" alt="gitignore配置详解" title="gitignore配置详解">
-<ul>
-<li>规则以<code>/</code>开头表示匹配<code>.gitignore</code>文件所在的目录。也就是说规则<code>/*.txt</code>只能匹配.gitignore所在目录下的所有txt文件，不能匹配其他目录下的txt文件。</li>
-</ul>
-<img src="/2015/07/17/gitignore配置详解/dc854fda81cb39db37766098d9160924aa18300e.jpg" alt="gitignore配置详解" title="gitignore配置详解">
-<ul>
-<li><p>以<code>**/</code>开头的规则表示匹配所有文件夹，规则<code>**/a/b</code>能匹配<code>foo/a/b</code>也能匹配<code>foo/bar/a/b</code></p>
-</li>
-<li><p>以<code>/**</code>结尾的规则表示匹配目录下所有文件和文件夹，规则<code>a/b/**</code>能匹配<code>/a/b/c</code>也能匹配<code>a/b/c/d/e</code></p>
-</li>
-<li><p>规则中间包含<code>/**/</code>表示匹配任意路径，比如规则<code>a/**/b</code>可以匹配<code>a/foo/bar/b</code>和<code>a/e/m/c/b</code>。</p>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/07/15/python 线性代数：[3]矩阵转置/">
-                python 线性代数：[3]矩阵转置
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年07月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>矩阵的转置很简单，就是将矩阵的行变为列，将列变为行，我们先通过例子看一下矩阵转置是怎么做的。然后验证几个规律。</p>
-<ul>
-<li>先创建一个矩阵A</li>
-</ul>
-<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/faacb564034f78f014b75c027b310a55b2191c40.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
-<ul>
-<li>我们使用属性T来得到矩阵A的转置矩阵</li>
-</ul>
-<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/5327ce160924ab185b0727c637fae6cd7a890beb.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
-<ul>
-<li>我们验证第一个性质：(A’)’=A</li>
-</ul>
-<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/d019d2bf6c81800a81044fffb33533fa838b471b.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
-<ul>
-<li>再创建两个尺寸相同的矩阵</li>
-</ul>
-<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/1899a23eb13533fa1e5755dfaad3fd1f40345b1b.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
-<ul>
-<li>验证矩阵转置的第二个性质：(A±B)’=A’±B’</li>
-</ul>
-<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/dbf554ed2e738bd44d9c74c0a38b87d6267ff940.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
-<ul>
-<li>验证矩阵转置的第三个性质：(KA)’=KA’</li>
-</ul>
-<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/2f3295d4b31c8701a10a7417257f9e2f0608ff40.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
-<ul>
-<li>验证矩阵转置的第四个性质：(A×B)’= B’×A’</li>
-</ul>
-<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/c87c6ecf3bc79f3d560022c1b8a1cd11738b291b.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
-<img src="/2015/07/15/python%20线性代数：[3]矩阵转置/6648d73d70cf3bc733560c1dd300baa1cc112aaa.jpg" alt="python 线性代数：[3]矩阵转置" title="python 线性代数：[3]矩阵转置">
-<ul>
-<li><p>本文用到的所有代码如下：</p>
-</li>
-<li></li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[1, 2, 3],</p>
-</li>
-<li><p>[4, 5, 6]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A.T</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[1, 4],</p>
-</li>
-<li><p>[2, 5],</p>
-</li>
-<li><p>[3, 6]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A.T.T</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[1, 2, 3],</p>
-</li>
-<li><p>[4, 5, 6]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>B</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[1, 4],</p>
-</li>
-<li><p>[2, 5],</p>
-</li>
-<li><p>[3, 6]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>D</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[0, 3],</p>
-</li>
-<li><p>[1, 4],</p>
-</li>
-<li><p>[2, 5]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>(B+D).T</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[ 1,  3,  5],</p>
-</li>
-<li><p>[ 7,  9, 11]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>B.T+D.T</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[ 1,  3,  5],</p>
-</li>
-<li><p>[ 7,  9, 11]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>10*A.T</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[10, 40],</p>
-</li>
-<li><p>[20, 50],</p>
-</li>
-<li><p>[30, 60]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>(10*A).T</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[10, 40],</p>
-</li>
-<li><p>[20, 50],</p>
-</li>
-<li><p>[30, 60]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>np.dot(A,B).T</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[14, 32],</p>
-</li>
-<li><p>[32, 77]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>np.dot(A.T,B.T)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[17, 22, 27],</p>
-</li>
-<li><p>[22, 29, 36],</p>
-</li>
-<li><p>[27, 36, 45]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>np.dot(B.T,A.T)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[14, 32],</p>
-</li>
-<li><p>[32, 77]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1189,19 +777,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -1329,7 +917,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

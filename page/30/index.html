@@ -157,6 +157,146 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/06/15/Python教程：[17]UDP客户端程序/">
+                Python教程：[17]UDP客户端程序
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>python可以快速的写成一个udp客户端程序，前面的文章中我们介绍了如何写udp服务器，服务器其实和客户端的程序时非常类似的，你看了下面的代码就知道了。</p>
+<ul>
+<li>先引入socket模块</li>
+</ul>
+<img src="/2015/06/15/Python教程：[17]UDP客户端程序/9e7ce6dcd100baa195843e974510b912c8fc2e36.jpg" alt="Python教程：[17]UDP客户端程序" title="Python教程：[17]UDP客户端程序">
+<ul>
+<li>设置几个参数：host主机地址，Port端口，bufsiz缓存大小</li>
+</ul>
+<img src="/2015/06/15/Python教程：[17]UDP客户端程序/e1bf8725bc315c601b4e12c38fb1cb1348547787.jpg" alt="Python教程：[17]UDP客户端程序" title="Python教程：[17]UDP客户端程序">
+<ul>
+<li>创建一个udp套接字类型，如图所示，关键参数是第二个SOCK_DGRAM</li>
+</ul>
+<img src="/2015/06/15/Python教程：[17]UDP客户端程序/c28fddfdfc039245b71d98238594a4c27d1e2536.jpg" alt="Python教程：[17]UDP客户端程序" title="Python教程：[17]UDP客户端程序">
+<ul>
+<li>下面的代码用于向服务器发送数据，并接受服务器传来的数据</li>
+</ul>
+<img src="/2015/06/15/Python教程：[17]UDP客户端程序/9319cf09b3de9c82eabe80a36e81800a18d84387.jpg" alt="Python教程：[17]UDP客户端程序" title="Python教程：[17]UDP客户端程序">
+<ul>
+<li><p>下面是完整的代码。</p>
+</li>
+<li><p>from socket import *</p>
+</li>
+<li><p>host=’localhost’  #本地服务器地址</p>
+</li>
+<li><p>port=12345  #客户端端口(确保和服务器的端口一致</p>
+</li>
+<li><p>bufsiz=2048 #缓存大小</p>
+</li>
+<li><p>addc=(host, port) #地址+端口</p>
+</li>
+<li><p>udpclisock=socket(AF_INET,SOCK_DGRAM)  #创建UDP的套接字类型。</p>
+</li>
+<li><p>while True:</p>
+</li>
+<li><p>udpclisock.sendto(b’hello’, addc)</p>
+</li>
+<li><p>data,adds=udpclisock.recvfrom(bufsiz)</p>
+</li>
+<li><p>if not data:</p>
+</li>
+<li><p>break</p>
+</li>
+<li><p>print(data)</p>
+</li>
+<li><p>udpclisock.close()</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2015/06/15/pandas教程：[5]读取csv数据/">
+                pandas教程：[5]读取csv数据
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年06月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>很多数据是从网上下载而来，数据的格式可能是csv，那么pandas可以很容易的从csv格式的文件中读取数据，下面我们来看看具体的过程：</p>
+<ul>
+<li>引入pandas</li>
+</ul>
+<img src="/2015/06/15/pandas教程：[5]读取csv数据/7787b9efce1b9d161dd32272f0deb48f8c54644a.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
+<ul>
+<li>使用pandas下的read_csv方法，读取csv文件，参数是文件的路径，这是一个相对路径，是相对于当前工作目录的，那么如何知道当前的工作目录呢？</li>
+</ul>
+<img src="/2015/06/15/pandas教程：[5]读取csv数据/bd7faf3533fa828ba41825f0fe1f4134970a5aae.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
+<ul>
+<li>使用os.getcwd()方法获取当前工作目录</li>
+</ul>
+<img src="/2015/06/15/pandas教程：[5]读取csv数据/1cd4147b02087bf47fe5effaf1d3572c11dfcf5d.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
+<ul>
+<li>读取前三后数据，查看一下是否读取正确，显然都是乱码，这是什么问题呢？</li>
+</ul>
+<img src="/2015/06/15/pandas教程：[5]读取csv数据/95afee1f3a292df509d71406bf315c6034a8734a.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
+<ul>
+<li>我们需要设定参数encoding，也就是编码方式，如果你不设定编码方式，默认是utf8，现在csv文件是gbk编码的，所以需要使用encoding=’gbk’</li>
+</ul>
+<img src="/2015/06/15/pandas教程：[5]读取csv数据/2cb4fefe9925bc31b049b98b5ddf8db1cb13704a.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
+<ul>
+<li>我用的编辑器是eric4，注意，eric4默认是不支持中文的，如果你想要显示中文，前提是设置正确的编码，在preferences中</li>
+</ul>
+<img src="/2015/06/15/pandas教程：[5]读取csv数据/c87c6ecf3bc79f3debda5c23b9a1cd11728b29ae.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
+<ul>
+<li>设置成utf8即可</li>
+</ul>
+<img src="/2015/06/15/pandas教程：[5]读取csv数据/d041a4a1cd11728b5f163431cbfcc3cec3fd2cae.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
+<ul>
+<li>回到pandas，我们可以有更多选项来设置打开数据时的操作：</li>
+</ul>
+<img src="/2015/06/15/pandas教程：[5]读取csv数据/808a27dbb6fd5266fd228707a818972bd407365c.jpg" alt="pandas教程：[5]读取csv数据" title="pandas教程：[5]读取csv数据">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/06/15/python 线性代数：[8]计算矩阵距离/">
                 python 线性代数：[8]计算矩阵距离
             </a>
@@ -848,152 +988,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/06/01/spss 2因素嵌套设计数据处理方法/">
-                spss 2因素嵌套设计数据处理方法
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年06月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>所谓的嵌套设计，指的是至少一个因素的水平是分配在另一个因素的水平中的。如果B因素的每个水平仅出现在A因素的一个水平中，B就是嵌套于A的，可写作B（A）。 注意这个写作方式，下面我们详细的讲解如何操作：<br>工具/原料</p>
-<ul>
-<li>spss20.0<br>方法/步骤</li>
-</ul>
-<ul>
-<li>将数据整理成如图所示的样式，这样才可以做嵌套设计，从图中你可以看出来，变量B嵌套于变量A</li>
-</ul>
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/0df431adcbef7609a0b3255c2edda3cc7dd99ebd.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<ul>
-<li>接着在菜单栏上执行：analyse–GLM—univariate，打开方差分析的对话框</li>
-</ul>
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/cefc1e178a82b90130207ff0738da9773812ef60.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<ul>
-<li>这里很简单，就是将自变量和因变量放入格子的框框，然后点击model来定义模型</li>
-</ul>
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/d53f8794a4c27d1e9bed87071bd5ad6edcc4382d.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/6c224f4a20a44623bb0919a19822720e0df3d736.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<ul>
-<li>勾选“custom”，然后设置type为main effect</li>
-</ul>
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/d043ad4bd11373f0e601d05ca40f4bfbfbed0432.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<ul>
-<li>将两个变量放入模型框中，然后点击continue按钮</li>
-</ul>
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/8435e5dde71190ef76e12d1cce1b9d16fcfa60de.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<ul>
-<li>回到主菜单以后，我们点击paste按钮，开始编辑syntax</li>
-</ul>
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/37d12f2eb9389b50b5e95f918535e5dde6116edb.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<ul>
-<li>我们看下面的图，第一幅图是编辑前的design，第二幅图是编辑后的，其实就是增加了一个（a），b（a）就是b嵌套于a的意思</li>
-</ul>
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/b21bb051f8198618b45550474aed2e738ad4e6e7.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/6609c93d70cf3bc7a908722fd100baa1cc112aec.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<ul>
-<li>点击运行按钮，你就会看到运行的结果，我们看输出的表格显示了ab变量的主效应是显著的。</li>
-</ul>
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/3c6d55fbb2fb4316c05dc5b920a4462308f7d3b7.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<img src="/2015/06/01/spss%202因素嵌套设计数据处理方法/730e0cf3d7ca7bcbb23978ecbe096b63f724a8b7.jpg" alt="spss 2因素嵌套设计数据处理方法" title="spss 2因素嵌套设计数据处理方法">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/06/01/python教程：[73]下载安装eric4/">
-                python教程：[73]下载安装eric4
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年06月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>如何安装python的eric4包？因为python自带的IDLE不好用，我只好自己安装一个eric4，安装的过程较长，主要是找安装包和处理它的依赖包，所以我把你需要的资源都列在文章最下面，方便下载，跟着我的步骤做就可以了。</p>
-<ul>
-<li>首先我们需要下载需要用到的pyqt4和eric4，我的电脑是64位的win7，python版本是2.7，我提供的下载资源也是与我的电脑对应的，如果你的不合适，自行下载</li>
-</ul>
-<img src="/2015/06/01/python教程：[73]下载安装eric4/55a628d12f2eb93837a3f9c0d6628535e4dd6ff3.jpg" alt="python教程：[73]下载安装eric4" title="python教程：[73]下载安装eric4">
-<ul>
-<li>先安装pyqt4，这个是exe安装包，双击就可以打开</li>
-</ul>
-<img src="/2015/06/01/python教程：[73]下载安装eric4/b87985504fc2d5622ac653dfe41190ef77c66cf3.jpg" alt="python教程：[73]下载安装eric4" title="python教程：[73]下载安装eric4">
-<ul>
-<li>一路next就可以安装，但是你需要检查一下在这个步骤中，看看python的安装路径对不对，比如我是安装在D盘的，但是这里显示的不正确，回头检查错误发现，我应该下载python2.7对应的pyqt</li>
-</ul>
-<img src="/2015/06/01/python教程：[73]下载安装eric4/1899a23eb13533fa5591111cabd3fd1f41345b9a.jpg" alt="python教程：[73]下载安装eric4" title="python教程：[73]下载安装eric4">
-<ul>
-<li>最后这里把c盘改为d盘就是正确得了</li>
-</ul>
-<img src="/2015/06/01/python教程：[73]下载安装eric4/9e7ce6dcd100baa1210bc5894410b912c8fc2e9a.jpg" alt="python教程：[73]下载安装eric4" title="python教程：[73]下载安装eric4">
-<ul>
-<li>接着打开下载下来的eric4，将其解压到D盘下，当然你解压到哪里都没问题</li>
-</ul>
-<img src="/2015/06/01/python教程：[73]下载安装eric4/c9bdddcec3fdfc03665f618ad73f8794a4c2269a.jpg" alt="python教程：[73]下载安装eric4" title="python教程：[73]下载安装eric4">
-<ul>
-<li>看到这个install.py在什么位置，记住他</li>
-</ul>
-<img src="/2015/06/01/python教程：[73]下载安装eric4/fd428c45d688d43f708e13c07e1ed21b0ef43b9a.jpg" alt="python教程：[73]下载安装eric4" title="python教程：[73]下载安装eric4">
-<ul>
-<li>在dos下进入该目录</li>
-</ul>
-<img src="/2015/06/01/python教程：[73]下载安装eric4/a583631ed21b0ef4e7cf1a6cdec451da81cb3e9a.jpg" alt="python教程：[73]下载安装eric4" title="python教程：[73]下载安装eric4">
-<ul>
-<li>然后运行python install.py，安装成功！</li>
-</ul>
-<img src="/2015/06/01/python教程：[73]下载安装eric4/ac2fc3c451da81cb38c001ff5166d0160924319a.jpg" alt="python教程：[73]下载安装eric4" title="python教程：[73]下载安装eric4">
-<ul>
-<li>如果你看到这样的提示，说明你的pyqt安装失败，你需要检查你下载的pyqt版本是不是正确</li>
-</ul>
-<img src="/2015/06/01/python教程：[73]下载安装eric4/c856613e6709c93d973c8dc59c3df8dcd00054f3.jpg" alt="python教程：[73]下载安装eric4" title="python教程：[73]下载安装eric4">
-<ul>
-<li>你最好在安装eric钱先验证一下是不是有pyqt4包</li>
-</ul>
-<img src="/2015/06/01/python教程：[73]下载安装eric4/cc506c8b4710b912390f75ccc0fdfc03934522f3.jpg" alt="python教程：[73]下载安装eric4" title="python教程：[73]下载安装eric4">
-<ul>
-<li><p>这里是需要下载的安装包：PyQt4:链接: <a href="http://pan.baidu.com/s/1bBrWE" target="_blank" rel="external">http://pan.baidu.com/s/1bBrWE</a> 密码: 1lqs</p>
-</li>
-<li><p>Eric4: 链接: <a href="http://pan.baidu.com/s/1o6Lof70" target="_blank" rel="external">http://pan.baidu.com/s/1o6Lof70</a> 密码: qyfz</p>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1036,19 +1030,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -1176,7 +1170,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 

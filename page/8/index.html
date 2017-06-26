@@ -157,6 +157,136 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/08/11/Excel2013：[53]数字日期转日期格式/">
+                Excel2013：[53]数字日期转日期格式
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>打算计算月龄，但是只得到了生日，生日又是字符串格式的，比如20080102，这种数字或者字符串格式的日期是不可以直接转换成日期格式的，这样就无法计算月龄。我们的办法是使用公式date来生成日期，下面看看具体的做法：</p>
+<ul>
+<li>首先我们看一下转换后的效果</li>
+</ul>
+<img src="/2016/08/11/Excel2013：[53]数字日期转日期格式/ac2fc3c451da81cbcaa6703e5066d01608243146.jpg" alt="Excel2013：[53]数字日期转日期格式" title="Excel2013：[53]数字日期转日期格式">
+<ul>
+<li>我们先来学习一下DATE函数，例如我们用它生成2007年1月2日</li>
+</ul>
+<img src="/2016/08/11/Excel2013：[53]数字日期转日期格式/509b9fcb39dbb6fda71b16d50b24ab18962b3746.jpg" alt="Excel2013：[53]数字日期转日期格式" title="Excel2013：[53]数字日期转日期格式">
+<ul>
+<li>这就是生成后的样式</li>
+</ul>
+<img src="/2016/08/11/Excel2013：[53]数字日期转日期格式/d1571724ab18972b2e7af339e4cd7b899f510a46.jpg" alt="Excel2013：[53]数字日期转日期格式" title="Excel2013：[53]数字日期转日期格式">
+<ul>
+<li>我们再来看一下mid函数，假如我们要提取某个字符串的前4个字符，使用如下的写法，其中M2代表单元格，它里面是一个字符串，第二个参数是1代表从第一个字符开始截取，最后一个参数是4表示总共截取4个字符</li>
+</ul>
+<img src="/2016/08/11/Excel2013：[53]数字日期转日期格式/7ac880510fb30f2443d91ff0ca95d143ac4b0346.jpg" alt="Excel2013：[53]数字日期转日期格式" title="Excel2013：[53]数字日期转日期格式">
+<ul>
+<li>它的结果就是得到了2008这个年份</li>
+</ul>
+<img src="/2016/08/11/Excel2013：[53]数字日期转日期格式/58af236d55fbb2fb1342abe14d4a20a44723dc9d.jpg" alt="Excel2013：[53]数字日期转日期格式" title="Excel2013：[53]数字日期转日期格式">
+<ul>
+<li>所以，我们直接使用两个函数的组合就可以了：其中M2表示存放字符型日期的单元格</li>
+</ul>
+<img src="/2016/08/11/Excel2013：[53]数字日期转日期格式/a54e55fbfbedab640d31be33f536afc378311e46.jpg" alt="Excel2013：[53]数字日期转日期格式" title="Excel2013：[53]数字日期转日期格式">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/">
+                Mysql教程：[1]下载安装配置详细教程
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月11日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>如果不小心你下载了免安装的mysql，那么你比较倒霉，你找不到setup文件，还得自己去配置很多东西，然后再使用命令安装。所以我今天呢写一篇教程，写的尽量详细，即便是菜鸟也能安装，我自己安装过很多遍了，方法没问题，下面看具体的教程：</p>
+<ul>
+<li>通过搜索找到mysql的官方，然后在官网找到下载页面，注意别下载错了，我们仔细看</li>
+</ul>
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/c87c6ecf3bc79f3d655fd57ab8a1cd11738b29fa.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<ul>
+<li>在这里，我们找到这个installer ，点击进入</li>
+</ul>
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/4d4970061d950a7bff737f8e08d162d9f3d3c9f3.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<ul>
+<li>然后，我们看页面最下面，不管是64位还是32位，都是下载这个安装文件</li>
+</ul>
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/2f3295d4b31c87014ef083ac257f9e2f0608fff3.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<ul>
+<li><p>下载下来以后，我们就可以看到这个界面，安装过程很简单，现在就是掩饰一下，仔细看图<br>跳过检查更新：<br>选择只安装服务器，因为别的基本没用：<br>检查你需要安装的其他框架，我这里没有其他需要，如果提示你安装其他的，你得安装：<br>执行安装：</p>
+</li>
+<li><p>设置密码：</p>
+</li>
+</ul>
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/11794d43fbf2b211d368b404c88065380dd78ef2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/906289dda144ad3410f9b6cdd2a20cf430ad85f2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/8c511fe93901213fe1757f9656e736d12e2e95f2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/b87985504fc2d562e74ee1a7e51190ef77c66cf2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/48151723dd54564eed08d573b1de9c82d0584fcf.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/570f8c58d109b3de1ef9d522cebf6c81810a4cf2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/6dc09e0a19d8bc3e384e3780808ba61ea9d345f2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/fc5e5f34970a304eb76491b0d3c8a786c8175cf2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/d478a8003af33a87de4a3350c45c10385343b511.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/0865b518972bd40788aae2b779899e510eb309cf.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/d7c9ca3f8794a4c2d065d6610cf41bd5ac6e39f2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/5327ce160924ab182c50d07d37fae6cd7a890bf2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/43e6c733c895d1436a30d56971f082025baf07f2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/834344afa40f4bfb3596af1e014f78f0f63618f2.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<ul>
+<li>安装完成！你可以打开开始菜单就能找到mysql</li>
+</ul>
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/79b1e936afc37931df05b763e9c4b74542a911cf.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<ul>
+<li>打开以后，提示你输入密码，你就输入刚才建立的密码</li>
+</ul>
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/8bc3a7014a90f60392f6ad0d3b12b31bb151edf3.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<ul>
+<li>看到这里，说明安装成功。</li>
+</ul>
+<img src="/2016/08/11/Mysql教程：[1]下载安装配置详细教程/42e89c26cffc1e1757d2bd7b4890f603728de9c8.jpg" alt="Mysql教程：[1]下载安装配置详细教程" title="Mysql教程：[1]下载安装配置详细教程">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/08/05/mysql教程：[1]下载安装与配置/">
                 mysql教程：[1]下载安装与配置
             </a>
@@ -958,157 +1088,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/07/23/Excel2013：[4]双层饼图怎么做/">
-                Excel2013：[4]双层饼图怎么做
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年07月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天做一个数据报告，需要用到双层饼图，我发现老板对图表的要求越来越高了，来回整了很多遍，觉得很值得跟大家分享这个方法，喜欢的童鞋可以收藏或者分享奥！我们来看看具体的操作过程吧。</p>
-<ul>
-<li>先使用a列数据做一个饼图，如图所示。这个很简单啦，大家一看就知道</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/79b1e936afc37931c08cbc3de9c4b74542a911fa.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>接着我们要在饼图上右键单击，选择数据</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/72b19c025aafa40f890cf4c9a964034f79f01998.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>在这个对话框里，我们需要添加新的数据系列，所以点击【添加】按钮</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/4bd1e803738da977e1cbbc3fb251f8198718e3fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>将b列数据填入到相应的位置，系列名称就是a，系列值就是3、4、5这三个值</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/a0ca99d6277f9e2fefd1271c1d30e924b999f3fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/29790130e924b89944d8432c6c061d950b7bf6fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>回到这个对话框，点击确定按钮</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/b9d8b7014c086e06ed4c055f00087bf40bd1cbfb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>完成以后，你会发现没有任何变化，不要着急，还需要设置</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/263e802f07082838f5c7e600ba99a9014d08f199.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>双击饼图，在右侧出现了设置数据系列格式，点击那个直方图的标志</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/f6428f8fa0ec08fa50e729b35bee3d6d54fbdafb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>设置系列绘制在次坐标轴，记住一定是次坐标轴，然后设置饼图的分离程度，略微的分离一下。你会看到分离的效果。</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/27d647ee3d6d55fbb4214c326f224f4a21a4ddfb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/09bb4f3d269759ee39955adfb0fb43166c22df99.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>将分离的饼图拖动，使其聚集在中间的位置</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/425773224f4a20a44ddb06d392529822730ed099.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>选中第二层饼图，也就是下面那个较大的饼图，在其上面右键单击，选择【更改系列图表类型】</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/99636c0e0cf3d7ca69330562f01fbe096a63a999.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>我们看到可以在这里设置图表类型，我们将b系列设置成环状图</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/6a2112338744ebf806b45e2bdbf9d72a6159a799.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/5202e5f2b211931386a4c5a467380cd790238dfb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/906289dda144ad346758bd93d2a20cf430ad85fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>接着，我们调整一下环状图的内径大小，使其和中间分离</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/adee30dda3cc7cd9c7ca0ecd3b01213fb90e91fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<ul>
-<li>最后，调整色调和风格，看看我的成功作品吧！</li>
-</ul>
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/7aad4ae736d12f2eeae294744dc2d562843568fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<img src="/2016/07/23/Excel2013：[4]双层饼图怎么做/d4239b35e5dde711ca3579e2a5efce1b9c1661fb.jpg" alt="Excel2013：[4]双层饼图怎么做" title="Excel2013：[4]双层饼图怎么做">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/07/23/Python教程：[65]获取文件信息/">
-                Python教程：[65]获取文件信息
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年07月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>怎样获取文件的创建时间、修改时间、大小、路径等信息？我们今天就要通过一个已知路径来获取这些信息，下面是具体的方法：</p>
-<ul>
-<li>先来一如一个os模块，然后写一个路径，比如fpath</li>
-</ul>
-<img src="/2016/07/23/Python教程：[65]获取文件信息/42e89c26cffc1e17de1a34b14890f603728de94e.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
-<ul>
-<li>通过join方法，得到一个txt文件的路径:join</li>
-</ul>
-<img src="/2016/07/23/Python教程：[65]获取文件信息/8bc3a7014a90f6032b1524c73b12b31bb151ed4e.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
-<ul>
-<li>看一下，现在这个路径指向一个txt文件</li>
-</ul>
-<img src="/2016/07/23/Python教程：[65]获取文件信息/263e802f07082838734a6494ba99a9014d08f1a8.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
-<ul>
-<li>判断一下这个路径是否指向的是文件，而不是我文件夹:isfile</li>
-</ul>
-<img src="/2016/07/23/Python教程：[65]获取文件信息/6f4703950a7b02080e8e876160d9f2d3562cc8a8.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
-<ul>
-<li>获取文件的修改时间:getatime</li>
-</ul>
-<img src="/2016/07/23/Python教程：[65]获取文件信息/4bac30738bd4b31ce2992c3b85d6277f9f2ff84e.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
-<ul>
-<li>获取文件的创建时间:getctime</li>
-</ul>
-<img src="/2016/07/23/Python教程：[65]获取文件信息/566d0fdfa9ec8a131e5def60f503918fa1ecc0a8.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
-<ul>
-<li>获取文件的大小:getsize</li>
-</ul>
-<img src="/2016/07/23/Python教程：[65]获取文件信息/90cebeec08fa513da2edd45e3f6d55fbb3fbd9a8.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
-<ul>
-<li>获取文件的绝对路径：abspath</li>
-</ul>
-<img src="/2016/07/23/Python教程：[65]获取文件信息/a1ad16fa513d2697dc94b0dd57fbb2fb4216d8a8.jpg" alt="Python教程：[65]获取文件信息" title="Python教程：[65]获取文件信息">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1151,19 +1130,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/神经网络python库keras在windows下部署过程，带下载链接/">神经网络python库keras在windows下</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/11/人工神经网络入门-代码实现ORC/">人工神经网络入门+代码实现ORC</a>
             </li>
             
         </ul>
@@ -1291,7 +1270,7 @@ var _hmt = _hmt || [];
 <!-- baidu_share -->
 
 	
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
