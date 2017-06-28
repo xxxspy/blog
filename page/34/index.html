@@ -157,6 +157,62 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/04/23/pandas教程：[17]字符串提取数据/">
+                pandas教程：[17]字符串提取数据
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月23日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>很多时候数据都是以字符串的形式保存的，比如多选题的答案，很多人都是用‘ABCD’这种形式保存数据，那么我们怎样将这样的数据提取出来，转换成可以统计的数据呢？pandas的extract可以做到这些。</p>
+<ul>
+<li>先来创建一个数据序列<br>查看一下数据内容</li>
+</ul>
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/9a1151c2d56285351b988f2593ef76c6a7ef637f.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/4e83cb628535e5dd1865f8db75c6a7efce1b622e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<ul>
+<li>使用extract方法提取数字：它的第一个参数是正则表达式，括号表示要提取的部分<br>输出内容为：（注意无法匹配的内容用NaN表示）</li>
+</ul>
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/e49cf91190ef76c6a59aa62f9e16fdfaaf51672e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/91ae68c6a7efce1b996395ceac51f3deb48f652e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<ul>
+<li>假如我们要提取多个数据，可以使用多个括号<br>输出内容为：</li>
+</ul>
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/9864a2315c6034a84d99e585c81349540923767f.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/f29faa8f8c5494eefb6a521d2ef5e0fe99257e2e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<ul>
+<li>你要灵活使用问号，它表示可有可无，下面的方式可以匹配字符“c”<br>输出内容为：</li>
+</ul>
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/95afee1f3a292df5ee8bf111bf315c6034a8732e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/9864a2315c6034a84daae585c81349540923762e.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<ul>
+<li>如果我们想要让输出的结果包含变量名（列名），我们可以使用下面的写法：<br>输出结果为：</li>
+</ul>
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/9319cf09b3de9c82cf1ea48b6f81800a19d8437f.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<img src="/2015/04/23/pandas教程：[17]字符串提取数据/814b07d8bc3eb13516bceabfa51ea8d3fd1f447f.jpg" alt="pandas教程：[17]字符串提取数据" title="pandas教程：[17]字符串提取数据">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/04/19/pandas教程：[27]散点图和抖动图/">
                 pandas教程：[27]散点图和抖动图
             </a>
@@ -374,6 +430,77 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/">
+                SPSS实例：[28]卡方检验百分比与理论值差异
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年04月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们有一个研究检验某种疗法的有效性，统计了实施前后的人数，我们想要比较实施前和实施后人数是否有差异，怎么比较？有两种数据结构，得使用不同的方法，下面将要介绍的是这种数据没有原始数据，只有计数数据，如下图。变量9表示人数，实施前后表示该方法实施前用0表示，实施后用1表示。另外一种数据结构是你有原始数据，而不是计数数据，你可以参考我以前的文章：<a href="http://jingyan.baidu.com/article/d8072ac4587f6dec95cefd9a.html" target="_blank" rel="external">http://jingyan.baidu.com/article/d8072ac4587f6dec95cefd9a.html</a></p>
+<ul>
+<li>首先要给数据加权，我们在data菜单下，选择case加权</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/c71d0e385343fbf213af316fb27eca8064388fb8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>将变量9放入频数变量框，点击【ok】，完成加权（如果有原始数据，则不需要加权）</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/29790130e924b899f378ee746c061d950b7bf6f3.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>接着我们来做卡方检验，在菜单栏上执行：分析–非参检验–遗留选项–卡方检验</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/906289dda144ad34f23c10cbd2a20cf430ad85b8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>将实施前后变量放入检验变量框。</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/0db52fadcbef7609f9880ed32cdda3cc7dd99eb8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>这里有一个问题，如果你的数据有一个单元格频数小于5，你得使用精确卡方检验，需要点击【exact】进行设置</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/f99dcf00baa1cd117002e46cbb12c8fcc2ce2d82.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>勾选这个选项，点击继续</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/c9bdddcec3fdfc039bcc75f4d63f8794a5c22682.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>接着设置这里，我们可以检验不同组人数是否相同，使用【所有分类相同】；</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/27d647ee3d6d55fbc02fe06a6f224f4a21a4dd56.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>也可以自己设定频数，比如我设定为2和6，当然今天我们只讲上面的【所有分类相同】的情况。</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/1cd4147b02087bf46a59c1a5f0d3572c10dfcf82.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>这里就是检验结果了，sig值大于0.05，结果不显著，说明两组之间没有差异。</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/30ecd5ef76094b361f118ca1a1cc7cd98c109db8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<ul>
+<li>如果你用的是精确检验就会看大有一个精确sig值</li>
+</ul>
+<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/91138622720e0cf3abe7dfb70846f21fbe09aa2f.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/04/19/Excel2013：[59]匹配不同工作表记录/">
                 Excel2013：[59]匹配不同工作表记录
             </a>
@@ -478,77 +605,6 @@
 <li><p>End Sub</p>
 </li>
 </ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/">
-                SPSS实例：[28]卡方检验百分比与理论值差异
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年04月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>我们有一个研究检验某种疗法的有效性，统计了实施前后的人数，我们想要比较实施前和实施后人数是否有差异，怎么比较？有两种数据结构，得使用不同的方法，下面将要介绍的是这种数据没有原始数据，只有计数数据，如下图。变量9表示人数，实施前后表示该方法实施前用0表示，实施后用1表示。另外一种数据结构是你有原始数据，而不是计数数据，你可以参考我以前的文章：<a href="http://jingyan.baidu.com/article/d8072ac4587f6dec95cefd9a.html" target="_blank" rel="external">http://jingyan.baidu.com/article/d8072ac4587f6dec95cefd9a.html</a></p>
-<ul>
-<li>首先要给数据加权，我们在data菜单下，选择case加权</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/c71d0e385343fbf213af316fb27eca8064388fb8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>将变量9放入频数变量框，点击【ok】，完成加权（如果有原始数据，则不需要加权）</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/29790130e924b899f378ee746c061d950b7bf6f3.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>接着我们来做卡方检验，在菜单栏上执行：分析–非参检验–遗留选项–卡方检验</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/906289dda144ad34f23c10cbd2a20cf430ad85b8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>将实施前后变量放入检验变量框。</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/0db52fadcbef7609f9880ed32cdda3cc7dd99eb8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>这里有一个问题，如果你的数据有一个单元格频数小于5，你得使用精确卡方检验，需要点击【exact】进行设置</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/f99dcf00baa1cd117002e46cbb12c8fcc2ce2d82.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>勾选这个选项，点击继续</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/c9bdddcec3fdfc039bcc75f4d63f8794a5c22682.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>接着设置这里，我们可以检验不同组人数是否相同，使用【所有分类相同】；</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/27d647ee3d6d55fbc02fe06a6f224f4a21a4dd56.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>也可以自己设定频数，比如我设定为2和6，当然今天我们只讲上面的【所有分类相同】的情况。</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/1cd4147b02087bf46a59c1a5f0d3572c10dfcf82.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>这里就是检验结果了，sig值大于0.05，结果不显著，说明两组之间没有差异。</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/30ecd5ef76094b361f118ca1a1cc7cd98c109db8.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
-<ul>
-<li>如果你用的是精确检验就会看大有一个精确sig值</li>
-</ul>
-<img src="/2015/04/19/SPSS实例：[28]卡方检验百分比与理论值差异/91138622720e0cf3abe7dfb70846f21fbe09aa2f.jpg" alt="SPSS实例：[28]卡方检验百分比与理论值差异" title="SPSS实例：[28]卡方检验百分比与理论值差异">
 <blockquote>
 <p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
 <p>邮箱: 675495787@qq.com </p>
@@ -956,65 +1012,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/04/15/Python教程：[2]pythonwin安装与下载/">
-                Python教程：[2]pythonwin安装与下载
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年04月15日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>很多人并不习惯在dos窗口中编辑python，包括我，我还是习惯在一些比较成熟的开发环境中编辑python，所以我们需要配置一个Pythonwin作为windows下的开发环境，当然你是用Linux就不关我的事情了，我不懂Linux，只能再windows下面来做，下面是安装的过程，在最下面的参考资料有提供Pythonwin的下载链接。因为我安装的python版本号是3.2，所以要下载对应版本的Pythonwin，下面我们先来看看如何知道自己python的版本号。</p>
-<ul>
-<li>打开windows的运行窗口，输入cmd，点击确定，打开命令窗口</li>
-</ul>
-<img src="/2015/04/15/Python教程：[2]pythonwin安装与下载/246cca2a2834349b7a32e0afcbea15ce36d3bea1.jpg" alt="Python教程：[2]pythonwin安装与下载" title="Python教程：[2]pythonwin安装与下载">
-<ul>
-<li>在命令窗口中输入python，你就会看到python的版本号，如图所示</li>
-</ul>
-<img src="/2015/04/15/Python教程：[2]pythonwin安装与下载/346bd85c103853437cfb090b9113b07eca8088a1.jpg" alt="Python教程：[2]pythonwin安装与下载" title="Python教程：[2]pythonwin安装与下载">
-<ul>
-<li>如果你的python版本为3.2，你可以直接从下面的参考资料里下载pythonwin；如果你的版本不对，你可以看下面参考资料里第二个链接，可以让你找到所有版本的下载，打开这个界面以后，你会看到这个列表，版本号就在红色方框里。</li>
-</ul>
-<img src="/2015/04/15/Python教程：[2]pythonwin安装与下载/34bbf8cd7b899e51058ab43e40a7d933c8950d50.jpg" alt="Python教程：[2]pythonwin安装与下载" title="Python教程：[2]pythonwin安装与下载">
-<ul>
-<li>安装就非常简单了，下载下来以后，我们双击打开，你会看到软件自己读取了python的安装目录，你什么都不用做，点击下一步。</li>
-</ul>
-<img src="/2015/04/15/Python教程：[2]pythonwin安装与下载/9252ae7eca80653881de2a3995dda144ad3482a1.jpg" alt="Python教程：[2]pythonwin安装与下载" title="Python教程：[2]pythonwin安装与下载">
-<ul>
-<li>接着点击下一步开始安装，等待一分钟就能安装完毕。</li>
-</ul>
-<img src="/2015/04/15/Python教程：[2]pythonwin安装与下载/4e83cb628535e5dd49c02af574c6a7efcf1b62e9.jpg" alt="Python教程：[2]pythonwin安装与下载" title="Python教程：[2]pythonwin安装与下载">
-<ul>
-<li>安装完成以后，在开始菜单中就能找到Pythonwin，打开它</li>
-</ul>
-<img src="/2015/04/15/Python教程：[2]pythonwin安装与下载/d872d695d143ad4bc0cec8ea80025aafa50f06fc.jpg" alt="Python教程：[2]pythonwin安装与下载" title="Python教程：[2]pythonwin安装与下载">
-<ul>
-<li>这就是pythonwin的界面了，在这个界面你可以编辑python语句。</li>
-</ul>
-<img src="/2015/04/15/Python教程：[2]pythonwin安装与下载/34bbf8cd7b899e51057bb43e40a7d933c9950de7.jpg" alt="Python教程：[2]pythonwin安装与下载" title="Python教程：[2]pythonwin安装与下载">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1057,6 +1054,10 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/28/svd和pca的区别和联系，附代码实现/">svd和pca的区别和联系，附代码实现</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
             </li>
             
@@ -1066,10 +1067,6 @@
             
             <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
             </li>
             
         </ul>

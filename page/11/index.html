@@ -157,6 +157,79 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/">
+                网页数据采集：[3]python如何利用抓包数据
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年06月19日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>上次我们教大家如何使用httpwatch来进行抓包，其实这不重要，重要的是如何使用获得的数据包，你能读懂数据包吗？好吧，我们今天就是用python来示范一下如何使用数据包。</p>
+<ul>
+<li>先来设置两个url地址，第一个用于第一次访问，这样可以获得网站服务器发来的cookie，第二个网址是用于登陆的地址</li>
+</ul>
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/fcbbb151f3deb48fd18981f0f21f3a292cf578f8.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<ul>
+<li>引入两个模块，cookielib和urllib2</li>
+</ul>
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/8d158aeef01f3a294c28f5e09b25bc315d607cf8.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<ul>
+<li>接着，我们安装一个cookie处理器，代码如下，这个代码很多人不太能读懂，其实你会用就可以了，他们就是这个固定的形式，顶多改改变量的名字。你复制下来以后自己用就可以了，用多了，你再去看代码的意义，你就都懂了。</li>
+</ul>
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/58c3acb7d0a20cf40d6edef174094b36adaf99e6.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<ul>
+<li>然后我们先访问一下网站，获得一个cookie，你不用管这个cookie该怎么弄，前面设置的cookie处理器会自动处理。</li>
+</ul>
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/9864a2315c6034a8390298afc9134954082376f8.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<ul>
+<li>接着，我们写一下postdata，也就是你要post的数据，因为我们打算登陆网站，所以postdata里肯定有用户名和密码，那么怎么知道该怎么写postdata呢？看你抓包得到的post数据。下面第一幅图是httpwatch抓包截图，点击postdata，看到post的数据，然后我们看第二幅图，就是python的写法。你自己感受一下。</li>
+</ul>
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/d041a4a1cd11728bd7faaf0ccafcc3cec2fd2c8d.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/35e940df8db1cb1323891c3ddf54564e93584bf8.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<ul>
+<li>写完postdata以后，我们 要将postdata转码一下，让服务器可以解读postdata数据</li>
+</ul>
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/2f9cbdcc7cd98d10442a2c1f233fb80e7aec90e6.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<ul>
+<li>接着设置headers信息，headers也是抓包得到的。同样的方式，你去写header内的信息</li>
+</ul>
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/0b907cd9f2d3572ce14cbef28813632762d0c337.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/7d98931001e9390166fcad1079ec54e737d196e6.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<ul>
+<li>然后我们通过request方法来登陆网站，并返回数据，返回的数据存储在request中</li>
+</ul>
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/00a82701213fb80e322f41f934d12f2eb83894e6.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<ul>
+<li>通过rulopen方法和read方法来读取数据，并打印出来。</li>
+</ul>
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/32bb9c8ba61ea8d380c2542a950a304e241f58f8.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<ul>
+<li>我们看到输出的结果，这说明我们虽然正确的模拟了登陆网站需要的post信息，但是没有考虑到登陆网站是需要验证码的，后期我们会看到如何处理验证码，如果你拿这个教程去处理没有验证码的登陆问题，那么你现在已经成功了。</li>
+</ul>
+<img src="/2016/06/19/网页数据采集：[3]python如何利用抓包数据/4e83cb628535e5ddb4d285f174c6a7efcf1b62e6.jpg" alt="网页数据采集：[3]python如何利用抓包数据" title="网页数据采集：[3]python如何利用抓包数据">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/06/19/pandas教程：[31]箱形图/">
                 pandas教程：[31]箱形图
             </a>
@@ -734,65 +807,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/06/01/amos21.0教程：[5]结构方程图中的符号意义/">
-                amos21.0教程：[5]结构方程图中的符号意义
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年06月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <pre><code>结构方程模型中使用很多符号，要想看懂模型必须知道这些符号代表的意义，所以我在这里总结一下在结构方程模型中出现的符号到底是什么意义。以后你看到不懂得符号都可以来这里查询，不懂得还可以在下面提问。
-</code></pre><ul>
-<li>ξ（可习）和η（伊塔）都是潜变量的符号，前者是外因潜变量，是事物发生的原因；后者是内因潜变量是事物发生的结果。</li>
-</ul>
-<img src="/2016/06/01/amos21.0教程：[5]结构方程图中的符号意义/6a22e8246b600c3361b2af431b4c510fd8f9a137.jpg" alt="amos21.0教程：[5]结构方程图中的符号意义" title="amos21.0教程：[5]结构方程图中的符号意义">
-<ul>
-<li>X和Y：前者是外因潜变量的观察变量或者指标变量，后者是内因潜变量的观察变量或者指标变量。</li>
-</ul>
-<img src="/2016/06/01/amos21.0教程：[5]结构方程图中的符号意义/7d98931001e939013929fdb57aec54e737d196d6.jpg" alt="amos21.0教程：[5]结构方程图中的符号意义" title="amos21.0教程：[5]结构方程图中的符号意义">
-<ul>
-<li>δ和ε：前者是X的测量误差，后者是Y的测量误差。</li>
-</ul>
-<img src="/2016/06/01/amos21.0教程：[5]结构方程图中的符号意义/4e83cb628535e5ddc307d55477c6a7efcf1b62d6.jpg" alt="amos21.0教程：[5]结构方程图中的符号意义" title="amos21.0教程：[5]结构方程图中的符号意义">
-<ul>
-<li>ζ（zeta）内因潜变量的误差。</li>
-</ul>
-<img src="/2016/06/01/amos21.0教程：[5]结构方程图中的符号意义/e8112b2ac65c1038adb5bf49b3119313b17e8937.jpg" alt="amos21.0教程：[5]结构方程图中的符号意义" title="amos21.0教程：[5]结构方程图中的符号意义">
-<ul>
-<li>β（beta）和γ（gamma）：前者是内因潜变量间的关联系数；后者是内因潜变量与外因潜变量之间的关联系数。</li>
-</ul>
-<img src="/2016/06/01/amos21.0教程：[5]结构方程图中的符号意义/fab3ac119313b07ec97721830dd7912396dd8c37.jpg" alt="amos21.0教程：[5]结构方程图中的符号意义" title="amos21.0教程：[5]结构方程图中的符号意义">
-<ul>
-<li>Φ（phi）和Ψ（psi）：前者是外因潜变量的变异协方差矩阵；后者是内因潜变量残差项的变异协方差矩阵。</li>
-</ul>
-<img src="/2016/06/01/amos21.0教程：[5]结构方程图中的符号意义/cbc17b380cd79123902ae5ffac345982b3b78037.jpg" alt="amos21.0教程：[5]结构方程图中的符号意义" title="amos21.0教程：[5]结构方程图中的符号意义">
-<ul>
-<li>λ（lambda）：可以表示X与外因潜变量之间的系数矩阵，也可以表示Y与内因潜变量之间的系数矩阵。</li>
-</ul>
-<img src="/2016/06/01/amos21.0教程：[5]结构方程图中的符号意义/58c3acb7d0a20cf43f5a8f5477094b36adaf9937.jpg" alt="amos21.0教程：[5]结构方程图中的符号意义" title="amos21.0教程：[5]结构方程图中的符号意义">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -835,6 +849,10 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/28/svd和pca的区别和联系，附代码实现/">svd和pca的区别和联系，附代码实现</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
             </li>
             
@@ -844,10 +862,6 @@
             
             <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
             </li>
             
         </ul>

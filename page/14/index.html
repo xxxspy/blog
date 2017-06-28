@@ -157,6 +157,57 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/">
+                amos21.0教程：[3]结构方程中的结构模型
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年05月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <pre><code>前一篇文章中我们介绍了结构方程模型中的测量模型，那么构成结构方程模型的另一部分就是结构模型，结构模型反应的是潜变量之间的关系，相当于通常所说的路径分析，但是结构模型比路径分析要复杂的多。下面我们详细介绍一下结构模型：
+</code></pre><ul>
+<li>首先要看到结构模型都是由潜变量构成的，潜变量可以分为外因潜变量（ζ）和内因潜变量（η）。外因潜变量指的是原因，内因潜变量指的是结果，外因潜变量影响内因潜变量，所以我们在amos中绘图的时候，箭头都是由外因潜变量指向内因潜变量。内因潜变量和外因潜变量之间的相关系数用η来表示。</li>
+</ul>
+<img src="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/507c389759ee3d6d10fb624c42166d224f4ade3d.jpg" alt="amos21.0教程：[3]结构方程中的结构模型" title="amos21.0教程：[3]结构方程中的结构模型">
+<ul>
+<li>在amos中绘图，绘制内因潜变量和外因潜变量，根据下图我们还可以得到一个方程，其中ζ表示残差项，也就是图中的干扰变量。注意内因潜变量写在等式的左边。</li>
+</ul>
+<img src="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/0d729944ebf81a4c0c0f094ed62a6059252da63d.jpg" alt="amos21.0教程：[3]结构方程中的结构模型" title="amos21.0教程：[3]结构方程中的结构模型">
+<ul>
+<li>假如有两个外因潜变量对内因潜变量有影响，我们的绘图方法如下，根据图可以得出方程。图中大写的φ指的是两个外因潜变量之间的相关，我们看到他们的相关用了一个双向箭头来表示，并且不是直线箭头，而是弯曲的。你绘图的时候也要注意两个外因潜变量使用双向箭头表示相关。</li>
+</ul>
+<img src="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/3bc6f750352ac65c62cd9cf4faf2b21192138a2a.jpg" alt="amos21.0教程：[3]结构方程中的结构模型" title="amos21.0教程：[3]结构方程中的结构模型">
+<ul>
+<li>两个内因潜变量之间的关系我们用β表示，因果关系用单向箭头表示。</li>
+</ul>
+<img src="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/148f28d3d539b60056f3ea30e850352ac65cb73d.jpg" alt="amos21.0教程：[3]结构方程中的结构模型" title="amos21.0教程：[3]结构方程中的结构模型">
+<ul>
+<li>更复杂的模型就是既有两个以上的内因潜变量，通常有几个内因潜变量我们就要写出几个方程，写方程关键是看有多少路径，每条路径都是一个方程。路径是沿着箭头的方向从起点到终点的。比如下面我用红色箭头标出了路径之一。此路径的方程就是下面红色方框中的。</li>
+</ul>
+<img src="/2016/05/15/amos21.0教程：[3]结构方程中的结构模型/a005b3345982b2b750a2dc4330adcbef76099b3d.jpg" alt="amos21.0教程：[3]结构方程中的结构模型" title="amos21.0教程：[3]结构方程中的结构模型">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/05/11/spss如何筛选部分case/">
                 spss如何筛选部分case
             </a>
@@ -748,67 +799,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/04/23/scipy教程：[1]64位下载安装/">
-                scipy教程：[1]64位下载安装
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年04月23日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>如何在windows 64位下安装scipy，我在Google和百度上搜了一星期，也没找到合适的方法，后来找到一个python大牛，帮我看了看问题，然后发给我两个Excel安装包，他号称是自己做的，后来果然安装成功，下面我写下自己的安装过程，其实很简单。我们需要的就是numpy-MKL-1.8.1.win-amd64-py2.7.exe和scipy-0.14.0.win-amd64-py2.7.exe这两个安装包，然后就是一路点击下一步。</p>
-<ul>
-<li><p>numpy-MKL-1.8.1.win-amd64-py2.7.exe这个是python用于科学计算的基础包，下面的参考链接里第一个链接就是下载方法。</p>
-</li>
-<li><p>scipy-0.14.0.win-amd64-py2.7.exe这个是pytbon的scipy包的二进制安装包，将这两个文件都下载下来</p>
-</li>
-<li><p>先安装numpy-MKL-1.8.1.win-amd64-py2.7.exe，双击打开</p>
-</li>
-</ul>
-<img src="/2016/04/23/scipy教程：[1]64位下载安装/a84052086e061d95ce8b3ecf79f40ad163d9ca3d.jpg" alt="scipy教程：[1]64位下载安装" title="scipy教程：[1]64位下载安装">
-<ul>
-<li>点击下一步</li>
-</ul>
-<img src="/2016/04/23/scipy教程：[1]64位下载安装/78701455b319ebc417b57f6e8026cffc1f17163c.jpg" alt="scipy教程：[1]64位下载安装" title="scipy教程：[1]64位下载安装">
-<ul>
-<li>设置Python的安装文件夹，我这里是在D盘</li>
-</ul>
-<img src="/2016/04/23/scipy教程：[1]64位下载安装/caae68094b36acaf34289f0b7ed98d1000e99c39.jpg" alt="scipy教程：[1]64位下载安装" title="scipy教程：[1]64位下载安装">
-<ul>
-<li>接着一路点击下一步即可。</li>
-</ul>
-<img src="/2016/04/23/scipy教程：[1]64位下载安装/adee30dda3cc7cd990e53d2e3b01213fb90e9139.jpg" alt="scipy教程：[1]64位下载安装" title="scipy教程：[1]64位下载安装">
-<ul>
-<li>安装scipy的过程也一样，设置好了安装路径以后，一路点击下一步</li>
-</ul>
-<img src="/2016/04/23/scipy教程：[1]64位下载安装/7aad4ae736d12f2e9fcda7974dc2d56284356839.jpg" alt="scipy教程：[1]64位下载安装" title="scipy教程：[1]64位下载安装">
-<img src="/2016/04/23/scipy教程：[1]64位下载安装/dbf554ed2e738bd406ecbbc6a38b87d6267ff93d.jpg" alt="scipy教程：[1]64位下载安装" title="scipy教程：[1]64位下载安装">
-<ul>
-<li>最后，我们引入一下scipy，可以看到我已经安装成功了。</li>
-</ul>
-<img src="/2016/04/23/scipy教程：[1]64位下载安装/f76575600c33874406fb278b530fd9f9d62aa0c8.jpg" alt="scipy教程：[1]64位下载安装" title="scipy教程：[1]64位下载安装">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -851,6 +841,10 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/28/svd和pca的区别和联系，附代码实现/">svd和pca的区别和联系，附代码实现</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
             </li>
             
@@ -860,10 +854,6 @@
             
             <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
             </li>
             
         </ul>

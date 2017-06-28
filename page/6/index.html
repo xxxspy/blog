@@ -157,6 +157,59 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/09/03/SPSS实例：[1]计算信度（α系数）/">
+                SPSS实例：[1]计算信度（α系数）
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年09月03日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>克隆巴赫α系数是我们经常用到的一个信度指标，它指的是某一个维度内，不同题项间的一致程度，在编制问卷或者做探索性因素分析时，我们通常会报告α系数来表明我们的问卷可靠程度或者结构效度。那么在spss中如何计算科隆巴赫系数呢？下面是具体的方法：</p>
+<ul>
+<li>录入数据，如图所示，假如这八个变量都是因子1的几个题项，那么如何计算这个因子的信度呢？</li>
+</ul>
+<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/8474fbdde71190ef9dc8271fcf1b9d16fcfa6084.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<ul>
+<li>在菜单中执行：reliability analysis，如图所示，也就是信度分析</li>
+</ul>
+<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/e1bf8725bc315c60c8a6de2f8cb1cb1348547784.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<ul>
+<li>将这个几个变量放入右侧的items框，记住这几个题项是属于一个维度或者因子的，点击ok即可得到科隆巴赫系数</li>
+</ul>
+<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/b9d8b7014c086e069dcc8a8b03087bf40bd1cb4f.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/ca5257540923dd54554112a8d009b3de9d824884.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<ul>
+<li>有时候我们有大量的信度系数要计算，比如一个问卷有12个维度，每个维度都有一个信度系数，我们就需要重复的操作，不过我们可以使用命令，快速实现，在信度分析对话框中，我们点击paste</li>
+</ul>
+<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/346bd85c1038534338ae32e19213b07ecb80884a.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<ul>
+<li>在命令窗口中，我们找到variables这个命令后面的item，如图所示，这里就是变量名，如果我们想要计算其他的信度，我们可以将变量名进行修改，然后选中所有的命令，点击执行按钮</li>
+</ul>
+<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/62667cd0f703918f2fb5880a503d269758eec44f.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<img src="/2016/09/03/SPSS实例：[1]计算信度（α系数）/6c63514a20a4462395ae10a29922720e0df3d74f.jpg" alt="SPSS实例：[1]计算信度（α系数）" title="SPSS实例：[1]计算信度（α系数）">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/09/01/Excel2013：[3]打开 运行 操作速度慢怎么办/">
                 Excel2013：[3]打开 运行 操作速度慢怎么办
             </a>
@@ -708,77 +761,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/08/19/Excel2013：[38]数据透视表字段分组/">
-                Excel2013：[38]数据透视表字段分组
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年08月19日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>数据透视表可以给字段分组，方便管理和阅读，比如我们汇总的字段中有苹果、李子也有白菜萝卜，明显她们属于不同的类别（水果和蔬菜），所以我们可以给他们分别建立不同的组，具体教程如下：</p>
-<ul>
-<li>先插入一个数据透视表，在【插入】选项下，点击【数据透视表】</li>
-</ul>
-<img src="/2016/08/19/Excel2013：[38]数据透视表字段分组/b3f6cea20cf431ad734eec5f4936acaf2fdd98fd.jpg" alt="Excel2013：[38]数据透视表字段分组" title="Excel2013：[38]数据透视表字段分组">
-<ul>
-<li>这里选择默认的设置就好了点击确定</li>
-</ul>
-<img src="/2016/08/19/Excel2013：[38]数据透视表字段分组/38403f3fb80e7bec9146ac872d2eb9389a506bfd.jpg" alt="Excel2013：[38]数据透视表字段分组" title="Excel2013：[38]数据透视表字段分组">
-<ul>
-<li>将种类拖入行字段，数量拖入值字段，如图所示</li>
-</ul>
-<img src="/2016/08/19/Excel2013：[38]数据透视表字段分组/3790312eb9389b50852a4f348735e5dde6116e44.jpg" alt="Excel2013：[38]数据透视表字段分组" title="Excel2013：[38]数据透视表字段分组">
-<ul>
-<li>现在我们可以看到数据透视表已经做好了，就差分组了</li>
-</ul>
-<img src="/2016/08/19/Excel2013：[38]数据透视表字段分组/2e6fa7389b504fc21ec31f63e7dde71191ef6dfd.jpg" alt="Excel2013：[38]数据透视表字段分组" title="Excel2013：[38]数据透视表字段分组">
-<ul>
-<li>选中属于蔬菜的种类，按下Ctrl见可以选择不连续的多个单元格</li>
-</ul>
-<img src="/2016/08/19/Excel2013：[38]数据透视表字段分组/d4239b35e5dde7115f07ec90a5efce1b9c166144.jpg" alt="Excel2013：[38]数据透视表字段分组" title="Excel2013：[38]数据透视表字段分组">
-<ul>
-<li>点击【分析】选项下的【组选择】</li>
-</ul>
-<img src="/2016/08/19/Excel2013：[38]数据透视表字段分组/e6508eef76c6a7ef1cf30740fffaaf51f2de6644.jpg" alt="Excel2013：[38]数据透视表字段分组" title="Excel2013：[38]数据透视表字段分组">
-<ul>
-<li>你会看到出现了一个新的列，在种类2这里，我们更改类别名称为蔬菜</li>
-</ul>
-<img src="/2016/08/19/Excel2013：[38]数据透视表字段分组/7787b9efce1b9d1629123507f1deb48f8d546444.jpg" alt="Excel2013：[38]数据透视表字段分组" title="Excel2013：[38]数据透视表字段分组">
-<ul>
-<li>接着，我们选择其他的种类</li>
-</ul>
-<img src="/2016/08/19/Excel2013：[38]数据透视表字段分组/8d158aeef01f3a29f11d7aa89b25bc315d607c44.jpg" alt="Excel2013：[38]数据透视表字段分组" title="Excel2013：[38]数据透视表字段分组">
-<ul>
-<li>同样的方法我们建立数据组2，将其重命名为水果</li>
-</ul>
-<img src="/2016/08/19/Excel2013：[38]数据透视表字段分组/ae10eddeb48f8c544d4f6a4938292df5e1fe7ffd.jpg" alt="Excel2013：[38]数据透视表字段分组" title="Excel2013：[38]数据透视表字段分组">
-<ul>
-<li>至此，我们的字段分组就做成了，你学会了吗，请关注我的系列教程【Excel2013实战教程】</li>
-</ul>
-<img src="/2016/08/19/Excel2013：[38]数据透视表字段分组/3b6833f5e0fe992563d9c63636a85edf8cb17144.jpg" alt="Excel2013：[38]数据透视表字段分组" title="Excel2013：[38]数据透视表字段分组">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -821,6 +803,10 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/28/svd和pca的区别和联系，附代码实现/">svd和pca的区别和联系，附代码实现</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
             </li>
             
@@ -830,10 +816,6 @@
             
             <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
             </li>
             
         </ul>

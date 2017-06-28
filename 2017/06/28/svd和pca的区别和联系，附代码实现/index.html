@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="专注于数据开发">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="xxxspy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="svd和pca的区别和联系，附代码实现"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="专注于数据开发" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="DataScience"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>svd和pca的区别和联系，附代码实现 - DataScience</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+    code{
+    color: #d7ecff;
+    font-size: 110%;
+    }
+    </style>
+
+    
+    
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/06/28/svd和pca的区别和联系，附代码实现/">
+                svd和pca的区别和联系，附代码实现
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017年06月28日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <blockquote>
+<p>svd=singular value decomposition<br>pca=principal component analysis</p>
+</blockquote>
+<p>在做潜在语义分析(lsa)的时候，我用的svd，感觉svd和pca非常像，但是又有区别。所以查了一些资料，在这里翻译一下，并在最后，贴上python代码比较了这两种方法。</p>
+<h2 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h2><p>假设<code>\( \mathbf X \)</code>是一个<code>\( n \times p \)</code>的矩阵，<code>n</code>是样本量, 而<code>p</code>是变量个数。那么，我们就可以计算得到协方差矩阵<code>\( \Singma \)</code>：</p>
+<p><code>\[ \Sigma=X^TX/(n-1) \]</code></p>
+<p>由于<code>\( \Sigma \)</code>是对称矩阵，那么它可以对角化:</p>
+<p><code>\[ \Sigma = \mathbf V \mathbf L \mathbf V^\top \]</code></p>
+<p><code>\( \mathbf V \)</code>就是<code>\( \mathbf X \)</code>的特征向量构成的矩阵，而<code>\( \mathbf L \)</code>是一个对角矩阵，对角元素就是特征向量对应的特征值。</p>
+<p>用<code>\( \mathbf Y \)</code>表示主成分矩阵，<code>\( y_i \)</code>表示第i个主成分向量。用<code>\( v_i \)</code>表示第i个特征向量。那么有关系式：</p>
+<p><code>\[ y_i= \mathbf X v_i\]</code></p>
+<p>即：</p>
+<p><code>\[ Y= \mathbf X \mathbf V \]</code></p>
+<h2 id="SVD"><a href="#SVD" class="headerlink" title="SVD"></a>SVD</h2><p>接下来我们看看SVD的性质。对<code>\( \mathbf X \)</code>进行SVD分解：</p>
+<p><code>\[ \mathbf X = \mathbf U \mathbf S \mathbf V^\top \]</code></p>
+<p><code>\( \mathbf V \)</code>和上面提到的<code>\( \mathbf V \)</code>是一样的，但是在SVD中叫做singular vector(奇异向量)，而<code>\( \mathbf S \)</code>叫做奇异值构成的对角矩阵, 它与特征向量是不同的，但是他们之间是成比例的。如此，我们很容易得到：</p>
+<p><code>\[ \mathbf X = \mathbf V \mathbf S \mathbf U^\top \mathbf U \mathbf S \mathbf V^\top /(n-1) = \mathbf V \frac{\mathbf S^2}{n-1}\mathbf V^\top \]</code></p>
+<p>所以，特征值与奇异值之间的关系就是：</p>
+<p><code>\[ \lambda_i = s_i^2/(n-1) \]</code></p>
+<p>主成分也可以得到：</p>
+<p><code>\[ \mathbf X \mathbf V = \mathbf U \mathbf S \mathbf V^\top \mathbf V = \mathbf U \mathbf S \]</code></p>
+<p>下面我们通过python代码来探索svd和pca之间的关系</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> linalg <span class="keyword">as</span> la</div><div class="line">np.random.seed(<span class="number">42</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">flip_signs</span><span class="params">(A, B)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    utility function for resolving the sign ambiguity in SVD</div><div class="line">    http://stats.stackexchange.com/q/34396/115202</div><div class="line">    """</div><div class="line">    signs = np.sign(A) * np.sign(B)</div><div class="line">    <span class="keyword">return</span> A, B * signs</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># Let the data matrix X be of n x p size,</span></div><div class="line"><span class="comment"># where n is the number of samples and p is the number of variables</span></div><div class="line">n, p = <span class="number">5</span>, <span class="number">3</span></div><div class="line">X = np.random.rand(n, p)</div><div class="line"><span class="comment"># Let us assume that it is centered</span></div><div class="line">X -= np.mean(X, axis=<span class="number">0</span>)</div><div class="line"></div><div class="line"><span class="comment"># the p x p covariance matrix</span></div><div class="line">C = np.cov(X, rowvar=<span class="keyword">False</span>)</div><div class="line"><span class="keyword">print</span> (<span class="string">"C = \n"</span>, C)</div><div class="line"><span class="comment"># C is a symmetric matrix and so it can be diagonalized:</span></div><div class="line">l, principal_axes = la.eig(C)</div><div class="line"><span class="comment"># sort results wrt. eigenvalues</span></div><div class="line">idx = l.argsort()[::<span class="number">-1</span>]</div><div class="line">l, principal_axes = l[idx], principal_axes[:, idx]</div><div class="line"><span class="comment"># the eigenvalues in decreasing order</span></div><div class="line"><span class="keyword">print</span> (<span class="string">"l = \n"</span>, l)</div><div class="line"><span class="comment"># a matrix of eigenvectors (each column is an eigenvector)</span></div><div class="line"><span class="keyword">print</span> (<span class="string">"V = \n"</span>, principal_axes)</div><div class="line"><span class="comment"># projections of X on the principal axes are called principal components</span></div><div class="line">principal_components = X.dot(principal_axes)</div><div class="line"><span class="keyword">print</span> (<span class="string">"Y = \n"</span>, principal_components)</div><div class="line"></div><div class="line"><span class="comment"># we now perform singular value decomposition of X</span></div><div class="line"><span class="comment"># "economy size" (or "thin") SVD</span></div><div class="line">U, s, Vt = la.svd(X, full_matrices=<span class="keyword">False</span>)</div><div class="line">V = Vt.T</div><div class="line">S = np.diag(s)</div><div class="line"><span class="keyword">print</span> (<span class="string">"V2 = \n"</span>, V )</div><div class="line"><span class="comment"># 1) then columns of V are principal directions/axes.</span></div><div class="line"><span class="keyword">assert</span> np.allclose(*flip_signs(V, principal_axes))</div><div class="line"></div><div class="line"><span class="comment"># 2) columns of US are principal components</span></div><div class="line"><span class="keyword">assert</span> np.allclose(*flip_signs(U.dot(S), principal_components))</div><div class="line"></div><div class="line"><span class="comment"># 3) singular values are related to the eigenvalues of covariance matrix</span></div><div class="line"><span class="keyword">assert</span> np.allclose((s ** <span class="number">2</span>) / (n - <span class="number">1</span>), l)</div><div class="line"></div><div class="line"><span class="comment"># 8) dimensionality reduction</span></div><div class="line">k = <span class="number">2</span></div><div class="line">PC_k = principal_components[:, <span class="number">0</span>:k]</div><div class="line">US_k = U[:, <span class="number">0</span>:k].dot(S[<span class="number">0</span>:k, <span class="number">0</span>:k])</div><div class="line"><span class="keyword">assert</span> np.allclose(*flip_signs(PC_k, US_k))</div><div class="line"></div><div class="line"><span class="comment"># 10) we used "economy size" (or "thin") SVD</span></div><div class="line"><span class="keyword">assert</span> U.shape == (n, p)</div><div class="line"><span class="keyword">assert</span> S.shape == (p, p)</div><div class="line"><span class="keyword">assert</span> V.shape == (p, p)</div></pre></td></tr></table></figure>
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/svd/">#svd</a> <a href="/tags/pca/">#pca</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    这是<code>xxxspy</code>的个人博客
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/28/svd和pca的区别和联系，附代码实现/">svd和pca的区别和联系，附代码实现</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/22/报告模板书写规范培训/">报告文字模板书写规范培训</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2>Categories</h2>
+    <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/数学分析/">数学分析</a>
+        </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        <!-- links -->
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-about">
+        <h2>Links</h2>
+        <ul>
+            
+                <span> | </span><a class="footer-post" href="http://www.17bigdata.com/" target="_blank">一起大数据</a><span> | </span>
+            
+                <span> | </span><a class="footer-post" href="http://mlln.cn/baidusitemap.xml" target="_blank">网站地图</a><span> | </span>
+            
+                <span> | </span><a class="footer-post" href="http://mlln.cn/sitemap.xml" target="_blank">DataScience</a><span> | </span>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/xxxspy">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:675495787@qq.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @感谢github免费托管，hexo的静态网站引擎和模板主题制作者<a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+<!-- baidu_static -->
+
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?588f06b88af0ef575445f53432cd15ec";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<!-- baidu_search -->
+
+	<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13461326719879870248' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+
+<!-- baidu_share -->
+
+	
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["weixin","tsina","douban","sqq","mshare","qzone","bdysc","renren","tqq","bdxc","kaixin001","tqf","tieba","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"250"} };with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+</body>
+
+</html>

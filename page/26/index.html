@@ -157,6 +157,61 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/08/17/Excel2013：[21]柱形图如何增加系列线/">
+                Excel2013：[21]柱形图如何增加系列线
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年08月17日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>我们经常看到别人的条形图（柱形图）做的非常美观、易懂，是不是很羡慕？现在我们要学一个方法来给柱形图增加系列线，看起来像是虚线，将两条柱形图相连，它的目的是条形图的不同部分进行划分，看起来更方便。</p>
+<ul>
+<li>我们先来看一下我们的数据，我们选中这些数据，点击【插入】标签</li>
+</ul>
+<img src="/2015/08/17/Excel2013：[21]柱形图如何增加系列线/d019d2bf6c81800afbbd157db33533fa828b472e.jpg" alt="Excel2013：[21]柱形图如何增加系列线" title="Excel2013：[21]柱形图如何增加系列线">
+<ul>
+<li>找到柱形图或者条形图，选择第二个，注意看它的形式</li>
+</ul>
+<img src="/2015/08/17/Excel2013：[21]柱形图如何增加系列线/83cab81ea8d3fd1fab513e49324e251f95ca5f2e.jpg" alt="Excel2013：[21]柱形图如何增加系列线" title="Excel2013：[21]柱形图如何增加系列线">
+<ul>
+<li>这是我们插入的柱形图，接着要添加系列线</li>
+</ul>
+<img src="/2015/08/17/Excel2013：[21]柱形图如何增加系列线/cebd00178a82b90170a85f40718da9773912ef79.jpg" alt="Excel2013：[21]柱形图如何增加系列线" title="Excel2013：[21]柱形图如何增加系列线">
+<ul>
+<li>双击条形图可以打开【设计】标签，找到【添加图表元素】</li>
+</ul>
+<img src="/2015/08/17/Excel2013：[21]柱形图如何增加系列线/f7426d8da97739128c231912fa198618367ae279.jpg" alt="Excel2013：[21]柱形图如何增加系列线" title="Excel2013：[21]柱形图如何增加系列线">
+<ul>
+<li>在下啦菜单中，找到【线条】–系列线</li>
+</ul>
+<img src="/2015/08/17/Excel2013：[21]柱形图如何增加系列线/3a86813df8dcd10040c46452708b4710b9122f2e.jpg" alt="Excel2013：[21]柱形图如何增加系列线" title="Excel2013：[21]柱形图如何增加系列线">
+<ul>
+<li>到此我们的系列线添加完毕，你还可以双击系列线来设置它的颜色、粗细、线型</li>
+</ul>
+<img src="/2015/08/17/Excel2013：[21]柱形图如何增加系列线/cc506c8b4710b91237996a8dc1fdfc039245222e.jpg" alt="Excel2013：[21]柱形图如何增加系列线" title="Excel2013：[21]柱形图如何增加系列线">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/08/17/Excel2013：[11]散点图如何画直线/">
                 Excel2013：[11]散点图如何画直线
             </a>
@@ -729,56 +784,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/08/11/python教程：[76]mro()解析/">
-                python教程：[76]mro()解析
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年08月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>今天在看django-xadmin源码的时候看到的一个mro方法，我这种小白还不太懂python里比较深入的内容，所以百度了很多文章来看，现在总结一下。</p>
-<ul>
-<li>这个方法用于返回某个类的基类以及基类的基类，我们举一个简单的例子：创建一个类A，然后调用mro，它返回了一个列表，列表元素是类A本身和它的基类</li>
-</ul>
-<img src="/2015/08/11/python教程：[76]mro()解析/d002b34bd11373f04c42a5a4a70f4bfbfbed0449.jpg" alt="python教程：[76]mro()解析" title="python教程：[76]mro()解析">
-<ul>
-<li>假如我们再创建一个类B，继承于A，然后调用mro，现在列表里多了内容，看到了吧，mro总是返回类本身和其基类的列表</li>
-</ul>
-<img src="/2015/08/11/python教程：[76]mro()解析/ac2fc3c451da81cb80aa49f65166d0160924317a.jpg" alt="python教程：[76]mro()解析" title="python教程：[76]mro()解析">
-<ul>
-<li>假如把类的继承关系弄的复杂一些，类C和类B都继承自A，D继承B和C，这时候调用D.mro，我们看到这时候列表的顺序为：D-B-C-A</li>
-</ul>
-<img src="/2015/08/11/python教程：[76]mro()解析/d048adde9c82d158444d938a830a19d8bd3e42fb.jpg" alt="python教程：[76]mro()解析" title="python教程：[76]mro()解析">
-<ul>
-<li>在负责一些，增加类E继承类A，F继承自E和D，然后调用F.mro，这时候你就可以看到类A总是列表的最后一个元素，列表的顺序是：F-E-D-B-C-A</li>
-</ul>
-<img src="/2015/08/11/python教程：[76]mro()解析/814b07d8bc3eb135be7d8287a51ea8d3fd1f4410.jpg" alt="python教程：[76]mro()解析" title="python教程：[76]mro()解析">
-<ul>
-<li>记住这个列表的顺序很有用，因为以后再复制的类调用的时候，可能会考虑到初始化类的顺序，它们遵循的就是mro的顺序</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -821,6 +826,10 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/28/svd和pca的区别和联系，附代码实现/">svd和pca的区别和联系，附代码实现</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
             </li>
             
@@ -830,10 +839,6 @@
             
             <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
             </li>
             
         </ul>

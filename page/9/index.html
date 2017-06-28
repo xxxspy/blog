@@ -157,6 +157,281 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2016/08/01/python 线性代数：[4]方阵的迹/">
+                python 线性代数：[4]方阵的迹
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2016年08月01日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>怎样求方阵的迹？方阵的迹是什么？方阵的迹就是主对角元素之和，方阵的迹说实话我还不知道它的实际用途，有知道的人麻烦你写在下面的评论里，好了，下面来用numpy计算一下方阵的迹。</p>
+<ul>
+<li>先引入numpy</li>
+</ul>
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/d048adde9c82d158417f9740820a19d8bd3e4207.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
+<ul>
+<li>创建一个方阵（方阵也就是行数等于列数的矩阵）</li>
+</ul>
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/f29faa8f8c5494ee89a3c1e82ff5e0fe98257e7b.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
+<ul>
+<li>用trace计算方阵的迹</li>
+</ul>
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/8cf0d513495409235be8ad8f9058d109b2de497b.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
+<ul>
+<li>再创建一个方阵F</li>
+</ul>
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/b25d9901a18b87d6ddaa65ee050828381e30fd1d.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
+<ul>
+<li>验证一下方阵的迹等于方阵的转置的迹</li>
+</ul>
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/9f6e190828381f3016f14358ab014c086f06f01d.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
+<ul>
+<li>验证一下方阵的乘积的迹等于</li>
+</ul>
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/a84052086e061d950fadf9c979f40ad163d9ca1d.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
+<ul>
+<li>验证一下方阵的和的迹等于方阵的迹的和</li>
+</ul>
+<img src="/2016/08/01/python%20线性代数：[4]方阵的迹/566d0fdfa9ec8a136cf19911f503918fa1ecc01d.jpg" alt="python 线性代数：[4]方阵的迹" title="python 线性代数：[4]方阵的迹">
+<ul>
+<li><p>该文章用到的所有代码：</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>E=np.array([[1,2,3],[4,5,6],[7,8,9]])</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>E</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[1, 2, 3],</p>
+</li>
+<li><p>[4, 5, 6],</p>
+</li>
+<li><p>[7, 8, 9]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(E)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>15</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>F=E-2</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>F</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>array([[-1,  0,  1],</p>
+</li>
+<li><p>[ 2,  3,  4],</p>
+</li>
+<li><p>[ 5,  6,  7]])</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(E)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>15</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(E.T)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>15</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(np.dot(E,F))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>171</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(np.dot(F,E))</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>171</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(E+F)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>24</p>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<p>np.trace(E)+np.trace(F)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li><p>24</p>
+</li>
+</ul>
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2016/07/23/Excel2013：[4]双层饼图怎么做/">
                 Excel2013：[4]双层饼图怎么做
             </a>
@@ -717,73 +992,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2016/07/11/Excel2013：[45]如何按月 年汇总日期数据/">
-                Excel2013：[45]如何按月 年汇总日期数据
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2016年07月11日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>很多数据都是需要按照日期来分类汇总的，比如下面我要做的一个数据透视表就是需要用日期来分类汇总，但是呢，我需要按照月、季度、年来汇总，而原始数据是精确到日的（也就是年月日都有的数据），那么这种情况下，怎么进行按照月、年来分类汇总呢？看看具体的教程吧。</p>
-<ul>
-<li>首先来看一哈我的原始数据，日期一列都是精确到日的，日了</li>
-</ul>
-<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/a8ad9413632762d0a8d53cd2a2ec08fa503dc6b1.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
-<ul>
-<li>插入数据透视表</li>
-</ul>
-<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/0fb505d5ad6eddc45b2b2c963bdbb6fd5366334b.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
-<ul>
-<li>在弹出的对话框中，选对数据源，点击确定按钮</li>
-</ul>
-<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/90cebeec08fa513d4241f4b33f6d55fbb3fbd9b1.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
-<ul>
-<li>我们将日期、种类、销量放入数据透视表中</li>
-</ul>
-<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/5327ce160924ab1885da795a37fae6cd7a890b4b.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
-<ul>
-<li>这就是做好的数据透视表，接下来就到了关键的地方，怎么按照月来汇总呢？</li>
-</ul>
-<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/507c389759ee3d6d322d1fa641166d224e4adeb1.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
-<ul>
-<li>选中数据透视表中的一个日期的单元格，记得一定是日期</li>
-</ul>
-<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/1f569482b9014a90c07dddd0ab773912b21beed9.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
-<ul>
-<li>然后在【分析】标签下，找到【组选择】</li>
-</ul>
-<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/bd70426034a85edf42d5654e4b540923dc5475c7.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
-<ul>
-<li>在打开的对话框中，我们选择【月】，点击确定按钮。（当然你可以选择【季度】啊，【年】啊，按照你的意愿来，你又不傻！额。。）</li>
-</ul>
-<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/29790130e924b899e77fe2556c061d950b7bf6d9.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
-<ul>
-<li>我们来看一下，现在就是按照月份来汇总了！小伙伴们，喜欢的话赶快去分享，感谢支持！</li>
-</ul>
-<img src="/2016/07/11/Excel2013：[45]如何按月%20年汇总日期数据/dc15484e9258d10964ba32dfd358ccbf6d814dc7.jpg" alt="Excel2013：[45]如何按月 年汇总日期数据" title="Excel2013：[45]如何按月 年汇总日期数据">
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -826,6 +1034,10 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/28/svd和pca的区别和联系，附代码实现/">svd和pca的区别和联系，附代码实现</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
             </li>
             
@@ -835,10 +1047,6 @@
             
             <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
             </li>
             
         </ul>

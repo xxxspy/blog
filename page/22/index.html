@@ -157,6 +157,66 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2015/10/15/SVN教程：[4]SAE上部署django/">
+                SVN教程：[4]SAE上部署django
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2015年10月15日</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>这篇文章写的不是很详细，所以我又补充了一个详细版教程，你可以相互结合着看：<a href="http://jingyan.baidu.com/article/7082dc1c569f18e40a89bd21.html" target="_blank" rel="external">http://jingyan.baidu.com/article/7082dc1c569f18e40a89bd21.html</a></p>
+<ul>
+<li>我们先来创建一个文件夹deltatest（这是我在sae上创建的应用名称），如图所示，用于存放我们的django创建的站点</li>
+</ul>
+<img src="/2015/10/15/SVN教程：[4]SAE上部署django/cc506c8b4710b9124dbfe0bbc1fdfc039245223d.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
+<ul>
+<li>在deltatest文件夹上面右键单击，然后选择SVN检出，建立与SAE的链接</li>
+</ul>
+<img src="/2015/10/15/SVN教程：[4]SAE上部署django/b13fd48065380cd7b755b4a8a344ad34588281e8.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
+<ul>
+<li>这里大家都应该知道怎么设置，不会的看我上一篇文章【SVN教程[3]SEA代码部署】，点击确定</li>
+</ul>
+<img src="/2015/10/15/SVN教程：[4]SAE上部署django/263e802f07082838c90dca51ba99a9014c08f130.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
+<ul>
+<li>我们使用django在deltatest文件夹下面创建一个站点，用了下面两个命令。如果你不会，可以参考这篇经验：Django教程：[2]创建一个站点</li>
+</ul>
+<img src="/2015/10/15/SVN教程：[4]SAE上部署django/90cebeec08fa513dc8ec7a9b3f6d55fbb3fbd9f6.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
+<ul>
+<li>这样就在deltatest文件夹下面多了一个文件夹deltatest，将这个文件夹重命名为1</li>
+</ul>
+<img src="/2015/10/15/SVN教程：[4]SAE上部署django/61183b2dd42a283424ed204e59b5c9ea14cebfe8.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
+<img src="/2015/10/15/SVN教程：[4]SAE上部署django/346bd85c10385343e48491649113b07ecb8088e8.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
+<ul>
+<li>我们右键单击文件夹，然后选择提交</li>
+</ul>
+<img src="/2015/10/15/SVN教程：[4]SAE上部署django/8474fbdde71190ef31b0849acc1b9d16fcfa60e8.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
+<ul>
+<li>打开浏览器，输入你的应用的域名，这个在你申请应用的时候设置的，你会看到django的欢迎界面，这说明django部署成功，还是不会的请在下面留言。</li>
+</ul>
+<img src="/2015/10/15/SVN教程：[4]SAE上部署django/c87c6ecf3bc79f3d86aaf275b8a1cd11738b29e8.jpg" alt="SVN教程：[4]SAE上部署django" title="SVN教程：[4]SAE上部署django">
+<blockquote>
+<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
+<p>邮箱: 675495787@qq.com </p>
+</blockquote>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2015/10/11/numpy函数：[18]all()和any()比较矩阵/">
                 numpy函数：[18]all()和any()比较矩阵
             </a>
@@ -1108,337 +1168,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2015/10/01/python 线性代数：[11]判断正定矩阵/">
-                python 线性代数：[11]判断正定矩阵
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2015年10月01日</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>正定矩阵的定义是：设M是n阶方阵，如果对任何非零向量z，都有 z’Mz &gt; 0，其中z’ 表示z的转置，就称M正定矩阵。这个定义你先搞懂，不懂的看课本去，我这里就直接用python来检验某个方阵是不是正定矩阵（用二维数组表示矩阵）。</p>
-<ul>
-<li><p>我们用到的一个重要性质是：判定定理1：对称阵A为正定的充分必要条件是：A的特征值全为正。所以我们只要求得对称阵A的所有特征值即可。</p>
-</li>
-<li><p>引入numpy模块</p>
-</li>
-</ul>
-<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/d7c9ca3f8794a4c2561254dc0cf41bd5ac6e39d0.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
-<ul>
-<li>创建一个方阵A</li>
-</ul>
-<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/b5ce925494eef01fcac0a832e2fe9925bd317d36.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
-<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/1a94b36eddc451dab3c7bf1cb4fd5266d11632d0.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
-<ul>
-<li>将方阵转换成对称阵的方法是：</li>
-</ul>
-<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/fab3ac119313b07e75a3e2ff0ed7912396dd8ce8.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
-<ul>
-<li>求对称阵A的特征值</li>
-</ul>
-<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/00a82701213fb80eac8fd32034d12f2eb83894a8.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
-<ul>
-<li>判断是不是所有的特征值都大于0，用到了all函数，显然对称阵A不是正定的</li>
-</ul>
-<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/389aa8fd5266d0163e282ddf952bd40734fa35d0.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
-<ul>
-<li>我们来创建一个单位矩阵，它肯定是对称的，同样的方法检验是不是正定矩阵</li>
-</ul>
-<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/9dc3cf58ccbf6c8185e09c1fbe3eb13532fa4036.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
-<ul>
-<li>网上查到更简便的方法是对对称阵进行cholesky分解，如果像这样没有提示出错，就说明它是正定的</li>
-</ul>
-<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/aa59892bd40735fadac1fd4e9c510fb30e2408d0.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
-<ul>
-<li>如果提示出错，就说明它不是正定矩阵，你可以使用try函数捕获错误值</li>
-</ul>
-<img src="/2015/10/01/python%20线性代数：[11]判断正定矩阵/a992e31f4134970a20a4a0d897cad1c8a6865d36.jpg" alt="python 线性代数：[11]判断正定矩阵" title="python 线性代数：[11]判断正定矩阵">
-<ul>
-<li><p>以下是今天用到的部分代码：</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>import numpy</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A=range(16)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A=numpy.array(A).reshape(4,4)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[ 0,  1,  2,  3],</p>
-</li>
-<li><p>[ 4,  5,  6,  7],</p>
-</li>
-<li><p>[ 8,  9, 10, 11],</p>
-</li>
-<li><p>[12, 13, 14, 15]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A=A+A.T</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[ 0,  5, 10, 15],</p>
-</li>
-<li><p>[ 5, 10, 15, 20],</p>
-</li>
-<li><p>[10, 15, 20, 25],</p>
-</li>
-<li><p>[15, 20, 25, 30]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>B=numpy.linalg.eigvals(A)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>B</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([  6.74165739e+01 +0.00000000e+00j,</p>
-</li>
-<li><p>-7.41657387e+00 +0.00000000e+00j,</p>
-</li>
-<li><p>-8.88285420e-17 +1.82759332e-15j,  -8.88285420e-17 -1.82759332e-15j])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>if numpy.all(B&gt;0):print ‘是正定矩阵’</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>C=numpy.linalg.cholesky(A)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>Traceback (most recent call last):</p>
-</li>
-<li><p>File “<pyshell#41>“, line 1, in <module></module></pyshell#41></p>
-</li>
-<li><p>C=numpy.linalg.cholesky(A)</p>
-</li>
-<li><p>File “D:Python27libsite-packages<br>umpy-1.8.0-py2.7-win-amd64.egg<br>umpylinalglinalg.py”, line 603, in cholesky</p>
-</li>
-<li><p>return wrap(gufunc(a, signature=signature, extobj=extobj).astype(result_t))</p>
-</li>
-<li><p>File “D:Python27libsite-packages<br>umpy-1.8.0-py2.7-win-amd64.egg<br>umpylinalglinalg.py”, line 93, in _raise_linalgerror_nonposdef</p>
-</li>
-<li><p>raise LinAlgError(“Matrix is not positive definite”)</p>
-</li>
-<li><p>LinAlgError: Matrix is not positive definite</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A=numpy.eye(4)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>A</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[ 1.,  0.,  0.,  0.],</p>
-</li>
-<li><p>[ 0.,  1.,  0.,  0.],</p>
-</li>
-<li><p>[ 0.,  0.,  1.,  0.],</p>
-</li>
-<li><p>[ 0.,  0.,  0.,  1.]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>B=numpy.linalg.eigvals(A)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>B</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([ 1.,  1.,  1.,  1.])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>if numpy.all(B&gt;0):print ‘是正定矩阵’</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>是正定矩阵</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>C=numpy.linalg.cholesky(A)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-<p>C</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-<li><p>array([[ 1.,  0.,  0.,  0.],</p>
-</li>
-<li><p>[ 0.,  1.,  0.,  0.],</p>
-</li>
-<li><p>[ 0.,  0.,  1.,  0.],</p>
-</li>
-<li><p>[ 0.,  0.,  0.,  1.]])</p>
-</li>
-<li><blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>转载请注明来自<a href="http://mlln.cn">DataScience</a>.</p>
-<p>邮箱: 675495787@qq.com </p>
-</blockquote>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -1481,6 +1210,10 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/06/28/svd和pca的区别和联系，附代码实现/">svd和pca的区别和联系，附代码实现</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/06/26/gitlab配置和基本使用方法/">gitlab配置和基本使用方法(写给测试用)</a>
             </li>
             
@@ -1490,10 +1223,6 @@
             
             <li>
                 <a class="footer-post" href="/2017/06/14/远程数据库下载和查询教程/">远程数据库下载和查询教程</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/13/作文自动分类方案设计/">作文自动分类方案设计</a>
             </li>
             
         </ul>
